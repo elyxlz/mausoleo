@@ -13,3 +13,4 @@ data/
 scrape.log
 user_data/
 output/
+auth.json
