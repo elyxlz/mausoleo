@@ -198,15 +198,23 @@ async def get_browser_context(p, headless: bool, login_url: str):
     show the login page when not authenticated), waits for manual login, saves the auth state,
     and then re-launches a non-persistent context with the saved state.
     """
+    # Additional flags for headless environments (e.g., no GUI)
+    extra_args = (
+        ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+        if headless
+        else []
+    )
+
     if os.path.exists(AUTH_FILE):
         logging.info("Authentication file found. Using stored authentication state.")
-        browser = await p.chromium.launch(headless=headless)
+        browser = await p.chromium.launch(headless=headless, args=extra_args)
         context = await browser.new_context(storage_state=AUTH_FILE)
         return context, browser
     else:
         logging.info(
             "No authentication file found. Launching persistent context for manual login."
         )
+        # For persistent context, include the extra args along with any custom args.
         context = await p.chromium.launch_persistent_context(
             USER_DATA_DIR,
             headless=headless,
@@ -215,19 +223,19 @@ async def get_browser_context(p, headless: bool, login_url: str):
                 "AppleWebKit/537.36 (KHTML, like Gecko) "
                 "Chrome/117.0.0.0 Safari/537.36"
             ),
-            args=["--disable-blink-features=AutomationControlled"],
+            args=["--disable-blink-features=AutomationControlled"] + extra_args,
         )
         page = await context.new_page()
         await page.goto(login_url)
         logging.info(
-            "Opened target page %s. If not logged in, the login page should appear. Waiting 60 seconds for manual login...",
+            "Opened page %s. If not logged in, the login page should appear. Waiting 60 seconds for manual login...",
             login_url,
         )
-        await asyncio.sleep(60)  # Wait time for manual login.
+        await asyncio.sleep(60)  # Adjust this wait time as needed for manual login.
         await context.storage_state(path=AUTH_FILE)
         logging.info("Authentication state saved to %s.", AUTH_FILE)
         await context.close()
-        browser = await p.chromium.launch(headless=headless)
+        browser = await p.chromium.launch(headless=headless, args=extra_args)
         context = await browser.new_context(storage_state=AUTH_FILE)
         return context, browser
 
