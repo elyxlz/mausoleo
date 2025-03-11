@@ -5,7 +5,6 @@ import datetime
 import logging
 import os
 import re
-import sys
 
 from playwright.async_api import (
     TimeoutError as PlaywrightTimeoutError,
@@ -88,32 +87,46 @@ def get_latest_scraped_date(data_folder: str) -> datetime.date:
     return latest
 
 
+def get_unscraped_days(
+    data_folder: str, start_date: datetime.date, end_date: datetime.date
+):
+    """
+    Return a sorted list of day strings (YYYY-MM-DD) for which either the output directory does not exist
+    or exists but does not contain any JPEG files.
+    """
+    missing_days = []
+    current_date = start_date
+    while current_date <= end_date:
+        day_str = current_date.strftime("%Y-%m-%d")
+        output_dir = build_output_dir(day_str, data_folder)
+        if not os.path.exists(output_dir) or not any(
+            fname.endswith(".jpeg") for fname in os.listdir(output_dir)
+        ):
+            missing_days.append(day_str)
+        current_date += datetime.timedelta(days=1)
+    return missing_days
+
+
 async def extract_total_pages(page) -> int:
     """
     Extract the total number of pages from the span with id "numPages".
     Expected text format: "di 44" -> extracts 44.
+    Raises an error if the element is not found or the regex does not match.
     """
+    locator = page.locator("#numPages")
     try:
-        locator = page.locator("#numPages")
         await locator.first.wait_for(timeout=15000)
-        text = await locator.first.inner_text()
-        logging.info("Found #numPages text: %s", text)
-        m = re.search(r"di\s*(\d+)", text)
-        if m:
-            total = int(m.group(1))
-            logging.info("Total pages detected: %d", total)
-            return total
-        else:
-            logging.warning(
-                "Regex did not match #numPages text. Defaulting total pages to 1."
-            )
-    except PlaywrightTimeoutError:
-        logging.warning(
-            "Timeout waiting for #numPages element. Defaulting total pages to 1."
-        )
-    except Exception as e:
-        logging.error("Error while extracting total pages: %s", e)
-    return 1
+    except PlaywrightTimeoutError as e:
+        raise PlaywrightTimeoutError("Timeout waiting for #numPages element.") from e
+
+    text = await locator.first.inner_text()
+    logging.info("Found #numPages text: %s", text)
+    m = re.search(r"di\s*(\d+)", text)
+    if not m:
+        raise ValueError("Regex did not match #numPages text.")
+    total = int(m.group(1))
+    logging.info("Total pages detected: %d", total)
+    return total
 
 
 async def smooth_scroll_container(page, steps=40, delay=80):
@@ -190,8 +203,8 @@ async def scrape_day(day_str: str, headless: bool, data_dir: str):
                 await page.locator("#viewerContainer").wait_for(timeout=15000)
                 logging.info("Viewer container is present for %s.", day_str)
             except Exception as e:
-                logging.error(
-                    "Viewer container did not appear in time for %s: %s", day_str, e
+                raise Exception(
+                    f"Viewer container did not appear in time for {day_str}: {e}"
                 )
 
             total_pages = await extract_total_pages(page)
@@ -207,6 +220,10 @@ async def scrape_day(day_str: str, headless: bool, data_dir: str):
             for url in blob_urls:
                 logging.info(url)
 
+            if not blob_urls:
+                raise ValueError(f"No blob URLs captured for day {day_str}.")
+
+            # Download each blob URL.
             for index, blob_url in enumerate(blob_urls, start=1):
                 data_base64 = await page.evaluate(f"""
                     async () => {{
@@ -225,10 +242,9 @@ async def scrape_day(day_str: str, headless: bool, data_dir: str):
                     }}
                 """)
                 if data_base64 is None:
-                    logging.error(
-                        "Failed to fetch blob data for %s on %s", blob_url, day_str
+                    raise Exception(
+                        f"Failed to fetch blob data for {blob_url} on {day_str}"
                     )
-                    continue
 
                 filename = os.path.join(output_dir, f"{index}.jpeg")
                 with open(filename, "wb") as f:
@@ -272,6 +288,7 @@ async def main():
     default_start_date = datetime.date(1880, 1, 1)
     end_date = datetime.date(2024, 12, 31)
 
+    # Determine the starting date for scanning.
     if args.resume:
         try:
             resume_date = datetime.datetime.strptime(args.resume, "%Y-%m-%d").date()
@@ -284,33 +301,23 @@ async def main():
             logging.error("Invalid resume date format. Using default start date.")
             start_date = default_start_date
     else:
-        latest = get_latest_scraped_date(data_dir)
-        if latest:
-            start_date = latest + datetime.timedelta(days=1)
-            logging.info(
-                "Resuming from next day after latest scraped date: %s", start_date
-            )
-        else:
-            start_date = default_start_date
+        start_date = default_start_date
 
-    total_days = (end_date - start_date).days + 1
-    current_date = start_date
+    # Build a list of days that haven't been successfully scraped.
+    missing_days = get_unscraped_days(data_dir, start_date, end_date)
+    total_days = len(missing_days)
+    if total_days == 0:
+        logging.info("No days left to scrape.")
+        return
 
-    consecutive_failures = 0
-
+    logging.info("Total days to scrape: %d", total_days)
     with tqdm(total=total_days, desc="Scraping days") as pbar:
-        while current_date <= end_date:
-            day_str = current_date.strftime("%Y-%m-%d")
+        for day_str in missing_days:
             try:
                 await scrape_day(day_str, headless, data_dir)
-                consecutive_failures = 0  # reset on success
             except Exception as e:
                 logging.error("Error in main while scraping %s: %s", day_str, e)
-                consecutive_failures += 1
-                if consecutive_failures >= 10:
-                    logging.error("Failed 10 consecutive days. Quitting.")
-                    sys.exit(1)
-            current_date += datetime.timedelta(days=1)
+                # Continue to next day even if this one fails.
             pbar.update(1)
             await asyncio.sleep(1)
 
