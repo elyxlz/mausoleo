@@ -259,19 +259,25 @@ def visualize_segments(image_path, boxes, output_path=None):
         plt.show()
 
 
-def extract_segments(image_path, boxes, output_dir):
+def extract_segments(image_path, boxes, output_dir, page_number=None):
     """Extract individual segments from the image based on bounding boxes"""
     image = cv2.imread(str(image_path))
     os.makedirs(output_dir, exist_ok=True)
     saved_paths = []
 
+    # Extract page number from filename if not provided
+    if page_number is None:
+        image_basename = os.path.basename(image_path)
+        page_number = os.path.splitext(image_basename)[0]
+        if not page_number.isdigit():
+            raise ValueError(f"Invalid page number in filename: {image_basename}")
+
     for i, box in enumerate(boxes):
         x1, y1, x2, y2 = map(int, [box["x1"], box["y1"], box["x2"], box["y2"]])
-        class_name = box["class"]
         segment = image[y1:y2, x1:x2]
         
-        # Use top-left corner (x1, y1) as part of the filename
-        output_path = os.path.join(output_dir, f"{int(x1)}_{int(y1)}_{class_name}.jpg")
+        # Use position and page number as filename
+        output_path = os.path.join(output_dir, f"{page_number}_{int(x1)}_{int(y1)}.jpg")
         cv2.imwrite(output_path, segment)
         saved_paths.append(output_path)
 
@@ -286,6 +292,7 @@ def process_document_layout(
     min_overlap: float = 40,
     image_size: int = 1024,
     device: str = "cpu",
+    save_annotated: bool = False,
 ):
     os.makedirs(output, exist_ok=True)
 
@@ -310,14 +317,21 @@ def process_document_layout(
     # print("Removing subset boxes...")
     # boxes = remove_subset_boxes(boxes)
 
-    image_name = os.path.basename(image)
-    output_image = os.path.join(output, f"annotated_{image_name}")
-    print(f"Saving annotated image to: {output_image}")
-    visualize_segments(image, boxes, output_image)
+    # Only save annotated image if requested
+    if save_annotated:
+        image_name = os.path.basename(image)
+        output_image = os.path.join(output, f"annotated_{image_name}")
+        print(f"Saving annotated image to: {output_image}")
+        visualize_segments(image, boxes, output_image)
 
     segments_dir = os.path.join(output, "segments")
     print(f"Extracting segments to: {segments_dir}")
-    segment_paths = extract_segments(image, boxes, segments_dir)
+    
+    # Extract page number from the image filename
+    image_basename = os.path.basename(image)
+    page_number = os.path.splitext(image_basename)[0]
+    
+    segment_paths = extract_segments(image, boxes, segments_dir, page_number)
     print(f"Extracted {len(segment_paths)} segments")
 
     print("Processing complete!")
@@ -443,6 +457,11 @@ def main():
         default="cpu", 
         help="Device to use for inference (default: cpu)"
     )
+    parser.add_argument(
+        "--save-annotated", 
+        action="store_true",
+        help="Save annotated images with bounding boxes"
+    )
     args = parser.parse_args()
     
     # Parse dates if provided
@@ -490,14 +509,32 @@ def main():
             model = load_model()
             print("Model loaded.")
         
+        # Create segments directory for this day - clean it if it exists to ensure idempotency
+        segments_dir = os.path.join(day_dir, "segments")
+        os.makedirs(segments_dir, exist_ok=True)
+        
         # Process each page
         for page_path in tqdm(pages, desc=f"Pages for {day_date}"):
-            segments_dir = os.path.join(day_dir, "segments")
-            os.makedirs(segments_dir, exist_ok=True)
-            
             try:
                 # Process this page
                 print(f"Processing {page_path}")
+                page_number = os.path.splitext(os.path.basename(str(page_path)))[0]
+                
+                # Ensure page number is valid
+                if not page_number.isdigit():
+                    print(f"Skipping {page_path}: Invalid page number format")
+                    continue
+                
+                # Check if we need to clean existing segments for this page
+                # This ensures idempotency - we'll replace any existing segments
+                existing_segments = [
+                    f for f in os.listdir(segments_dir) 
+                    if f.startswith(f"{page_number}_") and os.path.isfile(os.path.join(segments_dir, f))
+                ]
+                for f in existing_segments:
+                    os.remove(os.path.join(segments_dir, f))
+                
+                # Detect segments
                 results = detect_segments(
                     model, 
                     str(page_path), 
@@ -512,14 +549,15 @@ def main():
                 boxes = filter_boxes(boxes, min_area=args.min_area, min_confidence=args.conf)
                 
                 # Extract segments
-                extract_segments(str(page_path), boxes, segments_dir)
+                segment_paths = extract_segments(str(page_path), boxes, segments_dir, page_number)
                 
-                # Create annotated version
-                visualize_segments(
-                    str(page_path), 
-                    boxes, 
-                    str(day_dir / f"annotated_{page_path.name}")
-                )
+                # Create annotated version only if requested
+                if args.save_annotated:
+                    visualize_segments(
+                        str(page_path), 
+                        boxes, 
+                        str(day_dir / f"annotated_{page_path.name}")
+                    )
                 
                 print(f"Extracted {len(boxes)} segments from {page_path}")
                 
