@@ -22,7 +22,7 @@ def load_model():
 
 
 def detect_segments(
-    model, image_path, conf_threshold=0.10, image_size=1024, device="cpu"
+    model, image_path, conf_threshold=0.10, image_size=1024, device="cpu", batch_size=1
 ):
     """Detect document segments using the model"""
     det_res = model.predict(
@@ -30,6 +30,7 @@ def detect_segments(
         imgsz=image_size,
         conf=conf_threshold,
         device=device,
+        batch=batch_size,
     )
     return det_res
 
@@ -441,71 +442,89 @@ def get_unprocessed_pages(day_dir):
 def process_batch(model, page_paths, args, pbar=None):
     """Process a batch of pages"""
     results = []
+    
+    # Prepare paths list for batch processing
+    str_page_paths = [str(path) for path in page_paths]
+    
+    try:
+        # Detect segments for all pages in batch - passing the list directly to predict
+        detection_results = model.predict(
+            str_page_paths,
+            imgsz=1024,
+            conf=args.conf,
+            device=args.device,
+            batch=len(str_page_paths)
+        )
+        
+        # Process each page's results
+        for idx, page_path in enumerate(page_paths):
+            try:
+                # Process this page
+                page_number = os.path.splitext(os.path.basename(str(page_path)))[0]
+                day_dir = os.path.dirname(page_path)
+                segments_dir = os.path.join(day_dir, "segments")
+                os.makedirs(segments_dir, exist_ok=True)
 
-    for page_path in page_paths:
-        try:
-            # Process this page
-            page_number = os.path.splitext(os.path.basename(str(page_path)))[0]
-            day_dir = os.path.dirname(page_path)
-            segments_dir = os.path.join(day_dir, "segments")
-            os.makedirs(segments_dir, exist_ok=True)
+                # Ensure page number is valid
+                if not page_number.isdigit():
+                    print(f"Skipping {page_path}: Invalid page number format")
+                    continue
 
-            # Ensure page number is valid
-            if not page_number.isdigit():
-                print(f"Skipping {page_path}: Invalid page number format")
-                continue
+                # Check if we need to clean existing segments for this page
+                # This ensures idempotency - we'll replace any existing segments
+                existing_segments = [
+                    f
+                    for f in os.listdir(segments_dir)
+                    if f.startswith(f"{page_number}_")
+                    and os.path.isfile(os.path.join(segments_dir, f))
+                ]
+                for f in existing_segments:
+                    os.remove(os.path.join(segments_dir, f))
 
-            # Check if we need to clean existing segments for this page
-            # This ensures idempotency - we'll replace any existing segments
-            existing_segments = [
-                f
-                for f in os.listdir(segments_dir)
-                if f.startswith(f"{page_number}_")
-                and os.path.isfile(os.path.join(segments_dir, f))
-            ]
-            for f in existing_segments:
-                os.remove(os.path.join(segments_dir, f))
+                # Get the result for this page from the batch results
+                this_result = detection_results[idx] if isinstance(detection_results, list) else detection_results[0]
 
-            # Detect segments
-            detection_results = detect_segments(
-                model, str(page_path), conf_threshold=args.conf, device=args.device
-            )
+                # Convert results to boxes
+                boxes = results_to_boxes([this_result])
 
-            # Convert results to boxes
-            boxes = results_to_boxes(detection_results)
-
-            # Filter boxes
-            boxes = filter_boxes(
-                boxes, min_area=args.min_area, min_confidence=args.conf
-            )
-
-            # Extract segments
-            segment_paths = extract_segments(
-                str(page_path), boxes, segments_dir, page_number
-            )
-
-            # Create annotated version only if requested
-            if args.save_annotated:
-                visualize_segments(
-                    str(page_path),
-                    boxes,
-                    os.path.join(
-                        day_dir, f"annotated_{os.path.basename(str(page_path))}"
-                    ),
+                # Filter boxes
+                boxes = filter_boxes(
+                    boxes, min_area=args.min_area, min_confidence=args.conf
                 )
 
-            print(f"Extracted {len(boxes)} segments from {page_path}")
-            results.append((page_path, len(boxes)))
+                # Extract segments
+                segment_paths = extract_segments(
+                    str(page_path), boxes, segments_dir, page_number
+                )
 
-            # Update progress bar if provided
-            if pbar:
-                pbar.update(1)
+                # Create annotated version only if requested
+                if args.save_annotated:
+                    visualize_segments(
+                        str(page_path),
+                        boxes,
+                        os.path.join(
+                            day_dir, f"annotated_{os.path.basename(str(page_path))}"
+                        ),
+                    )
 
-        except Exception as e:
-            print(f"Error processing {page_path}: {e}")
-            # Update progress bar even on error
-            if pbar:
-                pbar.update(1)
+                print(f"Extracted {len(boxes)} segments from {page_path}")
+                results.append((page_path, len(boxes)))
+
+                # Update progress bar if provided
+                if pbar:
+                    pbar.update(1)
+
+            except Exception as e:
+                print(f"Error processing result for {page_path}: {e}")
+                # Update progress bar even on error
+                if pbar:
+                    pbar.update(1)
+                    
+    except Exception as e:
+        print(f"Error in batch processing: {e}")
+        # Update progress bar for all items in batch on error
+        if pbar:
+            pbar.update(len(page_paths))
 
     return results
 
