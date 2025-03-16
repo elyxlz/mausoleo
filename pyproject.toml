@@ -5,11 +5,20 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "doclayout-yolo>=0.0.3",
- "huggingface-hub>=0.29.2",
- "playwright>=1.50.0",
+  "doclayout-yolo>=0.0.3",
+  "huggingface-hub>=0.29.2",
+  "playwright>=1.50.0",
 ]
 
 [tool.uv.sources]
 sam-2 = { git = "https://github.com/facebookresearch/sam2.git" }
 detectron2 = { git = "https://github.com/facebookresearch/detectron2.git", rev = "v0.5" }
+
+[tool.ruff]
+line-length = 144
+indent-width = 4
+target-version = "py310"
+
+[tool.ruff.lint]
+ignore = ["E402", "E702", "E731", "UP008", "E712"]
+extend-select = ["UP"]

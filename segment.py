@@ -1,7 +1,9 @@
 import argparse
 import datetime
 import os
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+from typing import Any
 
 import cv2
 import matplotlib.pyplot as plt
@@ -12,8 +14,7 @@ from matplotlib.patches import Rectangle
 from tqdm import tqdm
 
 
-def load_model():
-    """Load the DocLayout YOLO model from HuggingFace"""
+def load_model() -> YOLOv10:
     filepath = hf_hub_download(
         repo_id="juliozhao/DocLayout-YOLO-DocStructBench",
         filename="doclayout_yolo_docstructbench_imgsz1024.pt",
@@ -22,9 +23,13 @@ def load_model():
 
 
 def detect_segments(
-    model, image_path, conf_threshold=0.10, image_size=1024, device="cpu", batch_size=1
-):
-    """Detect document segments using the model"""
+    model: YOLOv10,
+    image_path: str | list[str],
+    conf_threshold: float = 0.10,
+    image_size: int = 1024,
+    device: str = "cpu",
+    batch_size: int = 1,
+) -> Any:
     det_res = model.predict(
         image_path,
         imgsz=image_size,
@@ -35,8 +40,7 @@ def detect_segments(
     return det_res
 
 
-def results_to_boxes(results):
-    """Convert detection results to a list of box dictionaries"""
+def results_to_boxes(results: list[Any]) -> list[dict[str, Any]]:
     boxes = []
     for i, box in enumerate(results[0].boxes):
         x1, y1, x2, y2 = box.xyxy[0].tolist()
@@ -63,8 +67,7 @@ def results_to_boxes(results):
     return boxes
 
 
-def calculate_overlap(box1, box2):
-    """Calculate the vertical and horizontal overlap between two boxes"""
+def calculate_overlap(box1: dict[str, Any], box2: dict[str, Any]) -> tuple[float, float, float]:
     x_overlap_start = max(box1["x1"], box2["x1"])
     x_overlap_end = min(box1["x2"], box2["x2"])
     y_overlap_start = max(box1["y1"], box2["y1"])
@@ -86,8 +89,7 @@ def calculate_overlap(box1, box2):
     return overlap_area, overlap_percentage, min_area
 
 
-def merge_boxes(box1, box2):
-    """Merge two boxes into one"""
+def merge_boxes(box1: dict[str, Any], box2: dict[str, Any]) -> dict[str, Any]:
     return {
         "x1": min(box1["x1"], box2["x1"]),
         "y1": min(box1["y1"], box2["y1"]),
@@ -97,15 +99,18 @@ def merge_boxes(box1, box2):
         "height": max(box1["y2"], box2["y2"]) - min(box1["y1"], box2["y1"]),
         "center_x": (min(box1["x1"], box2["x1"]) + max(box1["x2"], box2["x2"])) / 2,
         "center_y": (min(box1["y1"], box2["y1"]) + max(box1["y2"], box2["y2"])) / 2,
-        "class": box1["class"],  # Keep class of first box
+        "class": box1["class"],
         "confidence": max(box1["confidence"], box2["confidence"]),
         "id": min(box1["id"], box2["id"]),
-        "area": (max(box1["x2"], box2["x2"]) - min(box1["x1"], box2["x1"]))
-        * (max(box1["y2"], box2["y2"]) - min(box1["y1"], box2["y1"])),
+        "area": (max(box1["x2"], box2["x2"]) - min(box1["x1"], box2["x1"])) * (max(box1["y2"], box2["y2"]) - min(box1["y1"], box2["y1"])),
     }
 
 
-def merge_overlapping_boxes(boxes, min_overlap_percent=5, max_iterations=10):
+def merge_overlapping_boxes(
+    boxes: list[dict[str, Any]],
+    min_overlap_percent: float = 5,
+    max_iterations: int = 10,
+) -> list[dict[str, Any]]:
     if not boxes:
         return []
 
@@ -123,9 +128,7 @@ def merge_overlapping_boxes(boxes, min_overlap_percent=5, max_iterations=10):
                 box2 = merged_boxes[j]
 
                 same_class = box1["class"] == box2["class"]
-                text_and_title = box1["class"] in ["text", "title"] and box2[
-                    "class"
-                ] in ["text", "title"]
+                text_and_title = box1["class"] in ["text", "title"] and box2["class"] in ["text", "title"]
 
                 if not (same_class or text_and_title):
                     j += 1
@@ -147,7 +150,7 @@ def merge_overlapping_boxes(boxes, min_overlap_percent=5, max_iterations=10):
     return merged_boxes
 
 
-def remove_subset_boxes(boxes):
+def remove_subset_boxes(boxes: list[dict[str, Any]]) -> list[dict[str, Any]]:
     non_subset_boxes = []
     subset_count = 0
     for i, box in enumerate(boxes):
@@ -170,17 +173,15 @@ def remove_subset_boxes(boxes):
     return non_subset_boxes
 
 
-def filter_boxes(boxes, min_area=100, min_confidence=0.1):
-    """Filter out boxes that are too small or have low confidence"""
-    return [
-        box
-        for box in boxes
-        if box["area"] >= min_area and box["confidence"] >= min_confidence
-    ]
+def filter_boxes(boxes: list[dict[str, Any]], min_area: float = 100, min_confidence: float = 0.1) -> list[dict[str, Any]]:
+    return [box for box in boxes if box["area"] >= min_area and box["confidence"] >= min_confidence]
 
 
-def visualize_segments(image_path, boxes, output_path=None):
-    """Visualize segmentation boxes on the original image"""
+def visualize_segments(
+    image_path: str | Path,
+    boxes: list[dict[str, Any]],
+    output_path: str | Path | None = None,
+) -> None:
     image = cv2.imread(str(image_path))
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
@@ -188,28 +189,24 @@ def visualize_segments(image_path, boxes, output_path=None):
     ax.imshow(image)
 
     class_colors = {
-        "text": "#FF0000",  # Red
-        "title": "#00FF00",  # Green
-        "figure": "#0000FF",  # Blue
-        "table": "#FF00FF",  # Magenta
-        "caption": "#00FFFF",  # Cyan
-        "footer": "#FFFF00",  # Yellow
-        "header": "#FF8800",  # Orange
-        "reference": "#8800FF",  # Purple
-        "equation": "#00FF88",  # Mint
-        "list": "#FF0088",  # Pink
-        "abandon": "#888888",  # Grey
+        "text": "#FF0000",
+        "title": "#00FF00",
+        "figure": "#0000FF",
+        "table": "#FF00FF",
+        "caption": "#00FFFF",
+        "footer": "#FFFF00",
+        "header": "#FF8800",
+        "reference": "#8800FF",
+        "equation": "#00FF88",
+        "list": "#FF0088",
+        "abandon": "#888888",
     }
 
-    unique_classes = set(
-        box["class"] for box in boxes if box["class"] not in class_colors
-    )
-    additional_colors = plt.cm.rainbow(np.linspace(0, 1, len(unique_classes)))
+    unique_classes = set(box["class"] for box in boxes if box["class"] not in class_colors)
+    additional_colors = plt.cm.get_cmap("viridis")(np.linspace(0, 1, len(unique_classes)))
     for i, cls in enumerate(unique_classes):
         rgba_color = additional_colors[i]
-        hex_color = "#{:02x}{:02x}{:02x}".format(
-            int(rgba_color[0] * 255), int(rgba_color[1] * 255), int(rgba_color[2] * 255)
-        )
+        hex_color = f"#{int(rgba_color[0] * 255):02x}{int(rgba_color[1] * 255):02x}{int(rgba_color[2] * 255):02x}"
         class_colors[cls] = hex_color
 
     for box in boxes:
@@ -243,9 +240,7 @@ def visualize_segments(image_path, boxes, output_path=None):
     legend_elements = []
     for cls, color in class_colors.items():
         if cls in [box["class"] for box in boxes]:
-            legend_elements.append(
-                Rectangle((0, 0), 1, 1, color=color, fill=False, linewidth=2, label=cls)
-            )
+            legend_elements.append(Rectangle((0, 0), 1, 1, color=color, fill=False, linewidth=2, label=cls))
 
     if legend_elements:
         ax.legend(handles=legend_elements, loc="center left", bbox_to_anchor=(1, 0.5))
@@ -260,119 +255,62 @@ def visualize_segments(image_path, boxes, output_path=None):
         plt.show()
 
 
-def extract_segments(image_path, boxes, output_dir, page_number=None):
-    """Extract individual segments from the image based on bounding boxes"""
+def _save_segment(args: tuple[np.ndarray, dict[str, Any], str, str]) -> str:
+    image_data, box, output_dir, page_number = args
+    x1, y1, x2, y2 = map(int, [box["x1"], box["y1"], box["x2"], box["y2"]])
+    segment = image_data[y1:y2, x1:x2]
+
+    output_path = os.path.join(output_dir, f"{page_number}_{int(x1)}_{int(y1)}.jpg")
+    cv2.imwrite(output_path, segment)
+    return output_path
+
+
+def extract_segments(
+    image_path: str | Path,
+    boxes: list[dict[str, Any]],
+    output_dir: str | Path,
+    page_number: str | None = None,
+) -> list[str]:
     image = cv2.imread(str(image_path))
     os.makedirs(output_dir, exist_ok=True)
     saved_paths = []
 
-    # Extract page number from filename if not provided
     if page_number is None:
         image_basename = os.path.basename(image_path)
         page_number = os.path.splitext(image_basename)[0]
         if not page_number.isdigit():
             raise ValueError(f"Invalid page number in filename: {image_basename}")
 
-    for i, box in enumerate(boxes):
-        x1, y1, x2, y2 = map(int, [box["x1"], box["y1"], box["x2"], box["y2"]])
-        segment = image[y1:y2, x1:x2]
-
-        # Use position and page number as filename
-        output_path = os.path.join(output_dir, f"{page_number}_{int(x1)}_{int(y1)}.jpg")
-        cv2.imwrite(output_path, segment)
-        saved_paths.append(output_path)
+    with ThreadPoolExecutor() as executor:
+        save_args = [(image, box, output_dir, page_number) for box in boxes]
+        saved_paths = list(executor.map(_save_segment, save_args))
 
     return saved_paths
 
 
-def process_document_layout(
-    image: str,
-    output: str = "output",
-    conf: float = 0.01,
-    min_area: int = 500,
-    min_overlap: float = 40,
-    image_size: int = 1024,
-    device: str = "cpu",
-    save_annotated: bool = False,
-):
-    os.makedirs(output, exist_ok=True)
-
-    print("Loading model...")
-    model = load_model()
-
-    print(f"Processing image: {image}")
-    results = detect_segments(
-        model, image, conf_threshold=conf, image_size=image_size, device=device
-    )
-
-    print("Processing detection results...")
-    boxes = results_to_boxes(results)
-
-    # print(f"Filtering boxes (original count: {len(boxes)})...")
-    boxes = filter_boxes(boxes, min_area=min_area, min_confidence=conf)
-    # print(f"Removed {len(boxes) - len(boxes)} small or low-confidence boxes")
-    #
-    # print("Merging overlapping boxes...")
-    # boxes = merge_overlapping_boxes(boxes, min_overlap_percent=min_overlap)
-    #
-    # print("Removing subset boxes...")
-    # boxes = remove_subset_boxes(boxes)
-
-    # Only save annotated image if requested
-    if save_annotated:
-        image_name = os.path.basename(image)
-        output_image = os.path.join(output, f"annotated_{image_name}")
-        print(f"Saving annotated image to: {output_image}")
-        visualize_segments(image, boxes, output_image)
-
-    segments_dir = os.path.join(output, "segments")
-    print(f"Extracting segments to: {segments_dir}")
-
-    # Extract page number from the image filename
-    image_basename = os.path.basename(image)
-    page_number = os.path.splitext(image_basename)[0]
-
-    segment_paths = extract_segments(image, boxes, segments_dir, page_number)
-    print(f"Extracted {len(segment_paths)} segments")
-
-    print("Processing complete!")
-    return segment_paths
-
-
-def get_day_paths(data_dir, start_date=None, end_date=None):
-    """
-    Get all day paths in the specified data directory that need processing.
-    Returns paths in chronological order.
-    """
+def get_day_paths(
+    data_dir: str | Path,
+    start_date: datetime.date | None = None,
+    end_date: datetime.date | None = None,
+) -> list[tuple[datetime.date, Path]]:
     data_dir = Path(data_dir)
     day_paths = []
 
-    # If no dates are specified, get all years
     if start_date is None and end_date is None:
         years = [y for y in data_dir.iterdir() if y.is_dir() and y.name.isdigit()]
     else:
-        # Get years between start_date and end_date
         start_year = start_date.year if start_date else 1800
         end_year = end_date.year if end_date else 3000
-        years = [
-            y
-            for y in data_dir.iterdir()
-            if y.is_dir() and y.name.isdigit() and start_year <= int(y.name) <= end_year
-        ]
+        years = [y for y in data_dir.iterdir() if y.is_dir() and y.name.isdigit() and start_year <= int(y.name) <= end_year]
 
-    # Process each year
     for year_dir in sorted(years, key=lambda y: int(y.name)):
-        # Process each month in this year
         for month_dir in sorted(
             year_dir.iterdir(),
-            key=lambda m: datetime.datetime.strptime(m.name, "%B").month
-            if m.is_dir()
-            else 0,
+            key=lambda m: datetime.datetime.strptime(m.name, "%B").month if m.is_dir() else 0,
         ):
             if not month_dir.is_dir():
                 continue
 
-            # Process each day in this month
             for day_dir in sorted(
                 month_dir.iterdir(),
                 key=lambda d: int(d.name) if d.is_dir() and d.name.isdigit() else 0,
@@ -380,57 +318,35 @@ def get_day_paths(data_dir, start_date=None, end_date=None):
                 if not day_dir.is_dir() or not day_dir.name.isdigit():
                     continue
 
-                # Create date object for this day
                 try:
                     month_num = datetime.datetime.strptime(month_dir.name, "%B").month
-                    day_date = datetime.date(
-                        int(year_dir.name), month_num, int(day_dir.name)
-                    )
+                    day_date = datetime.date(int(year_dir.name), month_num, int(day_dir.name))
 
-                    # Skip if before start_date or after end_date
                     if start_date and day_date < start_date:
                         continue
                     if end_date and day_date > end_date:
                         continue
 
-                    # Add this day's path
                     day_paths.append((day_date, day_dir))
                 except ValueError:
-                    # Skip invalid dates
                     continue
 
-    # Sort by date
     return sorted(day_paths, key=lambda x: x[0])
 
 
-def get_unprocessed_pages(day_dir):
-    """
-    Return a list of page image files that have not been processed yet
-    (i.e., don't have a corresponding segment directory)
-    """
+def get_unprocessed_pages(day_dir: str | Path) -> list[Path]:
     day_dir = Path(day_dir)
     unprocessed_pages = []
 
     for file_path in day_dir.iterdir():
         if file_path.is_file() and file_path.name.endswith((".jpg", ".jpeg", ".png")):
-            # Skip files that start with "annotated_" as they are output files
             if file_path.name.startswith("annotated_"):
                 continue
 
-            # Check if there's already a segments directory for this page
             segments_dir = day_dir / "segments"
-            page_prefix = (
-                f"{int(file_path.stem)}_"
-                if file_path.stem.isdigit()
-                else f"{file_path.stem}_"
-            )
+            page_prefix = f"{int(file_path.stem)}_" if file_path.stem.isdigit() else f"{file_path.stem}_"
 
-            # If there's no segments directory or no segments for this page, it needs processing
-            if not segments_dir.exists() or not any(
-                f.name.startswith(page_prefix)
-                for f in segments_dir.iterdir()
-                if segments_dir.exists()
-            ):
+            if not segments_dir.exists() or not any(f.name.startswith(page_prefix) for f in segments_dir.iterdir() if segments_dir.exists()):
                 unprocessed_pages.append(file_path)
 
     return sorted(
@@ -439,98 +355,77 @@ def get_unprocessed_pages(day_dir):
     )
 
 
-def process_batch(model, page_paths, args, pbar=None):
-    """Process a batch of pages"""
+def process_batch(
+    model: YOLOv10,
+    page_paths: list[Path],
+    args: argparse.Namespace,
+    pbar: tqdm | None = None,
+) -> list[tuple[Path, int]]:
     results = []
-    
-    # Prepare paths list for batch processing
+
     str_page_paths = [str(path) for path in page_paths]
-    
+
     try:
-        # Detect segments for all pages in batch - passing the list directly to predict
         detection_results = model.predict(
             str_page_paths,
             imgsz=1024,
             conf=args.conf,
             device=args.device,
-            batch=len(str_page_paths)
+            batch=len(str_page_paths),
         )
-        
-        # Process each page's results
+
         for idx, page_path in enumerate(page_paths):
             try:
-                # Process this page
                 page_number = os.path.splitext(os.path.basename(str(page_path)))[0]
                 day_dir = os.path.dirname(page_path)
                 segments_dir = os.path.join(day_dir, "segments")
                 os.makedirs(segments_dir, exist_ok=True)
 
-                # Ensure page number is valid
                 if not page_number.isdigit():
                     print(f"Skipping {page_path}: Invalid page number format")
                     continue
 
-                # Check if we need to clean existing segments for this page
-                # This ensures idempotency - we'll replace any existing segments
                 existing_segments = [
-                    f
-                    for f in os.listdir(segments_dir)
-                    if f.startswith(f"{page_number}_")
-                    and os.path.isfile(os.path.join(segments_dir, f))
+                    f for f in os.listdir(segments_dir) if f.startswith(f"{page_number}_") and os.path.isfile(os.path.join(segments_dir, f))
                 ]
                 for f in existing_segments:
                     os.remove(os.path.join(segments_dir, f))
 
-                # Get the result for this page from the batch results
                 this_result = detection_results[idx] if isinstance(detection_results, list) else detection_results[0]
 
-                # Convert results to boxes
                 boxes = results_to_boxes([this_result])
 
-                # Filter boxes
-                boxes = filter_boxes(
-                    boxes, min_area=args.min_area, min_confidence=args.conf
-                )
+                boxes = filter_boxes(boxes, min_area=args.min_area, min_confidence=args.conf)
 
-                # Extract segments
-                segment_paths = extract_segments(
-                    str(page_path), boxes, segments_dir, page_number
-                )
+                extract_segments(str(page_path), boxes, segments_dir, page_number)
 
-                # Create annotated version only if requested
                 if args.save_annotated:
                     visualize_segments(
                         str(page_path),
                         boxes,
-                        os.path.join(
-                            day_dir, f"annotated_{os.path.basename(str(page_path))}"
-                        ),
+                        os.path.join(day_dir, f"annotated_{os.path.basename(str(page_path))}"),
                     )
 
                 print(f"Extracted {len(boxes)} segments from {page_path}")
                 results.append((page_path, len(boxes)))
 
-                # Update progress bar if provided
                 if pbar:
                     pbar.update(1)
 
             except Exception as e:
                 print(f"Error processing result for {page_path}: {e}")
-                # Update progress bar even on error
                 if pbar:
                     pbar.update(1)
-                    
+
     except Exception as e:
         print(f"Error in batch processing: {e}")
-        # Update progress bar for all items in batch on error
         if pbar:
             pbar.update(len(page_paths))
 
     return results
 
 
-def main():
-    """Main function to run the document segmentation process"""
+def main() -> None:
     parser = argparse.ArgumentParser(description="Segment newspaper pages into regions")
     parser.add_argument(
         "--data-dir",
@@ -538,12 +433,8 @@ def main():
         default="/media/sdr",
         help="Directory containing the newspaper data (default: /media/sdr)",
     )
-    parser.add_argument(
-        "--resume", type=str, default=None, help="Resume from date (YYYY-MM-DD)"
-    )
-    parser.add_argument(
-        "--end-date", type=str, default=None, help="End date (YYYY-MM-DD)"
-    )
+    parser.add_argument("--resume", type=str, default=None, help="Resume from date (YYYY-MM-DD)")
+    parser.add_argument("--end-date", type=str, default=None, help="End date (YYYY-MM-DD)")
     parser.add_argument(
         "--conf",
         type=float,
@@ -570,21 +461,18 @@ def main():
     parser.add_argument(
         "--batch-size",
         type=int,
-        default=32,
-        help="Number of images to process in each batch (default: 32)",
+        default=256,
+        help="Number of images to process in each batch (default: 256)",
     )
     args = parser.parse_args()
 
-    # Parse dates if provided
     start_date = None
     if args.resume:
         try:
             start_date = datetime.datetime.strptime(args.resume, "%Y-%m-%d").date()
             print(f"Resuming from {start_date}")
         except ValueError:
-            print(
-                f"Invalid resume date format: {args.resume}. Using earliest available date."
-            )
+            print(f"Invalid resume date format: {args.resume}. Using earliest available date.")
 
     end_date = None
     if args.end_date:
@@ -592,18 +480,10 @@ def main():
             end_date = datetime.datetime.strptime(args.end_date, "%Y-%m-%d").date()
             print(f"Processing up to {end_date}")
         except ValueError:
-            print(
-                f"Invalid end date format: {args.end_date}. Processing all available dates."
-            )
+            print(f"Invalid end date format: {args.end_date}. Processing all available dates.")
 
-    # Use CUDA if available
-    args.device = (
-        "cuda"
-        if args.device == "cpu" and __import__("torch").cuda.is_available()
-        else args.device
-    )
+    args.device = "cuda" if args.device == "cpu" and __import__("torch").cuda.is_available() else args.device
 
-    # Get all day directories to process
     print(f"Scanning {args.data_dir} for newspaper pages...")
     day_paths = get_day_paths(args.data_dir, start_date, end_date)
 
@@ -613,37 +493,30 @@ def main():
 
     print(f"Found {len(day_paths)} days to process.")
 
-    # Process each day
-    model = None  # Will be loaded on first use
-    
-    # Collect all pages that need processing across all days
     all_pages = []
     for day_date, day_dir in day_paths:
         pages = get_unprocessed_pages(day_dir)
         if pages:
             all_pages.extend(pages)
-    
+
     total_pages = len(all_pages)
     print(f"Found {total_pages} total pages to process.")
-    
+
     if total_pages == 0:
         print("No unprocessed pages found.")
         return
-    
-    # Load model once for all processing
+
     print("Loading model...")
     model = load_model()
     print("Model loaded.")
-    
-    # Create a progress bar for all pages
+
     pbar = tqdm(total=total_pages, desc="Processing pages")
-    
-    # Process all pages in batches regardless of day
+
     batch_size = args.batch_size
     print(f"Processing with batch size: {batch_size}")
-    
+
     for i in range(0, len(all_pages), batch_size):
-        batch_pages = all_pages[i:i+batch_size]
+        batch_pages = all_pages[i : i + batch_size]
         print(f"Processing batch {i//batch_size + 1}/{(len(all_pages) + batch_size - 1)//batch_size} with {len(batch_pages)} pages")
         process_batch(model, batch_pages, args, pbar)
 

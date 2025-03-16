@@ -8,6 +8,8 @@ import re
 
 from playwright.async_api import (
     TimeoutError as PlaywrightTimeoutError,
+)
+from playwright.async_api import (
     async_playwright,
 )
 from tqdm import tqdm
@@ -20,11 +22,7 @@ logging.basicConfig(
 )
 
 # Base URL with a placeholder for date.
-BASE_URL = (
-    "https://archivio.ilmessaggero.it/sfoglio?"
-    "testata=MG&edition=NAZIONALE&date={date}&page=1"
-    "#page=1&zoom=page-fit&pagemode=none"
-)
+BASE_URL = "https://archivio.ilmessaggero.it/sfoglio?" "testata=MG&edition=NAZIONALE&date={date}&page=1" "#page=1&zoom=page-fit&pagemode=none"
 
 USER_DATA_DIR = "user_data"
 AUTH_FILE = "auth.json"
@@ -47,9 +45,7 @@ def build_output_dir(day_str: str, data_dir: str) -> str:
     return output_dir
 
 
-def get_unscraped_days(
-    data_folder: str, start_date: datetime.date, end_date: datetime.date
-):
+def get_unscraped_days(data_folder: str, start_date: datetime.date, end_date: datetime.date):
     """
     Return a sorted list of day strings (YYYY-MM-DD) for which either the output directory does not exist
     or exists but does not contain any JPEG files.
@@ -59,9 +55,7 @@ def get_unscraped_days(
     while current_date <= end_date:
         day_str = current_date.strftime("%Y-%m-%d")
         output_dir = build_output_dir(day_str, data_folder)
-        if not os.path.exists(output_dir) or not any(
-            fname.endswith(".jpeg") for fname in os.listdir(output_dir)
-        ):
+        if not os.path.exists(output_dir) or not any(fname.endswith(".jpeg") for fname in os.listdir(output_dir)):
             missing_days.append(day_str)
         current_date += datetime.timedelta(days=1)
     return missing_days
@@ -139,9 +133,7 @@ async def scrape_day_with_page(page, day_str: str, data_dir: str):
             await page.locator("#viewerContainer").wait_for(timeout=15000)
             logging.info("Viewer container present for %s", day_str)
         except Exception as e:
-            raise Exception(
-                f"Viewer container did not appear in time for {day_str}: {e}"
-            )
+            raise Exception(f"Viewer container did not appear in time for {day_str}: {e}")
 
         total_pages = await extract_total_pages(page)
         logging.info("Total pages for %s: %d", day_str, total_pages)
@@ -174,9 +166,7 @@ async def scrape_day_with_page(page, day_str: str, data_dir: str):
                 }}
             """)
             if data_base64 is None:
-                raise Exception(
-                    f"Failed to fetch blob data for {blob_url} on {day_str}"
-                )
+                raise Exception(f"Failed to fetch blob data for {blob_url} on {day_str}")
 
             filename = os.path.join(output_dir, f"{index}.jpeg")
             with open(filename, "wb") as f:
@@ -199,11 +189,7 @@ async def get_browser_context(p, headless: bool, login_url: str):
     and then re-launches a non-persistent context with the saved state.
     """
     # Additional flags for headless environments (e.g., no GUI)
-    extra_args = (
-        ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
-        if headless
-        else []
-    )
+    extra_args = ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"] if headless else []
 
     if os.path.exists(AUTH_FILE):
         logging.info("Authentication file found. Using stored authentication state.")
@@ -211,17 +197,13 @@ async def get_browser_context(p, headless: bool, login_url: str):
         context = await browser.new_context(storage_state=AUTH_FILE)
         return context, browser
     else:
-        logging.info(
-            "No authentication file found. Launching persistent context for manual login."
-        )
+        logging.info("No authentication file found. Launching persistent context for manual login.")
         # For persistent context, include the extra args along with any custom args.
         context = await p.chromium.launch_persistent_context(
             USER_DATA_DIR,
             headless=headless,
             user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/117.0.0.0 Safari/537.36"
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " "AppleWebKit/537.36 (KHTML, like Gecko) " "Chrome/117.0.0.0 Safari/537.36"
             ),
             args=["--disable-blink-features=AutomationControlled"] + extra_args,
         )
@@ -241,15 +223,9 @@ async def get_browser_context(p, headless: bool, login_url: str):
 
 
 async def main():
-    parser = argparse.ArgumentParser(
-        description="Scrape Il Messaggero archives by day."
-    )
-    parser.add_argument(
-        "--resume", type=str, default=None, help="Resume from date (YYYY-MM-DD)"
-    )
-    parser.add_argument(
-        "--headful", action="store_true", help="Run in headful (non-headless) mode"
-    )
+    parser = argparse.ArgumentParser(description="Scrape Il Messaggero archives by day.")
+    parser.add_argument("--resume", type=str, default=None, help="Resume from date (YYYY-MM-DD)")
+    parser.add_argument("--headful", action="store_true", help="Run in headful (non-headless) mode")
     parser.add_argument(
         "--data-dir",
         type=str,
