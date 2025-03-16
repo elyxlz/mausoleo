@@ -257,12 +257,37 @@ def visualize_segments(
 
 def _save_segment(args: tuple[np.ndarray, dict[str, Any], str, str]) -> str:
     image_data, box, output_dir, page_number = args
-    x1, y1, x2, y2 = map(int, [box["x1"], box["y1"], box["x2"], box["y2"]])
-    segment = image_data[y1:y2, x1:x2]
+    try:
+        x1, y1, x2, y2 = map(int, [box["x1"], box["y1"], box["x2"], box["y2"]])
+        
+        # Ensure coordinates are within image bounds
+        height, width = image_data.shape[:2]
+        x1 = max(0, min(x1, width-1))
+        y1 = max(0, min(y1, height-1))
+        x2 = max(0, min(x2, width))
+        y2 = max(0, min(y2, height))
+        
+        # Skip if the segment is too small
+        if x2 <= x1 or y2 <= y1:
+            return ""
+            
+        segment = image_data[y1:y2, x1:x2]
+        
+        # Verify segment is not empty
+        if segment.size == 0:
+            return ""
 
-    output_path = os.path.join(output_dir, f"{page_number}_{int(x1)}_{int(y1)}.jpg")
-    cv2.imwrite(output_path, segment)
-    return output_path
+        output_path = os.path.join(output_dir, f"{page_number}_{int(x1)}_{int(y1)}.jpg")
+        success = cv2.imwrite(output_path, segment)
+        
+        if not success:
+            print(f"Failed to save segment at {output_path}")
+            return ""
+            
+        return output_path
+    except Exception as e:
+        print(f"Error saving segment: {e}")
+        return ""
 
 
 def extract_segments(
@@ -271,21 +296,32 @@ def extract_segments(
     output_dir: str | Path,
     page_number: str | None = None,
 ) -> list[str]:
-    image = cv2.imread(str(image_path))
-    os.makedirs(output_dir, exist_ok=True)
-    saved_paths = []
+    try:
+        image = cv2.imread(str(image_path))
+        if image is None:
+            print(f"Failed to read image: {image_path}")
+            return []
+            
+        os.makedirs(output_dir, exist_ok=True)
+        saved_paths = []
 
-    if page_number is None:
-        image_basename = os.path.basename(image_path)
-        page_number = os.path.splitext(image_basename)[0]
-        if not page_number.isdigit():
-            raise ValueError(f"Invalid page number in filename: {image_basename}")
+        if page_number is None:
+            image_basename = os.path.basename(image_path)
+            page_number = os.path.splitext(image_basename)[0]
+            if not page_number.isdigit():
+                print(f"Invalid page number in filename: {image_basename}")
+                return []
 
-    with ThreadPoolExecutor() as executor:
-        save_args = [(image, box, output_dir, page_number) for box in boxes]
-        saved_paths = list(executor.map(_save_segment, save_args))
+        with ThreadPoolExecutor() as executor:
+            save_args = [(image, box, output_dir, page_number) for box in boxes]
+            all_paths = list(executor.map(_save_segment, save_args))
+            # Filter out empty paths (failed saves)
+            saved_paths = [path for path in all_paths if path]
 
-    return saved_paths
+        return saved_paths
+    except Exception as e:
+        print(f"Error extracting segments from {image_path}: {e}")
+        return []
 
 
 def get_day_paths(
@@ -362,19 +398,40 @@ def process_batch(
     pbar: tqdm | None = None,
 ) -> list[tuple[Path, int]]:
     results = []
-
-    str_page_paths = [str(path) for path in page_paths]
+    valid_page_paths = []
+    valid_str_paths = []
+    
+    # Pre-check images to filter out corrupted ones
+    for path in page_paths:
+        try:
+            # Try to read the image to see if it's valid
+            img = cv2.imread(str(path))
+            if img is None:
+                print(f"Skipping corrupted image: {path}")
+                if pbar:
+                    pbar.update(1)
+                continue
+            valid_page_paths.append(path)
+            valid_str_paths.append(str(path))
+        except Exception as e:
+            print(f"Error reading image {path}: {e}")
+            if pbar:
+                pbar.update(1)
+    
+    if not valid_page_paths:
+        print("No valid images in batch to process")
+        return results
 
     try:
         detection_results = model.predict(
-            str_page_paths,
+            valid_str_paths,
             imgsz=1024,
             conf=args.conf,
             device=args.device,
-            batch=len(str_page_paths),
+            batch=len(valid_str_paths),
         )
 
-        for idx, page_path in enumerate(page_paths):
+        for idx, page_path in enumerate(valid_page_paths):
             try:
                 page_number = os.path.splitext(os.path.basename(str(page_path)))[0]
                 day_dir = os.path.dirname(page_path)
@@ -420,7 +477,7 @@ def process_batch(
     except Exception as e:
         print(f"Error in batch processing: {e}")
         if pbar:
-            pbar.update(len(page_paths))
+            pbar.update(len(valid_page_paths))
 
     return results
 
@@ -518,7 +575,14 @@ def main() -> None:
     for i in range(0, len(all_pages), batch_size):
         batch_pages = all_pages[i : i + batch_size]
         print(f"Processing batch {i//batch_size + 1}/{(len(all_pages) + batch_size - 1)//batch_size} with {len(batch_pages)} pages")
-        process_batch(model, batch_pages, args, pbar)
+        try:
+            process_batch(model, batch_pages, args, pbar)
+        except Exception as e:
+            print(f"Error processing batch {i//batch_size + 1}: {e}")
+            # Continue with next batch instead of stopping completely
+            if pbar:
+                # Update progress bar for skipped images
+                pbar.update(len(batch_pages))
 
     pbar.close()
     print("Document segmentation complete!")
