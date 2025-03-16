@@ -511,8 +511,14 @@ def main():
 
     # Process each day
     model = None  # Will be loaded on first use
-
-    for day_date, day_dir in tqdm(day_paths, desc="Processing days"):
+    
+    total_pages = sum(len(get_unprocessed_pages(day_dir)) for _, day_dir in day_paths)
+    print(f"Found {total_pages} total pages to process.")
+    
+    # Create a progress bar for all pages
+    pbar = tqdm(total=total_pages, desc="Processing pages")
+    
+    for day_date, day_dir in day_paths:
         # Get unprocessed pages for this day
         pages = get_unprocessed_pages(day_dir)
 
@@ -581,10 +587,15 @@ def main():
                     )
 
                 print(f"Extracted {len(boxes)} segments from {page_path}")
+                # Update progress bar
+                pbar.update(1)
 
             except Exception as e:
                 print(f"Error processing {page_path}: {e}")
+                # Update progress bar even on error
+                pbar.update(1)
 
+    pbar.close()
     print("Document segmentation complete!")
 
 
