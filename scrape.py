@@ -265,7 +265,7 @@ async def main():
         os.makedirs(data_dir, exist_ok=True)
 
     default_start_date = datetime.date(1880, 1, 1)
-    end_date = datetime.date(2024, 12, 31)
+    end_date = datetime.date(2001, 1, 1)
 
     if args.resume:
         try:
