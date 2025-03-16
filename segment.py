@@ -259,31 +259,31 @@ def _save_segment(args: tuple[np.ndarray, dict[str, Any], str, str]) -> str:
     image_data, box, output_dir, page_number = args
     try:
         x1, y1, x2, y2 = map(int, [box["x1"], box["y1"], box["x2"], box["y2"]])
-        
+
         # Ensure coordinates are within image bounds
         height, width = image_data.shape[:2]
-        x1 = max(0, min(x1, width-1))
-        y1 = max(0, min(y1, height-1))
+        x1 = max(0, min(x1, width - 1))
+        y1 = max(0, min(y1, height - 1))
         x2 = max(0, min(x2, width))
         y2 = max(0, min(y2, height))
-        
+
         # Skip if the segment is too small
         if x2 <= x1 or y2 <= y1:
             return ""
-            
+
         segment = image_data[y1:y2, x1:x2]
-        
+
         # Verify segment is not empty
         if segment.size == 0:
             return ""
 
         output_path = os.path.join(output_dir, f"{page_number}_{int(x1)}_{int(y1)}.jpg")
         success = cv2.imwrite(output_path, segment)
-        
+
         if not success:
             print(f"Failed to save segment at {output_path}")
             return ""
-            
+
         return output_path
     except Exception as e:
         print(f"Error saving segment: {e}")
@@ -301,7 +301,7 @@ def extract_segments(
         if image is None:
             print(f"Failed to read image: {image_path}")
             return []
-            
+
         os.makedirs(output_dir, exist_ok=True)
         saved_paths = []
 
@@ -400,7 +400,7 @@ def process_batch(
     results = []
     valid_page_paths = []
     valid_str_paths = []
-    
+
     # Pre-check images to filter out corrupted ones
     for path in page_paths:
         try:
@@ -417,7 +417,7 @@ def process_batch(
             print(f"Error reading image {path}: {e}")
             if pbar:
                 pbar.update(1)
-    
+
     if not valid_page_paths:
         print("No valid images in batch to process")
         return results
@@ -518,8 +518,8 @@ def main() -> None:
     parser.add_argument(
         "--batch-size",
         type=int,
-        default=256,
-        help="Number of images to process in each batch (default: 256)",
+        default=128,
+        help="Number of images to process in each batch (default: 128)",
     )
     args = parser.parse_args()
 
