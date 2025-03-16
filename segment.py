@@ -438,14 +438,17 @@ def get_unprocessed_pages(day_dir):
     )
 
 
-def process_batch(model, page_paths, segments_dir, args, pbar=None):
+def process_batch(model, page_paths, args, pbar=None):
     """Process a batch of pages"""
     results = []
-    
+
     for page_path in page_paths:
         try:
             # Process this page
             page_number = os.path.splitext(os.path.basename(str(page_path)))[0]
+            day_dir = os.path.dirname(page_path)
+            segments_dir = os.path.join(day_dir, "segments")
+            os.makedirs(segments_dir, exist_ok=True)
 
             # Ensure page number is valid
             if not page_number.isdigit():
@@ -483,16 +486,17 @@ def process_batch(model, page_paths, segments_dir, args, pbar=None):
 
             # Create annotated version only if requested
             if args.save_annotated:
-                day_dir = os.path.dirname(page_path)
                 visualize_segments(
                     str(page_path),
                     boxes,
-                    os.path.join(day_dir, f"annotated_{os.path.basename(str(page_path))}"),
+                    os.path.join(
+                        day_dir, f"annotated_{os.path.basename(str(page_path))}"
+                    ),
                 )
 
             print(f"Extracted {len(boxes)} segments from {page_path}")
             results.append((page_path, len(boxes)))
-            
+
             # Update progress bar if provided
             if pbar:
                 pbar.update(1)
@@ -502,7 +506,7 @@ def process_batch(model, page_paths, segments_dir, args, pbar=None):
             # Update progress bar even on error
             if pbar:
                 pbar.update(1)
-    
+
     return results
 
 
@@ -547,8 +551,8 @@ def main():
     parser.add_argument(
         "--batch-size",
         type=int,
-        default=1,
-        help="Number of images to process in each batch (default: 1)",
+        default=32,
+        help="Number of images to process in each batch (default: 32)",
     )
     args = parser.parse_args()
 
@@ -572,9 +576,13 @@ def main():
             print(
                 f"Invalid end date format: {args.end_date}. Processing all available dates."
             )
-    
+
     # Use CUDA if available
-    args.device = "cuda" if args.device == "cpu" and __import__("torch").cuda.is_available() else args.device
+    args.device = (
+        "cuda"
+        if args.device == "cpu" and __import__("torch").cuda.is_available()
+        else args.device
+    )
 
     # Get all day directories to process
     print(f"Scanning {args.data_dir} for newspaper pages...")
@@ -589,39 +597,36 @@ def main():
     # Process each day
     model = None  # Will be loaded on first use
     
-    total_pages = sum(len(get_unprocessed_pages(day_dir)) for _, day_dir in day_paths)
+    # Collect all pages that need processing across all days
+    all_pages = []
+    for day_date, day_dir in day_paths:
+        pages = get_unprocessed_pages(day_dir)
+        if pages:
+            all_pages.extend(pages)
+    
+    total_pages = len(all_pages)
     print(f"Found {total_pages} total pages to process.")
+    
+    if total_pages == 0:
+        print("No unprocessed pages found.")
+        return
+    
+    # Load model once for all processing
+    print("Loading model...")
+    model = load_model()
+    print("Model loaded.")
     
     # Create a progress bar for all pages
     pbar = tqdm(total=total_pages, desc="Processing pages")
     
-    for day_date, day_dir in day_paths:
-        # Get unprocessed pages for this day
-        pages = get_unprocessed_pages(day_dir)
-
-        if not pages:
-            continue
-
-        print(f"\nProcessing {len(pages)} pages for {day_date} in {day_dir}")
-
-        # Load model on first use
-        if model is None:
-            print("Loading model...")
-            model = load_model()
-            print("Model loaded.")
-
-        # Create segments directory for this day
-        segments_dir = os.path.join(day_dir, "segments")
-        os.makedirs(segments_dir, exist_ok=True)
-
-        # Process pages in batches
-        batch_size = min(args.batch_size, len(pages))
-        print(f"Processing with batch size: {batch_size}")
-        
-        for i in range(0, len(pages), batch_size):
-            batch_pages = pages[i:i+batch_size]
-            print(f"Processing batch {i//batch_size + 1}/{(len(pages) + batch_size - 1)//batch_size} with {len(batch_pages)} pages")
-            process_batch(model, batch_pages, segments_dir, args, pbar)
+    # Process all pages in batches regardless of day
+    batch_size = args.batch_size
+    print(f"Processing with batch size: {batch_size}")
+    
+    for i in range(0, len(all_pages), batch_size):
+        batch_pages = all_pages[i:i+batch_size]
+        print(f"Processing batch {i//batch_size + 1}/{(len(all_pages) + batch_size - 1)//batch_size} with {len(batch_pages)} pages")
+        process_batch(model, batch_pages, args, pbar)
 
     pbar.close()
     print("Document segmentation complete!")
@@ -629,4 +634,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
