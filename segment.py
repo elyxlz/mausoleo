@@ -438,6 +438,74 @@ def get_unprocessed_pages(day_dir):
     )
 
 
+def process_batch(model, page_paths, segments_dir, args, pbar=None):
+    """Process a batch of pages"""
+    results = []
+    
+    for page_path in page_paths:
+        try:
+            # Process this page
+            page_number = os.path.splitext(os.path.basename(str(page_path)))[0]
+
+            # Ensure page number is valid
+            if not page_number.isdigit():
+                print(f"Skipping {page_path}: Invalid page number format")
+                continue
+
+            # Check if we need to clean existing segments for this page
+            # This ensures idempotency - we'll replace any existing segments
+            existing_segments = [
+                f
+                for f in os.listdir(segments_dir)
+                if f.startswith(f"{page_number}_")
+                and os.path.isfile(os.path.join(segments_dir, f))
+            ]
+            for f in existing_segments:
+                os.remove(os.path.join(segments_dir, f))
+
+            # Detect segments
+            detection_results = detect_segments(
+                model, str(page_path), conf_threshold=args.conf, device=args.device
+            )
+
+            # Convert results to boxes
+            boxes = results_to_boxes(detection_results)
+
+            # Filter boxes
+            boxes = filter_boxes(
+                boxes, min_area=args.min_area, min_confidence=args.conf
+            )
+
+            # Extract segments
+            segment_paths = extract_segments(
+                str(page_path), boxes, segments_dir, page_number
+            )
+
+            # Create annotated version only if requested
+            if args.save_annotated:
+                day_dir = os.path.dirname(page_path)
+                visualize_segments(
+                    str(page_path),
+                    boxes,
+                    os.path.join(day_dir, f"annotated_{os.path.basename(str(page_path))}"),
+                )
+
+            print(f"Extracted {len(boxes)} segments from {page_path}")
+            results.append((page_path, len(boxes)))
+            
+            # Update progress bar if provided
+            if pbar:
+                pbar.update(1)
+
+        except Exception as e:
+            print(f"Error processing {page_path}: {e}")
+            # Update progress bar even on error
+            if pbar:
+                pbar.update(1)
+    
+    return results
+
+
 def main():
     """Main function to run the document segmentation process"""
     parser = argparse.ArgumentParser(description="Segment newspaper pages into regions")
@@ -475,6 +543,12 @@ def main():
         "--save-annotated",
         action="store_true",
         help="Save annotated images with bounding boxes",
+    )
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=1,
+        help="Number of images to process in each batch (default: 1)",
     )
     args = parser.parse_args()
 
@@ -536,67 +610,18 @@ def main():
             model = load_model()
             print("Model loaded.")
 
-        # Create segments directory for this day - clean it if it exists to ensure idempotency
+        # Create segments directory for this day
         segments_dir = os.path.join(day_dir, "segments")
         os.makedirs(segments_dir, exist_ok=True)
 
-        # Process each page
-        for page_path in pages:
-            try:
-                # Process this page
-                print(f"Processing {page_path}")
-                page_number = os.path.splitext(os.path.basename(str(page_path)))[0]
-
-                # Ensure page number is valid
-                if not page_number.isdigit():
-                    print(f"Skipping {page_path}: Invalid page number format")
-                    continue
-
-                # Check if we need to clean existing segments for this page
-                # This ensures idempotency - we'll replace any existing segments
-                existing_segments = [
-                    f
-                    for f in os.listdir(segments_dir)
-                    if f.startswith(f"{page_number}_")
-                    and os.path.isfile(os.path.join(segments_dir, f))
-                ]
-                for f in existing_segments:
-                    os.remove(os.path.join(segments_dir, f))
-
-                # Detect segments
-                results = detect_segments(
-                    model, str(page_path), conf_threshold=args.conf, device=args.device
-                )
-
-                # Convert results to boxes
-                boxes = results_to_boxes(results)
-
-                # Filter boxes
-                boxes = filter_boxes(
-                    boxes, min_area=args.min_area, min_confidence=args.conf
-                )
-
-                # Extract segments
-                segment_paths = extract_segments(
-                    str(page_path), boxes, segments_dir, page_number
-                )
-
-                # Create annotated version only if requested
-                if args.save_annotated:
-                    visualize_segments(
-                        str(page_path),
-                        boxes,
-                        str(day_dir / f"annotated_{page_path.name}"),
-                    )
-
-                print(f"Extracted {len(boxes)} segments from {page_path}")
-                # Update progress bar
-                pbar.update(1)
-
-            except Exception as e:
-                print(f"Error processing {page_path}: {e}")
-                # Update progress bar even on error
-                pbar.update(1)
+        # Process pages in batches
+        batch_size = min(args.batch_size, len(pages))
+        print(f"Processing with batch size: {batch_size}")
+        
+        for i in range(0, len(pages), batch_size):
+            batch_pages = pages[i:i+batch_size]
+            print(f"Processing batch {i//batch_size + 1}/{(len(pages) + batch_size - 1)//batch_size} with {len(batch_pages)} pages")
+            process_batch(model, batch_pages, segments_dir, args, pbar)
 
     pbar.close()
     print("Document segmentation complete!")
