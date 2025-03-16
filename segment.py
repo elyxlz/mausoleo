@@ -276,7 +276,7 @@ def extract_segments(image_path, boxes, output_dir):
 def process_document_layout(
     image: str,
     output: str = "output",
-    conf: float = 0.03,
+    conf: float = 0.01,
     min_area: int = 500,
     min_overlap: float = 40,
     image_size: int = 1024,
