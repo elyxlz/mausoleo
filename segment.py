@@ -498,6 +498,9 @@ def main():
             print(
                 f"Invalid end date format: {args.end_date}. Processing all available dates."
             )
+    
+    # Use CUDA if available
+    args.device = "cuda" if args.device == "cpu" and __import__("torch").cuda.is_available() else args.device
 
     # Get all day directories to process
     print(f"Scanning {args.data_dir} for newspaper pages...")
