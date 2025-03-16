@@ -1,4 +1,7 @@
+import argparse
+import datetime
 import os
+from pathlib import Path
 
 import cv2
 import matplotlib.pyplot as plt
@@ -6,6 +9,7 @@ import numpy as np
 from doclayout_yolo import YOLOv10
 from huggingface_hub import hf_hub_download
 from matplotlib.patches import Rectangle
+from tqdm import tqdm
 
 
 def load_model():
@@ -259,14 +263,15 @@ def extract_segments(image_path, boxes, output_dir):
     """Extract individual segments from the image based on bounding boxes"""
     image = cv2.imread(str(image_path))
     os.makedirs(output_dir, exist_ok=True)
-    file_base = os.path.splitext(os.path.basename(image_path))[0]
     saved_paths = []
 
     for i, box in enumerate(boxes):
         x1, y1, x2, y2 = map(int, [box["x1"], box["y1"], box["x2"], box["y2"]])
         class_name = box["class"]
         segment = image[y1:y2, x1:x2]
-        output_path = os.path.join(output_dir, f"{file_base}_{class_name}_{i}.jpg")
+        
+        # Use top-left corner (x1, y1) as part of the filename
+        output_path = os.path.join(output_dir, f"{int(x1)}_{int(y1)}_{class_name}.jpg")
         cv2.imwrite(output_path, segment)
         saved_paths.append(output_path)
 
@@ -319,7 +324,210 @@ def process_document_layout(
     return segment_paths
 
 
+def get_day_paths(data_dir, start_date=None, end_date=None):
+    """
+    Get all day paths in the specified data directory that need processing.
+    Returns paths in chronological order.
+    """
+    data_dir = Path(data_dir)
+    day_paths = []
+    
+    # If no dates are specified, get all years
+    if start_date is None and end_date is None:
+        years = [y for y in data_dir.iterdir() if y.is_dir() and y.name.isdigit()]
+    else:
+        # Get years between start_date and end_date
+        start_year = start_date.year if start_date else 1800
+        end_year = end_date.year if end_date else 3000
+        years = [
+            y for y in data_dir.iterdir() 
+            if y.is_dir() and y.name.isdigit() and start_year <= int(y.name) <= end_year
+        ]
+    
+    # Process each year
+    for year_dir in sorted(years, key=lambda y: int(y.name)):
+        # Process each month in this year
+        for month_dir in sorted(year_dir.iterdir(), key=lambda m: datetime.datetime.strptime(m.name, "%B").month if m.is_dir() else 0):
+            if not month_dir.is_dir():
+                continue
+                
+            # Process each day in this month
+            for day_dir in sorted(month_dir.iterdir(), key=lambda d: int(d.name) if d.is_dir() and d.name.isdigit() else 0):
+                if not day_dir.is_dir() or not day_dir.name.isdigit():
+                    continue
+                    
+                # Create date object for this day
+                try:
+                    month_num = datetime.datetime.strptime(month_dir.name, "%B").month
+                    day_date = datetime.date(int(year_dir.name), month_num, int(day_dir.name))
+                    
+                    # Skip if before start_date or after end_date
+                    if start_date and day_date < start_date:
+                        continue
+                    if end_date and day_date > end_date:
+                        continue
+                        
+                    # Add this day's path
+                    day_paths.append((day_date, day_dir))
+                except ValueError:
+                    # Skip invalid dates
+                    continue
+    
+    # Sort by date
+    return sorted(day_paths, key=lambda x: x[0])
+
+
+def get_unprocessed_pages(day_dir):
+    """
+    Return a list of page image files that have not been processed yet
+    (i.e., don't have a corresponding segment directory)
+    """
+    day_dir = Path(day_dir)
+    unprocessed_pages = []
+    
+    for file_path in day_dir.iterdir():
+        if file_path.is_file() and file_path.name.endswith(('.jpg', '.jpeg', '.png')):
+            # Skip files that start with "annotated_" as they are output files
+            if file_path.name.startswith("annotated_"):
+                continue
+                
+            # Check if there's already a segments directory for this page
+            segments_dir = day_dir / "segments"
+            page_prefix = f"{int(file_path.stem)}_" if file_path.stem.isdigit() else f"{file_path.stem}_"
+            
+            # If there's no segments directory or no segments for this page, it needs processing
+            if not segments_dir.exists() or not any(
+                f.name.startswith(page_prefix) for f in segments_dir.iterdir() if segments_dir.exists()
+            ):
+                unprocessed_pages.append(file_path)
+                
+    return sorted(unprocessed_pages, key=lambda x: int(x.stem) if x.stem.isdigit() else float('inf'))
+
+
+def main():
+    """Main function to run the document segmentation process"""
+    parser = argparse.ArgumentParser(description="Segment newspaper pages into regions")
+    parser.add_argument(
+        "--data-dir", 
+        type=str, 
+        default="/media/sdr", 
+        help="Directory containing the newspaper data (default: /media/sdr)"
+    )
+    parser.add_argument(
+        "--resume", 
+        type=str, 
+        default=None, 
+        help="Resume from date (YYYY-MM-DD)"
+    )
+    parser.add_argument(
+        "--end-date", 
+        type=str, 
+        default=None, 
+        help="End date (YYYY-MM-DD)"
+    )
+    parser.add_argument(
+        "--conf", 
+        type=float, 
+        default=0.01, 
+        help="Detection confidence threshold (default: 0.01)"
+    )
+    parser.add_argument(
+        "--min-area", 
+        type=int, 
+        default=500, 
+        help="Minimum area for detected regions (default: 500)"
+    )
+    parser.add_argument(
+        "--device", 
+        type=str, 
+        default="cpu", 
+        help="Device to use for inference (default: cpu)"
+    )
+    args = parser.parse_args()
+    
+    # Parse dates if provided
+    start_date = None
+    if args.resume:
+        try:
+            start_date = datetime.datetime.strptime(args.resume, "%Y-%m-%d").date()
+            print(f"Resuming from {start_date}")
+        except ValueError:
+            print(f"Invalid resume date format: {args.resume}. Using earliest available date.")
+    
+    end_date = None
+    if args.end_date:
+        try:
+            end_date = datetime.datetime.strptime(args.end_date, "%Y-%m-%d").date()
+            print(f"Processing up to {end_date}")
+        except ValueError:
+            print(f"Invalid end date format: {args.end_date}. Processing all available dates.")
+    
+    # Get all day directories to process
+    print(f"Scanning {args.data_dir} for newspaper pages...")
+    day_paths = get_day_paths(args.data_dir, start_date, end_date)
+    
+    if not day_paths:
+        print("No days found to process within the specified date range.")
+        return
+        
+    print(f"Found {len(day_paths)} days to process.")
+    
+    # Process each day
+    model = None  # Will be loaded on first use
+    
+    for day_date, day_dir in tqdm(day_paths, desc="Processing days"):
+        # Get unprocessed pages for this day
+        pages = get_unprocessed_pages(day_dir)
+        
+        if not pages:
+            continue
+            
+        print(f"\nProcessing {len(pages)} pages for {day_date} in {day_dir}")
+        
+        # Load model on first use
+        if model is None:
+            print("Loading model...")
+            model = load_model()
+            print("Model loaded.")
+        
+        # Process each page
+        for page_path in tqdm(pages, desc=f"Pages for {day_date}"):
+            segments_dir = os.path.join(day_dir, "segments")
+            os.makedirs(segments_dir, exist_ok=True)
+            
+            try:
+                # Process this page
+                print(f"Processing {page_path}")
+                results = detect_segments(
+                    model, 
+                    str(page_path), 
+                    conf_threshold=args.conf, 
+                    device=args.device
+                )
+                
+                # Convert results to boxes
+                boxes = results_to_boxes(results)
+                
+                # Filter boxes
+                boxes = filter_boxes(boxes, min_area=args.min_area, min_confidence=args.conf)
+                
+                # Extract segments
+                extract_segments(str(page_path), boxes, segments_dir)
+                
+                # Create annotated version
+                visualize_segments(
+                    str(page_path), 
+                    boxes, 
+                    str(day_dir / f"annotated_{page_path.name}")
+                )
+                
+                print(f"Extracted {len(boxes)} segments from {page_path}")
+                
+            except Exception as e:
+                print(f"Error processing {page_path}: {e}")
+    
+    print("Document segmentation complete!")
+
+
 if __name__ == "__main__":
-    # Replace 'path/to/your/image.jpg' with your actual image path or call process_document_layout with your parameters.
-    default_image = "./data/1880/January/8/1.jpeg"
-    process_document_layout(image=default_image)
+    main()
