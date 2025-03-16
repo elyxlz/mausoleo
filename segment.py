@@ -518,8 +518,8 @@ def main() -> None:
     parser.add_argument(
         "--batch-size",
         type=int,
-        default=128,
-        help="Number of images to process in each batch (default: 128)",
+        default=64,
+        help="Number of images to process in each batch",
     )
     args = parser.parse_args()
 
