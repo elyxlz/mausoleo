@@ -8,6 +8,10 @@ dependencies = [
   "doclayout-yolo>=0.0.3",
   "huggingface-hub>=0.29.2",
   "playwright>=1.50.0",
+  "fastapi>=0.104.0",
+  "uvicorn>=0.23.0",
+  "pydantic>=2.0.0",
+  "httpx>=0.28.1",
 ]
 
 [tool.uv.sources]
@@ -22,3 +26,8 @@ target-version = "py310"
 [tool.ruff.lint]
 ignore = ["E402", "E702", "E731", "UP008", "E712"]
 extend-select = ["UP"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
