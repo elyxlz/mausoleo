@@ -12,6 +12,17 @@ Build the API server and CLI that let an LLM agent explore the hierarchical know
 - Async ClickHouse client (clickhouse-connect or asynch)
 - Embedding model loaded in-process for query embedding (or call out to a separate service)
 
+### Deployment: Docker Only
+
+The server runs exclusively via Docker. A single `docker compose up` starts both the API server and ClickHouse together. No manual ClickHouse setup, no systemd — fully self-contained.
+
+```
+docker compose up        # starts clickhouse + mausoleo server
+docker compose down      # stops everything
+```
+
+On startup, the server waits for ClickHouse to be healthy (Docker healthcheck + retry loop), then runs schema migrations automatically.
+
 ### Endpoints
 
 #### Tree Traversal

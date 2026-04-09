@@ -102,7 +102,61 @@ mausoleo = "mausoleo.cli:app"
 
 This way someone can `pip install mausoleo` just to run the server/CLI against an existing index without needing GPU libraries.
 
-## 5.4 Configuration
+## 5.4 Server Deployment (Docker Only)
+
+The server (API + ClickHouse) runs exclusively via Docker. Single command to start everything:
+
+```bash
+docker compose up -d     # starts clickhouse + mausoleo API server
+```
+
+### docker-compose.yml
+
+```yaml
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+    healthcheck:
+      test: ["CMD", "clickhouse-client", "--query", "SELECT 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  server:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+    environment:
+      - CLICKHOUSE_HOST=clickhouse
+
+volumes:
+  clickhouse_data:
+```
+
+### Dockerfile (multi-stage)
+
+```dockerfile
+FROM python:3.11-slim AS base
+WORKDIR /app
+COPY pyproject.toml .
+RUN pip install .
+
+FROM base
+COPY src/ src/
+EXPOSE 8000
+CMD ["uvicorn", "mausoleo.server.app:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000"]
+```
+
+ClickHouse is never exposed to the host — only the API server port is published. The CLI talks to the API server, not to ClickHouse directly.
+
+Users never install or manage ClickHouse themselves. `pip install mausoleo` gives them just the CLI. `docker compose up` gives them the full server stack.
+
+## 5.5 Configuration
 
 Use a config file (`mausoleo.toml` or similar) or environment variables:
 
@@ -130,16 +184,14 @@ source_dir = "/path/to/scraped/pages"
 ocr_output_dir = "/path/to/ocr/output"
 ```
 
-## 5.5 External Dependencies
+## 5.6 External Dependencies
 
 Document clearly in README:
-- ClickHouse (user must run their own instance, provide Docker compose file)
+- Docker (required for running the server — bundles ClickHouse automatically)
 - vLLM (user must run for OCR/index building, not needed for search/CLI)
 - GPU (only for OCR and index building phases)
 
-Provide a `docker-compose.yml` for ClickHouse + the API server.
-
-## 5.6 Implementation Steps
+## 5.7 Implementation Steps
 
 1. Restructure repo from current layout to target layout
 2. Update pyproject.toml with proper dependencies and entry points
