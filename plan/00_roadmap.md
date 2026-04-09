@@ -57,7 +57,7 @@ Applied to Il Messaggero (Rome), 1880–~1945, hundreds of thousands of pages.
 - Summaries stay roughly same size across all levels
 - Vector search as escape hatch when tree traversal misses something
 - CLI outputs structured JSON, designed purely for LLM agent consumption
-- All Python, single pip install, API-based architecture
+- All Python, pip install for CLI, Docker for server (bundles ClickHouse), API-based architecture
 - Newspaper-specific for now; generic system is future work
 - Scope: Il Messaggero, 1880–~1945
 
