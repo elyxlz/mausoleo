@@ -1,16 +1,21 @@
-# Python-generated files
 __pycache__/
-*.py[oc]
-build/
+*.py[cod]
+*$py.class
+*.egg-info/
 dist/
+build/
 wheels/
-*.egg-info
-
-# Virtual environments
-.venv
-
+.venv/
+.env
+*.log
+.ruff_cache/
+.pyright/
+.pytest_cache/
+uv.lock
+eval/ground_truth/
+eval/predictions/
+eval/metrics/
 data/
-scrape.log
 user_data/
 output/
 auth.json

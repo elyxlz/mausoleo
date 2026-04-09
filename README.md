@@ -1,35 +1,54 @@
-SDR:
-an api to apply machine intelligence to historical data
+# Mausoleo di Roma
 
-api:
-/ingest
-takes an image (e.g. of a newspaper) and puts it in a queue for digesting
+Hierarchical knowledge index for historical newspaper archives.
 
-/search
-searches the index
+Takes scanned newspaper pages, produces high-quality OCR with correct reading order, builds a recursive hierarchical summary tree in ClickHouse, and exposes a CLI for LLM agents to navigate the knowledge efficiently.
 
-Also an MCP server for a deepresearch style frontend
+## Architecture
 
-data pipeline:
+```
+Scanned Pages → OCR Pipeline (Ray Data + vLLM) → Structured Text
+    → Recursive Summarization (vLLM) → Hierarchical Index (ClickHouse)
+        → API Server (FastAPI) → CLI (typer) → LLM Agent
+```
 
-1. raw data
+### Hierarchy
 
-- jsonl, each row contains metadata and path to file
+```
+Paragraph → Article → Day → Month → Year → Decade → Archive
+```
 
-2. segmentation
+Each level stores a fixed-size summary. An agent navigates top-down through summaries, drilling into branches of interest, or searches semantically/by keyword across any level.
 
-- updates each row with paths to segments and positions on page
+## Install
 
-3. ocr
+```bash
+pip install mausoleo          # CLI + server only
+pip install mausoleo[ocr]     # + OCR pipeline dependencies
+pip install mausoleo[index]   # + index building dependencies
+pip install mausoleo[all]     # everything
+```
 
-- updates each row with transcription of each segment
+## Usage
 
-4. llm rewriting -> articles
+```bash
+mausoleo root                              # archive root node
+mausoleo children <node_id>                # drill down
+mausoleo node <node_id>                    # inspect a node
+mausoleo text <node_id>                    # raw text
+mausoleo search "<query>" --mode semantic  # semantic search
+mausoleo search "<query>" --mode text      # keyword search
+mausoleo stats                             # index statistics
+```
 
-- given a succession of pages, extract articles and make a new index
+## Development
 
-5. llm summarizing articles
+```bash
+git clone https://github.com/elyxlz/mausoleo_di_roma.git
+cd mausoleo_di_roma
+uv sync --all-extras
+```
 
-all llm stuff is done with vllm
+## License
 
-the atomic unit of data is the article
+MIT
