@@ -27,12 +27,14 @@ index = [
 eval = [
     "jiwer>=3.0.0",
 ]
+
+[dependency-groups]
 dev = [
     "pytest>=8.0.0",
     "pyright>=1.1.0",
     "ruff>=0.3.0",
+    "ty>=0.0.1a1",
 ]
-all = ["mausoleo[ocr,index,eval,dev]"]
 
 [project.scripts]
 mausoleo = "mausoleo.cli:app"

@@ -2,7 +2,7 @@
 
 ## Goal
 
-Package the project for public release as a pip-installable Python package. Clean repo structure, documentation, and easy setup.
+Package the project for public release. Uses `uv` throughout for dependency management, running scripts, and builds. Clean repo structure, documentation, and easy setup.
 
 ## 5.1 Package Name
 
@@ -67,6 +67,8 @@ mausoleo/
 
 ## 5.3 pyproject.toml
 
+Uses `uv` for all dependency management. All commands use `uv run`, `uv add`, `uv sync`.
+
 ```toml
 [project]
 name = "mausoleo"
@@ -85,9 +87,10 @@ dependencies = [
 [project.optional-dependencies]
 ocr = ["ray[data]", "vllm", "Pillow"]
 index = ["ray[data]", "vllm"]
-eval = ["jiwer"]       # for WER/CER computation
+eval = ["jiwer"]
+
+[dependency-groups]
 dev = ["pytest", "pyright", "ruff"]
-all = ["mausoleo[ocr,index,eval,dev]"]
 
 [project.scripts]
 mausoleo = "mausoleo.cli:app"
@@ -95,12 +98,20 @@ mausoleo = "mausoleo.cli:app"
 
 ### Dependency Groups
 
-- **Core** (just the CLI + server): lightweight, no GPU dependencies
-- **ocr**: adds Ray Data and vLLM for running the OCR pipeline
-- **index**: adds Ray Data and vLLM for building the hierarchical index
-- **eval**: adds evaluation metrics dependencies
+- **Core** (just the CLI): lightweight, no GPU dependencies — `uv add mausoleo`
+- **ocr**: adds Ray Data and vLLM for running the OCR pipeline — `uv add mausoleo[ocr]`
+- **index**: adds Ray Data and vLLM for building the hierarchical index — `uv add mausoleo[index]`
+- **eval**: adds evaluation metrics dependencies — `uv add mausoleo[eval]`
+- **dev**: pytest, pyright, ruff — `uv sync --group dev`
 
-This way someone can `pip install mausoleo` just to run the server/CLI against an existing index without needing GPU libraries.
+### Development Workflow
+
+```bash
+uv sync --all-extras --all-groups   # install everything
+uv run mausoleo --help              # run CLI
+uv run pytest                       # run tests
+uv run pyright src/                 # type check
+```
 
 ## 5.4 Server Deployment (Docker Only)
 
@@ -138,23 +149,22 @@ volumes:
   clickhouse_data:
 ```
 
-### Dockerfile (multi-stage)
+### Dockerfile
 
 ```dockerfile
-FROM python:3.11-slim AS base
+FROM python:3.11-slim
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 WORKDIR /app
-COPY pyproject.toml .
-RUN pip install .
-
-FROM base
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen --no-dev
 COPY src/ src/
 EXPOSE 8000
-CMD ["uvicorn", "mausoleo.server.app:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uv", "run", "uvicorn", "mausoleo.server.app:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
 ClickHouse is never exposed to the host — only the API server port is published. The CLI talks to the API server, not to ClickHouse directly.
 
-Users never install or manage ClickHouse themselves. `pip install mausoleo` gives them just the CLI. `docker compose up` gives them the full server stack.
+Users never install or manage ClickHouse themselves. `uv add mausoleo` gives them just the CLI. `docker compose up` gives them the full server stack.
 
 ## 5.5 Configuration
 
@@ -198,13 +208,13 @@ Document clearly in README:
 3. Move existing code into new structure (scraper, segmentation logic)
 4. Write minimal README (what it is, how to install, how to run each phase)
 5. Add docker-compose.yml for ClickHouse
-6. Ensure `pip install -e .` works cleanly
-7. Ensure `mausoleo --help` works after install
+6. Ensure `uv sync` works cleanly
+7. Ensure `uv run mausoleo --help` works after sync
 
 ### Definition of Done
 
-- `pip install mausoleo` works
-- `mausoleo --help` shows available commands
+- `uv add mausoleo` works
+- `uv run mausoleo --help` shows available commands
 - README covers installation and basic usage for each phase
 - docker-compose.yml starts ClickHouse
 - Pyright passes with strict checking

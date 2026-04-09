@@ -23,10 +23,16 @@ Each level stores a fixed-size summary. An agent navigates top-down through summ
 ## Install
 
 ```bash
-pip install mausoleo          # CLI + server only
-pip install mausoleo[ocr]     # + OCR pipeline dependencies
-pip install mausoleo[index]   # + index building dependencies
-pip install mausoleo[all]     # everything
+uv add mausoleo              # CLI only
+uv add mausoleo[ocr]         # + OCR pipeline dependencies
+uv add mausoleo[index]       # + index building dependencies
+uv add mausoleo[all]         # everything
+```
+
+## Server
+
+```bash
+docker compose up -d          # starts API server + ClickHouse
 ```
 
 ## Usage
