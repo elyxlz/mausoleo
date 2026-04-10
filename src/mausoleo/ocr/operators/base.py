@@ -23,6 +23,7 @@ class BaseOperatorConfig:
     batch_size: int = 1
     min_actors: int = 1
     mock: bool = False
+    runtime_env: dict[str, tp.Any] | None = None
 
 
 ConfigT = tp.TypeVar("ConfigT", bound=BaseOperatorConfig)
@@ -75,13 +76,15 @@ def apply_operator(
         if is_stateful:
             gpu_budget = max(1, n_gpu // max(n_gpu_operators, 1)) if step_config.gpu_fraction > 0 else 0
             max_actors = max(1, int(gpu_budget / step_config.gpu_fraction)) if step_config.gpu_fraction > 0 else 4
-            return ds.map_batches(
-                entry.impl,
-                fn_constructor_args=(step_config,),
-                batch_size=step_config.batch_size,
-                num_gpus=step_config.gpu_fraction if step_config.gpu_fraction > 0 else 0,
-                compute=ray.data.ActorPoolStrategy(min_size=step_config.min_actors, max_size=max_actors),
-            )
+            kwargs: dict[str, tp.Any] = {
+                "fn_constructor_args": (step_config,),
+                "batch_size": step_config.batch_size,
+                "num_gpus": step_config.gpu_fraction if step_config.gpu_fraction > 0 else 0,
+                "compute": ray.data.ActorPoolStrategy(min_size=step_config.min_actors, max_size=max_actors),
+            }
+            if step_config.runtime_env is not None:
+                kwargs["runtime_env"] = step_config.runtime_env
+            return ds.map_batches(entry.impl, **kwargs)
         return ds.map_batches(partial(entry.impl, config=step_config), batch_size=step_config.batch_size)
 
     if entry.operation == OperatorType.MAP:

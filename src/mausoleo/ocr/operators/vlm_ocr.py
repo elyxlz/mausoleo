@@ -100,11 +100,11 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
 
     def _init_florence(self) -> None:
         import torch
-        from transformers import AutoModelForVision2Seq, AutoProcessor
+        from transformers import AutoModelForCausalLM, AutoProcessor
 
         self.processor = AutoProcessor.from_pretrained(self.config.model, trust_remote_code=True)
-        self.hf_model = AutoModelForVision2Seq.from_pretrained(
-            self.config.model, device_map="auto", trust_remote_code=True, torch_dtype=torch.bfloat16
+        self.hf_model = AutoModelForCausalLM.from_pretrained(
+            self.config.model, device_map="auto", trust_remote_code=True, torch_dtype=torch.float32, attn_implementation="eager"
         )
 
     def _init_got_ocr(self) -> None:
