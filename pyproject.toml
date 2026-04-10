@@ -12,13 +12,26 @@ dependencies = [
     "uvicorn>=0.23.0",
     "pydantic>=2.0.0",
     "clickhouse-connect>=0.7.0",
+    "python-multipart>=0.0.24",
 ]
 
 [project.optional-dependencies]
 ocr = [
     "ray[data]>=2.9.0",
-    "vllm>=0.4.0",
     "Pillow>=10.0.0",
+    "transformers>=4.40.0",
+    "accelerate>=0.25.0",
+    "torch>=2.0.0",
+    "qwen-vl-utils>=0.0.8",
+]
+ocr-vllm = [
+    "vllm>=0.4.0",
+]
+ocr-yolo = [
+    "ultralytics>=8.0.0",
+]
+ocr-surya = [
+    "surya-ocr>=0.6.0",
 ]
 index = [
     "ray[data]>=2.9.0",
@@ -34,6 +47,8 @@ dev = [
     "pyright>=1.1.0",
     "ruff>=0.3.0",
     "ty>=0.0.1a1",
+    "ray[data]>=2.9.0",
+    "jiwer>=3.0.0",
 ]
 
 [project.scripts]
@@ -60,3 +75,8 @@ pythonVersion = "3.11"
 typeCheckingMode = "strict"
 venvPath = "."
 venv = ".venv"
+reportMissingImports = "warning"
+reportUnknownMemberType = "warning"
+reportUnknownVariableType = "warning"
+reportUnknownParameterType = "warning"
+reportUnknownArgumentType = "warning"

@@ -1,0 +1,104 @@
+=== YOLO CONFIGS ===
+--- yolo_qwen7b_column 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_column on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmCleanupOperator)).__init__()[39m (pid=528241, ip=192.168.0.15, actor_id=7007087187a558b931ae84ca01000000, repr=MapWorker(MapBatches(LlmCleanupOperator)))
+
+--- yolo_qwen7b_column 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_column on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmCleanupOperator)).__init__()[39m (pid=530961, ip=192.168.0.15, actor_id=b3406fdeebca5934786e4b9501000000, repr=MapWorker(MapBatches(LlmCleanupOperator)))
+
+--- yolo_qwen7b_column 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_column on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmCleanupOperator)).__init__()[39m (pid=533681, ip=192.168.0.15, actor_id=41a4a65a3b296c6f95db0bbb01000000, repr=MapWorker(MapBatches(LlmCleanupOperator)))
+
+--- yolo_qwen7b_structured 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_structured on 1885-06-15 (4 pages)
+-> 437 articles | 99302 chars | 133.9s
+saved: eval/predictions/yolo_qwen7b_structured_1885-06-15.json
+
+--- yolo_qwen7b_structured 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_structured on 1910-06-15 (6 pages)
+-> 948 articles | 271204 chars | 272.9s
+saved: eval/predictions/yolo_qwen7b_structured_1910-06-15.json
+
+--- yolo_qwen7b_structured 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_structured on 1940-04-01 (6 pages)
+-> 72 articles | 69989 chars | 152.8s
+saved: eval/predictions/yolo_qwen7b_structured_1940-04-01.json
+
+--- yolo_qwen3b_column 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen3b_column on 1885-06-15 (4 pages)
+-> 1 articles | 0 chars | 120.2s
+saved: eval/predictions/yolo_qwen3b_column_1885-06-15.json
+
+--- yolo_qwen3b_column 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen3b_column on 1910-06-15 (6 pages)
+-> 1 articles | 0 chars | 150.6s
+saved: eval/predictions/yolo_qwen3b_column_1910-06-15.json
+
+--- yolo_qwen3b_column 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen3b_column on 1940-04-01 (6 pages)
+-> 1 articles | 5185 chars | 132.9s
+saved: eval/predictions/yolo_qwen3b_column_1940-04-01.json
+
+=== TWO-MODEL CONFIGS ===
+--- qwen7b_v2_raw 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmCleanupOperator)).__init__()[39m (pid=553032, ip=192.168.0.15, actor_id=c852a7c53f531a05d51b236101000000, repr=MapWorker(MapBatches(LlmCleanupOperator)))
+
+--- qwen7b_v2_raw 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmCleanupOperator)).__init__()[39m (pid=555661, ip=192.168.0.15, actor_id=edba70664461b3763468951701000000, repr=MapWorker(MapBatches(LlmCleanupOperator)))
+
+--- qwen7b_v2_raw 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmCleanupOperator)).__init__()[39m (pid=558295, ip=192.168.0.15, actor_id=1d0648ed81504eea04c296fb01000000, repr=MapWorker(MapBatches(LlmCleanupOperator)))
+
+--- qwen7b_v2_raw_postcorrect 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw_postcorrect on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmPostCorrectOperator)).__init__()[39m (pid=560925, ip=192.168.0.15, actor_id=4a5e4e19fd330559b7f798ed01000000, repr=MapWorker(MapBatches(LlmPostCorrectOperator)))
+
+--- qwen7b_v2_raw_postcorrect 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw_postcorrect on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmPostCorrectOperator)).__init__()[39m (pid=563561, ip=192.168.0.15, actor_id=3931a7ded7d59519c2c1719d01000000, repr=MapWorker(MapBatches(LlmPostCorrectOperator)))
+
+--- qwen7b_v2_raw_postcorrect 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw_postcorrect on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmPostCorrectOperator)).__init__()[39m (pid=566193, ip=192.168.0.15, actor_id=fea03e11d54688352c65119701000000, repr=MapWorker(MapBatches(LlmPostCorrectOperator)))
+
+--- qwen7b_v2_structured_postcorrect 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_structured_postcorrect on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmPostCorrectOperator)).__init__()[39m (pid=568834, ip=192.168.0.15, actor_id=a08374edba19cf976d25a54001000000, repr=MapWorker(MapBatches(LlmPostCorrectOperator)))
+
+--- qwen7b_v2_structured_postcorrect 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_structured_postcorrect on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmPostCorrectOperator)).__init__()[39m (pid=571466, ip=192.168.0.15, actor_id=469645261e53551c9bd6505e01000000, repr=MapWorker(MapBatches(LlmPostCorrectOperator)))
+
+--- qwen7b_v2_structured_postcorrect 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_structured_postcorrect on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmPostCorrectOperator)).__init__()[39m (pid=574093, ip=192.168.0.15, actor_id=2aaf8cdf788975e5bff1e5cc01000000, repr=MapWorker(MapBatches(LlmPostCorrectOperator)))
+
+--- preproc_qwen7b_v2_raw 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running preproc_qwen7b_v2_raw on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(LlmCleanupOperator)).__init__()[39m (pid=576850, ip=192.168.0.15, actor_id=e0eaa2e3107837e331de1b9401000000, repr=MapWorker(MapBatches(LlmCleanupOperator)))
+
+--- preproc_qwen7b_v2_raw 1910-06-15 ---

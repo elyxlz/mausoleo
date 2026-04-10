@@ -1,0 +1,227 @@
+=== ALL CONFIGS VIA RAY (2 GPUs) ===
+--- preproc_qwen7b_v2_raw 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running preproc_qwen7b_v2_raw on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=375062, ip=192.168.0.15, actor_id=729af462d01e0978ee36933f01000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- preproc_qwen7b_v2_raw 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running preproc_qwen7b_v2_raw on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=377724, ip=192.168.0.15, actor_id=13777eb5d1eb04556971827501000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- preproc_qwen7b_v2_raw 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running preproc_qwen7b_v2_raw on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=380391, ip=192.168.0.15, actor_id=18eaba904748f84aba7ae29901000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- preproc_qwen7b_v2_structured 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+SKIP preproc_qwen7b_v2_structured 1885-06-15 (exists)
+
+--- preproc_qwen7b_v2_structured 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running preproc_qwen7b_v2_structured on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=383084, ip=192.168.0.15, actor_id=002ef3cc06a3d4a85e197d4601000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- preproc_qwen7b_v2_structured 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running preproc_qwen7b_v2_structured on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=385651, ip=192.168.0.15, actor_id=334917bd58d3647cf35df95601000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen3b_v2_structured 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+SKIP qwen3b_v2_structured 1885-06-15 (exists)
+
+--- qwen3b_v2_structured 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen3b_v2_structured on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=388252, ip=192.168.0.15, actor_id=10e98eefadc43b8a74b55cd401000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen3b_v2_structured 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+SKIP qwen3b_v2_structured 1940-04-01 (exists)
+
+--- qwen7b_v1_structured 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v1_structured on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=390777, ip=192.168.0.15, actor_id=b32b33ed9aee5177646c25f401000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v1_structured 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v1_structured on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=393271, ip=192.168.0.15, actor_id=08b80fe2e0d1ac6ea37fa96901000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v1_structured 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v1_structured on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=395757, ip=192.168.0.15, actor_id=4ea87638be86e0093b72c7e701000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v2_raw 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+SKIP qwen7b_v2_raw 1885-06-15 (exists)
+
+--- qwen7b_v2_raw 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+SKIP qwen7b_v2_raw 1910-06-15 (exists)
+
+--- qwen7b_v2_raw 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+SKIP qwen7b_v2_raw 1940-04-01 (exists)
+
+--- qwen7b_v2_raw_postcorrect 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw_postcorrect on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=398379, ip=192.168.0.15, actor_id=b0913725c7a724838d03926a01000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v2_raw_postcorrect 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw_postcorrect on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=400970, ip=192.168.0.15, actor_id=2d8f38e538e9b5308008f27d01000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v2_raw_postcorrect 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw_postcorrect on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=403562, ip=192.168.0.15, actor_id=63ca972c995d91072a5d6b9301000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v2_structured 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+SKIP qwen7b_v2_structured 1885-06-15 (exists)
+
+--- qwen7b_v2_structured 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+SKIP qwen7b_v2_structured 1910-06-15 (exists)
+
+--- qwen7b_v2_structured 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+SKIP qwen7b_v2_structured 1940-04-01 (exists)
+
+--- qwen7b_v2_structured_postcorrect 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_structured_postcorrect on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=406275, ip=192.168.0.15, actor_id=c36bb57d5661fe2dfe90580c01000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v2_structured_postcorrect 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_structured_postcorrect on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=408864, ip=192.168.0.15, actor_id=def1ad5e06807a3b6205d42701000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v2_structured_postcorrect 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_structured_postcorrect on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=411459, ip=192.168.0.15, actor_id=91f351919793dfc700525b8a01000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- yolo_qwen3b_column 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen3b_column on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(YoloCropOperator)).__init__()[39m (pid=414056, ip=192.168.0.15, actor_id=808e8775e384c909092a44bd01000000, repr=MapWorker(MapBatches(YoloCropOperator)))
+
+--- yolo_qwen3b_column 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen3b_column on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(YoloCropOperator)).__init__()[39m (pid=416721, ip=192.168.0.15, actor_id=df11c8e386eae7d2534c8ff101000000, repr=MapWorker(MapBatches(YoloCropOperator)))
+
+--- yolo_qwen3b_column 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen3b_column on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(YoloCropOperator)).__init__()[39m (pid=419383, ip=192.168.0.15, actor_id=8001b8dcf45337847081a26201000000, repr=MapWorker(MapBatches(YoloCropOperator)))
+
+--- yolo_qwen7b_column 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_column on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(YoloCropOperator)).__init__()[39m (pid=421991, ip=192.168.0.15, actor_id=c463a39464cb3b8f329918f801000000, repr=MapWorker(MapBatches(YoloCropOperator)))
+
+--- yolo_qwen7b_column 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_column on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(YoloCropOperator)).__init__()[39m (pid=424548, ip=192.168.0.15, actor_id=41d80e50ff86ea616f37205601000000, repr=MapWorker(MapBatches(YoloCropOperator)))
+
+--- yolo_qwen7b_column 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_column on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(YoloCropOperator)).__init__()[39m (pid=427119, ip=192.168.0.15, actor_id=8610c63ce65696f85efc3e6501000000, repr=MapWorker(MapBatches(YoloCropOperator)))
+
+--- yolo_qwen7b_structured 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_structured on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(YoloCropOperator)).__init__()[39m (pid=429686, ip=192.168.0.15, actor_id=04b9b692054d6a200c44c3b101000000, repr=MapWorker(MapBatches(YoloCropOperator)))
+
+--- yolo_qwen7b_structured 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_structured on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(YoloCropOperator)).__init__()[39m (pid=432181, ip=192.168.0.15, actor_id=20e626bf870a7d20d2a388c101000000, repr=MapWorker(MapBatches(YoloCropOperator)))
+
+--- yolo_qwen7b_structured 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_structured on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(YoloCropOperator)).__init__()[39m (pid=434679, ip=192.168.0.15, actor_id=008930d951f25cd45f6bd45301000000, repr=MapWorker(MapBatches(YoloCropOperator)))
+
+
+=== BOOTSTRAP + EVAL ===
+BOOTSTRAPPING GROUND TRUTH
+============================================================
+  1885-06-15: bootstrapped from 'qwen7b_v2_raw' (consensus=0.373, 12 candidates, 56712 chars)
+  1910-06-15: bootstrapped from 'qwen_vl_7b_structured' (consensus=0.415, 10 candidates, 13007 chars)
+  1940-04-01: bootstrapped from 'qwen7b_v2_structured' (consensus=0.290, 11 candidates, 116652 chars)
+
+
+EVALUATION RESULTS
+============================================================
+
+Config                         Issue             CER      WER   Arts    Chars
+------------------------------------------------------------------------------
+qwen7b_v2_raw                  1885-06-15     0.0000   0.0000      1    56712
+qwen_vl_7b_structured          1885-06-15     0.4673   0.5541     26    35730
+qwen7b_raw                     1885-06-15     0.4788   0.5355      1    36712
+qwen7b_structured              1885-06-15     0.5389   0.6186     26    31754
+qwen3b_v2_structured           1885-06-15     0.5675   0.7641      9    51115
+qwen7b_v2_structured           1885-06-15     0.5901   0.8038     22    53826
+qwen3b_raw                     1885-06-15     0.6267   0.7668      1    36628
+qwen3b_structured              1885-06-15     0.6458   0.8401     15    45249
+qwen_vl_3b_structured          1885-06-15     0.6458   0.8401     15    45249
+preproc_qwen7b_v2_structured   1885-06-15     0.6887   0.7100     12    61523
+internvl4b_structured          1885-06-15     0.8014   0.9642      4    45437
+got_ocr2_raw                   1885-06-15     0.8432   0.9687      1    23197
+qwen_vl_7b_structured          1910-06-15     0.0000   0.0000      6    13007
+qwen7b_structured              1910-06-15     0.0017   0.0053      6    13025
+qwen7b_v2_structured           1910-06-15     0.2123   0.2441      6    10961
+qwen3b_structured              1910-06-15     0.3327   0.4406      6    12781
+qwen_vl_3b_structured          1910-06-15     0.3327   0.4406      6    12781
+qwen7b_raw                     1910-06-15     0.6235   0.7702      1    12218
+qwen7b_v2_raw                  1910-06-15     0.7582   0.8796      1    10305
+got_ocr2_raw                   1910-06-15     1.4543   1.0845      1    20538
+internvl4b_structured          1910-06-15     4.5665   4.3930      6    68078
+preproc_qwen7b_v2_raw          1910-06-15     9.0813   7.3703      1   129176
+qwen7b_v2_structured           1940-04-01     0.0000   0.0000     24   116652
+qwen7b_structured              1940-04-01     0.5452   0.6720      6    75854
+qwen_vl_7b_structured          1940-04-01     0.6063   0.7587      6    73635
+qwen7b_v2_raw                  1940-04-01     0.6497   0.9059      1   106182
+qwen3b_structured              1940-04-01     0.6901   0.8875      6    78747
+qwen3b_raw                     1940-04-01     0.7015   0.8822      1    60784
+qwen7b_raw                     1940-04-01     0.7057   0.8921      1    68555
+qwen_vl_3b_structured          1940-04-01     0.7059   0.8960      6    70234
+internvl4b_structured          1940-04-01     0.7807   0.9670     13    48964
+qwen3b_v2_structured           1940-04-01     0.7833   0.9188      6   112228
+got_ocr2_raw                   1940-04-01     0.9276   0.9893      1    28505
+
+
+RANKING (avg CER across issues)
+==================================================
+   1. qwen7b_v2_structured           avg_cer=0.2675 (3 issues)
+   2. qwen_vl_7b_structured          avg_cer=0.3579 (3 issues)
+   3. qwen7b_structured              avg_cer=0.3619 (3 issues)
+   4. qwen7b_v2_raw                  avg_cer=0.4693 (3 issues)
+   5. qwen3b_structured              avg_cer=0.5562 (3 issues)
+   6. qwen_vl_3b_structured          avg_cer=0.5615 (3 issues)
+   7. qwen7b_raw                     avg_cer=0.6027 (3 issues)
+   8. qwen3b_raw                     avg_cer=0.6641 (2 issues)
+   9. qwen3b_v2_structured           avg_cer=0.6754 (2 issues)
+  10. preproc_qwen7b_v2_structured   avg_cer=0.6887 (1 issues)
+  11. got_ocr2_raw                   avg_cer=1.0750 (3 issues)
+  12. internvl4b_structured          avg_cer=2.0495 (3 issues)
+  13. preproc_qwen7b_v2_raw          avg_cer=9.0813 (1 issues)
+
+Leaderboard saved to eval/leaderboard.txt
+
+=== ALL DONE ===
+33
+total prediction files

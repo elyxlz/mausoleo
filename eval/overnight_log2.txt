@@ -1,0 +1,2 @@
+=== RUNNING TWO-GPU + YOLO CONFIGS ===
+--- qwen7b_v2_raw_postcorrect 1885-06-15 ---

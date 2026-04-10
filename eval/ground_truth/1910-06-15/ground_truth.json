@@ -1,0 +1,37 @@
+{
+    "date": "1910-06-15",
+    "source": "il_messaggero",
+    "page_count": 6,
+    "articles": [
+        {
+            "id": "1910-06-15_a00",
+            "unit_type": "article",
+            "headline": "PLACEHOLDER - Cose telefoniche",
+            "paragraphs": [
+                {"id": "1910-06-15_a00_p00", "text": "Placeholder testo articolo prima pagina 1910."}
+            ],
+            "page_span": [1],
+            "position_in_issue": 0
+        },
+        {
+            "id": "1910-06-15_a01",
+            "unit_type": "article",
+            "headline": "PLACEHOLDER - In Italia e fuori",
+            "paragraphs": [
+                {"id": "1910-06-15_a01_p00", "text": "Placeholder testo secondo articolo 1910."}
+            ],
+            "page_span": [1],
+            "position_in_issue": 1
+        },
+        {
+            "id": "1910-06-15_a02",
+            "unit_type": "article",
+            "headline": "PLACEHOLDER - Le questioni della difesa navale alla Camera",
+            "paragraphs": [
+                {"id": "1910-06-15_a02_p00", "text": "Placeholder testo terzo articolo 1910."}
+            ],
+            "page_span": [1, 2],
+            "position_in_issue": 2
+        }
+    ]
+}
