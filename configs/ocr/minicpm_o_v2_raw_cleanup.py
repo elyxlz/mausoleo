@@ -2,7 +2,7 @@ from mausoleo.ocr import prompts
 from mausoleo.ocr.config import OcrPipelineConfig
 from mausoleo.ocr.operators import LlmCleanup, ParseIssue, VlmOcr
 
-LEGACY_ENV = {"pip": ["transformers==4.44.0", "accelerate>=0.25.0", "soundfile", "librosa"]}
+LEGACY_ENV = {"pip": ["transformers==4.44.0", "accelerate>=0.25.0", "soundfile", "librosa", "flash_attn"]}
 
 config = OcrPipelineConfig(
     name="minicpm_o_v2_raw_cleanup",
