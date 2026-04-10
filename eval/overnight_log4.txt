@@ -1,0 +1,283 @@
+=== YOLO CONFIGS ===
+--- yolo_qwen7b_column 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_column on 1885-06-15 (4 pages)
+-> 1 articles | 0 chars | 170.5s
+saved: eval/predictions/yolo_qwen7b_column_1885-06-15.json
+
+--- yolo_qwen7b_column 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_column on 1910-06-15 (6 pages)
+-> 1 articles | 0 chars | 149.6s
+saved: eval/predictions/yolo_qwen7b_column_1910-06-15.json
+
+--- yolo_qwen7b_column 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_column on 1940-04-01 (6 pages)
+-> 1 articles | 0 chars | 149.4s
+saved: eval/predictions/yolo_qwen7b_column_1940-04-01.json
+
+--- yolo_qwen7b_structured 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_structured on 1885-06-15 (4 pages)
+-> 437 articles | 99302 chars | 134.8s
+saved: eval/predictions/yolo_qwen7b_structured_1885-06-15.json
+
+--- yolo_qwen7b_structured 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_structured on 1910-06-15 (6 pages)
+-> 948 articles | 271204 chars | 275.0s
+saved: eval/predictions/yolo_qwen7b_structured_1910-06-15.json
+
+--- yolo_qwen7b_structured 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen7b_structured on 1940-04-01 (6 pages)
+-> 72 articles | 69989 chars | 154.1s
+saved: eval/predictions/yolo_qwen7b_structured_1940-04-01.json
+
+--- yolo_qwen3b_column 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen3b_column on 1885-06-15 (4 pages)
+-> 1 articles | 0 chars | 119.4s
+saved: eval/predictions/yolo_qwen3b_column_1885-06-15.json
+
+--- yolo_qwen3b_column 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen3b_column on 1910-06-15 (6 pages)
+-> 1 articles | 0 chars | 146.5s
+saved: eval/predictions/yolo_qwen3b_column_1910-06-15.json
+
+--- yolo_qwen3b_column 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running yolo_qwen3b_column on 1940-04-01 (6 pages)
+-> 1 articles | 5185 chars | 132.8s
+saved: eval/predictions/yolo_qwen3b_column_1940-04-01.json
+
+=== TWO-MODEL CONFIGS ===
+--- qwen7b_v2_raw 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw on 1885-06-15 (4 pages)
+-> 1 articles | 0 chars | 300.8s
+saved: eval/predictions/qwen7b_v2_raw_1885-06-15.json
+
+--- qwen7b_v2_raw 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw on 1910-06-15 (6 pages)
+-> 99 articles | 12007 chars | 242.9s
+saved: eval/predictions/qwen7b_v2_raw_1910-06-15.json
+
+--- qwen7b_v2_raw 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=622158, ip=192.168.0.15, actor_id=985b985f6d142ca1e056c43d01000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v2_raw_postcorrect 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw_postcorrect on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=624808, ip=192.168.0.15, actor_id=568e8b88678a15cb8f45362001000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v2_raw_postcorrect 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw_postcorrect on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=627389, ip=192.168.0.15, actor_id=a56567d3612006b3e2aac61f01000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v2_raw_postcorrect 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_raw_postcorrect on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=629994, ip=192.168.0.15, actor_id=f76a91b3669c22a2c2a4081101000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v2_structured_postcorrect 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_structured_postcorrect on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=632577, ip=192.168.0.15, actor_id=473f1d5b697e7b07efb5c75c01000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v2_structured_postcorrect 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_structured_postcorrect on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=635165, ip=192.168.0.15, actor_id=16a9f3853d04dc50d0bf8ebc01000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- qwen7b_v2_structured_postcorrect 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running qwen7b_v2_structured_postcorrect on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=637748, ip=192.168.0.15, actor_id=5e17f5652c710305d188c50001000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- preproc_qwen7b_v2_raw 1885-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running preproc_qwen7b_v2_raw on 1885-06-15 (4 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=640328, ip=192.168.0.15, actor_id=bc6bb9c2cfcbc59ab101150501000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- preproc_qwen7b_v2_raw 1910-06-15 ---
+running 1 configs x 1 dates = 1 runs
+running preproc_qwen7b_v2_raw on 1910-06-15 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=642991, ip=192.168.0.15, actor_id=2cec0f1aad7d3d8e2f463eb801000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+--- preproc_qwen7b_v2_raw 1940-04-01 ---
+running 1 configs x 1 dates = 1 runs
+running preproc_qwen7b_v2_raw on 1940-04-01 (6 pages)
+FAILED: ActorDiedError: The actor died because of an error raised in its creation task, [36mray::MapWorker(MapBatches(VlmOcrOperator)).__init__()[39m (pid=645646, ip=192.168.0.15, actor_id=d8a15cdf059af511dc9cda1801000000, repr=MapWorker(MapBatches(VlmOcrOperator)))
+
+=== REPAIR + RE-EVAL ===
+  [OK ] got_ocr2_raw_1885-06-15.json                         1 arts    23197 chars
+  [OK ] got_ocr2_raw_1910-06-15.json                         1 arts    20538 chars
+  [OK ] got_ocr2_raw_1940-04-01.json                         1 arts    28505 chars
+  [BAD] internvl4b_structured_1885-06-15.json                4 arts    44196 chars  (1 still bad)
+  [OK ] internvl4b_structured_1910-06-15.json               40 arts    61605 chars
+  [OK ] internvl4b_structured_1940-04-01.json              157 arts    33035 chars
+  [OK ] preproc_qwen7b_v2_raw_1910-06-15.json                1 arts   129176 chars
+  [OK ] preproc_qwen7b_v2_raw_1940-04-01.json                1 arts   126736 chars
+  [BAD] preproc_qwen7b_v2_structured_1885-06-15.json        12 arts    54238 chars  (1 still bad)
+  [OK ] qwen3b_raw_1885-06-15.json                           1 arts    36628 chars
+  [OK ] qwen3b_raw_1940-04-01.json                           1 arts    60784 chars
+  [OK ] qwen3b_structured_1885-06-15.json                   15 arts    44911 chars
+  [OK ] qwen3b_structured_1910-06-15.json                    9 arts    11826 chars
+  [BAD] qwen3b_structured_1940-04-01.json                    6 arts    77206 chars  (1 still bad)
+  [OK ] qwen3b_v2_structured_1885-06-15.json                16 arts    50204 chars
+  [OK ] qwen3b_v2_structured_1940-04-01.json                42 arts   106191 chars
+  [OK ] qwen7b_raw_1885-06-15.json                           1 arts    36712 chars
+  [OK ] qwen7b_raw_1910-06-15.json                           1 arts    12218 chars
+  [OK ] qwen7b_raw_1940-04-01.json                           1 arts    68555 chars
+  [OK ] qwen7b_structured_1885-06-15.json                   26 arts    31754 chars
+  [OK ] qwen7b_structured_1910-06-15.json                    8 arts    12186 chars
+  [BAD] qwen7b_structured_1940-04-01.json                   12 arts    74658 chars  (1 still bad)
+  [OK ] qwen7b_v2_raw_1885-06-15.json                        1 arts        0 chars
+  [OK ] qwen7b_v2_raw_1910-06-15.json                       99 arts    12007 chars
+  [OK ] qwen7b_v2_raw_1940-04-01.json                        1 arts   106182 chars
+  [OK ] qwen7b_v2_structured_1885-06-15.json                22 arts    53729 chars
+  [OK ] qwen7b_v2_structured_1910-06-15.json                 7 arts    10240 chars
+  [OK ] qwen7b_v2_structured_1940-04-01.json                28 arts   115812 chars
+  [OK ] qwen_vl_3b_structured_1885-06-15.json               15 arts    44911 chars
+  [OK ] qwen_vl_3b_structured_1910-06-15.json                9 arts    11826 chars
+  [BAD] qwen_vl_3b_structured_1940-04-01.json                6 arts    68878 chars  (1 still bad)
+  [OK ] qwen_vl_7b_structured_1885-06-15.json               26 arts    35730 chars
+  [OK ] qwen_vl_7b_structured_1910-06-15.json                8 arts    12168 chars
+  [OK ] qwen_vl_7b_structured_1940-04-01.json               15 arts    72036 chars
+  [OK ] yolo_qwen3b_column_1885-06-15.json                   1 arts        0 chars
+  [OK ] yolo_qwen3b_column_1910-06-15.json                   1 arts        0 chars
+  [BAD] yolo_qwen3b_column_1940-04-01.json                   1 arts     5185 chars  (1 still bad)
+  [OK ] yolo_qwen7b_column_1885-06-15.json                   1 arts        0 chars
+  [OK ] yolo_qwen7b_column_1910-06-15.json                   1 arts        0 chars
+  [OK ] yolo_qwen7b_column_1940-04-01.json                   1 arts        0 chars
+  [BAD] yolo_qwen7b_structured_1885-06-15.json             437 arts    99302 chars  (157 still bad)
+  [BAD] yolo_qwen7b_structured_1910-06-15.json             948 arts   270984 chars  (186 still bad)
+  [BAD] yolo_qwen7b_structured_1940-04-01.json              72 arts    69889 chars  (9 still bad)
+
+  Repaired 0 files
+
+BOOTSTRAPPING GROUND TRUTH
+============================================================
+
+  1885-06-15: 12 total predictions, 6 clean
+    [BAD] got_ocr2_raw                               1 arts    23197 chars
+    [BAD] internvl4b_structured                      4 arts    45437 chars
+    [BAD] preproc_qwen7b_v2_structured              12 arts    61523 chars
+    [BAD] qwen3b_raw                                 1 arts    36628 chars
+    [OK ] qwen3b_structured                         15 arts    44911 chars
+    [OK ] qwen3b_v2_structured                      16 arts    50204 chars
+    [BAD] qwen7b_raw                                 1 arts    36712 chars
+    [OK ] qwen7b_structured                         26 arts    31754 chars
+    [OK ] qwen7b_v2_structured                      22 arts    53729 chars
+    [OK ] qwen_vl_3b_structured                     15 arts    44911 chars
+    [OK ] qwen_vl_7b_structured                     26 arts    35730 chars
+    [BAD] yolo_qwen7b_structured                   437 arts    99302 chars
+    -> bootstrapped from 'qwen_vl_3b_structured' (score=0.562, 44911 chars, 15 articles)
+    -> clean: True, articles: 15
+
+  1910-06-15: 11 total predictions, 7 clean
+    [BAD] got_ocr2_raw                               1 arts    20538 chars
+    [OK ] internvl4b_structured                     40 arts    61605 chars
+    [BAD] preproc_qwen7b_v2_raw                      1 arts   129176 chars
+    [OK ] qwen3b_structured                          9 arts    11826 chars
+    [BAD] qwen7b_raw                                 1 arts    12218 chars
+    [OK ] qwen7b_structured                          8 arts    12186 chars
+    [OK ] qwen7b_v2_raw                             99 arts    12007 chars
+    [OK ] qwen7b_v2_structured                       7 arts    10240 chars
+    [OK ] qwen_vl_3b_structured                      9 arts    11826 chars
+    [OK ] qwen_vl_7b_structured                      8 arts    12168 chars
+    [BAD] yolo_qwen7b_structured                   948 arts   271204 chars
+    -> bootstrapped from 'qwen_vl_7b_structured' (score=0.580, 12168 chars, 8 articles)
+    -> clean: True, articles: 8
+
+  1940-04-01: 14 total predictions, 4 clean
+    [BAD] got_ocr2_raw                               1 arts    28505 chars
+    [OK ] internvl4b_structured                    157 arts    33035 chars
+    [BAD] preproc_qwen7b_v2_raw                      1 arts   126736 chars
+    [BAD] qwen3b_raw                                 1 arts    60784 chars
+    [BAD] qwen3b_structured                          6 arts    78747 chars
+    [OK ] qwen3b_v2_structured                      42 arts   106191 chars
+    [BAD] qwen7b_raw                                 1 arts    68555 chars
+    [BAD] qwen7b_structured                          6 arts    75854 chars
+    [BAD] qwen7b_v2_raw                              1 arts   106182 chars
+    [OK ] qwen7b_v2_structured                      28 arts   115812 chars
+    [BAD] qwen_vl_3b_structured                      6 arts    70234 chars
+    [OK ] qwen_vl_7b_structured                     15 arts    72036 chars
+    [BAD] yolo_qwen3b_column                         1 arts     5185 chars
+    [BAD] yolo_qwen7b_structured                    72 arts    69989 chars
+    -> bootstrapped from 'qwen7b_v2_structured' (score=0.371, 115812 chars, 28 articles)
+    -> clean: True, articles: 28
+
+
+EVALUATION RESULTS
+============================================================
+
+Config                                   Issue             CER      WER  Arts   Chars Clean
+------------------------------------------------------------------------------------------
+qwen3b_structured                        1885-06-15     0.0000   0.0000    15   44911     Y
+qwen_vl_3b_structured                    1885-06-15     0.0000   0.0000    15   44911     Y
+qwen3b_raw                               1885-06-15     0.5591   0.7232     1   36628     N
+qwen3b_v2_structured                     1885-06-15     0.6013   0.8428    16   50204     Y
+qwen_vl_7b_structured                    1885-06-15     0.6077   0.8359    26   35730     Y
+qwen7b_raw                               1885-06-15     0.6176   0.8128     1   36712     N
+qwen7b_structured                        1885-06-15     0.6357   0.8443    26   31754     Y
+qwen7b_v2_structured                     1885-06-15     0.7954   1.0894    22   53729     Y
+got_ocr2_raw                             1885-06-15     0.8273   0.9605     1   23197     N
+internvl4b_structured                    1885-06-15     0.8558   0.9692     4   45437     N
+preproc_qwen7b_v2_structured             1885-06-15     0.9836   0.9359    12   61523     N
+yolo_qwen7b_structured                   1885-06-15     1.6240   1.7261   437   99302     N
+qwen_vl_7b_structured                    1910-06-15     0.0000   0.0000     8   12168     Y
+qwen7b_structured                        1910-06-15     0.0018   0.0055     8   12186     Y
+qwen7b_v2_structured                     1910-06-15     0.2175   0.2488     7   10240     Y
+qwen3b_structured                        1910-06-15     0.3304   0.4401     9   11826     Y
+qwen_vl_3b_structured                    1910-06-15     0.3304   0.4401     9   11826     Y
+qwen7b_raw                               1910-06-15     0.6294   0.7638     1   12218     N
+qwen7b_v2_raw                            1910-06-15     0.7884   1.0498    99   12007     Y
+got_ocr2_raw                             1910-06-15     1.5556   1.1225     1   20538     N
+internvl4b_structured                    1910-06-15     4.4090   4.9710    40   61605     Y
+preproc_qwen7b_v2_raw                    1910-06-15     9.7413   7.6227     1  129176     N
+yolo_qwen7b_structured                   1910-06-15    21.2973  23.8480   948  271204     N
+qwen7b_v2_structured                     1940-04-01     0.0000   0.0000    28  115812     Y
+qwen7b_structured                        1940-04-01     0.5486   0.6784     6   75854     N
+qwen_vl_7b_structured                    1940-04-01     0.6053   0.7559    15   72036     Y
+qwen7b_v2_raw                            1940-04-01     0.6492   0.9075     1  106182     N
+qwen3b_structured                        1940-04-01     0.6911   0.8882     6   78747     N
+qwen3b_raw                               1940-04-01     0.7003   0.8815     1   60784     N
+qwen7b_raw                               1940-04-01     0.7044   0.8918     1   68555     N
+qwen_vl_3b_structured                    1940-04-01     0.7067   0.8966     6   70234     N
+yolo_qwen7b_structured                   1940-04-01     0.7357   0.9408    72   69989     N
+qwen3b_v2_structured                     1940-04-01     0.7620   0.9281    42  106191     Y
+internvl4b_structured                    1940-04-01     0.8210   0.9678   157   33035     Y
+preproc_qwen7b_v2_raw                    1940-04-01     0.9023   0.9416     1  126736     N
+got_ocr2_raw                             1940-04-01     0.9271   0.9893     1   28505     N
+yolo_qwen3b_column                       1940-04-01     0.9578   0.9834     1    5185     N
+
+
+LEADERBOARD (avg CER across issues)
+=================================================================
+   1. qwen7b_v2_structured                     CER=0.3376  WER=0.4461  (3 issues)
+   2. qwen3b_structured                        CER=0.3405  WER=0.4428  (3 issues) *has bad formatting*
+   3. qwen_vl_3b_structured                    CER=0.3457  WER=0.4456  (3 issues) *has bad formatting*
+   4. qwen7b_structured                        CER=0.3954  WER=0.5094  (3 issues) *has bad formatting*
+   5. qwen_vl_7b_structured                    CER=0.4043  WER=0.5306  (3 issues)
+   6. qwen3b_raw                               CER=0.6297  WER=0.8023  (2 issues) *has bad formatting*
+   7. qwen7b_raw                               CER=0.6505  WER=0.8228  (3 issues) *has bad formatting*
+   8. qwen3b_v2_structured                     CER=0.6817  WER=0.8855  (2 issues)
+   9. qwen7b_v2_raw                            CER=0.7188  WER=0.9786  (2 issues) *has bad formatting*
+  10. yolo_qwen3b_column                       CER=0.9578  WER=0.9834  (1 issues) *has bad formatting*
+  11. preproc_qwen7b_v2_structured             CER=0.9836  WER=0.9359  (1 issues) *has bad formatting*
+  12. got_ocr2_raw                             CER=1.1033  WER=1.0241  (3 issues) *has bad formatting*
+  13. internvl4b_structured                    CER=2.0286  WER=2.3027  (3 issues) *has bad formatting*
+  14. preproc_qwen7b_v2_raw                    CER=5.3218  WER=4.2822  (2 issues) *has bad formatting*
+  15. yolo_qwen7b_structured                   CER=7.8857  WER=8.8383  (3 issues) *has bad formatting*
+
+Saved to eval/leaderboard.txt
+
+=== ALL DONE ===

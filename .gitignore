@@ -11,7 +11,6 @@ wheels/
 .ruff_cache/
 .pyright/
 .pytest_cache/
-eval/ground_truth/
 eval/predictions/
 eval/metrics/
 data/

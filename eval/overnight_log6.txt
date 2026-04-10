@@ -1,0 +1,179 @@
+running 19 configs x 3 dates = 57 runs
+
+
+============================================================
+running col3_qwen3b_v2_structured on 1885-06-15 (4 pages)
+2026-04-10 14:24:08,903	INFO worker.py:2013 -- Started a local Ray instance.
+2026-04-10 14:24:08,906	WARNING working_dir.py:86 -- Directory '.venv' is now ignored by default when packaging the working directory. To disable this behavior, set the `RAY_OVERRIDE_RUNTIME_ENV_DEFAULT_EXCLUDES=''` environment variable.
+2026-04-10 14:24:08,910	INFO packaging.py:392 -- Ignoring upload to cluster for these files: [PosixPath('/home/audiogen/mausoleo_di_roma/.gitignore')]
+2026-04-10 14:24:08,948	INFO packaging.py:392 -- Ignoring upload to cluster for these files: [PosixPath('/home/audiogen/mausoleo_di_roma/.venv/.gitignore')]
+2026-04-10 14:24:08,954	INFO packaging.py:392 -- Ignoring upload to cluster for these files: [PosixPath('/home/audiogen/mausoleo_di_roma/.ruff_cache/.gitignore')]
+2026-04-10 14:24:08,955	INFO packaging.py:691 -- Creating a file package for local module '/home/audiogen/mausoleo_di_roma'.
+2026-04-10 14:24:08,956	INFO packaging.py:392 -- Ignoring upload to cluster for these files: [PosixPath('/home/audiogen/mausoleo_di_roma/.gitignore')]
+2026-04-10 14:24:08,993	INFO packaging.py:392 -- Ignoring upload to cluster for these files: [PosixPath('/home/audiogen/mausoleo_di_roma/.venv/.gitignore')]
+2026-04-10 14:24:08,999	INFO packaging.py:392 -- Ignoring upload to cluster for these files: [PosixPath('/home/audiogen/mausoleo_di_roma/.ruff_cache/.gitignore')]
+2026-04-10 14:24:09,015	INFO packaging.py:463 -- Pushing file package 'gcs://_ray_pkg_d96186c33a4069f1.zip' (21.45MiB) to Ray cluster...
+2026-04-10 14:24:09,084	INFO packaging.py:476 -- Successfully pushed file package 'gcs://_ray_pkg_d96186c33a4069f1.zip'.
+/home/audiogen/mausoleo_di_roma/.venv/lib/python3.11/site-packages/ray/_private/worker.py:2052: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+  warnings.warn(
+2026-04-10 14:24:10,588	INFO dataset.py:3670 -- Tip: Use `take_batch()` instead of `take() / show()` to return records in pandas or numpy batch format.
+2026-04-10 14:24:10,596	INFO logging.py:392 -- Registered dataset logger for dataset dataset_5_0
+2026-04-10 14:24:10,611	INFO streaming_executor.py:182 -- Starting execution of Dataset dataset_5_0. Full logs are in /tmp/ray/session_2026-04-10_14-24-06_787552_687139/logs/ray-data
+2026-04-10 14:24:10,611	INFO streaming_executor.py:183 -- Execution plan of Dataset dataset_5_0: InputDataBuffer[Input] -> TaskPoolMapOperator[Map(column_split)] -> ActorPoolMapOperator[MapBatches(VlmOcrOperator)] -> LimitOperator[limit=1] -> TaskPoolMapOperator[Map(merge_pages)->Map(parse_issue)]
+2026-04-10 14:24:10,639	WARNING resource_manager.py:141 -- ⚠️  Ray's object store is configured to use only 42.9% of available memory (16.7GiB out of 39.0GiB total). For optimal Ray Data performance, we recommend setting the object store to at least 50% of available memory. You can do this by setting the 'object_store_memory' parameter when calling ray.init() or by setting the RAY_DEFAULT_OBJECT_STORE_MEMORY_PROPORTION environment variable.
+2026-04-10 14:24:10,640	INFO __init__.py:56 -- Progress will be logged because stdout is a non-interactive terminal.
+2026-04-10 14:24:11,618	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_5_0 =======
+2026-04-10 14:24:11,618	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-04-10 14:24:11,618	INFO logging_progress.py:227 -- Active & requested resources: 0/32 CPU, 0.0B/8.4GiB object store (pending: 1 GPU)
+2026-04-10 14:24:11,618	INFO logging_progress.py:181 -- 
+2026-04-10 14:24:11,618	INFO logging_progress.py:231 -- Map(column_split): 0/1
+2026-04-10 14:24:11,618	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 384.0MiB object store
+2026-04-10 14:24:11,618	INFO logging_progress.py:231 -- MapBatches(VlmOcrOperator): 0/1
+2026-04-10 14:24:11,619	INFO logging_progress.py:233 --   Tasks: 0; Actors: 1 (running=0, restarting=0, pending=1); Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; [all objects local]
+2026-04-10 14:24:11,619	INFO logging_progress.py:231 -- limit=1: 0/1
+2026-04-10 14:24:11,619	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:24:11,619	INFO logging_progress.py:231 -- Map(merge_pages)->Map(parse_issue): 0/1
+2026-04-10 14:24:11,619	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:24:11,619	INFO logging_progress.py:192 -- ============================================
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m `torch_dtype` is deprecated! Use `dtype` instead!
+2026-04-10 14:24:21,631	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_5_0 =======
+2026-04-10 14:24:21,631	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-04-10 14:24:21,631	INFO logging_progress.py:227 -- Active & requested resources: 0/32 CPU, 11.7MiB/8.4GiB object store (pending: 1 GPU)
+2026-04-10 14:24:21,631	INFO logging_progress.py:181 -- 
+2026-04-10 14:24:21,631	INFO logging_progress.py:231 -- Map(column_split): 1/1
+2026-04-10 14:24:21,631	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 11.7MiB object store
+2026-04-10 14:24:21,631	INFO logging_progress.py:231 -- MapBatches(VlmOcrOperator): 0/1
+2026-04-10 14:24:21,631	INFO logging_progress.py:233 --   Tasks: 0; Actors: 1 (running=0, restarting=0, pending=1); Queued blocks: 1 (11.7MiB); Resources: 0.0 CPU, 0.0B object store; [all objects local]
+2026-04-10 14:24:21,631	INFO logging_progress.py:231 -- limit=1: 0/1
+2026-04-10 14:24:21,631	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:24:21,631	INFO logging_progress.py:231 -- Map(merge_pages)->Map(parse_issue): 0/1
+2026-04-10 14:24:21,631	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:24:21,631	INFO logging_progress.py:192 -- ============================================
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:00<00:00,  2.24it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.15it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:00<00:00,  2.16it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m 
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+2026-04-10 14:24:31,706	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_5_0 =======
+2026-04-10 14:24:31,706	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-04-10 14:24:31,707	INFO logging_progress.py:227 -- Active & requested resources: 0/32 CPU, 11.7MiB/8.4GiB object store (pending: 1 GPU)
+2026-04-10 14:24:31,707	INFO logging_progress.py:181 -- 
+2026-04-10 14:24:31,707	INFO logging_progress.py:231 -- Map(column_split): 1/1
+2026-04-10 14:24:31,707	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 11.7MiB object store
+2026-04-10 14:24:31,707	INFO logging_progress.py:231 -- MapBatches(VlmOcrOperator): 0/1
+2026-04-10 14:24:31,707	INFO logging_progress.py:233 --   Tasks: 0; Actors: 1 (running=0, restarting=0, pending=1); Queued blocks: 1 (11.7MiB); Resources: 0.0 CPU, 0.0B object store; [all objects local]
+2026-04-10 14:24:31,707	INFO logging_progress.py:231 -- limit=1: 0/1
+2026-04-10 14:24:31,707	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:24:31,707	INFO logging_progress.py:231 -- Map(merge_pages)->Map(parse_issue): 0/1
+2026-04-10 14:24:31,707	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:24:31,707	INFO logging_progress.py:192 -- ============================================
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:   0%|          | 0/35 [00:00<?, ?it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:   3%|▎         | 1/35 [00:00<00:14,  2.30it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:   6%|▌         | 2/35 [00:00<00:13,  2.36it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:   9%|▊         | 3/35 [00:01<00:13,  2.39it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  11%|█▏        | 4/35 [00:01<00:12,  2.39it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  14%|█▍        | 5/35 [00:02<00:12,  2.40it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  17%|█▋        | 6/35 [00:02<00:12,  2.40it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  20%|██        | 7/35 [00:02<00:11,  2.40it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  23%|██▎       | 8/35 [00:03<00:11,  2.41it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  26%|██▌       | 9/35 [00:03<00:10,  2.41it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  29%|██▊       | 10/35 [00:04<00:10,  2.43it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  31%|███▏      | 11/35 [00:04<00:09,  2.44it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  34%|███▍      | 12/35 [00:04<00:09,  2.46it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  37%|███▋      | 13/35 [00:05<00:08,  2.48it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  40%|████      | 14/35 [00:05<00:08,  2.49it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  43%|████▎     | 15/35 [00:06<00:07,  2.50it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  46%|████▌     | 16/35 [00:06<00:07,  2.50it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  49%|████▊     | 17/35 [00:06<00:07,  2.52it/s]
+2026-04-10 14:24:41,798	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_5_0 =======
+2026-04-10 14:24:41,798	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-04-10 14:24:41,798	INFO logging_progress.py:227 -- Active & requested resources: 0/32 CPU, 11.7MiB/8.4GiB object store (pending: 1 GPU)
+2026-04-10 14:24:41,798	INFO logging_progress.py:181 -- 
+2026-04-10 14:24:41,798	INFO logging_progress.py:231 -- Map(column_split): 1/1
+2026-04-10 14:24:41,798	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 11.7MiB object store
+2026-04-10 14:24:41,798	INFO logging_progress.py:231 -- MapBatches(VlmOcrOperator): 0/1
+2026-04-10 14:24:41,798	INFO logging_progress.py:233 --   Tasks: 0; Actors: 1 (running=0, restarting=0, pending=1); Queued blocks: 1 (11.7MiB); Resources: 0.0 CPU, 0.0B object store; [all objects local]
+2026-04-10 14:24:41,798	INFO logging_progress.py:231 -- limit=1: 0/1
+2026-04-10 14:24:41,798	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:24:41,799	INFO logging_progress.py:231 -- Map(merge_pages)->Map(parse_issue): 0/1
+2026-04-10 14:24:41,799	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:24:41,799	INFO logging_progress.py:192 -- ============================================
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  51%|█████▏    | 18/35 [00:07<00:06,  2.55it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  54%|█████▍    | 19/35 [00:07<00:06,  2.56it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  57%|█████▋    | 20/35 [00:08<00:05,  2.57it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  60%|██████    | 21/35 [00:08<00:05,  2.58it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  63%|██████▎   | 22/35 [00:08<00:05,  2.59it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  66%|██████▌   | 23/35 [00:09<00:04,  2.56it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  69%|██████▊   | 24/35 [00:09<00:04,  2.57it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  71%|███████▏  | 25/35 [00:10<00:03,  2.59it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  74%|███████▍  | 26/35 [00:10<00:03,  2.61it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  77%|███████▋  | 27/35 [00:10<00:03,  2.63it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  80%|████████  | 28/35 [00:11<00:02,  2.63it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  83%|████████▎ | 29/35 [00:11<00:02,  2.64it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  86%|████████▌ | 30/35 [00:11<00:01,  2.64it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  89%|████████▊ | 31/35 [00:12<00:01,  2.65it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  91%|█████████▏| 32/35 [00:12<00:01,  2.64it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  94%|█████████▍| 33/35 [00:13<00:00,  2.64it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes:  97%|█████████▋| 34/35 [00:13<00:00,  2.64it/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Capturing CUDA graph shapes: 100%|██████████| 35/35 [00:13<00:00,  2.62it/s]Capturing CUDA graph shapes: 100%|██████████| 35/35 [00:13<00:00,  2.53it/s]
+2026-04-10 14:24:51,860	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_5_0 =======
+2026-04-10 14:24:51,860	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-04-10 14:24:51,860	INFO logging_progress.py:227 -- Active & requested resources: 0/32 CPU, 1/2 GPU, 395.7MiB/8.4GiB object store
+2026-04-10 14:24:51,860	INFO logging_progress.py:181 -- 
+2026-04-10 14:24:51,860	INFO logging_progress.py:231 -- Map(column_split): 1/1
+2026-04-10 14:24:51,860	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 11.7MiB object store
+2026-04-10 14:24:51,860	INFO logging_progress.py:231 -- MapBatches(VlmOcrOperator): 0/1
+2026-04-10 14:24:51,860	INFO logging_progress.py:233 --   Tasks: 1; Actors: 1; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 1.0 GPU, 384.0MiB object store; [all objects local]
+2026-04-10 14:24:51,860	INFO logging_progress.py:231 -- limit=1: 0/1
+2026-04-10 14:24:51,861	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:24:51,861	INFO logging_progress.py:231 -- Map(merge_pages)->Map(parse_issue): 0/1
+2026-04-10 14:24:51,861	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:24:51,861	INFO logging_progress.py:192 -- ============================================
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Processed prompts:   0%|          | 0/12 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]
+2026-04-10 14:25:01,960	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_5_0 =======
+2026-04-10 14:25:01,960	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-04-10 14:25:01,960	INFO logging_progress.py:227 -- Active & requested resources: 0/32 CPU, 1/2 GPU, 395.7MiB/8.4GiB object store
+2026-04-10 14:25:01,960	INFO logging_progress.py:181 -- 
+2026-04-10 14:25:01,960	INFO logging_progress.py:231 -- Map(column_split): 1/1
+2026-04-10 14:25:01,960	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 11.7MiB object store
+2026-04-10 14:25:01,960	INFO logging_progress.py:231 -- MapBatches(VlmOcrOperator): 0/1
+2026-04-10 14:25:01,960	INFO logging_progress.py:233 --   Tasks: 1; Actors: 1; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 1.0 GPU, 384.0MiB object store; [all objects local]
+2026-04-10 14:25:01,960	INFO logging_progress.py:231 -- limit=1: 0/1
+2026-04-10 14:25:01,960	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:25:01,960	INFO logging_progress.py:231 -- Map(merge_pages)->Map(parse_issue): 0/1
+2026-04-10 14:25:01,960	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:25:01,961	INFO logging_progress.py:192 -- ============================================
+2026-04-10 14:25:12,058	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_5_0 =======
+2026-04-10 14:25:12,058	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-04-10 14:25:12,058	INFO logging_progress.py:227 -- Active & requested resources: 0/32 CPU, 1/2 GPU, 395.7MiB/8.4GiB object store
+2026-04-10 14:25:12,058	INFO logging_progress.py:181 -- 
+2026-04-10 14:25:12,058	INFO logging_progress.py:231 -- Map(column_split): 1/1
+2026-04-10 14:25:12,058	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 11.7MiB object store
+2026-04-10 14:25:12,058	INFO logging_progress.py:231 -- MapBatches(VlmOcrOperator): 0/1
+2026-04-10 14:25:12,058	INFO logging_progress.py:233 --   Tasks: 1; Actors: 1; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 1.0 GPU, 384.0MiB object store; [all objects local]
+2026-04-10 14:25:12,059	INFO logging_progress.py:231 -- limit=1: 0/1
+2026-04-10 14:25:12,059	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:25:12,059	INFO logging_progress.py:231 -- Map(merge_pages)->Map(parse_issue): 0/1
+2026-04-10 14:25:12,059	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:25:12,059	INFO logging_progress.py:192 -- ============================================
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Processed prompts:   8%|▊         | 1/12 [00:18<03:20, 18.20s/it, est. speed input: 163.23 toks/s, output: 38.51 toks/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Processed prompts:  17%|█▋        | 2/12 [00:23<01:44, 10.42s/it, est. speed input: 252.09 toks/s, output: 74.94 toks/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Processed prompts:  25%|██▌       | 3/12 [00:25<00:59,  6.57s/it, est. speed input: 346.22 toks/s, output: 115.45 toks/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Processed prompts:  33%|███▎      | 4/12 [00:25<00:33,  4.14s/it, est. speed input: 452.72 toks/s, output: 160.35 toks/s]
+2026-04-10 14:25:22,063	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_5_0 =======
+2026-04-10 14:25:22,063	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-04-10 14:25:22,063	INFO logging_progress.py:227 -- Active & requested resources: 0/32 CPU, 1/2 GPU, 395.7MiB/8.4GiB object store
+2026-04-10 14:25:22,064	INFO logging_progress.py:181 -- 
+2026-04-10 14:25:22,064	INFO logging_progress.py:231 -- Map(column_split): 1/1
+2026-04-10 14:25:22,064	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 11.7MiB object store
+2026-04-10 14:25:22,064	INFO logging_progress.py:231 -- MapBatches(VlmOcrOperator): 0/1
+2026-04-10 14:25:22,064	INFO logging_progress.py:233 --   Tasks: 1; Actors: 1; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 1.0 GPU, 384.0MiB object store; [all objects local]
+2026-04-10 14:25:22,064	INFO logging_progress.py:231 -- limit=1: 0/1
+2026-04-10 14:25:22,064	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:25:22,064	INFO logging_progress.py:231 -- Map(merge_pages)->Map(parse_issue): 0/1
+2026-04-10 14:25:22,064	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-04-10 14:25:22,064	INFO logging_progress.py:192 -- ============================================
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Processed prompts:  42%|████▏     | 5/12 [00:27<00:22,  3.21s/it, est. speed input: 532.57 toks/s, output: 199.43 toks/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Processed prompts:  50%|█████     | 6/12 [00:29<00:16,  2.81s/it, est. speed input: 597.06 toks/s, output: 235.39 toks/s]
+[36m(MapWorker(MapBatches(VlmOcrOperator)) pid=689362)[0m Processed prompts:  58%|█████▊    | 7/12 [00:30<00:11,  2.27s/it, est. speed input: 668.76 toks/s, output: 277.20 toks/s]
