@@ -2,7 +2,7 @@ from mausoleo.ocr import prompts
 from mausoleo.ocr.config import OcrPipelineConfig
 from mausoleo.ocr.operators import MergePages, ParseIssue, VlmOcr
 
-LEGACY_ENV = {"pip": ["transformers==4.44.0", "accelerate>=0.25.0", "soundfile", "librosa", "bitsandbytes"]}
+LEGACY_ENV = {"pip": ["transformers==4.44.0", "accelerate>=0.25.0", "soundfile", "librosa", "flash_attn", "bitsandbytes"]}
 
 config = OcrPipelineConfig(
     name="minicpm_o_4bit_v2_structured",

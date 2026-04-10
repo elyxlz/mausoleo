@@ -1,7 +1,7 @@
 from mausoleo.ocr.config import OcrPipelineConfig
 from mausoleo.ocr.operators import MergePages, ParseIssue, VlmOcr
 
-LEGACY_ENV = {"pip": ["transformers==4.44.0", "accelerate>=0.25.0"]}
+LEGACY_ENV = {"pip": ["transformers==4.44.0", "accelerate>=0.25.0", "flash_attn"]}
 
 config = OcrPipelineConfig(
     name="florence2_large_ocr",
