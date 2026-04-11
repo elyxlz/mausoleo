@@ -211,7 +211,7 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
             "minicpm": self._minicpm_call,
             "phi3": self._phi3_call,
             "internvl": self._internvl_call,
-            "hunyuan": self._generate_api_call,
+            "hunyuan": self._hunyuan_call,
             "default": self._generate_api_call,
         }
         call_fn = dispatch.get(self.model_type, self._generate_api_call)
@@ -235,6 +235,19 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
         inputs = self.processor(text=[text], images=[pil_img], return_tensors="pt").to(self.hf_model.device)
         with torch.no_grad():
             output_ids = self.hf_model.generate(**inputs, max_new_tokens=self.config.max_tokens)
+        generated = output_ids[:, inputs.input_ids.shape[1] :]
+        return self.processor.batch_decode(generated, skip_special_tokens=True)[0]  # type: ignore[no-any-return]
+
+    def _hunyuan_call(self, pil_img: tp.Any) -> str:
+        import torch
+
+        messages: list[dict[str, tp.Any]] = [
+            {"role": "user", "content": [{"type": "image", "image": pil_img}, {"type": "text", "text": self.config.prompt}]}
+        ]
+        text = self.processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        inputs = self.processor(text=[text], images=[pil_img], return_tensors="pt").to(self.hf_model.device)
+        with torch.no_grad():
+            output_ids = self.hf_model.generate(**inputs, max_new_tokens=self.config.max_tokens, do_sample=False)
         generated = output_ids[:, inputs.input_ids.shape[1] :]
         return self.processor.batch_decode(generated, skip_special_tokens=True)[0]  # type: ignore[no-any-return]
 
