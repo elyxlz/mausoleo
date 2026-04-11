@@ -2,7 +2,7 @@ from mausoleo.ocr import prompts
 from mausoleo.ocr.config import OcrPipelineConfig
 from mausoleo.ocr.operators import ColumnSplit, MergePages, ParseIssue, VlmOcr
 
-LEGACY_ENV = {"pip": ["transformers==4.44.0", "accelerate>=0.25.0", "soundfile", "librosa", "flash_attn"]}
+LEGACY_ENV = {"pip": ["transformers==4.44.0", "accelerate>=0.25.0", "soundfile", "librosa", "flash_attn", "vector_quantize_pytorch", "vocos"]}
 
 config = OcrPipelineConfig(
     name="col4_minicpm_o_v2_structured",

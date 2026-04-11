@@ -8,7 +8,7 @@ import typing as tp
 
 from mausoleo.ocr.operators.base import BaseOperatorConfig, OperatorType, StatefulOperator, register_operator
 
-ModelType = tp.Literal["default", "florence", "got_ocr", "minicpm", "phi3", "internvl"]
+ModelType = tp.Literal["default", "florence", "got_ocr", "minicpm", "phi3", "internvl", "hunyuan"]
 
 
 def _detect_model_type(model_name: str) -> ModelType:
@@ -23,6 +23,8 @@ def _detect_model_type(model_name: str) -> ModelType:
         return "phi3"
     if "internvl" in lower:
         return "internvl"
+    if "hunyuan" in lower:
+        return "hunyuan"
     return "default"
 
 
@@ -69,6 +71,8 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
             self._init_got_ocr()
         elif self.model_type == "phi3":
             self._init_phi3()
+        elif self.model_type == "hunyuan":
+            self._init_hunyuan()
         else:
             self._init_transformers_generic()
 
@@ -104,8 +108,8 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
 
         self.processor = AutoProcessor.from_pretrained(self.config.model, trust_remote_code=True)
         self.hf_model = AutoModelForCausalLM.from_pretrained(
-            self.config.model, device_map="auto", trust_remote_code=True, torch_dtype=torch.float32, attn_implementation="eager"
-        )
+            self.config.model, trust_remote_code=True, torch_dtype=torch.float32
+        ).to("cuda")
 
     def _init_got_ocr(self) -> None:
         import torch
@@ -138,6 +142,29 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
 
         self.processor = AutoProcessor.from_pretrained(self.config.model, trust_remote_code=True, num_crops=16)
         self.hf_model = AutoModelForCausalLM.from_pretrained(self.config.model, **load_kwargs)
+
+    def _init_hunyuan(self) -> None:
+        import torch
+        from transformers import AutoModel, AutoModelForCausalLM, AutoModelForVision2Seq, AutoProcessor, BitsAndBytesConfig
+
+        self.processor = AutoProcessor.from_pretrained(self.config.model, trust_remote_code=True)
+
+        load_kwargs: dict[str, tp.Any] = {
+            "device_map": "auto",
+            "trust_remote_code": True,
+            "attn_implementation": "eager",
+        }
+        if self.config.load_in_4bit:
+            load_kwargs["quantization_config"] = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.float16)
+        else:
+            load_kwargs["torch_dtype"] = torch.bfloat16
+
+        for auto_cls in [AutoModelForVision2Seq, AutoModel, AutoModelForCausalLM]:
+            try:
+                self.hf_model = auto_cls.from_pretrained(self.config.model, **load_kwargs)
+                break
+            except (ValueError, ImportError):
+                continue
 
     def __call__(self, batch: dict[str, tp.Any]) -> dict[str, tp.Any]:
         if self.config.mock:
@@ -184,6 +211,7 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
             "minicpm": self._minicpm_call,
             "phi3": self._phi3_call,
             "internvl": self._internvl_call,
+            "hunyuan": self._generate_api_call,
             "default": self._generate_api_call,
         }
         call_fn = dispatch.get(self.model_type, self._generate_api_call)

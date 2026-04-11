@@ -1,0 +1,21 @@
+from mausoleo.ocr import prompts
+from mausoleo.ocr.config import OcrPipelineConfig
+from mausoleo.ocr.operators import MergePages, ParseIssue, VlmOcr
+
+HUNYUAN_ENV = {
+    "pip": [
+        "git+https://github.com/huggingface/transformers@82a06db03535c49aa987719ed0746a76093b1ec4",
+        "accelerate>=0.25.0",
+        "flash_attn",
+        "torch==2.5.1",
+    ]
+}
+
+config = OcrPipelineConfig(
+    name="hunyuan_ocr_v2_structured",
+    operators=[
+        VlmOcr(model="tencent/HunyuanOCR", prompt=prompts.VLM_OCR_STRUCTURED_V2, backend="transformers", max_tokens=8192, runtime_env=HUNYUAN_ENV),
+        MergePages(),
+        ParseIssue(),
+    ],
+)
