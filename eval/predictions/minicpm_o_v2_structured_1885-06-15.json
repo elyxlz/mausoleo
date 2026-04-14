@@ -1,0 +1,142 @@
+{
+  "date": "1885-06-15",
+  "source": "il_messaggero",
+  "page_count": 4,
+  "articles": [
+    {
+      "id": "1885-06-15_a00",
+      "unit_type": "article",
+      "headline": "I deputati-telegrafo NARDINO SOTTO SEQUESTRO",
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a00_p00",
+          "text": "Da una parte la maggioranza ministeriale, composta da due soci del Partito democratico, intendeva passare il prossimo martedì il decreto di costituzione e legge per l'istituzione del regime del sole e della polizia. Dopo aver approvato la digliano che regoleva le relazioni tra il governo e i dipartimenti politici, il progetto di legge era inteso a seguito a passare anche la digliano che definiva la responsabilità del governo e del consiglio dei ministri. ..."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 0
+    },
+    {
+      "id": "1885-06-15_a01",
+      "unit_type": "article",
+      "headline": "I MAESTRI ELEMENTARI NON SONO PAIATI",
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a01_p00",
+          "text": "Il risarcimento del denaro che negli ultimi anni si è accumulato per i fondi sottratti al cattivo impiego dei maestri elementari è stato deferito troppo tempo. ..."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 1
+    },
+    {
+      "id": "1885-06-15_a02",
+      "unit_type": "article",
+      "headline": "I FONDI SEGRETI",
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a02_p00",
+          "text": "Gli agenti provocatori e i dissidenti ..."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 2
+    },
+    {
+      "id": "1885-06-15_a03",
+      "unit_type": "article",
+      "headline": "COSA NE PENSANO I MURATORI",
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a03_p00",
+          "text": "Le processioni del 26 maggio sono state condotte in modo straordinario e si sono diffuse lungo tutta la strada principale della città. ..."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 3
+    },
+    {
+      "id": "1885-06-15_a04",
+      "unit_type": "article",
+      "headline": "Camera dei deputati",
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a04_p00",
+          "text": "Seduta del 14 giugno\nL'ammazzato di feri\nIl macello di Tivoli\nL'accollato della Lungara\nPassatella sequestrata!\nMancavano pochi minuti a mezzogiorno una riserva fuori condotta in passatella da due poliziotti e un agente della polizia militare, che si fermò a sorprendere un individuo che, passando lungo la via Sperone, vede tre tatti e tre balene. Il Guardia, riconosciuto dal Signore, il Bazziati, batteva il faccione di Franco Signori, il che avrebbe potuto fare anche un caporizzo. La guardia fu portato al vicino ospedale per le ferite sovente. \n\nIl macello di Tivoli\nIl macello di Tivoli non è più un macello. Sebbene ci siano ancora molti buoni, sono tutti in vendita. Però, il macello è un macello.\n\nL'accollato della Lungara\nPassatella sequestrata!\nMancavano pochi minuti a mezzogiorno una riserva fuori condotta in passatella da due poliziotti e un agente della polizia militare, che si fermò a sorprendere un individuo che, passando lungo la via Sperone, vede tre tatti e tre balene. Il Guardia, riconosciuto dal Signore, il Bazziati, batteva il faccione di Franco Signori, il che avrebbe potuto fare anche un caporizzo. La guardia fu portato al vicino ospedale per le ferite sovente.\n\nIl macello di Tivoli\nIl macello di Tivoli non è più un macello. Sebbene ci siano ancora molti buoni, sono tutti in vendita. Però, il macello è un macello."
+        }
+      ],
+      "page_span": [
+        6
+      ],
+      "position_in_issue": 4
+    },
+    {
+      "id": "1885-06-15_a05",
+      "unit_type": "article",
+      "headline": "L'annazionato di feri",
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a05_p00",
+          "text": "La polizia poliziotto ha riferito che la polizia ha eseguito l'annazionato di feri del Count di Pistoia. \n\nPerò, il macello è un macello."
+        }
+      ],
+      "page_span": [
+        7
+      ],
+      "position_in_issue": 5
+    },
+    {
+      "id": "1885-06-15_a06",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a06_p00",
+          "text": "I suonatori di Tivoli\nUn macello di Tivoli\nIl macello di Tivoli non è più un macello. Sebbene ci siano ancora molti buoni, sono tutti in vendita. Però, il macello è un macello.\n\nL'annazionato di feri\nLa polizia poliziotto ha riferito che la polizia ha eseguito l'annazionato di feri del Count di Pistoia.\n\nL'annazionato di feri\nLa polizia poliziotto ha riferito che la polizia ha eseguito l'annazionato di feri del Count di Pistoia."
+        }
+      ],
+      "page_span": [
+        8
+      ],
+      "position_in_issue": 6
+    },
+    {
+      "id": "1885-06-15_a07",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a07_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"A dito per il sigaro\",\n      \"text\": \"Il signor Battista Malatesta, un campagnano del Carignano, fu assediato da un paio di poliziotti della polizia di strada per un ostacolo al fumo. E’ una legge che non ha mai funzionato e che nemmeno gli addetti non applicano. Il signor Malatesta, che aveva in piazza un negozio per la vendita dei tabaccari per sputare e per la vendita di sigari, fu fermato quando era andando a una passeggiata. Non ebbe tempo di dire un parola prima che i due polizioti lo fermassero e lo condettero in polizia. «Non mi piace» disse il signor Malatesta «che un poliziotto mi chieda un fumo. Io sono costituente e ho il diritto ad un sigaro». Ma i polizioti, che erano in buon carità con lui, rispose: «Ma signore, per favore, non fumarne uno in piazza, ma dentro del negozio». Ma il signor Malatesta, che era un ex militare, non vuole fare diritto a nessuno e fece un gesto con la mano che indicava che avrebbe voluto tirare un fumo. Allora, uno dei polizioti disse: «Signore, se vuoi fumarne uno, vieni dentro del negozio e fumarne uno». Ma il signor Malatesta, che aveva in piazza il suo negozio, non vuole fare diritto a nessuno e fece un gesto con la mano che indicava che avrebbe voluto tirare un fumo. Allora, uno dei polizioti disse: «Signore, se vuoi fumarne uno, vieni dentro del negozio e fumarne uno».\",\n      \"page_span\": []\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Tiro a segno\",\n      \"text\": \"Una society di artiglieria è stata costituita a Vareggio. La societa' si chiamerà society di tiro a segno. Le prime avversarie saranno le society di Firenze e di Livorno. Le armi utilizzate saranno le mitravelette, le pistole e le piccalocche. Sono state fatte giurare le regole di gioco, come l’usato è in tiro a segno. Il society di Vareggio ha giurato che gonna seguire le regole. Il society di Firenze ha giurato che gonna seguire le regole. Il society di Livorno ha giurato che gonna seguire le regole.\",\n      \"page_span\": []\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Circuito oiperformal\",\n      \"text\": \"Il Circolo Oiperformale è stato costituito a Vareggio. L’obiettivo è quello di promuovere la scienza e la tecnica, e in particolare la scienza e la tecnica applicata alla vita quotidiana. Il circolo ha come obiettivo principale l’organizzazione di seminari, di conferenze e di seminari. Saranno organizzati anche spettacoli e divertimenti culturali. Il circolo è costituito da un comitato esecutivo composto da un presidente, vicepresidente, segretario e commissari. La societa' si chiederà di un titolo di societa' onoraria per i membri illustri della comunità scientifica e tecnica. Saranno organizzati anche spettacoli e divertimenti culturali. Il circolo è costituito da un comitato esecutivo composto da un presidente, vicepresidente, segretario e commissari.\",\n      \"page_span\": []\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Lavoranti Parparecchieri\",\n      \"text\": \"La society di artiglieria è stata costituita a Vareggio. La societa' si chiamerà society di tiro a segno. Le prime avversarie saranno le society di Firenze e di Livorno. Le armi utilizzate saranno le mitravelette, le pistole e le piccalocche. Sono state fatte giurare le regole di gioco, come l’usato è in tiro a segno. Il society di Vareggio ha giurato che gonna seguire le regole. Il society di Firenze ha giurato che gonna seguire le regole. Il society di Livorno ha giurato che gonna seguire le regole.\",\n      \"page_span\": []\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Al Quadrolo\",\n      \"text\": \"Il Quadrolo è stato costituito a Vareggio. Il quadrolo è una society di artiglieria che si è costituita per promuovere la scienza e la tecnica applicata alla vita quotidiana. Il quadrolo è costituito da un comitato esecutivo composto da un presidente, vicepresidente, segretario e commissari. La societa' si chiederà di un titolo di societa' onoraria per i membri illustri della comunità scientifica e tecnica. Saranno organizzati anche spettacoli e divertimenti culturali. Il quadrolo è costituito da un comitato esecutivo composto da un presidente, vicepresidente, segretario e commissari.\",\n      \"page_span\": []\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"L’assassinio di stanne in via Cremona\",\n      \"text\": \"Il 28 luglio, in via Cremona, è avvenuto un incidente che ha colpito l’intero quartiere. Un young, di 17 anni, è stato ferito da un colpo di pistola e è morto nel luogo stesso. L’incidente è avvenuto durante una passeggiata tranquilla. Il young è stato colpito da una pistola che veniva da una macchina. Il gruppo di giovani che erano passando vicino alla casa del young è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pistola. Il gruppo di giovani è stato colpito dal colpo di pist"
+        }
+      ],
+      "page_span": [
+        3
+      ],
+      "position_in_issue": 7
+    },
+    {
+      "id": "1885-06-15_a08",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a08_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"ANGELO PITOU\",\n      \"text\": \"APPENDICE N. 24.\\nROMANZO STORICO DI A. DUMAS\\n(Raccolta francesca)\\n\\nLa regina fa i conti per cercare di tenere in ordine la popolazione - Chary il prosciutto non è l’ingrediente che puoi armare un popolo che vuoi per dirmale una bozza del popolo che vuoi essere libero.\\n\\nLa regina tacchi: Chary guardava ripetutamente la regina Maria Antoinette, che era un piccolo bambino e che le spiegava la dotteria di peggiorare dietro quando si stesse.\\n\\nSignor di Chary -\\nQuelli che chiamiamo buoni, dico loro.\\n\\nNo mistero. Io non interromperei se voi non lo farete. Siete in grado di fare una cosa come ci ha fatta voi? No, non posso.\\n\\nSe vi prego di non farlo, non vi prego di non farlo. Mi prego di non farlo. Non vi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No, mi prego di non farlo. Mi prego di non farlo. No,"
+        }
+      ],
+      "page_span": [
+        4
+      ],
+      "position_in_issue": 8
+    }
+  ]
+}

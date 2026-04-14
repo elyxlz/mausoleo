@@ -1,0 +1,532 @@
+{
+  "date": "1940-04-01",
+  "source": "il_messaggero",
+  "page_count": 23,
+  "articles": [
+    {
+      "id": "1940-04-01_a00",
+      "unit_type": "article",
+      "headline": "SUGGESTIVO RITO A BORDIGHERA",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a00_p00",
+          "text": "Il primo monumento"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 0
+    },
+    {
+      "id": "1940-04-01_a01",
+      "unit_type": "article",
+      "headline": "Il Segretario del Partito",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a01_p00",
+          "text": "nella zona del goriziano"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 1
+    },
+    {
+      "id": "1940-04-01_a02",
+      "unit_type": "advertisement",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a02_p00",
+          "text": "EDIZIONE DI MEZZOGIORNO\nABONNAMENTI\nITALIA IMPERO E COLONIE\nAnno 4°m. Tram. Anno Sem. Trim.\nL. 75 - 35 - 20 -\nL. 175 - 88 - 43 -\nAnno 5°m. Tram. Anno Sem. Trim.\nL. 85 - 44 - 23 -\nL. 210 - 105 - 50 -\nUn numero Cent. 30 Articolo Cent. 40\nSITRA ROMANA \"IL MESSAGGERO\", PROPRIETÀRIA ROMA\nRIVISTISSITI RAS. ROMA - TEL. 41640\nTELEFONO ROMA 42343 - Centrale 43041 - 43042 - 43043 - 43045\nEDIZIONE DI MEZZOGIORNO\nPUBBLICITA\nCommerciali L. 9 - Cinematografici L. 9 - Comunali e Finanziari L. 19 - Necrologie L. 19 - Cronache Tetti di Crespina e Stellendal L. 19\nPer centimetro d'attesa larghezza una colonna\nPiccola pubblicità ritratti le rispettive rubriche, oltre tassa govern. 1,60% e Imposta sull'entrata 71/4 - Parammo extra.\nUffici di pubblicità de \"IL MESSAGGERO\"\nROMA - Lungo Tritone, 165 - Telefono 41640\nGENOVA - Via Roma, 69-r - Telefono 52.901\nMIANO - Galleria Vitt. Eman. 33-35 - Tel. 12981\nTONINO - Via Roma Nuova, 10 - Telefono 44-988"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 2
+    },
+    {
+      "id": "1940-04-01_a03",
+      "unit_type": "article",
+      "headline": "Duelli aerei a largo del Suffolk e dello Yutland Smentita britannica a informazioni germaniche",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a03_p00",
+          "text": "Berlino annuncia che 7 aeroplani francesi sono stati abbattuti sul fronte occidentale"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 3
+    },
+    {
+      "id": "1940-04-01_a04",
+      "unit_type": "article",
+      "headline": "Gravi restrizioni in Svezia alla navigazione mercantile",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a04_p00",
+          "text": "Da oggi entra in vigore una nuova legge, in base alla quale viene stabilito il divieto a tutti i proscelti svedesi di oltre 350 tonnellate di lasciare i porti della Svezia, senza permesso della commissione marittima. Simile restrizione è fatta pure per i proscelti da carico tra le cento e le trecentocinquanta tonnellate, che fanno servizio fra i porti svedesi e quelli stranieri e per quelli al disotto delle trecentocinquanta tonnellate che fanno servizio fra porti esteri."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 4
+    },
+    {
+      "id": "1940-04-01_a05",
+      "unit_type": "article",
+      "headline": "Il comenicale tedesco",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a05_p00",
+          "text": "Merlino, 31. Il Gran Quartiere Generale tedesco annuncia: Sul fronte occidentale tra il Reno e la Mosella vi sono stati i giorni 29 e 30 scorsi parecchi scontri tra avanguardie tedesche e nemiche. A sud di Sungeniund si è riuscito ad un reparto di assalto tedesco di fare numerosi prigionieri. Del resto non vi sono stati altri avvenimenti di particolare rilevanza."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 5
+    },
+    {
+      "id": "1940-04-01_a06",
+      "unit_type": "article",
+      "headline": "I comunicati francesi",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a06_p00",
+          "text": "Parigi, 31. Gli oderni bollettini di guerra del comando francese, recano: Quello antierdieriano: Tiri ad artiglieria, nella regione a nord-ovest di Bitche. Rafiche di mitragliatrici sul Reno e nell'altig Alsazia. Quello serale: Intensa attività delle due azioni."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 6
+    },
+    {
+      "id": "1940-04-01_a07",
+      "unit_type": "article",
+      "headline": "L'Italia di Mussolini nelle impressioni dell'Ambasciatore del Cile a Roma",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a07_p00",
+          "text": "Santiago del Cile, 31. Il giornale El Mercurio pubblica un interessante articolo di Ramon Briones Luco, ambasciatore del Cile a Roma, in cui l'insigne diplomatico dopo"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 7
+    },
+    {
+      "id": "1940-04-01_a08",
+      "unit_type": "article",
+      "headline": "Teleki riferirà oggi",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a08_p00",
+          "text": "Teleki riferirà oggi"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 8
+    },
+    {
+      "id": "1940-04-01_a09",
+      "unit_type": "notice",
+      "headline": "Bollettino demografico di Roma",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a09_p00",
+          "text": "del 31 marzo 1946-XVIII\nNATI 113\nMORTI 54"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 9
+    },
+    {
+      "id": "1940-04-01_a10",
+      "unit_type": "article",
+      "headline": "null",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a10_p00",
+          "text": "Il Pontefice ha trattenuo a Jungs colloquio le due reale dame ed al termine di esso ha ricevuto le due dame della Reale Corte d'Italia marchesa Leonardis di Villamarice e contessa Zilieri dal Verme, messo al loro seguito.\n\nDopo l'udienza pontificia la Duchessa di Baviera e la Contessa di Barbi hanno fatto visita al Cardinale Segretario di Stato"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 10
+    },
+    {
+      "id": "1940-04-01_a11",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a11_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Concerto alla Filarmonica\",\n      \"text\": \"Oggi alle ore 17 si tiene alla R. Accademia Filarmonica Romana, in via Flaminio, la 101a Sera di Musica, diretta dal Maestro Giuseppe Mazzucchi e del pianista Theodor Stachnik. Il programma comprende le seguenti composizioni per pianoforte: Rachmaninov: Sonata n. 2 in A (500 adulti); Beethoven: Tema e Variazioni di Mozart; Toccata n. 2 di Ravel; e Gaspard de la nuit n. 1 di Debussy. Rachmaninov: Preludio n. 2 in Do maggiore; e Arta della Salvatora di Rossini. La prossima sera: Rachmaninov e Acisiane n. 2 di Lieder di Wall e 2 Lieder di Siegusa, composizioni moderne di Respighi, Ravello e Glinka.\",\n      \"page_span\": [1]\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"A ritorno di Franco Ferrara all'Adriano\",\n      \"text\": \"Franco Ferrara, il genialissimo direttore dell'orchestra che, nei precedenti concerti ha destato nei pubblici di Roma una vivace impressione, al Teatro Adriano, domani sera alle 21, con un programma di grande interesse, si esibirà con la sua orchestra. Il programma è interamente composto da opere di Beethoven, Mozart, Schubert, Dvořák, e un balletto. Il tema slavo della Lituania dedicato a Vittorio Emanuele che costituisce una novella e Fingir e di Delibes; e Venere e di Mule; e Sinfonia del cembalista di Wagner.\",\n      \"page_span\": [1]\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"I De Filippo al Quirinale\",\n      \"text\": \"Questa sera lunedì alle 21 con la diversa trilogia commedia in 3 atti e Varietismo di Carlo Vanzellati, la compagnia di Eduardo e Procopio De Filippo, Edoardo e Procopio esibirsi con i più brillanti e vivaci attori di scena, oltre al ricco e delizioso repertorio interpretando diversi ruoli famosi del celebre Magnani.\",\n      \"page_span\": [1]\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Nico Taranto e Titina De Filippo al Quattro Fontane\",\n      \"text\": \"Questa sera ore 21 debutta al Quattro Fontane la compagnia dei Grandi Spettacoli e diretta da Nico Taranto con Titina De Filippo che presenterà la rivista di Nelli e Stangini «Finalmente un imbarcadero» nell'edizione 1910 con nuovi quadri.\",\n      \"page_span\": [1]\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"AURORESTRA\",\n      \"text\": \"Questa sera alle ore 21 in corso di una commedia in 3 atti con la commedia romanza di Giuseppe Adamo: «I trenta ragazzi». Domani la seconda novella della stagione: «Il terremoto di Piemonte» 2 atti di Carlo Vanzellati.\",\n      \"page_span\": [1]\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"ALTELLINO\",\n      \"text\": \"Questa sera alle ore 21 preludio e la seconda novella della stagione: «Il terremoto di Piemonte» 2 atti di Carlo Vanzellati. La seconda novella della stagione: «I trenta ragazzi» di Giuseppe Adamo che nel due esauriti festivi di ieri hanno sbancato la sala coludendo correttamente con i loro generali commediografi tra cui il celebre Ippolito Rizzitelli, la Brigante, il Marchesi. Restituzione generale per le presentazioni dalle 10.\",\n      \"page_span\": [1]\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"AL VALLE\",\n      \"text\": \"Questa sera alle ore 21 debutto, per un recital straordinario di recitazione della compagnia diretta da Eugenio Gianinni, che darà una novella: «Till Eulenspiegel» di La Fontaine.\",\n      \"page_span\": [1]\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"AL BRANCACCIO\",\n      \"text\": \"Questa sera alle ore 21 debutto, per un recital straordinario della compagnia diretta da Eugenio Gianinni, che darà una novella: «Till Eulenspiegel» di La Fontaine.\",\n      \"page_span\": [1]\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"ALLA QUINQUINETA\",\n      \"text\": \"Questa sera, alle ore 21.30 (diburo 17.30) sarà la prima visione assoluta della celeberrissima Novi francese a Les bas fonds con la commedia di Jean Giraudoux, interpretata da Gran Sabatini, diretta e interpretata da Louis Prima, Jean Alvez, René Regis di Jules Renouf. Alla FENICE debutta oggi in compagnia del marito Carlino Franco con la Spettacolo-Jazz e comprendente Elena Giulini, Vanda, Dori, Grrr, ecc. con una justizia meravigliosa.\",\n      \"page_span\": [1]\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"I PROGRAMMI DI OGGI\",\n      \"text\": \"Teatri\\nTEATRO REALE DELL'OPERA: Rigoletto, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don Pasquale, Donizetti, Don Giovanni, Mozart, Don"
+        }
+      ],
+      "page_span": [
+        6
+      ],
+      "position_in_issue": 11
+    },
+    {
+      "id": "1940-04-01_a12",
+      "unit_type": "article",
+      "headline": "Le note del Cronista",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a12_p00",
+          "text": "Toscana\nIl viato il legnolo dei veicoli da quel al 6 Aprile P. T. in via Perugina, nel tratto compreso tra la via Serristorio (Rondine Trattiere) e la via Pacini.\nDal giorno 2 al 6 aprile è stato il transito dei veicoli nelle vie del Serristorio e della Vite, nel tratto compreso tra la via del Camerino e la via Maria di Roma. Gli stessi di Roma Cittàne, le FF. SS. riconosceranno all'altro gli oggetti trovati nel tronco e le merce rimanente abbandonata.\n\nConferenze\nBologna - Beato Angelico - Domeni martedì ore 17.30 presso l'aula \"La Voce\" (via dei Professori, 10) - Professionisti: Gli Arti; P. Antonini, SMI O. P. - Elenchobito, nel Parterre: Kari, Zanoni e Rimedi, Conversazione e recitazione (con predilezioni).\nLiceum Romano (piazza Cola di Rienzo 30) - Incontro il Venerdì dell'ultima terza con conversazione alle carte, nel \"L'Atene Romano\".\n\nPERCHE'...\nvia Boccina, a due passi dai Forti imperiali, è così scarsamente illuminata e così poil pulita?\ngli tipocanti che adornano il parco di Mancheggia in via Nibbi, spesso minacciati in buona parte da non sapienti mutilazioni che li deturpano?\nI tram n. 8 sostà a capolinea talvolta anche per dieci minuti con grave perdita di tempo degli utenti di questa linea già di per sé stessa malamente capace di competere con quelle che deve servire?\nI rialti di Villa Umberto vengono coperti abbondantemente di grossa ghiaia, insidiosa per i pedoni, mentre ne basterebbe un lieve strato?\nnon viene creato un mercato rionale ad uso dei 15 mila abitanti di Tor Fiorenza e vicinanze?\nla via Messina non viene più intensamente illuminata con la spettinazione dei attuali focolai pochissimi luminosi?\nin via Padova c'è sempre ora un lampione ora l'altro che pratica aridicalo del suolo?\nnon si cerca di sistemare il ferroviario a prato al fronte al viale del Vignola nella via Flaminia?\ncerti cinematografi di seconda o terza visione annunciano sul cartellone pubblicitario un buono presso senza specificare che il buono è artificiale in alcune ore e facendo così in inganno il pubblico?\nnon si folgano quei prassi scioci al lato dei marciapiedi di via Montebello?\n\nGeneroso gesto di un padrone di casa\nAt reparto maternità del Policlinico trovati ricoverata la moglie del camerale Salvatore Di Fabrizio. Essa ha avuto un primo parto gemellare, svolto nel modo più lieve e felice. Il proprietario dello stabile dove abita la famiglia, Giorgio Diotalevi, in via Orsini 3, Giorgio Diotalevi, ha donato un mese di pignone accompagnando la relativa ricevuta con l'espressione di auguri e felicitazioni.\n\nPrecipita dalla scala e muore per la frattura del cranio\nLa signora Maria Bordi di anni 67, nata a Zaragoza, mentre si recava al mercato, accidentalmente precipitava per le scale dello stabile dove abitava, decedendo all'istante per avere riportata la frattura del cranio."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 12
+    },
+    {
+      "id": "1940-04-01_a13",
+      "unit_type": "article",
+      "headline": "Libreria",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a13_p00",
+          "text": "L'OPERA DA ATTIVITA' dell'istituto su studi di Politica internazionale si è affermata, nelle ultime settimane, con una serie di volumi di viva attualità e di evidente utilità per gli studiosi.\nLa Collezione dei \"Manuali di politica internazionale\" si è arricchita di un volume di Ambrogio Bollett su \"Il Congo belga\", che offre un preciso quadro storico dello svolgimento che accompagnano uno dei maggiore sperimenti coloniali del tempo nostro. Questo volume, che è stato accettato la seguito unanime, documentazione diplomatica. Nella stessa Collezione, Ernesto D'Albergo pubblica un volume su la \"Politica finanziaria dei grandi Stati dal dopoguerra fino a oggi\", che è un modello di precisione. In particolare, fa segnato il capitolo che riguarda l'Italia, che espone in maniera facile e accessibile anche ai non esperti l'azione del fascismo nel campo della politica finanziaria.\nNella Collezione \"Documenti di storia e di pensiero politico e diretta della storia\", così utile per chi ami studiare la storia attraverso le fonti, Franco Valcucchi illustra un periodo di documenti storici, quello che va dal 1834 al 1850: \"L'unificazione italiana e la politica europea della guerra di Crimea alla guerra di Lombardia\". Esso riguarda una storia che non è mai stata raccontata oggi di dire che in tutti i suoi particolari attraverso l'esplorazione degli archivi e la pubblicazione dei Carteggi cavouriani a cura dello Zanetti, si trova una preziosa traccia della linea di sviluppo della politica internazionale nell'ambito della politica europea.\nUna pubblicazione esauriente sul \"Albania\", a cura dell'ufficio studi dell'istituto, dal tutto quanto al più destinato a un pubblico di vista storico, geografico, politico ed economico. Del primo mese di guerra fu il generale Ottavio Zoppi, che ha pubblicato due volumi: \"Le operazioni militari in Russia e in Occidente\", che è un modello di critica ragionata e di divulgazione.\nDi ardente attualità è il libro di Giulio Caprini: \"Sistema e teoria di Stato nel Beni della nazione e dell'azione del Duce, sempre fondato su un pensiero di giustizia rimanente, con una illustrazione completa ed efficace. Quali sia la costituzione della nuova Spagna è largamente documentata dal generale Argo Sermi: \"Lo Stato nuovo della Spagna di Franco, vero e proprio manuale indispensabile per chiunque voglia seguire la riforma dall'interno della costituzione attuale spagnola in senso popolare, autoritario e l'influenza esercitata dallo stato opera della concezione fascista.\nViene, poi, a buon punto un libro di bravo tono, ma sostanzialissimo, di Pietro Silvia: \"Generi e caratteri dell'Impero moderno, come si intende, l'Asia, la storia dell'Impero inglese dal Tudor degli Stuart fino ai giorni nostri, mostrando per qualcuno e per qualcuna rilevanza inglese, ha affrontato grandi potenze europee, il regno del libro è quello che offre una storia della storia moderna attraverso la formazione dell'Impero britannico, mostrando i molteplici aspetti, questi che governano alla diffusione della prospettiva, questi che si traducono nell'oppressione dei diritti non meno validi e non legittimi degli altri popoli.\nUn altro volume interessantissimo è quello di \"Latina\": \"L'azione del Regno nel rapporti internazionali dal 1801 ad oggi. Questo libro è unico che circola la politica estera del nostro Paese dalla proclamazione del Regno fino ai nostri giorni. Suo massimo pregio è quello di coprire obiettivamente tutti i politici ed economici, che si legano alla storia della civiltà italiana. La seconda parte del libro è dedicata all'esame della politica estera del Fascismo, che ha portato alla fondazione dell'Impero e all'Unione dinastica fra l'Italia e l'Albania, libro eccellente, equilibrato in tutti i suoi aspetti, la scelta di Mussolini per quella giustizia che Versailles aveva negato non solo al popolo italiano, ma anche agli altri. Opera fondamentale, vero manuale indispensabile all'uomo politico, allo studioso, al giornalista.\nSotto il titolo \"Fasi di storia europea\", Piero Billa raccolge un certo numero di studi storico-politici densi e acuti, in cui si rivolcano ancora una volta la genialità e la severità della mente di Billa. Le questioni degli Stretti e quella, più generale, dell'Oriente, trovano, in questo libro, una trattazione magistrale. La prima è rivocata in un rapido, efficace scorcio, che va dall'epoca romantica dei Partiti alle Conferenze di Monaco, alle questioni di quell'epoca del Congresso di Vienna, alla guerra mondiale. A questi due studi fanno da prelazione alcune pagine intitolate: \"Lineamenti di una storia del Mediterraneo\". Seguono vari studi su cent'anni di storia francese, dai trattati, cioè del 1815, alle trattative di pace di nazionalità (del 1830 e del 1848), e più particolarmente interessanti l'Italia, sulla politica francese nella penisola all'epoca delle riforme. Chiudono il volume alcuni studi sulla politica reale di Napoleone III, sulla \"Mecurio\" di Billo, sulle alleanze franco-romane del 1893 e del 1875 e sulla politica mediterranea dell'Italia dal 1861 ad oggi.\nDa segnalare di ultimo, una Storia del Portogallo di A. R. Ferrari, che offre al lettore quanto più desiderare di conoscere intorno alle vicende di un popolo, che ha avuto tanta parte nella formazione delle divinità, per essere ad esso, ad un tempo, una storia del Portogallo, una storia psicologica del suo popolo. Quali forze abbiano determinato l'azione mondiale del Portogallo e perché tali forze abbiano operato in un dato tempo, restano ancora un mistero profondo e costante del libro, che si presta al commentare solennemente due centenari: quello della sua uscita come nazione (1143) e quello della sua nascita come colonizzazione spagnola, illustrata dal 1580 al 1840.\nESISTE SU LA SARDEGNA come del resto su tutte le regioni la cui storia si articola e si colora di appello particolare etnografico. Il pregiudizio del folclore, che dura la tirannia di certi aspetti di vita ritenuti nel mondo la convenzione tende a ridurre e ad identificare, in una specie di cristallizzazione rappresentativa, tutta la vita regionale. Tale pregiudizio nasconde per opera di un'ignoranza abituale, che si verifica con il peso di una tradizione che ostacola la naturale evoluzione morale e materiale della vita, contrariando il passo ad ogni idea e ad ogni forza significativa. Questo pregiudizio, frutto del conflitto del vecchio e del nuovo, del passato e del moderno, si inspira il nuovo volume di Filippo Adulis: \"Vecchia Sardegna, l'Italiano, la Prova\" composto da due lunghe raccolte, nel quale il dolmen, il nuraghe, assunse il simbolo di un tenace archeologismo splendore, interlacciando l'anima e il cervello di una schiera di maschili idolatri, costoro, cui l'altare anima una religione, eletta e pura, di una antica. Intorno a questo nucleo polemico, la narrazione si snoda nelle e colorità presentandoci un'ampia galleria di tipi di figure che si minano di un'energia originale. Con altrettanta efficacia, attraverso un pittorico linguaggio che passa dal comico al lirico, percorrendo tutta la gamma dell'umorismo, sono dettati i caratteri costitutivi del pittore sardo, che, come lo scultore che, con la sua scultura, ha ritrovato nell'Italia imperiale, un suo destino operoso verso cui, avviata con fede ardente e con ferma volontà.\n"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 13
+    },
+    {
+      "id": "1940-04-01_a14",
+      "unit_type": "advertisement",
+      "headline": "Catalogo 225",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a14_p00",
+          "text": "Catalogo 225\ncontenente illustrazioni e descrizioni di 42 modelli\ndelle maggiori fabbriche italiane\nDALLAPE' - GALANTI\nPANCOTTI - SOPRANI\nNOVITA'\n\nGALANTI\nMODELLI PIUMA\nMiracolo di perfezione costruttiva\nPeso 1/2 dei normali\nIl più grande successo dell'industria italiana sui mercati esteri\n\nPANCOTTI\nMODELLI SUPREMA\nPianomonti di classe appositamente studiati per i dilettanti\nMODELLI GI-ERRE\nDisarmoniche per professionisti\n\nPREZZI SENZA POSSIBILE CONCORRENZA"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 14
+    },
+    {
+      "id": "1940-04-01_a15",
+      "unit_type": "advertisement",
+      "headline": "AZIENDA RADIOTECNICA ITALIANA",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a15_p00",
+          "text": "AZIENDA RADIOTECNICA ITALIANA"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 15
+    },
+    {
+      "id": "1940-04-01_a16",
+      "unit_type": "article",
+      "headline": "della realtà",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a16_p00",
+          "text": "Vi voglio raccontare un fatto che è vero, ma non originale. Mora ha descritto le bambine povere che si litigano davanti la verina dei giocattoli per una ideale proprietà illusoria come il potere umano: i personaggi del mio racconto sono invece due uomini, e non fantastici, due uomini con tanto di scarpe e di cappello e di carta d'identità in sacco carta. Io non ho, come Mora, la malinconia di arrestarmi a guardare le vetrine piene di giocattoli non posseduti in gioventù: se mi fermo a contemplare ciò che mi mostra la trasparenza dei vetri lungo le strade affollate della città è perché ho tempo da buttare via — sono milionario di tempo — e non posso fare altro che bighellonare per lunghe ore del giorno, come molti miei simili in attesa di meglio.\n\nHo due compagni: non oso dire amici perché sono sicuro che se domani la fortuna o la sorte (e per noi difficilmente la sorte può essere peggiore della fortuna) ci dividerà ci volteremmo le spalle senza nemmeno salutare e ce andremmo ognuno per proprio conto verso le nostre mete. Dei miei due compagni: uno è quasi elegantemente vestito di nero, pastrano, di bel taglio, cappello ancora in forma, ombrello sempre agganciato come una zitella infisese, agganciato all'avambraccio, scarpe sempre pulite, Dio solo sa per quale miracolo. L'altro pure possiede tutti gli adunamenti con i quali si usa coprire oggi il corpo degli uomini sulla pubblica via, ma i suoi indumenti tradiscono una specie di indigenza sebbene non siano né rotti né sporchi. Il pastranoio troppo corto è color bruno-azzurro stinto dal sole e dalla pioggia sulle spalle e sulla schiena: i calzoni non sono mirati e si appoggiano con soverchia negligenza sulle scarpe sformate e diverse erano colari cartapecca. Quel che è peggio, porta in capo un berretto con la visiera rotta in due. Fra i miei due compagni, il primo, Pali, è un borghese. Noi due, Zoltán ed io, chissà che cosa siamo!\n\nTutto questo che ho raccontato non è senza scopo, poiché la figura dei due miei compagni ha molta parte nell'episodio che narro, ora che mi resta tempo e voglia di farlo.\n\nE vengo al sodo. Una mattina, saranno state le nove e mezza, ci siamo fermati davanti a una vetrina, noi tre: a una vetrina di confezioni femminili.\n\n— Che idea, le donne, di mettersi indosso stoffe a liquirizi, come tappazzerie! — commentò Zoltán. Luciniammo a guardare con svogliato interesse i modellini.\n\n— Sono legiose, fanno vedere la pelle come se fosse chissà che prodigio, appure anche noi l'abbiamo, siamo creature umane della stessa famiglia, l'altra metà dell'umanità? Che perversità! — continuò Zoltán. Pali stava zitto e divampavano rot-cape. Infatti di Ji -peco mistro in vettina un manichino magnifico, con una testa da angelo, due orecchi sognanti, e un vestito da sera che incominciava poco più su dell'ombelico; e persino Zoltán dovette convincere che, per quanto misteriosa, c'era una logica nel fatto che le donne non si vestissero come noi. Una logica a fior di pelle, se vogliamo, ma naturale come le penne a primavera. Poi misero fuori un altro manichino, dalla parte opposta della vetrina: una biondina col nasino all'in su, due occhi matiziosi, un amore, peccato che fosse di legno e cera. Indossava un costume da passeggio con guarnizioni di pelo, quasi maschile, accollatissimo.\n\n— Però vedi! — esultò Zoltán — è più bella, vestita così!\n\n— Più bella! — ribatté Pali sdegnato. — Sembra un tramviere. Una donna così, da darle un bacio c'è da domandarsi se si è del tutto normali. La mia invece, accidenti, nessuno potrebbe resistere: è o non è una donna?\n\n— Per via dell'abito da sera?\n\n— No — rimedialo io — per via di quello che manca all'abito da sera. Pali è come S. Tommaso. — Poi incominciarono a criticare le bionde e le brune. Ogni tanto, parlando, guardavano le loro belle in vetrina, immobili ed eleganti, con certe ciglia che gettavano lunghe ombre morbide sulle guance rosee, e si sarebbe detto che ormai fosse stata stretta fra le due coppie un'intesa.\n\nAll'indomani mattina, passando davanti al medesimo negozio, la bruna di Pali e la bionda di Zoltán avevano mutato abito, ma aspettavano già con la pazienza delle cose inanimate. La bruna aveva un mantello con bavero di pelo nero, molto femminile, la bionda invece un delizioso costumino da tennis, braghette bianche corte, visiera verde sulla fronte. Zoltán sospirò.\n\n— Mi sta diventando invincibile. Io non ho mai calzato la terra rossa dei campi di tennis.\n\nPali lo guardò con commiserazione, poi riattaccò lo sguardo alla sua pupa, silera e magnifica nella sua slanciata figura. Era contento perché la sua sabota stava invece in condizioni di passeggiare con lui per la strada. L'altra era destinata soltanto alla vetrina, poiché i campi di tennis erano ancora imputi nel fango.\n\n— Se fosse vivente — disse Pali alzando la punta dell'ombrello — si chiamerebbe certamente Yvonne, oppure Fasquita.\n\n— Accidenti alla fantasia — protestò Zoltán — per me va bene anche Rozsa, l'importante è che sia proprio lei. — Pali stentava a succursi dalla vetrina ed anche Zoltán si voltò indietro. Pali impettì, poiché si sapeva ben vestito. — Ci lasciamo poco dopo. Verso sera, puso di là e da lontano scorgo Pali, più arzizzato che mai, davanti alla vetrina, solo. Nella vetrina c'era la bionda, con un pastrano inglese a scacchi che era una delizia. « Aspetta Frasquita » mi dissi. Ma mi accorsi che guardava la piccola Rozsa di Zoltán. Gli passai alle spalle senza dirgli nulla e quando lui al piccolo caffè dove avevamo appuntamento, dissi ridendo: « al-"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 16
+    },
+    {
+      "id": "1940-04-01_a17",
+      "unit_type": "article",
+      "headline": "New York, marzo",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a17_p00",
+          "text": "Walt Disney iniziò il favore di \"Pinocchio\" tre anni fa. Milleducento persone vi hanno lavorato e la proiezione in colori, che dura un'ora e mezza, ha avuto bisogno di mezzo milione di disegni per essere eseguita.\nLe voci sono perfette. La musica graziosa. Due o tre motivi avranno fortuna e gli Stati Uniti sono completamente invasi da figure, disegni, libri, jantocci, caricature, pubblicità, eccetera, che ricorda no il \"burattino\" che divenne un ragazzo per bene.\nMi si dice, anche, che gli eredi Lorenzini, o chi per essi, insomma coloro che ancora possiedono i diritti di autore del buon Cofolodi, il \"vero\" autore di Pinocchio, abbiano ricevuto una somma rilevante per questi diritti, una somma che Cofolodi non sognò mai di possedere e che, se le mie informazioni sono esatte, ammonita a venticinquemila dollari, cioè a più di mezzo milione di lire italiane."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 17
+    },
+    {
+      "id": "1940-04-01_a18",
+      "unit_type": "article",
+      "headline": "Un grande evento",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a18_p00",
+          "text": "La prima di Pinocchio al Center Theatre del Rockefeller Center, dove il lavoro kl dà e si continuerà a dare, chi sa per quant'altro tempo, è stata non solo un avvenimento di arte, ma addirittura un grande evento sociale: dame scolpite, gentiluomini in frak, rinforzo di poliziotti, una fila di automobili che non cessava più, la Sesta Avenue bloccata, una folla di giornalisti e di fotografi. Persino gli enormi riflettori elettrici, che gettavano su tutti gli spazi taglienti di luce azzurra, da far impallidire la luce aureolata della buona \"Felina Azzurra\"."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 18
+    },
+    {
+      "id": "1940-04-01_a19",
+      "unit_type": "article",
+      "headline": "Povero il «nostro» Pinocchio!",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a19_p00",
+          "text": "Trionfalmente i poveri «guilty» portarono in giro Pinocchio per parecchie città degli Stati Uniti. Il successo fu generale e permise di pagare le spese non lievi che la messa in scena, specialmente, costava. Poi la parte «intellettuale» della W.P.A. fu abolita, perché erano necessarie delle economie, e Pinocchio fu ucciso. I «guilty» gli fecero un funerale di terza classe, perché di prima non potevano: il «burattino» moriva senza diventare ragazzino per bene, ma da burattino aveva vissuto con onore e dignità, con rispetto dell'arte e del «su» babbo». Le scene e gli abiti furono venduti per robaccchia e Pinocchio scomparve. Per risorgere dopo un anno, altrove cinematografico, grazie a Disney, Ma... Ma nella risurrezione Pinocchio è un altro; Come nella trasformazione del fiuggello, il baco diventa farfalla, le case si son mutate nel mistero oscuro del serico bozzolo; il bozzolo era di celluloida: vi è entrata la farfalla e ne è uscito un verme. Perché - se Walt Disney, come fece nascere il carattere unico di un gattino - Mickey Mouse, - di un paperotto - Donald the Duck - e dei Tre Piccoli Porcellini, e come creò la cosa mirabile che si chiama Biancaneve ed i Sette Nani (il lavoro imitativo della fiaba di Gulliver, fatto da Max Fleischer, è stato un vero disastro ed un attentato al buon gusto), per non portare delle infinite e deliziose Silly Symphonies (Le stupide sinfonie), ha creato ancora un capolavoro di arte con questo suo Pinocchio, ma - purtroppo - non ha tradotto nel film né il carattere, né la figura, né la storia, né il principio e né - soprattutto - l'italianità squisita, delicata e pur birichina, del nostro burattino. E questa è colpa imperdonabile e, che non si può lasciar passare, a parte qualsiasi omaggio alla sua arte ed al suo lungo lavoro. Uno spettatore intelligente che era con me al Teatro, ha giustamente osservato: «Disney, più che fare un «Pinocchio» comprensibile per il pubblico americano, ha voluto fare un «Pinocchio» neutrale e gli ha di peso tolto tutto ciò che poteva essere italiano. Ha lasciato dei nomi italiani («Geppetto» il solo originale, perché «Mangiafuoco» è diventato «Strambo»), ha fatto diventare la «Balena» un «Monstro» (con la enne) cd ha tradotto in inglese i nomi di «Lucignolo» e di altri. In più ha aggiunto in caso di «Geppetto» un gatto («Figaro») ed un pesce dorato ed innamorato («Cléo»). In quanto al grillo, che assume il nome carrellistico di Jiminy, che i bambini americani danno al grillo, è esso - voce della coscienza - il vero protagonista del film. «Pinocchio» è diventato un bamboccio olandese o svizzero; olandese o svizzero è il paesaggio della cittadina di «Geppetto» e «Geppetto» non è un orologiaio svizzero od olandese. Perché non fare di «Pinocchio» un italiano? Perché non prendere il soave paesaggio italiano, il dolce paese di Toscana per sfondo? Indubbiamente il lavoro è squisito per esecuzione. «Figaro» che mira il pesce"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 19
+    },
+    {
+      "id": "1940-04-01_a20",
+      "unit_type": "article",
+      "headline": "Ragazzi stupidi",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a20_p00",
+          "text": "Come pure il «Paese di Bengodi» non potrà non irritare il senso morale dei nostri ragazzi italiani, per quanto sbarracini possano essere. Tutto il divertimento consiste nel jumare dei grossi Avana, nel bere immensi bicchieri di birra e nel giocare a biliardo. Questo non è il paese di Bengodi, ma è una taverna e tutti i lenocini artistici che Disney vi impiega (noi vi riconosceremo la mano di Mr Manius) non possono fare convincere che quello sia il «nostro» paese di Bengodi. La trasformazione dei ragazzi in asini è perfetta, come sono perfette mille altre piccole trovate, ed i colori sono usati, come nella tavolozza di «Biancaneve», da gran signore. Tutto questo, però, non fa che farci rimpiangere li nostro povero e piccolo «Pinocchio» col berretino di mollica di pane e con il vestito di carta florala. Qui vediamo un grassoccio pupattolone al quale, quando cresce il naso, per le bugie dette, e sul naso crescono le foglie e fanno un nido gli uccelli, noi non diamo alcun sentimento di pietà o di rammarico, perché ci sembra cosa artificiosa e insincerita. In quanto alla «Fatina Azzurra», Disney non l'ha umanizzata. Ne ha fatto una figura astrale, lontana dalla vita. Ed è male. Perché i bambini di tanti anni fa ed i bambini di oggi non hanno mai considerato - né noi abbiamo considerato - la «Fatina» come fuori della vita, ma discesa nella vita e facente parte della vita. Il «Pinocchio» di Disney è un'opera di arte, nata da un grande lavoro. Ed è per questo che ne criticiamo i punti dove la verità e la precisione del soggetto e la psicologia fallicismo. Disney ha voluto fare un «suo» gran film. Ma non ha fatto un film sul «nostro» vecchio ed adorato burattino di Collodi. Ecco tutto. E ce ne dispiace perché se le cose fossero state fatte diversamente, il film sarebbe stato ancora migliore. Almeno gli occhi neri di italiani."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 20
+    },
+    {
+      "id": "1940-04-01_a21",
+      "unit_type": "article",
+      "headline": "Un grande evento",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a21_p00",
+          "text": "La prima di Pinocchio al Center Theatre del Rockefeller Center, dove il lavoro si dà e si continuerà a dare, chi sa per quant'altro tempo, è stata non solo un'avvenimento d'arte, ma addirittura un grande evento sociale: dame scollate, genitiluomini in Irak, rinforzo di poliziotti, una fila di automobilisti che non cessava più, la Sesta Avenue bloccata, una folla di giornalisti e di fotografi. Persino degli enormi riflettori elettrici, che gettavano su tutti gli sprazzi taglienti di luce azzurra, da far impallidire la luce arcuata della buona «Fatina Azzurra». Ma... Ma, due anni fa, un gruppo di artisti attaccuppi, dipendenti dalla organizzazione creata appunto per aiutare i disoccupati, la W.P.A., aveva organizzato un lavoro su Pinocchio. Per la verità, il Pinocchio dei disoccupati, impersonificato da Vito Santella, era il Pinocchio che noi conosciamo ed amiamo: Santella ne aveva fatto una creazione ed i suoi colleghi gli davano una cooperazione affettuosa e devota. Non era, certo, il libro di Collodi preso di gello e portato sulla scena, ma era un Pinocchio mantenuto vivo, attraverso la parodia e l'umorismo, nelle sue linee principali, nel suo carattere e - quel che più importa - nella sua psicologia."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 21
+    },
+    {
+      "id": "1940-04-01_a22",
+      "unit_type": "article",
+      "headline": "l'altro: - Bada che Pali sta facendo la corte alla bionda.",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a22_p00",
+          "text": "Bada che Pali sta facendo la corte alla bionda. - Che bionda? - Alla bionda in veltrina. - Che fesso! - fu il commento. Ma di lì a poco, con una seusa, Zoltán si alza ed esce. Il tempo di pagare e lo accompagnai. - Iich - fece a Pali, tutto rosso di confusione - la tua Yvonne non ti basta più? - Ma - rispose Pali - sono bambole! - Capisco bene, ma dal momento che a te piacciono le donne fatali ed esotiche, tienti la tua. Sei troppo vestito di nero per questa qui. Non vedi che ti ride sul muso. - Per carità - sussurrò Pali - la gente ascolta! Ci prenderanno per mati! Non vorrai litigare per un manichino! - Per mati! Chi è matto, io che sto seduto al caffè a pettandoti, o tu che ti fermi a fare il cestamolla alla mia bionda come se fosse proprio una donna? - Bada ai fatti tuoi!"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 22
+    },
+    {
+      "id": "1940-04-01_a23",
+      "unit_type": "article",
+      "headline": "I pugni erano già protesi, la vetrina",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a23_p00",
+          "text": "correva pericolo, almeno dieci persone si erano già fermate. In quel momento lo sfondo della vetrina si aprì e un giovinotto portò in mostra, tenendola sollevata di traverso, la pupa bruna. D'un gesto istintivo Pali si ricompose, si toccò la cravatta, gettò uno sguardo al manichino - oggi in uno sfarzoso vestito da sera laminato d'oro - si fece rosso rosso e disse con la voce chioccia: - Sei un imbecille, Zoltán. Non si fanno certe cose in pubblico. Si tolse il cappello - chissà a chi - e ci voltò le spalle, allontanandosi a gran passi. - Anche pantofolaio - commentò aspramente Zoltán lanciando un'occhiata bieca ad Yvonne - Proprio il tipo per quella lì. Ci allontanammo anche noi, pensosi. Io mi provai a dire: «la mia automobile» quando passò una maestosa macchina grigia. Ma quella per poco non mi mise sotto."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 23
+    },
+    {
+      "id": "1940-04-01_a24",
+      "unit_type": "article",
+      "headline": "L'accoglienza ostile",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a24_p00",
+          "text": "Ma i Malavoglia sono stati recolti, così sembra all'autore e così è, con indifferenza o diffidenza. Verga, rompendo il misurato riserbo in inconsueti toni orgogliosi di sfogo polemico, si mostra scontento del pubblico, peggiore della critica e, lodando una novellina di suo Luigi, gli scrive l'11 aprile dell'81: «... ci trova la griffe del lion, quella griffe che non avevi ancora nemmeno sino alla Giacinta lasciando dire, e che - lasciando da banda la modestia ipocrita e ridicola, - in Italia adesso non abbiamo che le ed io. Questa affermazione lo farà ingentilire e li farà sorridere, ma io ho bisogno di crederci, per prendere ancora la penna in mano, e se la penso non vedo perché non dovrei confessarlo a te...».\nI Malavoglia hanno fatto fiasco, fiasco pieno e completo. Tranne Builo e Guida, che me ne hanno detto bene, molti, Treves il primo, me ne hanno detto male, e quelli che non me l'hanno detto mi evitano come se avessi commesso una cattiva azione... Il peggio è che io non sono convinto del fiasco, e che se dovessi tornare a scrivere quel libro lo farei come l'ho fatto. Ma 'n Italia l'analisi più o meno esatta scatta il pepe della scena drammatica non va e, vedì, ci vuole tutta la tenerezza della mia convinzione, per non ammuntire i mancarietti che piacciono al pubblico per poter ridergli poi in faccia..."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 24
+    },
+    {
+      "id": "1940-04-01_a25",
+      "unit_type": "article",
+      "headline": "null",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a25_p00",
+          "text": "Caro Luigi io sono perfettamente nascosta dell'indifferenza con cui quel pubblico che si dice letterario si occupa di tentativi sfalati in Italia. Figurati che il primo articolo fatto sul serio mi verrà forse, a quel che me ne ha scritto, dal Sig. Rod, uno degli amici di Zola. Capuana, rispondendogli da Minen, con l'impegnoa sicurezza di giudizio che sempre l'accompagno nel riguardo del suo amico, anche quando era quasi solo a difenderlo, non esitava a collocarne il romanzo in testa a tutta la letteratura narrativa italiana posizioniana. Giudizio che allora, fuori di lui, nessuno avrebbe azzardato, all'indomani dell'insuccesso, e che sessant'anni dopo tutti condividono: «I Malavoglia non sono un fiasco, crede a me: il fiasco, in questo caso, lo fa il pubblico e la critica che si ricredettero presto come accade sempre coi lavori che escono dalla solita carreggiata e che hanno elementi di grandissima vitalità. Per me «I Malavoglia» sono la più completa opera d'arte che si sia pubblicata in Italia dal «Promessi sposi» in poi. Io dico nel mio articolo e son pronto a sostenere in uno studio più largo e più minuto che un articolo non permette.» In quanto al Rod, la scrittura francese amico di Zola, effettivamente egli fu il primo ad accorgersi, tra gli sfiranti della grandezza de «I Malavoglia» intraprendendone subito la traduzione. Ma neanche a Parigi, ove secondo il troppo entusiasta Capuana il romanzo avrebbe dovuto far celebre Verga dalla mattina alla sera, il successo fu immediato. C'era di mezzo la difficoltà della lingua, quella contraria lingua aderentissima al popolaresco e curva di discorsi indiretti che aveva costretto Zola a troncare la letteratura e persino molti italiani a fare allarme per ingiustificata pigritia. Verga, che al riguardo aveva eminato col trovare scarsa comprensione presso il suo stesso editore, così gli aveva scritto qualche mese prima: «Ho cercato di estirpare quel concetto che l'arte per essere efficace vuol essere sincera, e che tutta la questione e l'importanza del realismo sta in ciò che più si riesce a rendere immediata l'impressione artistica, meglio questa sarà oggettiva, quindi vera o reale come volete, ma bella sempre»."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 25
+    },
+    {
+      "id": "1940-04-01_a26",
+      "unit_type": "article",
+      "headline": "Obbiettività artistica e morale",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a26_p00",
+          "text": "A parte la tecnica espressiva del linguaggio, un altro elemento che contribuiva ad alimentare le critiche asili e spingeva Treves a spiantellargli di non trovare interesse nella prima metà del volume, era il metodo di assoluta obbiettività con cui i protagonisti venivano introdotti. Fondamentale, a tal riguardo, è quanto il Verga confidava al Capuana: «La confusione che dovevano produrre in mente alle prime pagine tutti quei personaggi massivi faccia a faccia senza nessuna presentazione, come li aveste conosciuti sempre, e foste nato e cresciuto in mezzo a loro, doveva scomparire mano mano col progredire nella lettura, a misura che essi vi formavano davanti, e vi si affermavano con nuove azioni ma senza mezzi in scena, semplicemente, naturalmente, era artificio voluto e cercato anch'esso, per evitare, perdannini il blasticco, ogni artificio letterario, per carri l'illusione completa della realtà». Noi ora sappiamo che"
+        }
+      ],
+      "page_span": [
+        2
+      ],
+      "position_in_issue": 26
+    },
+    {
+      "id": "1940-04-01_a27",
+      "unit_type": "article",
+      "headline": "L'ispirazione",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a27_p00",
+          "text": "Altra testimonianza importante che si rileva da questo carteggio è che, se le idee e gli esempi della letteratura contemporanea europea entrarono per qualcosa nella formulazione dottrinale del naturalismo italiano, l'ispirazione del Verga, specie ne Il Malavoglia, poco ebbe a risentirne come influenza diretta. Anzi si avverte in lui, nei nuovi e per le ragioni già notate nei riguardi del Flaubert, una progressiva insolenza, una crescente incontenibilità verso i maestri stranieri del verismo, che alle linee shockie in aperta rivolta spostandosi dal piano dell'arte a quello più vasto di un disidio di temerariismo e di educazione, di cultura e di moralità. Al termine di un viaggio a Parigi e a Londra, da Londra scriveva al Capuana il 14 luglio '82: \"Io mi son mangiato qui il tempo, i qualitativi, e la voglia di girare pel mondo. Una sola cosa ci ha appreso di scritto, che è tempo di lasciar da parte la noiosità minchiona di noi figli d'Italia. Per me torna colma coll'idea fissa che l'Italia è il primo paese del mondo. E non stare a romperci le tasche, caro Luigi, col sogni e le visioni di Parigi e di Londra. Tu che sei a Roma, teccali quel ro' di baffi grigi che ci hai, stucci! Non parlo di Parigi nè delle cose grandi che qui a Londra non mancano, per esser veri. Ma il grande davvero mi pare di non averlo visto, e mi sono sbagliato scrivendolo. E l'immenso rare volte è grande. Londra è immensa, ma, caro mio, in ho visto tutto quello che ho potuto, mi son tolto le gombe e la schiena, porto domani: un sospiro, ma un'impresione di grandezza vera non la porta via, noi!\" A un'epoca molto più tarda, probabilmente alla fine del 1910, risalgono le ultime due lettere del carteggio finora pubblicate e che sono state aggiunte alle altre perché toccano gli stessi problemi stilistici che travagliarono lo scrittore nella composizione di I Malavoglia. Questa volta egli è contro il Capuana che aveva sostenuto una presunta superiorità di immediatezza espressiva del dialetto siciliano rispetto alla lingua, con la stessa fermezza con cui si era difeso per l'inanzi di quanti lo accusavano di sicilianeggianti impurità linguistiche: \"Brava, Don Lisi caro! Precisamente come dile e per ciò che vi scoppiavate dello: precisamente perché voi dite vidi, e a due passi da Almico dicano vicì, e il bravo poeta Di Giovanni scrivendo cecu la parata giriglanta non si fa capire da nessuno comu si avisi scriviti turci; precisamente voi, io, e tutti quanti scriviamo non facciamo che tradurre mentalmente il pensiero in siciliano, se vogliamo scrivere in dialetto; perché il pensiero nasce in italiano nella nostra mente malata di letteralità, secondo quello che dice Vossius, e nessuno di noi, né voi, né io, né il Politecnico San Giuseppe riesce a tradurre in schietto dialetto la frase nata schietta in altra forma - meno qualche poeta nostro popolare - e anche quelli a ceminciate del Meli, che sa non solo di letterario ma di umanista. E poi, con qual rettificio? Per impiccicarli e dividerci da noi stessi? Per diminuirli in conclusione? Così Verga superava anche nella questione della lingua, e pur questa volta per esigenze d'ordine non esclusivamente stilistico, le posizioni teoriche del naturalismo."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 27
+    },
+    {
+      "id": "1940-04-01_a28",
+      "unit_type": "article",
+      "headline": "Kiril Todoroff",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a28_p00",
+          "text": "Nella mostra degli artisti stranieri residenti nell'Orto, ordinata nelle sale della Galleria di Roma in via Sicilia, figurano i busti dei Re della Regina di Bulgaria scolpiti nel marmo da Kiril Todoroff, giovane artista bulgaro che ha studiato alla nostra Accademia di Belle Arti e che pur tornando, periodicamente per ragioni di lavoro nella terra natia - ha conservato la sua residenza a Roma, ove realizza le sue opere fra cui sono da menzionare grandi monumenti, statue, e ritratti, che per vittorie conseguite nel concorsi, oppure per commissioni ricevute, sono destinate a sovrastare nelle piazze o ad ornare edifici pubblici della patria fontana.\nIl Todoroff, tornato appena da un me"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 28
+    },
+    {
+      "id": "1940-04-01_a29",
+      "unit_type": "article",
+      "headline": "Il concerto all'Adriano",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a29_p00",
+          "text": "Poltronieri, Bonucci e Pedrotti sono nomi famigliari al pubblico romano: i primi due noti come virtuosi del violino e del violoncello, componenti di un complesso strumentale. Il Trio italiano di risonanza universale, l'altro apprezzato direttore sostituto della nostra musica orchestra sinfonica. Artisti che in ogni senso meritano la solida fama acquisita, e che hanno ben speso la loro fervida operosità concertistica. Fersera in un programma singolarmente eclettico, ma appunto per questo assai piacevole. Gli ottimi musicisti si sono dapprima elementati in opere atte a mettere in chiara evidenza la figura individuale dell'interprete, e infine hanno collaborato fraternamente alla realizzazione del Doppio Concerto di Brahms - per violino, violoncello e orchestra. Il violinista Alberto Poltronieri ha aperto così l'interessante audizione facendosi apprezzare per lo stile e l'elegante freschezza con cui ha eseguito il Concerto in la di Bach: per suo conto Arturo Bonucci con la caratteristica calda calda della mano sinistra, è stato un suggestivo animatore del Naffertari e della Tarantella di Casella. Abito nel rendere pieghevole l'orchestra alle esigenze dei solisti. Antonio Pedrotti ha poi dato spicato rilievo alla scintillante partitura di Ravel L'Alborata del gruacioso, conducendo inoltre al successo una Sercatza, nuova per Roma, di Nino Rota: pagine, queste, che rispecchiano uno stato d'animo asciut dell'eato, una musicalità infantile tanto genuina quanto garbata. Con l'esecuzione del Doppio Concerto di Brahms - opera di profonda personalità, calda di quell'unitino affetto inconfondibile in ogni pagina del grande autore tedesco - che rappresentava la prova e l'attrattiva maggiore del programma, i tre valorosi interpreti hanno dato inizio un eloquente saggio del loro desio di esprimere in perfetta fusione spirituale, e con esatta cognizione gli equilibri sonori di una partitura e le sue ragioni precise. Applausi calorosi, schiettamente ammirati, a Poltronieri, Bonucci, Pedrotti, dopo ogni parte del concerto."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 29
+    },
+    {
+      "id": "1940-04-01_a30",
+      "unit_type": "article",
+      "headline": "Al primatista mondiale Pagani il Campionato della Milizia della Strada",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a30_p00",
+          "text": "La magnifica prova di Masserini a 2/5 di secondo dal vincitore - Sfortunato inseguimento di Serafini - Balzarotti e Francisci vincono le altre gare"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 30
+    },
+    {
+      "id": "1940-04-01_a31",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a31_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"UNVECCHIO CAMPIONE ANCORA IN GAMBA\",\n      \"text\": \"Bergamaschi giunge solo al traguardo della Milano-Modena\\n\\nIl romano Chiappini al secondo posto\",\n      \"page_span\": [1]\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"RISULTATI DI GARE\",\n      \"text\": \"Allo Stadio Berla si sono svolte due corse podistiche cui hanno partecipato molti campioni nazionali. Ecco i risultati: km: 1. Tosi (Roma); 2. Frizzinetto (Roma); 3. Lazzarini (Roma); 4. Tosi (Roma); 2. Pratelli (Pescara); 3. Stefanini (Roma); 4. Spada (Gloriani fascisti); 1. Coccia (Gloriani fascisti); 1. Tosi (Roma); 2. Pratelli (Gloriani fascisti); 1. Vezzani (Roma); 2. Tosi (Roma); 3. Schiavone (Gloriani fascisti); 1. Roma pun. 11; 2. Pezzati b. 30; 3. Chilici p. 28.\\n\\nNella classica generale maschile Ghirroni, monte nella categoria femminile, Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella discesa obbligatoria, la Cellina Sestri precede ancora Erna Stauri e Vittoria Ferrari. Nella"
+        }
+      ],
+      "page_span": [
+        20
+      ],
+      "position_in_issue": 31
+    },
+    {
+      "id": "1940-04-01_a32",
+      "unit_type": "article",
+      "headline": "I giochivoli olimpici del 1940 non avranno luogo a Helsinki",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a32_p00",
+          "text": "I giochivoli olimpici del 1940 non avranno luogo a Helsinki. (F.S.) I giochivoli olimpici del 1940 non avranno luogo a Helsinki. (F.S.)"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 32
+    },
+    {
+      "id": "1940-04-01_a33",
+      "unit_type": "article",
+      "headline": "Byrd vuol rivendicare agli Stati Uniti il possesso di Little America",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a33_p00",
+          "text": "Santiago del Cile, 31\n\n(C. P.) - L'Ammiraglio Byrd è giunto"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 33
+    },
+    {
+      "id": "1940-04-01_a34",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a34_p00",
+          "text": "A Petralia, Solitana, il Vicepresidente del G.U.P. ha presentato alla benedizione della fiamma del Nucleo universitario fascista ed ha assistito all'Instituto Magistrale, allo scoprimento di una lapide in memoria degli insegnanti e alunni eroicamente caduti."
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 34
+    }
+  ]
+}
