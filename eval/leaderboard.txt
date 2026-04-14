@@ -2,21 +2,26 @@ OCR Pipeline Leaderboard (bootstrapped eval)
 =================================================================
 Rank  Config                                        CER      WER Issues
 ----------------------------------------------------------------------
-   1  qwen7b_v2_structured                       0.3376   0.4461      3
-   2  qwen3b_structured                          0.3405   0.4428      3
-   3  qwen_vl_3b_structured                      0.3457   0.4456      3
-   4  qwen7b_structured                          0.3954   0.5094      3
-   5  qwen_vl_7b_structured                      0.4043   0.5306      3
-   6  qwen7b_v2_structured_postcorrect           0.4472   0.5733      3
-   7  qwen7b_v1_structured                       0.5486   0.6784      1
-   8  qwen3b_raw                                 0.6297   0.8023      2
-   9  qwen7b_raw                                 0.6505   0.8228      3
-  10  qwen3b_v2_structured                       0.6817   0.8855      2
-  11  qwen7b_v2_raw_postcorrect                  0.7167   0.8939      3
-  12  qwen7b_v2_raw                              0.7188   0.9786      2
-  13  yolo_qwen3b_column                         0.9578   0.9834      1
-  14  preproc_qwen7b_v2_structured               0.9836   0.9359      1
-  15  got_ocr2_raw                               1.1033   1.0241      3
-  16  internvl4b_structured                      2.0286   2.3027      3
-  17  preproc_qwen7b_v2_raw                      5.3218   4.2822      2
-  18  yolo_qwen7b_structured                     7.8857   8.8383      3
+   1  qwen_vl_7b_structured                      0.1390   0.1798      3
+   2  qwen7b_structured                          0.3134   0.3873      3
+   3  qwen7b_v1_structured                       0.3379   0.4119      3
+   4  qwen7b_v2_structured_postcorrect           0.3882   0.4521      3
+   5  qwen7b_v2_structured                       0.3968   0.4762      3
+   6  qwen_vl_3b_structured                      0.5766   0.7469      3
+   7  qwen3b_structured                          0.5830   0.7461      3
+   8  qwen7b_raw                                 0.6414   0.8030      3
+   9  qwen3b_raw                                 0.6620   0.8456      2
+  10  qwen7b_v2_raw_postcorrect                  0.7390   0.9158      3
+  11  qwen3b_v2_structured                       0.8242   0.9893      2
+  12  got_ocr2_hf                                0.8384   0.9338      1
+  13  qwen7b_v2_raw                              0.8957   1.2251      2
+  14  yolo_qwen3b_column                         0.9354   0.9819      1
+  15  got_ocr2_raw                               1.0973   1.0161      3
+  16  col4_qwen7b_v2_structured                  1.7447   1.7036      1
+  17  col3_qwen25_3b_v2_structured               1.8679   2.4762      2
+  18  internvl4b_structured                      1.9939   2.2951      3
+  19  preproc_qwen7b_v2_raw                      4.0228   3.2732      3
+  20  preproc_qwen7b_v2_structured               4.3935   5.2070      3
+  21  col3_qwen3_8b_v2_structured                7.7581   8.0501      2
+  22  yolo_qwen7b_structured                     7.8137   8.7549      3
+  23  col3_qwen25_7b_v2_structured               7.8907   7.7464      3
