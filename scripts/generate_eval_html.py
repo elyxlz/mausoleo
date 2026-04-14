@@ -6,7 +6,7 @@ import pathlib as pl
 import re
 from collections import defaultdict
 
-from mausoleo.eval.metrics import compute_cer, compute_wer
+from mausoleo.eval.evaluate import _compute_cer as compute_cer, _compute_wer as compute_wer
 from mausoleo.ocr.models import Issue, extract_full_text, issue_from_dict
 
 BOOTSTRAP_DIR = pl.Path("eval/bootstrap_gt")
