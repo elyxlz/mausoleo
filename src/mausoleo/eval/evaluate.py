@@ -7,12 +7,7 @@ import re
 import typing as tp
 
 
-GT_DIR = pl.Path("eval/ground_truth")
-PRED_DIR = pl.Path("eval/predictions")
-DATES = ["1885-06-15", "1910-06-15", "1940-04-01"]
-
-
-def _compute_cer(reference: str, hypothesis: str) -> float:
+def compute_cer(reference: str, hypothesis: str) -> float:
     import jiwer
 
     if not reference:
@@ -20,7 +15,7 @@ def _compute_cer(reference: str, hypothesis: str) -> float:
     return jiwer.cer(reference, hypothesis)  # type: ignore[no-any-return]
 
 
-def _compute_wer(reference: str, hypothesis: str) -> float:
+def compute_wer(reference: str, hypothesis: str) -> float:
     import jiwer
 
     if not reference:
@@ -28,23 +23,23 @@ def _compute_wer(reference: str, hypothesis: str) -> float:
     return jiwer.wer(reference, hypothesis)  # type: ignore[no-any-return]
 
 
-def _normalize(text: str) -> str:
+def normalize_text(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip().lower()
 
 
-def _text_overlap(a: str, b: str) -> float:
-    a_words = set(_normalize(a).split())
-    b_words = set(_normalize(b).split())
+def text_overlap(a: str, b: str) -> float:
+    a_words = set(normalize_text(a).split())
+    b_words = set(normalize_text(b).split())
     if not a_words or not b_words:
         return 0.0
     return len(a_words & b_words) / len(a_words | b_words)
 
 
-def _article_text(article: dict[str, tp.Any]) -> str:
+def article_text(article: dict[str, tp.Any]) -> str:
     return "\n".join(p.get("text", "") for p in article.get("paragraphs", []))
 
 
-def _article_pages(article: dict[str, tp.Any]) -> list[int]:
+def article_pages(article: dict[str, tp.Any]) -> list[int]:
     return article.get("page_span", [])
 
 
@@ -79,57 +74,57 @@ class IssueResult:
     total_pred_articles: int
 
 
-def _match_articles(
+def match_articles(
     gt_articles: list[dict[str, tp.Any]],
     pred_articles: list[dict[str, tp.Any]],
     overlap_threshold: float = 0.15,
 ) -> list[ArticleMatch]:
-    gt_texts = [_article_text(a) for a in gt_articles]
-    pred_texts = [_article_text(a) for a in pred_articles]
+    gt_texts = [article_text(a) for a in gt_articles]
+    pred_texts = [article_text(a) for a in pred_articles]
 
     used_pred: set[int] = set()
     matches: list[ArticleMatch] = []
 
     for gi, gt_art in enumerate(gt_articles):
-        gt_text = gt_texts[gi]
-        if len(gt_text.strip()) < 20:
+        gt_t = gt_texts[gi]
+        if len(gt_t.strip()) < 20:
             matches.append(ArticleMatch(
                 gt_index=gi, gt_headline=gt_art.get("headline", ""),
                 pred_index=None, pred_headline=None,
                 cer=1.0, wer=1.0, text_overlap=0.0,
-                page_span_correct=False, gt_pages=_article_pages(gt_art), pred_pages=[],
+                page_span_correct=False, gt_pages=article_pages(gt_art), pred_pages=[],
             ))
             continue
 
-        best_pi, best_overlap = -1, 0.0
-        for pi, pred_text in enumerate(pred_texts):
+        best_pi, best_ov = -1, 0.0
+        for pi, pred_t in enumerate(pred_texts):
             if pi in used_pred:
                 continue
-            overlap = _text_overlap(gt_text, pred_text)
-            if overlap > best_overlap:
-                best_overlap = overlap
+            ov = text_overlap(gt_t, pred_t)
+            if ov > best_ov:
+                best_ov = ov
                 best_pi = pi
 
-        if best_pi >= 0 and best_overlap >= overlap_threshold:
+        if best_pi >= 0 and best_ov >= overlap_threshold:
             used_pred.add(best_pi)
             pred_art = pred_articles[best_pi]
-            gt_norm = _normalize(gt_text)
-            pred_norm = _normalize(pred_texts[best_pi])
+            gt_norm = normalize_text(gt_t)
+            pred_norm = normalize_text(pred_texts[best_pi])
             matches.append(ArticleMatch(
                 gt_index=gi, gt_headline=gt_art.get("headline", ""),
                 pred_index=best_pi, pred_headline=pred_art.get("headline", ""),
-                cer=_compute_cer(gt_norm, pred_norm),
-                wer=_compute_wer(gt_norm, pred_norm),
-                text_overlap=best_overlap,
-                page_span_correct=set(_article_pages(gt_art)) == set(_article_pages(pred_art)),
-                gt_pages=_article_pages(gt_art), pred_pages=_article_pages(pred_art),
+                cer=compute_cer(gt_norm, pred_norm),
+                wer=compute_wer(gt_norm, pred_norm),
+                text_overlap=best_ov,
+                page_span_correct=set(article_pages(gt_art)) == set(article_pages(pred_art)),
+                gt_pages=article_pages(gt_art), pred_pages=article_pages(pred_art),
             ))
         else:
             matches.append(ArticleMatch(
                 gt_index=gi, gt_headline=gt_art.get("headline", ""),
                 pred_index=None, pred_headline=None,
                 cer=1.0, wer=1.0, text_overlap=0.0,
-                page_span_correct=False, gt_pages=_article_pages(gt_art), pred_pages=[],
+                page_span_correct=False, gt_pages=article_pages(gt_art), pred_pages=[],
             ))
 
     return matches
@@ -144,7 +139,7 @@ def evaluate_issue(
     gt_articles = gt_issue.get("articles", [])
     pred_articles = pred_issue.get("articles", [])
 
-    matches = _match_articles(gt_articles, pred_articles)
+    matches = match_articles(gt_articles, pred_articles)
 
     matched_gt = sum(1 for m in matches if m.pred_index is not None)
     matched_pred = len({m.pred_index for m in matches if m.pred_index is not None})
@@ -158,10 +153,10 @@ def evaluate_issue(
     mean_cer = sum(matched_cers) / len(matched_cers) if matched_cers else 1.0
     mean_wer = sum(matched_wers) / len(matched_wers) if matched_wers else 1.0
 
-    gt_full = " ".join(_article_text(a) for a in gt_articles)
-    pred_full = " ".join(_article_text(a) for a in pred_articles)
-    full_cer = _compute_cer(_normalize(gt_full), _normalize(pred_full)) if gt_full.strip() else 1.0
-    full_wer = _compute_wer(_normalize(gt_full), _normalize(pred_full)) if gt_full.strip() else 1.0
+    gt_full = " ".join(article_text(a) for a in gt_articles)
+    pred_full = " ".join(article_text(a) for a in pred_articles)
+    full_cer = compute_cer(normalize_text(gt_full), normalize_text(pred_full)) if gt_full.strip() else 1.0
+    full_wer = compute_wer(normalize_text(gt_full), normalize_text(pred_full)) if gt_full.strip() else 1.0
 
     page_correct = sum(1 for m in matches if m.page_span_correct)
     page_accuracy = page_correct / len(matches) if matches else 0.0
@@ -177,11 +172,12 @@ def evaluate_issue(
 
 
 def evaluate_all(
-    gt_dir: pl.Path = GT_DIR,
-    pred_dir: pl.Path = PRED_DIR,
+    gt_dir: pl.Path = pl.Path("eval/ground_truth"),
+    pred_dir: pl.Path = pl.Path("eval/predictions"),
     dates: list[str] | None = None,
 ) -> list[IssueResult]:
-    dates = dates or [d for d in DATES if (gt_dir / d / "ground_truth.json").exists()]
+    all_dates = ["1885-06-15", "1910-06-15", "1940-04-01"]
+    dates = dates or [d for d in all_dates if (gt_dir / d / "ground_truth.json").exists()]
     results: list[IssueResult] = []
 
     for date in dates:
