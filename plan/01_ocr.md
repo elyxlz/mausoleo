@@ -264,3 +264,36 @@ The 1885-06-15 issue revealed several systematic challenges for OCR pipeline eva
 5. **Best configs for ground truth bootstrapping**: `col4_qwen25_7b_v2_raw` captures the most faithful raw text per column. `col5_qwen25_7b_v2_structured` captures the best structured article segmentation. `col4_qwen3_8b_v2_structured` captures the most complete cross-column text. No single config handles all challenges — manual cross-referencing across configs is needed for accurate ground truth.
 
 These findings suggest that the evaluation metric should account for reading order separately from character accuracy, and that cross-page article stitching is a necessary post-processing step for production use.
+
+### 2026-04-14: Hand-built ground truth + article-level evaluation
+
+**Hand-built ground truth for 1885-06-15:**
+- 41 articles across 4 pages, 60,001 characters total
+- Built article-by-article: user reads original page images, provides first/last words and column break locations; Claude cross-references all OCR config outputs to assemble the best transcription
+- Content types: 29 news articles, 2 serialized fiction (MAGNETIZZATA appendice + Angelo Pitou by Dumas), 1 entertainment (Sciarada), 1 masthead, 7 advertisements
+- Historical grave accents preserved (perchè not perché — 1885 Italian convention)
+- Stored at `eval/ground_truth/1885-06-15/ground_truth.json`
+
+**New article-level evaluation metrics** (`src/mausoleo/eval/article_metrics.py`):
+
+Old approach: concatenate all text, compute CER/WER. Problem: penalises different article ordering even when text is correct.
+
+New approach:
+1. **Article matching**: For each GT article, find best matching prediction by Jaccard word overlap (threshold 0.15)
+2. **Per-article CER/WER**: Compute CER/WER per matched article pair, average across matches
+3. **Article detection F1**: Precision (what fraction of predicted articles match GT) × Recall (what fraction of GT articles found)
+4. **Page span accuracy**: Does the prediction assign the correct pages to each article?
+
+**Results on 1885-06-15 with article-level eval:**
+
+| Rank | Config | CER | WER | Recall | F1 |
+|------|--------|-----|-----|--------|-----|
+| 1 | col3_qwen3_8b_v2_structured | 0.373 | 0.454 | 78.0% | 70.3% |
+| 2 | qwen7b_structured | 0.556 | 0.635 | 56.1% | 68.7% |
+| 3 | yolo_qwen7b_structured | 0.573 | 0.632 | 97.6% | 16.7% |
+| 4 | qwen25_7b_v1_structured | 0.606 | 0.689 | 58.5% | 71.6% |
+| 5 | col4_qwen7b_v2_structured | 0.767 | 0.747 | 75.6% | 72.9% |
+
+**Key insight**: Column-split (col3) with Qwen3-8B is the best overall — 3-column splitting matches the 1885 newspaper layout well. YOLO detection gets the highest recall (97.6%) but massively over-segments (437 predicted articles vs 41 GT). Many configs score 0% because their outputs contain JSON artifacts or broken text that doesn't match any GT article.
+
+**Page span accuracy is universally poor** (~10%) — no config currently tracks which page an article comes from, which is critical for cross-page article stitching in production.
