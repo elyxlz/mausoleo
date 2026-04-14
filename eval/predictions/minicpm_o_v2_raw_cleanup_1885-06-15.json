@@ -1,0 +1,158 @@
+{
+  "date": "1885-06-15",
+  "source": "il_messaggero",
+  "page_count": 4,
+  "articles": [
+    {
+      "id": "1885-06-15_a00",
+      "unit_type": "article",
+      "headline": "L'U. diputati-telegrafo",
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a00_p00",
+          "text": "L'U. diputati-telegrafo"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 0
+    },
+    {
+      "id": "1885-06-15_a01",
+      "unit_type": "article",
+      "headline": "Camara dei deputati",
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a01_p00",
+          "text": "Camara dei deputati\nSezione del 14 giugno"
+        },
+        {
+          "id": "1885-06-15_a01_p01",
+          "text": "L'ammazzato di feri"
+        },
+        {
+          "id": "1885-06-15_a01_p02",
+          "text": "Passatello sequestrato!"
+        }
+      ],
+      "page_span": [
+        2
+      ],
+      "position_in_issue": 1
+    },
+    {
+      "id": "1885-06-15_a02",
+      "unit_type": "article",
+      "headline": "Un ragazzo divorzato da cani",
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a02_p00",
+          "text": "Un ragazzo divorzato da cani\nI giornali francesi riferiscono un fatto che ha attraversato il solo pesaro."
+        }
+      ],
+      "page_span": [
+        3
+      ],
+      "position_in_issue": 2
+    },
+    {
+      "id": "1885-06-15_a03",
+      "unit_type": "article",
+      "headline": "Una dito per il sigaro",
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a03_p00",
+          "text": "Una dito per il sigaro\nIl marchese di C… ha ricevuto una notizia che successive che ci si riferisce in famiglia…"
+        }
+      ],
+      "page_span": [
+        3
+      ],
+      "position_in_issue": 3
+    },
+    {
+      "id": "1885-06-15_a04",
+      "unit_type": "article",
+      "headline": "L'assassino di stannevina in via Cremona",
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a04_p00",
+          "text": "L'assassino di stannevina in via Cremona"
+        },
+        {
+          "id": "1885-06-15_a04_p01",
+          "text": "L'assassino di stannevina in via Cremona"
+        },
+        {
+          "id": "1885-06-15_a04_p02",
+          "text": "La schiacciata da una trave in via Merulana"
+        },
+        {
+          "id": "1885-06-15_a04_p03",
+          "text": "La schiacciata da una trave in via Merulana"
+        },
+        {
+          "id": "1885-06-15_a04_p04",
+          "text": "Il suono del vento sempre torio"
+        },
+        {
+          "id": "1885-06-15_a04_p05",
+          "text": "Il suono del vento sempre torio"
+        }
+      ],
+      "page_span": [
+        3,
+        4
+      ],
+      "position_in_issue": 4
+    },
+    {
+      "id": "1885-06-15_a05",
+      "unit_type": "article",
+      "headline": "Notizie",
+      "paragraphs": [
+        {
+          "id": "1885-06-15_a05_p00",
+          "text": "Notizie"
+        },
+        {
+          "id": "1885-06-15_a05_p01",
+          "text": "IL SUICIDIO DEL PRESIDENTE DEL LIETOCE DE FERZANA.\nFAenza, 18."
+        },
+        {
+          "id": "1885-06-15_a05_p02",
+          "text": "RUSSELLA IN ITALIA"
+        },
+        {
+          "id": "1885-06-15_a05_p03",
+          "text": "I gesti della russa politica"
+        },
+        {
+          "id": "1885-06-15_a05_p04",
+          "text": "L'ITALIANO LIBERATO\nAlgeri, 13."
+        },
+        {
+          "id": "1885-06-15_a05_p05",
+          "text": "LA QUESTIONE AFGANA\nPietrachera, 12."
+        },
+        {
+          "id": "1885-06-15_a05_p06",
+          "text": "BASTIMENTI IN MOTTO\nDakar, 12."
+        },
+        {
+          "id": "1885-06-15_a05_p07",
+          "text": "Aboard buon toni."
+        },
+        {
+          "id": "1885-06-15_a05_p08",
+          "text": "Le regole del gioco in corso"
+        }
+      ],
+      "page_span": [
+        4
+      ],
+      "position_in_issue": 5
+    }
+  ]
+}

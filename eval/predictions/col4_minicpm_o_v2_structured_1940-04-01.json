@@ -1,0 +1,778 @@
+{
+  "date": "1940-04-01",
+  "source": "il_messaggero",
+  "page_count": 24,
+  "articles": [
+    {
+      "id": "1940-04-01_a00",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a00_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Il primo monumento alla Regina Maria inaugurato dal Principe\",\n      \"text\": \"Il Duca di Spoleto, il ministro Pavolini, del Partito, del Senato e della Camera presenti\\nBordighera, 31. Genova, 19 ottobre. Il genio di Marcello Rivoire è la radice della colonna della chiesa di S. Gennaro, che la Regia ha voluto erigere per il suo santo patrono. La colonna è la scultura di un genio che sembra impetuosamente saltare lungo il lato esterno della chiesa. Ne è un riconoscimento della nobiltà spirituale e morale che ha avuto il Genovese, e che si è manifestata in tutte le vie del prospero popolo, da una generosità che si è spiegata in ogni istante della storia. Sono tutti i popoli, il comune, la famiglia, le spettacolari montagne o le magnifiche palazzine. La principessa di Piemonte ha ritenuto sovente il suo cuore, del genio che ha esercitato la sua svelata passione per la chiesa di Santi Pietro e Stefano, per la chiesa di San Giuseppe, per la chiesa di Santi Giovanni Battista e Filippo, per la chiesa di Santi Andrea e Vittoria, per la chiesa di Santi Marcellino e Festo, per la chiesa di Santi Cosma e Damiano, per la chiesa di Santi Agostino e Carlo Magno, per la chiesa di Santi Stefano e Giuseppe, per la chiesa di Santi Gabriele e Raffaele, per la chiesa di Santi Bartolomeo e Massimo, per la chiesa di Santi Benvenuto e Cirino, per la chiesa di Santi Giorgio e Massimo, per la chiesa di Santi Stefano e Gervasio, per la chiesa di Santi Giuseppe e Elisabetta, per la chiesa di Santi Costantino e Elena, per la chiesa di Santi Paolo e Fedele, per la chiesa di Santi Pietro e Stefano, per la chiesa di Santi Stefano e Zeno, per la chiesa di Santi Giorgio e Costanzo, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Vincenzo e Anastasio, per la chiesa di Santi Gaudenzio e Protaso, per la chiesa di Santi Biagio e Carlo, per la chiesa di Santi Ermolao e Protaso, per la chiesa di Santi Gabriele e Raffaele, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano e Ermolao, per la chiesa di Santi Stefano"
+        }
+      ],
+      "page_span": [
+        1
+      ],
+      "position_in_issue": 0
+    },
+    {
+      "id": "1940-04-01_a01",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a01_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Monumento Margherita di Piemonte\",\n      \"text\": \"BORDIGHERA Lunedì 1 Aprile 1940. Ii Messaggero - il corriere del Ligure. Carlo Del Croix pronuncia il suo discorso. Altre notizie e informazioni politiche e economiche dal Lazio, dall'Emilia, dai Veneti, dai Marchesi, dai Romani, dai Trasimini, ai Toscanni, ai LOMBARDI, ai MILANESE, ai PIEMONESI, ai PIETROBURGHESE, ai MONTEGNAZZI, ai GIORGLIERI, ai MONTEFERRATI, ai VENEZIANI, ai FRENCH, ai BELGIANI, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE, ai DANesi, ai NORVESE,"
+        }
+      ],
+      "page_span": [
+        2
+      ],
+      "position_in_issue": 1
+    },
+    {
+      "id": "1940-04-01_a02",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a02_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"I missione aerea tedesche in Scozia e le Orcadi\",\n      \"text\": \"Il 29 dicembre l'Air Force tedesca ha compiuto un'incursione aereofantastica lungo il Suffolk e l'isola di Yutland. L'annuncio è stato reso con una comunicazione germanica che informa di un'incursione tedesca in Scozia e le Orcadi.\\n\\nLa notizia fu confirmata da una fonte britannica, che ha riferito che sette aerei tedeschi sono stati visti in volo lungo la costa britannica. Secondo i media scozzesi, la missione tedesca è stata condotta in modo discretto e non ha causato alcuna alarme o reazione tra le popolazioni locali. Il ministry of Defence ha dichiarato che non c'è stato alcun veicolo terrestre o navale in movimento, ma che i piloti tedeschi erano intenti a eseguire il loro compito di reconnaissance.\\n\\nLa missione tedesca è stata considerata una mossa strategica per testare la rete di difesa britannica e per valutare la rete di controllo e coordinamento della Luftwaffe. Inoltre, la missione è stata vista come un tentativo del Bundeswehr di sperimentare nuove tattiche di guerra a distanza di occhio, utilizzando la tecnologia aereofantastica per svolgere operazioni di sorveglianza e controllo.\\n\\nLe tensioni fra le due potenze sono sempre più accentuate, con la GB che si prepara ad ampliare le sue operazioni anti-missili e la Germania che intensifica le sue misurazioni e sperimentazioni aeronautiche. La missione tedesca è stata vista come un provvedimento strategico per testare la rete di difesa britannica e per valutare la rete di controllo e coordinamento della Luftwaffe. Inoltre, la missione è stata vista come un tentativo del Bundeswehr di sperimentare nuove tattiche di guerra a distanza di occhio, utilizzando la tecnologia aereofantastica per svolgere operazioni di sorveglianza e controllo.\",\n      \"page_span\": [4]\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Gravi restazioni in Svezia all'avigliatura mercantile\",\n      \"text\": \"Stoccarda, 31.\\n\\nDa oggi viagera in un'nuova base in cui si prospere la navigazione meridionale. La nave di Stoccarda, che ha superato le 300 tonnellate, ha lasciato la Sweden, senza permesso della commissione marittima. Simile è avvenuto per il plesso del golfo di Bothnia, che ha ricevuto la navigazione meridionale. La Sweden è stata messa in guardia e la navigazione meridionale è stata interrotta per periodi prolungati. Le tensioni tra la Sweden e la GB sono in aumento, con le tensioni politiche che stanno portando alla perdita di fiducia tra le due nazioni. Le tensioni sono state accentuate dal recente embargo imposito dalla Sweden sugli esporti britannici e dalla GB che ha deciso di bloccare i mari del Nord per le navi scandinave. Le tensioni tra le due nazioni sono state anche accentuate dal recente embargo imposito dalla Sweden sugli esporti britannici e dalla GB che ha deciso di bloccare i mari del Nord per le navi scandinave.\",\n      \"page_span\": [5]\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"L'eletrificazione delle Ferrovie\",\n      \"text\": \"Berlino, 31.\\n\\nIl Gran Quartiere Generale tedesco ha dichiarato che l'Italia ha iniziato la sua conversione alle reti elettriche. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla sua ingegnosità e innovazione. L'articolo parla delle reti elettriche e delle loro evoluzione nel corso dell'ultima decennia. L'articolo spiega come l'Italia sta avendo un impatto significativo sulle reti elettriche europee grazie alla"
+        }
+      ],
+      "page_span": [
+        3
+      ],
+      "position_in_issue": 2
+    },
+    {
+      "id": "1940-04-01_a03",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a03_p00",
+          "text": "{\n  \"articles\": [\n    {\n      \"unit_type\": \"advertisement\",\n      \"headline\": null,\n      \"text\": \"EDIZIONE DI MEZZOGIORNO Pubblicità Commercio L. Cleomaniabbi L. Consulti e Finanziari L. 18. Nocifragia L. 19 Cronaca Ehi di Cronaca e Storico L. 10. Telefoni di segnale lunga o curta o curta, piccola o grande codice elettrico o hibridi reticbili. Altre tariffe generali, 1,40% l'annata si impedisce il pagamento esito.\",\n      \"page_span\": []\n    },\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Il Segretario del Partito nella zona del goriziano\",\n      \"text\": \"L'interessi per gli importanti problemi della provincia\\nGorizia, 31.\\nProveniente da Roma stanotte ha preso volo il primo aereo di Gorizia del Ministero Segreteria del Partito che, subito dopo la Federazione del Fascio, è partito per Gorizia. Aboard l'aereo c'era il Segreterio Federale del Fascio, il Prefetto Muri, il segretario del fascio di Gorizia e un agente del fascio di Trieste. \\nIn precedenza, il segreterio del fascio di Gorizia ha presentato al Ministero Segreteria del Partito la proposta per l'istituzione del fascio in Gorizia, per l'istituzione del fascio di Trieste e per la federazione del fascio di Gorizia. Inoltre, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. La proposta è stata approvata da parte del Ministero Segreteria del Partito. \\nDurante la sua visita nella zona, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. Il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. La proposta è stata approvata da parte del Ministero Segreteria del Partito. \\nDurante la sua visita nella zona, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. Il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. La proposta è stata approvata da parte del Ministero Segreteria del Partito. \\nDurante la sua visita nella zona, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. Il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. La proposta è stata approvata da parte del Ministero Segreteria del Partito. \\nDurante la sua visita nella zona, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. Il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. La proposta è stata approvata da parte del Ministero Segreteria del Partito. \\nDurante la sua visita nella zona, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. Il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. La proposta è stata approvata da parte del Ministero Segreteria del Partito. \\nDurante la sua visita nella zona, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. Il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. La proposta è stata approvata da parte del Ministero Segreteria del Partito. \\nDurante la sua visita nella zona, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. Il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. La proposta è stata approvata da parte del Ministero Segreteria del Partito. \\nDurante la sua visita nella zona, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. Il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. La proposta è stata approvata da parte del Ministero Segreteria del Partito. \\nDurante la sua visita nella zona, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. Il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. La proposta è stata approvata da parte del Ministero Segreteria del Partito. \\nDurante la sua visita nella zona, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. Il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. La proposta è stata approvata da parte del Ministero Segreteria del Partito. \\nDurante la sua visita nella zona, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. Il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il fascio di Fiume. La proposta è stata approvata da parte del Ministero Segreteria del Partito. \\nDurante la sua visita nella zona, il segreterio del fascio di Gorizia ha presentato la proposta per la federazione del fascio di Gorizia con il fascio di Trieste e per la federazione del fascio di Gorizia con il"
+        }
+      ],
+      "page_span": [
+        4
+      ],
+      "position_in_issue": 3
+    },
+    {
+      "id": "1940-04-01_a04",
+      "unit_type": "editorial",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a04_p00",
+          "text": "Articolo critico sull'impatto del tramways su Trieste e le proposte per la gestione dei mezzi pubblici. Discussione su errori commessi nella gestione del tramways e proposte per risolverne le problematiche."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 4
+    },
+    {
+      "id": "1940-04-01_a05",
+      "unit_type": "article",
+      "headline": "Il saluto del 'Messaggero' a Matteo Incalcatelli e Vincenzo Tuccio",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a05_p00",
+          "text": "Articolo che presenta i saluti del 'Messaggero' ai due individi, Matteo Incalcatelli e Vincenzo Tuccio, che hanno contribuito al progresso della stampa e della cultura. Discussione sul loro ruolo e contributi all'ambito della economia e della economia culturale."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 5
+    },
+    {
+      "id": "1940-04-01_a06",
+      "unit_type": "obituary",
+      "headline": "Bollettino demografico di Roma del 31 marzo 1940-XVIII",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a06_p00",
+          "text": "Informazione sul bollettino demografico di Roma per il 31 marzo 1940, che mostra i numeri di nascite, morti e transazioni matrimoniali. Indice generale del popolazione di Roma."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 6
+    },
+    {
+      "id": "1940-04-01_a07",
+      "unit_type": "article",
+      "headline": "La voce",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a07_p00",
+          "text": "Articolo che parla del successo del sette settimana autarchica e delle riforme di liquori, spumanti e dolcevole. Discussione sulle riforme e le loro effetti economici e sociali."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 7
+    },
+    {
+      "id": "1940-04-01_a08",
+      "unit_type": "article",
+      "headline": "Una conferenza di Ferruccio Lantini",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a08_p00",
+          "text": "Articolo che descrive una conferenza condotta da Ferruccio Lantini su temi politici e sociali. Discussione sullo status della società italiana e le future opportunità."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 8
+    },
+    {
+      "id": "1940-04-01_a09",
+      "unit_type": "article",
+      "headline": "Un funerale dei generali",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a09_p00",
+          "text": "Articolo che descrive il funerale dei generali Augusto Fabri e other generali. Discussione sulle loro carriera militare e il loro ruolo nella storia della'Italia."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 9
+    },
+    {
+      "id": "1940-04-01_a10",
+      "unit_type": "article",
+      "headline": "Il rapporto dei Fasci della X Zona",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a10_p00",
+          "text": "Le popolazioni della X Zona della provincia di Roma, esprimendo la loro profonda fedeltà alla Federazione del fascismo, in occasion del vieto del movimento politico del Partito democratico, si sono riunita in grande assemblata per deliberare sul rapporto del fascismo e del partito nella circostanza in cui la Fascia ha avuto a palazzo il suo dibattito con il sindaco, con la partecipazione della polizia. La manifestazione, che si è svolta nel piazzale di Vittorio Emanuele, ha avuto la presenza del segreteria regionale del fascismo, del segreteria nazionale del fascismo e del segreteria del fascismo della X Zona. Ha rappresentato una forma esemplare di obbedienza al regime e di fedeltà al fascismo.\n\nIl segreteria regionale del fascismo ha espresso la felicità per la partecipazione della polizia e ha dichiarato la condotta del popolo come esempio per tutta la fascia. Il segreteria nazionale ha esortato i fascisti a riprendere le attività culturali e politiche, e ha ringraziato i partigiani per la cooperazione durante la manifestazione. Il fascista ha ricevuto l'onore di ricevere il benvenuto della polizia e del sindaco, che ha esposto la sua gratitudine per la cooperazione durante la manifestazione. Ha dichiarato che la fascia si trova in buona cooperazione con la polizia e con il sindaco, e che si prevede un futuro di progresso e di sviluppo per la fascia. Ha ringraziato anche i partigiani per la cooperazione durante la manifestazione. Ha dichiarato che la fascia si trova in buona cooperazione con la polizia e con il sindaco, e che si prevede un futuro di progresso e di sviluppo per la fascia. Ha ringraziato anche i partigiani per la cooperazione durante la manifestazione. Ha dichiarato che la fascia si trova in buona cooperazione con la polizia e con il sindaco, e che si prevede un futuro di progresso e di sviluppo per la fascia. Ha ringraziato anche i partigiani per la cooperazione durante la manifestazione."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 10
+    },
+    {
+      "id": "1940-04-01_a11",
+      "unit_type": "article",
+      "headline": "AL REALE DELL'OPERA",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a11_p00",
+          "text": ""
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 11
+    },
+    {
+      "id": "1940-04-01_a12",
+      "unit_type": "article",
+      "headline": "Domani Fedora",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a12_p00",
+          "text": "Un altro esaurito per la realazione di due grandi romanze. L'Adriano Leccatori di Cilea, magnificamente direttori da Manlio Arturo Mastro, ha presentato al Senato la sua opera, il Re di Isole, interpretata da Augustina Olivieri, che ha prodotto la sua efficacia musicale e l'interpretazione che le ha permesso di entrare nelle prestazioni più importanti. La sua opera è stata presentata al Senato come un esempio di professionalism e abilità, e ha ricevuto l'attenzione del pubblico e delle autorità culturali. L'Adriano Leccatori di Cilea è stato acclamato per la sua opera, che ha dimostrato la sua talento e abilità come componitore. La sua opera è stata presentata al Senato come un esempio di professionalism e abilità, e ha ricevuto l'attenzione del pubblico e delle autorità culturali. L'Adriano Leccatori di Cilea è stato acclamato per la sua opera, che ha dimostrato la sua talento e abilità come componitore."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 12
+    },
+    {
+      "id": "1940-04-01_a13",
+      "unit_type": "article",
+      "headline": "Concerte alla Filarmonica",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a13_p00",
+          "text": ""
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 13
+    },
+    {
+      "id": "1940-04-01_a14",
+      "unit_type": "article",
+      "headline": "VATICANO",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a14_p00",
+          "text": "La somma della Principessa di Piemonte ricevuta dal Papa"
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 14
+    },
+    {
+      "id": "1940-04-01_a15",
+      "unit_type": "article",
+      "headline": "Il ritorno di Franco Ferrara ad Adriano",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a15_p00",
+          "text": ""
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 15
+    },
+    {
+      "id": "1940-04-01_a16",
+      "unit_type": "article",
+      "headline": "I Dei Fiamme al Quirinale",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a16_p00",
+          "text": ""
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 16
+    },
+    {
+      "id": "1940-04-01_a17",
+      "unit_type": "article",
+      "headline": "Una miniera di ferro nelle strade dell'Urbe",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a17_p00",
+          "text": ""
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 17
+    },
+    {
+      "id": "1940-04-01_a18",
+      "unit_type": "article",
+      "headline": "Nico Taranto e Titina De Filippo al Quattro Fontane",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a18_p00",
+          "text": ""
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 18
+    },
+    {
+      "id": "1940-04-01_a19",
+      "unit_type": "article",
+      "headline": "I PROGRAMMI DI OGGI",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a19_p00",
+          "text": ""
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 19
+    },
+    {
+      "id": "1940-04-01_a20",
+      "unit_type": "article",
+      "headline": "Teatri",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a20_p00",
+          "text": ""
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 20
+    },
+    {
+      "id": "1940-04-01_a21",
+      "unit_type": "article",
+      "headline": "Una medaglia al valer militare al college Guido Mattioli",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a21_p00",
+          "text": ""
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 21
+    },
+    {
+      "id": "1940-04-01_a22",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a22_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"L'OPERA DELL'ATTACCOLI per i diritti del Popolo Italiano\",\n      \"text\": \"Collaboratore di 'L'Indiano' e 'La Rivoluzione Italiana'. — Il celebre avvocato e scrittore di Bergamo, Aldo Attacccoli, si occupa della politica internazionale per gli意大利人民. La sua opera, che ha ricevuto la approbazione del Presidente del Consiglio (Giovanni Gentile), è una collana di studi sull'indipendenza politica e culturale dell'Italia. Le colonne di Attacccoli sono dense di informazioni precious, le prime righe della collana parlano della crisi politica britannica e dell'impresa di Lord Halifax. In seguito Attacccoli spiega il ruolo che l'Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell'autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l'Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell'autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l'Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacccoli è una testimonianza della lucidità e del sapere politico dell’autore, che si ferma a spiegare le ragioni behind le decisioni politiche europee. In questo volume Attacccoli tratta anche il ruolo che l’Italia deve svolgere per rafforzare la pace in Europa. L'opera di Attacc"
+        }
+      ],
+      "page_span": [
+        7
+      ],
+      "position_in_issue": 22
+    },
+    {
+      "id": "1940-04-01_a23",
+      "unit_type": "advertisement",
+      "headline": "Le gambe dei 20 anni",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a23_p00",
+          "text": "con le mebre insuperabili CALZE ZENIT LASTEX\nInvisibili, confortevoli - Modelli assorbiti, varie tensioni C. LENTI - Capo le Case, 21 - Tel. 6009\nALSO SUONARE LA FISARMONICA\nCHIEDETE il nuovissimo Catalogo 225\ncontiene illustrazioni e descrittione di 42 modelli delle migliori fabbriche italiane DALLAPE' GALANTI PANCOTTI SOPRANI NOVITÀ GALANTI MODELLI PHIMA MIRACOLO di perfezione costruttiva Per i più del normale il più grande successo dell'industria italiana sul mercato estero MODELLI SUPREMA Prostruzioni di classe appetite studiate per gli studenti MODELLI GI-ERRE armoniche per professionisti PREZZI SENZA POSSIBILE CONCORSIONA DAL 380 A L. 6000 Vendita rilascia da L. 12 mensili in fumo - Cambi Laboratorio specializzato per riparazioni e accordatori Al galleri residenti in Roma, hanno diritto a TREDI MIE DI LEZIONI GRATIS Metodi per imparare a sapore la Fisarmonica SENZA MAESTRO L. 15 - Per birte postale, L. 1 AZIENDA RADIOTECHNICIA ITALIANA PALLAVICINI-RADIO BOMA - Via IV Novembre, 135-ba - Tel. 8318 - 8284"
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 23
+    },
+    {
+      "id": "1940-04-01_a24",
+      "unit_type": "advertisement",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a24_p00",
+          "text": "IVARI\nPROFUMI COLONIA ESTRATTI BRILLANTINA LAVANDA SAPONI CIPRIA ecc.\nI PROFUMI DELL'ARISTOCRACIA composti con flori da tante delle tenute del Marchese di Nivari 81 vendute nei migliori negozii d'Italia opere: U. N. I. B. - Via della Vite, ROMA"
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 24
+    },
+    {
+      "id": "1940-04-01_a25",
+      "unit_type": "advertisement",
+      "headline": "Spiegate la vela verso la fortuna",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a25_p00",
+          "text": "LOTTERIA AUTONOMISTICA NAZIONALE DI TRIPOLI UN BIGLIETTO LIRE 12"
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 25
+    },
+    {
+      "id": "1940-04-01_a26",
+      "unit_type": "article",
+      "headline": "Il confine della realtà",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a26_p00",
+          "text": "Vi voglio raccontare un fatto che è vero, ma non originale. Mora ha detto la bambina povera che si litiga davanti alla vetrina dei giocattoli per una ideale proprietà come il potere umano: i personaggi del mio racconto in reality sono due uomini, e non fantasmi, due uomini tanto di scarpe e di cappello e di carta di identità in scacco. Non ho più Mora, la malinconia di arrestarci a guardare le vetrine di giocattoli non posseduti in govento: se mi fermo a contemplare ci ci mostra la trasparenza del vento lungo le strade affollate della città perché ho tempo da buttar vin- millionario di tempo - e non posso fare altro che bighellare per lunghissime ore del giorno, come molti simili in attesa di meglio.\nNoi due compagni: non odi dire amici perché sono sicuri che domani la fortuna o la sorte (e per noi difficile) la sorte può dividersi pezzettino del pezzo, passa zero salutare e si stendono su piazzette per conto proprio dei loro compagni, fra cui il primo, Pali, è un borgogno, un borgogno, Zoltan ed io, chiamati che cosiamo? Tutto questo che ho raccontato non è stato scoperto, poiché le figure delle nostre compagni ha parte nel’episodio nero che narra, e noi che rimast tempo e voglia di farla.\nVengo al sogno. Una mattina, saranne state le nove e mezza, ci siamo fermati davanti a una vetrina di confezioni femminili. Che idea, le idee, di mettersi insteado stoffe a fiore, come tappere- zero Comunque, Zoltan incomincia a guardare con sorpreso gli modelli. Sono leziosi, vede fare pel- che fosse chissà che prodigio, e peggio, anche noi stessi, facciamo creature umane della stessa famiglia, l’altruista della umanità La perversità Continuo Zoltan. Poi, continuo Zoltan. Poi, continuo Zoltan. Infatti non c’è di più in questo.\nMa tutto questo che ho raccontato non è stato scoperto, poiché le figure delle nostre compagni ha parte nel’episodio nero che narra, e noi che rimast tempo e voglia di farla.\nMa tutto questo che ho raccontato non è stato scoperto, poiché le figure delle nostre compagni ha parte nel’episodio nero che narra, e noi che rimast tempo e voglia di farla.\nMa tutto questo che ho raccontato non è stato scoperto, poiché le figure delle nostre compagni ha parte nel’episodio nero che narra, e noi che rimast tempo e voglia di farla."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 26
+    },
+    {
+      "id": "1940-04-01_a27",
+      "unit_type": "article",
+      "headline": "LETTE",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a27_p00",
+          "text": ""
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 27
+    },
+    {
+      "id": "1940-04-01_a28",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a28_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"VERO IL «NOSTRO PINOCCHIO»\",\n      \"text\": \"Trionfante i poveri «gatti» portato in giroPinocchio« per tennere le ciasce del Stato Unici. Il successo è generale e le spese del produttore non li fanno che la missa, in scena, speciamente, con la pupa. Ma l'intelletto di W.P.A. lo abbia, perché ci necessari le dinamiche economiche e il P.U.C. lo ucciso.\\n\\nQuelli che furono gli effetti di una prima volta: ilPinocchio« non poté vivero più; because, prima di potervano; la pupa «burattina» non vi aveva potuto vivere per beno, ma aveva birattino uscito con onore e dignità, con rispetto del eric e di «e barbato» Le scene e i gadget venduti per robaccia ePinocchio« scomparte.\\n\\nPer risorgere dopo un anno, altrimenti Disney... In la resurrezionePinocchio« è tornato a scena, divenuto un povero «gatto» di which, in famiglia, non si paga la bocha, bacco avendo fatta, il povero «gatto» è mutato nello mistero del scurore colo; ma ha avuto bisogno del celluloide: il boccaletto era di cellulota e si usa un vermo. La musica grava, ilPinocchio« ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «burattina» non si paga, ha cominciato a cantare; Walt Disney, come la pupa «"
+        }
+      ],
+      "page_span": [
+        10
+      ],
+      "position_in_issue": 28
+    },
+    {
+      "id": "1940-04-01_a29",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a29_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"STORIA DE 'I MALAVOLGI' - Lettere in di Verga a Casa\",\n      \"text\": \"La ricorrenza del primo centenario della nascita, e le celebrazioni e gli articoli su lui, non si limitano a interessare occasionalmente i lettori, ma portano alla gloria di Giovanni Verga, una notevole intensità esclusivamente accademica. Due santi contributi. Una è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l’edizione, la seconda è il manoscritto, elettronicamente stampato da A. G. Mazzotta, che si presenta come un contributo importante per la conoscenza della produzione letteraria di Verga. La prima è l"
+        }
+      ],
+      "page_span": [
+        11
+      ],
+      "position_in_issue": 29
+    },
+    {
+      "id": "1940-04-01_a30",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a30_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"MOSTRE D'ARTE\",\n      \"text\": \"Nella mostra degli artisti bulgarie, reperiremo, come in ogni mostra, una scelta di opere, variate e dense, ma non rassemblate per regola di un unico tema. Però, ci si deve fare notare la stessa condizione della mostra: la mancanza di un unico assente che renderebbe la mostra più organizzata e compatta. Ma, è come se, al piegarsi del tempo, le nostre esposizioni avessero perso la consapevolezza del tema, o del tema medesimo avesse scappato del loro controllo.\\n\\nLa mostra è composta da 120 opere, dipinti, sculture, fotografie, dipinti su carta, sul telaio, sul legno, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pareti, sulle pare"
+        }
+      ],
+      "page_span": [
+        12
+      ],
+      "position_in_issue": 30
+    },
+    {
+      "id": "1940-04-01_a31",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a31_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Verso la conquista di L'Ambrosia\",\n      \"text\": \"LAZIO-VENEZIA 1-0 (2-0) Franca superiorità, magro bottino\\nNel campo della vittoria del Calcio si sono scontrati i due protagonisti della Coppa Italia, Venezia e Lazio. La settimana scorsa la Squadra blu ha vinto l'incontro di ritorno a Roma con un urgenza che ha permesso di chiudere il conto con i rossoblù. Oggi è venuto il momento di chiudere definitivamente la gara, ma il rosso è riuscito a bloccare il gioco iniziale e a smontarlo nella sua élite.\\n\\nIl primo gol è arrivato grazie a un golpaccia di Giordano, che ha messo in evidenza la sua forza fisica e la sua agilità. Il gol è stato il risultato di una passata accurata di Ferrari, che ha avuto il ben desiderato. La Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo momento di meraviglia con un gol di Ferrari, ma non è stato abbastanza per neutralizzare il gol di Giordano. Le Squadre blu hanno continuato a bloccare le occasioni di Lazio, ma non è stato abbastanza per far fronte alla forza del calcio rossoblù.\\n\\nLa Squadra blu ha avuto il suo"
+        }
+      ],
+      "page_span": [
+        13
+      ],
+      "position_in_issue": 31
+    },
+    {
+      "id": "1940-04-01_a32",
+      "unit_type": "article",
+      "headline": "Giornata nera per Roma",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a32_p00",
+          "text": "TURINO- ROMA 4-0 (2-0) Torino, 31 ottobre. La squadra azzurra ha vinto in campo del polo Savona una gara estremamente severa, ma in cui il terremoto della Roma è stato definito, per un po' di tempo, anche un pugno. Sia l'attacco, sia la difesa, sia lo sviluppo generale del match, si sono svolte in maniera talmente dominante, talmente completa, talmente fluida, da rendere il pallone del calcio, un piccolo oggetto, impotente, in confronto con i movimenti organizzati e collettivi della Roma. ..."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 32
+    },
+    {
+      "id": "1940-04-01_a33",
+      "unit_type": "article",
+      "headline": "Giornata nera per Roma",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a33_p00",
+          "text": "TORINO: Olivieri, Pianezzi, Buscaglia, Cadario, Asllari, Gallo, Borsetti, Cadeo, Ganelli, Melchiori, Petroni, Caprari, Masetti; Acero, Gabbiani, Donati, Clini, Bonifazi, Kromer, Pantoni, Provencio, Costa, Aighli. ..."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 33
+    },
+    {
+      "id": "1940-04-01_a34",
+      "unit_type": "article",
+      "headline": "Milano - Napoli 3-0 (0-0)",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a34_p00",
+          "text": "MILANO: Zorzan, Bonforte, Herzog, Antonini, Bortolotti, Faschinat, Luchetti, Bois, Costi, Meneghini. ARBITRO: Bovolenta. ..."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 34
+    },
+    {
+      "id": "1940-04-01_a35",
+      "unit_type": "article",
+      "headline": "Vittoria della classe",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a35_p00",
+          "text": "GENOIA-LIGURIA 2-0 (2-0) Genova, 31 ottobre. Nulla di quanto si publi del sultano della Roma, non puoi dirlo, né puoi dirlo, perché il furto è talmente assolutamente chiaro che nessuno, senza farlo, può pigliarlo per falso. ..."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 35
+    },
+    {
+      "id": "1940-04-01_a36",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a36_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"I nerazzurri bruciano le tappe\",\n      \"text\": \"Firenze, 31 apr. L'Ambrosiana ha superato il rosto nero fiorentino e con un risultato che non è da discutere, ma con un punteggio che non è da ammettere. Dopo il 0-0 della primavera, la squadra della pennantina aveva una squassante padronanza in campo, ma i nerazzurri si sono strizzati del buon fermo e hanno riscaldato il pomeriggio. Sembra essere un caso isolato, ma l'ambrosiana ha voluto sottolineare che non è un problema di strategia o di tattica, ma di condotta. E che non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che ha avuto a contrastare. La squadra di BERTA è tornata in campo con la stessa forma, ma è arrivata con troppi difetti in sé. Non è la prima volta che succede. Inoltre, è importante notare che il viaggio a Firenze è stato il solo ostacolo che"
+        }
+      ],
+      "page_span": [
+        15
+      ],
+      "position_in_issue": 36
+    },
+    {
+      "id": "1940-04-01_a37",
+      "unit_type": "article",
+      "headline": "NERAZZURRA\nBologna",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a37_p00",
+          "text": "MARLBOROGNA 1-1 (I-I) \nIl Bolognese ha potuto costare lo scudetto\n\nBar, 31. Il Bolognese ha potuto costare lo scudetto, ma non riuscì a portarlo lontano. Altre 20 minuti avrebbero potuto farlo. Ma la partita è finita con un 1-1 e il Bologna non riuscì a sfruttare il vantaggio temporaneo del gol di Rizzoli. Inoltre, l'intera seconda parte è stata viva e lucida, con i due squadre a vicenda cercando di dominare, ma non riuscendo mai a sfruttare la loro élite.\n\nLa prima parte è stata lunga e intensa, con i due squadre a vicenda cercando di dominare, ma non riuscendo mai a sfruttare la loro élite. Il gol è arrivato alla 31'. Lanzini ha messo in campo una passata che ha portato a Rizzoli, che si è spostato permingere la porta di Bazzoni e ha segnato. Il gol è stato il solo risultato della prima parte, ma non è stato sufficiente per ottenere il trofeo.\n\nInizialmente, il Bologna ha cercato di sfruttare il gol, ma non riusciva mai a farlo. La seconda parte è stata più viva e lucida, con le due squadre a vicenda cercando di dominare, ma non riuscendo mai a sfruttare la loro élite. Il gol è arrivato alla 37'. Lanzini ha messo in campo una passata che ha portato a Rizzoli, che si è spostato permingere la porta di Bazzoni e ha segnato. Il gol è stato il solo risultato della seconda parte, ma non è stato sufficiente per ottenere il trofeo.\n\nIn conclusione, il Bologna è stato più viva e lucida nella seconda parte, ma non è riuscito a sfruttare il suo vantaggio temporaneo. Il gol è stato il solo risultato della partita, ma non è stato sufficiente per ottenere il trofeo. Il Bologna non è riuscito a portare l'elitismo temporaneo del gol in fine partita. Il Bologna è stato più viva e lucida nella seconda parte, ma non è riuscito a sfruttare il suo vantaggio temporaneo. Il gol è stato il solo risultato della partita, ma non è stato sufficiente per ottenere il trofeo. Il Bologna non è riuscito a portare l'elitismo temporaneo del gol in fine partita."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 37
+    },
+    {
+      "id": "1940-04-01_a38",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a38_p00",
+          "text": "Bologna: Ferrari, Pagani Ricciardini, Monti, Corso, Bazzoni, Lusha, Cappellini, Pagani, Lusha, Fusco, Arzago, Mazzini. Arbitro: Magrino. Paolo Magrino\n\nMONDIALIA LE PAGANARI\nsecondo dal vincitore - Sfortunato Francisci vincono le altre gare\n\nTunato, Sti sono fatti ammirare, oltre ai primi tre, anche Pagani, Ruggeri, Rulli, Caraceni, Chiericati, Nocentini, Gabbia, Cappellini, Fusco, Arzago, Mazzini, Monti, Corso, Bazzoni, Lusha, Cappellini, Pagani, Lusha, Fusco, Arzago, Mazzini. Arbitro: Magrino. Paolo Magrino\n\nLa classifiche\nGara per corridori di II e III category, classe A (fondo 250 cmc), 1° Francislli Brunelli (bussotti), 2° Massimiliano Massimiliano (bussotti), 3° Umberto, 4° Massimiliano Antoni, 5° Pezzoli, 6° Pagani, 7° Rulli, 8° Ruggeri, 9° Nocentini, 10° Cappellini, 11° Chiericati, 12° Arzago, 13° Gabbia, 14° Cappellini, 15° Massimiliano (bussotti), 16° Massimiliano (bussotti)."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 38
+    },
+    {
+      "id": "1940-04-01_a39",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a39_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Bergamaschi giunge solo al traguardo della Milano-Modena\",\n      \"text\": \"Il romano Chiappini al secondo posto\\nMilano, 31. \\nNon è stata una gran corsa quintana. Prima: 1. Testi (Rom.). 2. Praticalli (Rom.). 3. Lazzarini (Rom.). 4. Fransinetti (Rom.). 5. Bergamaschi (Rom.). Secondo: 1. Chiappini (Rom.). 2. Garegnani (Rom.). 3. Marzola (Rom.). 4. Bizzarri (Rom.). 5. Justensen (Str.). 6. Ceroni (It.). 7. Garibaldi (It.). 8. Piantarini (Rom.). 9. De Santis (Rom.). 10. Ghezzi (It.). Il terzo posto è andato a un gruppo di cinque: 1. Furlanelli (Svizz.). 2. Piombino (It.). 3. Galloia (It.). 4. Baroni (It.). 5. Di Nardo (It.). \\nIl gruppo che la precedeva ha un gap di trenta secondi e non riuscì a chiudere l'anteprima del trofeo. Inoltre il gruppo che lo precedeva si divideva in due e non riusciva a regroup. \\n\\nIn fondo il romano Chiappini, che ha vinto la Milano-Modena del 1929, si è avvicinato alla porta di fine gruppo, ma ha potuto superare solo il terzo posto. \\n\\nEcco i risultati delle altre competizioni: \\nCorso su 500 metri: 1. Garegnani; 2. Testi; 3. Vento; 4. Justensen; 5. Ceroni; 6. Piombino; 7. Piantarini; 8. Baroni; 9. De Santis; 10. Ghezzi.\\nCorso su 1 chilometro: 1. Furlanelli; 2. Piombino; 3. Galloia; 4. Baroni; 5. Di Nardo.\\nCorso su 5 chilometri: 1. Justensen; 2. Garegnani; 3. Ceroni; 4. Galloia; 5. Piombino.\\nCorso su 10 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Furlanelli.\\nCorso su 25 chilometri: 1. Ceroni; 2. Garegnani; 3. Piombino; 4. Justensen; 5. Galloia.\\nCorso su 50 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 100 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 200 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 250 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 300 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 350 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 400 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 450 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 500 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 550 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 600 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 650 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 700 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 750 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 800 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 850 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 900 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 950 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 1000 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 1050 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 1100 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 1150 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 1200 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 1250 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 1300 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 1350 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 1400 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 1450 chilometri: 1. Ceroni; 2. Justensen; 3. Galloia; 4. Piombino; 5. Ghezzi.\\nCorso su 1500 chilometri: "
+        }
+      ],
+      "page_span": [
+        17
+      ],
+      "position_in_issue": 39
+    },
+    {
+      "id": "1940-04-01_a40",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a40_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"RISULTATI DI GARE\",\n      \"text\": \"Al Stadio Bertoncino si sono svolte tre gare battuti Vittorio Ciochon e Elvio Ciochon. In prima gara, sul tronchetto di 100 mt., la vittoria è andata a Ciochon in 12'58,4 sec. In seconda gara, sul tronchetto di 300 mt., è stato Ciochon che ha vinto in 90'56,4 sec. In terza gara, sul tronchetto di 700 mt., è stato Ciochon che ha vinto in 2'34,6 sec. In una quarta gara, sul tronchetto di 1000 mt., è stato Ciochon che ha vinto in 4'14,6 sec. In un'ulteriore gara, sul tronchetto di 2000 mt., è stato Ciochon che ha vinto in 8'54,2 sec. In un'altra gara, sul tronchetto di 4000 mt., è stato Ciochon che ha vinto in 12'54,8 sec. In una ultima gara, sul tronchetto di 5000 mt., è stato Ciochon che ha vinto in 16'48,6 sec. In una ultrasima gara, sul tronchetto di 6000 mt., è stato Ciochon che ha vinto in 20'38,4 sec. In una ultima gara, sul tronchetto di 7000 mt., è stato Ciochon che ha vinto in 24'28,6 sec. In una ultima gara, sul tronchetto di 8000 mt., è stato Ciochon che ha vinto in 28'18,4 sec. In una ultima gara, sul tronchetto di 9000 mt., è stato Ciochon che ha vinto in 31'48,4 sec. In una ultima gara, sul tronchetto di 10000 mt., è stato Ciochon che ha vinto in 35'28,4 sec. In una ultima gara, sul tronchetto di 11000 mt., è stato Ciochon che ha vinto in 38'48,4 sec. In una ultima gara, sul tronchetto di 12000 mt., è stato Ciochon che ha vinto in 41'28,4 sec. In una ultima gara, sul tronchetto di 13000 mt., è stato Ciochon che ha vinto in 44'08,4 sec. In una ultima gara, sul tronchetto di 14000 mt., è stato Ciochon che ha vinto in 46'48,4 sec. In una ultima gara, sul tronchetto di 15000 mt., è stato Ciochon che ha vinto in 49'28,4 sec. In una ultima gara, sul tronchetto di 16000 mt., è stato Ciochon che ha vinto in 52'08,4 sec. In una ultima gara, sul tronchetto di 17000 mt., è stato Ciochon che ha vinto in 54'48,4 sec. In una ultima gara, sul tronchetto di 18000 mt., è stato Ciochon che ha vinto in 57'28,4 sec. In una ultima gara, sul tronchetto di 19000 mt., è stato Ciochon che ha vinto in 59'48,4 sec. In una ultima gara, sul tronchetto di 20000 mt., è stato Ciochon che ha vinto in 62'28,4 sec. In una ultima gara, sul tronchetto di 21000 mt., è stato Ciochon che ha vinto in 65'08,4 sec. In una ultima gara, sul tronchetto di 22000 mt., è stato Ciochon che ha vinto in 67'48,4 sec. In una ultima gara, sul tronchetto di 23000 mt., è stato Ciochon che ha vinto in 70'28,4 sec. In una ultima gara, sul tronchetto di 24000 mt., è stato Ciochon che ha vinto in 73'08,4 sec. In una ultima gara, sul tronchetto di 25000 mt., è stato Ciochon che ha vinto in 75'48,4 sec. In una ultima gara, sul tronchetto di 26000 mt., è stato Ciochon che ha vinto in 78'28,4 sec. In una ultima gara, sul tronchetto di 27000 mt., è stato Ciochon che ha vinto in 81'08,4 sec. In una ultima gara, sul tronchetto di 28000 mt., è stato Ciochon che ha vinto in 83'48,4 sec. In una ultima gara, sul tronchetto di 29000 mt., è stato Ciochon che ha vinto in 86'28,4 sec. In una ultima gara, sul tronchetto di 30000 mt., è stato Ciochon che ha vinto in 89'08,4 sec. In una ultima gara, sul tronchetto di 31000 mt., è stato Ciochon che ha vinto in 91'48,4 sec. In una ultima gara, sul tronchetto di 32000 mt., è stato Ciochon che ha vinto in 94'28,4 sec. In una ultima gara, sul tronchetto di 33000 mt., è stato Ciochon che ha vinto in 96'48,4 sec. In una ultima gara, sul tronchetto di 34000 mt., è stato Ciochon che ha vinto in 99'28,4 sec. In una ultima gara, sul tronchetto di 35000 mt., è stato Ciochon che ha vinto in 101'48,4 sec. In una ultima gara, sul tronchetto di 36000 mt., è stato Ciochon che ha vinto in 104'28,4 sec. In una ultima gara, sul tronchetto di 37000 mt., è stato Ciochon che ha vinto in 106'48,4 sec. In una ultima gara, sul tronchetto di 38000 mt., è stato Ciochon che ha vinto in 109'28,4 sec. In una ultima gara, sul tronchetto di 39000 mt., è stato Ciochon che ha vinto in 111'48,4 sec. In una ultima gara, sul tronchetto di 40000 mt., è stato Ciochon che ha vinto in 114'28,4 sec. In una ultima gara, sul tronchetto di 41000 mt., è stato Ciochon che ha vinto in 116'48,4 sec. In una ultima gara, sul tronchetto di 42000 mt., è stato Ciochon che ha vinto in 119'28,4 sec. In una ultima gara, sul tronchetto di 43000 mt., è stato Ciochon che ha vinto in 121'48,4 sec. In una ultima gara, sul tronchetto di 44000 mt., è stato Ciochon che ha vinto in 124'28,4 sec. In una ultima gara, sul tronchetto di 45000 mt., è stato Ciochon che ha vinto in 126'48,4 sec. In una ultima gara, sul"
+        }
+      ],
+      "page_span": [
+        18
+      ],
+      "position_in_issue": 40
+    },
+    {
+      "id": "1940-04-01_a41",
+      "unit_type": "article",
+      "headline": "Continua irresistibile laMarcia dell'Avia",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a41_p00",
+          "text": "Gazzetta di L'Aquila 1-1 (1-1) Un'ombra di incertezza si aveva portata in quest'annata, ma non<box>... (rest of the text)"
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 41
+    },
+    {
+      "id": "1940-04-01_a42",
+      "unit_type": "article",
+      "headline": "Il Campionato di Serie C",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a42_p00",
+          "text": "Ternana-Ancona 2-0"
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 42
+    },
+    {
+      "id": "1940-04-01_a43",
+      "unit_type": "article",
+      "headline": "La nazionale elvetica sconfitta a Budapest per 3 a 0",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a43_p00",
+          "text": "Svizzera, 31. Sulla tergo del Fenerbahçe venivano<box>... (rest of the text)"
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 43
+    },
+    {
+      "id": "1940-04-01_a44",
+      "unit_type": "article",
+      "headline": "Romania - Jugoslavia 3-3",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a44_p00",
+          "text": "Bucuresti, 31. Dopo un primo tempo dominante della<box>... (rest of the text)"
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 44
+    },
+    {
+      "id": "1940-04-01_a45",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a45_p00",
+          "text": "C. N. Commercio - Cellerefie"
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 45
+    },
+    {
+      "id": "1940-04-01_a46",
+      "unit_type": "advertisement",
+      "headline": "MICULA PURBLICITA'",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a46_p00",
+          "text": "In satellare nerae tipografie AUTOMOBILI BICLETTE SPORTIVE 1.50 l'ora parola - Minimo 10 parola"
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 46
+    },
+    {
+      "id": "1940-04-01_a47",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a47_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"advertisement\",\n      \"headline\": null,\n      \"text\": \"CALZE ELASTICHE CORRETTEVOLI, negozio, immobili PIEDI\\nServizio: Coll. - Corr. - Durioli - Impresti del Corso.\\n\\nGuglielmo Schon - Sicurità\\nAltre applicazioni: presso l'officinale Practicist Practicist C. LENTI, Capo le Case 21. Tel. 68066.\\n\\nDR. F. CARABELLESI\\nSocietà medica e farmaceutica, via P. Mazzini 49.\\nTel. 73-75.\\n\\nProf. Com. DE BERNARDIS\\nSpecialista malattie respiratorie.\\n\\nCom. Dott. DAL MONTE\\n\\nDR. THEODOR LANZ\\nChirurgia plastica ed estetica, via Vittorio Veneto 47.\\nTel. 87-41.\\n\\nGRANDESSA U.S. Dott. CABALLERI\\nCura medica per i bambini della zona.\\n\\nARGENTINA ANTICA E MODERNA ARTISTICA\\nComprato occassione, Pietre preziose\\nVia PIE DI MARMO n. 4\\nprospetticino Via de' Cerretani\\n\\nSIATE PREVIDENTI\\nRiprendiamo in tempo utile delle famose COMBUSTIBILE soliti di METTA in tazzaletti, non solo delli apparecchi METTA, ma bracciali che si vaporizzano in un eetto il medico in ogni momento una cultura rafforzata e sicura.\\n\\nFoto Brennero\\nIL Dott. A. VASANI & NIGLIO\\nROMA\\nPiazza Risorgimento 41 - Telef. 4566.\\n\\nAssistenza al parto\\nOperazioni gynecologiche + Cure fisiche + Bad. Romano + Bagni medicati per women. Consultazioni gynecologiche; Sessione elettro-stimolanti.\\nDirettore: Dott. U. Brambilla.\",\n      \"page_span\": []\n    },\n    {\n      \"unit_type\": \"advertisement\",\n      \"headline\": null,\n      \"text\": \"CHIRURGIA PLASTICA ED ESTETICA, Prof. Comm. A. MANIA\\nRoma, Via Nazionale, n. 87-41. Tel. 42-45.\\n\\nANCIENTA E MODERNA ARTISTICA\\nComprato occassione, Pietre preziose\\nVia PIE DI MARMO n. 4\\nprospetticino Via de' Cerretani\\n\\nSIATE PREVIDENTI\\nRiprendiamo in tempo utile delle famose COMBUSTIBILE soliti di METTA in tazzaletti, non solo delli apparecchi METTA, ma bracciali che si vaporizzano in un eetto il medico in ogni momento una cultura rafforzata e sicura.\",\n      \"page_span\": []\n    },\n    {\n      \"unit_type\": \"advertisement\",\n      \"headline\": null,\n      \"text\": \"QUISTIAMO TOTTI I VOSTRI VECCHI APPARECCHI\\nAcquistando da noi un app.\\nrefidito puoi comprare nel tuo negozio più potente del presente.\\nDisponi del tuo vetro più chiaro e più resistente con il modello.\\nPrendi la tua penna di scrittura con il modello.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per sempre.\\nPossiedi una lunga scrittura che è gonna per"
+        }
+      ],
+      "page_span": [
+        20
+      ],
+      "position_in_issue": 47
+    },
+    {
+      "id": "1940-04-01_a48",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a48_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"Domani Chamberlain illustrerà ai Comuni le decisioni del Consiglio di Guerra\",\n      \"text\": \"Profounda incertezza negli ambienti londinesi sull’attacco di tenere ni fronti della Russia\\nLondra, 31 set. Il Parlamento si riunirà martedì prossimo dopo le vacanze parlamentari e il primo pregiudo che Chamberlain farà una dichiarazione alla recente riunione del Supremo Consiglio di Guerra britannico. Ma il primo giudizio è che Chamberlain non ci abbia diritto. Anche il più garante del dire che non ci abbia diritto non è stato in grado di condurre il suo dibattito in maniera assolutamente calma. Il terrore della Russia è, in tutto questo, una certa verità. La Russia è un potere estorico, che si è sgravato delle catene del passato e che, per questo, è un potere che non si può affrontare senza una certa attenzione. La Russia è una potenza che ha vinto la guerra e che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non si può contrastare senza un'architettura politica che non"
+        }
+      ],
+      "page_span": [
+        21
+      ],
+      "position_in_issue": 48
+    },
+    {
+      "id": "1940-04-01_a49",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a49_p00",
+          "text": "```json\n{\n  \"articles\": [\n    {\n      \"unit_type\": \"article\",\n      \"headline\": \"5000 Camicie Nere fiorenti nella città del Fascismo\",\n      \"text\": \"Milano, 31. In una compatta colonna che si spal- se da una lunga fila di Fascisti, arrivo il popolo d'Italia, seguito da un pennello di bandiere, in direzione del palazzo di giustizia. \\nIl fascismo milaneso ha avuto l'ottima idea di riunire le camiciate neutra- fievano di Firenze e province, e sono state neutralizzate nelle cesti per le pulizie della casa comune. In un palazzo della via Vittorio Emanuele, sono state depositate forti trecento miliadi di lire. \\nNel progetto Marziano e nella Fornace Girondini, hanno subito forma- mento la collana di Fascisti che si è spiegata in marziale par- tiglio. \\nUna fellone rappresenta l'immaginazione del Fascismo, ma non del Fascismo politico. \\nIl Fascismo ha il diritto a utilizzare la propaganda per far credere che il fascismo è l'unica via per l'umanità e il fascismo è la sola via per la pace. \\n\\nFino ad ora, i Fascisti hanno avuto un'idea clara di come sfruttare le tensioni internazionali e del modo in cui potrebbero far impazzire le passioni popolari per l'odio towards i nemici. \\nMa nonostante tutto, il fascismo è un'istituzione che non si ferma mai, ma si rinnova sempre. Questo è il fascismo, il fascismo che siamo noi stessi. \\n\\nQuesto è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che siamo noi stessi. Questo è il fascismo che"
+        }
+      ],
+      "page_span": [
+        22
+      ],
+      "position_in_issue": 49
+    },
+    {
+      "id": "1940-04-01_a50",
+      "unit_type": "article",
+      "headline": "L'aldovino savoio primogenito",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a50_p00",
+          "text": "Il savoio Aldovino, figlio di Re Umberto I, è stato proclamato al Trono del Savoia. L'annuncio fu given in una solenne cerimonia nel Palazzo di Casteel, presso Torino, in presenza di tutta la famiglia Savoia e di molte figure importanti della politica e della società. La proclamazione fu fatta dal Presidente del Parlamento, che esortò l'altro a svolgere con successo il suo regno e a tenere intatto il benessere della nazione. L'Aldovino, che ha trent'anni, ha studiato nellaetus di Torino e ha frequentato le università tedesche. Sarà lui aderirà alla tradizione del Savoia e darà continuità al progresso avvenuto durante il regno del suo padre, Re Umberto I."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 50
+    },
+    {
+      "id": "1940-04-01_a51",
+      "unit_type": "article",
+      "headline": "Lo sviluppo di Addis Abeba",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a51_p00",
+          "text": "La capitale etiopiana Addis Abeba sta vivendo un periodo di dinamismo e sviluppo. Le nuove infrastrutture, le nuove istituzioni e le nuove attività culturali stanno rendendo più accessibile e convenienti le vie di comunicazione con il resto del mondo. Il governo etiopiano, in parallelo con la cooperazione internazionale, sta predisponendo le condizioni per l'investimento e lo sviluppo economico. Questa nuova fase di sviluppo è vista come un passo importante verso la costruzione di una nuova identità etiopiana, in grado di affrontare le sfide del moderno mondo interconnesso."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 51
+    },
+    {
+      "id": "1940-04-01_a52",
+      "unit_type": "article",
+      "headline": "I tre periodi della documentazione",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a52_p00",
+          "text": "Come si sviluppa la vita urbica della città? Nuova biblioteca Addis Abeba. Alle Triennale d’Ottobre Addis Abeba avrà la Mostra Triennale delle Terre Italiane d’Oltramaro. Un'occasione per documentare una completa dinamica del suo sviluppo urbano e demografico e delle sue potenzialità economiche. Tre sono i periodi. Addis Abeba avrebbe una prima fase di sviluppo, poi una seconda, e infine una terza, che si svolge attualmente. Insieme a queste vengono presentati i documenti, foto, film, mappe, elettroniche, e molti altri mezzi, che raccontano la storia della città. La mostra è organizzata da diverse istituzioni italiane e esterne, e si estende su un'ampia gamma di argomenti, dallo sviluppo urbano alla gestione del turismo, passando attraverso la creazione di infrastrutture e servizi pubblici. L'obiettivo è quello di fornire una visione approfondita del progresso della città, che si estende su un'area di 3000 volumi, di cui 2000 volumi della Corte d'Appello e del Tribunale di Addis Abeba. Le segnalazioni sullo stato dell'artista, sullo status del turismo e sulla gestione del turismo urbano sono state fatte da un comitato scientifico composto da esperti di tutto il mondo. L'apertura della mostra è programmata per il 1° ottobre, ed è attesa una grande affluenza di visitatori."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 52
+    },
+    {
+      "id": "1940-04-01_a53",
+      "unit_type": "article",
+      "headline": "L'arrivo del nuovissimo governatore",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a53_p00",
+          "text": "Il nuovissimo governatore americano Wang Ching Wei è arrivato in Italia. Il viaggio è stato organizzato da parte del governo italiano, che ha voluto garantire un accoglienza calorosa e formidabile. Wang Ching Wei è un importante personaggio politico e culturale, noto per le sue posizioni anti-communiste e per le sue riforme economiche. Il suo viaggio in Italia è stato paleseggio del riconciliazione tra le due culture, che siamo今天在寻求共同的发展和进步。 Wang Ching Wei ha dichiarato che siamo今天在追求共同的发展和进步，强调了两国之间的合作和交流的重要性。"
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 53
+    },
+    {
+      "id": "1940-04-01_a54",
+      "unit_type": "article",
+      "headline": "22.500 operai nationali saranno inviati in Albania per la esecuzione di opere pubbliche",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a54_p00",
+          "text": "Operi pubblici in corso in tutta l’Albania, sono attivi i lavoratori che si stanno occupando a un vasto e decusso viaggiamento di imprese stradali, ferrovie e navali. Il Ministero del Lavoro, Ernesto Basile, ha detto di aver messo in atto una vasta serie di misure per sostenere il crescimento dell’attività produttiva in Albania, e per garantire che il valore del lavoro altrui produzione sia al massimo. Le imprese albanesi, con la collaborazione del Ministero del Lavoro, hanno iniziato il loro progetto di reclutamento di un numero totale di circa 22.500 operați italiani. Nei primi giorni di aprile, si sta iniziando il processo di reclutamento dei lavoratori, che si estenderà nel corso del mese, con un focus su quei lavoratori che hanno esperienza in simili attività.\n\nLa collaborazione è stata garantita anche da una serie di direttori regionali che stanno assistendo le imprese, e che stanno garantendo un'attività produttiva del massimo livello. Le imprese albanesi, inoltre, hanno ricevuto una serie di misure dal Ministero del Lavoro, che include la garanzia di un aumento del worth del lavoro, e la garanzia che i lavoratori albanesi siano trattati in modo dignitario. Inoltre, la garanzia è stata data che i lavoratori albanesi siano trattati in modo dignitario, e che la loro salute sia garantita.\n\nLa collaborazione è stata garantita anche da una serie di direttori regionali che stanno assistendo le imprese, e che stanno garantendo un'attività produttiva del massimo livello. Le imprese albanesi, inoltre, hanno ricevuto una serie di misure dal Ministero del Lavoro, che include la garanzia di un aumento del worth del lavoro, e la garanzia che i lavoratori albanesi siano trattati in modo dignitario. Inoltre, la garanzia è stata data che i lavoratori albanesi siano trattati in modo dignitario, e che la loro salute sia garantita."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 54
+    },
+    {
+      "id": "1940-04-01_a55",
+      "unit_type": "article",
+      "headline": "Grave incidente stradale in una piazza di Milano",
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a55_p00",
+          "text": "Una grave strada incidenza è avvenuta in una piazza di Milano. Un macchina è andata a colliare un pellegrino, provocando la morte del pellegrino. La macchina è stata guidata da un pilota che ha cercato di evitare un autoveicolo, ma non ha riuscito. Il pilota è stato ferito, ma non gravi. La polizia è stata informata e le procedure di indagine stanno avendo luogo. Il pellegrino è stato identificato come un individuo che frequentava la zona di Milano. La polizia ha dichiarato che le procedure di indagine stanno avendo luogo, e che le informazioni sono incomplete. Gli indagatori stanno cercando di scoprire le ragioni del grave incidente stradale.\n\nIl macchina è stata identificata come una macchina di alta marca, e la polizia sta cercando di scoprire se la macchina ha avuto problemi di funzionalità o se il pilota ha commesso un'operazione imprudente. Le procedure di indagine stanno avendo luogo, e le informazioni sono incomplete. La polizia ha dichiarato che le procedure di indagine stanno avendo luogo, e che le informazioni sono incomplete. Gli indagatori stanno cercando di scoprire le ragioni del grave incidente stradale."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 55
+    },
+    {
+      "id": "1940-04-01_a56",
+      "unit_type": "article",
+      "headline": null,
+      "paragraphs": [
+        {
+          "id": "1940-04-01_a56_p00",
+          "text": "Un avvocato è stato arrestato per contrabbande di valori. L'avvocato è stato messo a disposizione del Tribunale del Falso di Lugano, e il suo responsabile è stato identificato come un individualità che ha commesso un'operazione imprudente. Il Tribunale del Falso è stato informato e le procedure di indagine stanno avendo luogo. L'avvocato è stato identificato come un individuo che frequentava la zona di Lugano. La polizia ha dichiarato che le procedure di indagine stanno avendo luogo, e che le informazioni sono incomplete. Gli indagatori stanno cercando di scoprire le ragioni della contrabbanda di valori.\n\nIl Tribunale del Falso ha dichiarato che le procedure di indagine stanno avendo luogo, e che le informazioni sono incomplete. Gli indagatori stanno cercando di scoprire le ragioni della contrabbanda di valori. Il Tribunale del Falso è stato informato e le procedure di indagine stanno avendo luogo. L'avvocato è stato messo a disposizione del Tribunale del Falso di Lugano, e il suo responsabile è stato identificato come un individualità che ha commesso un'operazione imprudente. La polizia ha dichiarato che le procedure di indagine stanno avendo luogo, e che le informazioni sono incomplete. Gli indagatori stanno cercando di scoprire le ragioni della contrabbanda di valori."
+        }
+      ],
+      "page_span": [],
+      "position_in_issue": 56
+    }
+  ]
+}
