@@ -77,6 +77,8 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
             self._init_phi3()
         elif self.model_type == "hunyuan":
             self._init_hunyuan()
+        elif self.model_type == "internvl":
+            self._init_internvl()
         elif self.model_type == "gemma":
             self._init_gemma()
         elif self.model_type == "chandra":
@@ -175,6 +177,15 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
                 break
             except (ValueError, ImportError):
                 continue
+
+    def _init_internvl(self) -> None:
+        import torch
+        from transformers import AutoModel, AutoTokenizer
+
+        self.hf_model = AutoModel.from_pretrained(
+            self.config.model, device_map="auto", trust_remote_code=True, torch_dtype=torch.bfloat16
+        )
+        self.processor = AutoTokenizer.from_pretrained(self.config.model, trust_remote_code=True)
 
     def _init_image_text_model(self, *, padding_side: str | None = None) -> None:
         import torch
