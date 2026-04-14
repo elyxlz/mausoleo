@@ -1,13 +1,25 @@
 # OCR Pipeline Auto-Research Program
 
 ## Objective
-Minimize article-level CER on the 1885-06-15 eval issue while maintaining high article recall (>70%).
+Maximize composite score across both eval issues (1885-06-15 and 1910-06-15) while maintaining high article recall (>70%).
+
+## Eval Metrics
+- **CER**: character error rate per matched article (lower = better)
+- **wCER**: length-weighted CER — long articles count more than short ads (lower = better)
+- **hCER**: headline CER — measures headline transcription quality (lower = better)
+- **Recall**: fraction of GT articles matched to a prediction (higher = better)
+- **F1**: harmonic mean of precision and recall (higher = better)
+- **Ordering**: Spearman squared-displacement score, 1.0 = perfect order. Adjacent swaps barely penalized, large displacements heavily penalized (higher = better)
+- **Page Accuracy**: fraction of matched articles with correct page_span (higher = better)
+- **Composite**: weighted combination: 0.40*(1-wCER) + 0.25*recall + 0.15*ordering + 0.10*(1-hCER) + 0.10*page_accuracy
+
+Eval on BOTH dates: `evaluate_issue()` on 1885-06-15 (41 articles, 60K chars) and 1910-06-15 (193 articles, 185K chars). Average the composite scores.
 
 ## Current Best
 - Config: `col3_qwen3_8b_v2_structured`
-- Article CER: 0.373
-- Article Recall: 78.0%
-- F1: 70.3%
+- 1885: CER 0.373, wCER 0.433, Recall 78.0%, Composite 0.650
+- 1910: CER 0.156, wCER 0.137, Recall 78.2%, Composite 0.773
+- Average Composite: 0.712
 
 ## Failure Analysis
 
@@ -102,24 +114,30 @@ Sync code to remote:
 rsync -avz --exclude='.venv' --exclude='.git' --exclude='__pycache__' --exclude='eval/predictions' --exclude='eval/ground_truth' -e 'ssh -p 62022' ./ audiogen@81.105.49.222:~/mausoleo_di_roma/
 ```
 
-Clean pycache + run a config:
+Clean pycache + run a config (run on BOTH dates):
 ```
-ssh audiogen@81.105.49.222 -p 62022 "cd mausoleo_di_roma && find src/ -name __pycache__ -exec rm -rf {} + 2>/dev/null && .venv/bin/python scripts/run_real_ocr.py <config_name> 1885-06-15"
+ssh audiogen@81.105.49.222 -p 62022 "cd mausoleo_di_roma && find src/ -name __pycache__ -exec rm -rf {} + 2>/dev/null && .venv/bin/python scripts/run_real_ocr.py <config_name> 1885-06-15 && .venv/bin/python scripts/run_real_ocr.py <config_name> 1910-06-15"
 ```
 
-Copy prediction back:
+Copy predictions back:
 ```
 scp -P 62022 audiogen@81.105.49.222:~/mausoleo_di_roma/eval/predictions/<config>_1885-06-15.json eval/predictions/
+scp -P 62022 audiogen@81.105.49.222:~/mausoleo_di_roma/eval/predictions/<config>_1910-06-15.json eval/predictions/
 ```
 
-Evaluate locally:
+Evaluate locally (BOTH dates):
 ```python
 from mausoleo.eval.evaluate import evaluate_issue
 import json
-gt = json.loads(open("eval/ground_truth/1885-06-15/ground_truth.json").read())
-pred = json.loads(open("eval/predictions/<config>_1885-06-15.json").read())
-result = evaluate_issue(gt, pred, config="<config>", date="1885-06-15")
-# result.mean_cer, result.article_recall, result.article_f1
+
+scores = []
+for date in ["1885-06-15", "1910-06-15"]:
+    gt = json.loads(open(f"eval/ground_truth/{date}/ground_truth.json").read())
+    pred = json.loads(open(f"eval/predictions/<config>_{date}.json").read())
+    r = evaluate_issue(gt, pred, config="<config>", date=date)
+    scores.append(r.composite_score)
+    # r.mean_cer, r.weighted_cer, r.headline_cer, r.article_recall, r.ordering_score, r.composite_score
+avg_composite = sum(scores) / len(scores)
 ```
 
 ## Config Format
@@ -156,7 +174,7 @@ config = OcrPipelineConfig(
 
 ## Rules
 - One change per experiment
-- Always eval on 1885-06-15
+- Always eval on BOTH dates (1885-06-15 and 1910-06-15), report average composite
 - Name configs `exp_NNN_shortdesc.py` with incrementing numbers
 - Log EVERY result to `eval/autoresearch/log.jsonl`, even failures
 - Don't modify ground truth or eval code
