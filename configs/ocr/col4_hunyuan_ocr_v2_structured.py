@@ -4,7 +4,7 @@ from mausoleo.ocr.operators import ColumnSplit, MergePages, ParseIssue, Preproce
 
 HUNYUAN_ENV = {
     "pip": [
-        "git+https://github.com/huggingface/transformers@82a06db03535c49aa987719ed0746a76093b1ec4",
+        "transformers==4.49.0",
         "accelerate>=0.25.0",
         "flash_attn",
         "torch==2.5.1",
