@@ -47,10 +47,12 @@ def article_pages(article: dict[str, tp.Any]) -> list[int]:
 class ArticleMatch:
     gt_index: int
     gt_headline: str
+    gt_chars: int
     pred_index: int | None
     pred_headline: str | None
     cer: float
     wer: float
+    headline_cer: float
     text_overlap: float
     page_span_correct: bool
     gt_pages: list[int]
@@ -67,11 +69,33 @@ class IssueResult:
     article_f1: float
     mean_cer: float
     mean_wer: float
+    weighted_cer: float
+    headline_cer: float
     full_text_cer: float
     full_text_wer: float
     page_accuracy: float
+    ordering_score: float
+    composite_score: float
     total_gt_articles: int
     total_pred_articles: int
+
+
+def compute_ordering_score(matches: list[ArticleMatch]) -> float:
+    paired = [(m.gt_index, m.pred_index) for m in matches if m.pred_index is not None]
+    n = len(paired)
+    if n < 2:
+        return 1.0
+
+    gt_ranks = sorted(range(n), key=lambda i: paired[i][0])
+    pred_order = [paired[gt_ranks[i]][1] for i in range(n)]
+    rank_map: dict[int, int] = {}
+    for rank, val in enumerate(sorted(pred_order)):
+        rank_map[val] = rank
+    pred_ranks = [rank_map[v] for v in pred_order]
+
+    sum_d_sq = sum((i - pred_ranks[i]) ** 2 for i in range(n))
+    max_d_sq = n * (n * n - 1) / 3.0
+    return max(0.0, 1.0 - sum_d_sq / max_d_sq)
 
 
 def match_articles(
@@ -87,11 +111,12 @@ def match_articles(
 
     for gi, gt_art in enumerate(gt_articles):
         gt_t = gt_texts[gi]
-        if len(gt_t.strip()) < 20:
+        gt_chars = len(gt_t.strip())
+        if gt_chars < 20:
             matches.append(ArticleMatch(
-                gt_index=gi, gt_headline=gt_art.get("headline", ""),
+                gt_index=gi, gt_headline=gt_art.get("headline", ""), gt_chars=gt_chars,
                 pred_index=None, pred_headline=None,
-                cer=1.0, wer=1.0, text_overlap=0.0,
+                cer=1.0, wer=1.0, headline_cer=1.0, text_overlap=0.0,
                 page_span_correct=False, gt_pages=article_pages(gt_art), pred_pages=[],
             ))
             continue
@@ -110,20 +135,26 @@ def match_articles(
             pred_art = pred_articles[best_pi]
             gt_norm = normalize_text(gt_t)
             pred_norm = normalize_text(pred_texts[best_pi])
+
+            gt_h = normalize_text(gt_art.get("headline", "").split("\n")[0])
+            pred_h = normalize_text(pred_art.get("headline", "").split("\n")[0] if pred_art.get("headline") else "")
+            h_cer = compute_cer(gt_h, pred_h) if gt_h else 0.0
+
             matches.append(ArticleMatch(
-                gt_index=gi, gt_headline=gt_art.get("headline", ""),
+                gt_index=gi, gt_headline=gt_art.get("headline", ""), gt_chars=gt_chars,
                 pred_index=best_pi, pred_headline=pred_art.get("headline", ""),
                 cer=compute_cer(gt_norm, pred_norm),
                 wer=compute_wer(gt_norm, pred_norm),
+                headline_cer=h_cer,
                 text_overlap=best_ov,
                 page_span_correct=set(article_pages(gt_art)) == set(article_pages(pred_art)),
                 gt_pages=article_pages(gt_art), pred_pages=article_pages(pred_art),
             ))
         else:
             matches.append(ArticleMatch(
-                gt_index=gi, gt_headline=gt_art.get("headline", ""),
+                gt_index=gi, gt_headline=gt_art.get("headline", ""), gt_chars=gt_chars,
                 pred_index=None, pred_headline=None,
-                cer=1.0, wer=1.0, text_overlap=0.0,
+                cer=1.0, wer=1.0, headline_cer=1.0, text_overlap=0.0,
                 page_span_correct=False, gt_pages=article_pages(gt_art), pred_pages=[],
             ))
 
@@ -148,10 +179,15 @@ def evaluate_issue(
     recall = matched_gt / len(gt_articles) if gt_articles else 0.0
     f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
 
-    matched_cers = [m.cer for m in matches if m.pred_index is not None]
-    matched_wers = [m.wer for m in matches if m.pred_index is not None]
-    mean_cer = sum(matched_cers) / len(matched_cers) if matched_cers else 1.0
-    mean_wer = sum(matched_wers) / len(matched_wers) if matched_wers else 1.0
+    matched = [m for m in matches if m.pred_index is not None]
+    mean_cer = sum(m.cer for m in matched) / len(matched) if matched else 1.0
+    mean_wer = sum(m.wer for m in matched) / len(matched) if matched else 1.0
+
+    total_chars = sum(m.gt_chars for m in matched)
+    weighted_cer = sum(m.cer * m.gt_chars for m in matched) / total_chars if total_chars > 0 else 1.0
+
+    headline_cers = [m.headline_cer for m in matched if m.gt_headline]
+    mean_headline_cer = sum(headline_cers) / len(headline_cers) if headline_cers else 1.0
 
     gt_full = " ".join(article_text(a) for a in gt_articles)
     pred_full = " ".join(article_text(a) for a in pred_articles)
@@ -161,12 +197,24 @@ def evaluate_issue(
     page_correct = sum(1 for m in matches if m.page_span_correct)
     page_accuracy = page_correct / len(matches) if matches else 0.0
 
+    ordering = compute_ordering_score(matches)
+
+    composite = (
+        0.40 * (1.0 - min(weighted_cer, 1.0))
+        + 0.25 * recall
+        + 0.15 * ordering
+        + 0.10 * (1.0 - min(mean_headline_cer, 1.0))
+        + 0.10 * page_accuracy
+    )
+
     return IssueResult(
         config=config, date=date, matches=matches,
         article_precision=precision, article_recall=recall, article_f1=f1,
         mean_cer=mean_cer, mean_wer=mean_wer,
+        weighted_cer=weighted_cer, headline_cer=mean_headline_cer,
         full_text_cer=full_cer, full_text_wer=full_wer,
-        page_accuracy=page_accuracy,
+        page_accuracy=page_accuracy, ordering_score=ordering,
+        composite_score=composite,
         total_gt_articles=len(gt_articles), total_pred_articles=len(pred_articles),
     )
 
@@ -199,11 +247,18 @@ def evaluate_all(
 
 def print_results(results: list[IssueResult]) -> None:
     results = sorted(results, key=lambda r: r.mean_cer)
-    header = f"{'Config':<45} {'Date':>10} {'ArtCER':>7} {'ArtWER':>7} {'FullCER':>7} {'Recall':>6} {'F1':>6} {'Pages':>6} {'GT':>3} {'Pred':>4}"
+    header = f"{'Config':<45} {'Date':>10} {'CER':>6} {'wCER':>6} {'hCER':>6} {'Rec':>5} {'F1':>5} {'Ord':>5} {'Pg':>5} {'Comp':>5}"
     print(header)
     print("-" * len(header))
     for r in results:
-        ac = f"{r.mean_cer:.3f}" if r.mean_cer < 10 else f"{r.mean_cer:.1f}"
-        aw = f"{r.mean_wer:.3f}" if r.mean_wer < 10 else f"{r.mean_wer:.1f}"
-        fc = f"{r.full_text_cer:.3f}" if r.full_text_cer < 10 else f"{r.full_text_cer:.1f}"
-        print(f"{r.config:<45} {r.date:>10} {ac:>7} {aw:>7} {fc:>7} {r.article_recall:>6.1%} {r.article_f1:>6.1%} {r.page_accuracy:>6.1%} {r.total_gt_articles:>3} {r.total_pred_articles:>4}")
+        print(
+            f"{r.config:<45} {r.date:>10}"
+            f" {r.mean_cer:>6.3f}"
+            f" {r.weighted_cer:>6.3f}"
+            f" {r.headline_cer:>6.3f}"
+            f" {r.article_recall:>5.1%}"
+            f" {r.article_f1:>5.1%}"
+            f" {r.ordering_score:>5.1%}"
+            f" {r.page_accuracy:>5.1%}"
+            f" {r.composite_score:>5.3f}"
+        )
