@@ -297,3 +297,32 @@ New approach:
 **Key insight**: Column-split (col3) with Qwen3-8B is the best overall — 3-column splitting matches the 1885 newspaper layout well. YOLO detection gets the highest recall (97.6%) but massively over-segments (437 predicted articles vs 41 GT). Many configs score 0% because their outputs contain JSON artifacts or broken text that doesn't match any GT article.
 
 **Page span accuracy is universally poor** (~10%) — no config currently tracks which page an article comes from, which is critical for cross-page article stitching in production.
+
+**Detailed failure analysis** (per-article breakdown of col3_qwen3_8b, the best config):
+
+| Category | Count | CER Range | Root Cause |
+|----------|-------|-----------|------------|
+| Easy (near-perfect) | 6 | 0.000-0.023 | Short dispatches, single column, single page |
+| Medium (good w/ errors) | 17 | 0.14-0.49 | Hyphenation artifacts, archaic spelling, minor truncation |
+| Hard (significant errors) | 8 | 0.50-0.98 | Cross-page truncation, fiction interleaving, non-standard layout |
+| Failed (missed/broken) | 10 | 1.0+ | Page 4 ads entirely missed, cross-page articles lost |
+
+Three systematic failure modes identified:
+1. **Cross-page articles truncated**: 4 articles spanning page boundaries either missed entirely or captured <30% of text. Column-split processes pages independently with no continuation detection.
+2. **Page 4 advertisements missed**: All 8 ads on page 4 scored CER=1.0. Non-standard ad layouts (borders, small text, mixed fonts) not handled by structured JSON prompt.
+3. **Serialized fiction interleaving**: MAGNETIZZATA runs along bottom of pages 1-3, gets mixed with news in column splits.
+
+Research directions prioritized and documented in `eval/autoresearch/program.md` for automated hillclimbing via `/ocr-autoresearch` skill.
+
+### 2026-04-14: Eval framework consolidation
+
+Consolidated scattered eval code into single module `src/mausoleo/eval/evaluate.py`:
+- `compute_cer()`, `compute_wer()` — character/word error rates via jiwer
+- `match_articles()` — Jaccard word overlap matching between GT and predicted articles
+- `evaluate_issue()` — per-article CER/WER + full-text CER/WER + article F1 + page accuracy
+- `evaluate_all()` — batch eval across all configs and dates
+- `print_results()` — formatted leaderboard
+
+Un-gitignored `eval/predictions/` — 194 prediction files now tracked in git.
+Removed obsolete: `eval/compare.py`, old `evaluate.py`, bootstrap scripts, one-off GT builders.
+Added `/ocr-autoresearch` skill for automated benchmark hillclimbing (Karpathy autoresearch pattern).
