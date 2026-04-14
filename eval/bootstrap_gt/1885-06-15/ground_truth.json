@@ -64,269 +64,452 @@
       "position_in_issue": 3
     },
     {
-      "id": "1885-06-15_a04",
-      "unit_type": "article",
       "headline": "Camera dei deputati",
+      "unit_type": "article",
+      "page_span": [
+        2
+      ],
       "paragraphs": [
         {
-          "id": "1885-06-15_a04_p00",
-          "text": "L'intera seduta è stata occupata dalla discussione sulla proroga del corso legale dei biglietti di banca sino a tutto il 1885."
+          "text": "Seduta del 14 giugno\n\nL'intera seduta è stata occupata dalla discussione sulla proroga del corso legale dei biglietti di banca sino a tutto il 1885."
         }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 4
+      ]
     },
     {
-      "id": "1885-06-15_a05",
-      "unit_type": "article",
       "headline": "L'accoltellato della Lungara",
+      "unit_type": "article",
+      "page_span": [
+        2
+      ],
       "paragraphs": [
         {
-          "id": "1885-06-15_a05_p00",
-          "text": "Passatella sciagurata! Mancavano pochi minuti a mezzanotte allorchè una rissa furibonda s'impegnava nell'osteria al numero 47 in via della Lungara. Stavano li dentro giocando alla passatella in numerosa comitiva alcuni popolani fra i quali il barcarolo Pietro Guidetti, il fornaciaro Alfredo Batazzi, il facchino Serafino Del Signore, il chiavaro Angelo Belloni, il bracciatore Antonio Soverini o altri, tutti giovani sulla ventina. Il Guidetti, riuscito padrone della terza partita, fece tenor l'olmo al Batazzi, il che nel gergo del giuoco significa che non gli diede da bere. Il Batazzi non seppe prendersela in santa pace; e più s'inviperì agli scherni del Guidetti, il quale abusò forse un po' troppo della sua posizione di vincitore. Avvinazzati com'erano, non ci volle più che tanto perché ne nascesse una cagnara d'inferno; cagnara a cui presero parte, in appoggio del Batazzi anche gli altri che ho nominati, ai quali pure ribolliva il sangue per aver subito lo stesso affronto. Il Batazzi, vistosi sostenuto dagli amici, perdetto il lume degli occhi; cacciò il coltello e ne vibrò a colpo al Guidetti, che cadde sanguinante a terra chiamando aiuto. Al tramusto accorsero diversi militari, ma prima che essi giungessero, il Batazzi se l'era svignata. Rimanevano i suoi compagni, Del Signore, Belloni e Soverini, che vennero tutti e tre arrestati. Il Guidetti fu portato al vicino ospedale di Santo Spirito: la ferita sembra pericolosa."
+          "text": "Passatella sciagurata!\n\nMancavano pochi minuti a mezzanotte allorché una rissa furibonda s'impegnava nell'osteria al numero 47 in via della Lungara.\n\nStavano lì dentro giocando alla passatella in numerosa comitiva alcuni popolani fra i quali il barcarolo Pietro Guidetti, il fornaciaro Alfredo Batazzi, il facchino Serafino Del Signore, il barbiere Angelo Belloni, il bracciante Antonio Soverini e altri, tutti giovani sulla ventina.\n\nIl Guidetti, riuscito padrone della terza partita, fece tener l'olmo al Batazzi, il che nel gergo del giuoco significa che non gli diede da bere.\n\nIl Batazzi non seppe prendersela in santa pace; e più s'inviperì agli scherni del Guidetti, il quale abusò forse un po' troppo della sua posizione di vincitore.\n\nAvvinazzati com'erano, non ci volle più che tanto perché ne nascesse una cagnara d'inferno; cagnara a cui presero parte, in appoggio del Batazzi anche gli altri che ho nominati, ai quali pure ribolliva il sangue per aver subito lo stesso affronto.\n\nIl Batazzi, vistosi sostenuto dagli amici, perdette il lume degli occhi; cacciò il coltello e ne vibrò un colpo al Guidetti, che cadde sanguinante a terra chiamando aiuto.\n\nAl trambusto accorsero diversi militari, ma prima che essi giungessero, il Batazzi se l'era svignata.\n\nRimanevano i suoi compagni, Del Signore, Belloni e Soverini, che vennero tutti e tre arrestati.\n\nIl Guidetti fu portato al vicino ospedale di Santo Spirito: la ferita sembra pericolosa."
         }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 5
+      ]
     },
     {
-      "id": "1885-06-15_a06",
-      "unit_type": "article",
       "headline": "L'arresto di tre falsi monetari",
+      "unit_type": "article",
+      "page_span": [
+        2
+      ],
       "paragraphs": [
         {
-          "id": "1885-06-15_a06_p00",
-          "text": "La questura era stata avvertita che circolavano in città parecchi biglietti falsi da 50 lire del Banco di Napoli imitati a perfezione, tanto che i più esperti non li avrebbero riconosciuti. Organizzato un servizio di spionaggio, si riuscì dopo lunghe ricerche all'arresto di due individui che spacciavano tali biglietti, il commesso di negozio Pietro Carpani e il fruttarolo Ferdinando Esposito; un terzo si trovava già in carcere per altro titolo, ed è precisamente il fratello del Carpani a nome Ugo. Perquisito anche costui in carcere, gli si trovarono cuciti nella fodera della giacca otto di quei biglietti falsi da 50 lire. Non fu possibile sapere da nessuno dei tre da chi li avessero avuti: nè promesse, nè minacce, nulla valse: essi si trincerarono nel più assoluto silenzio limitandosi a dichiarare che i biglietti erano stati loro consegnati da alcuni individui sconosciuti. La polizia sospetta invece che gli arrestati siano agenti di qualche fabbrica di biglietti falsi che avrebbe diramazioni a Venezia, a Firenze e a Napoli: in queste città proseguono le indagini, ma fin qui non diedero alcun frutto."
+          "text": "La questura era stata avvertita che circolavano in città parecchi biglietti falsi da 50 lire del Banco di Napoli imitati a perfezione, tanto che i più esperti non li avrebbero riconosciuti.\n\nOrganizzato un servizio di spionaggio, si riuscì dopo lunghe ricerche all'arresto di due individui che spacciavano tali biglietti, il commesso di negozio Pietro Carpani e il fruttarolo Fernando Esposito; un terzo si trovava già in carcere per altro titolo, ed è precisamente il fratello del Carpani a nome Ugo.\n\nPerquisito anche costui in carcere, gli si trovarono cuciti nella fodera della giacca otto biglietti falsi da 50 lire.\n\nNon fu possibile sapere da nessuno dei tre chi li avesse dati: nè promesse, nè minacce nulla valse: essi si trincerarono nel più assoluto silenzio limitandosi a dichiarare che i biglietti erano stati loro consegnati da alcuni individui sconosciuti.\n\nLa polizia sospetta invece che gli arrestati siano agenti di qualche fabbrica di biglietti che avrebbe diramazioni a Venezia, a Firenze, a Napoli: in queste città proseguono le indagini, ma fin qui non diedero alcun frutto."
         }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 6
+      ]
     },
     {
-      "id": "1885-06-15_a07",
-      "unit_type": "article",
       "headline": "L'ammazzato di ieri",
+      "unit_type": "article",
+      "page_span": [
+        2
+      ],
       "paragraphs": [
         {
-          "id": "1885-06-15_a07_p00",
-          "text": "Quale orribile scena! Vi presenterò anzitutto il colpevole, che è l'orzarolo Celestino Riconi, giovinotto di 25 anni e di carattere più che bollente. La vittima poi - fremete! - è una capra mancuela dal folto pelo che formava la delizia di un altro bottegai di quai dintorni ed era diventata famigliare a tutto il vicinato. Ieri dunque questa povera bestia, contando forse un po' troppo sulla confidenza con la quale l'orzarolo Riconi l'aveva trattata altre volte, si avvicinava al suo negozio, avanzava la testa in una canestra di pasta tenuta li in mostra, e così per dilettò ne assaggiava qualche bocca. Disgraziatamente l'orzarolo si trovava in un cattivo quarto di luna. Non appena egli s'accorse della libertà che si ora prom la capra, lo gridò furibondo dal banco: - Passa via! Ma la capra non ai mosse: e come meraviglia di quello agarbo lo fissò con uno sguardo dolcissimo rispondendo nel suo arcano linguaggio: - Baccoso.... Non ebbe tempo di finire che il Riconi gli si avventò infasciato addosso imbrando un lungo coltello o glielo immerse tutto quanto nella schiena! Dalla tremenda ferita vampillò istantaneamente una fontana di saque; la povera bestia stralò gli occhi, rovesciò a terra, o agitando per qualche istante le zampe fece sentire un ultimo straziante belato... Poi rimase inerte, stecchita. Era morta! Alla scena atrociassa tutti i vicini e con essi una folla di gente si raccolse davanti alla bottega dell'orzarolo, che inorridito egli medesimo di tanto scempio, e forse pentito troppo tardì d'essersi lasciato trasportare a tale occaso dal suo furoro, era rientrato nella bottega fissando la lama del coltello rossa e fumante del sangue della sua vittima, e sternutendo. Accorsa anche la guardia di città Cardinali sequestrò l'arma omicida e lo trasse in arresto. Il cadavere della capra fu trasportato all'amazzatoio fuori porta del Popolo, dove quei veterani dovran procedere all'autopsia a tenere di legge."
+          "text": "Quale orribile scena!\n\nVi presenterò anzitutto il colpevole, l'orzarolo Celestino Riconi, giovanotto di 24 anni e di carattere più che bollente.\n\nLa vittima poi — fremete! — è una capra mansueta dal folto pelo che formava la delizia di un altro bottegaio di quei dintorni ed era diventata familiare a tutto il vicinato.\n\nIeri dunque questa povera bestia, contando forse un po' troppo sulla confidenza con la quale l'orzarolo Riconi l'aveva trattata altre volte, si avvicinava al suo negozio, avanzava la testa in una canestra di pasta tenuta lì in mostra, e per diletto ne assaggiava qualche boccata.\n\nDisgraziatamente l'orzarolo si trovava in un cattivo quarto di luna.\n\nNon appena egli s'accorse della libertà che s'era presa la capra, le gridò furibondo dal banco: — Passa via!\n\nMa la capra non si mosse: e come meravigliata di quello sgarbo lo fissò con uno sguardo dolcissimo rispondendo nel suo arcano linguaggio: — Beeee....\n\nNon ebbe tempo di finire che il Riconi le si avventò addosso imbrandendo un coltello e glielo immerse tutto quanto nella schiena!\n\nDalla tremenda ferita zampillò istantaneamente una fontana di sangue; la povera bestia stravolti gli occhi, rovesciò a terra, e agitando per qualche istante le zampe fece sentire un ultimo straziante belato...\n\nPoi rimase inerte, stecchita.\n\nEra morta!\n\nAlla scena atrocissima tutti i vicini e così una folla di gente si raccolse davanti alla bottega dell'orzarolo, che inorridito egli medesimo di tanto scempio, e forse pentito troppo tardi d'essersi lasciato trasportare a tale eccesso dal suo furore, era rientrato nella bottega brandendo la lama del coltello rossa e fumante del sangue della sua vittima, e sternutendo.\n\nAccorsa anche la guardia di città, sequestrò l'arma omicida e lo trasse in arresto.\n\nIl cadavere della capra fu trasportato al mattatoio fuori porta del Popolo, dove quei veterinari dovranno procedere all'autopsia a tenor di legge."
         }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 7
+      ]
     },
     {
-      "id": "1885-06-15_a08",
-      "unit_type": "article",
       "headline": "L'usciere accoltellato a Tivoli",
+      "unit_type": "article",
+      "page_span": [
+        2,
+        3
+      ],
       "paragraphs": [
         {
-          "id": "1885-06-15_a08_p00",
-          "text": "Sul ferimento dell'usciere Alfonso Cesari avvenuto a Tivoli giovedì mattina, il signor Francesco Splendori genero dell'arrestato Angelo Cognetti, mi scrive: « Il movente della questione fu una esecuzione che il Cesari doveva fare tanto contro Domenico Cognetti mio suocero quanto contro di me, Luigi"
+          "text": "Sul ferimento dell'usciere Alfonso Cesari avvenuto a Tivoli giovedì mattina, il signor Francesco Splendori genero dell'arrestato Angelo Cognetti, mi scrive:\n\n«Il movente della questione fu una esecuzione che il Cesari doveva fare tanto contro Domenico Cognetti mio suocero quanto contro di me.\n\n«Il Cesari, incominciò dal Cognetti, per la sua avanzata età, inabile a qualunque lavoro e per non posseder nulla di suo non poterlo soddisfare; a comprovare la sua povertà fornì un attestato rilasciatogli dal sindaco di Tivoli; mostratolo all'usciere, questi rispose che il certificato non contava nulla e si volse alla figlia nubile di esso Cognetti, chiedendo di sapere dove tenesse la poca roba del padre; approfittando quindi della mia assenza, fece consegnare da mia moglie Maddalena Cognetti lire 30 in danaro, e la fede nuziale del valore di lire 25.\n\n«Noti che se la condanna fu di lire 3 a testa, in 5 individui l'ammontare era di lire 15, e l'usciere aveva tolto alla mia consorte fra danaro e la fede d'oro la somma di lire 55.\n\n«Non pago di ciò il Cesari a ogni incontro insisteva presso il Cognetti pel pagamento: il vecchio alfine, giustamente irritato, lo colpì con un coltello a serramanico producendogli due lievi ferite.\n\n«Dal Cesari nessuno in Tivoli potrà dir bene; a San Polo de' Cavalieri giorni sono dovette fuggire fra una macchia per salvarsi la vita in seguito a una delle solite sue prepotenze.\n\n«Francesco Splendori.»"
         }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 8
+      ]
     },
     {
-      "id": "1885-06-15_a09",
+      "headline": "La camorra nei municipi",
       "unit_type": "article",
-      "headline": "La camorra nei municipii",
-      "paragraphs": [
-        {
-          "id": "1885-06-15_a09_p00",
-          "text": "Il governo si ostina a non voler procedere alla riforma comunale e provinciale, a non volere allargare il voto amministrativo. E intanto i municipi continuano a dare scandaloso spettacolo di sé, e a consiglieri comunali vengono eletti principi o baroni, proprietari e speculatori, affaristi di ogni genere che vanno su per tutelare non gli interessi del pubblico ma propri, che vanno su per far dagli affari. A Roma si sono visti consiglieri comunali i quali hanno subordinato il loro voto per progetti adilizi alla considerazione del maggiore o minore vantaggio che ne ricavano le loro aree, i loro stabili: al Municipio di Roma si è allargata una strada piuttosto che un'altra, si è esp otrata una zona a preferenza di un'altra onde acquistare la casa del tale o del tal altro consigliere, o parec'è od amico del medesimo. A Roma si è tentato di dare in appalto il servizio della nettezza pubblica a un circolo di beneficenza sacra ed affiatata, e solo le grida non almi della stampa hanno impedito che il carrozzone avesse luogo. Ne succedono delle grazie! E questa ha anche il merito della novità. E detta in quattro parole. L'altra sera si presentava alla caserma dei carabinieri a Termini un individuo di apparenza civile dicendo a quel maresciallo: - Vengo a costitirmi perché mi mettano dentro. - Pronto a servirla - rispose il maresciallo ma prima favoriscia spiegar perché dobbiamo metterlo dentro. - Parchè io sono quel Giovanni Lianza nativo di Gaeta e impiegato postale, che la questura di Napoli ricerca fin dal 22 dello scorso febbraio per la semplicissima rugione che in quel giorno sono fuggito di là portandomi dietro i quattrini del cassetto; venni a Roma sperando di far fortuna; invece non sono riuscito ad altro noconza di Barta, sentiva crescere la sua affezione dall'immensa pietà che la vedova le ispirava. Il giovedì seguente, la carrozza usciva dalla Filanda conducendo la signora Farinval, la signorina Pierron e la piccola Nina. Bisogna attraversare il villaggio per prendere la strada di Rethel; Clara ordinò di fermare in mezzo alla strada principale, vicino al Municipio, davanti alla casa che il signor Daumier e sua moglie allora abitavano. Padre e madre accorsero, o misero un bacio in fronte della loro figlia. Poi essi rimasero sulla strada per seguire colli occhi la vettura; la signora Daumier, completamente rimessa, e colla faccia raggiante, contava, senza averne l'aria, i curiosi, termi sulle porte, e rientrò l'ultima. Durante il viaggio, la conversazione si aggiornò interamente intorno alla vecchia, chiusa già da tre mesi nella prigione di Rethel. Aurélia si faceva ripetere i particolari dell'incedio, al quale essa non aveva assistito, trovandosi fin d'allora ammalata ed incapace, quella notte in cui le gridà: al fuoco! risuonavano al suo orecchio, neppure di alzarsi dal suo letto per andare fino alla finestra. Però a misura che si avvicinavano alla piccola città, le cui case si disegnavano, aggruppate strettamente a piedi dell'antico castello dei Mazzarino, dominato esso stesso da una eminenza sulla quale i ragazzi si divertono oggi ad arrampicarsi, e sormontato senza dubbio una volta da una torretta, per la quale gli rimase il nome di «gran torre» la parlantina alquanto fabbrile della signorina Pierron cessò."
-        }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 9
-    },
-    {
-      "id": "1885-06-15_a10",
-      "unit_type": "article",
-      "headline": "Il calcio del bue",
-      "paragraphs": [
-        {
-          "id": "1885-06-15_a10_p00",
-          "text": "Lo noto come un caso raro, poichè abituale che il bue, animale pazientissimo al punto di lavorare di zoccolo. Eppure ieri, alle 5 pom., nella tenagor Trolì in via Aurelia fuori porta ger, il campagnolo Santo Ricciotti d'Piottino nello spingere avanti a suo rato due bovi attaccati a una barozza, uno di essi un tal calcio che lo buttò spazzandogli la gamba sinistra."
-        }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 10
-    },
-    {
-      "id": "1885-06-15_a11",
-      "unit_type": "article",
-      "headline": "L'innocchiatore di piazza Montanara",
-      "paragraphs": [
-        {
-          "id": "1885-06-15_a11_p00",
-          "text": "Ieri mattina s'avvicinava a un gruppo tadini che secondo il solito stavano seduti in piazza Montanara, un individuo poco promettente, il quale, colto testo qualunque per attaccar discorso e finiva domandando: - State dunquò qua sapetando che senti l'occasione di occuparvi? - Por lo appunto - risposero i costi - Ebbene, se volete me na incarico - Magari! - Sicuro, tolt soltanto ci vorrebbe una cola souseria, perché anche io non esam trata. - E noi ve la daremo, che diana, asposti a darvi anche la caparra, sogna. - Dal momento che ci trattiamo la cosa proprio non vi facessò disturbo, mi ebbe qualche cosa... - Dito quanto e vi sarà dato. - Ecco... facendo il conto di me di souseria a testa, sarebbero dodici lire. - E sta bana, eccolo qua. Ciascuno dei contadini aborò la sua furono così riunito le 6 lire che venne guante, ll'incognita, il quale con nuovi tenti subito d'allontanazi. Ma il proverbio « scarpe grosse carav doveva aver ragione anche stavolta; tutti contadini era già rimasto impressiona cera sospetta di quel mezzero che nessu mai visto, e la diffidenza crebbero all vide con quanta premura egli cercava guarsela. Incominciarono dei clamori, il sedicesale, accortosi che il suo gioco era s perdette la bussola, intervenne al ba guardie e lo arrestarono."
-        }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 11
-    },
-    {
-      "id": "1885-06-15_a12",
-      "unit_type": "article",
-      "headline": "La signora Farinval conservava pure lenzio che Nina, moravigliata della sua passeggiata nella bella carrozza, e tutta di trovarsi in mezzo ad un paese che il più Varville, non pensava punto a rom suo cinguello. Allorchè Francesco fermò il suo cavanti la porta della prigione, la signora guardò sua cugina. - Aurelia, cosa avete? - fece essa tata, vedendola coi lineamenti tutti stra - Niente - balbettò la signorina Pa nient'altro che un po'd'emozione. - Voi stato per avanirlo - Oh no, non credetelo, ciò passerà. - Lo pensavo bane io che questo vi sse superiore alle vostre forze; se no distolto dal vostro progetto, fu perché di contrariarvi. Seguito il mio consiglio o la piccina entremo per vader B aciavosi condurre all'albergo del Comme vo io abitualmente faccio colazione. Ma per tutta risposta, Aurelia, super debolezza che s'impadroniva di lei, disc la prima sui maciapeda. - Una ostinazione da malata!.... Clara. Ed a sua volta mise essa pure piede - Vo potete andare - disse alla sco, pigliando Nina per mano - noi vor l'albergo a piedi. Fra un'ora al più tard comandate frattanto la colazione. (il seguito a di",
-      "paragraphs": [],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 12
-    },
-    {
-      "id": "1885-06-15_a13",
-      "unit_type": "article",
-      "headline": "Un dito per un sigaro",
-      "paragraphs": [
-        {
-          "id": "1885-06-15_a13_p00",
-          "text": "Un dito per un sigaro di radice succede che quella macchinetta presso tutti i tabaccai per spuntare a tassigari di luogo a disgrazia. Di alle 3 pom. ne avvenne una nella tabaccaia angolo di via della Consulta in via delle: il tipografo Napoleone Monti d'anni 35, operario nello stabilimento Botta (salale in via dei Lucchesi) introdotto nella macchinetta un toscano da 8 per farli parzi, sbadalamente si fece saltar via a prima fiamma del dito indice della mano nel pozzo di carno con la relativa unghia fuori insieme al sigaro! Monti dovette andarsene alla Consorzio dove fu trasportato dal suo compagno di lavoro Riccardo Zerbola. Dottori giudica ono la ferita guaribile in 15 con riserva. Non o fumatori! Gata dei ragazzi pel horsceggio un orologio e di un anello di dall'altra settimana, 4 giugno, sei ragazzi in lista comitiva fuori porta San Giacomo: lo scolaro Pompilio Malatesta, il macellaio Virginio Giacchetti, il macellaio Augusto Bresciani, il castrato Enrico Censi, il mulattiere Gaetano Barogi e il bracciano Alfredo Pompilio Malatesta aveva lasciato usiemo ai suoi panni l'orologio d'argento e l'anello d'oro che s'era tolto tamenendo nel'acqua; quando fu per vestirsi, vide che l'orologio e l'anello erano spariti, mandando conto ai compagni, ma tutti di non sapere niente mostrandosi dai suoi sospetti: cerca di qua, cerca di là, Malatesta dovette in fine rassegnarsi a tornare a Roma senza averli trovati. Si, si quali egli fu costretto a confessare, ne informarono subito la polizia, che indagò d'uso presso le case di pagai, e si riuscì in tal modo a scoprire che l'orologio era stato impiegato nella casa di via Urbana dove fu sequestrato. Riuscito a tale scoperta i cinque compagni bracciano vanno tutti arrestati ieri mentre giuocando nelle vicinanze di piazza Vittorio Emanuele. Regalo della santa messa chiesa degli Augurini in via Marulana in mattina una disgrazia. Lutto Luzzi, vecchio di 74 anni, pensionato in via delle Statuto n. 12 piano 3, non smentire la sua devoto abitudini di alle 6 ad ascoltare la santa messa nell'uscire, accostandosi alla pila del maita, incampò contro una donna volutamente mentre egli stendeva la mano, a terra ferendosi gravemente al ginocchione. La gente che trovavasi nella chiesa a in per cura di una guardia municipale di una vettura e accompagnato alla Consorzio strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Dario dei dottori di quell'ospedale gli conossero in letto almeno una ventina di giorni schiacciato da una trave di ferro in via Merulana. Vettore Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare stare in grazia di Dio neri dalle disgrazie! Durini hanno sempre torto il 7 di ieri mattina il vetturino Luigi Jacobelli d'anni 35 romano, in via Principe Amedeo numero 2, che pomaridiane del 7 corrente nei lavori di strada il povero vecchio non faceva servire nappare"
-        }
-      ],
       "page_span": [
         3
       ],
-      "position_in_issue": 13
+      "paragraphs": [
+        {
+          "text": "Il governo si ostina a non voler procedere alla riforma comunale e provinciale, a non volere allargare il voto amministrativo.\n\nE intanto i municipi continuano a dare scandaloso spettacolo di sé, e a consiglieri comunali vengono eletti principi e baroni, proprietari e speculatori, affaristi di ogni genere che vanno su per tutelare non gli interessi del pubblico ma i propri, che vanno su per far degli affari.\n\nA Roma si sono visti consiglieri comunali i quali hanno subordinato il loro voto nei progetti edilizi alla considerazione del maggiore o minore vantaggio che ne ricavano le loro aree, i loro stabili; al Municipio di Roma si è allargata una strada piuttosto che un'altra, si è espropriata una zona a preferenza di un'altra onde acquistare la casa del tale o del tal altro consigliere, o parente od amico del medesimo.\n\nA Roma si è tentato di dare in appalto il servizio della nettezza pubblica a un circolo di beneficenza sacra ed affaristica, e solo le grida della stampa hanno impedito che il carrozzone avesse luogo."
+        }
+      ]
     },
     {
-      "id": "1885-06-15_a14",
+      "headline": "Ne succedono delle graziose!",
       "unit_type": "article",
+      "page_span": [
+        3,
+        4
+      ],
+      "paragraphs": [
+        {
+          "text": "E questa ha anche il merito della novità. È detta in quattro parole.\n\nL'altra sera si presentava alla caserma dei carabinieri a Termini un individuo di apparenza civile dicendo a quel maresciallo: — Vengo a costituirmi perchè mi mettano dentro.\n\n— Pronto a servirla — rispose il maresciallo — ma prima favorisca spiegare perchè dobbiamo metterla dentro.\n\n— Perchè io sono quel Giovanni Lianati, nativo di Gaeta e impiegato postale, che la questura di Napoli ricerca fin dal 22 dello scorso febbraio per la semplicissima ragione che quel giorno sono fuggito di là portandomi i quattrini del cassetto; venni a Roma sperando di far fortuna; invece non sono riuscito che a sciuparmi tutti i quattrini fino all'ultimo centesimo, e adesso, non avendone più, prego di favorirmi il vitto e l'alloggio gratis.\n\n— Ben volontieri! s'imagini!\n\nDetto questo, il bravo maresciallo passò in rivista le tante circolari per la ricerca di tanti che giacevano sul suo tavolo, ma non trovandone alcuna che si riferisse al Lianati, lo fece accompagnare da due carabinieri alla questura centrale a San Marcello.\n\nLa questura rinnovò le stesse ricerche col medesimo risultato: fino a che si venne a sapere, anche per confessione del Lianati, che s'era inventato quella frottola per ottenere il rimpatrio gratuito dopo averlo chiesto come una carità.\n\n— I signori delegati — disse il Lianati — avevano risposto che per ottenere il vitto gratuito bisogna farsi arrestare; e io, trovandomi qui in Roma solo, senza aiuto, sprovvisto di mezzi, ho ricorso a quello stratagemma per ritornare alla mia bella Napoli dove almeno non morirò di fame."
+        }
+      ]
+    },
+    {
+      "headline": "Il calcio del bue",
+      "unit_type": "article",
+      "page_span": [
+        3
+      ],
+      "paragraphs": [
+        {
+          "text": "Lo noto come un caso raro, poichè abitualmente il bue, animale pazientissimo, non scende al punto di lavorare di zoccolo.\n\nEppure ieri, alle 5 pom., nella tenuta Troili in via Aurelia fuori porta San Pancrazio, il campagnolo Santo Ricciotti d'Alpignano nello spingere avanti a suo modo due bovi attaccati a una barrozza, uno di essi gli diede un tal calcio che lo buttò a terra spezzandogli la gamba sinistra."
+        }
+      ]
+    },
+    {
+      "headline": "L'inginocchiatore di piazza Montanara",
+      "unit_type": "article",
+      "page_span": [
+        3,
+        4
+      ],
+      "paragraphs": [
+        {
+          "text": "Ieri mattina s'avvicinava a un gruppo di contadini che secondo il solito stavano seduti in piazza Montanara, un individuo di apparenza poco promettente, il quale, colto un pretesto qualunque per attaccar discorso, finiva domandando:\n\n— State dunque qua aspettando che vi venga l'occasione di occuparvi?\n\n— Per lo appunto — risposero i contadini.\n\n— Ebbene, se volete me ne incarico.\n\n— Magari!\n\n— Sicuro, solo soltanto ci vorrebbe una piccola senseria, perchè anch'io non ci sto a trattare gratis.\n\n— E noi ve la daremo, che diamine, siamo disposti a darvi anche la caparra, se bisogna.\n\n— Dal momento che ci trattiamo in buona fede proprio non vi faccio disturbo, mi darete qualche cosa...\n\n— Dite quanto e vi sarà dato.\n\n— Ecco... facendo il conto di una lira di senseria a testa, sarebbero dodici lire...\n\n— E sta bene, eccole qua.\n\nCiascuno dei contadini sborsò la sua parte e furono così riunite le 12 lire che vennero pagate all'incognito, il quale con nuovi inchini tentò subito d'allontanarsi.\n\nMa il proverbio «scarpe grosse cervello fino» doveva aver ragione anche stavolta; uno dei contadini era già rimasto impressionato dalla faccia sospetta di quel messere che nessuno aveva mai visto, e le diffidenze crebbero allorchè vide con quanta premura egli cercava di svignarsela.\n\nIncominciarono dei clamori, il sedicente sensale, accortosi che il suo gioco era scoperto, perdette la bussola, intervennero al basso le guardie e lo arrestarono.\n\nPure lui un campagnolo, certo Carmine Boccio; andava per bocciare e fu bocciato."
+        }
+      ]
+    },
+    {
+      "headline": "Un dito per un sigaro",
+      "unit_type": "article",
+      "page_span": [
+        3
+      ],
+      "paragraphs": [
+        {
+          "text": "Di rado succede che quella macchinetta che si trova presso tutti i tabaccai per spuntare e tagliare i sigari dia luogo a disgrazie.\n\nIeri alle 3 pom. ne avvenne una nella tabaccheria all'angolo di via della Consulta: il tipografo Napoleone Monti d'anni 35, operaio nello stabilimento Bottaccio, introdotto nella macchinetta un toscano da 8 per farlo spuntare, sbadatamente si fece saltar via la prima falange del dito indice della mano sinistra, e quel pezzo di carne con la relativa unghia volò fuori insieme al sigaro!\n\nIl signor Monti dovette andarsene alla Consolazione dove fu trasportato dal suo compagno di lavoro Riccardo Zerbola.\n\nI dottori giudicarono la ferita guaribile in 15 giorni con riserva."
+        }
+      ]
+    },
+    {
+      "headline": "Gara dei ragazzi pel borseggio di un orologio e di un anello",
+      "unit_type": "article",
+      "page_span": [
+        3
+      ],
+      "paragraphs": [
+        {
+          "text": "Domenica dell'altra settimana, 4 giugno, sei ragazzi uscirono in lieta comitiva fuori porta San Pancrazio.\n\nEssi: lo scolaro Pompilio Malatesta, il calzolaio Virginio Giacchetti, il macellaio Augusto Bresi, il canestraio Enrico Censi, il muratore Gaetano Barogi e il bracciante Alfredo.\n\nInoltratisi alquanto nella campagna, e giunti finalmente alla Marrana, pensarono di fare un bagno.\n\nFatto si spogliarono, e deposti i panni, si tuffarono nell'acqua intrattenendosi a lungo, ripigliando terra più volte, e infine si distesero l'un l'altro sul campo per asciugarsi.\n\nIl Malatesta aveva lasciato insieme ai suoi panni l'orologio d'argento e l'anello d'oro che s'era tolto temendo di perderli nell'acqua; quando fu per vestirsi, vide che l'orologio e l'anello erano spariti.\n\nChiese conto ai compagni, ma tutti dissero di non saperne niente mostrandosi offesi dai suoi sospetti: cerca di qua, cerca di là, il Malatesta dovette infine rassegnarsi a tornare a Roma senza averli trovati.\n\nI genitori, ai quali egli fu costretto a confessare la cosa, non informarono subito la polizia, ma fecero le indagini d'uso presso le case dei pegni, e si riuscì in tal modo a scoprire che l'orologio era stato impegnato nella bottega di via Urbana dove fu sequestrato.\n\nIn seguito a tale scoperta i cinque compagni furono tutti arrestati ieri mentre si trovavano nelle vicinanze di piazza Vittorio Emanuele."
+        }
+      ]
+    },
+    {
+      "headline": "Regalo della santa messa",
+      "unit_type": "article",
+      "page_span": [
+        3
+      ],
+      "paragraphs": [
+        {
+          "text": "Nella chiesa degli Agostiniani in via Merulana è avvenuta questa mattina una disgrazia.\n\nIl signor Luzzi, vecchio di 74 anni, pensionato, abitante in via dello Statuto n. 12 primo piano, per non smentire le sue devote abitudini, si recò alle 6 ad ascoltare la santa messa.\n\nNell'uscire, accostandosi alla pila dell'acqua santa, inciampò contro una donna e cadde voltando pesantemente a terra ferendosi gravemente al ginocchio.\n\nLa gente che trovavasi nella chiesa accorse e per cura di una guardia municipale fu messo in una vettura e accompagnato alla Consolazione.\n\nPer la strada il povero vecchio non faceva che esclamare fra sospiri e lamenti: — Non si può neppure stare in grazia di Dio senza uscire dalle disgrazie!\n\nI dottori di quell'ospedale gli consigliarono il letto almeno per una ventina di giorni."
+        }
+      ]
+    },
+    {
+      "headline": "Schiacciato da una trave di ferro in via Merulana",
+      "unit_type": "article",
+      "page_span": [
+        3
+      ],
+      "paragraphs": [
+        {
+          "text": "L'operaio Luigi Jacobelli d'anni 35, romano, abitante in via Principe Amedeo numero 2, che nel pomeriggio del 7 corrente lavorava nei lavori di costruzione che i frati d'Aracoeli fanno in via Merulana, colpito da una grossa trave di ferro lasciata troppo presto dai compagni che insieme la trasportavano, si spezzò il braccio destro e si ferì gravemente la testa, è morto stanotte alle 11 e mezza alla Consolazione."
+        }
+      ]
+    },
+    {
+      "headline": "I vetturini hanno sempre torto",
+      "unit_type": "article",
+      "page_span": [
+        3,
+        4
+      ],
+      "paragraphs": [
+        {
+          "text": "Alle 7 di ieri mattina il vetturino Luigi Giordano, abitante alla Salita dei Crocifissi n. 30, si trovava col suo legno n. 676 alla stazione dalla parte degli arrivi; gli si presentarono un uomo, una donna e una bambina per andare a San Pietro.\n\n— Laggiù — due passi di strada, come dice il vetturino — rimase di sale ricevendo che volessero soltanto una lira e quaranta; datemi una lira e buonanotte.\n\nIn ogni caso: quelli non gli volevano dare una lira di più.\n\nDopo un lungo battibecco l'individuo che pagava, il quale era il signor Francesco Taddo livornese, impiegato al ministero d'agricoltura e commercio, abitante in via Principe Umberto n. 92 piano primo, chiamò impazientito una guardia di pubblica sicurezza che era lì di piantone, e così il vetturino si vide costretto a seguirla alla vicina caserma di Borgo.\n\nQuando fu là dentro, si sentì dire dal graduato di servizio: — Voi siete un prepotente; il signore ha fatto il patto per una lira e dovete prender quella.\n\nResta inteso che questo famoso patto esisteva soltanto nel cervello del graduato.\n\nA farla corta, dopo aver perduto una quantità di tempo il Giordano se ne tornò indietro a mani vuote, poichè piuttosto che accettare quella miserabile lira egli non volle niente.\n\nNon basta: fu anche dichiarato in contravvenzione.\n\nE per che atto?\n\nOh, che gabbia di prepotenti!"
+        }
+      ]
+    },
+    {
+      "headline": "Tiro a segno",
+      "unit_type": "article",
+      "page_span": [
+        4
+      ],
+      "paragraphs": [
+        {
+          "text": "Ieri alla gara del tiro a segno all'Acquacetosa presero parte 460 soci. Distanza metri 300, in piedi, a braccio sciolto. Furono premiati i signori Orsini Carlo e Mengarini Arnaldo della categoria speciale, e Cocchi Emidio della categoria ordinaria. Al signor Fabris non venne assegnato il premio perchè fuori concorso. Il segretario — Mengarini."
+        }
+      ]
+    },
+    {
+      "headline": "Circolo operai fornaio",
+      "unit_type": "article",
+      "page_span": [
+        4
+      ],
+      "paragraphs": [
+        {
+          "text": "Questo Circolo festeggerà il 5 luglio prossimo il terzo anniversario della sua fondazione con un banchetto; i soci che intendono prendervi parte hanno tempo fino a tutto il 30 corrente a ritirare il biglietto, che costa lire 5, nella sede all'Arco della Pace n. 14; ma sono pregati di farlo al più presto. Martedì poi, per le 10 ant., i soci sono convocati in adunanza nella sede stessa per trattare di affari in corso; vedano di non mancare. Il segretario — Romolo Camilli."
+        }
+      ]
+    },
+    {
+      "headline": "Lavoranti parrucchieri",
+      "unit_type": "article",
+      "page_span": [
+        4
+      ],
+      "paragraphs": [
+        {
+          "text": "La società di collocamento dei lavoranti parrucchieri, ringrazia vivamente tutti quei capi d'arte che aderirono alla chiusura festiva e non dubita punto che essi persevereranno in questo sistema, onde i retrivi ne traggano esempio. Si avvertono quindi tutti i capi d'arte lavoranti parrucchieri, che a datare da oggi l'ufficio sociale in via Marforio 72-73 funzionerà regolarmente per il collocamento, tutti i giorni, meno il sabato e la domenica, dalle 9 alle 11 pom. e si invitano i medesimi a volerne approfittare. Il presidente — Felice Campi."
+        }
+      ]
+    },
+    {
+      "headline": "Al Quirino",
+      "unit_type": "article",
+      "page_span": [
+        4
+      ],
+      "paragraphs": [
+        {
+          "text": "Per stasera è annunciato Il matrimonio, nuovo lavoro del giovane romano Galli."
+        }
+      ]
+    },
+    {
+      "headline": "L'assassinio di stanotte in via Cremona",
+      "unit_type": "article",
+      "page_span": [
+        2
+      ],
+      "paragraphs": [
+        {
+          "text": "Narro un fatto raccapricciante davvero, ciò che di più tremendo possa concepirsi dall'umana fantasia. E vi esporrò il fatto nudo e crudo, come è avvenuto, poichè non c'è bisogno di commentarlo con inutili parole.\n\nIn via Cremona, a pochi passi da via..., al 3° piano della casa numero 25, alloggia la sora Teta Paoletti vedova Brunetti, cinquantacinquenne, romana.\n\nEssa perdeva il marito or sono cinque anni, e rimaneva con tre figli, un maschio e due femmine.\n\nIl maschio, Giuseppe Brunetti, ha 23 anni, un ragazzotto robusto di forme, senza un pelo in faccia, tanto che ha la figura di un chierico; figura che piglia maggior colorito dagli occhiali che porta, perchè è miope.\n\nLe due femmine si chiamano Assunta e Marietta.\n\nAssunta ha 23 anni e già da un paio d'anni aveva sposato un ottimo giovane, Antonio Acardi, sulla trentina, nativo di Pesaro, impiegato all'Intendenza di Finanza.\n\nL'altra, Marietta, ha 16 anni e si trova nella scuola normale a Termini.\n\nLa sora Teta era rimasta per tal motivo in casa con suo figlio Giuseppe; e aveva una camera d'avanzo che l'aveva affittata al suo genero Antonio Acardi.\n\nDel resto era rimasta sola fino a pochi giorni fa, poichè Assunta, appunto per non allontanarsi da lei, di pieno accordo col marito, tanto più che non avevano figli, era andata ad abitare un appartamento interno che si trova nella stessa casa, e al quale si accede per una scaletta a parte che si apre in fondo all'andito del portone.\n\nVedete dunque quanto madre, figlia e genero si volessero bene! ma ogni famiglia ha le sue disgrazie, e alla sora Teta toccava una più grossa di tutte le altre.\n\nVi ho schizzato il ritratto fisico di Giuseppe, quell'aborto di sagrestano; non vi ho dato il ritratto morale che non potrebbe essere più sinistro.\n\nFin da ragazzetto egli ha dato motivo a dubitare che nel suo cervello ci fosse qualcosa di guasto; e il dubbio diventò col tempo certezza.\n\nLa povera madre, rimasta vedova, cercò con ogni sacrificio di fargli compiere gli studi; Giuseppe non se ne prendeva cura.\n\nFattosi grande e grosso, giusto perchè non rimanesse totalmente di peso alla madre, il cognato Andrea Donatoni s'impegnò per ottenergli un posto di scrivano al tribunale, su ai Filippini; e l'ottenne.\n\nMa il cervello del ragazzo andava sempre più in ciampanelle, e le sue stramberie giunsero a segno che tre mesi or sono convenne rinchiuderlo al Manicomio.\n\nAnche stavolta chi si occupò di rinchiuderlo fu il Donatoni, il marito di sua sorella Assunta.\n\nPare che il Brunetti trasse da questo fatto argomento a un odio fierissimo contro il cognato.\n\nEra sortito dal Manicomio da circa un mese; sarà una fatalità, ma di fronte al ripetersi di certi drammi siamo proprio costretti a credere che là dentro ci restino i savi, e che i soggetti più pericolosi son quelli che trovano sempre la porta aperta.\n\nSe vogliamo dare alla cosa la spiegazione più umana, più benigna, siamo costretti a concludere che il Brunetti sortì dal Manicomio molto, ma molto più pericoloso di prima, e che ne sortì con un'idea fissa nella mente, un proposito tenace radicato nel cuore — vendicarsi del cognato.\n\nIersera tutta la famiglia si recava a Monte Cavallo per assistere da lontano, con libertà, allo spettacolo della girandola; e cioè la sora Teta, Giuseppe, Assunta e il Donatoni.\n\nNel contegno di Giuseppe non fu notato alcunchè di strano.\n\nSi trattennero alle alture, seduti sulla balaustra che circonda la piazza di fronte al palazzo reale, fin verso le 10; poi se ne tornarono a casa.\n\nArrivati al num. 25 di via Cremona, la sora Teta e Giuseppe si separarono dentro al portone da Assunta e suo marito per prendere ciascuno la rispettiva scala, rimanendo d'interesse che si sarebbero riveduti poco dopo in casa della sora Teta, la vedova Angela Santini, che abita nella stessa via Cremona num. 34 piano 1°, a qualche passo di distanza, dove erano soliti a passar la serata.\n\nQuando Giuseppe fu di sopra con la madre, e precisamente mentre essa apriva la porta le disse: — Sai, mamma? ho sete; vado a bere una bibita e così ci rivedremo da zia.\n\n— Vai pure, figlio mio, ma non tardare — rispose la sora Teta.\n\nIl ragazzo scese a precipizio, e allorchè fu di sotto, invece d'andarsene a bere la bibita, risalì per le scale che conducono all'appartamento della sorella.\n\nQuesta si stava spogliando mentre egli picchiava alla porta.\n\n— Come va che sei ancora qui? — gli disse Assunta vedendolo.\n\n— C'è tuo marito? — fece a bruciapelo Giuseppe senza badare alla domanda.\n\n— Sicuro che c'è...\n\n— Ebbene, son venuto ad avvertirvi che io e la mamma vi aspettiamo da zia...\n\n— Ma siamo già intesi.\n\nLui, senza perdere un momento, ridiscese le scale a quattro a quattro.\n\nPoco dopo, lontano mille miglia da ogni sospetto, scendeva anche il Donatoni con sua moglie.\n\nAssunta camminava innanzi. Arrivata sul portone, essa sentì il marito dare un grido; si volse, e lo vide appoggiarsi al muro barcollando, mentre il fratello le passava rasente e si slanciava sulla strada con la rapidità della folgore.\n\nLo sciagurato, appostatosi nel vano della scala, si era all'improvviso scagliato sul Donatoni e gli aveva immerso uno stile nel petto.\n\nLo stile rimase conficcato fino all'elsa sotto la mammella destra, tanto era andato a fondo.\n\nAndrea Donatoni, sostenuto dalla moglie e dalla suocera, scossa alle grida della figliuola, fece qualche passo nella strada, e poi cadde fra le braccia di due cittadini che lo trasportarono al vicino ospedale della Consolazione.\n\nA un quarto dopo mezzanotte era cadavere!\n\nL'intelligente appuntato di pubblica sicurezza di servizio in quell'ospedale, Angelo Parenti, ebbe appena il tempo di raccogliere dalla sua bocca il nome dell'assassino e le circostanze sommarie del fatto.\n\nIl medesimo appuntato volò ad avvisarne la stazione Monti; lo seguirono sul posto il delegato Guatto e due agenti in borghese, i quali, avvertiti da don Antonio Acardi, arrivato nel frattempo, che il colpevole era tornato su in casa, lo fecero con abilità chiamare dall'oste Marco Borozzi, un piazzaiuolo della zia, e non appena egli aprì la porta gli si precipitarono addosso e lo arrestarono.\n\nCosì Giuseppe Brunetti fu tratto in arresto.\n\nLa madre e la sorella erano state, a cura dei vicini accorsi, pietosamente ricoverate in casa della vedova Angela Santini, zia dell'assassino."
+        }
+      ]
+    },
+    {
+      "headline": "Un ragazzo divorato dai cani",
+      "unit_type": "article",
+      "page_span": [
+        3
+      ],
+      "paragraphs": [
+        {
+          "text": "I giornali francesi riferiscono un fatto che dà i brividi al solo pensarvi.\n\nIn una casa posta sulla strada d'Argenteuil a Samois, abita un mercante di vino che possedeva due grossi cani da guardia.\n\nIl vinaio ha per locatario un fuochista, certo Thibault, il quale dopo aver perduto 4 figliuoli, ha ora perduto l'ultimo, dell'età di anni 12, nel modo più orribile.\n\nQuesto ragazzo aveva l'abitudine di giocare coi due grossi cani, i quali sembravano avergli grande affezione, al segno che lo seguivano per lunghi tratti di via.\n\nCom'è, come non è — è ancora un mistero — il giorno 5 del corrente mese, delle grida strazianti si fanno udire dal cortile della casa.\n\nLa moglie del fuochista accorre e vede che i due cani stanno divorando il suo povero ragazzo, che gridava: — Aiuto, aiuto, i cani vogliono uccidermi!\n\nLa madre disperata si precipita fuori del cortile per dare l'allarme.\n\nAccorrono i casigliani, e il primo di essi, che afferra la coda di un cane il quale sta mangiando una coscia al ragazzo, è a sua volta aggredito dall'animale inferocito, che lo morsica orribilmente alla fronte.\n\nArriva il padre.\n\nVedendolo, l'infelice fanciullo gli dice, con voce morente: — Papà, salvami, sono perduto!\n\nL'infelice padre, pazzo dal dolore, si precipita fra le due bestie; ma è ancora più disgraziato del suo predecessore: una zannata gli porta via un occhio; una seconda zampata dei cani gli fende il labbro, e una violenta morsicatura gli portò via un pezzo di calzoni senza però intaccargli le carni.\n\nArriva finalmente il vinaio, il padrone dei cani.\n\nLi chiama con un fischio, ed essi obbediscono; ma in che stato deplorevole lasciano essi la loro vittima!\n\nLe carni delle gambe, delle coscie e delle braccia sono divorate, le costole spezzate, e la faccia mezza mangiata.\n\nUn'ora dopo, il povero ragazzo era morto, tra gli spasimi, conservando l'intelligenza fino all'ultimo.\n\nDue cose, che sorprendono, sono certe: che il fanciullo non aveva nulla in mano quando i cani gli furono addosso; e che questi, uccisi l'indomani e sottoposti all'autopsia, non risultarono affetti dalla rabbia."
+        }
+      ]
+    },
+    {
+      "headline": "Il suicidio del preside del liceo di Faenza",
+      "unit_type": "article",
+      "page_span": [
+        3
+      ],
+      "paragraphs": [
+        {
+          "text": "(Dispaccio particolare.) — Faenza, 14.\n\nStanotte s'è suicidato gettandosi in un pozzo il preside del nostro liceo, professor Ferrando.\n\nFu tratto stamane cadavere.\n\nLascia moglie e un figlio; aveva 60 anni.\n\nLa cittadinanza rimase addolorata alla tragica notizia."
+        }
+      ]
+    },
+    {
+      "headline": "La Russia in Italia",
+      "unit_type": "article",
+      "page_span": [
+        3
+      ],
+      "paragraphs": [
+        {
+          "text": "A Mantova continuano gli arresti e le perquisizioni.\n\nL'altro ieri venne perquisita la casa dell'operaio Mario Braguzzi presidente della società dei pellattieri.\n\nVengono sequestrate parecchie carte che la questura assicura di gran valore perchè dimostrano come l'agitazione agraria si colleghi a una rivoluzione socio-militare.\n\nBum!"
+        }
+      ]
+    },
+    {
+      "headline": "L'italiano liberato",
+      "unit_type": "article",
+      "page_span": [
+        3
+      ],
+      "paragraphs": [
+        {
+          "text": "Algeri, 13. (Agenzia Stefani.) — Il signor Tesi, qui tradotto in seguito all'incidente di Tunisi, ha ottenuto oggi dalla corte di appello la libertà provvisoria."
+        }
+      ]
+    },
+    {
+      "headline": "La questione afgana",
+      "unit_type": "article",
+      "page_span": [
+        3
+      ],
+      "paragraphs": [
+        {
+          "text": "Pietroburgo, 14. (Agenzia Stefani.) — L'accomodamento circa la questione della frontiera afgana è terminato, ma l'autorizzazione a firmarlo fu aggiornata in seguito al ritiro dal potere del gabinetto Gladstone.\n\nSi domanda se lord Salisbury ratificherà le concessioni di Gladstone."
+        }
+      ]
+    },
+    {
+      "headline": "Bastimenti in moto",
+      "unit_type": "article",
+      "page_span": [
+        3
+      ],
+      "paragraphs": [
+        {
+          "text": "Dakar, 12. (Agenzia Stefani.) — È giunto il R. avviso Staffetta. A bordo tutti bene.\n\nRio-Janeiro, 12. (Agenzia Stefani.) — Il piroscafo Servia, della Navigazione generale italiana ha proseguito pel Mediterraneo."
+        }
+      ]
+    },
+    {
       "headline": "ANGELO PITOU",
-      "paragraphs": [
-        {
-          "id": "1885-06-15_a14_p00",
-          "text": "APPENDICE N. 21.\nANGELO PITOU\nRomanzo storico di A. DUMAS\n(Riduzione dal francese)\nLa regina fa i conti per cercare quanti soldati le occorrono per tenere in freno la popolazione - Charny le prova che non vi è armata sufficiente al mondo per domare un popolo che vuol essere libero.\nLa regina tacque: Charny la guardava rispettosamente.\n- Dunque - soggiunse alla fine Maria Antonietta - voi dite che tutti i francesi si sollevano, nella proporzione di dodici sopra quindici?\n- Sì, maestà.\n- Sovra i dodici quindicesimi che avete detto, sei sono donne, n'è vero?\n- Sì, ma...\n- Non m'interrompete. Dissi sei quindicesimi di donne; rimangono sei; mettete due altri quindicesimi di vecchi impotenti o indifferenti; è troppo?\n- No.\n- Rimangono altri quattro quindicesimi, sui quali ne ammetterete due per lo meno di teli pi o senza coraggio. Credo di adular la nazione francese. Restano dunque due quindicesimi, ve li accordo furiibondi quanto volette, prodi, tenaci, destri nel maneggio delle armi. Noverate molti questi due quindicesimi, in Parigi s'intende, poiché in provincia sarebbe inutile...\n- Sì, ma...\n- Sempre ma... Aspettate un istante, rispondrete dopo.\nIl signor di Charrey s'inclinò.\n- I due quindicesimi che ho detto - continuò la regina - li valuto centomila uomini. Va bene?\nIl conte non rispose.\nLa regina riprese a dire:\n- A questi centomila uomini armati, indisciplinati, poco agguerriti, dubbiosi forse perché sanno d'operare male, io oppongo cinquantamila soldati, noti in tutta Europa per la loro intrepidezza; ufficiali del vostro calibro, signor di Charny; la sacra causa del diritto divino e da ultimo l'anima mia, facile ad intenerirsi se volute, ma difficile a piegare.\nIl conte stette ancora silenzioso.\n- Credete - continuò la regina - che in un combattimento dato nelle condizioni ch'io vi dissi, due uomini del popolo possano tenere fronte ad uno dei miei soldati?\nCharny non rispose ancora.\n- Ma dite qualche cosa, signor di Charny! - esclamò Maria Antonietta impazientita.\nIl comando della regina fe' uscire il conte dal rispettoso riserbo in cui s'era fino allora tenuto.\n- Signora - egli disse - se i centomila uomini del popolo isolati, senza disciplina e mal armati, avessero a sostenere il cozzo dei vostri cinquantamila soldati sur un campo di battaglia, non v'ha dubbio che andrebbero dispersi in meno di mezz'ora.\n- Vedete? - esclamò la regina.\n- Un momento. Ma la cosa non sta nei termini che voi dite. Anzitutto i ribelli di Parigi, che la maestà vostra valutò centomila, son cinquecentomila.\n- Cinquecentomila! Siete pazzo, conte?\n- Cinquecentomila, nè più, nè meno. Nel vostro calcolo avete dimenticato le donne ed i fanciulli. Oh! regina di Francia! donna coraggiosa ed altera, noveratele per altrettanti uomini co' desti donne di Parigi, verrà tempo forse in cui vi obbligheranno a noverarle per altrettanti demoni.\n- Che cosa volete dire, conte?\n- Sapete, signora, quel che possa una donna in tempo di guerra civile?... No. Orbene, ve lo dirò: vedrete che non saranno di troppo due soldati contro ogni donna.\n- Delirate, signor di Charny!\nOliviero sorrise tristamente.\n- Le vedeste queste donne alla Bastiglia - domandò il conte - sotto il fuoco, fra una tempesta di palle, gridare all'armi, minacciare della mano i vostri svizzeri armati di tutto punto, maledere all'esercito reale sui cadaveri dei loro morti con quella voce di spavento che fa traballare i vivi? Le vedeste, intente a far bollire la pece, a trarre innanzi i cannoni, a porgere ai combattenti entusiasti una cartuccia, ai combattenti timidi una cartuccia ed un bacio? Sapete che sul ponte levatoio della Bastiglia passarono tante donne quanti uomini, e che se, mentre io parlo, crollano le mura della prigione di Stato, son mani di donna che le demoliscono? Oh! signora, noverate le donne di Parigi, noverate anche i fanciulli che fondono le palle, che arrotano le sciole, che gettano le tegole dal sesto piano; noverate, che la palla fusa da un fanciullo andrà ad uccidere il vostro miglior generale, la spada che avrà affilata troncherà i garretti dei vostri corsieri da guerra, il ciottolo che cadrà dall'alto schiaccierà i vostri dragoni e le vostre guardie. Noverate pure i vecchi, signora, poiché, se egli non hanno più forza d'alzare"
-        }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 14
-    },
-    {
-      "id": "1885-06-15_a15",
       "unit_type": "article",
+      "page_span": [
+        4
+      ],
+      "paragraphs": [
+        {
+          "text": "Romanzo storico di A. DUMAS\n(Riduzione dal francese)\n\nLa regina fa i conti per cercare quanti soldati le occorrono per tenere in freno la popolazione — Charny le prova che non vi è armata sufficiente al mondo per domare un popolo che vuol essere libero.\n\nLa regina tacque: Charny la guardava rispettosamente.\n\n— Dunque — soggiunse alla fine Maria Antonietta — voi dite che tutti i francesi si sollevano, nella proporzione di dodici sopra quindici?\n\n— Sì, maestà.\n\n— Sovra i dodici quindicesimi che avete detto, sei sono donne, n'è vero?\n\n— Sì, ma...\n\n— Non m'interrompete. Dissi sei quindicesimi di donne; rimangono sei; mettete due altri quindicesimi di vecchi impotenti o indifferenti; è troppo?\n\n— No.\n\n— Rimangono altri quattro quindicesimi, sui quali ne ammetterete due per lo meno di tiepidi o senza coraggio. Credo di adulare la nazione francese. Restano dunque due quindicesimi, ve li accordo furibondi quanto volete, prodi, tenaci, destri nel maneggio delle armi. Noveriamoli questi due quindicesimi, in Parigi s'intende, poichè in provincia sarebbe inutile...\n\n— Sì, ma...\n\n— Sempre ma... Aspettate un istante, risponderete dopo.\n\nIl signor di Charny s'inclinò.\n\n— I due quindicesimi che ho detto — continuò la regina — li valuto centomila uomini. Va bene?\n\nIl conte non rispose.\n\nLa regina riprese a dire:\n\n— A questi centomila uomini armati, indisciplinati, poco agguerriti, dubbiosi forse perchè sanno d'operare male, io oppongo cinquantamila soldati, noti in tutta Europa per la loro intrepidezza; ufficiali del vostro calibro, signor di Charny; la sacra causa del diritto divino e da ultimo l'anima mia, facile ad intenerirsi se volete, ma difficile a piegare.\n\nIl conte stette ancora silenzioso.\n\n— Credete — continuò la regina — che in un combattimento dato nelle condizioni ch'io vi dissi, due uomini del popolo possano tener fronte ad uno dei miei soldati?\n\nCharny non rispose ancora.\n\n— Ma dite qualche cosa, signor di Charny! — esclamò Maria Antonietta impazientita.\n\nIl comando della regina fe' uscire il conte dal rispettoso riserbo in cui s'era fino allora tenuto.\n\n— Signora — egli disse — se i centomila uomini del popolo isolati, senza disciplina e mal armati, avessero a sostenere il cozzo dei vostri cinquantamila soldati sur un campo di battaglia, non v'ha dubbio che andrebbero dispersi in meno di mezz'ora.\n\n— Vedete? — esclamò la regina.\n\n— Un momento. Ma la cosa non sta nei termini che voi dite. Anzitutto i ribelli di Parigi, che la maestà vostra valutò centomila, son cinquecentomila.\n\n— Cinquecentomila! Siete pazzo, conte?\n\n— Cinquecentomila, nè più, nè meno. Nel vostro calcolo avete dimenticato le donne ed i fanciulli. Oh! regina di Francia! donna coraggiosa ed altera, noveratele per altrettanti uomini co'deste donne di Parigi, verrà tempo forse in cui vi obbligheranno a noverarle per altrettanti demoni.\n\n— Che cosa volete dire, conte?\n\n— Sapete, signora, quel che possa una donna in tempo di guerra civile?... No. Orbene, ve lo dirò: vedrete che non saranno di troppo due soldati contro ogni donna.\n\n— Delirate, signor di Charny!\n\nOliviero sorrise tristamente.\n\n— Le vedeste queste donne alla Bastiglia — domandò il conte — sotto il fuoco, fra una tempesta di palle, gridare all'armi, minacciare della mano i vostri svizzeri armati di tutto punto, maledire all'esercito reale sui cadaveri dei loro morti con quella voce di spavento che fa traballare i vivi? Le vedeste, intente a far bollire la pece, a trarre innanzi i cannoni, a porgere ai combattenti entusiasti una cartuccia, ai combattenti timidi una cartuccia ed un bacio? Sapete che sul ponte levatoio della Bastiglia passarono tante donne quanti uomini, e che se, mentre io parlo, crollano le mura della prigione di Stato, son mani di donna che le demoliscono? Oh! signora, noveratele le donne di Parigi, noverate anche i fanciulli che fondono le palle, che arrotano le sciabole, che gettano le tegole dal sesto piano; noverateli, chè la palla fusa da un fanciullo andrà ad uccidere il vostro miglior generale, la sciabola arrotata da un fanciullo taglierà la testa al vostro più fido servitore, e la tegola gettata da un ferro, possono servire ancora di scudo.\n\nC'erano anche uomini vecchi alla Bastiglia; e sapete cosa facessero quei vecchi di cui non tenete conto? Si ponevano innanzi ai giovani, che appoggiavano i fucili sulle loro spalle in guisa che la palla dei vostri svizzeri andava a colpire il vecchio impotente, il cui corpo formava così un riparo all'uomo valido. Noverateli i vecchi, poichè sono essi che da trecento anni in qua trasmettono alle generazioni che si succedono gli insulti fatti alle loro madri, la miseria delle loro famiglie, la vergogna della loro casta curva sotto i privilegi dei nobili; e a questi racconti i figli afferrano le picche, il fucile, le lance, tutto ciò che capita sotto la mano, e se ne vanno ad uccidere; strumenti carichi delle maledizioni del vecchio, come un cannone di carico di ferro e di polvere.\n\nNel momento in cui vi parlo, o signora, uomini, donne, vecchi e fanciulli, gridano a Parigi, libertà, emancipazione. Noverate tutte le voci che gridano, ed avrete ottocentomila soldati nella sola Parigi.\n\n— Signor di Charny — disse alteramente la regina — trecento spartani vinsero l'esercito di Serse.\n\n— Sì, ma gli spartani eran popolo, e questo popolo oggi novera ottocentomila soldati; l'esercito di Serse saranno i vostri cinquantamila uomini.\n\nLa regina s'alzò coi pugni stretti, col volto acceso per la collera e la vergogna.\n\nE corse ad Andreina, cui sollevò fra le braccia.\n\nMa Andreina, quasi fosse minacciata dalla ricordanza della regina in mezzo alle sue convulsioni, aprì gli occhi, stese le braccia, e fatto uno sforzo supremo, s'alzò.\n\n(Il seguito a domani)"
+        }
+      ]
+    },
+    {
       "headline": "Sciarada",
+      "unit_type": "entertainment",
+      "page_span": [
+        4
+      ],
       "paragraphs": [
         {
-          "id": "1885-06-15_a15_p00",
-          "text": "Duro e vuoto quale intiero\nHa il primiero\nChi il secondo all'infelice\nSempre dice.\nSciarada precedente\nPAR-SIMONIA\nLUIGI CESANA, Direttore\nOliviero Olivieri responsabile\nSi è pubblicato il IV volume delle POESIE ROMANESCHE di G. G. BELLI\nCapati ner mazzo!\nQuesto volume andrà certamente a ruba tanto è il brio della satira e l'allegria piccante dei racconti, da far risuscitare i morti.\nLira 1. CENTO SONETTI - Lira 1.\nChi manda Lira 1 in francobolli all'Editore EDOARDO PERINO, ROMA riceverà il volume franco di posta.\nNuovo ribasso dei prezzi\nCilindri con cassa Nikel da L. 11 e 12 argento , 17 e 20 oro 40\nRemontoir nikel 16 e 17 argento e calotta arg. 24 e 25\n, ancora 30 e 35\n, cilindro oro fino 45 e 50\n, calotta oro 57 e 60\nSveglie verniciate da viaggio L. 7,50 - Idem nikel L. 8 - idem americane a bilanciere, nikel a L. 12 - Pendole dorate con campane cristallo L. 20 - Orologi rotondi da sala a 8 giorni da L. 10, 11, 12 - Cristalli, ordegni e fornitura per orologi a prezzi eccezionali. Dirigere domande e vaglia magazzini d'orologeria F.lli Gobbi Modena. Porto a carico dei committenti."
+          "text": "Duro e vuoto quale intiero\nHa il primiero\nChi il secondo all'infelice\nSempre dice.\n\nSciarada precedente: PAR-SIMONIA"
         }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 15
+      ]
     },
     {
-      "id": "1885-06-15_a16",
-      "unit_type": "advertisement",
-      "headline": "BAGNI DELLE ACQUE ALTE presso TIVOLI",
+      "headline": "Direttore e responsabile",
+      "unit_type": "masthead",
+      "page_span": [
+        4
+      ],
       "paragraphs": [
         {
-          "id": "1885-06-15_a16_p00",
-          "text": "Per l'imminente stagione dei bagni fra la Società dei tranvai di Tivoli e quella Acque Aluble un orario speciale a comodanti, il quale sarà messo in vigore quando fu pure convenuto di fare SIN DA servizio cumulativo con la seguente tariffa:\na) Biglietto di andata e ritorno ROMA-BAGNI con diritto allo ingresso nello Stabilimento delle Acque Aluble al bagno nelle vasche da nuoto Lire 3.\nb) Libretto d'abbonamento ROMA-BAGNI per n. 10 viaggi con diritto come sopra L. 25.\nc) Libretto d'abbonamento per 20 viaggi con diritto come sopra L. 55.\nd) Biglietto per un camerino particolare L. 0,80.\ne) Libretto d'abbonamento per un camerino L. 6; per 20 bagni L. 10.\nI biglietti di andata e ritorno ROMA-BAGNI vanno all'ufficio della Società Romana vai in via Nazionale presso piazza Vescovile Roma San Lorenzo.\nI libretti di abbonamento ROMA-BAGNI vanno all'ufficio della Società Romana vai alla stazione dei tranvai fuori per Roma - alla cartoleria Zampini, via Fiumeri 50-51, ed allo stabilimento del quale ultimo luogo sono pur rendibili i libretti d'abbonamento per camerini.\nTutto è poi già fissato perché in questo stabilimento dei bagni si abbiano di concerti, bigliardo, bersaglio, giuochi di carte che un servizio di buffet di completa insieme di colori che crederanno interverrasi discretissimi.\nPer acquisto di faughi ed acque per bagni a domicilio esiste una succursale a Roma presso la ditta spedizioni Poggi, ss. Apostoli, 73 - I recipienti portano la firma della Società."
+          "text": "LUIGI CESANA, Direttore\nOliviero Olivieri, responsabile"
         }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 16
+      ]
     },
     {
-      "id": "1885-06-15_a17",
+      "headline": "Capati ner mazzo",
       "unit_type": "advertisement",
-      "headline": "CONTANTI contro cessione di prestiti casa di risparmio acquistano polizze del Monte di Pietà Commerciale Via Aracoeli N. 60.",
+      "page_span": [
+        4
+      ],
       "paragraphs": [
         {
-          "id": "1885-06-15_a17_p00",
-          "text": ""
+          "text": "Si è pubblicato il IV volume delle Poesie Romanesche di G. G. BELLI\n\nCapati ner mazzo\n\nQuesto volume andrà certamente a ruba; è il brio della satira e l'allegria piccante dei sonetti, da far risuscitare i morti.\n\nLira 1. — CENTO SONETTI —\n\nChi manda Lira 1 in francobolli a EDOARDO PERINO, ROMA riceverà il volume franco di posta."
         }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 17
+      ]
     },
     {
-      "id": "1885-06-15_a18",
+      "headline": "Nuovo ribasso dei prezzi - Orologi",
       "unit_type": "advertisement",
-      "headline": "Il dottore Alberto",
+      "page_span": [
+        4
+      ],
       "paragraphs": [
         {
-          "id": "1885-06-15_a18_p00",
-          "text": "Dottore Alberto, medico dell'Università di Napoli, da consultare nelle case stesse dei malati in qualunque giorno.\nLasciare le chiamate nella Farmacia Piazza Vittorio Emanuele, o nella sua Via Principe Umberto 133."
+          "text": "Nuovo ribasso dei prezzi\n\nCilindri con cassa Nikel — Argento — Remontoir oro — Argento e calotta — Ancora — Cilindro oro fino — Calotta oro\n\nSveglie verniciate da viaggio L. 7,50 — Nikel L. 8 — Americane a bilanciere L. 12 — Pendole dorate con campana cristallo — Orologi rotondi da sala a 5 giorni\n\nCristalli, orologi e forniture per orologiai a prezzi eccezionali. Dirigere domande e vaglia al magazzino d'orologia F.lli Gobbi, Modena. Porto a carico dei committenti."
         }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 18
+      ]
     },
     {
-      "id": "1885-06-15_a19",
+      "headline": "BAGNI DELLE ACQUE ALBULE presso TIVOLI",
       "unit_type": "advertisement",
-      "headline": "Pasta Pectorale Balsamica",
+      "page_span": [
+        4
+      ],
       "paragraphs": [
         {
-          "id": "1885-06-15_a19_p00",
-          "text": "Del cav. N. Sinimbergh\nGuarisce le Tossi ed i raffreddamenti.\nLe sue balsamiche proprietà la dano per la Raucedine, Bronchite e Catarrali. E' Calmante ed Espetorante e indicatissima anche per bambini. Ogni munita di fascia a fondo rosso con manubria e firma della ditta.\nSinimberghi Evans e C. 64-66 via Conforti.\nDepositio in Napoli presso Scarpitti 325.\nPrezzo lira una la scatola in provviste spese postali."
+          "text": "Per l'imminente stagione dei bagni fra la Società dei tranvai di Tivoli e quella delle Acque Albule fu convenuto un orario speciale a comodo dei bagnanti, il quale sarà messo in vigore dal 1° luglio; fu pure convenuto di fare sin da ora un servizio cumulativo con la seguente tariffa:\n\na) Biglietto di andata e ritorno ROMA-BAGNI con diritto allo ingresso nello Stabilimento delle Acque Albule ed al bagno nelle vasche da nuoto Lire 3.\nb) Libretto d'abbonamento ROMA-BAGNI per n. 10 viaggi con diritto come sopra L. 25.\nc) Libretto d'abbonamento per 20 viaggi con diritto come sopra L. 55.\nd) Biglietto per un camerino particolare nello Stabilimento L. 0,80.\ne) Libretto d'abbonamento per un camerino per 10 bagni L. 6; per 20 bagni L. 10.\n\nI biglietti di andata e ritorno ROMA-BAGNI si vendono all'ufficio della Società Romana dei Tranvai in via Nazionale presso piazza Venezia ed alla stazione dei tranvai fuori porta San Lorenzo.\n\nI libretti di abbonamento ROMA-BAGNI si vendono all'ufficio della Società Romana dei Tranvai, alla stazione dei tranvai fuori porta San Lorenzo, alla cartoleria Zampini, via Fiumara 50-51, ed allo Stabilimento; nel quale ultimo luogo sono pur vendibili i libretti d'abbonamento per i camerini.\n\nTutto è poi già fissato perchè in questo Stabilimento dei bagni si abbiano dei concerti, bigliardo, bersaglio, giuochi di carte e un servizio di buffet a completa soddisfazione di coloro che crederanno intervenirvi a prezzi discretissimi.\n\nPer acquisto di fanghi ed acque per bagni a domicilio esiste una succursale a Roma presso la ditta spedizioni Poggi, ss. Apostoli, 73 — I recipienti portano la firma della Società."
         }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 19
+      ]
     },
     {
-      "id": "1885-06-15_a20",
+      "headline": "Tabacco MIL",
       "unit_type": "advertisement",
-      "headline": "A chi soffre di Reumi, Paralisi, Balsamo Special",
+      "page_span": [
+        4
+      ],
       "paragraphs": [
         {
-          "id": "1885-06-15_a20_p00",
-          "text": "Preziosissimo che in due o tre giorni guarisca qualsiasi dolore reumatico od artrico, paralisi. Detto Balsamo per lunga esperienza è efficacissimo ed agisce con sicuro successo in ogni aspettazione.\nFarse domanda alla depositaria signorina Vicenza vedova Merlo, Lavatrice in Via Duchessa Iolanda n. 8 piano secondo.\nPrezze del Flacon lira 1.\nSi spedisce in tutto il regno contro bollo o lettera assicurata con l'aggiunta di Attestati di guarigione N. 2552."
+          "text": "Provate il Tabacco MIL — è un tabacco di qualità e sapore incomparabile."
         }
-      ],
-      "page_span": [
-        1
-      ],
-      "position_in_issue": 20
+      ]
     },
     {
-      "id": "1885-06-15_a21",
+      "headline": "Contanti contro cessione",
       "unit_type": "advertisement",
-      "headline": "MOTORI A GASOLIO",
+      "page_span": [
+        4
+      ],
       "paragraphs": [
         {
-          "id": "1885-06-15_a21_p00",
-          "text": "SISTEMA DA 150 CAVALLI DI FORZA\nNessun pericolo assoluto di scoppio\nDal 1877 (data dell'invenzione al 31 dicembre 1877) si vendettero in Europa oltre 7000 motori del sistema di cui oltre 300 in Italia.\nRappresentanti generali in Italia: A. M. Zanotta, Torino via S. Anastasio 49.\nIn Roma Ing. M. Zanotta, via Giulio 1.\nTip. del Messaggero, via dei Bufalo"
+          "text": "Contanti contro cessione di polizze, cassa di risparmio; acquistano polizze del Monte di Pietà. Commerciale, via Aracoeli N. 60."
         }
-      ],
+      ]
+    },
+    {
+      "headline": "Dottore Alberto Mosso",
+      "unit_type": "advertisement",
       "page_span": [
-        1
+        4
       ],
-      "position_in_issue": 21
+      "paragraphs": [
+        {
+          "text": "Il dottore Alberto Mosso dell'Università di Napoli, da consultarsi nelle case stesse dei malati in qualunque giorno.\n\nLasciare le chiamate nella Farmacia Piazza Vittorio Emanuele, o nella sua Via Principe Umberto 133."
+        }
+      ]
+    },
+    {
+      "headline": "Pasta Pettorale Balsamica",
+      "unit_type": "advertisement",
+      "page_span": [
+        4
+      ],
+      "paragraphs": [
+        {
+          "text": "Del cav. N. Sinlbergh. Guarisce le Tossi ed i raffreddamenti. Le sue balsamiche proprietà la rendono indicata per la Raucedine, Bronchite e Catarro. È Calmante ed Espettorante e indicatissima anche per bambini. Ogni scatola è munita di fascia a fondo rosso con marchio e firma della ditta.\n\nSinlbergh Evans e C. 64-66 via Conforti. Deposito in Napoli presso Scarpitti 325. Prezzo lira una la scatola; in provincia spese postali."
+        }
+      ]
+    },
+    {
+      "headline": "Balsamo Speciale",
+      "unit_type": "advertisement",
+      "page_span": [
+        4
+      ],
+      "paragraphs": [
+        {
+          "text": "A chi soffre di Reumi, Paralisi. Balsamo Speciale preziosissimo che in due o tre giorni guarisce il dolore reumatico od artritico, paralisi. Detto Balsamo per lunga esperienza efficacissimo ed agisce con sicuro successo ad ogni aspettazione.\n\nFarne domanda alla depositaria signora Vincenza vedova Merlo, Levatrice in Via Duchessa Iolanda n. 8 piano secondo.\n\nPrezzo del Flacone Lire 1.\n\nSi spedisce in tutto il regno contro vaglia o lettera assicurata con l'aggiunta di centesimi 25. Attestati di guarigione N. 2552."
+        }
+      ]
+    },
+    {
+      "headline": "Motori a Gas",
+      "unit_type": "advertisement",
+      "page_span": [
+        4
+      ],
+      "paragraphs": [
+        {
+          "text": "Da 1/3 a 50 cavalli di forza. Economia. Nessun pericolo assoluto di scoppio.\n\nDal 1877 (data dell'invenzione) al 31 dicembre 1884 si vendettero in Europa oltre 7000 motori del sistema, di cui oltre 300 in Italia.\n\nRappresentanti generali in Italia: A. B. Torino via S. Massimo 49. In Roma Ing. L. Zanotti, via Giulio Cesare 10.\n\nTip. del Messaggero, via dei Bufali."
+        }
+      ]
     }
   ]
 }

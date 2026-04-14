@@ -194,3 +194,73 @@ Once winning config is finalized:
 2. Output: one JSON per date in `ocr_output/{year}/{date}.json`
 3. Checkpointing: skip already-processed dates
 4. Quality spot-check across eras
+
+## Implementation Log
+
+### 2026-04-10: New VLM models + two-GPU Ray fix
+
+**Two-GPU Ray pipeline fix:**
+- Bug: `apply_operator` gave each GPU operator `max_actors = n_gpu / gpu_fraction = 2`, so VlmOcr + LlmPostCorrect both tried to claim all 2 GPUs simultaneously → OOM
+- Fix: Added `n_gpu_operators` parameter, divides GPU budget per operator. Also set `ray.data.ExecutionResources(gpu=n_gpu)` limit for multi-operator pipelines
+- Files: `base.py:apply_operator`, `pipeline.py:setup_ray + run_pipeline`
+
+**New model support added to VlmOcr operator:**
+- Model-type detection via `_detect_model_type()` with dispatch in `_transformers_call()`
+- **Florence-2** (`microsoft/Florence-2-large`): Uses `<OCR>` task prompt, `AutoModelForCausalLM` with `attn_implementation="eager"`, `post_process_generation()`. Small (0.77B).
+- **GOT-OCR2** (`stepfun-ai/GOT-OCR-2.0-hf`): Native HF transformers support via `AutoModelForImageTextToText`. 580M params. Uses `processor(image, return_tensors="pt")` directly (no chat template).
+- **Phi-3.5-Vision** (`microsoft/Phi-3.5-vision-instruct`): `AutoModelForCausalLM` + `trust_remote_code`. Uses `<|image_1|>` placeholder. Processor needs `num_crops=16`. 4.2B params.
+- **MiniCPM-o-2.6** (`openbmb/MiniCPM-o-2_6`): Ungated successor to MiniCPM-V-2.6. Uses `.chat()` API (different from InternVL). 8B params.
+- **Llama-3.2-11B-Vision** (`unsloth/Llama-3.2-11B-Vision-Instruct`): Ungated via unsloth. Native `mllama` type, standard chat template. 11B params, needs 4bit for single 3090.
+- **HunyuanOCR**: NOT added — needs vLLM >= 0.12.0 (ripperred has 0.7.3) or pinned transformers commit that would break other models. CUDA 12.9 required vs our 12.4.
+
+**New configs (19 total):**
+- Florence-2: `florence2_large_ocr`, `florence2_base_ocr`, `col4_florence2_large_ocr`
+- GOT-OCR2: `got_ocr2_hf`, `col4_got_ocr2_hf`
+- Phi-3.5: `phi35_vision_v1_structured`, `phi35_vision_v2_structured`, `col4_phi35_vision_v2_structured`, `phi35_vision_v2_raw_cleanup`
+- MiniCPM: `minicpm_o_v1_structured`, `minicpm_o_v2_structured`, `col4_minicpm_o_v2_structured`, `minicpm_o_4bit_v2_structured`, `minicpm_o_v2_raw_cleanup`
+- Llama-3.2: `llama32_11b_v1_structured`, `llama32_11b_v2_structured`, `col4_llama32_11b_v2_structured`, `llama32_11b_4bit_v2_structured`, `llama32_11b_v2_raw_cleanup`
+
+**Issues encountered during testing:**
+- Florence-2 `AutoModelForVision2Seq` fails with transformers 4.57.6 (not in auto mapping). Fix: use `AutoModelForCausalLM` with `trust_remote_code=True`
+- Florence-2 `_supports_sdpa` error. Fix: `attn_implementation="eager"`
+- 4bit configs need `bitsandbytes` — installed on ripperred
+- Models landing on GPU 0 (where batch was running) → OOM. Fix: `CUDA_VISIBLE_DEVICES=1` for test runs
+
+**Total configs:** 61 (42 old + 19 new)
+
+### 2026-04-14: Overnight batch run + ground truth refinement
+
+**New model support:**
+- **Gemma-3-12B** (`google/gemma-3-12b-it`): Multimodal, uses `AutoModelForImageTextToText`. ~24GB bf16, needs `gpu_fraction=2.0` to spread across both 3090s. Even at 512px and 2 GPUs, too slow for multi-page newspaper OCR (>15 min per 4-page issue). The 4B variant (`google/gemma-3-4b-it`) works but is borderline on 6-page issues (~12 min).
+- **Chandra-OCR-2** (`datalab-to/chandra-ocr-2`): Based on Qwen3.5-VL (~8B). Requires transformers >= 5.x (`Qwen3_5ForConditionalGeneration`). Too slow even at 768px with no runtime_env — needs 512px. Dedicated `_init_chandra` with `padding_side="left"`.
+- **InternVL3-8B** (`OpenGVLab/InternVL3-8B`): Original config referenced non-existent `InternVL3-6B`. Needs dedicated `_init_internvl` using `AutoModel` (not `AutoModelForImageTextToText`) because InternVL uses a custom `.chat()` API that only exists on its own model class.
+
+**Code quality (via /simplify):**
+- Merged 4 duplicate call methods (`_gemma_call`, `_chandra_call`, `_hunyuan_call`, `_generate_api_call`) into single `_chat_template_call(do_sample)` 
+- Fixed `dtype` bug in `_init_gemma` (was passing `dtype=` which is ignored, should be `torch_dtype=`)
+- Added `_init_image_text_model` shared helper for gemma/chandra init
+- Cached InternVL torchvision transform (was rebuilt per image)
+- Added `PipelineTimeoutError` + `finally: signal.alarm(0)` cleanup in batch runner
+- Added `ray.shutdown()` on timeout/error to prevent stale GPU actors blocking subsequent runs
+
+**Runtime_env lessons:**
+- `git+https://github.com/huggingface/transformers` in pip list causes Ray to clone entire repo + build from source on every actor spawn — takes 10+ minutes, eats most of the timeout budget. Use pinned release versions instead (e.g. `transformers==4.49.0`).
+- Upgrading main venv transformers from 4.57.6 to 5.x breaks vllm 0.7.3 (rope_scaling conflict). Must keep 4.57.6 in main venv and use runtime_env for models needing newer versions.
+- Runtime_env pip caches accumulate ~13GB per unique env per Ray session. Old sessions must be cleaned periodically or `/tmp` fills up.
+- `PIP_FIND_LINKS` in `env_vars` does NOT affect pip install inside runtime_env (Ray manages its own pip invocation).
+
+**Ground truth refinement — cross-column reading order challenges:**
+
+The 1885-06-15 issue revealed several systematic challenges for OCR pipeline evaluation:
+
+1. **Articles spanning multiple columns**: "I deputati-telegrafo" spans two columns on page 1. Column-split configs capture each column separately but don't know the article continues. Full-page configs sometimes merge them correctly, sometimes not. The reading order is: left column down, then right column down — but within a single article.
+
+2. **Articles spanning multiple pages**: "I MAESTRI ELEMENTARI NON SONO PAGATI" starts on page 1 column 4 and continues on page 2 column 1, with the bottom of page 1 containing unrelated content (the serialized fiction "MAGNETIZZATA"). This is a newspaper convention where articles jump across pages — the physical reading order (top-to-bottom, page-by-page) differs from the logical article order.
+
+3. **Subheadings within articles**: "COSA NE PENSANO I MURATORI / Le processioni della morte" appears as a subheading within the "deputati-telegrafo" article, not a separate article. VLM configs frequently split these into separate articles, inflating the article count.
+
+4. **Serialized fiction interleaved with news**: The APPENDICE "MAGNETIZZATA" runs along the bottom of multiple pages, interleaved with news articles. Column-split configs capture fragments of fiction mixed with news text.
+
+5. **Best configs for ground truth bootstrapping**: `col4_qwen25_7b_v2_raw` captures the most faithful raw text per column. `col5_qwen25_7b_v2_structured` captures the best structured article segmentation. `col4_qwen3_8b_v2_structured` captures the most complete cross-column text. No single config handles all challenges — manual cross-referencing across configs is needed for accurate ground truth.
+
+These findings suggest that the evaluation metric should account for reading order separately from character accuracy, and that cross-page article stitching is a necessary post-processing step for production use.
