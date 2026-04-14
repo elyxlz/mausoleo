@@ -8,7 +8,7 @@ import typing as tp
 
 from mausoleo.ocr.operators.base import BaseOperatorConfig, OperatorType, StatefulOperator, register_operator
 
-ModelType = tp.Literal["default", "florence", "got_ocr", "minicpm", "phi3", "internvl", "hunyuan"]
+ModelType = tp.Literal["default", "florence", "got_ocr", "minicpm", "phi3", "internvl", "hunyuan", "gemma", "chandra"]
 
 
 def _detect_model_type(model_name: str) -> ModelType:
@@ -25,6 +25,10 @@ def _detect_model_type(model_name: str) -> ModelType:
         return "internvl"
     if "hunyuan" in lower:
         return "hunyuan"
+    if "gemma" in lower:
+        return "gemma"
+    if "chandra" in lower:
+        return "chandra"
     return "default"
 
 
@@ -73,12 +77,16 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
             self._init_phi3()
         elif self.model_type == "hunyuan":
             self._init_hunyuan()
+        elif self.model_type == "gemma":
+            self._init_gemma()
+        elif self.model_type == "chandra":
+            self._init_chandra()
         else:
             self._init_transformers_generic()
 
     def _init_transformers_generic(self) -> None:
         import torch
-        from transformers import AutoModel, AutoModelForVision2Seq, AutoProcessor, AutoTokenizer, BitsAndBytesConfig
+        from transformers import AutoModel, AutoModelForImageTextToText, AutoModelForVision2Seq, AutoProcessor, AutoTokenizer, BitsAndBytesConfig
 
         load_kwargs: dict[str, tp.Any] = {"device_map": "auto", "trust_remote_code": True}
         if self.config.load_in_4bit:
@@ -91,9 +99,11 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
         except Exception:
             self.processor = AutoTokenizer.from_pretrained(self.config.model, trust_remote_code=True)
 
-        for auto_cls in [AutoModelForVision2Seq, AutoModel]:
+        for auto_cls in [AutoModelForImageTextToText, AutoModelForVision2Seq, AutoModel]:
             try:
                 self.hf_model = auto_cls.from_pretrained(self.config.model, **load_kwargs)
+                if not hasattr(self.hf_model, "generate"):
+                    continue
                 break
             except (ValueError, ImportError):
                 continue
@@ -166,6 +176,23 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
             except (ValueError, ImportError):
                 continue
 
+    def _init_image_text_model(self, *, padding_side: str | None = None) -> None:
+        import torch
+        from transformers import AutoModelForImageTextToText, AutoProcessor
+
+        self.processor = AutoProcessor.from_pretrained(self.config.model, trust_remote_code=True)
+        if padding_side is not None:
+            self.processor.tokenizer.padding_side = padding_side
+        self.hf_model = AutoModelForImageTextToText.from_pretrained(
+            self.config.model, device_map="auto", trust_remote_code=True, torch_dtype=torch.bfloat16
+        )
+
+    def _init_gemma(self) -> None:
+        self._init_image_text_model()
+
+    def _init_chandra(self) -> None:
+        self._init_image_text_model(padding_side="left")
+
     def __call__(self, batch: dict[str, tp.Any]) -> dict[str, tp.Any]:
         if self.config.mock:
             return self._mock_call(batch)
@@ -211,10 +238,12 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
             "minicpm": self._minicpm_call,
             "phi3": self._phi3_call,
             "internvl": self._internvl_call,
-            "hunyuan": self._hunyuan_call,
-            "default": self._generate_api_call,
+            "hunyuan": self._chat_template_call,
+            "gemma": self._chat_template_call,
+            "chandra": self._chat_template_call,
+            "default": self._chat_template_call,
         }
-        call_fn = dispatch.get(self.model_type, self._generate_api_call)
+        call_fn = dispatch.get(self.model_type, self._chat_template_call)
 
         page_texts: list[str] = []
         for img_bytes in raw_images:
@@ -225,7 +254,7 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
         result["page_texts"] = [json.dumps(page_texts)]
         return result
 
-    def _generate_api_call(self, pil_img: tp.Any) -> str:
+    def _chat_template_call(self, pil_img: tp.Any, *, do_sample: bool = False) -> str:
         import torch
 
         messages: list[dict[str, tp.Any]] = [
@@ -234,20 +263,7 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
         text = self.processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         inputs = self.processor(text=[text], images=[pil_img], return_tensors="pt").to(self.hf_model.device)
         with torch.no_grad():
-            output_ids = self.hf_model.generate(**inputs, max_new_tokens=self.config.max_tokens)
-        generated = output_ids[:, inputs.input_ids.shape[1] :]
-        return self.processor.batch_decode(generated, skip_special_tokens=True)[0]  # type: ignore[no-any-return]
-
-    def _hunyuan_call(self, pil_img: tp.Any) -> str:
-        import torch
-
-        messages: list[dict[str, tp.Any]] = [
-            {"role": "user", "content": [{"type": "image", "image": pil_img}, {"type": "text", "text": self.config.prompt}]}
-        ]
-        text = self.processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        inputs = self.processor(text=[text], images=[pil_img], return_tensors="pt").to(self.hf_model.device)
-        with torch.no_grad():
-            output_ids = self.hf_model.generate(**inputs, max_new_tokens=self.config.max_tokens, do_sample=False)
+            output_ids = self.hf_model.generate(**inputs, max_new_tokens=self.config.max_tokens, do_sample=do_sample)
         generated = output_ids[:, inputs.input_ids.shape[1] :]
         return self.processor.batch_decode(generated, skip_special_tokens=True)[0]  # type: ignore[no-any-return]
 
@@ -308,21 +324,18 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
 
     def _load_internvl_image(self, pil_img: tp.Any) -> tp.Any:
         import torch
-        import torchvision.transforms as T
-        from torchvision.transforms.functional import InterpolationMode
 
-        IMAGENET_MEAN = (0.485, 0.456, 0.406)
-        IMAGENET_STD = (0.229, 0.224, 0.225)
-        input_size = 448
+        if not hasattr(self, "_internvl_transform"):
+            import torchvision.transforms as T
+            from torchvision.transforms.functional import InterpolationMode
 
-        transform = T.Compose([
-            T.Lambda(lambda img: img.convert("RGB") if img.mode != "RGB" else img),
-            T.Resize((input_size, input_size), interpolation=InterpolationMode.BICUBIC),
-            T.ToTensor(),
-            T.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
-        ])
-        pixel_values = transform(pil_img).unsqueeze(0).to(torch.bfloat16).cuda()
-        return pixel_values
+            self._internvl_transform = T.Compose([
+                T.Lambda(lambda img: img.convert("RGB") if img.mode != "RGB" else img),
+                T.Resize((448, 448), interpolation=InterpolationMode.BICUBIC),
+                T.ToTensor(),
+                T.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
+            ])
+        return self._internvl_transform(pil_img).unsqueeze(0).to(torch.bfloat16).cuda()
 
     def _format_prompt_vllm(self, image: tp.Any) -> str:
         from transformers import AutoProcessor, AutoTokenizer

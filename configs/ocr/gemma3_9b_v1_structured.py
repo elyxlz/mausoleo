@@ -1,11 +1,12 @@
 from mausoleo.ocr import prompts
 from mausoleo.ocr.config import OcrPipelineConfig
-from mausoleo.ocr.operators import MergePages, ParseIssue, VlmOcr
+from mausoleo.ocr.operators import MergePages, ParseIssue, Preprocess, VlmOcr
 
 config = OcrPipelineConfig(
     name="gemma3_9b_v1_structured",
     operators=[
-        VlmOcr(model="google/gemma-3-9b-vision", prompt=prompts.VLM_OCR_STRUCTURED, backend="transformers", max_tokens=4096, max_model_len=16384),
+        Preprocess(grayscale=False, max_dimension=1024),
+        VlmOcr(model="google/gemma-3-12b-it", prompt=prompts.VLM_OCR_STRUCTURED, backend="transformers", max_tokens=4096, max_model_len=16384, gpu_fraction=2.0),
         MergePages(),
         ParseIssue(),
     ],

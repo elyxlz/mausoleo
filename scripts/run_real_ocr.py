@@ -4,13 +4,34 @@ import dataclasses as dc
 import importlib.util
 import json
 import pathlib as pl
+import signal
 import sys
 import time
 import traceback
 
+import ray
+
 from mausoleo.ocr.config import OcrPipelineConfig
 from mausoleo.ocr.models import extract_full_text
 from mausoleo.ocr.pipeline import run_pipeline
+
+
+class PipelineTimeoutError(Exception):
+    pass
+
+
+def _timeout_handler(signum: int, frame: object) -> None:
+    raise PipelineTimeoutError("timed out")
+
+
+def _shutdown_ray() -> None:
+    try:
+        if ray.is_initialized():
+            ray.shutdown()
+            print("ray shutdown complete")
+    except Exception:
+        pass
+
 
 GROUND_TRUTH_DIR = pl.Path("eval/ground_truth")
 PREDICTIONS_DIR = pl.Path("eval/predictions")
@@ -59,12 +80,22 @@ def run_single(config_name: str, issue_date: str, force: bool = False) -> bool:
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
+    signal.signal(signal.SIGALRM, _timeout_handler)
+    timeout_secs = 1800
+    signal.alarm(timeout_secs)
     try:
         issue = run_pipeline(config, images, date=issue_date)
+    except PipelineTimeoutError:
+        print(f"FAILED: timed out after {timeout_secs}s")
+        _shutdown_ray()
+        return False
     except Exception as e:
         print(f"FAILED: {type(e).__name__}: {e}")
         traceback.print_exc()
+        _shutdown_ray()
         return False
+    finally:
+        signal.alarm(0)
 
     elapsed = time.time() - t0
     n_articles = len(issue.articles)

@@ -1,6 +1,6 @@
 from mausoleo.ocr import prompts
 from mausoleo.ocr.config import OcrPipelineConfig
-from mausoleo.ocr.operators import MergePages, ParseIssue, VlmOcr
+from mausoleo.ocr.operators import MergePages, ParseIssue, Preprocess, VlmOcr
 
 HUNYUAN_ENV = {
     "pip": [
@@ -8,14 +8,14 @@ HUNYUAN_ENV = {
         "accelerate>=0.25.0",
         "flash_attn",
         "torch==2.5.1",
-        "bitsandbytes",
     ]
 }
 
 config = OcrPipelineConfig(
     name="hunyuan_ocr_v1_structured",
     operators=[
-        VlmOcr(model="tencent/HunyuanOCR", prompt=prompts.VLM_OCR_STRUCTURED, backend="transformers", max_tokens=8192, load_in_4bit=True, runtime_env=HUNYUAN_ENV),
+        Preprocess(grayscale=False, max_dimension=1024),
+        VlmOcr(model="tencent/HunyuanOCR", prompt=prompts.VLM_OCR_STRUCTURED, backend="transformers", max_tokens=8192, runtime_env=HUNYUAN_ENV),
         MergePages(),
         ParseIssue(),
     ],

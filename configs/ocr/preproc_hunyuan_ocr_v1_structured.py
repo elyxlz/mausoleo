@@ -8,7 +8,6 @@ HUNYUAN_ENV = {
         "accelerate>=0.25.0",
         "flash_attn",
         "torch==2.5.1",
-        "bitsandbytes",
     ]
 }
 
@@ -16,7 +15,7 @@ config = OcrPipelineConfig(
     name="preproc_hunyuan_ocr_v1_structured",
     operators=[
         Preprocess(grayscale=False, max_dimension=1024),
-        VlmOcr(model="tencent/HunyuanOCR", prompt=prompts.VLM_OCR_STRUCTURED, backend="transformers", max_tokens=8192, load_in_4bit=True, runtime_env=HUNYUAN_ENV),
+        VlmOcr(model="tencent/HunyuanOCR", prompt=prompts.VLM_OCR_STRUCTURED, backend="transformers", max_tokens=8192, runtime_env=HUNYUAN_ENV),
         MergePages(),
         ParseIssue(),
     ],
