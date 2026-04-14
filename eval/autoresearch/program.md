@@ -9,6 +9,79 @@ Minimize article-level CER on the 1885-06-15 eval issue while maintaining high a
 - Article Recall: 78.0%
 - F1: 70.3%
 
+## Failure Analysis
+
+### Category 1: Cross-page articles get truncated (biggest quality problem)
+Articles spanning page boundaries are severely degraded or missed entirely:
+- **L'usciere accoltellato** (pages 2→3) — completely missed (CER=1.0)
+- **Ne succedono delle graziose** (pages 3→4) — truncated, 426 of 1615 chars (CER=0.744)
+- **I vetturini hanno sempre torto** (pages 3→4) — truncated, 459 of 1340 chars (CER=0.694)
+- **I MAESTRI ELEMENTARI** (pages 1→2) — hallucinated extra text, 5578 vs 2040 chars (CER=1.738)
+
+Root cause: column-split processes each page independently. No mechanism to detect or stitch article continuations across pages.
+
+### Category 2: Page 4 advertisements completely missed (8 articles, all CER=1.0)
+Every ad on page 4 missed: Bagni delle Acque Albule, Tabacco MIL, Balsamo, Motori a Gas, etc. Ads have different layouts (smaller text, borders, mixed fonts) that the structured JSON prompt doesn't handle. Other configs (col4, yolo) DO capture some of these.
+
+### Category 3: MAGNETIZZATA fiction interleaved with news (CER=0.557)
+Serialized novel runs along bottom strip of pages 1-3. Column-split captures fragments mixed with news from above. The model sees a column slice with news at top and fiction at bottom — can't cleanly separate them.
+
+### Category 4: Easy articles (CER<0.1) — already solved
+Short dispatches and single-column articles on page 3 are near-perfect: La Russia in Italia, L'italiano liberato, La questione afgana, Bastimenti in moto. These are self-contained within one column on one page.
+
+### What works well
+- Single-page, single-column articles: CER 0.0-0.05
+- Mid-length news articles within one page: CER 0.15-0.25
+- Articles with clear headlines: easier to segment
+
+### What fails
+- Cross-page continuations: CER 0.7-1.7 or missed entirely
+- Ads with non-standard layouts: missed entirely
+- Fiction interleaved with news: confused segmentation
+- Very long articles (>2000 chars): tend to truncate or hallucinate
+
+## Research Directions (prioritized)
+
+### 1. Cross-page article stitching (biggest potential gain)
+- Process pages separately, then post-process to detect continuations
+- Text similarity at page boundaries: if last sentence of page N is incomplete, search page N+1
+- Or: process pages in overlapping pairs (page 1+2, page 2+3) to capture cross-page articles
+- Or: whole-issue context — give the model all pages and ask it to identify article continuations
+
+### 2. Ad-aware prompting
+- Current prompt says "separate distinct content units" but doesn't specifically mention ads
+- Try explicit content type listing: "articles, advertisements, notices, serialized fiction (APPENDICE)"
+- Two-pass approach: first pass for articles, second pass specifically for ads
+- Page 4 specifically needs different handling — it's mostly novel + ads, not news
+
+### 3. MAGNETIZZATA / APPENDICE separation
+- The bottom strip of each page is serialized fiction — column-split mixes it with news
+- Try: crop bottom 20% separately as APPENDICE, process with different prompt
+- Or: add to prompt "The bottom strip contains serialized fiction (APPENDICE) — separate from news above"
+- Or: use YOLO layout detection to identify the APPENDICE strip
+
+### 4. Prompt refinements for medium-CER articles
+- 17 articles at CER 0.1-0.5 have systematic errors:
+  - Broken words at column boundaries (hyphenation artifacts)
+  - Archaic spelling confusion
+  - Truncation near max_tokens limit
+- Try: increase max_tokens from 8192 to 12288
+- Try: "preserve hyphenated words across line breaks" in prompt
+- Try: "this is 1885 Italian — preserve archaic forms like perchè, poichè"
+
+### 5. Per-page column count
+- col3 works for news pages (1-3) but page 4 has different layout (novel + ads)
+- Try: 3 columns for pages 1-3, full-page (no split) for page 4
+- This would require a config that varies column count per page (not currently supported — may need operator changes)
+
+### 6. Ensemble / multi-config merge
+- No single config captures everything:
+  - col3_qwen3_8b: best CER (0.373) but misses all ads
+  - yolo_qwen7b: best recall (97.6%) but terrible CER
+  - full-page qwen25_7b: captures cross-page text but lower recall
+- Merge strategy: use col3 for text quality, yolo for article detection, combine the best of both
+- This is a post-processing approach, not a single-config solution
+
 ## The Loop
 
 Each iteration:
@@ -80,13 +153,6 @@ config = OcrPipelineConfig(
 - The eval metric code or ground truth
 - The models available (don't download new ones)
 - The hardware (2x RTX 3090 24GB)
-
-## Research Priorities (try in this order)
-1. **Prompt engineering** — biggest lever. Try Italian-specific instructions, different output formats, reading order hints, fewer/more constraints
-2. **Column count** — 3 works but maybe 2 with overlap, or 4 with less, is better
-3. **Preprocessing** — resolution, grayscale
-4. **Model switching** — Qwen2.5-VL-7B via vllm might be faster and comparable
-5. **Two-stage** — raw OCR + LLM cleanup
 
 ## Rules
 - One change per experiment
