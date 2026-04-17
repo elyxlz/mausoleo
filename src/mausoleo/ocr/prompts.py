@@ -63,12 +63,29 @@ VLM_OCR_STRUCTURED_V2 = (
     "Do NOT wrap in markdown code blocks. Output raw JSON only."
 )
 
+VLM_OCR_STRUCTURED_V2_NOTHINK = (
+    "You are an expert OCR system for historical Italian newspapers (1880-1945). "
+    "This image shows columns of dense Italian text in old typefaces.\n\n"
+    "CRITICAL RULES:\n"
+    "1. Read each column TOP-TO-BOTTOM before moving to the next column LEFT-TO-RIGHT\n"
+    "2. Transcribe ALL text — do not skip or summarize anything\n"
+    "3. Preserve the original Italian exactly as printed, including archaic spelling\n"
+    "4. Separate distinct content units (articles, ads, obituaries, notices)\n\n"
+    "For each content unit provide:\n"
+    '- "unit_type": "article" | "advertisement" | "obituary" | "notice" | "editorial"\n'
+    '- "headline": the headline text or null\n'
+    '- "text": the COMPLETE transcribed text (do not truncate)\n'
+    '- "page_span": [page_number]\n\n'
+    'Output valid JSON: {"articles": [...]}\n'
+    "Do NOT wrap in markdown code blocks. Output raw JSON only. /no_think"
+)
+
 VLM_OCR_COLUMN = (
     "Transcribe ALL text in this newspaper column exactly as printed. "
     "This is a single column cropped from a historical Italian newspaper page (1880-1945). "
     "Preserve the original Italian text, including archaic spelling. "
     "Include every word — do not skip or summarize. "
-    "Output only the transcribed text, nothing else."
+    "Output only the transcribed text, nothing else. /no_think"
 )
 
 LLM_CLEANUP_V2 = (
@@ -101,6 +118,26 @@ LLM_POST_CORRECTION = (
     "- Translate anything\n\n"
     "Text to correct:\n{text}\n\n"
     "Output the corrected text only."
+)
+
+VLM_OCR_STRUCTURED_V3 = (
+    "You are an expert OCR system for historical Italian newspapers (1880-1945). "
+    "This image shows columns of dense Italian text in old typefaces.\n\n"
+    "CRITICAL RULES:\n"
+    "1. Read each column TOP-TO-BOTTOM before moving to the next column LEFT-TO-RIGHT\n"
+    "2. Transcribe ALL text — do not skip or summarize anything\n"
+    "3. Preserve the original Italian exactly as printed, including archaic spelling\n"
+    "4. Separate EVERY distinct content unit: news articles, editorials, advertisements, "
+    "classified ads, legal notices, obituaries, event listings, serialized fiction, "
+    "financial reports, weather, and any other distinct section\n"
+    "5. Even small ads and brief notices are separate content units — do not skip them\n\n"
+    "For each content unit provide:\n"
+    '- "unit_type": "article" | "advertisement" | "obituary" | "notice" | "editorial" | "fiction" | "classified"\n'
+    '- "headline": the headline or title text, or null if none\n'
+    '- "text": the COMPLETE transcribed text (do not truncate)\n'
+    '- "page_span": [page_number]\n\n'
+    'Output valid JSON: {"articles": [...]}\n'
+    "Do NOT wrap in markdown code blocks. Output raw JSON only."
 )
 
 WHOLE_ISSUE_VLM = (

@@ -28,8 +28,19 @@ def merge_pages(row: dict[str, tp.Any], *, config: MergePages) -> dict[str, tp.A
     _ = config
     page_texts: list[str] = json.loads(row["page_texts"])
 
+    layout_regions: list[dict[str, tp.Any]] = []
+    if "layout_json" in row and row["layout_json"]:
+        try:
+            layout_regions = json.loads(row["layout_json"])
+        except (json.JSONDecodeError, TypeError):
+            pass
+
     all_articles: list[dict[str, tp.Any]] = []
-    for page_num, page_text in enumerate(page_texts):
+    for crop_idx, page_text in enumerate(page_texts):
+        real_page = crop_idx + 1
+        if crop_idx < len(layout_regions):
+            real_page = layout_regions[crop_idx].get("page", crop_idx + 1)
+
         try:
             page_data = json.loads(_strip_markdown(page_text))
         except json.JSONDecodeError:
@@ -42,8 +53,7 @@ def merge_pages(row: dict[str, tp.Any], *, config: MergePages) -> dict[str, tp.A
             articles = page_data
 
         for art in articles:
-            if "page_span" not in art:
-                art["page_span"] = [page_num + 1]
+            art["page_span"] = [real_page]
             all_articles.append(art)
 
     return {**row, "result_json": json.dumps({"articles": all_articles})}

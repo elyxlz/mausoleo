@@ -81,7 +81,7 @@ def run_single(config_name: str, issue_date: str, force: bool = False) -> bool:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
     signal.signal(signal.SIGALRM, _timeout_handler)
-    timeout_secs = 900
+    timeout_secs = 3600
     signal.alarm(timeout_secs)
     try:
         issue = run_pipeline(config, images, date=issue_date)

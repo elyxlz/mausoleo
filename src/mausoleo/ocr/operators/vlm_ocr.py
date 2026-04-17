@@ -88,7 +88,11 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
 
     def _init_transformers_generic(self) -> None:
         import torch
-        from transformers import AutoModel, AutoModelForImageTextToText, AutoModelForVision2Seq, AutoProcessor, AutoTokenizer, BitsAndBytesConfig
+        from transformers import AutoModel, AutoModelForImageTextToText, AutoProcessor, AutoTokenizer, BitsAndBytesConfig
+        try:
+            from transformers import AutoModelForVision2Seq
+        except ImportError:
+            AutoModelForVision2Seq = AutoModelForImageTextToText
 
         load_kwargs: dict[str, tp.Any] = {"device_map": "auto", "trust_remote_code": True}
         if self.config.load_in_4bit:
@@ -157,7 +161,11 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
 
     def _init_hunyuan(self) -> None:
         import torch
-        from transformers import AutoModel, AutoModelForCausalLM, AutoModelForVision2Seq, AutoProcessor, BitsAndBytesConfig
+        from transformers import AutoModel, AutoModelForCausalLM, AutoProcessor, BitsAndBytesConfig
+        try:
+            from transformers import AutoModelForVision2Seq
+        except ImportError:
+            AutoModelForVision2Seq = AutoModel
 
         self.processor = AutoProcessor.from_pretrained(self.config.model, trust_remote_code=True)
 
