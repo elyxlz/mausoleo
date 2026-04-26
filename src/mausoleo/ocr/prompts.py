@@ -7,6 +7,14 @@ VLM_OCR_RAW = (
     "Output only the transcribed text, nothing else."
 )
 
+
+VLM_OCR_MARKDOWN_NATIVE = (
+    "Return the text content of this document in Markdown format. "
+    "Use # for main titles/headlines, ## for article headlines, and plain text for body paragraphs. "
+    "Separate distinct articles with two blank lines. "
+    "Preserve the original Italian text exactly as printed."
+)
+
 VLM_OCR_STRUCTURED = (
     "Transcribe this newspaper page and identify distinct content units "
     "(articles, advertisements, obituaries, notices). For each unit, provide:\n"
@@ -151,4 +159,65 @@ WHOLE_ISSUE_VLM = (
     'Output valid JSON with a single key "articles" containing these units '
     "ordered by position in the newspaper (front page first, left to right, top to bottom).\n"
     "Preserve the original Italian text exactly as printed."
+)
+
+
+VLM_OCR_ADS_FOCUSED = (
+    "You are an expert OCR system for historical Italian newspapers (1880-1945). "
+    "This image shows columns of dense Italian text in old typefaces.\n\n"
+    "CRITICAL RULES:\n"
+    "1. Read each column TOP-TO-BOTTOM before moving to the next column LEFT-TO-RIGHT\n"
+    "2. Transcribe ALL text — especially small ads, classifieds, and footer notices\n"
+    "3. Every distinct ad (even 1-line product mentions like 'Tabacco MIL', 'BUTON cognac', "
+    "'CERCASI apprendisti') is a SEPARATE unit — do NOT merge adjacent ads\n"
+    "4. Editorial credits like 'Direttore responsabile', 'Proprietà letteraria riservata' "
+    "are SEPARATE notices\n"
+    "5. Preserve the original Italian exactly as printed, including archaic spelling\n\n"
+    "For each content unit provide:\n"
+    '- "unit_type": "article" | "advertisement" | "obituary" | "notice" | "editorial" | "classified"\n'
+    '- "headline": the COMPLETE headline or null\n'
+    '- "text": the COMPLETE transcribed text\n'
+    '- "page_span": [page_number]\n\n'
+    'Output valid JSON: {"articles": [...]}. Do NOT wrap in markdown.'
+)
+
+
+VLM_OCR_PAGE_PAIR = (
+    "You are an expert OCR system for historical Italian newspapers (1880-1945). "
+    "You are shown TWO CONSECUTIVE PAGES of a single newspaper issue.\n\n"
+    "CRITICAL RULES:\n"
+    "1. Transcribe each column TOP-TO-BOTTOM, left-to-right, across both pages\n"
+    "2. Articles that START on page 1 and CONTINUE on page 2 must be output as ONE unit with page_span=[1,2]\n"
+    "3. Articles entirely on page 1: page_span=[1]. Articles entirely on page 2: page_span=[2]\n"
+    "4. Transcribe ALL text — do not skip or summarize\n"
+    "5. Preserve the original Italian exactly as printed, including archaic spelling\n"
+    "6. Separate distinct content units (articles, ads, obituaries, notices)\n\n"
+    "For each content unit provide:\n"
+    '- "unit_type": "article" | "advertisement" | "obituary" | "notice" | "editorial"\n'
+    '- "headline": the complete headline text or null\n'
+    '- "text": the COMPLETE transcribed text\n'
+    '- "page_span": [1] or [2] or [1,2]\n\n'
+    'Output valid JSON: {"articles": [...]}. Do NOT wrap in markdown.'
+)
+
+
+VLM_OCR_STRUCTURED_V4_CROSSPAGE = (
+    "You are an expert OCR system for historical Italian newspapers (1880-1945). "
+    "This image shows columns of dense Italian text in old typefaces.\n\n"
+    "CRITICAL RULES:\n"
+    "1. Read each column TOP-TO-BOTTOM before moving to the next column LEFT-TO-RIGHT\n"
+    "2. Transcribe ALL text — do not skip or summarize anything\n"
+    "3. Preserve the original Italian exactly as printed, including archaic spelling\n"
+    "4. Separate distinct content units (articles, ads, obituaries, notices)\n"
+    "5. If an article ends mid-sentence (no final period) AT THE BOTTOM OF A COLUMN, it likely continues\n"
+    "   on the next column or next page — still output what you can see, without inventing text\n\n"
+    "For each content unit provide:\n"
+    '- "unit_type": "article" | "advertisement" | "obituary" | "notice" | "editorial"\n'
+    '- "headline": the COMPLETE headline text or null\n'
+    '- "text": the COMPLETE transcribed text (do not truncate)\n'
+    '- "page_span": [page_number]\n'
+    '- "continues": true if the article text is clearly truncated at the end (ends mid-sentence, '
+    'mid-word, or with a dash/ellipsis), false otherwise\n\n'
+    'Output valid JSON: {"articles": [...]}\n'
+    "Do NOT wrap in markdown code blocks. Output raw JSON only."
 )

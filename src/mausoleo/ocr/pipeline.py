@@ -18,9 +18,18 @@ def encode_images(images: list[bytes]) -> str:
 
 def setup_ray(n_gpu_operators: int = 1) -> int:
     if not ray.is_initialized():
+        import os
+        import torch
+        torch_lib = os.path.join(os.path.dirname(torch.__file__), "lib")
+        cudnn_lib = os.path.join(os.path.dirname(torch.__file__), "..", "nvidia", "cudnn", "lib")
+        existing_ld = os.environ.get("LD_LIBRARY_PATH", "")
+        propagated_ld = f"{torch_lib}:{cudnn_lib}:{existing_ld}"
         ray.init(
             ignore_reinit_error=True,
-            runtime_env={"excludes": ["pyproject.toml", "uv.lock", ".venv", ".git"]},
+            runtime_env={
+                "excludes": ["pyproject.toml", "uv.lock", ".venv", ".git"],
+                "env_vars": {"LD_LIBRARY_PATH": propagated_ld},
+            },
         )
     n_gpu = int(ray.available_resources().get("GPU", 0))
     ctx = ray.data.DataContext.get_current()

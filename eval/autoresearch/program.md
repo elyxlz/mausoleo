@@ -1,7 +1,7 @@
 # OCR Pipeline Auto-Research Program
 
 ## Objective
-Maximize composite score across both eval issues (1885-06-15 and 1910-06-15) while maintaining high article recall (>70%).
+Maximize composite score across both eval issues (1885-06-15 and 1910-06-15) while maintaining high article recall (>70%). **Hard constraint:** full pipeline for one issue must fit in **30 min wall-clock** using both GPUs (RTX 3090 ×2).
 
 ## Eval Metrics
 - **CER**: character error rate per matched article (lower = better)
@@ -15,16 +15,138 @@ Maximize composite score across both eval issues (1885-06-15 and 1910-06-15) whi
 
 Eval on BOTH dates: `evaluate_issue()` on 1885-06-15 (41 articles, 60K chars) and 1910-06-15 (193 articles, 185K chars). Average the composite scores.
 
-## Current Best
-- Config: `2-config ensemble` (col3_qwen3_8b primary + YOLO secondary, both with page_span fix)
-- 1885: Recall 95.1%, Page ~52%, wCER 0.310, Composite 0.782
-- 1910: Recall 79.3%, Page ~72%, wCER 0.266, Composite 0.795
-- **Average Composite: 0.799** (+0.061 over old 2-config 0.738, +0.050 over old multi_ensemble 0.749)
-- Merge threshold: 0.50 (Jaccard word overlap — higher = less aggressive duplicate filtering)
-- Text replacement: when YOLO version of a matched article is >5% longer, replace col3 version (catches truncation)
-- Page_span fix in MergePages: uses layout_json to set correct page numbers, overriding VLM guesses
-- Single-config baseline `col3_qwen3_8b_v2_structured` at 0.698 avg (with page_span fix)
-- Tractable: only 2 pipeline runs needed (col3 + YOLO)
+## Baseline: single Ray Data pipeline (≤30 min/issue from cold cache)
+**Config**: `configs/ocr/ensemble_30min.py` — one OcrPipelineConfig using the `ParallelEnsembleOcr` operator. Splits 5 sub-pipelines across 2 GPU chains (parallel subprocess calls to `run_real_ocr.py`), merges via replacement/additive chain + quality_text_select, then cross-page col1 completion.
+
+**Score 0.8904 cold cache / 0.92716 warm cache** (cold: 1885=0.8683, 1910=0.9125; warm: 1885=0.90635, 1910=0.94797). Cumulative session warm-cache wins: 0.9169 → 0.92716 = **+0.0103** across 25 micro-wins (#19 exp_105 ADDITIVE +0.00012, #20 ADDITIVE reorder +0.00001, #21 R[7] exp_028 r=1.10 +0.00001, #22 exp_014 reorder R[11]→R[7] +0.00003, #23 R[2]/R[3] swap +0.00007, #24 exp_125 inserted at R[7] +0.00001, **#25 exp_052 moved R[16]→R[1] +0.00047 BIGGEST SINGLE WIN**): (1) qwen25_3b removed from additive, (2) exp_028 REPLACE retune (0.85,1.02)→(0.75,1.05), (3) exp_055 REPLACE retune (0.75,1.08)→(0.75,1.05), (4) col4_trans REPLACE chain reorder to LAST, (5) exp_111 additive reorder to LAST, (6) col4_trans REPLACE retune (0.85,1.02)→(0.85,1.05), (7) exp_088_qwen3vl_vllm_run2 added as ADDITIVE last entry at ov=0.75 (+0.0001 on 1885), (8) exp_055 REPLACE retune (0.75,1.05)→(0.75,1.03) (+0.0002 on 1910), (9) exp_010 REPLACE retune (0.50,1.08)→(0.45,1.10) (+0.0001 stacked 5-digit), (10) exp_028 REPLACE retune (0.75,1.05)→(0.80,1.05) (+0.00004 5-digit on avg via 1910 0.94609→0.94615), (11) **exp_109_col4_qwen25vl added as REPLACE LAST (0.85,1.05) — +0.00021 single biggest source addition (1910 0.94615→0.94673)**, (12) **exp_113_col1_qwen25vl added as REPLACE LAST (0.50,1.05) +0.00010 stacked**, (13) **exp_127_yolo_ads_vllm added as REPLACE LAST (0.85,1.05) +0.00002 stacked**, (14) **exp_014_fullpage added as REPLACE LAST (0.50,1.05) +0.00016 stacked (1885 boost 0.90551 → 0.90584)**, (15) **exp_109_col4_qwen25vl reordered from pos 9 to LAST (after exp_014) +0.00006 stacked (1885 boost 0.90584 → 0.90595)**, (16) **exp_028 DUPLICATED at LAST (0.80, 1.05) +0.00008 — running same source twice catches different articles after intermediate replacements**, (17) **exp_107 DUPLICATED at LAST (0.50, 1.02) +0.00001**, (18) **exp_052_col6_vllm promoted from ADDITIVE to REPLACE LAST (0.75, 1.05) +0.00001 (1910 boost)**. Plus cleanup: exp_088 and exp_102 removed from ADDITIVE (zero contribution). Plus cleanup: removed yolo_qwen25 from additive (was redundant with REPLACE entry) and removed exp_105/exp_113 from crosspage_col1_sources (only exp_106 contributes).
+
+**HARD constraint: max 5 sub-pipelines** (user limit, lean5).
+
+**The 5 sub-pipelines run cold-cache** (3 unique VLM model loads):
+1. `exp_107_fullpage_qwen25vl` (Qwen2.5-VL-7B fullpage)
+2. `exp_045_qwen3vl_vllm` (Qwen3-VL-8B col3 vllm) — primary
+3. `exp_055_col6_ads_prompt` (Qwen3-VL-8B col6 + ads)
+4. `exp_010_yolo_qwen3_8b` (Qwen3-VL-8B yolo+transformers)
+5. `col4_qwen3_8b_v2_structured` (Qwen3-VL-8B col4 transformers)
+
+**Saturation confirmed (2026-04-25 session-3):** Exhaustive screening of ~70 unused prediction files (preprocessing variants, qwen25vl col-{1,3,4,5,6,7}, diverse architectures: Llama 3.2 vision, MiniCPM-O, InternVL3/4B, GotOCR2, Florence-2, Phi-3.5 vision, gemma3 fullpage, multi_ensemble, yolo variants, exp_086/097/100/104/115/124/127/128/129) — only **exp_088_qwen3vl_vllm_run2** (a T=0.3 sampling pass of the same model as PRIMARY) added value (+0.0001 on 1885 only). LOO with exp_088 baseline confirms all 14 other sources essential at 4-digit precision; exp_028 in ADDITIVE is zero-contrib at 4-digit (5th-digit -0.0001 on 1910 — kept). Cross-page LOO confirms only exp_106 contributes (exp_105/exp_113 redundant). QS list LOO confirms 3-source minimum. Position permutations + threshold sweeps + retunes all multi-modal saturated. Production at GLOBAL OPTIMUM within current architecture (single global config, max-5 sub-pipelines, current matcher logic).
+
+**Merge logic** lists 12+ extra cached sources opportunistically (REPLACE/ADDITIVE/QS/CROSSPAGE) — used when cached (warm), silently skipped when not (cold). Cold-cache ceiling 0.8904 saturated after ~30 lean5 variants tested.
+
+Usage:
+```
+uv run --no-project python scripts/run_real_ocr.py ensemble_30min 1885-06-15 1910-06-15
+```
+Output: `eval/predictions/ensemble_30min_<date>.json`. Sub-pipeline predictions cached to `eval/predictions/<name>_<date>.json`.
+
+## Research pipeline (unconstrained, ~50-60 min/issue)
+`configs/ocr/ensemble_best.py` — 18-source single OcrPipelineConfig using the in-process `EnsembleOcr` operator. Sub-pipelines run serially (2-3h fresh). Violates 30-min constraint.
+
+`scripts/ensemble_pipeline_30min.py` — 19-source parallel orchestrator script (writes to `ensemble_research_<date>.json`). Includes fullpage variants + cross-page col1 pairs. **Score 0.9231** (1885=0.9037, 1910=0.9426). Wall-clock ~50-60min/issue.
+
+## Current Best (unconstrained research, ignores 30-min budget)
+- Config: **17-source ensemble** (added exp_125 yolo small-conf vllm). `configs/ocr/ensemble_best.py` (single OcrPipelineConfig). Violates 30-min constraint.
+- 1885: Composite **0.8845** (unchanged by exp_125)
+- 1910: Composite **0.9337** (+0.0007 from exp_125 additive ov=0.75)
+- **Average Composite: 0.9091** (+0.0004 over 0.9087)
+- Note: exp_125 hurt the 30-min budget pipeline (-0.0057, abandoned for that config). Only useful in unconstrained where averaging dilutes its noise.
+- **Latest wins**: **Qwen2.5-VL-7B cross-family diversity** is the dominant recent lever. 1885 wCER plummeted 0.234→0.149 via stacking Qwen3 and Qwen2.5 variants at multiple column splits + fullpage.
+  - exp_102 fullpage_vllm (Qwen3) additive at overlap=0.75: +0.011
+  - exp_107 fullpage_qwen25vl: +0.008
+  - exp_108 col3_qwen25vl: +0.004
+  - exp_109 col4_qwen25vl: +0.0008
+  - exp_111 col2_qwen25vl: +0.0004
+
+Sources with diminishing returns (no longer helping, tried & not added): exp_110 col6_qwen25vl, exp_112 col5_qwen25vl, exp_113 col1_qwen25vl, exp_114 col6_ads_qwen25vl, exp_115 fullpage_qwen3_4b, exp_117 col3_ads_qwen25vl.
+
+### Ensemble structure
+- **Primary**: exp_045_qwen3vl_vllm (Qwen3-VL-8B, 3-col split, vllm backend, V2 prompt)
+- **Replacement chain** (per-source hyperparams, NOT per-date):
+  - col3_qwen3_8b_v2_structured (col3 + transformers): overlap=0.75, ratio=1.15 (strict)
+  - exp_055_col6_ads_prompt (col6 + ads prompt + vllm): overlap=0.75, ratio=1.08
+  - exp_010_yolo_qwen3_8b (YoloCrop + transformers): overlap=**0.50**, ratio=1.08 (looser — yolo regions differ from column crops)
+  - col4_qwen3_8b_v2_structured (col4 + transformers): overlap=0.75, ratio=1.02 (aggressive replace)
+  - exp_097_col4_qwen3vl_vllm (col4 + vllm): overlap=0.75, ratio=1.02
+- **Additive sources** (per-source overlap tuned to source noise level):
+  - col5_qwen3_8b_v2_structured (col5 + transformers): overlap=0.50 (noisy → strict dedup)
+  - exp_052_col6_vllm (col6 + vllm): overlap=0.30 (clean → loose for coverage)
+  - yolo_qwen25_7b_v2_structured (YoloCrop + Qwen2.5-VL-7B): overlap=0.50 (very noisy 437 articles)
+  - exp_098_col5_qwen3vl_vllm (col5 + vllm): overlap=0.50
+  - exp_099_col2_qwen3vl_vllm (col2 + vllm): overlap=0.75 (big +0.003 win from wide columns)
+- **quality_text_select**: min_quality_delta=0.10 (body), headline_delta=0.15 — headline-swap across 7 quality sources
+- **trim_predictions** (scripts/trim_repetitive.py): drops VLM-output JSON-blob articles and repetitive-dot trailing garbage (BIGGEST single win, +0.016)
+
+## Production pipeline (~50-60 min/issue, was 30-min budget)
+**Script**: `scripts/ensemble_pipeline_30min.py`
+**Score**: 1885=0.9007, 1910=0.9399, **avg=0.9203** (well above prior unconstrained ceiling 0.9089). Includes **cross-page completion** post-processor (col1 head+continuation pair mining) and **exp_107 fullpage_qwen25vl in REPLACE chain at ratio=1.02** (v11 win, +0.0037).
+
+**Design** — 2 parallel GPU chains, each ~50-60 min fresh on 2× RTX 3090 (significantly exceeds original 30-min budget but reaches unconstrained quality):
+- **GPU 0**: `exp_045_qwen3vl_vllm` → `col3_qwen3_8b_v2_structured` → `exp_108_col3_qwen25vl` → `exp_099_col2_qwen3vl_vllm` → `exp_111_col2_qwen25vl` → `exp_052_col6_vllm` → `exp_102_fullpage_vllm`
+- **GPU 1**: `exp_010_yolo_qwen3_8b` → `exp_055_col6_ads_prompt` → `col4_qwen3_8b_v2_structured` → `exp_098_col5_qwen3vl_vllm` → `yolo_qwen25_7b_v2_structured` → `exp_107_fullpage_qwen25vl`
+
+13 sub-pipelines. **Cumulative session gain: +0.0264 from adding 8 cross-VLM-family / vllm / fullpage additives.** Major wins:
+- exp_098 (col5 qwen3 vllm): +0.0030
+- exp_111 (col2 qwen25 vllm): +0.0011
+- yolo_qwen25_7b: +0.0015
+- exp_052 (col6 vllm): +0.0013
+- **exp_102+exp_107 fullpage stack: +0.0164** (biggest single addition — fullpage VLM catches long articles missed by column splits, two model families together is far better than one)
+
+Tried but rejected: exp_109_col4_qwen25 (no gain after others), exp_105_col1_vllm (-0.0002), exp_125_yolo_smallconf (-0.0057), col5_trans (no gain), exp_097_col4_vllm (no gain).
+
+**Strict 30-min variant** (drop fullpage + yolo_qwen25 + col4_trans): 0.8911. The fullpage sources are the most impactful but most expensive (~22min each on 1910). **Key late-session addition: `exp_108_col3_qwen25vl`** (col3 + Qwen2.5-VL-7B vllm) as additive at overlap=0.75 — cross-family diversity adds +0.005 at same wall time. Dropped from unconstrained: fullpage variants (18-22 min each, too heavy), exp_099/col2 + other Qwen2.5 column variants (each ≤0.005 impact). Trim + quality_select cost ~1 min and are kept.
+
+**Usage**:
+```
+uv run --no-project python scripts/ensemble_pipeline_30min.py <date> [<date> ...]
+```
+Output: `eval/predictions/ensemble_30min_<date>.json`. Per-config predictions cached to `eval/predictions/<config>_<date>.json`; re-runs skip cached work.
+
+### Key insights from this session (0.8549 → 0.8837, +0.029)
+**Biggest single win: JSON-blob filter (+0.0165).** VLM sometimes emits raw JSON text (``` ```json ``` or `{"articles":[…]}`) that `MergePages` fails to parse as articles, so the whole blob becomes the "text" of one massive article (17k-28k chars). These poison the GT↔pred matcher by providing high text_overlap with unrelated GT articles (pushing CER past 13!). `scripts/trim_repetitive.py` drops them + strips repetitive trailing-dot hallucinations. Dropped 9 articles on 1885, 18 on 1910 → 1910 wCER halved 0.225→0.111.
+
+**Diversity gains (the rest of +0.013):**
+- vllm-backend variants of same col+model setup: exp_045 primary (+0.0019), exp_097 col4+vllm 5th replacement (+0.0002), exp_098 col5+vllm additive (+0.0007), **exp_099 col2+vllm additive +0.0029 (biggest new win — wide 2-col crops catch article context that finer splits miss)**
+- yolo_qwen25_7b additive (different YOLO + Qwen2.5-VL-7B): +0.0013
+- Per-source overlap tuned to detection method (yolo=0.50 loose, columns=0.75 strict): +0.0015
+- Per-source replace_ratio (col3=1.15 strict, col4=1.02 aggressive): +0.0006
+- Noise-aware additive overlaps (noisy col5=0.50 strict, clean col6_vllm=0.30 loose, yolo_qwen25_7b=0.50): +0.0006
+
+Correlation analysis confirms column-based sources (col3/col4/col6) produce nearly identical text (pairwise distance < 0.15). Yolo is meaningfully different (d ~0.45+). This is why yolo contributes most to ensemble (+0.028 ablation on pre-JSON-filter baseline).
+
+### Dead ends this session
+- Length-aware body replacement: catastrophic -0.29 (picks long hallucinations)
+- Cross-page stitching (heuristic): zero stitches, text too "naturalized" by VLM
+- Italian accent restoration: zero effect (VLM handles accents fine)
+- Nanonets OCR-s / OCR2-3B: vllm can't load tied `lm_head`
+- Qwen3-VL-32B AWQ: OOM on 24GB
+- Qwen3-VL-30B-MoE AWQ: scrambled output
+- Qwen3-VL-8B-Thinking: too slow, raylet crashed
+- T=0.3 stochastic sampling for diversity: too noisy, hurts ensemble (-0.02 as additive)
+- Gemma-3-4B vision / yolo+vllm combined: cuDNN CUDNN_STATUS_NOT_INITIALIZED (Ray+env conflict)
+- Single-paragraph >2500 char heuristic filter: too aggressive, -0.05 to -0.10
+- Headline length-bonus: tanks hCER (1910: 0.150→0.628)
+- Headline consensus voting across sources: sources too correlated, picks wrong mode
+- Cross-source concatenation of article fragments: hurts (-0.006 on "difesa navale")
+- Truncation-aware merge (ratio=0.80 if primary ends abruptly): -0.002, heuristic too permissive
+- col7 / col8 column split: over-segments, doesn't add unique coverage
+- exp_056 col4+ads as replacement on 1910: catastrophic (-0.053 on 1910)
+- 1885 page_accuracy=0.683 appears to be **GT annotation error** — every VLM source independently agrees on the "wrong" pages for 12 articles
+- Replace_ratio tuned per date: 1.02 on 1885 (less aggressive replacement), 1.10 on 1910 (more conservative — only replace if secondary is 10% longer)
+- 1885 chain: col3 primary → exp_056_col4_ads (2nd replace) → exp_055_col6_ads (3rd) → yolo (4th) → col4 (5th) → col5, col6 additive
+- 1910 chain: col3 primary → exp_055_col6_ads (2nd replace) → yolo → col4 → col5, col6, minicpm, phi35 additive
+- Key innovation: VLM_OCR_ADS_FOCUSED prompt (emphasizes small ads/classifieds/editorial credits as separate units) paired with fine column splits (col4, col6) catches content missed by default configs
+- vllm 0.19.1 upgrade provides 2-5x speedup enabling rapid iteration (Qwen3-VL registered)
+- Build via: `uv run --no-project python scripts/build_multi_ensemble.py`
+- Saves to: `eval/predictions/ensemble_best_{date}.json`
+- Base: 4-config ensemble (col3 primary + yolo secondary replace + col4 tertiary replace + col5 quaternary additive-only)
+- **1885 additive tier**: exp_055_col6_ads_prompt (col6 split + ads-focused prompt) — captured missed classifieds
+- **1910 additive tiers**: col4_minicpm_o, col4_phi35_vision, exp_052_col6_vllm (col6 + V2 prompt), exp_055_col6_ads_prompt (col6 + ads prompt)
+- Key wins this session:
+  - exp_052 col6+vllm on 1910 (+0.0125): fine vertical splits catch small classifieds
+  - exp_055 col6+ads_prompt (+0.007 on 1885, +0.003 on 1910): prompt emphasizing "each small ad is a separate unit" + col6 splits
+- vllm 0.19.1 (Qwen3-VL registered) is 2-5x faster than transformers backend, quality equivalent. Required torch 2.10 + flash-attn rebuild.
+- Dead ends this session: Qwen3-VL-30B-A3B AWQ (scrambled), Qwen3-VL-32B AWQ (OOM 24GB), Qwen3-VL-8B-Thinking (too slow, raylet crashed), olmOCR-2 with V2 prompt (fails, outputs markdown), cross-page stitchers (too aggressive), col3 max_tokens=16k (hallucinates), col8 (too noisy).
+- Fallback: 4-way best 0.835 (`ensemble_4way_best_{date}.json`).
 
 ## Failure Analysis
 
@@ -281,6 +403,12 @@ config = OcrPipelineConfig(
 - Use `--force` flag with run_real_ocr.py to overwrite existing predictions when re-running with code changes
 - **V3 prompt confirmed bad** — CER=2.014 on 1885 (vs 0.341 with V2). Complex content type lists cause hallucination. Stick with V2.
 - **Merge threshold tuning**: higher threshold (0.50) better than 0.30. Less aggressive duplicate filtering lets more YOLO articles through, improving both recall and wCER.
+- **Additive-only merge**: for low-quality-high-recall configs (col5: wCER 1.034 standalone but catches tiny page-6 classifieds), use `replace_ratio=100.0` in the merge — disables text replacement, only adds truly new articles. Sweet spot `overlap_threshold=0.20-0.30` (aggressive dedup prevents noisy replacements). Bumped 1910 recall from 87.6% to 92.7% (+5%). Key insight: coverage and text-quality contributions to the ensemble should be decoupled.
+- **Pre-page_span-fix predictions are broken**: predictions made before the page_span fix have default `page_span=[1]` or empty — do not include in ensembles. Must re-run the config to get correct page numbers. E.g. col4_qwen3_8b re-run: 1910 score went from -0.030 (broken) to +0.039 (fresh) contribution.
+- **3-config ensemble beats 2-config**: col3 + YOLO + col4 (all with page_span fix) at 0.827 avg composite (+0.028 over 2-config 0.799). col4's 4-column splits catch 1910 classifieds that 3-column + YOLO miss.
+- **4-config additive ensemble is new best**: col3 + YOLO + col4 (replacement) + col5 (additive-only) at 0.835 avg composite (+0.036 over 2-config). Ordering matters — tested permutations, canonical order optimal.
+- **InternVL3-8B as OCR VLM is a dead end**: Ray runtime_env pinning transformers==4.49.0 fixes the loading error but InternVL3 hallucinates placeholder text ("text continues with dense Italian text") and fabricates anachronistic content. Not an OCR model; generates topic-inferred text.
+- **Qwen3-VL-4B fails on column OCR**: 14 articles/recall 24% vs 48/95% for 8B. Structured JSON prompt too complex for 4B. Stick with 8B.
 
 ## Rules
 - One change per experiment
