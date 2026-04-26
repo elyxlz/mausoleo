@@ -12,6 +12,7 @@ GPU1_CHAIN = (
     "exp_134_yolo_vllm_strict",
     "exp_138_col4_qwen25_vllm",
     "exp_140_yolo_smallregion_vllm",
+    "exp_142_col5_qwen25_vllm",
 )
 
 
@@ -32,6 +33,7 @@ config = OcrPipelineConfig(
             additive_sources=(
                 ("exp_055_col6_ads_prompt",        0.88, 100.0),
                 ("exp_140_yolo_smallregion_vllm",  0.85, 100.0),
+                ("exp_142_col5_qwen25_vllm",       0.85, 100.0),
             ),
             quality_select_sources=(
                 "exp_045_qwen3vl_vllm",
