@@ -29,7 +29,7 @@ config = OcrPipelineConfig(
                 ("exp_107_fullpage_qwen25vl",   0.50, 1.02),
             ),
             additive_sources=(
-                ("exp_055_col6_ads_prompt", 0.90, 100.0),
+                ("exp_055_col6_ads_prompt", 0.88, 100.0),
             ),
             quality_select_sources=(
                 "exp_045_qwen3vl_vllm",
