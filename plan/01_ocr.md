@@ -368,3 +368,43 @@ Consolidated scattered eval code into single module `src/mausoleo/eval/evaluate.
 Un-gitignored `eval/predictions/` — 194 prediction files now tracked in git.
 Removed obsolete: `eval/compare.py`, old `evaluate.py`, bootstrap scripts, one-off GT builders.
 Added `/ocr-autoresearch` skill for automated benchmark hillclimbing (Karpathy autoresearch pattern).
+
+### 2026-04-26: Lean5 cold-cache rebaseline + constraint reformalization
+
+**The "warm-cache cheating" problem**: Discovered that the 0.92717 score in earlier sessions used 24 sources in REPLACE/ADDITIVE/crosspage chains, but only 5 of those (the gpu_chains) are actually generated cold-cache. The other 19 were silently used from previous experiment cache. A fresh-machine cold-cache run with the same config would silently skip 19 sources and score much lower.
+
+Stripped production config to ONLY reference sources actually run cold-cache. Real cold-cache score with that config: **0.88682** (1885=0.86297, 1910=0.91066) — well below the inflated 0.92717.
+
+**Constraints (formalized)**:
+- **HARD**: ≤30 min wall-clock per issue from cold cache (max(GPU0 chain, GPU1 chain) on 2× RTX 3090 24GB)
+- **HARD**: Fully standalone — every run regenerates all sub-pipeline predictions from raw images, zero prior computation
+- ~~Max 5 sub-pipelines~~ — **dropped 2026-04-26**, only 30-min budget matters now
+
+**Lean5 wins (0.88682 → 0.89198, +0.00516)**:
+1. exp_107 fullpage_qwen25vl as REPLACE pos 0 (+0.00007)
+2. col4_qwen3_8b at REPLACE pos 1 (+0.00033)
+3. quality_select sources = all 5 sub-pipelines (+0.00316 cumulative)
+4. exp_055 ADDITIVE at ov=0.88 (+0.00020)
+5. primary_name = exp_107 (+0.00006)
+6. exp_010_yolo ov 0.45→0.25 (+0.00122)
+7. exp_055 in REPLACE ov=0.30 r=1.02 (+0.00012)
+
+**Verified essential**:
+- Qwen2.5-VL-7B fullpage (exp_107) — replacing with any Qwen3 fullpage drops 1885 by 0.02-0.04
+- Transformers backend for col4 — vllm version closes gap with `vllm_strict=True` (dtype=bf16, prefix_caching=False, seed=0) added to `VlmOcr` config
+
+**vllm strict mode investigation**: `enable_prefix_caching=False` is critical for output match with transformers (~30-50% slower but score within -0.0002). Even at temperature=0, prefix caching's KV reuse introduces numerical precision differences that change generated tokens.
+
+**Cold-cache timings (1885, 4 pages)**:
+| Pipeline | Time | Backend |
+|---|---|---|
+| exp_107 fullpage Qwen2.5 | 4m 20s | vllm |
+| exp_045 col3 Qwen3 | 5m 27s | vllm |
+| exp_055 col6+ads Qwen3 | 7m 7s | vllm |
+| exp_134 yolo Qwen3 strict | 6m 21s | vllm (prefix_caching=True in this run; ~9 min with prefix=False) |
+| col4_qwen3_8b | **20m 45s** | transformers ← bottleneck |
+| **exp_136 col4 Qwen3 vllm** | **5m 9s** | vllm (4× faster than transformers) |
+
+**Production budget**: max(GPU0 chain 16m54s, GPU1 chain 27m6s) = ~27 min on 1885; extrapolates to ~40 min on 1910 (over budget). col4 transformers is THE bottleneck.
+
+**Current path**: switch col4 to vllm (~5 min); use saved budget headroom to add more sub-pipelines (col1+crosspage, exp_028 yolo_smallregion, exp_098 col5, etc.) targeting score recovery toward warm-cache 0.927.
