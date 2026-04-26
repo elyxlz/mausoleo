@@ -42,6 +42,7 @@ class VlmOcr(BaseOperatorConfig):
     max_model_len: int = 32768
     backend: tp.Literal["vllm", "transformers"] = "transformers"
     load_in_4bit: bool = False
+    vllm_strict: bool = False
 
 
 @register_operator(VlmOcr, operation=OperatorType.MAP_BATCHES)
@@ -84,7 +85,7 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
     def _init_vllm(self) -> None:
         from vllm import LLM, SamplingParams
 
-        self.llm = LLM(
+        llm_kwargs: dict[str, tp.Any] = dict(
             model=self.config.model,
             trust_remote_code=True,
             gpu_memory_utilization=0.92,
@@ -92,6 +93,11 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
             limit_mm_per_prompt={"image": 1},
             enforce_eager=True,
         )
+        if self.config.vllm_strict:
+            llm_kwargs["dtype"] = "bfloat16"
+            llm_kwargs["enable_prefix_caching"] = False
+            llm_kwargs["seed"] = 0
+        self.llm = LLM(**llm_kwargs)
         self.sampling_params = SamplingParams(temperature=self.config.temperature, max_tokens=self.config.max_tokens)
 
     def _init_transformers(self) -> None:
