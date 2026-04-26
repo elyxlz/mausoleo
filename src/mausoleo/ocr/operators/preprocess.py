@@ -12,6 +12,7 @@ from mausoleo.ocr.operators.base import BaseOperatorConfig, OperatorType, regist
 class Preprocess(BaseOperatorConfig):
     grayscale: bool = True
     max_dimension: int = 2000
+    upscale: float = 1.0
 
 
 @register_operator(Preprocess, operation=OperatorType.MAP)
@@ -31,6 +32,10 @@ def preprocess(row: dict[str, tp.Any], *, config: Preprocess) -> dict[str, tp.An
         if config.grayscale:
             img = img.convert("L")
 
+        if config.upscale != 1.0:
+            new_size = (int(img.width * config.upscale), int(img.height * config.upscale))
+            img = img.resize(new_size, Image.LANCZOS)
+
         max_dim = max(img.size)
         if max_dim > config.max_dimension:
             ratio = config.max_dimension / max_dim
@@ -38,7 +43,7 @@ def preprocess(row: dict[str, tp.Any], *, config: Preprocess) -> dict[str, tp.An
             img = img.resize(new_size, Image.LANCZOS)
 
         buf = io.BytesIO()
-        img.save(buf, format="JPEG")
+        img.save(buf, format="JPEG", quality=95)
         processed.append(buf.getvalue())
 
     new_b64 = "|".join(base64.b64encode(img).decode() for img in processed)

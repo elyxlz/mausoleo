@@ -51,10 +51,35 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
         self.model_type: ModelType = _detect_model_type(config.model)
         if config.mock:
             return
+        self._prime_cuda()
         if config.backend == "vllm":
             self._init_vllm()
         else:
             self._init_transformers()
+
+    @staticmethod
+    def _prime_cuda() -> None:
+        import os, torch
+        os.environ.setdefault("TORCH_CUDNN_V8_API_DISABLED", "1")
+        torch.backends.cudnn.enabled = False
+
+        try:
+            from transformers import image_transforms
+            _orig_normalize = image_transforms.normalize
+
+            def _patched_normalize(image, mean, std, *args, **kwargs):
+                import numpy as np
+                m = np.asarray(mean)
+                s = np.asarray(std)
+                if m.ndim > 1:
+                    m = m.flatten()[: image.shape[-1]] if image.ndim >= 3 else m.flatten()
+                if s.ndim > 1:
+                    s = s.flatten()[: image.shape[-1]] if image.ndim >= 3 else s.flatten()
+                return _orig_normalize(image, m, s, *args, **kwargs)
+
+            image_transforms.normalize = _patched_normalize
+        except Exception:
+            pass
 
     def _init_vllm(self) -> None:
         from vllm import LLM, SamplingParams
@@ -62,9 +87,10 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
         self.llm = LLM(
             model=self.config.model,
             trust_remote_code=True,
-            gpu_memory_utilization=0.85,
+            gpu_memory_utilization=0.92,
             max_model_len=self.config.max_model_len,
             limit_mm_per_prompt={"image": 1},
+            enforce_eager=True,
         )
         self.sampling_params = SamplingParams(temperature=self.config.temperature, max_tokens=self.config.max_tokens)
 
@@ -191,8 +217,8 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
         from transformers import AutoModel, AutoTokenizer
 
         self.hf_model = AutoModel.from_pretrained(
-            self.config.model, device_map="auto", trust_remote_code=True, torch_dtype=torch.bfloat16
-        )
+            self.config.model, trust_remote_code=True, torch_dtype=torch.bfloat16
+        ).cuda().eval()
         self.processor = AutoTokenizer.from_pretrained(self.config.model, trust_remote_code=True)
 
     def _init_image_text_model(self, *, padding_side: str | None = None) -> None:

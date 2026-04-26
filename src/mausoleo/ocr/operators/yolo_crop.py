@@ -76,6 +76,22 @@ class YoloCropOperator(StatefulOperator[YoloCrop]):
         self.config = config
         if config.mock:
             return
+
+        import os, torch
+
+        torch_lib = os.path.join(os.path.dirname(torch.__file__), "lib")
+        cudnn_lib = os.path.join(os.path.dirname(torch.__file__), "..", "nvidia", "cudnn", "lib")
+        existing_ld = os.environ.get("LD_LIBRARY_PATH", "")
+        os.environ["LD_LIBRARY_PATH"] = f"{torch_lib}:{cudnn_lib}:{existing_ld}"
+
+        try:
+            _ = torch.nn.functional.conv2d(
+                torch.randn(1, 1, 4, 4, device="cuda"),
+                torch.randn(1, 1, 3, 3, device="cuda"),
+            )
+        except Exception:
+            torch.backends.cudnn.enabled = False
+
         from huggingface_hub import hf_hub_download
 
         weights_path = hf_hub_download(config.model, "doclayout_yolo_docstructbench_imgsz1024.pt")

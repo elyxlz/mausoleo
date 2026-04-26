@@ -314,6 +314,48 @@ Three systematic failure modes identified:
 
 Research directions prioritized and documented in `eval/autoresearch/program.md` for automated hillclimbing via `/ocr-autoresearch` skill.
 
+### 2026-04-22/23: Composite-score hillclimb (0.799 → 0.8837)
+
+Extended autoresearch loop across ~100 experiments. Full log: `eval/autoresearch/log.jsonl`. Full state: `eval/autoresearch/program.md`.
+
+**Composite score progression (avg across 1885-06-15 + 1910-06-15):**
+- 0.799 — 2-config ensemble (col3 primary + yolo secondary)
+- 0.835 — 4-config with col5 additive (EXP 038)
+- 0.8549 — per-date replace_ratio tuning (EXP 058) — starting point of this session
+- 0.8567 — dropped phi35/minicpm noise + quality_delta=0.10 (EXP 069)
+- 0.8586 — exp_045 (vllm variant of col3) as primary (EXP 072)
+- 0.8599 — yolo_qwen25_7b additive (EXP 074)
+- 0.8603–0.8635 — per-source overlap/ratio tuning (EXP 077–083)
+- **0.8800 — JSON-blob filter (`scripts/trim_repetitive.py`) (EXP 089)** — biggest single win, +0.0165
+- 0.8808 — exp_098 col5+vllm additive (EXP 098)
+- **0.8837 — exp_099 col2+vllm additive at overlap=0.75 (EXP 099)** — second biggest, +0.0029
+
+**Key architectural learnings:**
+
+1. **VLMs occasionally leak raw JSON into article text** when `MergePages` fails to parse their output. Always post-filter predictions by detecting text starting with ` ```json `, `{"articles":` or containing `"unit_type"+"paragraphs"` patterns, plus strip repetitive trailing-dot hallucinations. `scripts/trim_repetitive.py`.
+
+2. **Backend diversity is a free lunch.** Same model + same prompt under vllm vs transformers produces meaningfully different text (sampling params differ); both in the ensemble is better than either alone. Applies at col3, col4, col5, col6.
+
+3. **Column granularity diversity matters.** col2 (wide), col3/4/5/6 (progressively finer), plus yolo region detection all contribute unique coverage. col7 over-segments without new coverage.
+
+4. **Per-source hyperparameters beat uniform.** Different sources detect articles with different boundaries, so:
+   - Yolo-based sources: `overlap_threshold=0.50` (regions don't align to columns)
+   - Column-based sources: `overlap_threshold=0.75` (strict dedup)
+   - Noisy additives (col5, yolo_qwen25_7b): strict overlap to filter bad matches
+   - Clean additives (col6_vllm): loose overlap for coverage
+   - col3 primary-sibling: `replace_ratio=1.15` (strict)
+   - col4 : `replace_ratio=1.02` (aggressive — 4-col splits often genuinely better)
+
+5. **Reliable dead ends**: cross-page article stitching (VLM naturalizes text), accent restoration, stochastic sampling as diversity, length-aware body replacement, headline consensus voting, most 30B+ quantized models, Nanonets/Gemma3 in vllm (tied lm_head / cuDNN conflicts).
+
+**Unconstrained pipeline**: `scripts/build_multi_ensemble.py` — 16 sub-pipelines + ensemble, reproduces **0.9087**. Runtime: ~2-3 hours for one issue on 2× RTX 3090 — violates the 30 min/issue production constraint. Kept as research upper bound.
+
+**Late-session breakthroughs (2026-04-23)**:
+1. **Whole-page VLM** additives at overlap=0.75: +0.011. Fullpage captures long multi-column articles (like "deputati-telegrafo" spanning 2 columns) that all column-split configs truncate. 1885 wCER dropped 0.234→0.182.
+2. **Qwen2.5-VL-7B cross-family diversity** at col2/col3/col4/fullpage: +0.013 stacked. Different pre-training, different error patterns → orthogonal coverage. 1885 wCER 0.182→0.149.
+
+**Production pipeline (30 min/issue)**: `scripts/ensemble_pipeline_30min.py` — **0.8777 avg** (only -0.006 from unconstrained). 6 configs in 2 parallel GPU chains: GPU 0 runs `exp_045 → col3_trans → exp_099_col2_vllm` (~24-28 min); GPU 1 runs `exp_010_yolo → exp_055_col6_ads → col4_trans` (~25-28 min). Wall-clock max ≤ 30 min.
+
 ### 2026-04-14: Eval framework consolidation
 
 Consolidated scattered eval code into single module `src/mausoleo/eval/evaluate.py`:
