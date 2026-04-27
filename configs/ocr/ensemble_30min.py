@@ -31,7 +31,7 @@ config = OcrPipelineConfig(
                 ("exp_107_fullpage_qwen25vl",       0.50, 1.02),
                 ("exp_138_col4_qwen25_vllm",        0.85, 1.05),
                 ("exp_140_yolo_smallregion_vllm",   0.85, 1.02),
-                ("exp_102_fullpage_vllm",           0.50, 1.05),
+                ("exp_102_fullpage_vllm",           0.55, 1.05),
                 ("exp_097_col4_qwen3vl_vllm",       0.55, 1.05),
                 ("exp_142_col5_qwen25_vllm",        0.85, 1.05),
             ),
