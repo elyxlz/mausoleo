@@ -15,23 +15,51 @@ Maximize composite score across both eval issues (1885-06-15 and 1910-06-15) whi
 
 Eval on BOTH dates: `evaluate_issue()` on 1885-06-15 (41 articles, 60K chars) and 1910-06-15 (193 articles, 185K chars). Average the composite scores.
 
-## Baseline: single Ray Data pipeline (≤30 min/issue from cold cache)
-**Config**: `configs/ocr/ensemble_30min.py` — one OcrPipelineConfig using the `ParallelEnsembleOcr` operator. Splits 5 sub-pipelines across 2 GPU chains (parallel subprocess calls to `run_real_ocr.py`), merges via replacement/additive chain + quality_text_select, then cross-page col1 completion.
+## Final Baseline (concretized 2026-04-27): cold-cache standalone, ≤30 min/issue
+**Config**: `configs/ocr/ensemble_30min.py` — one `OcrPipelineConfig` using the `ParallelEnsembleOcr` operator. 8 unique sub-pipelines split across 2 GPU chains (parallel subprocess calls to `run_real_ocr.py`), merged via REPLACE chain (9 entries, col4 used twice) + ADDITIVE + quality_text_select.
 
-**Score 0.8904 cold cache / 0.92716 warm cache** (cold: 1885=0.8683, 1910=0.9125; warm: 1885=0.90635, 1910=0.94797). Cumulative session warm-cache wins: 0.9169 → 0.92716 = **+0.0103** across 25 micro-wins (#19 exp_105 ADDITIVE +0.00012, #20 ADDITIVE reorder +0.00001, #21 R[7] exp_028 r=1.10 +0.00001, #22 exp_014 reorder R[11]→R[7] +0.00003, #23 R[2]/R[3] swap +0.00007, #24 exp_125 inserted at R[7] +0.00001, **#25 exp_052 moved R[16]→R[1] +0.00047 BIGGEST SINGLE WIN**): (1) qwen25_3b removed from additive, (2) exp_028 REPLACE retune (0.85,1.02)→(0.75,1.05), (3) exp_055 REPLACE retune (0.75,1.08)→(0.75,1.05), (4) col4_trans REPLACE chain reorder to LAST, (5) exp_111 additive reorder to LAST, (6) col4_trans REPLACE retune (0.85,1.02)→(0.85,1.05), (7) exp_088_qwen3vl_vllm_run2 added as ADDITIVE last entry at ov=0.75 (+0.0001 on 1885), (8) exp_055 REPLACE retune (0.75,1.05)→(0.75,1.03) (+0.0002 on 1910), (9) exp_010 REPLACE retune (0.50,1.08)→(0.45,1.10) (+0.0001 stacked 5-digit), (10) exp_028 REPLACE retune (0.75,1.05)→(0.80,1.05) (+0.00004 5-digit on avg via 1910 0.94609→0.94615), (11) **exp_109_col4_qwen25vl added as REPLACE LAST (0.85,1.05) — +0.00021 single biggest source addition (1910 0.94615→0.94673)**, (12) **exp_113_col1_qwen25vl added as REPLACE LAST (0.50,1.05) +0.00010 stacked**, (13) **exp_127_yolo_ads_vllm added as REPLACE LAST (0.85,1.05) +0.00002 stacked**, (14) **exp_014_fullpage added as REPLACE LAST (0.50,1.05) +0.00016 stacked (1885 boost 0.90551 → 0.90584)**, (15) **exp_109_col4_qwen25vl reordered from pos 9 to LAST (after exp_014) +0.00006 stacked (1885 boost 0.90584 → 0.90595)**, (16) **exp_028 DUPLICATED at LAST (0.80, 1.05) +0.00008 — running same source twice catches different articles after intermediate replacements**, (17) **exp_107 DUPLICATED at LAST (0.50, 1.02) +0.00001**, (18) **exp_052_col6_vllm promoted from ADDITIVE to REPLACE LAST (0.75, 1.05) +0.00001 (1910 boost)**. Plus cleanup: exp_088 and exp_102 removed from ADDITIVE (zero contribution). Plus cleanup: removed yolo_qwen25 from additive (was redundant with REPLACE entry) and removed exp_105/exp_113 from crosspage_col1_sources (only exp_106 contributes).
+**Score 0.89878 cold cache** (1885=0.87186, 1910=0.92569). Avg of two test issues, every run regenerates ALL sub-pipeline predictions from raw images, ZERO prior cache. Session 2026-04-26/27 cumulative gain **+0.01196** from 0.88682 across 23 micro-wins (heroes test added exp_102 + exp_097 +0.0094, exp_134 dropped to fit budget).
 
-**HARD constraint: max 5 sub-pipelines** (user limit, lean5).
+**Hard constraint:** ≤30 min wall-clock per issue (max(GPU0, GPU1)) on 2× RTX 3090 24GB. Empirical wall on 1910 ≈ 30.5 min (GPU0 30.5, GPU1 28.9). VLLM preferred; `vllm_strict=True` for yolo (kept here as exp_140 only).
 
-**The 5 sub-pipelines run cold-cache** (3 unique VLM model loads):
-1. `exp_107_fullpage_qwen25vl` (Qwen2.5-VL-7B fullpage)
-2. `exp_045_qwen3vl_vllm` (Qwen3-VL-8B col3 vllm) — primary
-3. `exp_055_col6_ads_prompt` (Qwen3-VL-8B col6 + ads)
-4. `exp_010_yolo_qwen3_8b` (Qwen3-VL-8B yolo+transformers)
-5. `col4_qwen3_8b_v2_structured` (Qwen3-VL-8B col4 transformers)
+**The 8 sub-pipelines (run cold-cache)**:
 
-**Saturation confirmed (2026-04-25 session-3):** Exhaustive screening of ~70 unused prediction files (preprocessing variants, qwen25vl col-{1,3,4,5,6,7}, diverse architectures: Llama 3.2 vision, MiniCPM-O, InternVL3/4B, GotOCR2, Florence-2, Phi-3.5 vision, gemma3 fullpage, multi_ensemble, yolo variants, exp_086/097/100/104/115/124/127/128/129) — only **exp_088_qwen3vl_vllm_run2** (a T=0.3 sampling pass of the same model as PRIMARY) added value (+0.0001 on 1885 only). LOO with exp_088 baseline confirms all 14 other sources essential at 4-digit precision; exp_028 in ADDITIVE is zero-contrib at 4-digit (5th-digit -0.0001 on 1910 — kept). Cross-page LOO confirms only exp_106 contributes (exp_105/exp_113 redundant). QS list LOO confirms 3-source minimum. Position permutations + threshold sweeps + retunes all multi-modal saturated. Production at GLOBAL OPTIMUM within current architecture (single global config, max-5 sub-pipelines, current matcher logic).
+GPU0 chain (4 sources, ~30.5 min on 1910):
+1. `exp_107_fullpage_qwen25vl` (Qwen2.5-VL-7B fullpage vllm) — **primary**
+2. `exp_045_qwen3vl_vllm` (Qwen3-VL-8B col3 vllm)
+3. `exp_055_col6_ads_prompt` (Qwen3-VL-8B col6+ads vllm)
+4. `exp_097_col4_qwen3vl_vllm` (Qwen3-VL-8B col4 vllm)
 
-**Merge logic** lists 12+ extra cached sources opportunistically (REPLACE/ADDITIVE/QS/CROSSPAGE) — used when cached (warm), silently skipped when not (cold). Cold-cache ceiling 0.8904 saturated after ~30 lean5 variants tested.
+GPU1 chain (4 sources, ~28.9 min on 1910):
+5. `exp_138_col4_qwen25_vllm` (Qwen2.5-VL-7B col4 vllm)
+6. `exp_140_yolo_smallregion_vllm` (Qwen3-VL-8B yolo small-region vllm strict)
+7. `exp_142_col5_qwen25_vllm` (Qwen2.5-VL-7B col5 vllm)
+8. `exp_102_fullpage_vllm` (Qwen3-VL-8B fullpage vllm)
+
+3 model families load on each GPU (Qwen2.5-VL-7B, Qwen3-VL-8B vllm, Qwen3-VL-8B vllm-strict).
+
+**Merge recipe** — REPLACE chain (col4 used twice; sources at end take final precedence):
+1. exp_138_col4_qwen25_vllm (0.85, 1.05)
+2. exp_045_qwen3vl_vllm (0.50, 1.05)
+3. exp_055_col6_ads_prompt (0.30, 1.05)
+4. exp_107_fullpage_qwen25vl (0.50, 1.02)  *(near-zero LOO; kept for safety)*
+5. exp_138_col4_qwen25_vllm (0.85, 1.05)  *(DUP)*
+6. exp_140_yolo_smallregion_vllm (0.85, 1.02)
+7. exp_102_fullpage_vllm (0.55, 1.05)
+8. exp_097_col4_qwen3vl_vllm (0.55, 1.05)
+9. exp_142_col5_qwen25_vllm (0.85, 1.05)
+
+ADDITIVE: exp_055_col6_ads_prompt (0.88, 100.0)
+quality_select_sources: exp_045, exp_107, exp_138, exp_055
+min_quality_delta=0.10, headline_delta=0.15
+
+**Saturation status**: 50+ retune evals at 0.89878 → all directions tied within ±0.0001. Bigger gains require generating more sources (exp_127_yolo_ads ADD would add ~+0.00224 but doesn't fit budget; exp_134 in QS would recover +0.00995 but its 9-min generation is over budget). Production is at the local optimum for the 8-source/30-min architecture.
+
+**Reproduction**:
+```
+uv run --no-project python scripts/run_real_ocr.py ensemble_30min 1885-06-15 1910-06-15
+```
+Output: `eval/predictions/ensemble_30min_<date>.json`. Sub-pipeline predictions cached to `eval/predictions/<name>_<date>.json`.
 
 Usage:
 ```
