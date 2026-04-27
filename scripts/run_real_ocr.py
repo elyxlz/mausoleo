@@ -114,20 +114,46 @@ def run_single(config_name: str, issue_date: str, force: bool = False) -> bool:
 
 
 def main() -> None:
+    import re
+
     if len(sys.argv) < 2 or sys.argv[1] in ("-h", "--help"):
         configs = list_configs()
-        print(f"usage: run_real_ocr.py <config|all> [date|all] [--force]")
+        print(f"usage: run_real_ocr.py <config|all> [<config> ...] [date|all] [--force]")
         print(f"\navailable configs ({len(configs)}):")
         for c in configs:
             print(f"  {c}")
         return
 
-    config_name = sys.argv[1]
-    issue_date = sys.argv[2] if len(sys.argv) > 2 else "all"
+    date_re = re.compile(r"^\d{4}-\d{2}-\d{2}$")
     force = "--force" in sys.argv
 
-    dates = ISSUE_DATES if issue_date == "all" else [issue_date]
-    configs = list_configs() if config_name == "all" else [config_name]
+    raw_configs: list[str] = []
+    raw_dates: list[str] = []
+    for tok in sys.argv[1:]:
+        if tok == "--force":
+            continue
+        if date_re.match(tok) or tok == "all":
+            raw_dates.append(tok)
+        else:
+            raw_configs.append(tok)
+
+    if not raw_configs:
+        raw_configs = ["all"]
+    if not raw_dates:
+        raw_dates = ["all"]
+
+    dates: list[str] = []
+    for d in raw_dates:
+        if d == "all":
+            dates.extend(ISSUE_DATES)
+        else:
+            dates.append(d)
+    configs: list[str] = []
+    for c in raw_configs:
+        if c == "all":
+            configs.extend(list_configs())
+        else:
+            configs.append(c)
 
     total = len(configs) * len(dates)
     print(f"running {len(configs)} configs x {len(dates)} dates = {total} runs\n")
