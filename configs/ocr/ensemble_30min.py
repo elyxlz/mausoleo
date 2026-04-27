@@ -6,13 +6,14 @@ GPU0_CHAIN = (
     "exp_107_fullpage_qwen25vl",
     "exp_045_qwen3vl_vllm",
     "exp_055_col6_ads_prompt",
+    "exp_097_col4_qwen3vl_vllm",
 )
 
 GPU1_CHAIN = (
-    "exp_134_yolo_vllm_strict",
     "exp_138_col4_qwen25_vllm",
     "exp_140_yolo_smallregion_vllm",
     "exp_142_col5_qwen25_vllm",
+    "exp_102_fullpage_vllm",
 )
 
 
@@ -27,11 +28,12 @@ config = OcrPipelineConfig(
                 ("exp_138_col4_qwen25_vllm",        0.85, 1.05),
                 ("exp_045_qwen3vl_vllm",            0.50, 1.05),
                 ("exp_055_col6_ads_prompt",         0.30, 1.05),
-                ("exp_134_yolo_vllm_strict",        0.25, 1.10),
                 ("exp_107_fullpage_qwen25vl",       0.50, 1.02),
                 ("exp_142_col5_qwen25_vllm",        0.85, 1.05),
                 ("exp_138_col4_qwen25_vllm",        0.85, 1.05),
                 ("exp_140_yolo_smallregion_vllm",   0.85, 1.02),
+                ("exp_102_fullpage_vllm",           0.50, 1.05),
+                ("exp_097_col4_qwen3vl_vllm",       0.50, 1.05),
             ),
             additive_sources=(
                 ("exp_055_col6_ads_prompt",        0.88, 100.0),
@@ -41,7 +43,6 @@ config = OcrPipelineConfig(
                 "exp_107_fullpage_qwen25vl",
                 "exp_138_col4_qwen25_vllm",
                 "exp_055_col6_ads_prompt",
-                "exp_134_yolo_vllm_strict",
             ),
             crosspage_col1_sources=(),
             min_quality_delta=0.10,
