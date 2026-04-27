@@ -25,13 +25,13 @@ config = OcrPipelineConfig(
             primary_name="exp_107_fullpage_qwen25vl",
             replacement_chain=(
                 ("exp_138_col4_qwen25_vllm",        0.85, 1.05),
+                ("exp_045_qwen3vl_vllm",            0.50, 1.05),
                 ("exp_055_col6_ads_prompt",         0.30, 1.08),
                 ("exp_134_yolo_vllm_strict",        0.25, 1.10),
                 ("exp_107_fullpage_qwen25vl",       0.50, 1.02),
                 ("exp_142_col5_qwen25_vllm",        0.85, 1.05),
                 ("exp_138_col4_qwen25_vllm",        0.85, 1.05),
                 ("exp_140_yolo_smallregion_vllm",   0.85, 1.02),
-                ("exp_045_qwen3vl_vllm",            0.50, 1.05),
             ),
             additive_sources=(
                 ("exp_055_col6_ads_prompt",        0.88, 100.0),
