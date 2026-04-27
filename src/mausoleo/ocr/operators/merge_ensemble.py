@@ -20,13 +20,12 @@ class MergeEnsemble(BaseOperatorConfig):
 
 
 def _import_merge_helpers() -> tuple[tp.Callable[..., tp.Any], ...]:
-    import pathlib as pl
-    repo_scripts = pl.Path(__file__).resolve().parent.parent.parent.parent.parent / "scripts"
-    sys.path.insert(0, str(repo_scripts))
-    from blob_replace_v2 import replace_with_pairs
-    from ensemble_text_replacement import merge_with_replacement
-    from quality_text_select import select_best_text
-    from trim_repetitive import trim_predictions
+    from mausoleo.ocr.merge import (
+        merge_with_replacement,
+        replace_with_pairs,
+        select_best_text,
+        trim_predictions,
+    )
     return trim_predictions, merge_with_replacement, select_best_text, replace_with_pairs
 
 

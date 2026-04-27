@@ -31,10 +31,11 @@ class EnsembleOcr(BaseOperatorConfig):
 def _ensemble_ocr(row: dict[str, tp.Any], *, config: EnsembleOcr) -> dict[str, tp.Any]:
     import pathlib as pl
 
-    sys.path.insert(0, str(pl.Path(__file__).resolve().parent.parent.parent.parent.parent / "scripts"))
-    from ensemble_text_replacement import merge_with_replacement
-    from quality_text_select import select_best_text
-    from trim_repetitive import trim_predictions
+    from mausoleo.ocr.merge import (
+        merge_with_replacement,
+        select_best_text,
+        trim_predictions,
+    )
 
     from mausoleo.ocr.pipeline import run_pipeline
 

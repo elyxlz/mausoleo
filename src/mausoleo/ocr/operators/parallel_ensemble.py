@@ -68,11 +68,12 @@ def _launch_parallel(configs0: list[str], configs1: list[str], date: str, log_di
 
 @register_operator(ParallelEnsembleOcr, operation=OperatorType.MAP)
 def _parallel_ensemble_ocr(row: dict[str, tp.Any], *, config: ParallelEnsembleOcr) -> dict[str, tp.Any]:
-    sys.path.insert(0, str(_repo_root() / "scripts"))
-    from blob_replace_v2 import replace_with_pairs
-    from ensemble_text_replacement import merge_with_replacement
-    from quality_text_select import select_best_text
-    from trim_repetitive import trim_predictions
+    from mausoleo.ocr.merge import (
+        merge_with_replacement,
+        replace_with_pairs,
+        select_best_text,
+        trim_predictions,
+    )
 
     date = str(row.get("date", ""))
     cache = pl.Path(config.cache_dir)
