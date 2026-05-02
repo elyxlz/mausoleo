@@ -1,5 +1,10 @@
+import pathlib as pl
+
 from mausoleo.ocr.config import OcrPipelineConfig
 from mausoleo.ocr.operators import ParallelEnsembleOcr, ParseIssue
+
+
+CACHE_DIR = str(pl.Path(__file__).resolve().parent.parent.parent / "eval" / "predictions")
 
 
 GPU0_CHAIN = (
@@ -47,6 +52,7 @@ config = OcrPipelineConfig(
             crosspage_col1_sources=(),
             min_quality_delta=0.10,
             headline_delta=0.15,
+            cache_dir=CACHE_DIR,
         ),
         ParseIssue(),
     ],
