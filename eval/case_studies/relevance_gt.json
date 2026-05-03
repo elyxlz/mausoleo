@@ -1,0 +1,638 @@
+{
+  "case1": {
+    "case": "case1_missing_07-26",
+    "question": "What was reported on 26 July 1943, the day after Mussolini's arrest, in Il Messaggero?",
+    "gt_count": 42,
+    "articles": [
+      {
+        "article_id": "1943-07-25_a004",
+        "date": "1943-07-25",
+        "headline": "Bollettino n. 1155",
+        "rationale": "matched pattern 'Bollettino n\\. 1155' (late-fascist register / Sicily-front bulletin)"
+      },
+      {
+        "article_id": "1943-07-25_a005",
+        "date": "1943-07-25",
+        "headline": "BATTAGLIA IN SICILIA",
+        "rationale": "matched pattern 'BATTAGLIA IN SICILIA' (late-fascist register / Sicily-front bulletin)"
+      },
+      {
+        "article_id": "1943-07-25_a008",
+        "date": "1943-07-25",
+        "headline": "EPISODI DI VALORE",
+        "rationale": "matched pattern 'BATTAGLIA IN SICILIA' (late-fascist register / Sicily-front bulletin)"
+      },
+      {
+        "article_id": "1943-07-25_a009",
+        "date": "1943-07-25",
+        "headline": "DOVE ARRIVANO I LIBERATORI",
+        "rationale": "matched pattern 'DOVE ARRIVANO I LIBERATORI' (late-fascist register / Sicily-front bulletin)"
+      },
+      {
+        "article_id": "1943-07-25_a011",
+        "date": "1943-07-25",
+        "headline": "BIECO FUREORE BRITANNICO",
+        "rationale": "matched pattern '\\bBIECO|\\bFUREORE|\\bFURORE' (late-fascist register / Sicily-front bulletin)"
+      },
+      {
+        "article_id": "1943-07-25_a013",
+        "date": "1943-07-25",
+        "headline": "UN ALTRO MISFATTO",
+        "rationale": "matched pattern '\\bmisfatto\\b' (late-fascist register / Sicily-front bulletin)"
+      },
+      {
+        "article_id": "1943-07-25_a014",
+        "date": "1943-07-25",
+        "headline": "DISFATTO DEI GANGSTERS VOLANTI\nLa casa di Marconi\nla bombe a Bologna\nBologna dev",
+        "rationale": "matched pattern '\\bGANGSTERS\\b' (late-fascist register / Sicily-front bulletin)"
+      },
+      {
+        "article_id": "1943-07-25_a043",
+        "date": "1943-07-25",
+        "headline": "N'ALTRÒ MISFATTO DEI GANGSTERS V",
+        "rationale": "matched pattern '\\bGANGSTERS\\b' (late-fascist register / Sicily-front bulletin)"
+      },
+      {
+        "article_id": "1943-07-27_a000",
+        "date": "1943-07-27",
+        "headline": "La composizione del Governo Badoglio",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a001",
+        "date": "1943-07-27",
+        "headline": "I nuovi Ministri",
+        "rationale": "matched pattern 'composizione del Governo|nuovi Ministri' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a002",
+        "date": "1943-07-27",
+        "headline": "La Milizia fa parte delle Forze Armate",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a004",
+        "date": "1943-07-27",
+        "headline": "Una dimostrazione a Firenze dinanzi al Comando del C. d'A.",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a005",
+        "date": "1943-07-27",
+        "headline": "IL BOLLETTINO N. 1157",
+        "rationale": "matched pattern 'Bollettino n\\. 1157' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a006",
+        "date": "1943-07-27",
+        "headline": "L'ordine del giorno e la votazione del Gran Consiglio nella riunione del 24",
+        "rationale": "matched pattern 'Gran Consiglio|ordine del giorno|Grandi' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a007",
+        "date": "1943-07-27",
+        "headline": "DICHIARA",
+        "rationale": "matched pattern 'Gran Consiglio|ordine del giorno|Grandi' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a008",
+        "date": "1943-07-27",
+        "headline": "IL GRAN CONSIGLIO",
+        "rationale": "matched pattern 'Gran Consiglio|ordine del giorno|Grandi' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a009",
+        "date": "1943-07-27",
+        "headline": "PROCLAMA",
+        "rationale": "matched pattern 'PROCLAMA\\b|DICHIARA\\b|AFFERMA\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a010",
+        "date": "1943-07-27",
+        "headline": "AFFERMA",
+        "rationale": "matched pattern 'PROCLAMA\\b|DICHIARA\\b|AFFERMA\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a013",
+        "date": "1943-07-27",
+        "headline": "Il Maresciallo Badoglio",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a018",
+        "date": "1943-07-27",
+        "headline": "I nuovi Ministri",
+        "rationale": "matched pattern 'composizione del Governo|nuovi Ministri' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a021",
+        "date": "1943-07-27",
+        "headline": "Cortei e manifestazioni in tutte le città d'Italia",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a022",
+        "date": "1943-07-27",
+        "headline": "L' o. d. g. del gen. Armellin\nnuovo Comandante della Milizia",
+        "rationale": "matched pattern 'Gran Consiglio|ordine del giorno|Grandi' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a024",
+        "date": "1943-07-27",
+        "headline": "Badoglio",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a026",
+        "date": "1943-07-27",
+        "headline": "Corte in tut... Il Conte... balcone",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a027",
+        "date": "1943-07-27",
+        "headline": "Bologna in... Una dimostr... dinanzi al Com",
+        "rationale": "matched pattern '\\bMaresciallo\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a029",
+        "date": "1943-07-27",
+        "headline": "Bologna imbandierata",
+        "rationale": "matched pattern 'Gran Consiglio|ordine del giorno|Grandi' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a030",
+        "date": "1943-07-27",
+        "headline": "La follia Inneggia a' Sovrano innanzi al Palazzo del Quirinale.",
+        "rationale": "matched pattern 'Vittorio Emanuele|Quirinale' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a032",
+        "date": "1943-07-27",
+        "headline": "",
+        "rationale": "matched pattern '\\bMaresciallo\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a033",
+        "date": "1943-07-27",
+        "headline": "Prime impressioni tedesche sul cambio di Governo in Italia",
+        "rationale": "matched pattern 'PROCLAMA\\b|DICHIARA\\b|AFFERMA\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a036",
+        "date": "1943-07-27",
+        "headline": "Badoglio",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a038",
+        "date": "1943-07-27",
+        "headline": "L'ordine del Gran C",
+        "rationale": "matched pattern 'Gran Consiglio|ordine del giorno|Grandi' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a040",
+        "date": "1943-07-27",
+        "headline": "Carattere del nuovo Governo",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a048",
+        "date": "1943-07-27",
+        "headline": "Un appello di Badoglio",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a049",
+        "date": "1943-07-27",
+        "headline": "Il Governatore reca a Badoglio il saluto dell'Urbe",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a062",
+        "date": "1943-07-27",
+        "headline": "GLIO",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a073",
+        "date": "1943-07-27",
+        "headline": "Un appello",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a098",
+        "date": "1943-07-27",
+        "headline": "Il sorriso",
+        "rationale": "matched pattern 'Vittorio Emanuele|Quirinale' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a102",
+        "date": "1943-07-27",
+        "headline": "Canti della Patria",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a108",
+        "date": "1943-07-27",
+        "headline": "Ricordi dei Ministri del Governo Badoglio",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a118",
+        "date": "1943-07-27",
+        "headline": "Le figure dei Ministri del Governo Badoglio",
+        "rationale": "matched pattern '\\bBadoglio\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-27_a125",
+        "date": "1943-07-27",
+        "headline": "Antonescu a Sibiu visita le scuole militari",
+        "rationale": "matched pattern '\\bMaresciallo\\b' (Badoglio-transition coverage)"
+      },
+      {
+        "article_id": "1943-07-26",
+        "date": "1943-07-26",
+        "headline": "[edizione assente]",
+        "rationale": "the absent-day node itself; only Mausoleo can return this"
+      }
+    ]
+  },
+  "case2": {
+    "case": "case2_july25_regime_change",
+    "question": "How did Il Messaggero cover the fall of Mussolini and the transition to the Badoglio government?",
+    "gt_count": 33,
+    "articles": [
+      {
+        "article_id": "1943-07-25_a004",
+        "date": "1943-07-25",
+        "headline": "Bollettino n. 1155",
+        "rationale": "matched headline pattern 'Bollettino n\\. 115[567]' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-25_a009",
+        "date": "1943-07-25",
+        "headline": "DOVE ARRIVANO I LIBERATORI",
+        "rationale": "matched headline pattern '\\bBIECO|liberatori|\\bGANGSTERS\\b|\\bmisfatto\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-25_a011",
+        "date": "1943-07-25",
+        "headline": "BIECO FUREORE BRITANNICO",
+        "rationale": "matched headline pattern '\\bBIECO|liberatori|\\bGANGSTERS\\b|\\bmisfatto\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-25_a013",
+        "date": "1943-07-25",
+        "headline": "UN ALTRO MISFATTO",
+        "rationale": "matched headline pattern '\\bBIECO|liberatori|\\bGANGSTERS\\b|\\bmisfatto\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-25_a014",
+        "date": "1943-07-25",
+        "headline": "DISFATTO DEI GANGSTERS VOLANTI\nLa casa di Marconi\nla bombe a Bologna\nBologna dev",
+        "rationale": "matched headline pattern '\\bBIECO|liberatori|\\bGANGSTERS\\b|\\bmisfatto\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-25_a034",
+        "date": "1943-07-25",
+        "headline": "I LIBERATORI\nricaduta\nstato barbaro",
+        "rationale": "matched headline pattern '\\bBIECO|liberatori|\\bGANGSTERS\\b|\\bmisfatto\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-25_a043",
+        "date": "1943-07-25",
+        "headline": "N'ALTRÒ MISFATTO DEI GANGSTERS V",
+        "rationale": "matched headline pattern '\\bBIECO|liberatori|\\bGANGSTERS\\b|\\bmisfatto\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-25_a188",
+        "date": "1943-07-25",
+        "headline": "Il « film » che non è piaciuto a Stalin, per motivi diversi è aspramente critica",
+        "rationale": "matched headline pattern 'PROCLAMA\\b|DICHIARA\\b|AFFERMA\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-25_a194",
+        "date": "1943-07-25",
+        "headline": "Un caloroso telegramma al Duce",
+        "rationale": "matched headline pattern '\\bMussolini\\b|\\bDuce\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a000",
+        "date": "1943-07-27",
+        "headline": "La composizione del Governo Badoglio",
+        "rationale": "matched headline pattern '\\bBadoglio\\b|\\bMaresciallo\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a001",
+        "date": "1943-07-27",
+        "headline": "I nuovi Ministri",
+        "rationale": "matched headline pattern 'composizione del Governo|nuovi Ministri' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a002",
+        "date": "1943-07-27",
+        "headline": "La Milizia fa parte delle Forze Armate",
+        "rationale": "matched headline pattern '\\bMilizia\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a005",
+        "date": "1943-07-27",
+        "headline": "IL BOLLETTINO N. 1157",
+        "rationale": "matched headline pattern 'Bollettino n\\. 115[567]' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a006",
+        "date": "1943-07-27",
+        "headline": "L'ordine del giorno e la votazione del Gran Consiglio nella riunione del 24",
+        "rationale": "matched headline pattern 'Gran Consiglio|ordine del giorno|\\bGrandi\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a007",
+        "date": "1943-07-27",
+        "headline": "DICHIARA",
+        "rationale": "matched headline pattern 'PROCLAMA\\b|DICHIARA\\b|AFFERMA\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a008",
+        "date": "1943-07-27",
+        "headline": "IL GRAN CONSIGLIO",
+        "rationale": "matched headline pattern 'Gran Consiglio|ordine del giorno|\\bGrandi\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a009",
+        "date": "1943-07-27",
+        "headline": "PROCLAMA",
+        "rationale": "matched headline pattern 'PROCLAMA\\b|DICHIARA\\b|AFFERMA\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a010",
+        "date": "1943-07-27",
+        "headline": "AFFERMA",
+        "rationale": "matched headline pattern 'PROCLAMA\\b|DICHIARA\\b|AFFERMA\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a013",
+        "date": "1943-07-27",
+        "headline": "Il Maresciallo Badoglio",
+        "rationale": "matched headline pattern '\\bBadoglio\\b|\\bMaresciallo\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a018",
+        "date": "1943-07-27",
+        "headline": "I nuovi Ministri",
+        "rationale": "matched headline pattern 'composizione del Governo|nuovi Ministri' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a022",
+        "date": "1943-07-27",
+        "headline": "L' o. d. g. del gen. Armellin\nnuovo Comandante della Milizia",
+        "rationale": "matched headline pattern '\\bMilizia\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a024",
+        "date": "1943-07-27",
+        "headline": "Badoglio",
+        "rationale": "matched headline pattern '\\bBadoglio\\b|\\bMaresciallo\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a025",
+        "date": "1943-07-27",
+        "headline": "S. M. il Re... I nu...",
+        "rationale": "matched headline pattern 'Vittorio Emanuele|Quirinale|Villa Savoia|\\bRe\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a030",
+        "date": "1943-07-27",
+        "headline": "La follia Inneggia a' Sovrano innanzi al Palazzo del Quirinale.",
+        "rationale": "matched headline pattern 'Vittorio Emanuele|Quirinale|Villa Savoia|\\bRe\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a036",
+        "date": "1943-07-27",
+        "headline": "Badoglio",
+        "rationale": "matched headline pattern '\\bBadoglio\\b|\\bMaresciallo\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a048",
+        "date": "1943-07-27",
+        "headline": "Un appello di Badoglio",
+        "rationale": "matched headline pattern '\\bBadoglio\\b|\\bMaresciallo\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a049",
+        "date": "1943-07-27",
+        "headline": "Il Governatore reca a Badoglio il saluto dell'Urbe",
+        "rationale": "matched headline pattern '\\bBadoglio\\b|\\bMaresciallo\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a108",
+        "date": "1943-07-27",
+        "headline": "Ricordi dei Ministri del Governo Badoglio",
+        "rationale": "matched headline pattern '\\bBadoglio\\b|\\bMaresciallo\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-27_a118",
+        "date": "1943-07-27",
+        "headline": "Le figure dei Ministri del Governo Badoglio",
+        "rationale": "matched headline pattern '\\bBadoglio\\b|\\bMaresciallo\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-28_a000",
+        "date": "1943-07-28",
+        "headline": "I nuovi Ministri iniziano la loro attività di governo",
+        "rationale": "matched headline pattern 'composizione del Governo|nuovi Ministri' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-28_a008",
+        "date": "1943-07-28",
+        "headline": "Il giuramento dei nuovi ministri nelle mani del Re",
+        "rationale": "matched headline pattern 'Vittorio Emanuele|Quirinale|Villa Savoia|\\bRe\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-28_a081",
+        "date": "1943-07-28",
+        "headline": "Un ordine del giorno ai dipendenti del Poligrafico",
+        "rationale": "matched headline pattern 'Gran Consiglio|ordine del giorno|\\bGrandi\\b' (regime-change pivot)"
+      },
+      {
+        "article_id": "1943-07-26",
+        "date": "1943-07-26",
+        "headline": "[edizione assente]",
+        "rationale": "absent-day node: bridges 25 → 27 transition"
+      }
+    ]
+  },
+  "case3": {
+    "case": "case3_comparative_coverage",
+    "question": "How does the balance of war coverage versus domestic-politics coverage shift over July 1943 in Il Messaggero?",
+    "gt_count": 27,
+    "war_articles": 12,
+    "domestic_articles": 15,
+    "articles": [
+      {
+        "article_id": "1943-07-02_a055",
+        "date": "1943-07-02",
+        "headline": "Bollettino del GOVERNA DI RO",
+        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"
+      },
+      {
+        "article_id": "1943-07-05_a020",
+        "date": "1943-07-05",
+        "headline": "Le vittime accertate nelle ultime incursioni",
+        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"
+      },
+      {
+        "article_id": "1943-07-08_a021",
+        "date": "1943-07-08",
+        "headline": "LA LOTTA AERONAVALE NEL MEDITERRANEO",
+        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"
+      },
+      {
+        "article_id": "1943-07-10_a009",
+        "date": "1943-07-10",
+        "headline": "Lo spirito dell'aviazione",
+        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"
+      },
+      {
+        "article_id": "1943-07-12_a003",
+        "date": "1943-07-12",
+        "headline": "La nuova fase delle operazioni militari nei rilievi tedeschi",
+        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"
+      },
+      {
+        "article_id": "1943-07-15_a183",
+        "date": "1943-07-15",
+        "headline": "E' deceduto a Livorno all'età di 80 anni, il generale della riserva navale prof.",
+        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"
+      },
+      {
+        "article_id": "1943-07-17_a023",
+        "date": "1943-07-17",
+        "headline": "All’o. d. g.: il 43° Stormo da bombardamento, il 130° Gruppo siluranti e il 121°",
+        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"
+      },
+      {
+        "article_id": "1943-07-20_a008",
+        "date": "1943-07-20",
+        "headline": "Furia devastatrice",
+        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"
+      },
+      {
+        "article_id": "1943-07-22_a003",
+        "date": "1943-07-22",
+        "headline": "Anche la chiesa",
+        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"
+      },
+      {
+        "article_id": "1943-07-24_a014",
+        "date": "1943-07-24",
+        "headline": "ASPRI COMBATTIMENTI IN SICILIA",
+        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"
+      },
+      {
+        "article_id": "1943-07-28_a096",
+        "date": "1943-07-28",
+        "headline": "Orlando Natale Bersan",
+        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"
+      },
+      {
+        "article_id": "1943-07-30_a075",
+        "date": "1943-07-30",
+        "headline": "DI BELLINI",
+        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"
+      },
+      {
+        "article_id": "1943-07-01_a001",
+        "date": "1943-07-01",
+        "headline": "Oltre 1200 sottoscritti al PNF",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-03_a001",
+        "date": "1943-07-03",
+        "headline": "Un operaio sulle macerie",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-05_a001",
+        "date": "1943-07-05",
+        "headline": "Il discorso del Duce al Direttorio del Partito (24 giugno)",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-07_a000",
+        "date": "1943-07-07",
+        "headline": "ariosa giornata",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-09_a004",
+        "date": "1943-07-09",
+        "headline": "L'esercito indiano",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-11_a026",
+        "date": "1943-07-11",
+        "headline": "«Bisogna",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-13_a002",
+        "date": "1943-07-13",
+        "headline": "ESPRÀ E SENZA POSA",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-15_a011",
+        "date": "1943-07-15",
+        "headline": "Il IX Annuale della Milmart",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-17_a001",
+        "date": "1943-07-17",
+        "headline": "INDOMITA FEDE DI NAPOLI",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-19_a002",
+        "date": "1943-07-19",
+        "headline": "CARLO SCORZA PARLA AGLI ITALIANI",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-21_a000",
+        "date": "1943-07-21",
+        "headline": "La Principessa di Piemonte nelle località colpite",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-23_a006",
+        "date": "1943-07-23",
+        "headline": "L'ultima di Roosevelt",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-25_a011",
+        "date": "1943-07-25",
+        "headline": "BIECO FUREORE BRITANNICO",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-28_a000",
+        "date": "1943-07-28",
+        "headline": "I nuovi Ministri iniziano la loro attività di governo",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      },
+      {
+        "article_id": "1943-07-30_a000",
+        "date": "1943-07-30",
+        "headline": "Lo scioglimento e la liberazione",
+        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"
+      }
+    ]
+  },
+  "methodology": "Single-annotator relevance GT built from keyword + entity patterns derived from Pavone 1991, Murialdi 1986, Bosworth 2005, Deakin 1962. Per-pattern rationale stored alongside each gt entry. The 2-week self-consistency check required by the outline is not measured this run; reported as a limitation in §7.2."
+}
