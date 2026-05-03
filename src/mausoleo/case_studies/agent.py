@@ -51,8 +51,11 @@ SYSTEM_PROMPT = (
     "- Explain your reasoning briefly between tool calls.\n"
     "- Cite specific dates, headlines and article ids in your final answer.\n"
     "- If a tool returns nothing useful, try a different query before giving up.\n"
-    "- When you are ready, produce a single compiled answer of 250-450 words "
+    "- When you are ready, produce a single compiled answer of 250-600 words "
     "  in clear English. Do NOT call further tools after the final answer.\n"
+    "- If the user's question requires structured numeric output (e.g. "
+    "  per-week ratios), include those structured lines exactly in the format "
+    "  the user requested, then add prose.\n"
     "- The final answer must be the last text message and should not include "
     "  the words 'I will now' or other deferral phrases — just the answer.\n"
 )
@@ -155,7 +158,7 @@ def run_trial(
             resp = client.messages.create(
                 model=RESEARCHER_MODEL,
                 system=CC_SYSTEM,
-                max_tokens=1500,
+                max_tokens=2200,
                 temperature=temperature,
                 tools=schemas,
                 messages=messages,
@@ -214,7 +217,7 @@ def run_trial(
                 final_resp = client.messages.create(
                     model=RESEARCHER_MODEL,
                     system=CC_SYSTEM,
-                    max_tokens=1500,
+                    max_tokens=2200,
                     temperature=temperature,
                     tools=schemas,
                     tool_choice={"type": "none"},

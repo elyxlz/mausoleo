@@ -246,32 +246,67 @@ def mausoleo_search_text(query: str, level: str | None = None,
 
 
 # Semantic + hybrid require an embedding model. We use the same
-# paraphrase-multilingual-MiniLM-L12-v2 fallback that built the index. To
-# avoid loading 500 MB of model weights into the agent harness, semantic and
-# hybrid are exposed as L2-distance brute-force queries against pre-stored
-# embeddings only when an embedding model is loaded; otherwise they fall
-# back to the text-search path. This is documented as a methodology note in
-# RUNLOG: under the budget cap we did not load BGE-M3 / MiniLM during the
-# trials, so semantic and hybrid resolve to text search at run time. The
-# agent is told this in its system prompt so it does not assume otherwise.
+# paraphrase-multilingual-MiniLM-L12-v2 model (384-dim) that built the
+# stored ClickHouse `embedding` column. The 2026-05-03 rerun loads the
+# model eagerly via ``ensure_embedder`` so semantic and hybrid search
+# return real L2-nearest matches against stored vectors instead of
+# silently falling back to text search.
 
 _EMBED_MODEL: tp.Any = None
+_EMBED_LOAD_ERROR: str | None = None
 
 
 def _load_embedder() -> tp.Any | None:
-    global _EMBED_MODEL
+    global _EMBED_MODEL, _EMBED_LOAD_ERROR
     if _EMBED_MODEL is not None:
         return _EMBED_MODEL
+    if _EMBED_LOAD_ERROR is not None:
+        return None
     try:
         from sentence_transformers import SentenceTransformer
-    except Exception:
+    except Exception as e:
+        _EMBED_LOAD_ERROR = f"import failed: {e}"
         return None
     try:
-        _EMBED_MODEL = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2", device="cpu")
+        _EMBED_MODEL = SentenceTransformer(
+            "paraphrase-multilingual-MiniLM-L12-v2", device="cpu"
+        )
         _EMBED_MODEL.max_seq_length = 384
         return _EMBED_MODEL
-    except Exception:
+    except Exception as e:
+        _EMBED_LOAD_ERROR = f"load failed: {e}"
         return None
+
+
+def ensure_embedder() -> dict[str, tp.Any]:
+    """Force-load the embedder (called once at runner startup).
+
+    Returns a status dict the runner can log into RUNLOG so we can prove
+    semantic + hybrid actually used vector search this run.
+    """
+    m = _load_embedder()
+    if m is None:
+        return {"loaded": False, "error": _EMBED_LOAD_ERROR}
+    # Smoke test against a known node.
+    cli = get_client()
+    try:
+        v = m.encode("Mussolini", normalize_embeddings=True).tolist()
+        rows = list(
+            cli.query(
+                "SELECT node_id, L2Distance(embedding, {q:Array(Float32)}) AS d "
+                "FROM nodes WHERE level = 'day' ORDER BY d ASC LIMIT 1",
+                parameters={"q": v},
+            ).result_rows
+        )
+    except Exception as e:
+        return {"loaded": True, "smoke_test": False, "error": str(e)}
+    return {
+        "loaded": True,
+        "smoke_test": True,
+        "model": "paraphrase-multilingual-MiniLM-L12-v2",
+        "dim": len(v),
+        "nearest_day_to_mussolini": rows[0] if rows else None,
+    }
 
 
 def mausoleo_search_semantic(query: str, level: str | None = None,
@@ -536,9 +571,8 @@ MAUSOLEO_TOOL_SCHEMAS: list[dict[str, tp.Any]] = [
     {
         "name": "search_semantic",
         "description": (
-            "Semantic vector search over node summaries. (Note: in this evaluation "
-            "configuration the embedding model was not loaded due to budget; this "
-            "tool falls back to text search at runtime.)"
+            "Semantic vector search over node summaries (paraphrase-multilingual-"
+            "MiniLM-L12-v2, 384-dim, L2-distance against the stored embeddings)."
         ),
         "input_schema": {
             "type": "object",

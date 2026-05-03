@@ -466,6 +466,17 @@
   "case3": {
     "case": "case3_comparative_coverage",
     "question": "How does the balance of war coverage versus domestic-politics coverage shift over July 1943 in Il Messaggero?",
+    "metric": "per_iso_week_war_fraction_rmse",
+    "metric_definition": "For each ISO week W26..W30 overlapping July 1943, oracle war_fraction = war / (war + domestic) using LLM classification (Sonnet 4.5) of every July-1943 article. Score the agent answer by parsing the five required \"WEEK 1943-WNN: war_fraction=<float>\" lines and computing MAE + RMSE against the oracle vector. Article-id-touched recall is retained as a diagnostic only; the previous run used recall as the headline metric and that under-represented Mausoleo, which answers aggregate questions via day summaries without enumerating ids.",
+    "oracle_file": "eval/case_studies/case3_oracle_ratios.json",
+    "oracle_per_week_ratio_war_over_war_plus_domestic": {
+      "1943-W26": 0.558,
+      "1943-W27": 0.589,
+      "1943-W28": 0.62,
+      "1943-W29": 0.733,
+      "1943-W30": 0.416
+    },
+    "note_on_legacy_articles": "The list below is the original 27-article single-annotator relevance set. It is preserved for diagnostic recall computation only and is NOT the case-3 headline metric in the 2026-05-03 rerun.",
     "gt_count": 27,
     "war_articles": 12,
     "domestic_articles": 15,
@@ -634,5 +645,5 @@
       }
     ]
   },
-  "methodology": "Single-annotator relevance GT built from keyword + entity patterns derived from Pavone 1991, Murialdi 1986, Bosworth 2005, Deakin 1962. Per-pattern rationale stored alongside each gt entry. The 2-week self-consistency check required by the outline is not measured this run; reported as a limitation in §7.2."
+  "methodology": "Single-annotator relevance GT built from keyword + entity patterns derived from Pavone 1991, Murialdi 1986, Bosworth 2005, Deakin 1962. Per-pattern rationale stored alongside each gt entry. The 2-week self-consistency check required by the outline is not measured this run; reported as a limitation in §7.2. Case-3 metric replaced 2026-05-03: now per-week war-fraction MAE/RMSE against an LLM-built oracle (case3_oracle_ratios.json), because article-id recall under-counts Mausoleo, which answers aggregate questions through day-summary nodes without enumerating article ids."
 }
