@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 5.0,
+  "comprehensive": 5.0,
+  "insight": 5.0,
+  "rationale": "The answer demonstrates exceptional factual accuracy with precise citation of article IDs, dates, and specific headlines throughout (e.g., 1943-07-25_a003, 1943-07-27_a023). Comprehensiveness is exemplary: it systematically covers all three days requested, explicitly notes the missing July 26 issue, provides granular detail including vote counts (19-7-1), cabinet members' names, and multiple article references per claim. The insight dimension is equally strong, interpreting the editorial shift from Fascist to liberal-monarchical rhetoric, analyzing the tension between proclaimed 'liberation' a",
+  "cost_usd": 0.008349,
+  "raw_text": "```json\n{\"factual\": 5, \"comprehensive\": 5, \"insight\": 5, \"rationale\": \"The answer demonstrates exceptional factual accuracy with precise citation of article IDs, dates, and specific headlines throughout (e.g., 1943-07-25_a003, 1943-07-27_a023). Comprehensiveness is exemplary: it systematically covers all three days requested, explicitly notes the missing July 26 issue, provides granular detail including vote counts (19-7-1), cabinet members' names, and multiple article references per claim. The insight dimension is equally strong, interpreting the editorial shift from Fascist to liberal-monarchical rhetoric, analyzing the tension between proclaimed 'liberation' and authoritarian continuity in public-order measures, and identifying the strategic ambiguity in managing both domestic celebration and German relations—moving well beyond mere description to sophisticated historiographical analysis.\"}\n```",
+  "error": null,
+  "case_id": "case2",
+  "system": "mausoleo",
+  "trial": 2
+}

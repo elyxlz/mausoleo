@@ -1,0 +1,14 @@
+{
+  "judge": "judge1",
+  "model": "claude-opus-4-5-20251101",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer demonstrates strong factual accuracy regarding the July 27 coverage, correctly identifying key elements like Badoglio's appointment, the Gran Consiglio vote, popular demonstrations, and the conspicuous silence about Mussolini's actual arrest. The claim that the July 26 issue is 'absent from the archive' is plausible given known gaps in digitized collections, though this could be verified more precisely. Comprehensiveness is solid, covering government composition, public reaction, official appeals, and the propaganda framing. The historiographical insight about the careful official t",
+  "cost_usd": 0.027120000000000002,
+  "raw_text": "{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer demonstrates strong factual accuracy regarding the July 27 coverage, correctly identifying key elements like Badoglio's appointment, the Gran Consiglio vote, popular demonstrations, and the conspicuous silence about Mussolini's actual arrest. The claim that the July 26 issue is 'absent from the archive' is plausible given known gaps in digitized collections, though this could be verified more precisely. Comprehensiveness is solid, covering government composition, public reaction, official appeals, and the propaganda framing. The historiographical insight about the careful official tone and the significance of omitting arrest details shows genuine analytical engagement with how regime-change journalism operated under censorship constraints.\"}",
+  "error": null,
+  "case_id": "case1",
+  "system": "baseline",
+  "trial": 1
+}

@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer demonstrates strong factual accuracy with explicit citations of article IDs, dates (July 24, 26, 27), headlines, and specific details (Gran Consiglio meeting since December 7, 1939; radio announcement at 11 PM July 25). Comprehensiveness is good, covering government formation, the Grandi motion, popular celebrations, editorial tone, and notable absences, though it could have explored more articles from surrounding days as invited. Insight is evident in interpretive observations about the newspaper's 'delicate task' of managing regime change narrative, the significance of patriotic s",
+  "cost_usd": 0.006372,
+  "raw_text": "```json\n{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer demonstrates strong factual accuracy with explicit citations of article IDs, dates (July 24, 26, 27), headlines, and specific details (Gran Consiglio meeting since December 7, 1939; radio announcement at 11 PM July 25). Comprehensiveness is good, covering government formation, the Grandi motion, popular celebrations, editorial tone, and notable absences, though it could have explored more articles from surrounding days as invited. Insight is evident in interpretive observations about the newspaper's 'delicate task' of managing regime change narrative, the significance of patriotic songs replacing fascist ones, and the strategic omission of Mussolini's arrest, moving beyond mere description to analyze how Il Messaggero framed the transition.\"}\n```",
+  "error": null,
+  "case_id": "case1",
+  "system": "baseline",
+  "trial": 2
+}

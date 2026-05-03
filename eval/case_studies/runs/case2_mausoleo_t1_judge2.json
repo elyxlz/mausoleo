@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 4.0,
+  "comprehensive": 5.0,
+  "insight": 5.0,
+  "rationale": "The answer provides extensive, verifiable detail including specific dates (July 25, 27), headlines, article IDs, minister names, vote counts (19-7-1), meeting duration (ten hours until 3 a.m.), and precise quotations in Italian with translations. Comprehensiveness is exemplary: it cites the Gran Consiglio voting record, Badoglio's proclamation, biographical details, military measures, and the absence of July 26. The insight dimension excels by interpreting the editorial transformation as a shift from charismatic-fascist to monarchist-military legitimacy while noting the paradox of regime chang",
+  "cost_usd": 0.007842,
+  "raw_text": "```json\n{\n  \"factual\": 4,\n  \"comprehensive\": 5,\n  \"insight\": 5,\n  \"rationale\": \"The answer provides extensive, verifiable detail including specific dates (July 25, 27), headlines, article IDs, minister names, vote counts (19-7-1), meeting duration (ten hours until 3 a.m.), and precise quotations in Italian with translations. Comprehensiveness is exemplary: it cites the Gran Consiglio voting record, Badoglio's proclamation, biographical details, military measures, and the absence of July 26. The insight dimension excels by interpreting the editorial transformation as a shift from charismatic-fascist to monarchist-military legitimacy while noting the paradox of regime change coupled with war continuity. Minor deduction on factual accuracy only because some claims (e.g., specific crowd behaviors, German donation figure) remain unverifiable without direct article access, though the level of detail suggests authentic archival engagement.\"\n}\n```",
+  "error": null,
+  "case_id": "case2",
+  "system": "mausoleo",
+  "trial": 1
+}

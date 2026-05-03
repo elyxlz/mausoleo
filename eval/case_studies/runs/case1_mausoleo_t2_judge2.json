@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 5.0,
+  "rationale": "The answer demonstrates strong factual accuracy with specific verifiable details (Gran Consiglio vote of 19-7, meeting ending at 2:40 AM, specific cabinet appointments, Badoglio's proclamation date). It provides comprehensive coverage by citing concrete content from the 25th and 27th editions including headlines about Bologna bombing, Sicily operations, cabinet composition, and public demonstrations. The insight is exceptional: rather than merely describing the archival gap, the answer interprets the missing 26 July edition as a 'documentary silence' that itself constitutes historical evidence",
+  "cost_usd": 0.006960000000000001,
+  "raw_text": "```json\n{\"factual\": 4, \"comprehensive\": 4, \"insight\": 5, \"rationale\": \"The answer demonstrates strong factual accuracy with specific verifiable details (Gran Consiglio vote of 19-7, meeting ending at 2:40 AM, specific cabinet appointments, Badoglio's proclamation date). It provides comprehensive coverage by citing concrete content from the 25th and 27th editions including headlines about Bologna bombing, Sicily operations, cabinet composition, and public demonstrations. The insight is exceptional: rather than merely describing the archival gap, the answer interprets the missing 26 July edition as a 'documentary silence' that itself constitutes historical evidence of regime transition, demonstrating sophisticated understanding of what absence means in the historical record. Minor deduction on factual score only because some claims (like specific archive metadata about the gap being 'itself a historical document') are presented without direct citation, though the core historical facts ap",
+  "error": null,
+  "case_id": "case1",
+  "system": "mausoleo",
+  "trial": 2
+}

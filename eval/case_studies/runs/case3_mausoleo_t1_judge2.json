@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 4.0,
+  "comprehensive": 5.0,
+  "insight": 5.0,
+  "rationale": "The answer provides extensive specific citations (dates, article counts, casualty figures, names, vote tallies) that are verifiable in principle and internally consistent, though some claims like exact article counts remain unverifiable without access to the corpus. Comprehensiveness is exemplary: it explicitly cites dates throughout July, provides quantitative breakdowns for three distinct periods, names specific events (San Lorenzo bombing, Gran Consiglio vote), officials (Cini, Peverelli, Senise), and structural changes (MVSN incorporation, Chamber dissolution). Insight is strong: the answe",
+  "cost_usd": 0.007313999999999999,
+  "raw_text": "```json\n{\"factual\": 4, \"comprehensive\": 5, \"insight\": 5, \"rationale\": \"The answer provides extensive specific citations (dates, article counts, casualty figures, names, vote tallies) that are verifiable in principle and internally consistent, though some claims like exact article counts remain unverifiable without access to the corpus. Comprehensiveness is exemplary: it explicitly cites dates throughout July, provides quantitative breakdowns for three distinct periods, names specific events (San Lorenzo bombing, Gran Consiglio vote), officials (Cini, Peverelli, Senise), and structural changes (MVSN incorporation, Chamber dissolution). Insight is strong: the answer interprets the July 26 absence as 'a literal blank page between two incompatible editorial realities,' analyzes how the Rome bombing 'brings the war directly into domestic space,' and identifies the inversion from 'military propaganda organ to one documenting regime dismantlement' rather than merely listing coverage percentag",
+  "error": null,
+  "case_id": "case3",
+  "system": "mausoleo",
+  "trial": 1
+}

@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer provides specific, verifiable citations (article IDs, dates, headlines) and accurately describes the editorial shift from fascist to monarchist rhetoric across July 25-27, 1943, explaining the absence of July 26 coverage and the timing constraints on July 25. Comprehensiveness is strong with explicit references to Gran Consiglio vote counts (19-7), key figures (Grandi, Federzoni, Senise), and multiple article IDs demonstrating the register shift. Insight is demonstrated through interpretation of the abrupt transition as editorial realignment rather than mere description, noting the ",
+  "cost_usd": 0.005631000000000001,
+  "raw_text": "```json\n{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer provides specific, verifiable citations (article IDs, dates, headlines) and accurately describes the editorial shift from fascist to monarchist rhetoric across July 25-27, 1943, explaining the absence of July 26 coverage and the timing constraints on July 25. Comprehensiveness is strong with explicit references to Gran Consiglio vote counts (19-7), key figures (Grandi, Federzoni, Senise), and multiple article IDs demonstrating the register shift. Insight is demonstrated through interpretation of the abrupt transition as editorial realignment rather than mere description, noting the strategic erasure of the previous regime and the symbolic significance of personnel changes, though deeper analysis of the newspaper's institutional motivations could strengthen it further.\"}\n```",
+  "error": null,
+  "case_id": "case2",
+  "system": "baseline",
+  "trial": 3
+}

@@ -1,0 +1,14 @@
+{
+  "judge": "judge1",
+  "model": "claude-opus-4-5-20251101",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 3.0,
+  "rationale": "The answer correctly identifies that the July 26 issue is missing from the archive and accurately summarizes the July 27 coverage, including the Gran Consiglio meeting, Badoglio's appointment, popular demonstrations, and the appeal for calm. The specific details about the radio announcement timing, the songs sung, and cities mentioned align with known historical accounts. However, the claim that the absence 'speaks volumes about political upheaval' is speculative—the missing issue could reflect archival gaps rather than non-publication. The answer is comprehensive in covering the regime change",
+  "cost_usd": 0.027570000000000004,
+  "raw_text": "{\"factual\": 4, \"comprehensive\": 4, \"insight\": 3, \"rationale\": \"The answer correctly identifies that the July 26 issue is missing from the archive and accurately summarizes the July 27 coverage, including the Gran Consiglio meeting, Badoglio's appointment, popular demonstrations, and the appeal for calm. The specific details about the radio announcement timing, the songs sung, and cities mentioned align with known historical accounts. However, the claim that the absence 'speaks volumes about political upheaval' is speculative—the missing issue could reflect archival gaps rather than non-publication. The answer is comprehensive in covering the regime change narrative but could have explored more of the surrounding context (July 24-25 editions) to strengthen the analysis. Historiographical insight is adequate but not exceptional.\"}",
+  "error": null,
+  "case_id": "case1",
+  "system": "baseline",
+  "trial": 3
+}

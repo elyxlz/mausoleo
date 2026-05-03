@@ -1,0 +1,14 @@
+{
+  "judge": "judge1",
+  "model": "claude-opus-4-5-20251101",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer correctly identifies the archival gap for 26 July 1943 and provides accurate contextual details about the Gran Consiglio vote, Mussolini's arrest, and the transition to the Badoglio government. The coverage of the 25 July and 27 July issues is detailed and plausible, including specific article references, though some minor details cannot be independently verified. The interpretive framing of the missing issue as historically significant is defensible and insightful, though the claim that the absence 'speaks louder than any printed page' slightly overstates what can be concluded from",
+  "cost_usd": 0.033,
+  "raw_text": "{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer correctly identifies the archival gap for 26 July 1943 and provides accurate contextual details about the Gran Consiglio vote, Mussolini's arrest, and the transition to the Badoglio government. The coverage of the 25 July and 27 July issues is detailed and plausible, including specific article references, though some minor details cannot be independently verified. The interpretive framing of the missing issue as historically significant is defensible and insightful, though the claim that the absence 'speaks louder than any printed page' slightly overstates what can be concluded from an archival gap alone.\"}",
+  "error": null,
+  "case_id": "case1",
+  "system": "mausoleo",
+  "trial": 1
+}

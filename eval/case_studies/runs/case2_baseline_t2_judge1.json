@@ -1,0 +1,14 @@
+{
+  "judge": "judge1",
+  "model": "claude-opus-4-5-20251101",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer demonstrates strong factual accuracy, correctly identifying the absence of the July 26 issue, the timing of the Gran Consiglio meeting, and specific headlines and article references from the July 27 edition. The coverage of the editorial shift from fascist to monarchist-military language is well-documented with concrete examples. The comprehensiveness is solid, addressing the key dates, the disappearance of Mussolini's name, the celebration of the King and Badoglio, and even German reactions. The insight about Il Messaggero's pivot from 'fascist organ to monarchist mouthpiece' while",
+  "cost_usd": 0.02997,
+  "raw_text": "{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer demonstrates strong factual accuracy, correctly identifying the absence of the July 26 issue, the timing of the Gran Consiglio meeting, and specific headlines and article references from the July 27 edition. The coverage of the editorial shift from fascist to monarchist-military language is well-documented with concrete examples. The comprehensiveness is solid, addressing the key dates, the disappearance of Mussolini's name, the celebration of the King and Badoglio, and even German reactions. The insight about Il Messaggero's pivot from 'fascist organ to monarchist mouthpiece' while maintaining war continuity reflects sound historiographical understanding. Minor deductions apply because some specific headline quotations could benefit from verification against primary sources, and the analysis could have explored more deeply the institutional pressures driving such rapid editorial transformation.\"}",
+  "error": null,
+  "case_id": "case2",
+  "system": "baseline",
+  "trial": 2
+}

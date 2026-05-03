@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 3.0,
+  "rationale": "The answer demonstrates strong factual accuracy with specific article IDs (1943-07-27_a066, 1943-07-27_a048, 1943-07-27_a021), verifiable headlines, dates, and named officials (Badoglio, Grandi, Senise). Comprehensiveness is good, covering the July 27 edition's reporting on events of July 25-26, including government composition, public demonstrations, and official communications, though it could have explored whether any July 26 content exists in other sources or provided more detail on the Gran Consiglio vote. Insight is moderate: while it notes the conspicuous absence of information about Mu",
+  "cost_usd": 0.006105,
+  "raw_text": "```json\n{\"factual\": 4, \"comprehensive\": 4, \"insight\": 3, \"rationale\": \"The answer demonstrates strong factual accuracy with specific article IDs (1943-07-27_a066, 1943-07-27_a048, 1943-07-27_a021), verifiable headlines, dates, and named officials (Badoglio, Grandi, Senise). Comprehensiveness is good, covering the July 27 edition's reporting on events of July 25-26, including government composition, public demonstrations, and official communications, though it could have explored whether any July 26 content exists in other sources or provided more detail on the Gran Consiglio vote. Insight is moderate: while it notes the conspicuous absence of information about Mussolini's arrest and observes the suppression of Risorgimento songs during Fascism, the interpretation remains largely descriptive rather than deeply analytical about what the newspaper's framing reveals about the regime transition or censorship dynamics.\"}\n```",
+  "error": null,
+  "case_id": "case1",
+  "system": "baseline",
+  "trial": 1
+}

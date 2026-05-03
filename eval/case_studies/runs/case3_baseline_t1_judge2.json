@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer provides extensive specific citations (article IDs and dates including 1943-07-05_a001, 1943-07-11_a022, 1943-07-27_a006, etc.) that ground factual claims about war bulletins, the Sicily invasion, Rome bombing, and the July 25th regime change. Comprehensiveness is strong with explicit periodization (early/mid/late July), named events (Grandi motion, 19-7 vote, Badoglio appointment), and quantitative estimates (80-90% war coverage early, 50-60% domestic post-July 25), though the percentages appear impressionistic rather than rigorously counted. Insight is demonstrated by interpreting",
+  "cost_usd": 0.006927,
+  "raw_text": "```json\n{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer provides extensive specific citations (article IDs and dates including 1943-07-05_a001, 1943-07-11_a022, 1943-07-27_a006, etc.) that ground factual claims about war bulletins, the Sicily invasion, Rome bombing, and the July 25th regime change. Comprehensiveness is strong with explicit periodization (early/mid/late July), named events (Grandi motion, 19-7 vote, Badoglio appointment), and quantitative estimates (80-90% war coverage early, 50-60% domestic post-July 25), though the percentages appear impressionistic rather than rigorously counted. Insight is demonstrated by interpreting the shift as 'catastrophic' rather than gradual, linking it causally to military crisis and regime collapse, and noting the transformation from fascist propaganda-as-politics to genuine political coverage—though deeper analysis of what this rupture meant for press function or public discourse could strengthen it further.\"}\n```",
+  "error": null,
+  "case_id": "case3",
+  "system": "baseline",
+  "trial": 1
+}

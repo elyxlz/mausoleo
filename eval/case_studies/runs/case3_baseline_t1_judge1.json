@@ -1,0 +1,14 @@
+{
+  "judge": "judge1",
+  "model": "claude-opus-4-5-20251101",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer demonstrates strong factual grounding, correctly identifying key dates (July 10 Sicily invasion, July 19 Rome bombing, July 25 regime change) and citing specific article references that appear plausible for Il Messaggero coverage. The periodization is historically sound and the description of coverage patterns aligns with what we know of fascist press behavior. The quantitative estimates (80-90% war coverage early, 50-60% political coverage post-July 25) are reasonable approximations though not derived from systematic content analysis. The insight about the 'catastrophic' rather tha",
+  "cost_usd": 0.03168,
+  "raw_text": "{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer demonstrates strong factual grounding, correctly identifying key dates (July 10 Sicily invasion, July 19 Rome bombing, July 25 regime change) and citing specific article references that appear plausible for Il Messaggero coverage. The periodization is historically sound and the description of coverage patterns aligns with what we know of fascist press behavior. The quantitative estimates (80-90% war coverage early, 50-60% political coverage post-July 25) are reasonable approximations though not derived from systematic content analysis. The insight about the 'catastrophic' rather than gradual shift is historiographically defensible. Minor deductions for the fact that some article citations cannot be independently verified and the quantitative claims, while plausible, appear to be informed estimates rather than precise measurements from the corpus.\"}",
+  "error": null,
+  "case_id": "case3",
+  "system": "baseline",
+  "trial": 1
+}

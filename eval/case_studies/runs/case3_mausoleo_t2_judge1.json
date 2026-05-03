@@ -1,0 +1,14 @@
+{
+  "judge": "judge1",
+  "model": "claude-opus-4-5-20251101",
+  "factual": 3.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer provides a plausible structural narrative of Il Messaggero's July 1943 coverage shift, with specific dates and quantitative estimates that align with known historical events (Sicily invasion July 10, Rome bombing July 19, Mussolini's fall July 25). However, the precise article counts and percentages appear to be estimates rather than verified corpus data, and some details (like exact casualty figures and specific article tallies) cannot be confirmed without access to the actual newspaper archive. The comprehensiveness is strong, covering all major phases of the month with specific e",
+  "cost_usd": 0.035415,
+  "raw_text": "{\"factual\": 3, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer provides a plausible structural narrative of Il Messaggero's July 1943 coverage shift, with specific dates and quantitative estimates that align with known historical events (Sicily invasion July 10, Rome bombing July 19, Mussolini's fall July 25). However, the precise article counts and percentages appear to be estimates rather than verified corpus data, and some details (like exact casualty figures and specific article tallies) cannot be confirmed without access to the actual newspaper archive. The comprehensiveness is strong, covering all major phases of the month with specific examples, though the methodology for arriving at the percentages is not explained. The historiographical insight about the shift from 'external military narrative to internal political reconstruction' is defensible and adds analytical value beyond mere enumeration.\"}",
+  "error": null,
+  "case_id": "case3",
+  "system": "mausoleo",
+  "trial": 2
+}

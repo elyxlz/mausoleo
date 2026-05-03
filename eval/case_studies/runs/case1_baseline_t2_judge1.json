@@ -1,0 +1,14 @@
+{
+  "judge": "judge1",
+  "model": "claude-opus-4-5-20251101",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer correctly identifies that the July 26 issue is missing from the archive and pivots appropriately to the July 27 edition, accurately describing the Gran Consiglio coverage, Badoglio's proclamations, popular celebrations, and the conspicuous silence about Mussolini's fate. The specific details about the Grandi motion, the last Gran Consiglio meeting date, and the patriotic songs are historically accurate. The response is comprehensive in covering political, popular, and diplomatic dimensions, and offers genuine historiographical insight about the newspaper's management of regime trans",
+  "cost_usd": 0.032654999999999997,
+  "raw_text": "{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer correctly identifies that the July 26 issue is missing from the archive and pivots appropriately to the July 27 edition, accurately describing the Gran Consiglio coverage, Badoglio's proclamations, popular celebrations, and the conspicuous silence about Mussolini's fate. The specific details about the Grandi motion, the last Gran Consiglio meeting date, and the patriotic songs are historically accurate. The response is comprehensive in covering political, popular, and diplomatic dimensions, and offers genuine historiographical insight about the newspaper's management of regime transition narrative and the maintenance of Axis commitment fiction. Minor deduction for not exploring whether the July 26 absence was due to publication schedules or suppression, and for not cross-referencing with surrounding days more systematically.\"}",
+  "error": null,
+  "case_id": "case1",
+  "system": "baseline",
+  "trial": 2
+}

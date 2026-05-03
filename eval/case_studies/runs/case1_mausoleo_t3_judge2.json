@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 5.0,
+  "comprehensive": 5.0,
+  "insight": 5.0,
+  "rationale": "The answer demonstrates exceptional factual accuracy with precise verifiable details: specific bulletin numbers (1155, 1157), exact vote counts (19-7 with one abstention), named ministers and officials, and the Gran Consiglio meeting timeline (5 PM 24 July to 3 AM 25 July). Comprehensiveness is outstanding, explicitly addressing the research question by documenting the archival absence of the 26 July issue while providing rich context from 25 and 27 July with specific headlines, dates, and content. The insight is sophisticated, interpreting the missing issue as itself a historical document rep",
+  "cost_usd": 0.007070999999999999,
+  "raw_text": "```json\n{\n  \"factual\": 5,\n  \"comprehensive\": 5,\n  \"insight\": 5,\n  \"rationale\": \"The answer demonstrates exceptional factual accuracy with precise verifiable details: specific bulletin numbers (1155, 1157), exact vote counts (19-7 with one abstention), named ministers and officials, and the Gran Consiglio meeting timeline (5 PM 24 July to 3 AM 25 July). Comprehensiveness is outstanding, explicitly addressing the research question by documenting the archival absence of the 26 July issue while providing rich context from 25 and 27 July with specific headlines, dates, and content. The insight is sophisticated, interpreting the missing issue as itself a historical document representing 'the silent pivot point' and analyzing how the newspaper's content shifted from fascist normalcy to post-regime reality, demonstrating clear understanding of the editorial and political significance rather than mere description.\"\n}\n```",
+  "error": null,
+  "case_id": "case1",
+  "system": "mausoleo",
+  "trial": 3
+}

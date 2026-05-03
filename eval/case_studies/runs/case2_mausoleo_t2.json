@@ -1,0 +1,284 @@
+{
+  "case_id": "case2",
+  "system": "mausoleo",
+  "trial": 2,
+  "seed": 2845,
+  "question": "How did Il Messaggero cover the fall of Mussolini and the transition to the Badoglio government? Cite specific dates, headlines and the editorial-register shift across 25-27 July 1943.",
+  "tool_calls": 18,
+  "stopped_at_cap": false,
+  "chars_read": 230978,
+  "input_tokens": 535667,
+  "output_tokens": 2882,
+  "cost_usd": 1.65023,
+  "elapsed_sec": 82.08,
+  "completeness": {
+    "gt_size": 33,
+    "touched_relevant": 25,
+    "recall": 0.7575757575757576,
+    "touched_total": 120
+  },
+  "final_answer": "Excellent. Now I have all the information I need to provide a comprehensive answer about how Il Messaggero covered the fall of Mussolini and the transition to Badoglio. Let me compile my final answer.\n\n## Il Messaggero's Coverage of Mussolini's Fall and the Badoglio Transition (July 25-27, 1943)\n\nIl Messaggero's coverage of the fall of Mussolini reveals a dramatic editorial pivot executed with remarkable speed, though the absence of the July 26 issue from the archive creates a critical gap in the documentary record.\n\n**July 25, 1943: Business as Usual**\n\nThe July 25 issue shows no awareness of the regime change that would occur that very evening. The newspaper devoted its pages entirely to military bulletins from Sicily, the Eastern Front, and the Pacific. Headlines focused on \"Aspra lotta su tutto il fronte\" (article 1943-07-25_a003) and detailed the evacuation of Palermo and artillery operations. The lead story reported \"559 velivoli americani abbattuti in ventitre giorni\" (1943-07-25_a007), maintaining the propagandistic register of Fascist war reporting. There was no hint of political crisis, no mention of the Gran Consiglio meeting scheduled for that afternoon at Palazzo Venezia.\n\n**The Missing July 26 Issue**\n\nThe July 26 edition is absent from the source archive—a crucial lacuna, as this issue would have contained the first official announcement of Mussolini's dismissal and arrest, the King's proclamation, and Badoglio's initial statements. This gap prevents analysis of how the newspaper managed the immediate shock of the transition.\n\n**July 27, 1943: A New Editorial Voice**\n\nBy July 27, Il Messaggero had executed a complete editorial transformation. The newspaper now presented the regime change as a moment of national liberation and monarchical restoration, carefully recalibrating its language to serve the new government while maintaining continuity with Italian patriotism.\n\nThe front page proclaimed \"Un'altra giornata di entusiastiche dimostrazioni di popolo acclamante all'Italia, alle Forze Armate, al Re e al Maresciallo\" (1943-07-27_a000), describing popular celebrations in Rome, Milan, Bologna, and Florence. The coverage emphasized spontaneous joy: crowds waving tricolor flags, photographs of the King and Badoglio displayed on balconies, and soldiers receiving \"manifestazioni di simpatia\" (1943-07-27_a021). The Count of Turin addressed crowds from the Royal Palace in Milan with \"fervide parole di fierezza e di fede nei destini della Patria.\"\n\n**Reframing the Gran Consiglio Vote**\n\nThe newspaper published a detailed account of the July 24 Gran Consiglio meeting (1943-07-27_a023), presenting Dino Grandi's order of the day—which had effectively toppled Mussolini—in purely institutional terms. The article listed all 28 participants and reported the vote: 19 in favor of Grandi's motion (including Ciano, Bottai, De Bono, and Federzoni), 7 against (Scorza, Polverelli, Buffarini), and 1 abstention (Suardo). Crucially, the motion called for \"il ripristino immediato di tutte le funzioni statali\" and invited the King to assume \"effettivo comando delle Forze Armate.\" Mussolini's name appeared only as a participant, with no editorial commentary on his fate.\n\n**The New Badoglio Government**\n\nIl Messaggero devoted extensive coverage to the Badoglio cabinet (1943-07-27_a018), presenting it as a government of technical expertise and military competence. The list included Raffaele Guariglia (Foreign Affairs), Bruno Fornaciari (Interior), and military figures for War, Navy, and Aeronautics. The newspaper emphasized the \"reintegrazione\" of Carmine Senise as Police Chief (1943-07-27_a015), describing him as \"un galantuomo specchiato\" with \"profondo senso della giustizia\"—a pointed contrast to Fascist police methods, though never explicitly stated.\n\n**Editorial Register Shift: From Fascist to Liberal-Monarchical**\n\nThe most striking transformation was linguistic. The July 27 editorial (1943-07-27_a020) abandoned Fascist rhetoric entirely, instead invoking Risorgimento liberalism: \"L'unità della Patria fu una stessa cosa con la conquista della libertà.\" The piece argued that \"la libertà, ripristinata dal Sovrano,\" awakened \"voci remote, che parevano dimenticate\" and celebrated how \"la nuova generazione\" was discovering freedom's \"valore supremo.\" This represented a complete reversal from twenty years of Fascist discourse, now recast as an aberration from Italy's true liberal-monarchical tradition.\n\nYet the editorial carefully bounded this newfound freedom: \"Non si può concepire, in questo momento, una qualsiasi libertà se non in funzione di quelle che sono le supreme necessità della nazione in guerra.\" Liberty meant discipline, responsibility, and subordination to the war effort—continuity beneath the surface change.\n\n**Managing Public Order**\n\nBadoglio's July 26 proclamation to Romans (1943-07-27_a048) revealed official anxiety about uncontrolled celebrations: \"Non è il momento di abbandonarsi a dimostrazioni che non saranno tollerate... Sono vietati gli assembramenti e la forza pubblica ha l'ordine di disperderli inesorabilmente.\" The military authorities' manifesto imposed curfew, prohibited public gatherings, suspended gun permits, and authorized troops to use weapons against violators (1943-07-27_a047). This iron fist within the velvet glove of \"liberation\" showed the regime's fragility.\n\n**The German Reaction**\n\nIl Messaggero reported Berlin's response with careful diplomacy (1943-07-27_a033). German radio attributed the change to \"lo stato di salute di Mussolini che ultimamente era ammalato\"—a face-saving fiction. \"Gli ambienti politici berlinesi hanno accolto con grande calma le notizie,\" the article claimed, emphasizing that Germany understood Badoglio's appointment served \"il bene dell'Italia\" and noting with satisfaction the proclamations' assurances that \"la guerra",
+  "tool_call_log": [
+    {
+      "name": "node",
+      "input": {
+        "node_id": "1943-07-25"
+      },
+      "output_chars": 2865
+    },
+    {
+      "name": "node",
+      "input": {
+        "node_id": "1943-07-27"
+      },
+      "output_chars": 3053
+    },
+    {
+      "name": "stats",
+      "input": {},
+      "output_chars": 615
+    },
+    {
+      "name": "children",
+      "input": {
+        "node_id": "1943-07-25",
+        "limit": 60
+      },
+      "output_chars": 107511
+    },
+    {
+      "name": "children",
+      "input": {
+        "node_id": "1943-07-27",
+        "limit": 60
+      },
+      "output_chars": 99386
+    },
+    {
+      "name": "search_text",
+      "input": {
+        "query": "Mussolini Gran Consiglio ordine giorno Grandi",
+        "date_from": "1943-07-24",
+        "date_to": "1943-07-27",
+        "level": "article",
+        "limit": 10
+      },
+      "output_chars": 85
+    },
+    {
+      "name": "search_text",
+      "input": {
+        "query": "Badoglio proclama Re governo",
+        "date_from": "1943-07-25",
+        "date_to": "1943-07-27",
+        "level": "article",
+        "limit": 10
+      },
+      "output_chars": 68
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a006"
+      },
+      "output_chars": 1918
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a023"
+      },
+      "output_chars": 3095
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a000"
+      },
+      "output_chars": 207
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a020"
+      },
+      "output_chars": 4125
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a048"
+      },
+      "output_chars": 668
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a015"
+      },
+      "output_chars": 566
+    },
+    {
+      "name": "search_text",
+      "input": {
+        "query": "proclama Re Badoglio",
+        "date_from": "1943-07-25",
+        "date_to": "1943-07-25",
+        "level": "article"
+      },
+      "output_chars": 60
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a021"
+      },
+      "output_chars": 2043
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a014"
+      },
+      "output_chars": 1953
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a033"
+      },
+      "output_chars": 1025
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a018"
+      },
+      "output_chars": 1735
+    }
+  ],
+  "article_ids_touched": [
+    "1943-07-25_a000",
+    "1943-07-25_a001",
+    "1943-07-25_a002",
+    "1943-07-25_a003",
+    "1943-07-25_a004",
+    "1943-07-25_a005",
+    "1943-07-25_a006",
+    "1943-07-25_a007",
+    "1943-07-25_a008",
+    "1943-07-25_a009",
+    "1943-07-25_a010",
+    "1943-07-25_a011",
+    "1943-07-25_a012",
+    "1943-07-25_a013",
+    "1943-07-25_a014",
+    "1943-07-25_a015",
+    "1943-07-25_a016",
+    "1943-07-25_a017",
+    "1943-07-25_a018",
+    "1943-07-25_a019",
+    "1943-07-25_a020",
+    "1943-07-25_a021",
+    "1943-07-25_a022",
+    "1943-07-25_a023",
+    "1943-07-25_a024",
+    "1943-07-25_a025",
+    "1943-07-25_a026",
+    "1943-07-25_a027",
+    "1943-07-25_a028",
+    "1943-07-25_a029",
+    "1943-07-25_a030",
+    "1943-07-25_a031",
+    "1943-07-25_a032",
+    "1943-07-25_a033",
+    "1943-07-25_a034",
+    "1943-07-25_a035",
+    "1943-07-25_a036",
+    "1943-07-25_a037",
+    "1943-07-25_a038",
+    "1943-07-25_a039",
+    "1943-07-25_a040",
+    "1943-07-25_a041",
+    "1943-07-25_a042",
+    "1943-07-25_a043",
+    "1943-07-25_a044",
+    "1943-07-25_a045",
+    "1943-07-25_a046",
+    "1943-07-25_a047",
+    "1943-07-25_a048",
+    "1943-07-25_a049",
+    "1943-07-25_a050",
+    "1943-07-25_a051",
+    "1943-07-25_a052",
+    "1943-07-25_a053",
+    "1943-07-25_a054",
+    "1943-07-25_a055",
+    "1943-07-25_a056",
+    "1943-07-25_a057",
+    "1943-07-25_a058",
+    "1943-07-25_a059",
+    "1943-07-27_a000",
+    "1943-07-27_a001",
+    "1943-07-27_a002",
+    "1943-07-27_a003",
+    "1943-07-27_a004",
+    "1943-07-27_a005",
+    "1943-07-27_a006",
+    "1943-07-27_a007",
+    "1943-07-27_a008",
+    "1943-07-27_a009",
+    "1943-07-27_a010",
+    "1943-07-27_a011",
+    "1943-07-27_a012",
+    "1943-07-27_a013",
+    "1943-07-27_a014",
+    "1943-07-27_a015",
+    "1943-07-27_a016",
+    "1943-07-27_a017",
+    "1943-07-27_a018",
+    "1943-07-27_a019",
+    "1943-07-27_a020",
+    "1943-07-27_a021",
+    "1943-07-27_a022",
+    "1943-07-27_a023",
+    "1943-07-27_a024",
+    "1943-07-27_a025",
+    "1943-07-27_a026",
+    "1943-07-27_a027",
+    "1943-07-27_a028",
+    "1943-07-27_a029",
+    "1943-07-27_a030",
+    "1943-07-27_a031",
+    "1943-07-27_a032",
+    "1943-07-27_a033",
+    "1943-07-27_a034",
+    "1943-07-27_a035",
+    "1943-07-27_a036",
+    "1943-07-27_a037",
+    "1943-07-27_a038",
+    "1943-07-27_a039",
+    "1943-07-27_a040",
+    "1943-07-27_a041",
+    "1943-07-27_a042",
+    "1943-07-27_a043",
+    "1943-07-27_a044",
+    "1943-07-27_a045",
+    "1943-07-27_a046",
+    "1943-07-27_a047",
+    "1943-07-27_a048",
+    "1943-07-27_a049",
+    "1943-07-27_a050",
+    "1943-07-27_a051",
+    "1943-07-27_a052",
+    "1943-07-27_a053",
+    "1943-07-27_a054",
+    "1943-07-27_a055",
+    "1943-07-27_a056",
+    "1943-07-27_a057",
+    "1943-07-27_a058",
+    "1943-07-27_a059"
+  ],
+  "error": null,
+  "timestamp": "2026-05-03T08:25:19.680734Z"
+}

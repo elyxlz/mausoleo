@@ -1,0 +1,14 @@
+{
+  "judge": "judge1",
+  "model": "claude-opus-4-5-20251101",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer demonstrates strong factual accuracy regarding the Gran Consiglio vote timing, the Grandi motion, key ministerial appointments, and the sequence of events surrounding July 25-27, 1943. The claim that the July 26 issue is 'absent from the digitized archive' is plausible given wartime disruptions, though this specific archival gap claim would benefit from verification. The response comprehensively covers the surrounding days' content, political transitions, military bulletins, and public order measures. The historiographical insight about the 'editorial void' representing a transition",
+  "cost_usd": 0.033975,
+  "raw_text": "{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer demonstrates strong factual accuracy regarding the Gran Consiglio vote timing, the Grandi motion, key ministerial appointments, and the sequence of events surrounding July 25-27, 1943. The claim that the July 26 issue is 'absent from the digitized archive' is plausible given wartime disruptions, though this specific archival gap claim would benefit from verification. The response comprehensively covers the surrounding days' content, political transitions, military bulletins, and public order measures. The historiographical insight about the 'editorial void' representing a transitional moment is defensible and thoughtful, though the interpretation could be more nuanced—the gap might reflect practical printing disruptions rather than deliberate silence during regime change.\"}",
+  "error": null,
+  "case_id": "case1",
+  "system": "mausoleo",
+  "trial": 3
+}

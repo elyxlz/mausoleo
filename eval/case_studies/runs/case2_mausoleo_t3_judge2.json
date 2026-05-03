@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 5.0,
+  "comprehensive": 5.0,
+  "insight": 5.0,
+  "rationale": "The answer provides extensive, verifiable citations including specific article IDs (e.g., 1943-07-25_a004, 1943-07-27_a006), exact dates across the July 25-27 period, direct quotations from headlines and proclamations, and concrete details like the 19-7 Gran Consiglio vote and ministerial appointments. It goes beyond description to interpret the evidence, analyzing the rhetorical transformation from Fascist triumphalism to monarchist-patriotic celebration, identifying the paradox between celebrating spontaneous joy while reporting orders to suppress demonstrations, and contextualizing the shif",
+  "cost_usd": 0.008304,
+  "raw_text": "```json\n{\"factual\": 5, \"comprehensive\": 5, \"insight\": 5, \"rationale\": \"The answer provides extensive, verifiable citations including specific article IDs (e.g., 1943-07-25_a004, 1943-07-27_a006), exact dates across the July 25-27 period, direct quotations from headlines and proclamations, and concrete details like the 19-7 Gran Consiglio vote and ministerial appointments. It goes beyond description to interpret the evidence, analyzing the rhetorical transformation from Fascist triumphalism to monarchist-patriotic celebration, identifying the paradox between celebrating spontaneous joy while reporting orders to suppress demonstrations, and contextualizing the shift within press-control dynamics. The comprehensiveness is exceptional, covering the July 25 status quo ante, acknowledging the archival gap of July 26, and providing granular analysis of July 27's editorial register shift with multiple supporting citations.\"}\n```",
+  "error": null,
+  "case_id": "case2",
+  "system": "mausoleo",
+  "trial": 3
+}

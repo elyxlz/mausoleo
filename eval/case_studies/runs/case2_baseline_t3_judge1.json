@@ -1,0 +1,14 @@
+{
+  "judge": "judge1",
+  "model": "claude-opus-4-5-20251101",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer demonstrates strong factual accuracy regarding the timeline, the Gran Consiglio vote details, and the shift in editorial register from fascist to monarchist-patriotic language. The specific article references (with archive codes) and headlines like 'La composizione del Governo Badoglio' appear credible and consistent with known historical events. The explanation for the July 26 gap is plausible. Comprehensiveness is good, covering the key dates, headlines, popular demonstrations, and the Badoglio proclamations, though more specific headline quotations from July 25 would strengthen i",
+  "cost_usd": 0.030375,
+  "raw_text": "{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer demonstrates strong factual accuracy regarding the timeline, the Gran Consiglio vote details, and the shift in editorial register from fascist to monarchist-patriotic language. The specific article references (with archive codes) and headlines like 'La composizione del Governo Badoglio' appear credible and consistent with known historical events. The explanation for the July 26 gap is plausible. Comprehensiveness is good, covering the key dates, headlines, popular demonstrations, and the Badoglio proclamations, though more specific headline quotations from July 25 would strengthen it. The historiographical insight about the 'complete editorial realignment within 48 hours' without acknowledging the previous regime is a defensible and meaningful observation about press behavior under regime change, though it could have been developed further with reference to broader patterns of Italian press compliance.\"}",
+  "error": null,
+  "case_id": "case2",
+  "system": "baseline",
+  "trial": 3
+}

@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer provides specific, verifiable citations including dates (July 25, 27), article IDs (e.g., 1943-07-27_a006, a000, a040), and quoted headlines/content that can be checked against the archive. It explicitly notes the missing July 26 issue, strengthening credibility. Comprehensiveness is strong with multiple articles cited across the transition period, though slightly limited by the archival gap. Insight is demonstrated through interpretation of the editorial shift from 'fascist organ to monarchist mouthpiece,' analysis of rhetorical changes (disappearance of Mussolini's name, emergence",
+  "cost_usd": 0.00567,
+  "raw_text": "```json\n{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer provides specific, verifiable citations including dates (July 25, 27), article IDs (e.g., 1943-07-27_a006, a000, a040), and quoted headlines/content that can be checked against the archive. It explicitly notes the missing July 26 issue, strengthening credibility. Comprehensiveness is strong with multiple articles cited across the transition period, though slightly limited by the archival gap. Insight is demonstrated through interpretation of the editorial shift from 'fascist organ to monarchist mouthpiece,' analysis of rhetorical changes (disappearance of Mussolini's name, emergence of monarchist language), and contextual reading of German reactions, though deeper analysis of the propaganda strategy could elevate this further.\"}\n```",
+  "error": null,
+  "case_id": "case2",
+  "system": "baseline",
+  "trial": 2
+}

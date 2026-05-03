@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer provides specific, verifiable citations including dates, article IDs, and direct headline quotations in Italian that can be checked against the archive. It explicitly addresses the July 26 gap and provides detailed coverage of July 25 and 27 with concrete textual evidence. The interpretation goes beyond description to analyze the 'journalistic volte-face' and contextualizes the editorial shift within Italy's precarious geopolitical position, though it could have been more explicit about what specific rhetorical or lexical changes marked the register shift from fascist to monarchist-",
+  "cost_usd": 0.005076000000000001,
+  "raw_text": "```json\n{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer provides specific, verifiable citations including dates, article IDs, and direct headline quotations in Italian that can be checked against the archive. It explicitly addresses the July 26 gap and provides detailed coverage of July 25 and 27 with concrete textual evidence. The interpretation goes beyond description to analyze the 'journalistic volte-face' and contextualizes the editorial shift within Italy's precarious geopolitical position, though it could have been more explicit about what specific rhetorical or lexical changes marked the register shift from fascist to monarchist-military discourse.\"}\n```",
+  "error": null,
+  "case_id": "case2",
+  "system": "baseline",
+  "trial": 1
+}
