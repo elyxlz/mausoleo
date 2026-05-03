@@ -23,6 +23,9 @@ DEFAULT_SERVER = "http://127.0.0.1:8000"
 app = typer.Typer(name="mausoleo", no_args_is_help=True, add_completion=False)
 search_app = typer.Typer(name="search", no_args_is_help=True, add_completion=False)
 app.add_typer(search_app, name="search", help="Search the index (semantic / text / hybrid).")
+baseline_app = typer.Typer(name="baseline", no_args_is_help=True, add_completion=False)
+app.add_typer(baseline_app, name="baseline",
+               help="Flat-OCR BM25 baseline (no hierarchy access).")
 
 
 def _server_url(override: str | None) -> str:
@@ -203,6 +206,29 @@ def search_hybrid(
 # ---------------------------------------------------------------------------
 # Loader sub-app — exposed so users can populate ClickHouse from the CLI.
 # ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# Baseline (flat-OCR BM25) sub-app
+# ---------------------------------------------------------------------------
+
+@baseline_app.command("search")
+def baseline_search_cmd(
+    query: str,
+    date_from: str | None = typer.Option(None, "--from"),
+    date_to: str | None = typer.Option(None, "--to"),
+    limit: int = typer.Option(15, "--limit"),
+) -> None:
+    """BM25 ranked search over the flat ``documents`` table (case-study baseline)."""
+    from mausoleo.case_studies.tools import baseline_search
+    _print(baseline_search(query, date_from=date_from, date_to=date_to, limit=limit))
+
+
+@baseline_app.command("read-article")
+def baseline_read_cmd(article_id: str) -> None:
+    """Fetch the full text of a single article by id."""
+    from mausoleo.case_studies.tools import baseline_read_article
+    _print(baseline_read_article(article_id))
+
 
 @app.command("load")
 def load_cmd(
