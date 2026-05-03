@@ -1,0 +1,1146 @@
+{
+  "generated": "2026-05-03T09:48:46.348847+00:00",
+  "model": "claude-sonnet-4-5-20250929",
+  "task_1_spotcheck": {
+    "days": [
+      {
+        "date": "1943-07-02",
+        "child_count": 164,
+        "summary": "# Il Messaggero – Venerdì 2 luglio 1943: Riassunto della giornata\n\n## Operazioni militari e bollettini di guerra\n\nIl giornale riporta nuovi bombardamenti alleati su Sicilia e Sardegna. Secondo il Bollettino n. 1132 del Quartier Generale, l'aviazione nemica ha colpito centri urbani e rurali causando danni rilevanti: a Palermo vengono segnalati colpi alla Regia Università e a un ospedale, mentre a Cagliari si registrano crolli e incendi nei quartieri centrali. Il comunicato ufficiale rivendica l'abbattimento di 4 apparecchi nemici da parte della caccia italiana e di un quinto da parte dell'antiaerea di Trapani. A Sciacca si contano 3 morti e 2 feriti, mentre all'ospedale di Palermo 5 morti e 18 feriti. Le chiese di San Giuseppe e San Nicola a Palermo risultano distrutte, colpita anche la chiesa del Santissimo Salvatore.\n\nIl Re ha visitato Livorno dopo un bombardamento, ispezionando le zone danneggiate accompagnato dal Prefetto.\n\nSul fronte del Pacifico, il Quartier Generale giapponese annuncia (comunicato del 30 giugno) di aver affondato presso l'isola Rendova (Salomone) 6 trasporti, 3 incrociatori e 1 cacciatorpediniere nemici, oltre ad abbattere 31 aerei.\n\n## Guerra sottomarina e perdite navali\n\nUn articolo analizza l'impatto della guerra sottomarina sull'economia britannica e americana: la minaccia dei sommergibili tedeschi comporterebbe costi organizzativi superiori ai danni diretti. Il sistema dei convogli atlantici assorbirebbe enormi risorse militari. Il giornale cita il precedente della Grande Guerra, quando 3.084 navi britanniche furono impiegate contro massimo 140 sommergibili tedeschi.\n\nIl dipartimento della Marina USA ha reso noto (da Buenos Aires, 1 luglio) un bilancio complessivo di 101 navi da guerra perdute dall'inizio del conflitto: 1 nave da battaglia, 4 portaerei, 5 incrociatori, 28 cacciatorpediniere e 9 sottomarini. Elmer Davis, capo dell'ufficio informazioni belliche nordamericano, ha dichiarato che \"la parte più dura di questa guerra deve ancora venire\".\n\n## Politica interna e decreti\n\nIl Re ha concesso l'Ordine Militare di Savoia a sette generali: Bruno Malaguti e Emilio Rea promossi ufficiali; Pietro Belletti, Nino Sozzani, Carlo Tucci nominati cavalieri.\n\nIl Senato USA ha respinto (62 voti contrari, 13 favorevoli) la proposta di Roosevelt sui sussidi ai produttori per contenere il costo della vita. Il Congresso ha inoltre deciso di far cessare i sussidi a carne e burro dal 1° agosto. Il *Times* britannico osserva che \"per Roosevelt i prossimi mesi saranno quelli della grande prova\".\n\nSulla *Gazzetta Ufficiale* escono due decreti-legge: uno autorizza pagamenti provvisori di pensioni a cittadini sfollati per bombardamenti; l'altro consente pagamenti anticipati di stipendi a funzionari trasferiti da zone con comunicazioni difficili. Un ter",
+        "top5_entities": [
+          {
+            "entity": "Palermo",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Roosevelt",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Quartier Generale",
+            "type": "ORG",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Sicilia",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Senato USA",
+            "type": "ORG",
+            "present_in_source": true,
+            "match": "partial:senato"
+          }
+        ],
+        "hits": 5,
+        "out_of": 5,
+        "verdict": "PASS"
+      },
+      {
+        "date": "1943-07-08",
+        "child_count": 358,
+        "summary": "# La giornata dell'8 luglio 1943 secondo «Il Messaggero»\n\n## Guerra e politica\n\nIl quotidiano apre con l'attività del Duce: Mussolini presiede due riunioni del Comitato Corporativo Centrale, dedicando particolare attenzione al concentramento industriale. Il Duce distingue tra concentrazione \"organica\" e \"topografica\", affermando che \"la pianificazione in tutte le sue forme spetta alla Corporazione\". Vengono approvati piani di riduzione degli stabilimenti: le conserve di pomodoro passano da 269 a 157 impianti (mantenendo il 74,8% della capacità produttiva), le concerie da 257 a 137, i calzaturifici militari da 135 a 52 ditte meccaniche.\n\nSul fronte bellico, il giornale riporta intensi combattimenti tra Bjelgorod e Orel, dove le forze tedesche dichiarano di aver distrutto 300 carri armati sovietici e abbattuto 637 velivoli nemici (contro 41 perdite tedesche) nelle giornate del 5-6 luglio. Nel Mediterraneo, i bollettini annunciano l'affondamento di un sommergibile nemico e l'abbattimento di 19 aerei alleati, mentre la contraerea italo-tedesca avrebbe distrutto 17 apparecchi durante raid su Sicilia e Calabria.\n\nGli attacchi aerei alleati colpiscono duramente il Sud: a Palermo precipitano 4 velivoli nemici, a Trapani 5, a Porto Empedocle 6. Le vittime civili accertate ammontano a 58 morti e 36 feriti, con il bilancio più grave a Ramacca (Catania): 40 morti e 6 feriti.\n\n## Cronaca interna\n\nIl Partito comunica provvedimenti disciplinari: il Segretario ritira la tessera al Prefetto Umberto Borelli, al Segretario Federale Alessandro Perone e al Questore Alfredo Mendola di Taranto \"per aver partecipato a un banchetto, contravvenendo alle leggi morali che debbono regolare la vita del Paese in guerra\". Sette membri del PNF sono caduti durante incursioni aeree in varie località.\n\nIl Banco di Sicilia destina 4 milioni di lire per ospedali e sinistrati: 1 milione all'ospedale di Palermo, 500.000 lire ciascuno a Messina, Catania e Trapani. Per i danneggiati dalle incursioni: Palermo riceve 350.000 lire, Messina 200.000, Catania e Trapani 150.000 ciascuna.\n\n## Vita quotidiana romana\n\nLa cronaca cittadina registra incidenti stradali e emergenze: sulla via Flaminia al km 20 un incendio devasta 700 mq di bosco; a Ponte Mammolo il magazzino di foraggio di Giovanni Di Cosimo subisce danni per 200.000 lire. Un violento incendio colpisce il deposito di paglia presso Ponte Mammolo, spento dai vigili del fuoco con acqua del fiume Aniene.\n\nGli annunci immobiliari riflettono le esigenze abitative: una famiglia cerca un appartamento di 22 locali (Messaggero 264 D), un Ministero cerca un fabbricato da 30-60 vini nella periferia romana (telefono",
+        "top5_entities": [
+          {
+            "entity": "Mussolini",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Palermo",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Sicilia",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Comitato Corporativo Centrale",
+            "type": "ORG",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Catania",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          }
+        ],
+        "hits": 5,
+        "out_of": 5,
+        "verdict": "PASS"
+      },
+      {
+        "date": "1943-07-12",
+        "child_count": 177,
+        "summary": "# Il Messaggero di Roma - 12 luglio 1943: sintesi della giornata\n\n## Situazione militare in Sicilia\n\nIl giornale dedica ampio spazio alla battaglia in corso nella Sicilia sud-orientale, dove forze italiane e tedesche contengono lo sbarco anglo-americano iniziato il 10 luglio. Secondo i bollettini ufficiali citati, l'aviazione dell'Asse ha abbattuto 64 apparecchi nemici; gli aerosiluranti italiani avrebbero affondato tre navi (tra cui due trasporti da 13.000 tonnellate) e danneggiato gravemente tre incrociatori, numerose navi da trasporto e mezzi da sbarco. L'articolo di Alessandro Pavolini spiega la scarsità di comunicazioni ufficiali con la necessità di non rivelare informazioni al nemico, descrivendo l'operazione come \"grande tentativo di invasione continentale\" che mobilita divisioni d'assalto, corazzate, fanteria e artiglieria di entrambi gli schieramenti.\n\n## Fronte orientale\n\nDal fronte russo, il giornale riporta combattimenti durissimi nella zona di Bjelgorod-Orel. Secondo i bollettini tedeschi, i sovietici avrebbero impiegato 1.158 aerei e perso complessivamente 1.420 carri armati. Le truppe germaniche avanzano \"con immutata violenza\" scardinando le linee difensive, mentre la Luftwaffe fornisce supporto tattico nonostante condizioni meteorologiche avverse.\n\n## Propaganda e mobilitazione\n\nIl Messaggero pubblica un lungo elenco di \"12 umilianti condizioni\" che gli anglo-americani vorrebbero imporre all'Italia secondo presunte fonti giornalistiche nemiche: cessione di territori (Pantelleria, Tobruk, La Maddalena all'Inghilterra; Istria e Trieste alla Jugoslavia), consegna di flotta e aviazione, soppressione delle industrie belliche, occupazione militare indefinita, abolizione dell'insegnamento classico. L'articolo invoca la resistenza totale della popolazione: \"quarantasei milioni di combattenti\" uniti dalla fede nella vittoria.\n\n## Manifestazioni fasciste a Roma\n\nSabato 11 luglio si sono svolte adunate simultanee nei 32 Gruppi Rionali della capitale per commentare il discorso del Duce al Direttorio. Il giornale descrive sale gremite dalle 19:00 con tricolori, gagliardetti e ritratti di Mussolini, partecipazione \"compatta\" di liberi professionisti, funzionari, operai in tuta appena usciti dal lavoro, donne del popolo e signore. Gli oratori designati includono il senatore Carlo Costamagna, medaglie d'oro Giorgio Tognoni e Ulderico De Cesaris, e 29 altri relatori. Manifestazioni analoghe si tengono a Milano (28 Gruppi), Bologna, Firenze, Napoli e Torino. Il Segretario del Partito convoca a rapporto i Direttori Federali di 13 città, affidando gli incontri a gerarchi quali Giacomo Acerbo, Dino Grandi, Giuseppe Bottai, Roberto Farinacci.\n\n## Vita cittadina romana\n\nAll'Unione Provinciale dei lavoratori dell'industria, il Sottosegretario Contu presiede la consegna della tessera",
+        "top5_entities": [
+          {
+            "entity": "Sicilia",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Alessandro Pavolini",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Mussolini",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Roma",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Inghilterra",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          }
+        ],
+        "hits": 5,
+        "out_of": 5,
+        "verdict": "PASS"
+      },
+      {
+        "date": "1943-07-13",
+        "child_count": 195,
+        "summary": "# La giornata del 13 luglio 1943 secondo «Il Messaggero»\n\n## Situazione militare in Sicilia\n\nIl bollettino n. 1143 del Quartier Generale delle Forze Armate comunica che le truppe italiane e germaniche hanno condotto contrattacchi contro le forze alleate sbarcate in Sicilia, costringendole al ripiegamento in alcuni settori. Viene elogiato lo \"spirito combattivo\" dei reparti e il comportamento della popolazione locale. La 206ª divisione costiera, comandata dal generale Achille d'Havet, riceve una menzione speciale per la \"magnifica difesa\" delle posizioni.\n\nSul piano delle operazioni aereo-navali, il bollettino dichiara che aerei italiani hanno silurato 3 incrociatori, 1 unità minore e 3 piroscafi (2 da 8.000 tonnellate affondati). Formazioni dell'Asse avrebbero affondato 5 piroscafi e colpito oltre 40 navi da trasporto. I caccia dell'Asse rivendicano 30 velivoli nemici abbattuti, più altri 8 precipitati sotto il fuoco contraereo. Le perdite dell'Asse negli ultimi due giorni: 13 aerei italiani e 10 tedeschi. Un sommergibile italiano avrebbe silurato un incrociatore da 10.000 tonnellate lungo le coste orientali siciliane.\n\n## Il fronte orientale\n\nIl bollettino tedesco del 12 luglio riferisce della battaglia tra Bjelgorod e Orel. Secondo il comunicato, le forze tedesche hanno distrutto un \"rilevante gruppo di forze nemiche\" catturando migliaia di prigionieri, 129 carri armati e 1.400 cannoni. Nella giornata precedente sarebbero stati distrutti 220 carri armati e 70 aerei sovietici. Dal 5 luglio (inizio dell'offensiva) il bollettino dichiara 28.000 prigionieri, 160 carri armati e 1.400 cannoni catturati.\n\n## Morte del generale Francisci\n\nViene annunciata la caduta in combattimento dell'11 luglio del Luogotenente Generale Enrico Francisci, comandante della 13ª Zona dei Carabinieri Fascisti. Francisci, 59 anni, aveva partecipato alla guerra d'Etiopia e alla campagna di Spagna, decorato con Ordine Militare di Savoia, due medaglie d'argento, quattro di bronzo e quattro croci di guerra.\n\n## Reazioni internazionali\n\nLa stampa tedesca sottolinea la \"fermezza\" dimostrata dal popolo italiano durante le manifestazioni pubbliche in risposta ai combattimenti in Sicilia. Il giornale svedese Stockholms Tidningen evidenzia la \"perfetta serenità di spirito\" con cui la popolazione italiana ha accolto lo sbarco. Da Sofia, il colonnello Ganceff dichiara alla Duma bulgara che gli anglosassoni intendevano provocare \"effetti di depressione psicologica\" sul popolo italiano.\n\n## Vita quotidiana romana\n\nIl Teatro Brancaccio annuncia per la sera del 13 luglio una rappresentazione straordinaria de «L'elisir d'amore» con il tenore Ferruccio Tagliavini. La programmazione cinematografica è attiva in numerose sale: al Barberini «Invi",
+        "top5_entities": [
+          {
+            "entity": "Sicilia",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Enrico Francisci",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Achille d'Havet",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Quartier Generale delle Forze Armate",
+            "type": "ORG",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Bjelgorod",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          }
+        ],
+        "hits": 5,
+        "out_of": 5,
+        "verdict": "PASS"
+      },
+      {
+        "date": "1943-07-16",
+        "child_count": 255,
+        "summary": "# La giornata del 16 luglio 1943 ne «Il Messaggero»\n\n## Fronte di guerra\n\nIl bollettino n. 1146 riporta combattimenti in Sicilia, dove truppe dell'Asse contengono gli attacchi alleati con mezzi corazzati. Nella piana di Catania sono stati annientati nuclei di paracadutisti. Si distinguono il 10° Reggimento Bersaglieri, la 207ª Divisione Costiera e la divisione tedesca \"Hermann Goering\". Gli aerosiluratori dichiarano affondamenti per 27.000 tonnellate e danni a un incrociatore. Dal 1° al 14 luglio, secondo il bollettino, le forze dell'Asse avrebbero affondato 2 incrociatori, 5 cacciatorpediniere, 1 sommergibile e 27 mercantili nemici.\n\nSul fronte orientale, presso Bjelgorod e Orel, il bollettino tedesco riferisce contrattacchi sovietici respinti con gravi perdite: 336 carri distrutti in un giorno, 2.800 complessivi fino al 15 luglio. Il numero dei prigionieri supererebbe i 28.000.\n\n## Bombardamenti\n\nNapoli subisce l'82° bombardamento. Colpiti la Riviera di Chiaia, Villa Comunale, chiese (San Rocco, San Sepolcro), il Monastero dei Vergini con la sua biblioteca, scuole e case. Al Corso Vittorio Emanuele muoiono circa 50 persone; citato il caso di un tranviere che perde moglie, cinque figli e una sorella. Torino conta 402 morti e 601 feriti secondo il bollettino precedente.\n\n## Notizie dall'estero\n\nDa Berlino: bombardamenti americani su Parigi (70 morti, 200 feriti); attacco tedesco su Hull contro i bacini portuali. Da Tokio: respinto sbarco americano a Nuova Georgia con 1.300 perdite nemiche dichiarate. Da Lisbona: stampa svizzera contesta propaganda alleata sulla Sicilia; Weekly Review britannica riconosce \"molte realizzazioni ammirabili\" del fascismo pur criticandone gli eccessi. Da Stoccolma: parlamentare britannico Salter ammette momenti critici nella guerra navale alleata (primavera 1941 e 1942).\n\n## Politica interna\n\nIl Conte di Torino visita feriti e zone bombardate a Torino, consegnando 100.000 lire al Prefetto per i sinistrati. Riunioni fasciste a Milano (rapporto agli studenti delle medie superiori con presenza di feriti di guerra), Terni (adunata squadristi) e Reggio Emilia (Casa Littoria \"Arnaldo Mussolini\"). Il Segretario Federale di Roma tiene rapporto agli artigiani sulla carenza di materie prime, esortando a \"fede nella resistenza ad oltranza\".\n\n## Vita romana\n\nConcorsi nazionali del lavoro: completato secondo turno per preparazione della donna alla vita familiare. Vincitori per confezione vivande, igiene-puericultura e arredamento casa provengono da Brescia, Asti, Reggio Emilia, Trento e altre città. L'E.A.O.L.I. bandisce 100 borse di studio per orfani di lavoratori morti per infortunio (60 industria, 40 agric",
+        "top5_entities": [
+          {
+            "entity": "Sicilia",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Napoli",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Torino",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Hermann Goering",
+            "type": "ORG",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Conte di Torino",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          }
+        ],
+        "hits": 5,
+        "out_of": 5,
+        "verdict": "PASS"
+      },
+      {
+        "date": "1943-07-19",
+        "child_count": 141,
+        "summary": "# Il Messaggero – Lunedì 19 luglio 1943\n\n## Guerra e propaganda\n\nIl giornale dedica ampio spazio alla situazione militare. In Sicilia, le truppe italiane combattono intorno ad Agrigento contro la superiorità delle forze corazzate nemiche, costringendo a ripiegare su posizioni arretrate. Motosiluranti italiane affondano un piroscafo di 9.000 tonnellate, mentre la torpediniera comandata dal capitano Silvio Cavo affonda un sommergibile. Napoli subisce cinque raid aerei in 24 ore: la popolazione resta nei rifugi per 10 ore complessive, con un bilancio di 12 morti e 84 feriti nella città, oltre a vittime in centri vicini (Nola, Afragola, Roccarainola). La difesa contraerea abbatte 18 bombardieri nemici.\n\nSul fronte russo, secondo i bollettini tedeschi, proseguono combattimenti intensi sul Donez e presso Orel, dove sarebbero stati distrutti 415 carri armati sovietici. Amsterdam è bombardata dagli americani: 120 morti, oltre 100 feriti, la Chiesa di Santa Rosa colpita durante una funzione con 13 cadaveri estratti dalle macerie e 15 vittime tra gli scolari.\n\nIl segretario del PNF Carlo Scorza pubblica un discorso che invoca \"resistere, resistere, resistere\", affermando che l'Italia difende fede cattolica, istituti tradizionali e risorse economiche dal \"mercantilismo angloamericano\". Proclama di rigettare il messaggio di Roosevelt e Churchill al popolo italiano, pubblicato integralmente dal regime stesso come dimostrazione di sicurezza.\n\n## Università e istituzioni\n\nLe università italiane (Venezia, Trieste, Parma, Perugia, Urbino) diffondono dichiarazioni di \"incrollabile fiducia nei destini della Patria\" e protestano contro la \"barbarica minaccia nemica\" alle tradizioni culturali italiane. Il Rettore Viora di Trieste afferma che \"la luce di Roma non può morire\".\n\n## Vita civile e cronaca romana\n\nIl Governatorato registra 93 nati e 41 morti il 18 luglio. Proseguono le attività quotidiane: al Teatro Brancaccio si replica \"Butterfly\" con tutto esaurito, al Quirino debutta \"La città delle Luciole\". I cinema romani proiettano pellicole tedesche e italiane.\n\nIl Ministero dell'Agricoltura ordina il censimento generale del bestiame per il 20 luglio. Il Ministero delle Corporazioni mobilita manodopera tra i 18 e 40 anni, chiudendo stabilimenti non bellici e precettando operai per l'industria di guerra.\n\nEpisodi di cronaca: Vincio Mancinelli denuncia il furto di 445 lire in via della Cuccagna; la custode Caterina Falconi restituisce il denaro sotto pressione ma viene arrestata. Cinque ragazzi precipitano in un pozzo durante il gioco in un orto di guerra; tre ricoverati al Policlinico con sintomi di asfissia. Scontro tra tram a viale Manzoni, incendi di autobotte e rimessa.\n\n## Sport e spettacoli\n\nSi disputano gare ciclistiche (Giro del Lago di Bolsena vinto da Edmondo Gallotta), atletica al Guardabassi, nuoto",
+        "top5_entities": [
+          {
+            "entity": "Sicilia",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Napoli",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Carlo Scorza",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Roosevelt",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Churchill",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          }
+        ],
+        "hits": 5,
+        "out_of": 5,
+        "verdict": "PASS"
+      },
+      {
+        "date": "1943-07-20",
+        "child_count": 161,
+        "summary": "# Il Messaggero, martedì 20 luglio 1943\n\n## Il bombardamento di Roma del 19 luglio\n\nLa giornata è dominata dal primo grande bombardamento aereo alleato su Roma avvenuto il giorno precedente. Il Papa Pio XII si è recato personalmente alla Basilica di San Lorenzo fuori le mura, trovandola gravemente danneggiata: il portico distrutto, le colonne inclinate, il tetto crollato, i mosaici perduti. Il Pontefice si è inginocchiato tra le rovine e ha visitato le zone colpite, riconosciuto dalla folla. Anche la cappella funeraria della famiglia Pacelli al cimitero del Verano è stata danneggiata.\n\nI bombardamenti hanno colpito principalmente i quartieri Tiburtino, Prenestino e San Lorenzo. Sono stati danneggiati il Policlinico, la Città Universitaria (Clinica Medica, Istituto di Sanità Pubblica, Clinica Ostetrica), il cimitero del Verano e numerose abitazioni popolari nelle vie dei Marrucini, dei Vestini, degli Equi e dei Volsci. Durante le operazioni di soccorso è morto il vigile del fuoco Mario Masini. Il Re e la Regina hanno visitato le zone colpite e gli ospedali (San Giacomo, San Giovanni, Policlinico), così come il Segretario del Partito.\n\nIl giornale critica duramente le dichiarazioni alleate sulla precisione dei bombardamenti, citando comunicati del Quartier Generale del Nord Africa che promettevano di evitare monumenti religiosi e culturali. Otto Centri di Soccorso sono stati attivati con 1.117 operai e 60 dirigenti. La Croce Rossa ha messo a disposizione oltre 100 automobili per il trasporto dei feriti.\n\n## Fronte di guerra\n\nIn Sicilia, secondo il bollettino n. 1150 del 19 luglio, le truppe dell'Asse respingono attacchi nemici. La Divisione Livorno viene citata per il suo comportamento. Aerosiluranti italiani hanno affondato un piroscafo da 12.000 tonnellate carico di munizioni; altri attacchi hanno colpito un incrociatore pesante e un mercantile. Il capitano Francesco Di Bella da Roccalumera (Messina) ha pilotato l'aerosilurante che affondò il piroscafo; il capitano di corvetta Giuseppe Pighini da Reggio Emilia ha comandato la squadriglia di motosiluranti che aveva affondato un mercantile di 9.000 tonnellate.\n\nSul fronte orientale, si combatte su 1.100 chilometri da nord di Orel fino alle foci del Don e del Cuban. Secondo il bollettino tedesco, l'Armata Rossa ha attaccato con sei divisioni di fanteria e decine di carri armati in un fronte di 30 chilometri a nord di Orel, con concentramento di un reggimento ogni 600 metri. In un settore specifico sarebbero stati impiegati oltre 120.000 uomini sostenuti da 500 cannoni e 300 carri armati. I tedeschi dichiarano di aver distrutto 337 carri armati sovietici nella sola giornata del 19 luglio, oltre ai 4.000 perduti nei primi 13 giorni di battaglia. Sottomarini germanici hanno affondato 10 navi per 62.000 tonnellate.",
+        "top5_entities": [
+          {
+            "entity": "Papa Pio XII",
+            "type": "PERSON",
+            "present_in_source": false,
+            "match": "absent"
+          },
+          {
+            "entity": "Roma",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Basilica di San Lorenzo fuori le mura",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Sicilia",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Armata Rossa",
+            "type": "ORG",
+            "present_in_source": true,
+            "match": "partial:rossa"
+          }
+        ],
+        "hits": 4,
+        "out_of": 5,
+        "verdict": "PASS"
+      },
+      {
+        "date": "1943-07-22",
+        "child_count": 216,
+        "summary": "# La giornata del 22 luglio 1943 secondo «Il Messaggero»\n\nIl quotidiano romano dedica ampio spazio al bombardamento di Roma del 19 luglio, presentando l'evento come tragedia che ha colpito l'intera cristianità. Il Papa Pio XII ha visitato la Basilica di San Lorenzo, ridotta in rovina, e le zone bombardate, pronunciando parole di cordoglio per le vittime. In una lettera al Cardinale Marchetti Selvaggiani, il Pontefice esprime \"particolare amarezza\" per la distruzione della basilica contenente il sepolcro di Pio IX, citando le Lamentazioni di Geremia. Il giornale riporta \"immensa commozione del mondo cattolico\" e proteste internazionali da Argentina, Spagna, Ungheria e autorità ecclesiastiche americane.\n\nSul fronte militare, il bollettino tedesco annuncia l'abbattimento di 13 bombardieri nemici su 33 che tentavano di attaccare un convoglio nel Mar Glaciale. In Sicilia, secondo il comunicato dell'Asse, tra il 10 e il 20 luglio sono stati distrutti 228 carri armati nemici. Il fronte orientale vede combattimenti ad Orel, Mius e Donez, con il comando tedesco che rivendica 4.827 carri armati sovietici distrutti in quindici giorni. Il giornale riferisce di 50 aerei giapponesi abbattuti a Bougainville.\n\nLa cronaca romana documenta l'organizzazione dei soccorsi: il Centro di smistamento del Gruppo Trionfale accoglie sfollati nelle scuole Cola di Rienzo, Cairoli, Costanzo Ciano. Don Francesco Boncompagni Ludovisi versa 25.000 lire per i sinistrati. Il Governatorato istituisce procedure semplificate per lo sfollamento: chi parte deve presentare dichiarazione in via dei Cerchi e riceve ricevuta immediata.\n\nI funerali solenni del generale Hazon e del colonnello Barengo, morti durante il bombardamento, si svolgono con la partecipazione del sottosegretario Albini, del maresciallo De Bono e di autorità fasciste. Entrambi ricevono la medaglia d'argento alla memoria.\n\nLa stampa internazionale continua a commentare l'attacco: il «News Chronicle» britannico sostiene che Roma non gode di immunità, mentre giornali svizzeri, spagnoli e ungheresi esprimono condanna. L'articolo riferisce che la decisione fu presa dai governi di Londra e Washington, non dai comandi militari.\n\nNelle pagine interne: annunci di vendita mobili, pianoforti, cucine elettriche; offerte di lavoro (dattilografe, geometri, camerieri); ricerche di appartamenti in affitto nei quartieri Prati, Trionfale, Mazzini. Il programma radiofonico include trasmissioni per le Forze Armate, monsignor Pucci sulla Maddalena, musica operistica e conferenze del Partito.",
+        "top5_entities": [
+          {
+            "entity": "Pio XII",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Roma",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Basilica di San Lorenzo",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Sicilia",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Cardinale Marchetti Selvaggiani",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "partial:cardinale"
+          }
+        ],
+        "hits": 5,
+        "out_of": 5,
+        "verdict": "PASS"
+      },
+      {
+        "date": "1943-07-23",
+        "child_count": 160,
+        "summary": "# La giornata del 23 luglio 1943 ne «Il Messaggero»\n\n## Guerra e fronte interno\n\nIl giornale dedica ampio spazio alla situazione militare in Sicilia, dove le forze dell'Asse continuano a contrastare l'avanzata alleata. Secondo il bollettino n. 1153 del Quartier Generale, le operazioni si concentrano nei settori centrale e orientale dell'isola, con l'aviazione italo-tedesca che riporta affondamenti e danneggiamenti di navi alleate nella rada di Augusta e al largo di Siracusa. Un sommergibile italiano avrebbe colpito con due siluri una nave nemica il 16 luglio presso Siracusa.\n\nSul fronte orientale, il comunicato tedesco riferisce di intensi combattimenti presso Orel, dove le forze sovietiche lancerebbero attacchi continui respinti dalle truppe dell'Asse. Il bollettino tedesco rivendica la distruzione di 133 carri armati sovietici il 21 luglio e 163 il giorno seguente, interpretando la diminuzione rispetto ai giorni precedenti come segno di esaurimento delle riserve blindate nemiche.\n\n## Roma sotto i bombardamenti\n\nIl bilancio del bombardamento del 19 luglio sulla Capitale viene aggiornato: 717 morti accertati e 1.599 feriti. Tra gli edifici colpiti figurano la Basilica di San Lorenzo, il Policlinico, la Città Universitaria e il Centro di rieducazione dei minorenni. Il giornale pubblica messaggi di protesta delle università romane e patavine contro quello che definisce un \"attacco barbarico\" alla civiltà.\n\nPapa Pio XII, secondo l'Agenzia la Corrispondenza, avrebbe dichiarato l'intenzione di lasciare il Vaticano in caso di nuovo bombardamento, ritenendo violato il carattere sacro dello Stato Vaticano stabilito nei Patti Lateranensi.\n\nIl giornale contesta duramente le dichiarazioni del comandante della nona Armata dell'Aria americana che, secondo Radio Algeri, avrebbe affermato di aver colpito solo obiettivi militari. Il Messaggero elenca i quartieri civili danneggiati (Tiburtino, Prenestino, Latino) e cita resoconti di corrispondenti stranieri presenti a Roma come prova dei danni a zone abitate.\n\n## Reazioni internazionali\n\nL'articolo riporta le reazioni della stampa dell'Asse al bombardamento di Roma. La Deutsche Allgemeine Zeitung titola \"La risposta di Roma: viva l'Italia!\", mentre il portavoce giapponese Tomokazu Hori definisce l'attacco un atto di barbarie che indignerebbe 300 milioni di cattolici. A Budapest, il giornale Puj Magyarsag parla di \"sconfitta morale\" per gli anglo-sassoni.\n\nIl quotidiano londinese Daily Herald viene citato per aver riportato l'indignazione britannica verso un vescovo che aveva criticato il bombardamento di Roma, fatto che il Messaggero interpreta come rivelatore dei \"veri sentimenti inglesi\".\n\n## Incontro Mussolini-Hitler\n\nLa stampa estera commenta l'incontro tra Mussolini e Hitler. I giornali di Bucarest, Madrid, Zagabria e Budapest sottolineano il carattere militare del colloquio, concentrato sulla situazione sul fronte orientale e in Sicilia. La stampa alleata interpreta l'esclusione",
+        "top5_entities": [
+          {
+            "entity": "Roma",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Sicilia",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Mussolini",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Hitler",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Papa Pio XII",
+            "type": "PERSON",
+            "present_in_source": false,
+            "match": "absent"
+          }
+        ],
+        "hits": 4,
+        "out_of": 5,
+        "verdict": "PASS"
+      },
+      {
+        "date": "1943-07-28",
+        "child_count": 226,
+        "summary": "# Il Messaggero, 28 luglio 1943: La giornata secondo il quotidiano romano\n\n## Politica interna e insediamento del governo Badoglio\n\nIl giornale dedica ampio spazio all'insediamento del nuovo governo militare presieduto dal Maresciallo Badoglio, tre giorni dopo la caduta di Mussolini (25 luglio). Gli articoli descrivono i nuovi ministri che prestano giuramento nelle mani del Re Imperatore: Giovanni Acanfora (Scambi e Valute), Leonardo Severi (Educazione Nazionale) e altri. Il Grande Ammiraglio Paolo Thaon di Revel viene nominato Presidente del Senato, succedendo al Conte Giacomo Suardo. Il giornale sostiene che la popolazione ha dimostrato \"piena consapevolezza\" e \"severa disciplina\", con manifestazioni di entusiasmo seguite dal rapido ritorno alla normalità lavorativa.\n\n## Reazioni internazionali e propaganda\n\nLa stampa estera viene presentata come favorevole: i giornali rumeni, argentini e portoghesi pubblicano in prima pagina le notizie sulla formazione del governo Badoglio, enfatizzando la \"fiducia nella Casa Savoia\" e l'ordine disciplinato mantenuto dalla popolazione. Da Stoccolma si riferisce che il ministro britannico Eden ha ricevuto separatamente l'ambasciatore USA Winant e l'incaricato d'affari sovietico.\n\n## Fronte militare\n\nIl bollettino di guerra N. 1158 comunica che la situazione in Sicilia rimane \"immutata\", con combattimenti nel settore settentrionale. Bombardieri germanici avrebbero danneggiato gravemente quattro trasporti, due incrociatori e un cacciatorpediniere nemici. L'aviazione nemica ha condotto incursioni nei dintorni di Napoli e nella zona dello Stretto di Messina con \"danni non gravi\". Il comunicato tedesco riporta respinti \"parecchi tentativi di sfondamento\" sovietici nella zona di Orel, con perdite nemiche di 213 carri armati. A Malta è segnalato un bombardamento tedesco al porto di La Valletta.\n\n## Vita quotidiana romana\n\nLa capitale, secondo il giornale, ha \"riacquistato la consueta fisonomia\", con bandiere nazionali ancora esposte come testimonianza dei \"giorni trascorsi\". Il Governatorato pubblica un comunicato sui servizi idrici ed elettrici dopo i bombardamenti del 19 luglio: l'Acquedotto Felice è stato riattivato il 20 luglio, l'Acqua Vergine il 22 luglio. Al 28 luglio Roma dispone di \"tre quarti della dotazione idrica normale\". Vengono organizzati rifornimenti con autocisterne agli ospedali e allestite 92 fontanelle provvisorie. L'ATAG (trasporti) riceve critiche per la mancata ripresa completa del servizio tranviario. La Sezione Provinciale dell'Alimentazione proroga al 10 agosto il prelevamento delle razioni di pasta e zucchero di luglio.\n\n## Cronaca cittadina\n\nIl giornale pubblica un elenco di dispersi dopo i bombardamenti: Domenico Venditti (44 anni), Rinaldo Ciotti (operaio ATAG), Noè D'Orazi, Agostino Pasquali Coluzzi e altri. Il Governatore di Roma riceve nuove donazioni per il",
+        "top5_entities": [
+          {
+            "entity": "Badoglio",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Roma",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Sicilia",
+            "type": "PLACE",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Mussolini",
+            "type": "PERSON",
+            "present_in_source": true,
+            "match": "exact-norm"
+          },
+          {
+            "entity": "Casa Savoia",
+            "type": "ORG",
+            "present_in_source": true,
+            "match": "exact-norm"
+          }
+        ],
+        "hits": 5,
+        "out_of": 5,
+        "verdict": "PASS"
+      }
+    ],
+    "aggregate": {
+      "PASS": 10,
+      "PARTIAL": 0,
+      "FAIL": 0
+    },
+    "seed": 1943
+  },
+  "task_2_infoloss": {
+    "date": "1943-07-03",
+    "seed": 1944,
+    "article_top3": [
+      {
+        "article_id": "1943-07-03_a097",
+        "headline": "# Il Messaggero, 3 luglio 1943 – Servizio del Lavoro",
+        "char_len": 2304,
+        "entities": [
+          {
+            "entity": "Il Messaggero",
+            "type": "ORG"
+          },
+          {
+            "entity": "Rome",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Servizio del lavoro",
+            "type": "ORG"
+          },
+          {
+            "entity": "Patria",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Croce Rossa Italiana",
+            "type": "ORG"
+          },
+          {
+            "entity": "Sovrano Ordine Militare di Malta",
+            "type": "ORG"
+          },
+          {
+            "entity": "Federazioni dei Fasci di Combattimento",
+            "type": "ORG"
+          },
+          {
+            "entity": "Segretariato Federale",
+            "type": "ORG"
+          },
+          {
+            "entity": "O.N.M.I.",
+            "type": "ORG"
+          },
+          {
+            "entity": "G.U.F. dell'Urbe",
+            "type": "ORG"
+          }
+        ],
+        "topics": [
+          "servizio del lavoro",
+          "chiamata di controllo",
+          "esoneri e dispense",
+          "lavoranti a domicilio",
+          "sanzioni"
+        ]
+      },
+      {
+        "article_id": "1943-07-03_a022",
+        "headline": "# Riassunto dell'articolo de «Il Messaggero» del 3 luglio 1943",
+        "char_len": 2236,
+        "entities": [
+          {
+            "entity": "Rendova",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Parifico Meridionale",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Asia Orientale",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Salomone",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Mac Arthur",
+            "type": "PERSON"
+          },
+          {
+            "entity": "Bougainville",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Rabaul",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Bismark",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Washington",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Tokio",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Associazione nazionale fra gli Enti economici per l'agricoltura",
+            "type": "ORG"
+          },
+          {
+            "entity": "Stato",
+            "type": "ORG"
+          },
+          {
+            "entity": "Nazione",
+            "type": "ORG"
+          },
+          {
+            "entity": "Patria",
+            "type": "ORG"
+          },
+          {
+            "entity": "Italia",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Mario Marinucci",
+            "type": "PERSON"
+          }
+        ],
+        "topics": [
+          "battaglia dell'isola Rendova",
+          "operazioni nel Pacifico Meridionale",
+          "sistema difensivo giapponese",
+          "Uffici comunali per gli accertamenti agricoli",
+          "ammasso dei prodotti agricoli"
+        ]
+      },
+      {
+        "article_id": "1943-07-03_a006",
+        "headline": "# Il Messaggero, 3 luglio 1943 – Riassunto",
+        "char_len": 2232,
+        "entities": [
+          {
+            "entity": "IL MESSAGGERO",
+            "type": "ORG"
+          },
+          {
+            "entity": "Civitavecchia",
+            "type": "PLACE"
+          },
+          {
+            "entity": "DUCE",
+            "type": "PERSON"
+          },
+          {
+            "entity": "Paoletti",
+            "type": "PERSON"
+          },
+          {
+            "entity": "Lisbona",
+            "type": "PLACE"
+          },
+          {
+            "entity": "News Chronicle",
+            "type": "ORG"
+          },
+          {
+            "entity": "Cummings",
+            "type": "PERSON"
+          },
+          {
+            "entity": "Tunisi",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Asse",
+            "type": "ORG"
+          },
+          {
+            "entity": "Times",
+            "type": "ORG"
+          },
+          {
+            "entity": "Germania",
+            "type": "PLACE"
+          },
+          {
+            "entity": "Mediterraneo",
+            "type": "PLACE"
+          }
+        ],
+        "topics": [
+          "fede degli italiani",
+          "bombardamenti aerei",
+          "sbarchi alleati",
+          "offensiva aerea contro la Germania",
+          "perdite aeree anglo-americane",
+          "fronte mediterraneo"
+        ]
+      }
+    ],
+    "day": {
+      "node_id": "1943-07-03",
+      "entities": [
+        {
+          "entity": "Il Messaggero",
+          "type": "ORG"
+        },
+        {
+          "entity": "Salomone",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Rendova",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Italia",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Palermo",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Catania",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Cagliari",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Palazzo Reale di Palermo",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Livorno",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Oreste Iacoponi",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Civitavecchia",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Antonio Paoletti",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Dorogobusch",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Tribunale Speciale",
+          "type": "ORG"
+        },
+        {
+          "entity": "Alessandro Ceccarelli",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Francesco Biader Ceypidor",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Questura di Roma",
+          "type": "ORG"
+        },
+        {
+          "entity": "Campo di Concentramento",
+          "type": "ORG"
+        },
+        {
+          "entity": "La Casina delle Rose",
+          "type": "ORG"
+        },
+        {
+          "entity": "Carrozze",
+          "type": "ORG"
+        },
+        {
+          "entity": "Consiglio dei Ministri",
+          "type": "ORG"
+        },
+        {
+          "entity": "Servizio Permanente",
+          "type": "ORG"
+        },
+        {
+          "entity": "Buenos Aires",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Ramírez",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Washington",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Roosevelt",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Senato",
+          "type": "ORG"
+        },
+        {
+          "entity": "Giraud",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Africa settentrionale",
+          "type": "PLACE"
+        },
+        {
+          "entity": "De Gaulle",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Stoccolma",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Churchill",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Guildhall",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Inghilterra",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Lisbona",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Roma",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Forze Armate",
+          "type": "ORG"
+        }
+      ],
+      "topics": [
+        "battaglia di Rendova",
+        "bombardamenti su Palermo",
+        "fronte orientale",
+        "mercato nero e corruzione",
+        "sciopero dei minatori americani"
+      ]
+    },
+    "week": {
+      "node_id": "1943-W26-tail",
+      "entities": [
+        {
+          "entity": "Il Messaggero",
+          "type": "ORG"
+        },
+        {
+          "entity": "Roma",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Sicilia",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Sardegna",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Messina",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Duomo",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Sartorio",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Bargi",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Gaudenzi",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Giorgio da Veneziano",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Alfonso II",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Corrado IV",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Palermo",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Regia Università",
+          "type": "ORG"
+        },
+        {
+          "entity": "Palazzo Reale",
+          "type": "PLACE"
+        },
+        {
+          "entity": "San Giuseppe",
+          "type": "PLACE"
+        },
+        {
+          "entity": "San Nicola",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Santissimo Salvatore",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Cagliari",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Livorno",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Catania",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Porto Empedocle",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Bona",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Trapani",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Salento",
+          "type": "PLACE"
+        },
+        {
+          "entity": "News Chronicle",
+          "type": "ORG"
+        },
+        {
+          "entity": "Quartier Generale",
+          "type": "ORG"
+        },
+        {
+          "entity": "USA",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Frobisher",
+          "type": "ORG"
+        },
+        {
+          "entity": "Salomone",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Tribunale Speciale",
+          "type": "ORG"
+        },
+        {
+          "entity": "Alessandro Ceccarelli",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Francesco Biader Ceypidor",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Confederazione Fascista del Credito",
+          "type": "ORG"
+        },
+        {
+          "entity": "Duce",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Comitato Interministeriale",
+          "type": "ORG"
+        },
+        {
+          "entity": "Ordine Militare di Savoia",
+          "type": "ORG"
+        },
+        {
+          "entity": "Re",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Iacoponi",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Paoletti",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Civitavecchia",
+          "type": "PLACE"
+        }
+      ],
+      "topics": [
+        "bombardamenti alleati",
+        "distruzione del patrimonio artistico",
+        "propaganda di guerra",
+        "mercato nero",
+        "difesa aerea"
+      ]
+    },
+    "month": {
+      "node_id": "1943-07",
+      "entities": [
+        {
+          "entity": "Il Messaggero",
+          "type": "ORG"
+        },
+        {
+          "entity": "Roma",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Sicilia",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Sardegna",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Messina",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Palermo",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Cagliari",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Livorno",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Mussolini",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Comitato Interministeriale",
+          "type": "ORG"
+        },
+        {
+          "entity": "Roosevelt",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Churchill",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Gruppi Rionali fascisti",
+          "type": "ORG"
+        },
+        {
+          "entity": "Tiburtino",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Prenestino",
+          "type": "PLACE"
+        },
+        {
+          "entity": "San Lorenzo",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Basilica di San Lorenzo",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Azolino Hazon",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Ulderico Barengo",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Pio XII",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Marchetti Selvaggiani",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Bologna",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Pietro Badoglio",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Badoglio",
+          "type": "PERSON"
+        },
+        {
+          "entity": "Raffaele Guariglia",
+          "type": "PERSON"
+        },
+        {
+          "entity": "PNF",
+          "type": "ORG"
+        },
+        {
+          "entity": "Gran Consiglio",
+          "type": "ORG"
+        },
+        {
+          "entity": "Capitale",
+          "type": "PLACE"
+        },
+        {
+          "entity": "Carabinieri",
+          "type": "ORG"
+        }
+      ],
+      "topics": [
+        "bombardamenti alleati",
+        "sbarco in Sicilia",
+        "bombardamento di Roma",
+        "caduta del fascismo",
+        "governo Badoglio"
+      ]
+    },
+    "survival_counts": {
+      "article": 36,
+      "day": 7,
+      "week": 6,
+      "month": 1
+    },
+    "survival_by_type": {
+      "ORG": {
+        "article": 15,
+        "day": 1,
+        "week": 2,
+        "month": 1
+      },
+      "PLACE": {
+        "article": 17,
+        "day": 6,
+        "week": 2,
+        "month": 0
+      },
+      "PERSON": {
+        "article": 5,
+        "day": 0,
+        "week": 2,
+        "month": 0
+      }
+    },
+    "surviving_entities": {
+      "day": [
+        "civitavecchia",
+        "il messaggero",
+        "italia",
+        "lisbona",
+        "rendova",
+        "salomone",
+        "washington"
+      ],
+      "week": [
+        "civitavecchia",
+        "duce",
+        "il messaggero",
+        "news chronicle",
+        "paoletti",
+        "salomone"
+      ],
+      "month": [
+        "il messaggero"
+      ]
+    }
+  },
+  "task_3_july25": {
+    "day": {
+      "node_id": "1943-07-25",
+      "child_count": 273,
+      "summary": "# Sintesi della giornata del 25 luglio 1943 ne «Il Messaggero»\n\n## Situazione militare\n\n**Fronte orientale**: Il bollettino tedesco riporta combattimenti al ventesimo giorno nelle steppe tra il lago Ladoga e il Kuban. Il giornale afferma che l'Unione Sovietica avrebbe perso 7.000 carri armati in venti giorni, equivalenti a cinque brigate corazzate quotidiane. Le fonti tedesche sostengono che Stalin avrebbe ordinato la conquista di Orel entro il 19 luglio senza successo. Il bollettino dichiara distrutti 357 carri armati e 62 apparecchi nemici.\n\n**Fronte siciliano**: Il comunicato italiano del 24 luglio annuncia lo sgombero di Palermo a causa del rafforzamento delle forze corazzate nemiche. Il CLXI e CLXIII gruppo di artiglieria semovente vengono citati per il \"strenuo valore\" dimostrato. Gli aerosiluranti italiani avrebbero affondato due mercantili per 15.000 tonnellate complessive, danneggiando due ulteriori mercantili e una petroliera. Cinque apparecchi nemici sarebbero stati distrutti sulla costa calabro-sicula tra Capo Peloro e Villa San Giovanni.\n\n**Bilancio aereo settimanale**: Tra il 17 e 22 luglio, secondo il giornale, il nemico avrebbe perso 100 velivoli: 41 abbattuti dalla contraerea, 32 dalla Luftwaffe, 27 dall'aviazione italiana. Nel periodo 1-23 luglio sarebbero stati abbattuti complessivamente 559 velivoli anglo-americani nel Mediterraneo.\n\n**Pacifico**: Il bollettino giapponese riferisce che dopo ventiquattro giorni gli americani non avrebbero ancora conquistato Munda nella Nuova Georgia. L'aviazione navale giapponese avrebbe affondato un trasporto nemico nel porto di Rendova e danneggiato altri due.\n\n## Bombardamenti in Italia\n\n**Bologna**: Il 24 luglio un'incursione dalle 9.50 alle 12.30 ha causato gravi danni al centro cittadino. La Basilica di San Francesco è stata gravemente colpita: facciata squarciata, campate di ponente crollate. La tomba di Rolandino dei Passeggeri è stata danneggiata. Il Palazzo del Governo e Palazzo d'Accursio hanno subito danni significativi. L'Ospedale della Badia e l'Ospedale Maggiore sono stati colpiti. È stata distrutta la casa natale di Guglielmo Marconi.\n\n**Roma**: Continuano i servizi di assistenza ai sinistrati del bombardamento del 19 luglio. È partito il primo scaglione di 100 bambini dai 6 ai 14 anni verso la colonia G.I.L. a San Martino del Cimino. L'Istituto Fascista Case Popolari ha sistemato 400 famiglie. L'Unione Provinciale Commercianti ha prorogato al 5 agosto il prelevamento delle uova con tagliando N. 9.\n\n## Politica interna\n\nIl Feldmaresciallo Richtofen ha consegnato un assegno di 1.143.050 lire, \"spontanea offerta dei soldati germanici\" per i sinistrati di Roma, ricevuto dal"
+    },
+    "week": {
+      "node_id": "1943-W29",
+      "date_start": "1943-07-19",
+      "date_end": "1943-07-25",
+      "child_count": 7,
+      "summary": "# Roma, 19-25 luglio 1943: la settimana del bombardamento\n\nLa settimana è dominata dal primo grande bombardamento alleato su Roma del **19 luglio**, evento spartiacque che segna la fine dell'illusione di immunità della Capitale. L'attacco colpisce principalmente i quartieri Tiburtino, Prenestino e San Lorenzo, causando **717 morti accertati e 1.659 feriti** secondo il bilancio definitivo del 23 luglio. La **Basilica di San Lorenzo** è gravemente danneggiata: portico distrutto, tetto crollato, mosaici perduti. Tra le vittime il **generale Azolino Hazon**, Comandante Generale dei Carabinieri, e il **colonnello Ulderico Barengo**, suo Capo di Stato Maggiore, morti durante le operazioni di soccorso.\n\n**Papa Pio XII** si reca personalmente tra le rovine di San Lorenzo il 19 luglio, scoppiando in pianto secondo il giornale. Nella lettera del 22 luglio al Cardinale Marchetti Selvaggiani esprime \"particolare amarezza\" citando le Lamentazioni di Geremia. Il 23 luglio l'Agenzia la Corrispondenza riferisce che il Pontefice avrebbe dichiarato l'intenzione di lasciare il Vaticano in caso di nuovo bombardamento. Anche i **Sovani** visitano ospedali e zone colpite.\n\nSul fronte militare, la Sicilia vive settimana drammatica: il **24 luglio** viene annunciato lo sgombero di Palermo sotto pressione delle forze corazzate nemiche. I bollettini rivendicano affondamenti di mercantili alleati da parte di aerosiluranti e sommergibili italiani, con comandanti nominati (tenente di vascello **Claudio Celli**, capitano **Francesco Di Bella**, capitano di corvetta **Giuseppe Pighini**). Sul fronte orientale, i comunicati tedeschi dichiarano **7.000 carri armati sovietici** distrutti in venti giorni tra Orel e Kuban.\n\nIl **24 luglio** nuovo bombardamento devastante su **Bologna**: colpite la Basilica di San Francesco, la casa natale di Guglielmo Marconi, il Palazzo del Governo e gli ospedali. Napoli subisce cinque raid in 24 ore (18-19 luglio) con bilancio di 12 morti e 84 feriti.\n\nSul piano politico, il **24 luglio** il senatore **Vittorio Cini** si dimette da Ministro delle Comunicazioni per motivi di salute; il Duce nomina **Giuseppe Peverelli**. Sconosciuto ai lettori del Messaggero: il giorno successivo, 25 luglio, avverrà l'arresto di Mussolini."
+    },
+    "month": {
+      "node_id": "1943-07",
+      "child_count": 5,
+      "summary": "# Luglio 1943 a Roma: il mese della svolta\n\nLuglio 1943 rappresenta il mese più drammatico nella storia della Capitale durante il secondo conflitto mondiale. «Il Messaggero» documenta una transizione traumatica dalla propaganda di regime alla caduta del fascismo.\n\n## La guerra si avvicina (1-9 luglio)\n\nI primi giorni del mese registrano l'intensificarsi dei bombardamenti alleati su Sicilia, Sardegna e città continentali. Messina, Palermo, Cagliari, Livorno subiscono distruzioni massicce di chiese, ospedali e monumenti, con centinaia di vittime civili. Il giornale denuncia sistematicamente la \"guerra indiscriminata\" nemica mentre i bollettini ufficiali rivendicano abbattimenti crescenti: 70 aerei nemici in quattro giorni, perdite del 15% superiori alla soglia sostenibile americana. Il 3 luglio Mussolini presiede il Comitato Interministeriale e convoca la seduta successiva per il 27 luglio – appuntamento che non terrà mai.\n\n## Lo sbarco in Sicilia (10-18 luglio)\n\nNella notte tra il 10 e l'11 luglio le forze alleate sbarcano sulla costa sud-orientale siciliana. Roosevelt dichiara: \"il principio della fine\". «Il Messaggero» minimizza presentando l'operazione come rischiosa, citando difficoltà del terreno montagnoso e solidità delle difese italo-tedesche. I bollettini rivendicano affondamenti per 300.000 tonnellate e centinaia di aerei abbattuti. Il 18 luglio Roosevelt e Churchill lanciano volantini su Roma invitando alla \"capitolazione non disonorevole\": il regime risponde con manifestazioni di fedeltà organizzate da università, operai, Gruppi Rionali fascisti.\n\n## Il bombardamento di Roma (19 luglio)\n\nIl 19 luglio segna la fine dell'immunità della Capitale: bombardieri alleati colpiscono i quartieri Tiburtino, Prenestino e San Lorenzo causando **717 morti e 1.659 feriti**. La Basilica di San Lorenzo viene gravemente danneggiata. Tra le vittime il generale Azolino Hazon, Comandante dei Carabinieri, e il colonnello Ulderico Barengo. Papa Pio XII visita le rovine scoppiando in pianto; nella lettera del 22 luglio al cardinale Marchetti Selvaggiani esprime \"particolare amarezza\" citando le Lamentazioni di Geremia. Il 24 luglio viene annunciato lo sgombro di Palermo; nuovo devastante bombardamento colpisce Bologna.\n\n## La svolta (25-31 luglio)\n\nL'edizione del **26 luglio è assente** dal fondo archivistico: la lacuna documenta le 24 ore di vuoto tra l'arresto di Mussolini (25 luglio) e la riorganizzazione editoriale. Il 27 luglio «Il Messaggero» riappare presentando il governo Badoglio senza drammatizzazioni: Pietro Badoglio presidente, Raffaele Guariglia agli Esteri, generali ai ministeri militari. Il tono resta tecnico, burocratico. Tra il 27 e il 31 luglio il giornale registra lo smantellamento sistematico del regime: scioglimento del PNF, abrogazione della legge sul Gran Consiglio, soppressione del Tribun"
+    }
+  }
+}
