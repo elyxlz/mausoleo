@@ -40,6 +40,11 @@ index = [
 eval = [
     "jiwer>=3.0.0",
 ]
+search = [
+    # Real (non-zero) query embeddings for /search/semantic and /search/hybrid.
+    # The CLI and tree-traversal endpoints work without this extra installed.
+    "sentence-transformers>=2.5.0",
+]
 
 [dependency-groups]
 dev = [
