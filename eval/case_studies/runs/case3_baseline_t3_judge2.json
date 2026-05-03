@@ -1,0 +1,14 @@
+{
+  "judge": "judge2",
+  "model": "claude-sonnet-4-5-20250929",
+  "factual": 4.0,
+  "comprehensive": 4.0,
+  "insight": 4.0,
+  "rationale": "The answer provides the required five ISO-week war fractions in the exact format specified and cites specific article IDs (1943-07-05_a001, 1943-07-11_a014, 1943-07-27_a006, 1943-07-27_a000, 1943-07-27_a048, 1943-07-29_a001, 1943-07-29_a016), dates, and headlines that are verifiable and contextually appropriate for Il Messaggero in July 1943. The comprehensiveness is strong with explicit coverage of all five weeks, named events (Sicily invasion July 10, Rome bombing July 19, Gran Consiglio July 24, Mussolini dismissal July 25), and both war elements (Sicilian campaign, Axis bulletins, Eastern ",
+  "cost_usd": 0.008499,
+  "raw_text": "```json\n{\"factual\": 4, \"comprehensive\": 4, \"insight\": 4, \"rationale\": \"The answer provides the required five ISO-week war fractions in the exact format specified and cites specific article IDs (1943-07-05_a001, 1943-07-11_a014, 1943-07-27_a006, 1943-07-27_a000, 1943-07-27_a048, 1943-07-29_a001, 1943-07-29_a016), dates, and headlines that are verifiable and contextually appropriate for Il Messaggero in July 1943. The comprehensiveness is strong with explicit coverage of all five weeks, named events (Sicily invasion July 10, Rome bombing July 19, Gran Consiglio July 24, Mussolini dismissal July 25), and both war elements (Sicilian campaign, Axis bulletins, Eastern Front) and domestic elements (regime politics, Badoglio transition, party dissolution). The insight dimension is well-served by interpreting the dramatic shift from 78-82% war coverage to 45% as revealing how 'the regime crisis temporarily eclipsed even the existential military threat,' though the analysis could probe more deep",
+  "error": null,
+  "case_id": "case3",
+  "system": "baseline",
+  "trial": 3
+}

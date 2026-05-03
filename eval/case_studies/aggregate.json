@@ -1,272 +1,430 @@
 {
-  "started": "2026-05-03T08:14:49.550185Z",
+  "started": "2026-05-03T08:53:07.957714Z",
+  "embedder_status": {
+    "loaded": true,
+    "smoke_test": true,
+    "model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "dim": 384,
+    "nearest_day_to_mussolini": [
+      "1943-07-26",
+      0.8998396992683411
+    ]
+  },
   "trials": [
     {
       "case_id": "case1",
       "system": "mausoleo",
       "trial": 1,
-      "tool_calls": 9,
-      "chars_read": 218108,
-      "completeness_recall": 0.8095238095238095,
-      "judge1_mean": 4.0,
+      "tool_calls": 11,
+      "chars_read": 180428,
+      "completeness_recall": 0.7857142857142857,
+      "judge1_mean": 4.333333333333333,
       "judge2_mean": 5.0,
-      "researcher_cost_usd": 0.70009,
-      "trial_elapsed_sec": 61.62
+      "input_tokens": 181008,
+      "output_tokens": 1997,
+      "trial_elapsed_sec": 77.53
     },
     {
       "case_id": "case1",
       "system": "mausoleo",
       "trial": 2,
-      "tool_calls": 7,
-      "chars_read": 219626,
-      "completeness_recall": 0.8095238095238095,
-      "judge1_mean": 2.6666666666666665,
-      "judge2_mean": 4.333333333333333,
-      "researcher_cost_usd": 0.59598,
-      "trial_elapsed_sec": 63.42
+      "tool_calls": 14,
+      "chars_read": 95579,
+      "completeness_recall": 0.4523809523809524,
+      "judge1_mean": 4.0,
+      "judge2_mean": 4.0,
+      "input_tokens": 219109,
+      "output_tokens": 2187,
+      "trial_elapsed_sec": 74.88
     },
     {
       "case_id": "case1",
       "system": "mausoleo",
       "trial": 3,
-      "tool_calls": 6,
-      "chars_read": 216594,
-      "completeness_recall": 0.8095238095238095,
-      "judge1_mean": 4.0,
+      "tool_calls": 15,
+      "chars_read": 186003,
+      "completeness_recall": 0.7857142857142857,
+      "judge1_mean": 5.0,
       "judge2_mean": 5.0,
-      "researcher_cost_usd": 0.59266,
-      "trial_elapsed_sec": 61.98
+      "input_tokens": 340078,
+      "output_tokens": 2298,
+      "trial_elapsed_sec": 83.63
     },
     {
       "case_id": "case1",
       "system": "baseline",
       "trial": 1,
-      "tool_calls": 30,
-      "chars_read": 89709,
-      "completeness_recall": 0.6666666666666666,
+      "tool_calls": 26,
+      "chars_read": 78310,
+      "completeness_recall": 0.6904761904761905,
       "judge1_mean": 4.0,
-      "judge2_mean": 3.6666666666666665,
-      "researcher_cost_usd": 1.29523,
-      "trial_elapsed_sec": 91.79
+      "judge2_mean": 5.0,
+      "input_tokens": 402200,
+      "output_tokens": 2996,
+      "trial_elapsed_sec": 93.83
     },
     {
       "case_id": "case1",
       "system": "baseline",
       "trial": 2,
       "tool_calls": 28,
-      "chars_read": 90725,
-      "completeness_recall": 0.7142857142857143,
+      "chars_read": 88392,
+      "completeness_recall": 0.6904761904761905,
       "judge1_mean": 4.0,
-      "judge2_mean": 4.0,
-      "researcher_cost_usd": 1.05923,
-      "trial_elapsed_sec": 88.31
+      "judge2_mean": 4.333333333333333,
+      "input_tokens": 407564,
+      "output_tokens": 3658,
+      "trial_elapsed_sec": 100.9
     },
     {
       "case_id": "case1",
       "system": "baseline",
       "trial": 3,
-      "tool_calls": 29,
-      "chars_read": 89755,
-      "completeness_recall": 0.7142857142857143,
-      "judge1_mean": 3.6666666666666665,
-      "judge2_mean": 3.6666666666666665,
-      "researcher_cost_usd": 1.12495,
-      "trial_elapsed_sec": 92.69
+      "tool_calls": 27,
+      "chars_read": 86893,
+      "completeness_recall": 0.6190476190476191,
+      "judge1_mean": 4.0,
+      "judge2_mean": 4.0,
+      "input_tokens": 372314,
+      "output_tokens": 3650,
+      "trial_elapsed_sec": 104.94
     },
     {
       "case_id": "case2",
       "system": "mausoleo",
       "trial": 1,
-      "tool_calls": 13,
-      "chars_read": 236964,
+      "tool_calls": 11,
+      "chars_read": 234113,
       "completeness_recall": 0.7575757575757576,
-      "judge1_mean": 5.0,
-      "judge2_mean": 4.666666666666667,
-      "researcher_cost_usd": 1.55332,
-      "trial_elapsed_sec": 88.22
+      "judge1_mean": 4.666666666666667,
+      "judge2_mean": 5.0,
+      "input_tokens": 589213,
+      "output_tokens": 3111,
+      "trial_elapsed_sec": 116.31
     },
     {
       "case_id": "case2",
       "system": "mausoleo",
       "trial": 2,
-      "tool_calls": 18,
-      "chars_read": 230978,
+      "tool_calls": 13,
+      "chars_read": 249655,
       "completeness_recall": 0.7575757575757576,
-      "judge1_mean": 4.0,
-      "judge2_mean": 5.0,
-      "researcher_cost_usd": 1.65023,
-      "trial_elapsed_sec": 94.96
+      "judge1_mean": 4.666666666666667,
+      "judge2_mean": 4.666666666666667,
+      "input_tokens": 426139,
+      "output_tokens": 2609,
+      "trial_elapsed_sec": 95.62
     },
     {
       "case_id": "case2",
       "system": "mausoleo",
       "trial": 3,
-      "tool_calls": 14,
-      "chars_read": 364529,
+      "tool_calls": 13,
+      "chars_read": 241327,
       "completeness_recall": 0.7575757575757576,
-      "judge1_mean": 4.0,
+      "judge1_mean": 5.0,
       "judge2_mean": 5.0,
-      "researcher_cost_usd": 2.20871,
-      "trial_elapsed_sec": 89.77
+      "input_tokens": 565516,
+      "output_tokens": 2594,
+      "trial_elapsed_sec": 101.85
     },
     {
       "case_id": "case2",
       "system": "baseline",
       "trial": 1,
       "tool_calls": 30,
-      "chars_read": 72247,
-      "completeness_recall": 0.696969696969697,
-      "judge1_mean": 3.0,
-      "judge2_mean": 4.0,
-      "researcher_cost_usd": 0.77273,
-      "trial_elapsed_sec": 82.78
-    },
-    {
-      "case_id": "case2",
-      "system": "baseline",
-      "trial": 2,
-      "tool_calls": 30,
-      "chars_read": 67123,
+      "chars_read": 87255,
       "completeness_recall": 0.6060606060606061,
       "judge1_mean": 4.0,
       "judge2_mean": 4.0,
-      "researcher_cost_usd": 1.21866,
-      "trial_elapsed_sec": 105.81
+      "input_tokens": 230857,
+      "output_tokens": 3125,
+      "trial_elapsed_sec": 80.07
+    },
+    {
+      "case_id": "case2",
+      "system": "baseline",
+      "trial": 2,
+      "tool_calls": 30,
+      "chars_read": 102592,
+      "completeness_recall": 0.5454545454545454,
+      "judge1_mean": 4.0,
+      "judge2_mean": 5.0,
+      "input_tokens": 341577,
+      "output_tokens": 3396,
+      "trial_elapsed_sec": 93.96
     },
     {
       "case_id": "case2",
       "system": "baseline",
       "trial": 3,
-      "tool_calls": 30,
-      "chars_read": 100842,
+      "tool_calls": 29,
+      "chars_read": 92932,
       "completeness_recall": 0.696969696969697,
-      "judge1_mean": 4.0,
-      "judge2_mean": 4.0,
-      "researcher_cost_usd": 1.26879,
-      "trial_elapsed_sec": 86.37
+      "judge1_mean": 4.666666666666667,
+      "judge2_mean": 5.0,
+      "input_tokens": 337246,
+      "output_tokens": 3813,
+      "trial_elapsed_sec": 102.55
     },
     {
       "case_id": "case3",
       "system": "mausoleo",
       "trial": 1,
-      "tool_calls": 15,
-      "chars_read": 279127,
-      "completeness_recall": 0.07407407407407407,
-      "judge1_mean": 4.333333333333333,
-      "judge2_mean": 4.666666666666667,
-      "researcher_cost_usd": 0.92327,
-      "trial_elapsed_sec": 82.06
+      "tool_calls": 7,
+      "chars_read": 249501,
+      "completeness_recall": 0.0,
+      "judge1_mean": 4.0,
+      "judge2_mean": 4.0,
+      "input_tokens": 223205,
+      "output_tokens": 2743,
+      "trial_elapsed_sec": 96.93,
+      "case3_rmse": 0.1317,
+      "case3_mae": 0.1144,
+      "case3_n_weeks_scored": 5
     },
     {
       "case_id": "case3",
       "system": "mausoleo",
       "trial": 2,
-      "tool_calls": 9,
-      "chars_read": 416191,
-      "completeness_recall": 0.1111111111111111,
-      "judge1_mean": 3.6666666666666665,
-      "judge2_mean": 2.6666666666666665,
-      "researcher_cost_usd": 0.85992,
-      "trial_elapsed_sec": 60.09
+      "tool_calls": 8,
+      "chars_read": 138397,
+      "completeness_recall": 0.0,
+      "judge1_mean": 4.0,
+      "judge2_mean": 4.333333333333333,
+      "input_tokens": 112155,
+      "output_tokens": 2395,
+      "trial_elapsed_sec": 85.31,
+      "case3_rmse": 0.1836,
+      "case3_mae": 0.1664,
+      "case3_n_weeks_scored": 5
     },
     {
       "case_id": "case3",
       "system": "mausoleo",
       "trial": 3,
-      "tool_calls": 17,
-      "chars_read": 248848,
-      "completeness_recall": 0.037037037037037035,
-      "judge1_mean": 3.6666666666666665,
+      "tool_calls": 10,
+      "chars_read": 467985,
+      "completeness_recall": 0.1111111111111111,
+      "judge1_mean": 4.0,
       "judge2_mean": 4.0,
-      "researcher_cost_usd": 0.90144,
-      "trial_elapsed_sec": 81.54
+      "input_tokens": 303074,
+      "output_tokens": 2197,
+      "trial_elapsed_sec": 76.2,
+      "case3_rmse": 0.1836,
+      "case3_mae": 0.1664,
+      "case3_n_weeks_scored": 5
     },
     {
       "case_id": "case3",
       "system": "baseline",
       "trial": 1,
-      "tool_calls": 26,
-      "chars_read": 109470,
-      "completeness_recall": 0.1111111111111111,
-      "judge1_mean": 4.0,
+      "tool_calls": 27,
+      "chars_read": 108157,
+      "completeness_recall": 0.14814814814814814,
+      "judge1_mean": 3.0,
       "judge2_mean": 4.0,
-      "researcher_cost_usd": 0.97241,
-      "trial_elapsed_sec": 90.72
+      "input_tokens": 263730,
+      "output_tokens": 3210,
+      "trial_elapsed_sec": 81.39,
+      "case3_rmse": 0.2321,
+      "case3_mae": 0.2064,
+      "case3_n_weeks_scored": 5
+    },
+    {
+      "case_id": "case3",
+      "system": "baseline",
+      "trial": 2,
+      "tool_calls": 28,
+      "chars_read": 105361,
+      "completeness_recall": 0.1111111111111111,
+      "judge1_mean": 2.6666666666666665,
+      "judge2_mean": 2.3333333333333335,
+      "input_tokens": 241190,
+      "output_tokens": 3550,
+      "trial_elapsed_sec": 91.48,
+      "case3_rmse": 0.2239,
+      "case3_mae": 0.1826,
+      "case3_n_weeks_scored": 5
+    },
+    {
+      "case_id": "case3",
+      "system": "baseline",
+      "trial": 3,
+      "tool_calls": 30,
+      "chars_read": 112567,
+      "completeness_recall": 0.1111111111111111,
+      "judge1_mean": 3.0,
+      "judge2_mean": 4.0,
+      "input_tokens": 294792,
+      "output_tokens": 3190,
+      "trial_elapsed_sec": 91.2,
+      "case3_rmse": 0.2051,
+      "case3_mae": 0.1939,
+      "case3_n_weeks_scored": 5
     }
   ],
-  "current_spend_usd": 18.3403,
-  "researcher_spend_usd": 17.6976,
-  "judges_spend_usd": 0.6427,
-  "stopped_at_budget": true,
+  "tokens_in_total": 5850967,
+  "tokens_out_total": 52719,
+  "phantom_cost_usd": 19.168,
+  "finished": "2026-05-03T09:20:36.569674Z",
+  "wall_time_sec": 1656.09,
   "per_case_stats": {
     "case1": {
       "efficiency_tool_calls": {
         "mausoleo": {
-          "mean": 7.3333,
-          "min": 6,
-          "max": 9,
+          "mean": 13.3333,
+          "min": 11,
+          "max": 15,
           "n": 3
         },
         "baseline": {
-          "mean": 29.0,
-          "min": 28,
-          "max": 30,
+          "mean": 27.0,
+          "min": 26,
+          "max": 28,
           "n": 3
         }
       },
       "efficiency_chars_read": {
         "mausoleo": {
-          "mean": 218109.3333,
-          "min": 216594,
-          "max": 219626,
+          "mean": 154003.3333,
+          "min": 95579,
+          "max": 186003,
           "n": 3
         },
         "baseline": {
-          "mean": 90063.0,
-          "min": 89709,
-          "max": 90725,
+          "mean": 84531.6667,
+          "min": 78310,
+          "max": 88392,
           "n": 3
         }
       },
       "completeness_recall": {
         "mausoleo": {
-          "mean": 0.8095,
-          "min": 0.8095,
-          "max": 0.8095,
+          "mean": 0.6746,
+          "min": 0.4524,
+          "max": 0.7857,
           "n": 3
         },
         "baseline": {
-          "mean": 0.6984,
-          "min": 0.6667,
-          "max": 0.7143,
+          "mean": 0.6667,
+          "min": 0.619,
+          "max": 0.6905,
           "n": 3
         }
       },
       "quality_judge1_mean": {
         "mausoleo": {
-          "mean": 3.5556,
-          "min": 2.6667,
-          "max": 4.0,
+          "mean": 4.4444,
+          "min": 4.0,
+          "max": 5.0,
           "n": 3
         },
         "baseline": {
-          "mean": 3.8889,
-          "min": 3.6667,
+          "mean": 4.0,
+          "min": 4.0,
           "max": 4.0,
           "n": 3
         }
       },
       "quality_judge2_mean": {
         "mausoleo": {
-          "mean": 4.7778,
-          "min": 4.3333,
+          "mean": 4.6667,
+          "min": 4.0,
           "max": 5.0,
           "n": 3
         },
         "baseline": {
-          "mean": 3.7778,
-          "min": 3.6667,
-          "max": 4.0,
+          "mean": 4.4444,
+          "min": 4.0,
+          "max": 5.0,
+          "n": 3
+        }
+      },
+      "sign_test_quality": {
+        "wins": 3,
+        "losses": 1,
+        "ties": 2,
+        "n_decisive": 4,
+        "p_value": 0.625
+      },
+      "sign_test_completeness": {
+        "wins": 2,
+        "losses": 1,
+        "ties": 0,
+        "n_decisive": 3,
+        "p_value": 1.0
+      },
+      "inter_judge_kappa_quality_mean": 0.33333333333333326
+    },
+    "case2": {
+      "efficiency_tool_calls": {
+        "mausoleo": {
+          "mean": 12.3333,
+          "min": 11,
+          "max": 13,
+          "n": 3
+        },
+        "baseline": {
+          "mean": 29.6667,
+          "min": 29,
+          "max": 30,
+          "n": 3
+        }
+      },
+      "efficiency_chars_read": {
+        "mausoleo": {
+          "mean": 241698.3333,
+          "min": 234113,
+          "max": 249655,
+          "n": 3
+        },
+        "baseline": {
+          "mean": 94259.6667,
+          "min": 87255,
+          "max": 102592,
+          "n": 3
+        }
+      },
+      "completeness_recall": {
+        "mausoleo": {
+          "mean": 0.7576,
+          "min": 0.7576,
+          "max": 0.7576,
+          "n": 3
+        },
+        "baseline": {
+          "mean": 0.6162,
+          "min": 0.5455,
+          "max": 0.697,
+          "n": 3
+        }
+      },
+      "quality_judge1_mean": {
+        "mausoleo": {
+          "mean": 4.7778,
+          "min": 4.6667,
+          "max": 5.0,
+          "n": 3
+        },
+        "baseline": {
+          "mean": 4.2222,
+          "min": 4.0,
+          "max": 4.6667,
+          "n": 3
+        }
+      },
+      "quality_judge2_mean": {
+        "mausoleo": {
+          "mean": 4.8889,
+          "min": 4.6667,
+          "max": 5.0,
+          "n": 3
+        },
+        "baseline": {
+          "mean": 4.6667,
+          "min": 4.0,
+          "max": 5.0,
           "n": 3
         }
       },
@@ -284,76 +442,104 @@
         "n_decisive": 3,
         "p_value": 0.25
       },
-      "inter_judge_kappa_quality_mean": -0.12500000000000006
+      "inter_judge_kappa_quality_mean": 0.5714285714285715
     },
-    "case2": {
+    "case3": {
       "efficiency_tool_calls": {
         "mausoleo": {
-          "mean": 15.0,
-          "min": 13,
-          "max": 18,
+          "mean": 8.3333,
+          "min": 7,
+          "max": 10,
           "n": 3
         },
         "baseline": {
-          "mean": 30.0,
-          "min": 30,
+          "mean": 28.3333,
+          "min": 27,
           "max": 30,
           "n": 3
         }
       },
       "efficiency_chars_read": {
         "mausoleo": {
-          "mean": 277490.3333,
-          "min": 230978,
-          "max": 364529,
+          "mean": 285294.3333,
+          "min": 138397,
+          "max": 467985,
           "n": 3
         },
         "baseline": {
-          "mean": 80070.6667,
-          "min": 67123,
-          "max": 100842,
+          "mean": 108695.0,
+          "min": 105361,
+          "max": 112567,
           "n": 3
         }
       },
       "completeness_recall": {
         "mausoleo": {
-          "mean": 0.7576,
-          "min": 0.7576,
-          "max": 0.7576,
+          "mean": 0.037,
+          "min": 0.0,
+          "max": 0.1111,
           "n": 3
         },
         "baseline": {
-          "mean": 0.6667,
-          "min": 0.6061,
-          "max": 0.697,
+          "mean": 0.1235,
+          "min": 0.1111,
+          "max": 0.1481,
           "n": 3
         }
       },
       "quality_judge1_mean": {
         "mausoleo": {
-          "mean": 4.3333,
+          "mean": 4.0,
           "min": 4.0,
-          "max": 5.0,
+          "max": 4.0,
           "n": 3
         },
         "baseline": {
-          "mean": 3.6667,
-          "min": 3.0,
-          "max": 4.0,
+          "mean": 2.8889,
+          "min": 2.6667,
+          "max": 3.0,
           "n": 3
         }
       },
       "quality_judge2_mean": {
         "mausoleo": {
-          "mean": 4.8889,
-          "min": 4.6667,
-          "max": 5.0,
+          "mean": 4.1111,
+          "min": 4.0,
+          "max": 4.3333,
           "n": 3
         },
         "baseline": {
-          "mean": 4.0,
-          "min": 4.0,
+          "mean": 3.4444,
+          "min": 2.3333,
           "max": 4.0,
+          "n": 3
+        }
+      },
+      "case3_ratio_rmse": {
+        "mausoleo": {
+          "mean": 0.1663,
+          "min": 0.1317,
+          "max": 0.1836,
+          "n": 3
+        },
+        "baseline": {
+          "mean": 0.2204,
+          "min": 0.2051,
+          "max": 0.2321,
+          "n": 3
+        }
+      },
+      "case3_ratio_mae": {
+        "mausoleo": {
+          "mean": 0.1491,
+          "min": 0.1144,
+          "max": 0.1664,
+          "n": 3
+        },
+        "baseline": {
+          "mean": 0.1943,
+          "min": 0.1826,
+          "max": 0.2064,
           "n": 3
         }
       },
@@ -364,104 +550,14 @@
         "n_decisive": 4,
         "p_value": 0.125
       },
-      "sign_test_completeness": {
+      "sign_test_case3_rmse_lower_better": {
         "wins": 3,
         "losses": 0,
         "ties": 0,
         "n_decisive": 3,
         "p_value": 0.25
       },
-      "inter_judge_kappa_quality_mean": 0.1428571428571429
-    },
-    "case3": {
-      "efficiency_tool_calls": {
-        "mausoleo": {
-          "mean": 13.6667,
-          "min": 9,
-          "max": 17,
-          "n": 3
-        },
-        "baseline": {
-          "mean": 26.0,
-          "min": 26,
-          "max": 26,
-          "n": 1
-        }
-      },
-      "efficiency_chars_read": {
-        "mausoleo": {
-          "mean": 314722.0,
-          "min": 248848,
-          "max": 416191,
-          "n": 3
-        },
-        "baseline": {
-          "mean": 109470.0,
-          "min": 109470,
-          "max": 109470,
-          "n": 1
-        }
-      },
-      "completeness_recall": {
-        "mausoleo": {
-          "mean": 0.0741,
-          "min": 0.037,
-          "max": 0.1111,
-          "n": 3
-        },
-        "baseline": {
-          "mean": 0.1111,
-          "min": 0.1111,
-          "max": 0.1111,
-          "n": 1
-        }
-      },
-      "quality_judge1_mean": {
-        "mausoleo": {
-          "mean": 3.8889,
-          "min": 3.6667,
-          "max": 4.3333,
-          "n": 3
-        },
-        "baseline": {
-          "mean": 4.0,
-          "min": 4.0,
-          "max": 4.0,
-          "n": 1
-        }
-      },
-      "quality_judge2_mean": {
-        "mausoleo": {
-          "mean": 3.7778,
-          "min": 2.6667,
-          "max": 4.6667,
-          "n": 3
-        },
-        "baseline": {
-          "mean": 4.0,
-          "min": 4.0,
-          "max": 4.0,
-          "n": 1
-        }
-      },
-      "sign_test_quality": {
-        "wins": 2,
-        "losses": 0,
-        "ties": 0,
-        "n_decisive": 2,
-        "p_value": 0.5
-      },
-      "sign_test_completeness": {
-        "wins": 0,
-        "losses": 1,
-        "ties": 0,
-        "n_decisive": 1,
-        "p_value": 1.0
-      },
-      "inter_judge_kappa_quality_mean": 0.0
+      "inter_judge_kappa_quality_mean": 0.14285714285714285
     }
-  },
-  "budget_cap_usd": 18.0,
-  "n_trials_completed": 16,
-  "wall_time_sec": 1376.8
+  }
 }

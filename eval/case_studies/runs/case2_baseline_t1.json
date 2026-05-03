@@ -2,22 +2,22 @@
   "case_id": "case2",
   "system": "baseline",
   "trial": 1,
-  "seed": 1836,
+  "seed": 1382,
   "question": "How did Il Messaggero cover the fall of Mussolini and the transition to the Badoglio government? Cite specific dates, headlines and the editorial-register shift across 25-27 July 1943.",
   "tool_calls": 30,
   "stopped_at_cap": true,
-  "chars_read": 72247,
-  "input_tokens": 241942,
-  "output_tokens": 3127,
-  "cost_usd": 0.77273,
-  "elapsed_sec": 72.51,
+  "chars_read": 87255,
+  "input_tokens": 230857,
+  "output_tokens": 3125,
+  "cost_usd_phantom": 0.73945,
+  "elapsed_sec": 66.17,
   "completeness": {
     "gt_size": 33,
-    "touched_relevant": 23,
-    "recall": 0.696969696969697,
-    "touched_total": 108
+    "touched_relevant": 20,
+    "recall": 0.6060606060606061,
+    "touched_total": 107
   },
-  "final_answer": "## Il Messaggero's Coverage of Mussolini's Fall and the Badoglio Transition (July 25-27, 1943)\n\nThe coverage of this momentous political transition reveals a striking editorial transformation in Il Messaggero, though the critical issue of July 26, 1943 is absent from the archive, creating a gap in the documentary record.\n\n**July 25, 1943**: The morning edition of Il Messaggero contained no mention of the dramatic events unfolding that day. The front page focused on military bulletins about the battle in Sicily (headline: \"Aspra lotta su tutto il fronte\" - article 1943-07-25_a003) and war news from other fronts. The government change was announced late on July 25th after the Gran Consiglio meeting and Mussolini's dismissal, too late for that day's newspaper.\n\n**July 27, 1943**: By this date, Il Messaggero had completely pivoted its editorial register. The transformation was dramatic and immediate. The front-page headline \"La composizione del Governo Badoglio\" (1943-07-27_a000) proclaimed \"Un'altra giornata di entusiastiche dimostrazioni di popolo acclamante all'Italia, alle Forze Armate, al Re e al Maresciallo\" - emphasizing popular enthusiasm for the King and Marshal Badoglio.\n\nThe newspaper published extensive documentation of the transition, including the Gran Consiglio vote of July 24 (1943-07-27_a006), which revealed that Mussolini had been outvoted by his own Fascist leadership. The order of the day called for restoring functions to \"la Corona, al Gran Consiglio, al Governo, al Parlamento\" - a clear repudiation of Mussolini's personal dictatorship.\n\nThe editorial tone shifted dramatically from fascist rhetoric to monarchist-military language. An editorial titled \"Carattere del nuovo Governo\" (1943-07-27_a040) praised Badoglio's military government as composed of \"integri funzionari\" chosen for competence rather than \"favore politico.\" The appointment of Carmine Senise as Police Chief was hailed as restoring \"un galantuomo specchiato\" - a pointed contrast to fascist corruption.\n\nBadoglio's appeal to Romans (1943-07-27_a048) warned against demonstrations and demanded discipline, declaring \"La guerra continua\" - the war continues. This became the regime's watchword, attempting to maintain the German alliance while fundamentally changing Italy's political structure.\n\nThe newspaper's transformation from fascist organ to monarchist-military mouthpiece was complete, immediate, and unapologetic - a journalistic volte-face that reflected the regime's desperate attempt to save Italy while maintaining its precarious position between the Allies and Nazi Germany.",
+  "final_answer": "## Il Messaggero's Coverage of Mussolini's Fall and the Badoglio Transition (July 25-27, 1943)\n\nIl Messaggero's coverage of this pivotal moment reveals a dramatic editorial shift that occurred literally overnight. The July 25, 1943 issue contains no mention of the regime change, as the announcement came late that evening after the paper had gone to press. The front page of July 25 focused on routine war news—Soviet attacks on the Eastern Front and Pacific naval operations—with no hint of the political earthquake about to occur.\n\nThe transformation becomes strikingly evident in the July 27 issue (the July 26 issue is absent from the archive). The newspaper's tone underwent a complete metamorphosis. The lead story, \"La composizione del Governo Badoglio\" (1943-07-27_a000), describes \"Un'altra giornata di entusiastiche dimostrazioni di popolo acclamante all'Italia, alle Forze Armate, al Re e al Maresciallo\"—enthusiastic popular demonstrations for Italy, the Armed Forces, the King, and the Marshal.\n\nMost revealing is the detailed account in \"L'ordine del giorno e la votazione del Gran Consiglio nella riunione del 24\" (1943-07-27_a006), which matter-of-factly reports that the Gran Consiglio del Fascismo met on July 24 for the first time since December 7, 1939, and voted on Grandi's motion calling for restoration of constitutional functions to the Crown, Parliament, and other state bodies. The newspaper presents this as a legitimate constitutional process rather than a coup.\n\nThe editorial \"Carattere del nuovo Governo\" (1943-07-27_a040) exemplifies the new register. Gone is fascist rhetoric; instead, the paper praises Badoglio's government as one of \"decisive, strenuous military energy\" needed for \"the salvation of the country.\" It lauds individual ministers for their technical competence and integrity—particularly Carmine Senise's return as Police Chief, described as having \"profound sense of justice\" and abhorring anything \"not clear, humane and dignified.\"\n\nThe newspaper's coverage emphasized spontaneous popular enthusiasm. \"Adunate non preordinate ed entusiasmo senza retorica\" (1943-07-27_a066) describes how crowds spontaneously gathered on the night of July 25, singing Risorgimento hymns like Mameli's anthem and the \"Canzone del Piave,\" chanting \"Viva l'Italia Libera\" (Long Live Free Italy). The tricolor replaced fascist symbols.\n\nThis abrupt shift—from silence to celebration—demonstrates Il Messaggero's complete realignment within 48 hours, abandoning twenty years of fascist loyalty to embrace the monarchical-military government without hesitation or explanation.",
   "tool_call_log": [
     {
       "name": "baseline_search",
@@ -31,7 +31,7 @@
     {
       "name": "baseline_search",
       "input": {
-        "query": "Gran Consiglio Fascismo",
+        "query": "Gran Consiglio fascismo",
         "date_from": "1943-07-24",
         "date_to": "1943-07-27"
       },
@@ -40,45 +40,29 @@
     {
       "name": "baseline_search",
       "input": {
-        "query": "Re Vittorio Emanuele",
+        "query": "dimissioni Duce",
         "date_from": "1943-07-24",
         "date_to": "1943-07-27"
       },
-      "output_chars": 4744
+      "output_chars": 2666
     },
     {
       "name": "baseline_search",
       "input": {
-        "query": "proclama Re Imperatore",
-        "date_from": "1943-07-25",
-        "date_to": "1943-07-27"
-      },
-      "output_chars": 4935
-    },
-    {
-      "name": "baseline_search",
-      "input": {
-        "query": "dimissioni Duce",
-        "date_from": "1943-07-25",
-        "date_to": "1943-07-27"
-      },
-      "output_chars": 1561
-    },
-    {
-      "name": "baseline_search",
-      "input": {
-        "query": "S.M. Re Badoglio proclama",
+        "query": "Badoglio Re proclama",
         "date_from": "1943-07-25",
         "date_to": "1943-07-25"
       },
-      "output_chars": 3810
+      "output_chars": 3805
     },
     {
-      "name": "read_article",
+      "name": "baseline_search",
       "input": {
-        "article_id": "1943-07-27_a006"
+        "query": "nuovo governo Capo",
+        "date_from": "1943-07-25",
+        "date_to": "1943-07-25"
       },
-      "output_chars": 2012
+      "output_chars": 4850
     },
     {
       "name": "read_article",
@@ -90,16 +74,9 @@
     {
       "name": "read_article",
       "input": {
-        "article_id": "1943-07-27_a009"
+        "article_id": "1943-07-27_a006"
       },
-      "output_chars": 355
-    },
-    {
-      "name": "read_article",
-      "input": {
-        "article_id": "1943-07-27_a018"
-      },
-      "output_chars": 1770
+      "output_chars": 2012
     },
     {
       "name": "read_article",
@@ -111,48 +88,20 @@
     {
       "name": "baseline_search",
       "input": {
-        "query": "comunicato Stefani",
+        "query": "Re Imperatore proclama italiani",
         "date_from": "1943-07-25",
         "date_to": "1943-07-25"
       },
-      "output_chars": 2541
+      "output_chars": 5182
     },
     {
       "name": "baseline_search",
       "input": {
-        "query": "Maresciallo Badoglio Capo Governo",
+        "query": "Maresciallo Pietro",
         "date_from": "1943-07-25",
         "date_to": "1943-07-25"
       },
-      "output_chars": 5252
-    },
-    {
-      "name": "baseline_search",
-      "input": {
-        "query": "S.M. Re accettato dimissioni",
-        "date_from": "1943-07-25",
-        "date_to": "1943-07-25"
-      },
-      "output_chars": 3813
-    },
-    {
-      "name": "baseline_search",
-      "input": {
-        "query": "nomina Presidente Consiglio Ministri",
-        "date_from": "1943-07-25",
-        "date_to": "1943-07-25"
-      },
-      "output_chars": 5629
-    },
-    {
-      "name": "baseline_search",
-      "input": {
-        "query": "",
-        "date_from": "1943-07-25",
-        "date_to": "1943-07-25",
-        "limit": 20
-      },
-      "output_chars": 40
+      "output_chars": 4862
     },
     {
       "name": "read_article",
@@ -178,25 +127,20 @@
     {
       "name": "baseline_search",
       "input": {
-        "query": "Sua Maestà Re Imperatore",
+        "query": "S.M. Re accettato dimissioni",
         "date_from": "1943-07-25",
         "date_to": "1943-07-25"
       },
-      "output_chars": 3809
+      "output_chars": 3813
     },
     {
-      "name": "read_article",
+      "name": "baseline_search",
       "input": {
-        "article_id": "1943-07-25_a003"
+        "query": "Vittorio Emanuele",
+        "date_from": "1943-07-25",
+        "date_to": "1943-07-25"
       },
-      "output_chars": 271
-    },
-    {
-      "name": "read_article",
-      "input": {
-        "article_id": "1943-07-25_a004"
-      },
-      "output_chars": 1077
+      "output_chars": 4431
     },
     {
       "name": "read_article",
@@ -208,9 +152,25 @@
     {
       "name": "read_article",
       "input": {
-        "article_id": "1943-07-27_a014"
+        "article_id": "1943-07-27_a007"
       },
-      "output_chars": 2017
+      "output_chars": 379
+    },
+    {
+      "name": "read_article",
+      "input": {
+        "article_id": "1943-07-27_a021"
+      },
+      "output_chars": 2112
+    },
+    {
+      "name": "baseline_search",
+      "input": {
+        "query": "italiani assumo comando forze armate",
+        "date_from": "1943-07-27",
+        "date_to": "1943-07-27"
+      },
+      "output_chars": 5496
     },
     {
       "name": "read_article",
@@ -222,9 +182,64 @@
     {
       "name": "read_article",
       "input": {
+        "article_id": "1943-07-27_a002"
+      },
+      "output_chars": 400
+    },
+    {
+      "name": "baseline_search",
+      "input": {
+        "query": "proclama Re Badoglio guerra continua",
+        "date_from": "1943-07-27",
+        "date_to": "1943-07-27"
+      },
+      "output_chars": 5138
+    },
+    {
+      "name": "read_article",
+      "input": {
         "article_id": "1943-07-27_a003"
       },
       "output_chars": 226
+    },
+    {
+      "name": "read_article",
+      "input": {
+        "article_id": "1943-07-27_a004"
+      },
+      "output_chars": 394
+    },
+    {
+      "name": "baseline_search",
+      "input": {
+        "query": "ITALIANI proclama Maresciallo",
+        "date_from": "1943-07-27",
+        "date_to": "1943-07-27"
+      },
+      "output_chars": 5110
+    },
+    {
+      "name": "read_article",
+      "input": {
+        "article_id": "1943-07-27_a008"
+      },
+      "output_chars": 572
+    },
+    {
+      "name": "read_article",
+      "input": {
+        "article_id": "1943-07-27_a009"
+      },
+      "output_chars": 355
+    },
+    {
+      "name": "baseline_search",
+      "input": {
+        "query": "S.M. Re assume comando supremo",
+        "date_from": "1943-07-27",
+        "date_to": "1943-07-27"
+      },
+      "output_chars": 5247
     },
     {
       "name": "read_article",
@@ -234,27 +249,11 @@
       "output_chars": 366
     },
     {
-      "name": "baseline_search",
-      "input": {
-        "query": "italiani guerra continua",
-        "date_from": "1943-07-27",
-        "date_to": "1943-07-27"
-      },
-      "output_chars": 5258
-    },
-    {
       "name": "read_article",
       "input": {
-        "article_id": "1943-07-27_a010"
+        "article_id": "1943-07-27_a066"
       },
-      "output_chars": 234
-    },
-    {
-      "name": "read_article",
-      "input": {
-        "article_id": "1943-07-27_a011"
-      },
-      "output_chars": 46
+      "output_chars": 7358
     }
   ],
   "article_ids_touched": [
@@ -288,30 +287,15 @@
     "1943-07-25_a164",
     "1943-07-27_a095",
     "1943-07-24_a025",
-    "1943-07-25_a064",
-    "1943-07-25_a098",
-    "1943-07-25_a065",
-    "1943-07-24_a124",
-    "1943-07-24_a181",
-    "1943-07-24_a173",
-    "1943-07-25_a099",
-    "1943-07-25_a052",
-    "1943-07-27_a025",
-    "1943-07-24_a196",
-    "1943-07-25_a186",
-    "1943-07-27_a150",
-    "1943-07-25_a097",
-    "1943-07-27_a034",
-    "1943-07-25_a234",
-    "1943-07-27_a009",
-    "1943-07-27_a018",
-    "1943-07-27_a022",
-    "1943-07-25_a142",
-    "1943-07-27_a014",
     "1943-07-25_a194",
     "1943-07-25_a174",
+    "1943-07-24_a036",
     "1943-07-25_a169",
     "1943-07-25_a196",
+    "1943-07-24_a015",
+    "1943-07-24_a100",
+    "1943-07-25_a234",
+    "1943-07-25_a142",
     "1943-07-25_a106",
     "1943-07-25_a101",
     "1943-07-25_a159",
@@ -320,53 +304,67 @@
     "1943-07-25_a218",
     "1943-07-25_a068",
     "1943-07-25_a048",
-    "1943-07-25_a005",
-    "1943-07-25_a027",
-    "1943-07-25_a161",
-    "1943-07-25_a155",
-    "1943-07-25_a040",
-    "1943-07-25_a025",
     "1943-07-25_a236",
-    "1943-07-25_a031",
-    "1943-07-25_a160",
-    "1943-07-25_a011",
-    "1943-07-25_a178",
     "1943-07-25_a187",
+    "1943-07-25_a161",
+    "1943-07-25_a004",
+    "1943-07-25_a178",
+    "1943-07-25_a033",
+    "1943-07-25_a040",
+    "1943-07-25_a075",
+    "1943-07-25_a073",
     "1943-07-25_a247",
     "1943-07-25_a021",
-    "1943-07-25_a116",
-    "1943-07-25_a167",
-    "1943-07-25_a165",
-    "1943-07-25_a170",
-    "1943-07-25_a197",
-    "1943-07-25_a144",
-    "1943-07-25_a141",
-    "1943-07-25_a062",
-    "1943-07-25_a162",
-    "1943-07-25_a083",
-    "1943-07-25_a084",
-    "1943-07-25_a211",
-    "1943-07-25_a153",
+    "1943-07-25_a195",
+    "1943-07-25_a146",
+    "1943-07-25_a080",
+    "1943-07-25_a011",
+    "1943-07-25_a006",
+    "1943-07-25_a118",
+    "1943-07-25_a030",
+    "1943-07-25_a041",
+    "1943-07-25_a031",
+    "1943-07-25_a208",
+    "1943-07-25_a052",
+    "1943-07-25_a115",
+    "1943-07-25_a237",
+    "1943-07-25_a160",
+    "1943-07-25_a212",
+    "1943-07-25_a049",
+    "1943-07-25_a158",
     "1943-07-25_a000",
     "1943-07-25_a001",
     "1943-07-25_a002",
-    "1943-07-25_a003",
-    "1943-07-25_a004",
-    "1943-07-27_a001",
-    "1943-07-27_a003",
-    "1943-07-27_a005",
+    "1943-07-25_a064",
+    "1943-07-25_a098",
+    "1943-07-25_a065",
+    "1943-07-25_a099",
+    "1943-07-25_a186",
+    "1943-07-25_a097",
+    "1943-07-25_a172",
+    "1943-07-25_a086",
+    "1943-07-27_a022",
+    "1943-07-27_a019",
     "1943-07-27_a080",
-    "1943-07-27_a158",
-    "1943-07-27_a010",
-    "1943-07-27_a108",
-    "1943-07-27_a129",
+    "1943-07-27_a067",
+    "1943-07-27_a032",
+    "1943-07-27_a071",
+    "1943-07-27_a110",
+    "1943-07-27_a160",
+    "1943-07-27_a001",
+    "1943-07-27_a014",
+    "1943-07-27_a066",
+    "1943-07-27_a009",
+    "1943-07-27_a025",
     "1943-07-27_a029",
-    "1943-07-27_a020",
-    "1943-07-27_a118",
-    "1943-07-27_a041",
-    "1943-07-27_a157",
-    "1943-07-27_a151"
+    "1943-07-27_a003",
+    "1943-07-27_a125",
+    "1943-07-27_a027",
+    "1943-07-27_a010",
+    "1943-07-27_a153",
+    "1943-07-27_a034",
+    "1943-07-27_a005"
   ],
   "error": null,
-  "timestamp": "2026-05-03T08:28:14.891014Z"
+  "timestamp": "2026-05-03T09:08:23.655650Z"
 }

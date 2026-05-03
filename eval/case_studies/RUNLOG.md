@@ -108,3 +108,57 @@ BUDGET CAP HIT at $18.34 before case3/baseline/t2; stopping. researcher=$17.70 j
 artefacts at `eval/case_studies/runs/{case}_{system}_t{N}{,_judge1,_judge2}.json`;
 aggregate stats at `eval/case_studies/aggregate.json`; relevance GT at
 `eval/case_studies/relevance_gt.json`.
+
+## run started 2026-05-03T08:53:00.484594Z (no-budget-cap rerun)
+  embedder status: {"loaded": true, "smoke_test": true, "model": "paraphrase-multilingual-MiniLM-L12-v2", "dim": 384, "nearest_day_to_mussolini": ["1943-07-26", 0.8998396992683411]}
+- starting case1 / mausoleo / trial 1 (seed=1233) at tok_in=0 tok_out=0
+  done case1/mausoleo/t1: calls=11 chars=180428 recall=0.79 j1=4.0/5.0/4.0 j2=5.0/5.0/5.0 tok_in=181008 tok_out=1997 (63.99s)
+- starting case1 / mausoleo / trial 2 (seed=2242) at tok_in=181008 tok_out=1997
+  done case1/mausoleo/t2: calls=14 chars=95579 recall=0.45 j1=4.0/4.0/4.0 j2=4.0/4.0/4.0 tok_in=219109 tok_out=2187 (63.27s)
+- starting case1 / mausoleo / trial 3 (seed=3251) at tok_in=400117 tok_out=4184
+  done case1/mausoleo/t3: calls=15 chars=186003 recall=0.79 j1=5.0/5.0/5.0 j2=5.0/5.0/5.0 tok_in=340078 tok_out=2298 (70.63s)
+- starting case1 / baseline / trial 1 (seed=1233) at tok_in=740195 tok_out=6482
+  done case1/baseline/t1: calls=26 chars=78310 recall=0.69 j1=4.0/4.0/4.0 j2=5.0/5.0/5.0 tok_in=402200 tok_out=2996 (81.6s)
+- starting case1 / baseline / trial 2 (seed=2242) at tok_in=1142395 tok_out=9478
+  done case1/baseline/t2: calls=28 chars=88392 recall=0.69 j1=4.0/4.0/4.0 j2=4.0/5.0/4.0 tok_in=407564 tok_out=3658 (89.78s)
+- starting case1 / baseline / trial 3 (seed=3251) at tok_in=1549959 tok_out=13136
+  done case1/baseline/t3: calls=27 chars=86893 recall=0.62 j1=4.0/4.0/4.0 j2=4.0/4.0/4.0 tok_in=372314 tok_out=3650 (92.62s)
+- starting case2 / mausoleo / trial 1 (seed=1382) at tok_in=1922273 tok_out=16786
+  done case2/mausoleo/t1: calls=11 chars=234113 recall=0.76 j1=4.0/5.0/5.0 j2=5.0/5.0/5.0 tok_in=589213 tok_out=3111 (105.21s)
+- starting case2 / mausoleo / trial 2 (seed=2391) at tok_in=2511486 tok_out=19897
+  done case2/mausoleo/t2: calls=13 chars=249655 recall=0.76 j1=4.0/5.0/5.0 j2=4.0/5.0/5.0 tok_in=426139 tok_out=2609 (81.5s)
+- starting case2 / mausoleo / trial 3 (seed=3400) at tok_in=2937625 tok_out=22506
+  done case2/mausoleo/t3: calls=13 chars=241327 recall=0.76 j1=5.0/5.0/5.0 j2=5.0/5.0/5.0 tok_in=565516 tok_out=2594 (90.45s)
+- starting case2 / baseline / trial 1 (seed=1382) at tok_in=3503141 tok_out=25100
+  done case2/baseline/t1: calls=30 chars=87255 recall=0.61 j1=4.0/4.0/4.0 j2=4.0/4.0/4.0 tok_in=230857 tok_out=3125 (66.17s)
+- starting case2 / baseline / trial 2 (seed=2391) at tok_in=3733998 tok_out=28225
+  done case2/baseline/t2: calls=30 chars=102592 recall=0.55 j1=4.0/4.0/4.0 j2=5.0/5.0/5.0 tok_in=341577 tok_out=3396 (82.4s)
+- starting case2 / baseline / trial 3 (seed=3400) at tok_in=4075575 tok_out=31621
+  done case2/baseline/t3: calls=29 chars=92932 recall=0.70 j1=4.0/5.0/5.0 j2=5.0/5.0/5.0 tok_in=337246 tok_out=3813 (91.71s)
+- starting case3 / mausoleo / trial 1 (seed=1553) at tok_in=4412821 tok_out=35434
+  done case3/mausoleo/t1: calls=7 chars=249501 recall=0.00 rmse=0.1317 mae=0.1144 weeks=5/5 j1=4.0/4.0/4.0 j2=4.0/4.0/4.0 tok_in=223205 tok_out=2743 (82.98s)
+- starting case3 / mausoleo / trial 2 (seed=2562) at tok_in=4636026 tok_out=38177
+  done case3/mausoleo/t2: calls=8 chars=138397 recall=0.00 rmse=0.1836 mae=0.1664 weeks=5/5 j1=4.0/4.0/4.0 j2=4.0/4.0/5.0 tok_in=112155 tok_out=2395 (68.89s)
+- starting case3 / mausoleo / trial 3 (seed=3571) at tok_in=4748181 tok_out=40572
+  done case3/mausoleo/t3: calls=10 chars=467985 recall=0.11 rmse=0.1836 mae=0.1664 weeks=5/5 j1=4.0/4.0/4.0 j2=4.0/4.0/4.0 tok_in=303074 tok_out=2197 (64.71s)
+- starting case3 / baseline / trial 1 (seed=1553) at tok_in=5051255 tok_out=42769
+  done case3/baseline/t1: calls=27 chars=108157 recall=0.15 rmse=0.2321 mae=0.2064 weeks=5/5 j1=3.0/3.0/3.0 j2=4.0/4.0/4.0 tok_in=263730 tok_out=3210 (69.63s)
+- starting case3 / baseline / trial 2 (seed=2562) at tok_in=5314985 tok_out=45979
+  done case3/baseline/t2: calls=28 chars=105361 recall=0.11 rmse=0.2239 mae=0.1826 weeks=5/5 j1=2.0/3.0/3.0 j2=2.0/2.0/3.0 tok_in=241190 tok_out=3550 (79.3s)
+- starting case3 / baseline / trial 3 (seed=3571) at tok_in=5556175 tok_out=49529
+  done case3/baseline/t3: calls=30 chars=112567 recall=0.11 rmse=0.2051 mae=0.1939 weeks=5/5 j1=3.0/3.0/3.0 j2=4.0/4.0/4.0 tok_in=294792 tok_out=3190 (77.75s)
+
+finished tokens in/out 5850967/52719 (phantom $=19.17) wall=1656s
+
+
+## Rerun 2026-05-03 final summary 2026-05-03T09:21:12.541763Z
+
+- **trials completed**: 18 / 18 (3 cases × 2 systems × 3 trials)
+- **wall time**: 27.6 min (1656 s)
+- **tokens (Anthropic, OAuth subscription quota; dollar cost is meaningless)**:
+  input 5,850,967, output 52,719.
+- **embedder loaded**: True (paraphrase-multilingual-MiniLM-L12-v2, dim 384); smoke-test nearest day to "Mussolini" = ['1943-07-26', 0.8998396992683411].
+- **case-3 metric**: replaced article-id-touched recall with per-ISO-week
+  war-fraction MAE/RMSE against an LLM-built oracle
+  (`eval/case_studies/case3_oracle_ratios.json`, 6480 articles classified).
+- **cost cap**: removed. Phantom dollar figure no longer used for control flow.

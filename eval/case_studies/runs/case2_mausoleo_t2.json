@@ -2,22 +2,22 @@
   "case_id": "case2",
   "system": "mausoleo",
   "trial": 2,
-  "seed": 2845,
+  "seed": 2391,
   "question": "How did Il Messaggero cover the fall of Mussolini and the transition to the Badoglio government? Cite specific dates, headlines and the editorial-register shift across 25-27 July 1943.",
-  "tool_calls": 18,
+  "tool_calls": 13,
   "stopped_at_cap": false,
-  "chars_read": 230978,
-  "input_tokens": 535667,
-  "output_tokens": 2882,
-  "cost_usd": 1.65023,
-  "elapsed_sec": 82.08,
+  "chars_read": 249655,
+  "input_tokens": 426139,
+  "output_tokens": 2609,
+  "cost_usd_phantom": 1.31755,
+  "elapsed_sec": 81.5,
   "completeness": {
     "gt_size": 33,
     "touched_relevant": 25,
     "recall": 0.7575757575757576,
-    "touched_total": 120
+    "touched_total": 132
   },
-  "final_answer": "Excellent. Now I have all the information I need to provide a comprehensive answer about how Il Messaggero covered the fall of Mussolini and the transition to Badoglio. Let me compile my final answer.\n\n## Il Messaggero's Coverage of Mussolini's Fall and the Badoglio Transition (July 25-27, 1943)\n\nIl Messaggero's coverage of the fall of Mussolini reveals a dramatic editorial pivot executed with remarkable speed, though the absence of the July 26 issue from the archive creates a critical gap in the documentary record.\n\n**July 25, 1943: Business as Usual**\n\nThe July 25 issue shows no awareness of the regime change that would occur that very evening. The newspaper devoted its pages entirely to military bulletins from Sicily, the Eastern Front, and the Pacific. Headlines focused on \"Aspra lotta su tutto il fronte\" (article 1943-07-25_a003) and detailed the evacuation of Palermo and artillery operations. The lead story reported \"559 velivoli americani abbattuti in ventitre giorni\" (1943-07-25_a007), maintaining the propagandistic register of Fascist war reporting. There was no hint of political crisis, no mention of the Gran Consiglio meeting scheduled for that afternoon at Palazzo Venezia.\n\n**The Missing July 26 Issue**\n\nThe July 26 edition is absent from the source archive—a crucial lacuna, as this issue would have contained the first official announcement of Mussolini's dismissal and arrest, the King's proclamation, and Badoglio's initial statements. This gap prevents analysis of how the newspaper managed the immediate shock of the transition.\n\n**July 27, 1943: A New Editorial Voice**\n\nBy July 27, Il Messaggero had executed a complete editorial transformation. The newspaper now presented the regime change as a moment of national liberation and monarchical restoration, carefully recalibrating its language to serve the new government while maintaining continuity with Italian patriotism.\n\nThe front page proclaimed \"Un'altra giornata di entusiastiche dimostrazioni di popolo acclamante all'Italia, alle Forze Armate, al Re e al Maresciallo\" (1943-07-27_a000), describing popular celebrations in Rome, Milan, Bologna, and Florence. The coverage emphasized spontaneous joy: crowds waving tricolor flags, photographs of the King and Badoglio displayed on balconies, and soldiers receiving \"manifestazioni di simpatia\" (1943-07-27_a021). The Count of Turin addressed crowds from the Royal Palace in Milan with \"fervide parole di fierezza e di fede nei destini della Patria.\"\n\n**Reframing the Gran Consiglio Vote**\n\nThe newspaper published a detailed account of the July 24 Gran Consiglio meeting (1943-07-27_a023), presenting Dino Grandi's order of the day—which had effectively toppled Mussolini—in purely institutional terms. The article listed all 28 participants and reported the vote: 19 in favor of Grandi's motion (including Ciano, Bottai, De Bono, and Federzoni), 7 against (Scorza, Polverelli, Buffarini), and 1 abstention (Suardo). Crucially, the motion called for \"il ripristino immediato di tutte le funzioni statali\" and invited the King to assume \"effettivo comando delle Forze Armate.\" Mussolini's name appeared only as a participant, with no editorial commentary on his fate.\n\n**The New Badoglio Government**\n\nIl Messaggero devoted extensive coverage to the Badoglio cabinet (1943-07-27_a018), presenting it as a government of technical expertise and military competence. The list included Raffaele Guariglia (Foreign Affairs), Bruno Fornaciari (Interior), and military figures for War, Navy, and Aeronautics. The newspaper emphasized the \"reintegrazione\" of Carmine Senise as Police Chief (1943-07-27_a015), describing him as \"un galantuomo specchiato\" with \"profondo senso della giustizia\"—a pointed contrast to Fascist police methods, though never explicitly stated.\n\n**Editorial Register Shift: From Fascist to Liberal-Monarchical**\n\nThe most striking transformation was linguistic. The July 27 editorial (1943-07-27_a020) abandoned Fascist rhetoric entirely, instead invoking Risorgimento liberalism: \"L'unità della Patria fu una stessa cosa con la conquista della libertà.\" The piece argued that \"la libertà, ripristinata dal Sovrano,\" awakened \"voci remote, che parevano dimenticate\" and celebrated how \"la nuova generazione\" was discovering freedom's \"valore supremo.\" This represented a complete reversal from twenty years of Fascist discourse, now recast as an aberration from Italy's true liberal-monarchical tradition.\n\nYet the editorial carefully bounded this newfound freedom: \"Non si può concepire, in questo momento, una qualsiasi libertà se non in funzione di quelle che sono le supreme necessità della nazione in guerra.\" Liberty meant discipline, responsibility, and subordination to the war effort—continuity beneath the surface change.\n\n**Managing Public Order**\n\nBadoglio's July 26 proclamation to Romans (1943-07-27_a048) revealed official anxiety about uncontrolled celebrations: \"Non è il momento di abbandonarsi a dimostrazioni che non saranno tollerate... Sono vietati gli assembramenti e la forza pubblica ha l'ordine di disperderli inesorabilmente.\" The military authorities' manifesto imposed curfew, prohibited public gatherings, suspended gun permits, and authorized troops to use weapons against violators (1943-07-27_a047). This iron fist within the velvet glove of \"liberation\" showed the regime's fragility.\n\n**The German Reaction**\n\nIl Messaggero reported Berlin's response with careful diplomacy (1943-07-27_a033). German radio attributed the change to \"lo stato di salute di Mussolini che ultimamente era ammalato\"—a face-saving fiction. \"Gli ambienti politici berlinesi hanno accolto con grande calma le notizie,\" the article claimed, emphasizing that Germany understood Badoglio's appointment served \"il bene dell'Italia\" and noting with satisfaction the proclamations' assurances that \"la guerra",
+  "final_answer": "I can see that on July 25, there was NO coverage of the political crisis - the newspaper was filled with routine war news, local news, and classified ads. This is crucial! Now let me compile my final answer based on my findings.\n\n## How Il Messaggero Covered the Fall of Mussolini and the Transition to the Badoglio Government\n\nIl Messaggero's coverage of Mussolini's fall reveals a dramatic editorial rupture across July 25-27, 1943, marked by complete silence on July 25, followed by carefully choreographed legitimation of the new regime on July 27. The issue of July 26 is absent from the archive, creating a critical gap in the historical record.\n\n**July 25: Silence and Business as Usual**\n\nThe July 25 issue contains no mention whatsoever of the political earthquake unfolding that very day. While the Gran Consiglio del Fascismo met at Palazzo Venezia from 5 PM on July 24 through 3 AM on July 25 to vote on Dino Grandi's motion of no confidence, Il Messaggero published routine war bulletins, bombing damage reports, and classified advertisements. The front page carried standard military news: \"Ingenti perdite sovietiche\" (article 1943-07-25_a000), reports on Sicily's evacuation of Palermo (bollettino n. 1155), and the bombing of Bologna's Basilica di San Francesco. The newspaper maintained full fascist register, including datelines in the fascist calendar (\"anno XXI\") and propaganda language celebrating the \"strenuo valore\" of Italian forces.\n\n**July 26: The Missing Issue**\n\nThe absence of July 26 from the archive is historically significant. This was the day immediately following Mussolini's arrest and Badoglio's appointment, when the regime's collapse would have required immediate editorial response. Whether this issue was never published, destroyed, or simply lost remains unclear, but the gap represents a crucial 24-hour silence during Italy's most dramatic political transition.\n\n**July 27: Monarchical Restoration and Controlled Enthusiasm**\n\nBy July 27, Il Messaggero had completely transformed its editorial register. The newspaper presented the transition as a monarchical restoration rather than a fascist collapse, carefully avoiding any mention of Mussolini's name in the main political coverage. The lead article (1943-07-27_a018) announced the new cabinet with bureaucratic formality: \"S. M. il Re e Imperatore, su proposta del Capo del Governo, Primo Ministro, Segretario di Stato, ha nominato i seguenti Ministri Segretari di Stato...\" The list included Raffaele Guariglia (Foreign Affairs), Bruno Fornaciari (Interior), and military figures including General Antonio Sorice (War), Admiral Raffaele de Courten (Navy), and General Renato Sandalli (Air Force).\n\nThe newspaper's coverage emphasized three key themes: royal authority, military continuity, and popular enthusiasm. An editorial (1943-07-27_a020) proclaimed: \"Mai come ora la libertà si identificò con la responsabilità. Dopo vent'anni di vicende e di attese, certi concetti che furono già di comune accettazione, vanno ripresi e ribaditi con insistenza.\" This marked a dramatic shift from fascist rhetoric to liberal-monarchical language, invoking the Risorgimento and constitutional values: \"L'unità della Patria fu una stessa cosa con la conquista della libertà, perché senza libertà non c'è né patria né unità.\"\n\n**The Grandi Motion: Belated Disclosure**\n\nOnly on July 27 did Il Messaggero publish the text of the Gran Consiglio meeting (1943-07-27_a023), revealing that Grandi's motion had received 19 votes in favor, 7 against, and 1 abstention. The motion had called for \"l'immediato ripristino di tutte le funzioni statali\" and invited the King to assume \"l'effettivo comando delle Forze Armate di terra, di mare e dell'aria, secondo l'articolo 5 dello Statuto del Regno.\" The newspaper framed this as constitutional restoration rather than fascist defeat.\n\n**Public Order and Controlled Narrative**\n\nBadoglio's appeal to Romans (1943-07-27_a048), published July 27 but dated July 26, ordered citizens back to work and banned demonstrations: \"Non è il momento di abbandonarsi a dimostrazioni che non saranno tollerate... Sono vietati gli assembramenti e la forza pubblica ha l'ordine di disperderli inesorabilmente.\" Yet the same issue carried extensive reports of \"spontaneous\" pro-monarchical demonstrations in Rome, Milan, Bologna, and Florence (1943-07-27_a021, a003, a027), describing \"cortei\" with tricolors and photographs of the King and Badoglio, with \"acclamazioni unanime e vivissime.\"\n\n**Institutional Continuity**\n\nThe newspaper emphasized continuity through key appointments. Carmine Senise's restoration as Police Chief (1943-07-27_a001, a015) was described as a \"reintegrazione\" receiving \"plauso unanime,\" highlighting his \"rettitudine eccezionale.\" The Milizia Volontaria per la Sicurezza Nazionale was declared \"parte integrante delle Forze Armate\" under General Quirino Armellini (1943-07-27_a002), preserving fascist military structures under new command.\n\n**The Editorial Register Shift**\n\nThe transformation from fascist to monarchical-patriotic language was total. July 25's rhetoric of \"strenuo valore\" and \"immutata asprezza\" gave way to July 27's invocation of \"libertà,\" \"responsabilità,\" and \"Risorgimento.\" The newspaper shifted from celebrating the Axis to emphasizing Italian national interests, from Mussolini's leadership cult to the King's constitutional authority, and from fascist triumphalism to sober patriotic duty. War coverage continued with similar military bulletins, but the political framing had completely reversed.\n\nIl Messaggero's coverage thus reveals not journalistic documentation of a political crisis but rather managed transition propaganda, orchestrated to legitimize the new Badoglio government while erasing the previous regime from immediate memory.",
   "tool_call_log": [
     {
       "name": "node",
@@ -57,52 +57,24 @@
     {
       "name": "search_text",
       "input": {
-        "query": "Mussolini Gran Consiglio ordine giorno Grandi",
-        "date_from": "1943-07-24",
-        "date_to": "1943-07-27",
-        "level": "article",
-        "limit": 10
-      },
-      "output_chars": 85
-    },
-    {
-      "name": "search_text",
-      "input": {
-        "query": "Badoglio proclama Re governo",
+        "query": "proclama Badoglio",
         "date_from": "1943-07-25",
         "date_to": "1943-07-27",
         "level": "article",
         "limit": 10
       },
-      "output_chars": 68
+      "output_chars": 57
     },
     {
-      "name": "text",
+      "name": "search_text",
       "input": {
-        "node_id": "1943-07-27_a006"
+        "query": "Mussolini dimissioni",
+        "date_from": "1943-07-25",
+        "date_to": "1943-07-27",
+        "level": "article",
+        "limit": 10
       },
-      "output_chars": 1918
-    },
-    {
-      "name": "text",
-      "input": {
-        "node_id": "1943-07-27_a023"
-      },
-      "output_chars": 3095
-    },
-    {
-      "name": "text",
-      "input": {
-        "node_id": "1943-07-27_a000"
-      },
-      "output_chars": 207
-    },
-    {
-      "name": "text",
-      "input": {
-        "node_id": "1943-07-27_a020"
-      },
-      "output_chars": 4125
+      "output_chars": 60
     },
     {
       "name": "text",
@@ -114,26 +86,16 @@
     {
       "name": "text",
       "input": {
-        "node_id": "1943-07-27_a015"
+        "node_id": "1943-07-27_a018"
       },
-      "output_chars": 566
-    },
-    {
-      "name": "search_text",
-      "input": {
-        "query": "proclama Re Badoglio",
-        "date_from": "1943-07-25",
-        "date_to": "1943-07-25",
-        "level": "article"
-      },
-      "output_chars": 60
+      "output_chars": 1735
     },
     {
       "name": "text",
       "input": {
-        "node_id": "1943-07-27_a021"
+        "node_id": "1943-07-27_a020"
       },
-      "output_chars": 2043
+      "output_chars": 4125
     },
     {
       "name": "text",
@@ -145,16 +107,19 @@
     {
       "name": "text",
       "input": {
-        "node_id": "1943-07-27_a033"
+        "node_id": "1943-07-27_a023"
       },
-      "output_chars": 1025
+      "output_chars": 3095
     },
     {
-      "name": "text",
+      "name": "search_text",
       "input": {
-        "node_id": "1943-07-27_a018"
+        "query": "Gran Consiglio",
+        "date_from": "1943-07-25",
+        "date_to": "1943-07-25",
+        "level": "article"
       },
-      "output_chars": 1735
+      "output_chars": 24532
     }
   ],
   "article_ids_touched": [
@@ -277,8 +242,20 @@
     "1943-07-27_a056",
     "1943-07-27_a057",
     "1943-07-27_a058",
-    "1943-07-27_a059"
+    "1943-07-27_a059",
+    "1943-07-25_a070",
+    "1943-07-25_a073",
+    "1943-07-25_a077",
+    "1943-07-25_a146",
+    "1943-07-25_a180",
+    "1943-07-25_a229",
+    "1943-07-25_a231",
+    "1943-07-25_a233",
+    "1943-07-25_a235",
+    "1943-07-25_a245",
+    "1943-07-25_a247",
+    "1943-07-25_a249"
   ],
   "error": null,
-  "timestamp": "2026-05-03T08:25:19.680734Z"
+  "timestamp": "2026-05-03T09:05:21.520908Z"
 }

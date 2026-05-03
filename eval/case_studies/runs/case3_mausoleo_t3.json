@@ -2,27 +2,84 @@
   "case_id": "case3",
   "system": "mausoleo",
   "trial": 3,
-  "seed": 3727,
-  "question": "How does the balance of war coverage versus domestic-politics coverage shift over July 1943 in Il Messaggero? Give a quantitative or structurally-aggregated answer at month scale, citing specific dates.",
-  "tool_calls": 17,
+  "seed": 3571,
+  "question": "How does the balance of war coverage vs domestic-politics coverage shift over July 1943 in Il Messaggero? Treat 'war' = Sicilian campaign + Axis military bulletins + Allied operations + war-economy mobilisation; 'domestic' = regime politics + Badoglio transition + civilian-front editorial + social policy.\n\nREQUIRED in your final answer: a per-ISO-week numeric estimate of the war fraction, defined as war / (war + domestic) (a value in [0,1]), in EXACTLY this format on its own line for each of the five ISO weeks 26-30 that overlap July 1943:\n\n  WEEK 1943-W26: war_fraction=<float>\n  WEEK 1943-W27: war_fraction=<float>\n  WEEK 1943-W28: war_fraction=<float>\n  WEEK 1943-W29: war_fraction=<float>\n  WEEK 1943-W30: war_fraction=<float>\n\nThese five lines must appear verbatim. Then provide the rest of your prose: shifts observed, dates, headlines.",
+  "tool_calls": 10,
   "stopped_at_cap": false,
-  "chars_read": 248848,
-  "input_tokens": 289065,
-  "output_tokens": 2283,
-  "cost_usd": 0.90144,
-  "elapsed_sec": 67.96,
+  "chars_read": 467985,
+  "input_tokens": 303074,
+  "output_tokens": 2197,
+  "cost_usd_phantom": 0.94218,
+  "elapsed_sec": 64.71,
   "completeness": {
     "gt_size": 27,
-    "touched_relevant": 1,
-    "recall": 0.037037037037037035,
-    "touched_total": 120
+    "touched_relevant": 3,
+    "recall": 0.1111111111111111,
+    "touched_total": 273,
+    "ratio_metric": {
+      "metric": "ratio_war_over_war_plus_domestic",
+      "weeks": [
+        "1943-W26",
+        "1943-W27",
+        "1943-W28",
+        "1943-W29",
+        "1943-W30"
+      ],
+      "per_week": [
+        {
+          "week": "1943-W26",
+          "gold": 0.5580524344569289,
+          "pred": 0.85,
+          "abs_err": 0.2919475655430711
+        },
+        {
+          "week": "1943-W27",
+          "gold": 0.5894736842105263,
+          "pred": 0.8,
+          "abs_err": 0.21052631578947378
+        },
+        {
+          "week": "1943-W28",
+          "gold": 0.6199324324324325,
+          "pred": 0.75,
+          "abs_err": 0.13006756756756754
+        },
+        {
+          "week": "1943-W29",
+          "gold": 0.7332317073170732,
+          "pred": 0.6,
+          "abs_err": 0.13323170731707323
+        },
+        {
+          "week": "1943-W30",
+          "gold": 0.416403785488959,
+          "pred": 0.35,
+          "abs_err": 0.06640378548895903
+        }
+      ],
+      "n_weeks_scored": 5,
+      "mae": 0.1664,
+      "rmse": 0.1836,
+      "parsed_ratios": {
+        "1943-W26": 0.85,
+        "1943-W27": 0.8,
+        "1943-W28": 0.75,
+        "1943-W29": 0.6,
+        "1943-W30": 0.35
+      }
+    }
   },
-  "final_answer": "Based on my examination of Il Messaggero across July 1943, I now have sufficient information to provide a comprehensive answer about the shift in war versus domestic politics coverage. Let me compile my findings.\n\n## War Coverage versus Domestic Politics in Il Messaggero, July 1943: A Quantitative Structural Analysis\n\nThe balance between war coverage and domestic politics in Il Messaggero during July 1943 underwent a dramatic structural shift, marking one of the most significant transitions in Italian journalism during the Second World War. The month divides into three distinct periods with measurably different editorial priorities.\n\n**Early July (1-9): War Dominance (approximately 75-80% war content)**\n\nDuring the first nine days, Il Messaggero's coverage was overwhelmingly military. July 1st exemplifies this pattern: of 60 articles catalogued, approximately 45 focused on war operations—bollettini from the Quartier Generale delle Forze Armate reporting air battles over Sicily (50 enemy aircraft downed on July 5th alone), German submarine warfare (8 merchantmen totaling 49,000 tons sunk), and systematic denunciations of Allied bombardments destroying Messina's Cathedral and cultural patrimony. Domestic politics received minimal space, limited to routine administrative announcements like the Confederazione Fascista del Credito reporting 12 billion lire in treasury bond subscriptions and Mussolini presiding over the Comitato Interministeriale on July 3rd—bureaucratic items occupying perhaps 3-4 articles maximum.\n\n**Mid-July Sicily Invasion Period (10-24): Sustained War Focus (70-75% war content)**\n\nThe Allied landing in Sicily on July 10-11 intensified military coverage. July 10th's edition devoted extensive space to the Kursk offensive (1,281 Soviet tanks and 1,000 aircraft claimed destroyed in four days), while July 15th reported Italian aerosiluranti sinking vessels totaling 300,000 tons and detailed combat around Catania (81 dead, 209 wounded). The July 18th Roosevelt-Churchill leaflet drop on Rome prompted organized Fascist counter-demonstrations from universities and Gruppi Rionali, but these remained subordinate to military reporting. The July 19th bombing of Rome—717 dead, 1,659 wounded, Basilica di San Lorenzo destroyed—briefly elevated domestic impact stories, yet even this catastrophe was framed primarily through military-operational lenses (Papa Pio XII's visit, damage assessments) rather than political analysis.\n\n**Post-July 25 Revolution (27-31): Political Dominance (approximately 60-70% domestic politics)**\n\nThe July 27th edition represents the most striking quantitative reversal. Of 60 articles analyzed, roughly 40 concerned the new Badoglio government's composition, institutional reorganization, and public order measures. The lead stories detailed ministerial appointments (Raffaele Guariglia to Foreign Affairs, Bruno Fornaciari to Interior, generals Sorice, de Courten, Sandalli to War, Navy, Air Force), Carmine Senise's restoration as Police Chief, and the MVSN's integration into regular armed forces. War coverage persisted—bollettino n. 1157 reporting Sicilian operations, German aircraft sinking 3 ships and damaging 14—but occupied secondary position, approximately 15-20 articles versus 40+ on politics.\n\nBy July 30th, domestic politics consumed even more space: dissolution of the Camera dei Fasci e delle Corporazioni, prohibition of all political parties for the war's duration, replacement of approximately 20 prefects, and release of political prisoners (Guido De Ruggero, onorevole Phillipson after five years). Military bulletins described Sicilian fighting as \"aspri\" with \"crescente pressione nemica,\" but received compressed treatment—perhaps 10-12 articles versus 45+ on institutional transformation.\n\n**Quantitative Summary**\n\nThe structural shift is measurable through article counts per day-level node: July 1st (192 articles, ~145 war-related), July 15th (320 articles, ~225 war-related), July 27th (164 articles, ~100 politics-related), July 31st (138 articles, ~95 politics-related). The inversion occurred within 48 hours of Mussolini's arrest on July 25th, with the absent July 26th edition representing the physical gap in continuity. War coverage declined from 75-80% to 25-30% of total content, while domestic politics surged from 15-20% to 60-70%, a complete reversal of editorial priorities reflecting Italy's transition from Fascist propaganda to monarchical-military governance under Badoglio.",
+  "final_answer": "Based on my comprehensive analysis of the Il Messaggero corpus from July 1943, I can now provide a detailed answer with the required numeric estimates.\n\n**WEEK 1943-W26: war_fraction=0.85**\n**WEEK 1943-W27: war_fraction=0.80**\n**WEEK 1943-W28: war_fraction=0.75**\n**WEEK 1943-W29: war_fraction=0.60**\n**WEEK 1943-W30: war_fraction=0.35**\n\n## Analysis of the War vs Domestic-Politics Coverage Shift\n\nThe balance between war coverage and domestic-politics coverage in Il Messaggero during July 1943 underwent a dramatic transformation, reflecting the seismic political events that culminated in Mussolini's fall on July 25.\n\n**Early July (Weeks 26-27): War-Dominant Coverage**\n\nThe first week of July (W26: July 1-4) shows overwhelming war coverage at approximately 85%. Articles focus heavily on the Sicilian campaign preparations, Axis military bulletins claiming massive Allied losses (70 aircraft in four days, 1,586 shot down in the Mediterranean March-June), and war-economy measures including the 12-billion-lire bond subscription. Domestic politics appears mainly as regime propaganda: Mussolini presiding over the Interministerial Committee on July 3, convening the next session for July 27 (which never occurred), and Tribunal Speciale convictions for black-market violations.\n\nWeek 27 (July 5-11) maintains high war emphasis at 80%, dominated by the Allied landing in Sicily on July 10-11. The paper reports German offensive resumption at Kursk (claiming 1,281 Soviet tanks destroyed), intensive bombardments on Sicilian cities (Catania: 81 dead, 209 wounded), and Roosevelt-Churchill leaflets dropped on Rome promising \"non-dishonorable capitulation.\" Domestic content includes Scorza's removal of Taranto officials for attending a banquet \"contravening moral laws\" and potato distribution announcements.\n\n**Mid-July (Week 28): Transition Begins**\n\nWeek 28 (July 12-18) shows the war fraction declining to 75%. While Sicily battle coverage continues (claiming 300,000 tons of Allied shipping sunk, Hermann Goering Division mentioned), domestic political tensions surface. The paper reports organized loyalty demonstrations by universities, construction workers, and Fascist Groups responding to Allied propaganda—a defensive posture suggesting regime anxiety. The July 18 Roosevelt-Churchill appeal and Pavolini's denunciation of Allied \"rapine plans\" reveal the propaganda war intensifying.\n\n**Late July (Week 29): The Rome Bombing Watershed**\n\nWeek 29 (July 19-25) marks the critical shift, with war coverage dropping to 60%. The July 19 bombing of Rome—717 dead, 1,659 wounded, San Lorenzo Basilica destroyed—becomes the dominant story but straddles war/domestic categories. Pope Pius XII's visit to the ruins, the King and Queen's hospital tours, and Scorza's radio address blend military events with domestic crisis management. The paper reports Palermo evacuation (July 24), Bologna's devastating raid, and continued Sicily fighting, but domestic political maneuvering intensifies invisibly behind the scenes, culminating in the Gran Consiglio meeting of July 24-25 that voted Mussolini out (19 votes for Grandi's motion, 7 against).\n\n**Post-Mussolini Week (Week 30): Domestic Politics Ascendant**\n\nWeek 30 (July 26-31) inverts the ratio entirely: war coverage plummets to 35%, domestic politics surges to 65%. The July 27 paper announces the Badoglio government composition with extraordinary detail: Guariglia (Foreign Affairs), Fornaciari (Interior), Sorice (War), De Courten (Marina), Sandalli (Aeronautics), and 12 other ministers. Carmine Senise's \"reintegration\" as Police Chief receives prominent coverage with biographical detail. The paper reports massive public demonstrations in Rome, Milan, Bologna, and Florence with tricolor flags and photographs of the King and Badoglio—a complete reversal from fascist imagery.\n\nSicily war bulletins continue (reporting \"immutata\" situation on July 27, then \"intense fighting\" and \"growing enemy pressure\" by July 29-31), but shrink to secondary status. The regime dismantling dominates: PNF dissolution, Gran Consiglio law abrogation, Special Tribunal suppression, and Chamber of Fasci dissolution announced July 27-30. The paper publishes the complete Gran Consiglio voting record (naming all 29 participants, vote tallies, Grandi's motion text) and Badoglio's appeals for order and work resumption.\n\n**Key Observations**\n\nThe shift reveals how military catastrophe (Sicily invasion, Rome bombing) precipitated domestic political collapse. War coverage remained high while the regime maintained control, then crashed when internal politics became the story. Specific headlines trace the arc: \"70 Enemy Aircraft in Four Days\" (July 4, 1943-07-04_a024) → \"Rome Bombed: 717 Dead\" (July 23, 1943-07-23) → \"Badoglio Government Composition\" (July 27, 1943-07-27_a018). The paper's language transformed from bellicose certainty to crisis management to tentative new-regime legitimation within three weeks.",
   "tool_call_log": [
     {
       "name": "stats",
       "input": {},
       "output_chars": 615
+    },
+    {
+      "name": "root",
+      "input": {},
+      "output_chars": 180
     },
     {
       "name": "node",
@@ -40,53 +97,26 @@
       "output_chars": 13162
     },
     {
-      "name": "node",
+      "name": "search_hybrid",
       "input": {
-        "node_id": "1943-07-01"
+        "query": "Sicily campaign invasion sbarco Sicilia military operations",
+        "date_from": "1943-07-01",
+        "date_to": "1943-07-31",
+        "level": "article",
+        "limit": 20
       },
-      "output_chars": 2851
+      "output_chars": 23786
     },
     {
-      "name": "node",
+      "name": "search_hybrid",
       "input": {
-        "node_id": "1943-07-05"
+        "query": "Badoglio government regime fascist transition Gran Consiglio Mussolini arrest domestic politics",
+        "date_from": "1943-07-01",
+        "date_to": "1943-07-31",
+        "level": "article",
+        "limit": 20
       },
-      "output_chars": 3082
-    },
-    {
-      "name": "node",
-      "input": {
-        "node_id": "1943-07-15"
-      },
-      "output_chars": 2964
-    },
-    {
-      "name": "node",
-      "input": {
-        "node_id": "1943-07-20"
-      },
-      "output_chars": 2977
-    },
-    {
-      "name": "node",
-      "input": {
-        "node_id": "1943-07-25"
-      },
-      "output_chars": 2865
-    },
-    {
-      "name": "node",
-      "input": {
-        "node_id": "1943-07-27"
-      },
-      "output_chars": 3053
-    },
-    {
-      "name": "node",
-      "input": {
-        "node_id": "1943-07-30"
-      },
-      "output_chars": 3124
+      "output_chars": 23559
     },
     {
       "name": "children",
@@ -99,56 +129,65 @@
     {
       "name": "children",
       "input": {
+        "node_id": "1943-07-10",
+        "limit": 60
+      },
+      "output_chars": 100747
+    },
+    {
+      "name": "children",
+      "input": {
+        "node_id": "1943-07-20",
+        "limit": 60
+      },
+      "output_chars": 101008
+    },
+    {
+      "name": "children",
+      "input": {
         "node_id": "1943-07-27",
         "limit": 60
       },
       "output_chars": 99386
-    },
-    {
-      "name": "search_text",
-      "input": {
-        "query": "bollettino guerra fronte militare",
-        "level": "day",
-        "date_from": "1943-07-01",
-        "date_to": "1943-07-31",
-        "limit": 10
-      },
-      "output_chars": 73
-    },
-    {
-      "name": "search_text",
-      "input": {
-        "query": "governo politica interno fascismo partito",
-        "level": "day",
-        "date_from": "1943-07-01",
-        "date_to": "1943-07-31",
-        "limit": 10
-      },
-      "output_chars": 81
-    },
-    {
-      "name": "node",
-      "input": {
-        "node_id": "1943-07-10"
-      },
-      "output_chars": 2960
-    },
-    {
-      "name": "node",
-      "input": {
-        "node_id": "1943-07-19"
-      },
-      "output_chars": 3035
-    },
-    {
-      "name": "node",
-      "input": {
-        "node_id": "1943-07-31"
-      },
-      "output_chars": 3078
     }
   ],
   "article_ids_touched": [
+    "1943-07-22_a028",
+    "1943-07-14_a040",
+    "1943-07-15_a178",
+    "1943-07-03_a017",
+    "1943-07-07_a118",
+    "1943-07-17_a006",
+    "1943-07-25_a021",
+    "1943-07-25_a088",
+    "1943-07-07_a092",
+    "1943-07-20_a017",
+    "1943-07-12_a023",
+    "1943-07-22_a093",
+    "1943-07-14_a023",
+    "1943-07-25_a164",
+    "1943-07-04_a024",
+    "1943-07-12_a010",
+    "1943-07-11_a119",
+    "1943-07-21_a011",
+    "1943-07-08_a132",
+    "1943-07-07_a320",
+    "1943-07-04_a001",
+    "1943-07-12_a141",
+    "1943-07-28_a190",
+    "1943-07-20_a075",
+    "1943-07-27_a048",
+    "1943-07-05_a043",
+    "1943-07-17_a191",
+    "1943-07-18_a200",
+    "1943-07-30_a127",
+    "1943-07-16_a254",
+    "1943-07-13_a049",
+    "1943-07-30_a128",
+    "1943-07-13_a043",
+    "1943-07-27_a036",
+    "1943-07-21_a013",
+    "1943-07-24_a142",
     "1943-07-01_a000",
     "1943-07-01_a001",
     "1943-07-01_a002",
@@ -209,6 +248,125 @@
     "1943-07-01_a057",
     "1943-07-01_a058",
     "1943-07-01_a059",
+    "1943-07-10_a000",
+    "1943-07-10_a001",
+    "1943-07-10_a002",
+    "1943-07-10_a003",
+    "1943-07-10_a004",
+    "1943-07-10_a005",
+    "1943-07-10_a006",
+    "1943-07-10_a007",
+    "1943-07-10_a008",
+    "1943-07-10_a009",
+    "1943-07-10_a010",
+    "1943-07-10_a011",
+    "1943-07-10_a012",
+    "1943-07-10_a013",
+    "1943-07-10_a014",
+    "1943-07-10_a015",
+    "1943-07-10_a016",
+    "1943-07-10_a017",
+    "1943-07-10_a018",
+    "1943-07-10_a019",
+    "1943-07-10_a020",
+    "1943-07-10_a021",
+    "1943-07-10_a022",
+    "1943-07-10_a023",
+    "1943-07-10_a024",
+    "1943-07-10_a025",
+    "1943-07-10_a026",
+    "1943-07-10_a027",
+    "1943-07-10_a028",
+    "1943-07-10_a029",
+    "1943-07-10_a030",
+    "1943-07-10_a031",
+    "1943-07-10_a032",
+    "1943-07-10_a033",
+    "1943-07-10_a034",
+    "1943-07-10_a035",
+    "1943-07-10_a036",
+    "1943-07-10_a037",
+    "1943-07-10_a038",
+    "1943-07-10_a039",
+    "1943-07-10_a040",
+    "1943-07-10_a041",
+    "1943-07-10_a042",
+    "1943-07-10_a043",
+    "1943-07-10_a044",
+    "1943-07-10_a045",
+    "1943-07-10_a046",
+    "1943-07-10_a047",
+    "1943-07-10_a048",
+    "1943-07-10_a049",
+    "1943-07-10_a050",
+    "1943-07-10_a051",
+    "1943-07-10_a052",
+    "1943-07-10_a053",
+    "1943-07-10_a054",
+    "1943-07-10_a055",
+    "1943-07-10_a056",
+    "1943-07-10_a057",
+    "1943-07-10_a058",
+    "1943-07-10_a059",
+    "1943-07-20_a000",
+    "1943-07-20_a001",
+    "1943-07-20_a002",
+    "1943-07-20_a003",
+    "1943-07-20_a004",
+    "1943-07-20_a005",
+    "1943-07-20_a006",
+    "1943-07-20_a007",
+    "1943-07-20_a008",
+    "1943-07-20_a009",
+    "1943-07-20_a010",
+    "1943-07-20_a011",
+    "1943-07-20_a012",
+    "1943-07-20_a013",
+    "1943-07-20_a014",
+    "1943-07-20_a015",
+    "1943-07-20_a016",
+    "1943-07-20_a018",
+    "1943-07-20_a019",
+    "1943-07-20_a020",
+    "1943-07-20_a021",
+    "1943-07-20_a022",
+    "1943-07-20_a023",
+    "1943-07-20_a024",
+    "1943-07-20_a025",
+    "1943-07-20_a026",
+    "1943-07-20_a027",
+    "1943-07-20_a028",
+    "1943-07-20_a029",
+    "1943-07-20_a030",
+    "1943-07-20_a031",
+    "1943-07-20_a032",
+    "1943-07-20_a033",
+    "1943-07-20_a034",
+    "1943-07-20_a035",
+    "1943-07-20_a036",
+    "1943-07-20_a037",
+    "1943-07-20_a038",
+    "1943-07-20_a039",
+    "1943-07-20_a040",
+    "1943-07-20_a041",
+    "1943-07-20_a042",
+    "1943-07-20_a043",
+    "1943-07-20_a044",
+    "1943-07-20_a045",
+    "1943-07-20_a046",
+    "1943-07-20_a047",
+    "1943-07-20_a048",
+    "1943-07-20_a049",
+    "1943-07-20_a050",
+    "1943-07-20_a051",
+    "1943-07-20_a052",
+    "1943-07-20_a053",
+    "1943-07-20_a054",
+    "1943-07-20_a055",
+    "1943-07-20_a056",
+    "1943-07-20_a057",
+    "1943-07-20_a058",
+    "1943-07-20_a059",
     "1943-07-27_a000",
     "1943-07-27_a001",
     "1943-07-27_a002",
@@ -245,7 +403,6 @@
     "1943-07-27_a033",
     "1943-07-27_a034",
     "1943-07-27_a035",
-    "1943-07-27_a036",
     "1943-07-27_a037",
     "1943-07-27_a038",
     "1943-07-27_a039",
@@ -257,7 +414,6 @@
     "1943-07-27_a045",
     "1943-07-27_a046",
     "1943-07-27_a047",
-    "1943-07-27_a048",
     "1943-07-27_a049",
     "1943-07-27_a050",
     "1943-07-27_a051",
@@ -271,5 +427,5 @@
     "1943-07-27_a059"
   ],
   "error": null,
-  "timestamp": "2026-05-03T08:35:07.407964Z"
+  "timestamp": "2026-05-03T09:16:01.022887Z"
 }

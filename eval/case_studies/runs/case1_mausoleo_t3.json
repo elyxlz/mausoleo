@@ -2,22 +2,22 @@
   "case_id": "case1",
   "system": "mausoleo",
   "trial": 3,
-  "seed": 3045,
+  "seed": 3251,
   "question": "What was reported on 26 July 1943, the day after Mussolini's arrest, in Il Messaggero? Read the surrounding days if helpful, then compile your answer.",
-  "tool_calls": 6,
+  "tool_calls": 15,
   "stopped_at_cap": false,
-  "chars_read": 216594,
-  "input_tokens": 189927,
-  "output_tokens": 1525,
-  "cost_usd": 0.59266,
-  "elapsed_sec": 50.97,
+  "chars_read": 186003,
+  "input_tokens": 340078,
+  "output_tokens": 2298,
+  "cost_usd_phantom": 1.0547,
+  "elapsed_sec": 70.63,
   "completeness": {
     "gt_size": 42,
-    "touched_relevant": 34,
-    "recall": 0.8095238095238095,
-    "touched_total": 120
+    "touched_relevant": 33,
+    "recall": 0.7857142857142857,
+    "touched_total": 80
   },
-  "final_answer": "Excellent. Now I have a comprehensive understanding of what happened. Let me compile my final answer based on this research.\n\n## Final Answer\n\n**What Was Reported on 26 July 1943 in Il Messaggero: The Missing Issue and the Day After Mussolini's Arrest**\n\nThe issue of Il Messaggero dated 26 July 1943—the day after Benito Mussolini's arrest—is absent from the digitized archive. As the summary for that date explicitly notes, this absence is itself a historical document: it testifies to the \"editorial void of those 24 hours of regime transition.\" The night of 24-25 July, the Gran Consiglio del Fascismo had voted the Grandi motion at 2:40 AM, and on the afternoon of 25 July, King Vittorio Emanuele III had Mussolini arrested upon his exit from Villa Savoia. The newspaper of 27 July would reappear under the new Badoglio government.\n\nOn **25 July 1943**, the last issue before the gap, Il Messaggero was still operating under fascist control and contained no hint of the regime's imminent collapse. The front pages focused entirely on military operations: the evacuation of Palermo due to Allied armored pressure in Sicily (Bulletin 1155), German claims of 7,000 Soviet tanks destroyed in 20 days on the Eastern Front, and the bombing of Bologna on 24 July that damaged the Basilica of San Francesco and destroyed Marconi's birthplace. There was no mention of the Gran Consiglio meeting that would convene that very evening at 5 PM.\n\nWhen Il Messaggero **reappeared on 27 July 1943**, it presented the new political reality with remarkable speed. The newspaper announced the composition of Marshal Pietro Badoglio's government, listing ministers including Raffaele Guariglia (Foreign Affairs), Bruno Fornaciari (Interior), and military figures like General Antonio Sorice (War), Admiral Raffaele de Courten (Navy), and General Renato Sandalli (Air Force). Particular emphasis was placed on Carmine Senise's appointment as Chief of Police, described as a \"reintegration\" that received \"unanimous applause.\"\n\nThe 27 July issue also published details of the Gran Consiglio meeting that had sealed Mussolini's fate. The session, which began at 5 PM on 24 July and lasted until 3 AM on 25 July, saw 29 members vote on Dino Grandi's motion calling for the King to assume \"effective command\" of the armed forces. The motion passed 19-7 with one abstention. Voting in favor were Grandi, Federzoni, De Bono, De Vecchi, Ciano, Bottai, and others; voting against were Scorza, Polverelli, and Buffarini.\n\nThe newspaper reported \"another day of demonstrations\" on 26 July in Rome and other cities. Crowds gathered before the Quirinal Palace with tricolor flags and photographs of the King and Badoglio, singing the Inno di Mameli and the Canzone del Piave. In Milan, the Count of Turin appeared on the balcony of the Royal Palace; in Florence, crowds assembled after the radio announcement of Badoglio's appointment. The tone was celebratory, emphasizing \"perfect order\" and \"great patriotism.\"\n\nHowever, Badoglio's proclamation of 26 July, published on the 27th, ordered Romans to return to work and strictly prohibited \"public demonstrations,\" instructing police to disperse assemblies \"relentlessly.\" Military authorities imposed a curfuoco from sunset to dawn, banned gatherings of more than three people, suspended all gun permits, and authorized troops to use weapons against violators. Newspapers were limited to one daily edition.\n\nThe 27 July issue maintained continuity on the war front, reporting Bulletin 1157: continued fighting in Sicily with German aircraft sinking three enemy merchant ships and damaging 14 others, and Italian forces sinking an enemy submarine. German radio, according to the paper, attributed Mussolini's removal to his poor health and received the news with \"great calm,\" emphasizing Italy's commitment to continuing the war.\n\nThe archival gap of 26 July thus represents the silent pivot point of Italian history—the 24 hours when fascism ended and the monarchy reasserted control, a transitional moment too uncertain and too dangerous to document in print.",
+  "final_answer": "Based on my investigation, I now have enough information to provide a comprehensive answer about what was reported on July 26, 1943, and the surrounding days.\n\n## Answer\n\n**The Issue of 26 July 1943 is Absent from the Archive**\n\nIl Messaggero did not publish an edition on 26 July 1943. As the archive metadata explicitly states, \"il fondo archivistico digitalizzato non contiene il numero del 26 luglio 1943 de «Il Messaggero».\" This archival gap is itself a historical document: it testifies to the editorial void during those 24 hours of regime transition.\n\nThe night of 24-25 July, the Gran Consiglio del Fascismo voted on the Grandi motion at 2:40 AM, and on the afternoon of 25 July, King Vittorio Emanuele III had Mussolini arrested upon his exit from Villa Savoia. The newspaper reappeared on 27 July under the new Badoglio government.\n\n**What Was Reported on 25 July 1943 (Before the Arrest)**\n\nThe edition of 25 July went to press before Mussolini's arrest and contains no mention of the regime change. The newspaper reported routine wartime news: military bulletins from Sicily (where Palermo had been evacuated due to Allied pressure), the Eastern Front (claiming 7,000 Soviet tanks destroyed in 20 days), and the Pacific theater. Domestically, it covered the devastating 24 July bombing of Bologna, which damaged the Basilica of San Francesco and destroyed Marconi's birthplace. There was also coverage of relief efforts for Rome's 19 July bombing victims, including a donation of 1,143,050 lire from German soldiers presented by Feldmarschall Richtofen.\n\n**What Was Reported on 27 July 1943 (After the Arrest)**\n\nThe 27 July edition emerged under the new reality. The newspaper reported \"un'altra giornata di entusiastiche dimostrazioni\" with crowds acclaiming \"l'Italia, alle Forze Armate, al Re e al Maresciallo\" (article 1943-07-27_a000). The front page announced the composition of the Badoglio government (article 1943-07-27_a018), listing ministers including Raffaele Guariglia (Foreign Affairs), Bruno Fornaciari (Interior), and military figures like General Antonio Sorice (War), Admiral Raffaele de Courten (Navy), and General Renato Sandalli (Air Force).\n\nSignificantly, the newspaper published the text of the Gran Consiglio meeting of 24 July (article 1943-07-27_a006), reporting that it convened at 17:00 at Palazzo Venezia—the first meeting since 7 December 1939. The Grandi motion called for \"l'unità, l'indipendenza, la libertà della Patria\" and demanded the immediate restoration of constitutional functions to the Crown, Gran Consiglio, Government, and Parliament. However, the newspaper did not report the vote count or explicitly state that this motion led to Mussolini's removal.\n\nMussolini's name appeared only in the context of the Gran Consiglio meeting list. There was no mention of his arrest. Instead, the German reaction was reported (article 1943-07-27_a033): Berlin radio attributed the government change to \"lo stato di salute di Mussolini che ultimamente era ammalato,\" and German political circles received the news with \"grande calma.\"\n\nThe newspaper emphasized public order measures: Badoglio's 26 July proclamation ordered Romans back to work, banned public demonstrations, and authorized police to disperse assemblies \"inesorabilmente\" (article 1943-07-27_a048). Military authorities imposed a curfew from sunset to dawn, prohibited gatherings of more than three people, revoked gun permits, and mandated single daily newspaper editions (article 1943-07-27_a047).\n\nThe appointment of Carmine Senise as Chief of Police received prominent coverage, described as a \"reintegrazione\" that garnered \"plauso unanime\" (article 1943-07-27_a015). The newspaper also reported manifestations in Milan, Bologna, and Florence on 26 July, with the Count of Turin addressing crowds from the Royal Palace balcony, and Queen Elena visiting wounded at Regina Elena Hospital to \"acclamazioni unanime e vivissime.\"\n\nThe 26 July gap thus marks the moment when one regime ended and another began—a silence more eloquent than any headline.",
   "tool_call_log": [
     {
       "name": "node",
@@ -44,9 +44,89 @@
       "name": "children",
       "input": {
         "node_id": "1943-07-25",
-        "limit": 60
+        "limit": 20
       },
-      "output_chars": 107511
+      "output_chars": 36633
+    },
+    {
+      "name": "children",
+      "input": {
+        "node_id": "1943-07-27",
+        "limit": 20
+      },
+      "output_chars": 31447
+    },
+    {
+      "name": "node",
+      "input": {
+        "node_id": "1943-07-24"
+      },
+      "output_chars": 3032
+    },
+    {
+      "name": "node",
+      "input": {
+        "node_id": "1943-07-28"
+      },
+      "output_chars": 3064
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a006"
+      },
+      "output_chars": 1918
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a007"
+      },
+      "output_chars": 352
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a013"
+      },
+      "output_chars": 3136
+    },
+    {
+      "name": "text",
+      "input": {
+        "node_id": "1943-07-27_a000"
+      },
+      "output_chars": 207
+    },
+    {
+      "name": "search_text",
+      "input": {
+        "query": "Mussolini arresto 25 luglio",
+        "date_from": "1943-07-25",
+        "date_to": "1943-07-28",
+        "level": "article"
+      },
+      "output_chars": 67
+    },
+    {
+      "name": "search_text",
+      "input": {
+        "query": "dimissioni Duce governo",
+        "date_from": "1943-07-25",
+        "date_to": "1943-07-28",
+        "level": "article"
+      },
+      "output_chars": 63
+    },
+    {
+      "name": "search_text",
+      "input": {
+        "query": "Badoglio proclama governo",
+        "date_from": "1943-07-25",
+        "date_to": "1943-07-28",
+        "level": "article"
+      },
+      "output_chars": 65
     },
     {
       "name": "children",
@@ -55,13 +135,6 @@
         "limit": 60
       },
       "output_chars": 99386
-    },
-    {
-      "name": "node",
-      "input": {
-        "node_id": "1943-07-28"
-      },
-      "output_chars": 3064
     }
   ],
   "article_ids_touched": [
@@ -85,46 +158,6 @@
     "1943-07-25_a017",
     "1943-07-25_a018",
     "1943-07-25_a019",
-    "1943-07-25_a020",
-    "1943-07-25_a021",
-    "1943-07-25_a022",
-    "1943-07-25_a023",
-    "1943-07-25_a024",
-    "1943-07-25_a025",
-    "1943-07-25_a026",
-    "1943-07-25_a027",
-    "1943-07-25_a028",
-    "1943-07-25_a029",
-    "1943-07-25_a030",
-    "1943-07-25_a031",
-    "1943-07-25_a032",
-    "1943-07-25_a033",
-    "1943-07-25_a034",
-    "1943-07-25_a035",
-    "1943-07-25_a036",
-    "1943-07-25_a037",
-    "1943-07-25_a038",
-    "1943-07-25_a039",
-    "1943-07-25_a040",
-    "1943-07-25_a041",
-    "1943-07-25_a042",
-    "1943-07-25_a043",
-    "1943-07-25_a044",
-    "1943-07-25_a045",
-    "1943-07-25_a046",
-    "1943-07-25_a047",
-    "1943-07-25_a048",
-    "1943-07-25_a049",
-    "1943-07-25_a050",
-    "1943-07-25_a051",
-    "1943-07-25_a052",
-    "1943-07-25_a053",
-    "1943-07-25_a054",
-    "1943-07-25_a055",
-    "1943-07-25_a056",
-    "1943-07-25_a057",
-    "1943-07-25_a058",
-    "1943-07-25_a059",
     "1943-07-27_a000",
     "1943-07-27_a001",
     "1943-07-27_a002",
@@ -187,5 +220,5 @@
     "1943-07-27_a059"
   ],
   "error": null,
-  "timestamp": "2026-05-03T08:17:45.580522Z"
+  "timestamp": "2026-05-03T08:56:51.067246Z"
 }
