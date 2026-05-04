@@ -1,0 +1,1298 @@
+{
+  "meta": {
+    "pagesCount": 1
+  },
+  "version": "2026-03-30-base",
+  "neatVersion": "4.4b",
+  "scanId": "0f1838db-ec16-47ca-9b68-b532f9e4ee44",
+  "documents": [
+    {
+      "paragraphs": [
+        {
+          "start_sentence_index": 0,
+          "num_sentences": 1,
+          "completely_generated_prob": 0.11111110864197542
+        },
+        {
+          "start_sentence_index": 1,
+          "num_sentences": 1,
+          "completely_generated_prob": 0.11111110864197542
+        },
+        {
+          "start_sentence_index": 2,
+          "num_sentences": 1,
+          "completely_generated_prob": 0.11111110864197542
+        },
+        {
+          "start_sentence_index": 3,
+          "num_sentences": 1,
+          "completely_generated_prob": 0.11111110864197542
+        },
+        {
+          "start_sentence_index": 4,
+          "num_sentences": 7,
+          "completely_generated_prob": 2.1228438805416278e-06
+        },
+        {
+          "start_sentence_index": 11,
+          "num_sentences": 7,
+          "completely_generated_prob": 0.01437310773797646
+        },
+        {
+          "start_sentence_index": 18,
+          "num_sentences": 1,
+          "completely_generated_prob": 0.8181818033057853
+        },
+        {
+          "start_sentence_index": 19,
+          "num_sentences": 1,
+          "completely_generated_prob": 0.8181818033057853
+        },
+        {
+          "start_sentence_index": 20,
+          "num_sentences": 5,
+          "completely_generated_prob": 0.8871651474786718
+        },
+        {
+          "start_sentence_index": 25,
+          "num_sentences": 2,
+          "completely_generated_prob": 0.8254776901813464
+        },
+        {
+          "start_sentence_index": 27,
+          "num_sentences": 1,
+          "completely_generated_prob": 0.8181818033057853
+        },
+        {
+          "start_sentence_index": 28,
+          "num_sentences": 1,
+          "completely_generated_prob": 0.8181818033057853
+        },
+        {
+          "start_sentence_index": 29,
+          "num_sentences": 3,
+          "completely_generated_prob": 0.45887534985363754
+        },
+        {
+          "start_sentence_index": 32,
+          "num_sentences": 3,
+          "completely_generated_prob": 0.850090677245877
+        },
+        {
+          "start_sentence_index": 35,
+          "num_sentences": 7,
+          "completely_generated_prob": 0.9103421900070616
+        },
+        {
+          "start_sentence_index": 42,
+          "num_sentences": 4,
+          "completely_generated_prob": 0.8708627247549962
+        },
+        {
+          "start_sentence_index": 46,
+          "num_sentences": 6,
+          "completely_generated_prob": 0.9000234362273952
+        },
+        {
+          "start_sentence_index": 52,
+          "num_sentences": 7,
+          "completely_generated_prob": 0.0010573188656143365
+        },
+        {
+          "start_sentence_index": 59,
+          "num_sentences": 3,
+          "completely_generated_prob": 0.00408719312638748
+        },
+        {
+          "start_sentence_index": 62,
+          "num_sentences": 1,
+          "completely_generated_prob": 0.11111110864197542
+        },
+        {
+          "start_sentence_index": 63,
+          "num_sentences": 1,
+          "completely_generated_prob": 0.11111110864197542
+        },
+        {
+          "start_sentence_index": 64,
+          "num_sentences": 3,
+          "completely_generated_prob": 0.00408719312638748
+        },
+        {
+          "start_sentence_index": 67,
+          "num_sentences": 1,
+          "completely_generated_prob": 0.11111110864197542
+        }
+      ],
+      "completely_generated_prob": 0.550298753301192,
+      "average_generated_prob": 1,
+      "predicted_class": "ai",
+      "confidence_score": 0.551264905646293,
+      "confidence_category": "low",
+      "overall_burstiness": 0,
+      "writing_stats": {},
+      "confidence_thresholds_raw": {
+        "identity": {
+          "ai": {
+            "reject": 0.33,
+            "low": 0.6,
+            "medium": 0.8
+          },
+          "human": {
+            "reject": 0.33,
+            "low": 0.6,
+            "medium": 0.8
+          },
+          "mixed": {
+            "reject": 0.33,
+            "low": 0.6,
+            "medium": 0.8
+          }
+        }
+      },
+      "sentences": [
+        {
+          "generated_prob": 0.3160127324910395,
+          "sentence": "# Mausoleo, or how to read across the day a newspaper did not appear",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.6839872675089606,
+            "ai": 0.3011999759957192,
+            "paraphrased": 0.01481275649532031
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.2423583836941361,
+          "sentence": "A final-year dissertation submitted for BASC0024 (Arts and Sciences, UCL).",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.7576416163058639,
+            "ai": 0.23091243293476266,
+            "paraphrased": 0.011445950759373422
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.6227459255270053,
+          "sentence": "-",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.37725407447299475,
+            "ai": 0.6030579299190332,
+            "paraphrased": 0.01968799560797208
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.6574760887323454,
+          "sentence": "## Abstract",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.3425239112676546,
+            "ai": 0.6427693528633309,
+            "paraphrased": 0.014706735869014513
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.2883350477989416,
+          "sentence": "A digitised newspaper corpus normally allows a historian to retrieve articles by keyword, with date as a facet on the side.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.7116649522010584,
+            "ai": 0.2759266341588381,
+            "paraphrased": 0.012408413640103455
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.2942842920018253,
+          "sentence": "For the July 1943 *Il Messaggero* corpus this dissertation works with, that template handles questions for which articles exist and breaks down for the others the corpus invites.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.7057157079981747,
+            "ai": 0.28179749531525194,
+            "paraphrased": 0.012486796686573364
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.24868313149227142,
+          "sentence": "The morning paper for 26 July 1943 was not printed.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.7513168685077286,
+            "ai": 0.23692189885156478,
+            "paraphrased": 0.011761232640706634
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.2618598841745764,
+          "sentence": "The Grand Council had deposed Mussolini overnight and an editorial line could not be drawn in time; a flat article index returns nothing for the date.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.7381401158254236,
+            "ai": 0.250546965289542,
+            "paraphrased": 0.011312918885034383
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.28119260675205526,
+          "sentence": "Questions about the regime-change days of 25 to 27 July return tens of articles that the reader has to assemble by hand.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.7188073932479447,
+            "ai": 0.2697078563018043,
+            "paraphrased": 0.011484750450250922
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.28448731173629765,
+          "sentence": "Questions about the war-and-domestic balance across the month return hundreds.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.7155126882637024,
+            "ai": 0.27368405282889646,
+            "paraphrased": 0.010803258907401178
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.4212128204264988,
+          "sentence": "The dissertation argues that a digital archive ought to respond to questions of these shapes with the structural information available to it, and builds a system, Mausoleo, that does so by storing the corpus as a calendar-shaped tree of recursively summarised nodes over which a researcher agent navigates through time and structure.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.5787871795735011,
+            "ai": 0.41092870629551564,
+            "paraphrased": 0.01028411413098319
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.6319206086403086,
+          "sentence": "A century of cognitive-science work has accumulated evidence that memory organises temporal information at multiple resolutions.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.36807939135969137,
+            "ai": 0.6238127900375963,
+            "paraphrased": 0.008107818602712313
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.6056875240181092,
+          "sentence": "Researchers reading time-stamped material shift between date-bound items and larger schemas built up over weeks.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.3943124759818908,
+            "ai": 0.5973403075531676,
+            "paraphrased": 0.00834721646494165
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.5951064847558261,
+          "sentence": "A flat ranked-article interface forces the researcher to perform that integration mentally, holding both the retrieved fragments and the larger temporal shape in working memory at once.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.404893515244174,
+            "ai": 0.587102545514967,
+            "paraphrased": 0.008003939240859043
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.689154255168131,
+          "sentence": "Chapter four runs three case studies on whether exposing the temporal structure in the index changes how the work goes.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.310845744831869,
+            "ai": 0.6819673389196325,
+            "paraphrased": 0.007186916248498586
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.8125360691030852,
+          "sentence": "Three questions are put to *Il Messaggero* in July 1943: what the paper said on the absent 26 July, how it covered the regime change of 25 to 27 July, and how the balance of war and domestic-politics coverage moved across the month.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.18746393089691482,
+            "ai": 0.8047920705493322,
+            "paraphrased": 0.007743998553752963
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9955740658262302,
+          "sentence": "Across eighteen scored trials the system averaged 11.3 tool calls against the keyword baseline's 28.3 and was preferred by both judges on a three-dimension rubric in every case.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.004425934173769749,
+            "ai": 0.947027371634476,
+            "paraphrased": 0.04854669419175422
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9973281049538295,
+          "sentence": "The calendar-shaped index holds a day node for 26 July with empty leaves and a summary that records the absence as evidence, a slot for documented silence that a flat article index cannot provide.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.002671895046170554,
+            "ai": 0.9627950301581143,
+            "paraphrased": 0.03453307479571518
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9947729446342267,
+          "sentence": "-",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.0052270553657732905,
+            "ai": 0.9359621580994232,
+            "paraphrased": 0.05881078653480355
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9963822473302553,
+          "sentence": "## Preface",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.0036177526697447862,
+            "ai": 0.9424175267592877,
+            "paraphrased": 0.05396472057096753
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9967717895352982,
+          "sentence": "I came to this project from the engineering side, after a year working on retrieval-augmented generation pipelines for technical documentation.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.0032282104647017454,
+            "ai": 0.9619558016812938,
+            "paraphrased": 0.03481598785400446
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9972576918742287,
+          "sentence": "I wanted a final-year project that would put the same techniques in front of source material that does not chunk well, and Italian regime-period newspapers were the natural pick from the languages I read.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.0027423081257712143,
+            "ai": 0.9595931159457665,
+            "paraphrased": 0.03766457592846228
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9971520028388055,
+          "sentence": "The 1943 issue list of *Il Messaggero* was the most complete in the available scans, which is how I ended up with a corpus that contained one missing day.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.0028479971611945275,
+            "ai": 0.9575211927434334,
+            "paraphrased": 0.03963081009537204
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9967955476015478,
+          "sentence": "Two weeks went into a post-correction pass that made composite OCR scores worse, and another into the realisation that the date-bounded queries the system most needed to answer well were exactly those the keyword baseline was structurally incapable of resolving.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.003204452398452183,
+            "ai": 0.9634798450210642,
+            "paraphrased": 0.03331570258048356
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9925191207600461,
+          "sentence": "Bartlett's *Remembering* was a paper I had read for second-year psychology and went back to once the OCR work began producing day-summary nodes; the hippocampal-mapping work in Eichenbaum and Whittington came in much later, after the calendar-shaped index had already been built.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.007480879239953923,
+            "ai": 0.9542702939771602,
+            "paraphrased": 0.03824882678288587
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9925000917119815,
+          "sentence": "I thank Dr Yi Gong for supervising.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.007499908288018518,
+            "ai": 0.953234161210413,
+            "paraphrased": 0.03926593050156847
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9941059711145924,
+          "sentence": "Her comments on the cognitive-science framing, and on what the system can and cannot warrant, shaped the chapters that follow.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.005894028885407511,
+            "ai": 0.95760909072173,
+            "paraphrased": 0.03649688039286251
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9804685435010496,
+          "sentence": "-",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.019531456498950356,
+            "ai": 0.9375322934934384,
+            "paraphrased": 0.04293625000761123
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.8322483034385684,
+          "sentence": "Reading across the regime change of July 1943",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.16775169656143157,
+            "ai": 0.780681595566094,
+            "paraphrased": 0.05156670787247442
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.7698749968446792,
+          "sentence": "*Il Messaggero* in July 1943 ran daily across thirty issues, covering the war on the eastern and African fronts in parallel with the domestic crisis that culminated in the Grand Council vote on the night of 24 to 25 July, the King's intervention in the afternoon of the 25th, and the formation of the Badoglio government in the days that followed.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.23012500315532078,
+            "ai": 0.7148951078982619,
+            "paraphrased": 0.0549798889464173
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9474051921377112,
+          "sentence": "The dissertation works with the digitised fund of those issues, held in the *Emeroteca digitale* of the Italian *Biblioteca Nazionale Centrale di Roma*.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.052594807862288775,
+            "ai": 0.9461921012742778,
+            "paraphrased": 0.0012130908634334118
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9970883769170128,
+          "sentence": "The reading question that motivated the system this dissertation builds was about the editorial-register shift across the deposition: how did the front-page rhetoric of *Il Messaggero* move between the *MinCulPop*-aligned register of mid-July and the new-government register of late-July, and what shape did the war and domestic-politics coverage take across the month around that pivot.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.002911623082987252,
+            "ai": 0.996671988354941,
+            "paraphrased": 0.0004163885620717744
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9953886407007583,
+          "sentence": "From the digital-archive side, I could not put that question to the existing systems.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.004611359299241703,
+            "ai": 0.9949524091331451,
+            "paraphrased": 0.0004362315676131712
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9943478334599946,
+          "sentence": "Article-level keyword search returns lists of articles, not a register-trajectory or a per-week shape.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.0056521665400054745,
+            "ai": 0.9939966382299871,
+            "paraphrased": 0.0003511952300074575
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9843067977411011,
+          "sentence": "To answer the narrower question about the three days of the deposition I would have had to read thirty articles by hand and compose them into a register comparison; for the wider question about the month I would have had to classify and aggregate several hundred articles from scratch.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.015693202258898944,
+            "ai": 0.9838666668445842,
+            "paraphrased": 0.00044013089651683777
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9932965816257885,
+          "sentence": "One concrete way that hardness shows up is at the date 26 July.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.006703418374211476,
+            "ai": 0.9929361487172698,
+            "paraphrased": 0.0003604329085187782
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9779895729855416,
+          "sentence": "A query for *Il Messaggero* on 26 July 1943, addressed to any of the major digitised newspaper archives that hold the paper, returns an empty result page.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.022010427014458423,
+            "ai": 0.9775382896880257,
+            "paraphrased": 0.00045128329751583507
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9573358071721889,
+          "sentence": "The 25 July morning edition went to press long before the Grand Council vote that night and in its accustomed late-fascist register.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.042664192827811094,
+            "ai": 0.9566944528115394,
+            "paraphrased": 0.0006413543606495171
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9708657705622343,
+          "sentence": "The 27 July edition reappeared under the new government, with the Grand Council *ordine del giorno*, the King's proclamation, and the new ministry on the front page.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.029134229437765714,
+            "ai": 0.9703224505231719,
+            "paraphrased": 0.0005433200390624426
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9687505919937456,
+          "sentence": "Mussolini had been deposed and arrested overnight; an editorial line for the morning paper could not be drawn in time and the issue did not run.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.031249408006254434,
+            "ai": 0.9681562286724873,
+            "paraphrased": 0.0005943633212583022
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9587033361822646,
+          "sentence": "The 26 July does not appear in the digitised fund because there was no 26 July to digitise.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.041296663817735446,
+            "ai": 0.9579813293017373,
+            "paraphrased": 0.0007220068805272277
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9633806898327584,
+          "sentence": "Article-level archives index articles, not days, so a date that has no articles is not surfaced in the catalogue at all.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.03661931016724155,
+            "ai": 0.9627542714282268,
+            "paraphrased": 0.0006264184045316173
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9924459836862957,
+          "sentence": "Since Bartlett's *Remembering* (Bartlett, 1932), cognitive science has documented how recall reconstructs generic schemas rather than verbatim events; his *War of the Ghosts* studies made this pattern visible.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.007554016313704344,
+            "ai": 0.9923532305672328,
+            "paraphrased": 9.27531190628365e-05
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9949969084774838,
+          "sentence": "Working-memory research subsequently mapped a narrow functional capacity for active processing: Miller proposed roughly seven plus or minus two items (Miller, 1956), though Cowan's later work suggested about four chunks as the realistic ceiling (Cowan, 2001).",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.005003091522516159,
+            "ai": 0.9949220039619575,
+            "paraphrased": 7.490451552631653e-05
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9934091738626694,
+          "sentence": "When an archive question spans a month or longer, this constraint forces compression somewhere in the chain, whether at the interface level or within the reader's cognitive space, and the pressure intensifies as temporal scope widens.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.006590826137330599,
+            "ai": 0.9933266890066709,
+            "paraphrased": 8.248485599853696e-05
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9908127590760915,
+          "sentence": "This matters directly for how the corpus-based case studies in chapter four operate.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.009187240923908567,
+            "ai": 0.9907333677279098,
+            "paraphrased": 7.939134818171176e-05
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9870880008359844,
+          "sentence": "Tolman (1948) ran rats through mazes and concluded they were building something like a map.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.012911999164015664,
+            "ai": 0.9869948889761626,
+            "paraphrased": 9.311185982172971e-05
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9806277778862377,
+          "sentence": "Eichenbaum (2017), reviewing decades of single-cell hippocampal recording, argued that the same circuit also indexes time and conceptual relation.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.019372222113762355,
+            "ai": 0.980528968217842,
+            "paraphrased": 9.880966839570156e-05
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9383200052481413,
+          "sentence": "Whittington et al.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.06167999475185859,
+            "ai": 0.9381923968656203,
+            "paraphrased": 0.0001276083825210691
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9477808726010634,
+          "sentence": "(2020) made the underlying claim formal in the Tolman-Eichenbaum-Machine, where one factorisation of structure and content does spatial navigation, sequence prediction and analogical generalisation in the same model.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.05221912739893655,
+            "ai": 0.9476457344282928,
+            "paraphrased": 0.00013513817277058948
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.9379362549041792,
+          "sentence": "So when a historian reads a month of newspapers at several time-scales, the cognitive resource being taxed is the same one the hippocampal-entorhinal system has been running on spatial problems for as long as it has existed.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.062063745095820785,
+            "ai": 0.9377814371389127,
+            "paraphrased": 0.0001548177652665411
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.8209572537659826,
+          "sentence": "An interface that lays the multi-resolution structure out externally relieves that load; a flat keyword search hands it back to the reader, and the reader must then juggle day, week and month resolutions in working memory while still searching.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.17904274623401734,
+            "ai": 0.8207723708197162,
+            "paraphrased": 0.00018488294626643382
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.8137896799444149,
+          "sentence": "This dissertation builds and tests an interface that does hold them.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.18621032005558513,
+            "ai": 0.8135976223986745,
+            "paraphrased": 0.00019205754574036003
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.8260576420173966,
+          "sentence": "Mausoleo stores the *Il Messaggero* July 1943 corpus as a calendar-shaped tree.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.17394235798260335,
+            "ai": 0.8258486422441388,
+            "paraphrased": 0.00020899977325783314
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.7225891152741142,
+          "sentence": "Leaves are paragraphs from the actual articles; the level above is article summaries; above that day, then week, then a month root that sits at the top.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.2774108847258858,
+            "ai": 0.7223793010239198,
+            "paraphrased": 0.00020981425019440692
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.15538359868269974,
+          "sentence": "Where there is no issue (26 July) there is still a node, kept empty by design.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.8446164013173002,
+            "ai": 0.14727733823548997,
+            "paraphrased": 0.008106260447209787
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.1425806196112063,
+          "sentence": "The week node spanning 25 July carries an integrated summary of the regime-change days, and the month root records the war-and-domestic shape against which the per-week balance can be read.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.8574193803887937,
+            "ai": 0.13603663583882433,
+            "paraphrased": 0.006543983772381974
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.1183597794451838,
+          "sentence": "The researcher-side agent walks the tree and can also issue keyword or embedding queries against the same corpus.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.8816402205548162,
+            "ai": 0.11419547642273106,
+            "paraphrased": 0.004164303022452743
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.14304199722327002,
+          "sentence": "Three case studies on the July 1943 material, evaluated against a keyword baseline over identical article transcriptions, ask whether this multi-resolution interface beats the flat one on those three kinds of question.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.85695800277673,
+            "ai": 0.13809465367034465,
+            "paraphrased": 0.004947343552925369
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.115140226856221,
+          "sentence": "A recent NLP literature on hierarchical retrieval, surveyed in chapter two, derives its hierarchy from the corpus itself, either by clustering text chunks (Sarthi et al., 2024) or by community detection on an entity graph extracted from the documents (Edge et al., 2024); a related line works from the document's surface section structure (Zhang and Tang, 2025).",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.8848597731437791,
+            "ai": 0.11081123756545518,
+            "paraphrased": 0.004328989290765816
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.09243787731197231,
+          "sentence": "Mausoleo borrows its hierarchy from the publication calendar that the printers already followed.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.9075621226880277,
+            "ai": 0.08879557698495794,
+            "paraphrased": 0.0036423003270143806
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.0909636054524645,
+          "sentence": "The pay-off shows up most clearly on the absent-day case, since the calendar contains a slot for 26 July whether or not anything was printed on it, while a clustering-induced hierarchy has nothing to cluster from when the data are absent and thus cannot preserve the structural significance of what did not appear.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.9090363945475355,
+            "ai": 0.08726061848081418,
+            "paraphrased": 0.003702986971650321
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.2655744805687519,
+          "sentence": "-",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.7344255194312481,
+            "ai": 0.25633310388370895,
+            "paraphrased": 0.009241376685042924
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.13199399891302455,
+          "sentence": "Two literatures, one corpus: what each contributes",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.8680060010869755,
+            "ai": 0.12568432238982435,
+            "paraphrased": 0.006309676523200196
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.1239302876350793,
+          "sentence": "The dominant access mode in the long line of digital newspaper archives remains the keyword query against an OCR'd full text.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.8760697123649207,
+            "ai": 0.1185729480959294,
+            "paraphrased": 0.005357339539149888
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.11608328156013879,
+          "sentence": "A more recent strand in information-retrieval research has been doing hierarchical access, with the hierarchies usually induced from the corpus itself by clustering or graph-community methods.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.8839167184398612,
+            "ai": 0.11176980822919413,
+            "paraphrased": 0.004313473330944661
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.2068529396364054,
+          "sentence": "A much older body of cognitive-science work on how memory organises temporal material at multiple resolutions has not been much operationalised for archival interface design, and the corpus carries its own source-critical context that the case studies in chapter four read with.",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.7931470603635946,
+            "ai": 0.20007812315921902,
+            "paraphrased": 0.006774816477186357
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        },
+        {
+          "generated_prob": 0.1188966453410704,
+          "sentence": "### What the existing digit",
+          "perplexity": 0,
+          "class_probabilities": {
+            "human": 0.8811033546589296,
+            "ai": 0.11526561761929391,
+            "paraphrased": 0.00363102772177649
+          },
+          "interpretability_value": null,
+          "interpretability_normalized_value": null,
+          "interpretability_designation": null,
+          "interpretability_alpha": null,
+          "highlight_sentence_for_ai": true,
+          "special_highlight_type": null
+        }
+      ],
+      "class_probabilities": {
+        "human": 0.3655254540887635,
+        "ai": 0.551264905646293,
+        "mixed": 0.08320964026494337
+      },
+      "confidence_scores_raw": {
+        "identity": {
+          "ai": 0.551264905646293,
+          "mixed": 0.08320964026494337,
+          "human": 0.3655254540887635
+        }
+      },
+      "subclass": {
+        "ai": {
+          "predicted_class": "pure_ai",
+          "result_message": "",
+          "confidence_score": 1,
+          "confidence_category": "high",
+          "class_probabilities": {
+            "pure_ai": 1,
+            "ai_paraphrased": 0
+          },
+          "confidence_scores_raw": {
+            "identity": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            }
+          },
+          "confidence_thresholds_raw": {
+            "identity": {
+              "ai_paraphrased": {
+                "reject": 0.33,
+                "low": 0.6,
+                "medium": 0.8
+              },
+              "pure_ai": {
+                "reject": 0.33,
+                "low": 0.6,
+                "medium": 0.8
+              }
+            }
+          }
+        }
+      },
+      "pageNumber": 0,
+      "neatVersion": "4.4b",
+      "version": "2026-03-30-base",
+      "language": "en",
+      "result_message": "Our detector is highly uncertain about this document. The writing style and content are not particularly AI-like.",
+      "result_sub_message": null,
+      "document_classification": "AI_ONLY",
+      "inputText": "# Mausoleo, or how to read across the day a newspaper did not appear\n\nA final-year dissertation submitted for BASC0024 (Arts and Sciences, UCL).\n\n---\n\n## Abstract\n\nA digitised newspaper corpus normally allows a historian to retrieve articles by keyword, with date as a facet on the side. For the July 1943 *Il Messaggero* corpus this dissertation works with, that template handles questions for which articles exist and breaks down for the others the corpus invites. The morning paper for 26 July 1943 was not printed. The Grand Council had deposed Mussolini overnight and an editorial line could not be drawn in time; a flat article index returns nothing for the date. Questions about the regime-change days of 25 to 27 July return tens of articles that the reader has to assemble by hand. Questions about the war-and-domestic balance across the month return hundreds. The dissertation argues that a digital archive ought to respond to questions of these shapes with the structural information available to it, and builds a system, Mausoleo, that does so by storing the corpus as a calendar-shaped tree of recursively summarised nodes over which a researcher agent navigates through time and structure.\n\nA century of cognitive-science work has accumulated evidence that memory organises temporal information at multiple resolutions. Researchers reading time-stamped material shift between date-bound items and larger schemas built up over weeks. A flat ranked-article interface forces the researcher to perform that integration mentally, holding both the retrieved fragments and the larger temporal shape in working memory at once. Chapter four runs three case studies on whether exposing the temporal structure in the index changes how the work goes. Three questions are put to *Il Messaggero* in July 1943: what the paper said on the absent 26 July, how it covered the regime change of 25 to 27 July, and how the balance of war and domestic-politics coverage moved across the month. Across eighteen scored trials the system averaged 11.3 tool calls against the keyword baseline's 28.3 and was preferred by both judges on a three-dimension rubric in every case. The calendar-shaped index holds a day node for 26 July with empty leaves and a summary that records the absence as evidence, a slot for documented silence that a flat article index cannot provide.\n\n---\n\n## Preface\n\nI came to this project from the engineering side, after a year working on retrieval-augmented generation pipelines for technical documentation. I wanted a final-year project that would put the same techniques in front of source material that does not chunk well, and Italian regime-period newspapers were the natural pick from the languages I read. The 1943 issue list of *Il Messaggero* was the most complete in the available scans, which is how I ended up with a corpus that contained one missing day. Two weeks went into a post-correction pass that made composite OCR scores worse, and another into the realisation that the date-bounded queries the system most needed to answer well were exactly those the keyword baseline was structurally incapable of resolving. Bartlett's *Remembering* was a paper I had read for second-year psychology and went back to once the OCR work began producing day-summary nodes; the hippocampal-mapping work in Eichenbaum and Whittington came in much later, after the calendar-shaped index had already been built.\n\nI thank Dr Yi Gong for supervising. Her comments on the cognitive-science framing, and on what the system can and cannot warrant, shaped the chapters that follow.\n\n---\n\n## 1. Reading across the regime change of July 1943\n\n*Il Messaggero* in July 1943 ran daily across thirty issues, covering the war on the eastern and African fronts in parallel with the domestic crisis that culminated in the Grand Council vote on the night of 24 to 25 July, the King's intervention in the afternoon of the 25th, and the formation of the Badoglio government in the days that followed. The dissertation works with the digitised fund of those issues, held in the *Emeroteca digitale* of the Italian *Biblioteca Nazionale Centrale di Roma*. The reading question that motivated the system this dissertation builds was about the editorial-register shift across the deposition: how did the front-page rhetoric of *Il Messaggero* move between the *MinCulPop*-aligned register of mid-July and the new-government register of late-July, and what shape did the war and domestic-politics coverage take across the month around that pivot.\n\nFrom the digital-archive side, I could not put that question to the existing systems. Article-level keyword search returns lists of articles, not a register-trajectory or a per-week shape. To answer the narrower question about the three days of the deposition I would have had to read thirty articles by hand and compose them into a register comparison; for the wider question about the month I would have had to classify and aggregate several hundred articles from scratch.\n\nOne concrete way that hardness shows up is at the date 26 July. A query for *Il Messaggero* on 26 July 1943, addressed to any of the major digitised newspaper archives that hold the paper, returns an empty result page. The 25 July morning edition went to press long before the Grand Council vote that night and in its accustomed late-fascist register. The 27 July edition reappeared under the new government, with the Grand Council *ordine del giorno*, the King's proclamation, and the new ministry on the front page. Mussolini had been deposed and arrested overnight; an editorial line for the morning paper could not be drawn in time and the issue did not run. The 26 July does not appear in the digitised fund because there was no 26 July to digitise. Article-level archives index articles, not days, so a date that has no articles is not surfaced in the catalogue at all.\n\nSince Bartlett's *Remembering* (Bartlett, 1932), cognitive science has documented how recall reconstructs generic schemas rather than verbatim events; his *War of the Ghosts* studies made this pattern visible. Working-memory research subsequently mapped a narrow functional capacity for active processing: Miller proposed roughly seven plus or minus two items (Miller, 1956), though Cowan's later work suggested about four chunks as the realistic ceiling (Cowan, 2001). When an archive question spans a month or longer, this constraint forces compression somewhere in the chain, whether at the interface level or within the reader's cognitive space, and the pressure intensifies as temporal scope widens. This matters directly for how the corpus-based case studies in chapter four operate.\n\nTolman (1948) ran rats through mazes and concluded they were building something like a map. Eichenbaum (2017), reviewing decades of single-cell hippocampal recording, argued that the same circuit also indexes time and conceptual relation. Whittington et al. (2020) made the underlying claim formal in the Tolman-Eichenbaum-Machine, where one factorisation of structure and content does spatial navigation, sequence prediction and analogical generalisation in the same model. So when a historian reads a month of newspapers at several time-scales, the cognitive resource being taxed is the same one the hippocampal-entorhinal system has been running on spatial problems for as long as it has existed. An interface that lays the multi-resolution structure out externally relieves that load; a flat keyword search hands it back to the reader, and the reader must then juggle day, week and month resolutions in working memory while still searching.\n\nThis dissertation builds and tests an interface that does hold them. Mausoleo stores the *Il Messaggero* July 1943 corpus as a calendar-shaped tree. Leaves are paragraphs from the actual articles; the level above is article summaries; above that day, then week, then a month root that sits at the top. Where there is no issue (26 July) there is still a node, kept empty by design. The week node spanning 25 July carries an integrated summary of the regime-change days, and the month root records the war-and-domestic shape against which the per-week balance can be read. The researcher-side agent walks the tree and can also issue keyword or embedding queries against the same corpus. Three case studies on the July 1943 material, evaluated against a keyword baseline over identical article transcriptions, ask whether this multi-resolution interface beats the flat one on those three kinds of question.\n\nA recent NLP literature on hierarchical retrieval, surveyed in chapter two, derives its hierarchy from the corpus itself, either by clustering text chunks (Sarthi et al., 2024) or by community detection on an entity graph extracted from the documents (Edge et al., 2024); a related line works from the document's surface section structure (Zhang and Tang, 2025). Mausoleo borrows its hierarchy from the publication calendar that the printers already followed. The pay-off shows up most clearly on the absent-day case, since the calendar contains a slot for 26 July whether or not anything was printed on it, while a clustering-induced hierarchy has nothing to cluster from when the data are absent and thus cannot preserve the structural significance of what did not appear.\n\n\n---\n\n## 2. Two literatures, one corpus: what each contributes\n\nThe dominant access mode in the long line of digital newspaper archives remains the keyword query against an OCR'd full text. A more recent strand in information-retrieval research has been doing hierarchical access, with the hierarchies usually induced from the corpus itself by clustering or graph-community methods. A much older body of cognitive-science work on how memory organises temporal material at multiple resolutions has not been much operationalised for archival interface design, and the corpus carries its own source-critical context that the case studies in chapter four read with.\n\n### What the existing digit",
+      "document_id": "770a6d74-6958-47de-9c3a-01aaa2159e28"
+    }
+  ]
+}
