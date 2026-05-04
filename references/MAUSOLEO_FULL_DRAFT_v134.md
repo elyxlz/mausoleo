@@ -319,3 +319,7 @@ The baseline arm employs only two tools: `baseline_search(query, date_from?, dat
 
 Reproduction: the data and scripts referenced above sit at `commit 5cdb52c` on `master` of the project repository. Exact regeneration of every figure and table in this appendix follows from `python scripts/render_appendix_figures.py` (figures), `python -m mausoleo.case_studies.runner` (case-study trials with the embedder pre-loaded), and `python scripts/build_index.py` (index from raw articles).
 
+---
+
+Word count: 8,041 words (excluding abstract, preface and references).
+
