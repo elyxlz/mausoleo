@@ -37,4 +37,16 @@ Action: REVERTED (git checkout). No GAN check (Pareto irrelevant).
 Quota: GPTZero 1/7 in 24h.
 Plan: `round2_C_plan.md`. Verdict: `round2_C_gptzero.md`. Advance R3_C → Strategy 1c.
 
+### R3_C — Strategy 1c (hedge cadence variation): NO-OP
+
+Pre-edit grep: 0 matches for `Notably / Importantly / It is worth noting / Furthermore / Moreover / Additionally / Indeed / Crucially / Specifically / Interestingly / In conclusion / Overall / In summary / It should be noted` openers. Already scrubbed in Stage A/B.
+Action: zero-cost confirmation.
+Plan: `round3_C_plan.md`. Advance R4_C → Strategy 1d.
+
+### R4_C — Strategy 1d (sentence-length variance): SKIP
+
+Pre-edit measurement: mean 25.9w, median 24w, σ=13.9w, range 3-88w, 11% short (<10w), 16% long (>40w). Already moderate-high variance. Per SKILL: "Burstiness alone is no longer a lever. GPTZero v4.4b penalises short fragments at 1.0 generated_prob." Adding more short fragments risks regression.
+Action: informed skip, no edit, no quota burn.
+Plan: `round4_C_plan.md`. Advance R5_C → Strategy 2a (vocabulary simplification).
+
 
