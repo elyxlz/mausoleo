@@ -233,6 +233,8 @@ Wu, J., Ouyang, L., Ziegler, D.M., Stiennon, N., Lowe, R., Leike, J. and Christi
 
 Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K. and Cao, Y. (2022) 'ReAct: Synergizing reasoning and acting in language models', *arXiv preprint* arXiv:2210.03629.
 
+Zhang, M. and Tang, J. (2025) 'PageIndex: vectorless, reasoning-based RAG via hierarchical tree index', *arXiv preprint* arXiv:2510.13347.
+
 ---
 
 ## Appendix A: Supplementary material
@@ -241,7 +243,7 @@ This appendix collects the rubric, variance, OCR-decomposition, index-build, and
 
 ### A.1: The three-dimension judge rubric
 
-Each judge scores a (question, candidate-answer) pair on three independent dimensions, each on the integer 0-5 scale used in `judges.py`. The two judges share the rubric definitions but apply distinct system prompts: judge 1 is framed as a senior historian-of-fascist-Italy reviewer (Opus 4.5 preferred, Sonnet 4.5 fallback when the Opus id is not accepted on OAuth), judge 2 as a critical computational-humanities reviewer (Sonnet 4.5; substituted from the original GPT-5 plan, documented in §6.1 and the case-study RUNLOG). Both judges receive the same `JUDGE_PROMPT_TEMPLATE` and emit strict JSON containing the three integer scores plus a one-paragraph rationale. Output is parsed with a permissive regex; malformed JSON falls back to zero across the board.
+Each judge scores a (question, candidate-answer) pair on three independent dimensions, each on the integer 0-5 scale used in `judges.py`. The two judges share the rubric definitions but apply distinct system prompts: judge 1 is framed as a senior historian-of-fascist-Italy reviewer (Opus 4.5 preferred, Sonnet 4.5 fallback when the Opus id is not accepted on OAuth), judge 2 as a critical computational-humanities reviewer (Sonnet 4.5; substituted from the original GPT-5 plan, documented in the case-study RUNLOG). Both judges receive the same `JUDGE_PROMPT_TEMPLATE` and emit strict JSON containing the three integer scores plus a one-paragraph rationale. Output is parsed with a permissive regex; malformed JSON falls back to zero across the board.
 
 | Score | Anchor (applies to all three dimensions) |
 |---|---|
@@ -252,7 +254,7 @@ Each judge scores a (question, candidate-answer) pair on three independent dimen
 | 4 | Strong: claims are supported with date- or article-level evidence; the answer covers the main sub-questions and offers a defensible reading. |
 | 5 | Exceptional: every load-bearing claim is grounded with citation; the answer integrates structural and temporal context the source allows. |
 
-The three dimensions narrow the anchor to a specific epistemic test. **Factual accuracy** asks whether the answer correctly states what *Il Messaggero* reported and what is independently known about the corpus and the events; unverifiable claims are penalised under judge 2's stricter framing. **Comprehensiveness** asks whether the answer covers the major sub-questions and cites specific evidence (dates, headlines, article ids). **Insight** asks whether the answer interprets the evidence (regime trajectory, editorial register, structural absence) rather than merely describing it. Inter-judge κ on the integer-discretised quality means is 0.33 (case 1), 0.57 (case 2), 0.14 (case 3); the low case-3 κ reflects the rubric's poor fit to an aggregate-shape answer, not disagreement about the underlying material (judge means stay close: 4.00 vs 4.11). The rubric is shared across both arms — only the toolset varies between Mausoleo and the keyword baseline.
+The three dimensions narrow the anchor to a specific epistemic test. **Factual accuracy** asks whether the answer correctly states what *Il Messaggero* reported and what is independently known about the corpus and the events; unverifiable claims are penalised under judge 2's stricter framing. **Comprehensiveness** asks whether the answer covers the major sub-questions and cites specific evidence (dates, headlines, article ids). **Insight** asks whether the answer interprets the evidence (regime trajectory, editorial register, structural absence) rather than merely describing it. Inter-judge κ on the integer-discretised quality means is 0.33 (case 1), 0.57 (case 2), 0.14 (case 3); the low case-3 κ reflects the rubric's poor fit to an aggregate-shape answer, not disagreement about the underlying material. The rubric is shared across both arms — only the toolset varies between Mausoleo and the keyword baseline.
 
 ### A.2: Per-cell variance for the three case studies
 
@@ -267,9 +269,9 @@ Per-cell variance is computed across three trials per (case × system) cell, wit
 | Case 3 Mausoleo | 8.3 / 7-10 | n/a (RMSE 0.166) | 4.06 | [3.86, 4.25] | 0.14 |
 | Case 3 Baseline | 28.3 / 27-30 | n/a (RMSE 0.220) | 3.17 | [1.41, 4.92] | 0.14 |
 
-Paired sign-test p-values are 0.625 (case 1 quality, n=4 decisive), 0.375 (case 2, n=5), 0.125 (case 3, n=4); on completeness the case-2 sweep yields p=0.25 (3/3 wins). The direction is uniform in Mausoleo's favour but the n=3-trial design gives coarse statistical resolution, called out as a power limitation in §7.2. The case-3 baseline confidence interval is wide because trial 2 returned mean 2.50 against trials 1 and 3 at 3.50, dragging the cell mean and inflating the dispersion band.
+Paired sign-test p-values are 0.625 (case 1 quality, n=4 decisive), 0.375 (case 2, n=5), 0.125 (case 3, n=4); on completeness the case-2 sweep yields p=0.25 (3/3 wins). The direction is uniform in Mausoleo's favour but the n=3-trial design gives coarse statistical resolution, called out as a power limitation in chapter five. The case-3 baseline confidence interval is wide because trial 2 returned mean 2.50 against trials 1 and 3 at 3.50, dragging the cell mean and inflating the dispersion band.
 
-The case-1 Mausoleo recall variance (0.45 / 0.79 / 0.79 across trials) was diagnosed against the per-trial agent logs in `eval/case_studies/runs/case1_mausoleo_t{1,2,3}.json`. The three trials open identically — node 07-26, sibling reads of 07-25 and 07-27, and `children(limit=20)` on each — and diverge at call six. Trials 1 and 3 eventually reissue `children(node_id="1943-07-27", limit=60)`, paginating beyond the default twenty-article window and surfacing thirteen of the fourteen otherwise-missing GT items (a021, a022, a024, a026, a029, a030, a032, a033, a036, a038, a040, a048, a049). Trial 2 never paginated past the first twenty children: after `children 07-27 lim=20` it issued four search calls (one `search_text` against 27-27, one against 24-24, one against 27-28, one `search_semantic` against 27-27) plus a `text(node_id="1943-07-27")` full-day pull. The four searches all returned empty payloads (88, 64, 79, 105 chars respectively) and the day-text call returned the day summary (12,309 chars) which does not enumerate article ids. Same answer quality (judge means 4.0 and 4.0, vs 4.33 and 5.0 on the other trials), but the recall metric is sharply penalised because it counts ids enumerated, not facts grounded. The trial is kept in the reported mean because three trials is already a small sample and removing it inflates the apparent stability; the variance is real and informative, and the §7.2 limitation notes the metric's sensitivity to whether the agent paginates exhaustively or answers from a compressed summary.
+The case-1 Mausoleo recall variance (0.45 / 0.79 / 0.79 across trials) was diagnosed against the per-trial agent logs in `eval/case_studies/runs/case1_mausoleo_t{1,2,3}.json`. The three trials open identically — node 07-26, sibling reads of 07-25 and 07-27, and `children(limit=20)` on each — and diverge at call six. Trials 1 and 3 eventually reissue `children(node_id="1943-07-27", limit=60)`, paginating beyond the default twenty-article window and surfacing thirteen of the fourteen otherwise-missing GT items (a021, a022, a024, a026, a029, a030, a032, a033, a036, a038, a040, a048, a049). Trial 2 never paginated past the first twenty children: after `children 07-27 lim=20` it issued four search calls (one `search_text` against 27-27, one against 24-24, one against 27-28, one `search_semantic` against 27-27) plus a `text(node_id="1943-07-27")` full-day pull. The four searches all returned empty payloads (88, 64, 79, 105 chars respectively) and the day-text call returned the day summary (12,309 chars) which does not enumerate article ids. Same answer quality (judge means 4.0 and 4.0, vs 4.33 and 5.0 on the other trials), but the recall metric is sharply penalised because it counts ids enumerated, not facts grounded. The trial is kept in the reported mean because three trials is already a small sample and removing it inflates the apparent stability; the variance is real and informative, and the chapter-five limitation notes the metric's sensitivity to whether the agent paginates exhaustively or answers from a compressed summary.
 
 ### A.3: OCR composite weighting and per-pass decomposition
 
@@ -282,18 +284,20 @@ composite = 0.40 · (1 − wCER)  +  0.25 · recall  +  0.15 · ordering
 
 where wCER is the length-weighted per-article character error rate, recall is article-detection recall against a Jaccard word-overlap matcher (threshold 0.15), ordering is the Spearman rank correlation of predicted versus ground-truth article order, hCER is the headline-only character error rate, and page-accuracy is the fraction of articles whose page-span is correctly recovered. Per-component decomposition on the two evaluation issues:
 
-| Component | 1885-06-15 | 1910-06-15 | Weight | Contribution (1885 / 1910) |
-|---|---|---|---|---|
-| 1 − wCER | 0.851 | 0.917 | 0.40 | 0.340 / 0.367 |
-| Recall | 1.000 | 0.984 | 0.25 | 0.250 / 0.246 |
-| Ordering | 0.96 | 0.97 | 0.15 | 0.144 / 0.146 |
-| 1 − hCER | 0.855 | 0.893 | 0.10 | 0.085 / 0.089 |
-| Page accuracy | 0.683 | 0.974 | 0.10 | 0.068 / 0.097 |
-| **Composite** | **0.872** | **0.926** | — | **0.899 mean** |
+| Component | 1885-06-15 | 1910-06-15 | Weight |
+|---|---|---|---|
+| 1 − wCER | 0.851 | 0.917 | 0.40 |
+| Recall | 1.000 | 0.984 | 0.25 |
+| Ordering | 0.96 | 0.97 | 0.15 |
+| 1 − hCER | 0.855 | 0.893 | 0.10 |
+| Page accuracy | 0.683 | 0.974 | 0.10 |
+| **Composite** | **0.872** | **0.926** | — |
+
+The two issues yield a composite mean of 0.899 by the formula above.
 
 The 1885 page-accuracy floor of 0.683 is a ground-truth annotation error: every vision-language source independently agrees on the "wrong" pages for twelve articles (program.md L161). The composite is therefore capped at ~0.872 on 1885 by construction; this is a methodological caveat rather than a model deficiency.
 
-Per-pass cumulative scores along the ablation hill-climb (cf. Figure 2) sit at 0.8824 → 0.8854 → 0.8865 → 0.8880 → 0.8893 → 0.9057 across the five ensemble adds, with the +fullpage stack supplying the largest single jump (+0.0164) by combining two model families at the same column-split. Both LLM post-correction passes regress the score: exp_173 (single-pass Qwen2.5-7B post-correct) drops to 0.8997, exp_175 (two-pass consensus) to 0.8950. The cleaner LLM "fixes" character-perfect articles into modernised paraphrases more often than it repairs OCR errors, which is why the deployed pipeline does not include any LLM post-correction step.
+Per-pass cumulative scores along the ablation hill-climb (cf. Figure 4) sit at 0.8824 → 0.8854 → 0.8865 → 0.8880 → 0.8893 → 0.9057 across the five ensemble adds, with the +fullpage stack supplying the largest single jump (+0.0164) by combining two model families at the same column-split. Both LLM post-correction passes regress the score: exp_173 (single-pass Qwen2.5-7B post-correct) drops to 0.8997, exp_175 (two-pass consensus) to 0.8950. The cleaner LLM "fixes" character-perfect articles into modernised paraphrases more often than it repairs OCR errors, which is why the deployed pipeline does not include any LLM post-correction step.
 
 ### A.4: Index-construction parameters
 
@@ -321,6 +325,3 @@ The keyword baseline arm exposes only two tools: `baseline_search(query, date_fr
 
 Reproduction: the data and scripts referenced above sit at `commit 5cdb52c` on `master` of the project repository. Exact regeneration of every figure and table in this appendix follows from `python scripts/render_appendix_figures.py` (figures), `python -m mausoleo.case_studies.runner` (case-study trials with the embedder pre-loaded), and `python scripts/build_index.py` (index from raw articles).
 
-### A.6: New reference
-
-Zhang, M. and Tang, J. (2025) 'PageIndex: vectorless, reasoning-based RAG via hierarchical tree index', *arXiv preprint* arXiv:2510.13347.
