@@ -39,7 +39,7 @@ A recent NLP literature on hierarchical retrieval, surveyed in chapter two, deri
 
 ---
 
-## 2. What two literatures and one corpus contribute
+## 2. Two literatures, one corpus: what each contributes
 
 The dominant access mode in the long line of digital newspaper archives remains the keyword query against an OCR'd full text. A more recent strand in information-retrieval research has been doing hierarchical access, with the hierarchies usually induced from the corpus itself by clustering or graph-community methods. A much older body of cognitive-science work on how memory organises temporal material at multiple resolutions has not been much operationalised for archival interface design, and the corpus carries its own source-critical context that the case studies in chapter four read with.
 
@@ -165,7 +165,7 @@ The regime-change case cleared in roughly twelve Mausoleo tool calls against a b
 
 ---
 
-## 5. What the case studies do and do not warrant
+## 5. What do the case studies warrant, and what do they not?
 
 Of the three case studies, the regime-change case is the one whose result is most straightforward: the calendar-shaped index does the work the baseline has to do article by article, and the cost gap is what would be expected from compression at the day-summary level. The comparative-coverage case is harder to read: the largest quality gap of the three sits there. The κ between judges is also the lowest. That low κ is partly an artefact of the rubric (a narrative-completeness rubric does not fit an aggregate-shape answer well, and the spread between the two judges' scores tracks that misfit more than it tracks disagreement about the underlying answer). The missing-day case is the case the design was built around, and the recall tie at 0.67 deserves a sentence of its own: the baseline arrived at the absence through a route the metric cannot tell apart from Mausoleo's, by reading the 25th and 27th issues and reasoning around the gap from training-corpus knowledge of the regime change. A touched-set recall metric cannot distinguish a grounded answer from a backfilled one.
 
