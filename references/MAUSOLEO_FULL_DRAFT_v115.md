@@ -258,7 +258,7 @@ The three dimensions narrow the anchor to a specific epistemic test. **Factual a
 
 ### A.2: Per-cell variance for the three case studies
 
-Per-cell variance is computed across three trials per (case × system) cell, with judges' integer scores aggregated as means. The 95% confidence intervals reported below assume small-sample t-distribution at n=3 (df=2, t≈4.30); they are wide and intended as honest dispersion bands, not power-bearing tests.
+Per-cell variance is computed across three trials for each (case × system) cell, and judges' integer scores are aggregated as means. The reported 95% confidence intervals assume a small-sample t-distribution with n=3 (df=2, t≈4.30); the intervals are wide and serve as honest bands of dispersion rather than power-bearing tests.
 
 | Cell | Tool calls (mean / range) | Recall (mean / min-max) | Quality (mean across 6 judge calls) | 95% CI quality | κ (inter-judge, by case) |
 |---|---|---|---|---|---|
