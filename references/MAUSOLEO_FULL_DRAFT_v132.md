@@ -1,4 +1,4 @@
-# Mausoleo, or how to read across the day a newspaper did not appear
+# Mausoleo: a calendar-shaped index for reading newspaper history
 
 A final-year dissertation submitted for BASC0024 (Arts and Sciences, UCL).
 
