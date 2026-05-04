@@ -90,7 +90,7 @@ Two empirical observations drove the design. Column-split predictions from a sin
 
 The cold-cache composite was evaluated on two hand-cleaned issues (1885-06-15, 41 articles; 1910-06-15, 193 articles) using an article-level matching scheme, yielding 0.90 averaged across the two issues, decomposing to 0.872 on 1885 and 0.926 on 1910. The composite metric weights character error rate, article-level recall, ordering, headline character error rate and page-accuracy; the exact weight breakdown appears in Appendix A. Article-level matching was preferred to flat full-text character error rate because the latter penalises any displacement of an article in reading order even when its text is character-perfect; this convention follows historical-newspaper OCR work in NewsEye (Doucet et al., 2020). The single biggest gain throughout the hill-climb came from a post-processing filter that strips raw-JSON regurgitations occasionally leaking from the vision-language sources, contributing roughly 0.016. A leave-one-out at the five-source intermediate stage confirms no entry is redundant. Per-pipeline component scores and configuration tables are in Appendix A.
 
-![Figure 4. Composite OCR score by ensemble pass on the 1910-06-15 calibration issue, beginning from the 30-min v1 baseline (0.8824) and ending at the deployed configuration. The two-family fullpage stack (exp_102 + exp_107) supplies the largest single addition (+0.0164); both LLM post-correction passes regress the score back below the headline 0.899, the regression flagged in the OCR ablation prose.](figures/fig4_ocr_composite.png)
+![Figure 4. Composite OCR score by ensemble pass on the 1910-06-15 calibration issue, from the 30-min v1 baseline (0.8824) to the deployed configuration. The two-family fullpage stack (exp_102 + exp_107) supplies the largest single addition (+0.0164); the two LLM post-correction passes (exp_173, exp_175) sit below the deployed mean.](figures/fig4_ocr_composite.png){ width=65% }
 
 The 6,480 article-level transcriptions used downstream derive from a hand-cleaned post-pass of the ensemble's 9,456 raw articles (deduplication and cross-page stitching), falling outside the OCR composite score.
 
@@ -104,7 +104,7 @@ Construction proceeds bottom-up, one level at a time. A batch process generates 
 
 For July 1943, 6,480 article nodes collapse into 31 day nodes, 5 weeks, and 1 month root (6,517 nodes total). Cardinality varies per day, a possibility the schema permits through empty days; the table holds a row for each calendar position whether or not its leaf paragraphs are populated. The week-of-25-July summary closes with a prolepsis added by the summariser (*Sconosciuto ai lettori del Messaggero: il giorno successivo, 25 luglio, avverrà l'arresto di Mussolini*), supplying historical context the source could not have contained; chapter four returns to this as a summariser-bias phenomenon. At month level the prolepsis collapses into *l'arresto di Mussolini (25 luglio)*, with the 02:40 timestamp and the Grand Council mechanism compressed away.
 
-![Figure 1. Calendar-shaped index for the July 1943 *Il Messaggero* slice. Construction proceeds bottom-up by recursive summarisation: 6,480 article nodes collapse into 31 day nodes, 5 weeks, and 1 month root (6,517 nodes total).](figures/fig1_calendar_tree.png)
+![Figure 1. Calendar-shaped index for the July 1943 *Il Messaggero* slice. Five-level hierarchy (paragraph → article → day → week → month); recursive summarisation runs bottom-up from leaves.](figures/fig1_calendar_tree.png){ width=65% }
 
 ### How the agent reads the tree
 
@@ -159,9 +159,9 @@ All eighteen planned trials completed. Per-cell means are below.
 
 The regime-change case cleared in roughly twelve Mausoleo tool calls against a baseline that saturated its thirty-call budget every trial. On the missing-day case the tool-call cost was halved while touched-set recall tied, an artefact of the metric not being able to score an issue that does not exist. The comparative-coverage case showed the largest quality gap and the lowest κ, the latter reflecting how poorly the narrative-completeness rubric fitted an aggregate-shape answer.
 
-![Figure 2. Mean tool calls per trial across the three case studies. The Mausoleo agent uses roughly half the calls in cases 1 and 2 and roughly a third in case 3, where the keyword baseline saturates the 30-call cap on most trials.](figures/fig2_tool_calls.png)
+![Figure 2. Mean tool calls per trial across the three case studies. The Mausoleo agent uses roughly half the calls in cases 1 and 2 and roughly a third in case 3, where the keyword baseline saturates the 30-call cap on most trials.](figures/fig2_tool_calls.png){ width=65% }
 
-![Figure 3. Per-case judge scores on the three rubric dimensions (factual accuracy, comprehensiveness, insight; mean of two judges across three trials per cell). Mausoleo wins all nine cells; the gap widens most on the comparative-coverage case (case 3), where the baseline degrades on comprehensiveness and insight in particular.](figures/fig3_quality_rubric.png)
+![Figure 3. Per-case judge scores on the three rubric dimensions (factual accuracy, comprehensiveness, insight; mean of two judges across three trials per cell). Mausoleo wins all nine cells; the gap widens most on the comparative-coverage case (case 3), where the baseline scores lower on comprehensiveness and insight in particular.](figures/fig3_quality_rubric.png){ width=65% }
 
 ---
 
