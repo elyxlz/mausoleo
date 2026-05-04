@@ -20,7 +20,7 @@ I thank Dr Yi Gong for supervising. Her comments on the cognitive-science framin
 
 ---
 
-## Chapter 1: Reading across the regime change of July 1943
+## 1. Reading across the regime change of July 1943
 
 *Il Messaggero* in July 1943 ran daily across thirty issues, covering the war on the eastern and African fronts in parallel with the domestic crisis that culminated in the Grand Council vote on the night of 24 to 25 July, the King's intervention in the afternoon of the 25th, and the formation of the Badoglio government in the days that followed. The dissertation works with the digitised fund of those issues, held in the *Emeroteca digitale* of the Italian *Biblioteca Nazionale Centrale di Roma*. The reading question that motivated the system this dissertation builds was about the editorial-register shift across the deposition: how did the front-page rhetoric of *Il Messaggero* move between the *MinCulPop*-aligned register of mid-July and the new-government register of late-July, and what shape did the war and domestic-politics coverage take across the month around that pivot.
 
@@ -39,7 +39,7 @@ A recent NLP literature on hierarchical retrieval, surveyed in chapter two, deri
 
 ---
 
-## Chapter 2: What two literatures and one corpus contribute
+## 2. What two literatures and one corpus contribute
 
 The dominant access mode in the long line of digital newspaper archives remains the keyword query against an OCR'd full text. A more recent strand in information-retrieval research has been doing hierarchical access, with the hierarchies usually induced from the corpus itself by clustering or graph-community methods. A much older body of cognitive-science work on how memory organises temporal material at multiple resolutions has not been much operationalised for archival interface design, and the corpus carries its own source-critical context that the case studies in chapter four read with.
 
@@ -76,7 +76,7 @@ If the cognitive framing motivates the design, the corpus context decides whethe
 
 ---
 
-## Chapter 3: How I built Mausoleo
+## 3. How I built Mausoleo
 
 Three loosely coupled stages of Mausoleo connect through a single ClickHouse table called `nodes`. An OCR pipeline produces hand-cleanable article-level transcriptions from page scans; a recursive summariser builds the calendar-shaped tree over those transcriptions; and a small JSON-emitting command-line interface lets a researcher agent read the tree. The boundary between stages is the schema of the table, so each stage can be swapped or replayed without touching the others.
 
@@ -114,7 +114,7 @@ The reading loop is a ReAct loop in the sense of Yao et al. (2022), not single-s
 
 ---
 
-## Chapter 4: Reading the missing 26 July, with two contrast cases
+## 4. Reading the missing 26 July, with two contrast cases
 
 Each case is run twice. The baseline arm gives the researcher agent a BM25 retriever over the same hand-cleaned article transcriptions sitting in the `documents` table; the agent has no access to the `nodes` hierarchy at all. The Mausoleo arm gives the same agent the tree-traversal procedure from the previous chapter, plus the `documents` table, plus the semantic, text and hybrid search endpoints over both. The agent itself is the same contemporary commercial LLM under the same system prompt in both arms. I cap tool calls at thirty per trial and run three trials per cell with different seed prompts. The three metrics that come out of each cell are not symmetric. Efficiency is just tool calls and total characters that came back into the agent's context window. Recall is measured only on the first two cases, against a hand-built relevance ground truth that I assembled myself from four works of historiography (Pavone, 1991; Murialdi, 1986; Bosworth, 2005; Deakin, 1962). The third case has no recall figure, because the question is about a quantitative coverage shape rather than a list of relevant articles, so I report ratio MAE and RMSE against a per-week war-versus-domestic oracle in its place. Quality is the mean rubric score from two LLM judges scoring zero to five on each of the three rubric dimensions written out in the supplementary material.
 
@@ -165,7 +165,7 @@ The regime-change case cleared in roughly twelve Mausoleo tool calls against a b
 
 ---
 
-## Chapter 5: What the case studies do and do not warrant
+## 5. What the case studies do and do not warrant
 
 Of the three case studies, the regime-change case is the one whose result is most straightforward: the calendar-shaped index does the work the baseline has to do article by article, and the cost gap is what would be expected from compression at the day-summary level. The comparative-coverage case is harder to read: the largest quality gap of the three sits there. The κ between judges is also the lowest. That low κ is partly an artefact of the rubric (a narrative-completeness rubric does not fit an aggregate-shape answer well, and the spread between the two judges' scores tracks that misfit more than it tracks disagreement about the underlying answer). The missing-day case is the case the design was built around, and the recall tie at 0.67 deserves a sentence of its own: the baseline arrived at the absence through a route the metric cannot tell apart from Mausoleo's, by reading the 25th and 27th issues and reasoning around the gap from training-corpus knowledge of the regime change. A touched-set recall metric cannot distinguish a grounded answer from a backfilled one.
 
