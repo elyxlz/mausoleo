@@ -29,4 +29,12 @@ Pre-edit audit found 0 em-dashes and 0 non-citation en-dashes in body (lines 1-1
 
 Plan: `round1_C_plan.md`. Advance R2_C → Strategy 1b.
 
+### R2_C — Strategy 1b (parallel-triplet collapse, low-GAN-risk)
+
+Edits: §3 OCR triplet → semicolon cascade; §4 results triplet → 3 short sentences.
+Result: GPTZero **0.929 → 0.929** (Δ=0). Doc-level fingerprint unmoved by low-prominence-section surface edits.
+Action: REVERTED (git checkout). No GAN check (Pareto irrelevant).
+Quota: GPTZero 1/7 in 24h.
+Plan: `round2_C_plan.md`. Verdict: `round2_C_gptzero.md`. Advance R3_C → Strategy 1c.
+
 
