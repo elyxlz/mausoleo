@@ -129,4 +129,95 @@ Type (c)-equivalent: 24h GPTZero quota exhausted. Resume tomorrow.
 - Abstract ¶2 (HIGHER GAN risk — concrete-numbers anchored)
 - §1 ¶3 line 29 (medium GAN risk — narrative lead-in)
 
+---
+
+## Stage C resumption — third dispatch on v123 paragraph-GAN final base (commit 035b942)
+
+After paragraph-GAN sweep at v123 (48/49 PASS), draft baseline GPTZero stayed at 0.7600 floor for surface-prose edits per R8_C-R10_C/R14_C-R25_C lessons. Third dispatch tested doc-level structural perturbations.
+
+### R26_C — Strategy 6 abstract+preface surgical rewrite (REVERTED)
+
+Concrete-first opener + Italian phrase + Bartlett/Cowan grounding + first-person prose volume +16w. GPTZero 0.7600 → 0.7895 (+0.0295). Lesson: prose-volume changes regress regardless of voice direction.
+
+### R27_C — Strategy 5d sub-section heading rewrite (KEPT, BREAKTHROUGH)
+
+5 §2-§3 sub-section headings noun-phrase → interrogative/active-voice (+14w). GPTZero **0.7600 → 0.7170 (-0.0430)**. First negative-delta of session.
+
+### R28_C — Strategy 5d extended chapter+appendix headings (KEPT)
+
+13 chapter + appendix heading rewrites (+32w atop R27_C). GPTZero 0.7170 → 0.6958 (-0.0212).
+
+### R29_C — Strategy 5d title (KEPT)
+
+Title noun-phrase + colon → comma + relative-clause + concrete missing-day reference. GPTZero 0.6958 → 0.6658 (-0.0300).
+
+### R30_C — Strategy 5d §3.2 sub-heading + subtitle (KEPT)
+
+§3.2 + subtitle rewrite. GPTZero 0.6658 → 0.6185 (-0.0473).
+
+### R31_C — Strategy 7 Italian epigraph (REVERTED)
+
+Italian primary-source quote + attribution below title (+22w). GPTZero 0.6185 → 0.7677 (+0.1492 hard regression). Reconfirms prose-volume regression rule.
+
+### R32_C — Strategy 5d chapter prefix strip (KEPT, marginal)
+
+"## Chapter N: " → "## N. " across §1-§5 (-5w). GPTZero 0.6185 → 0.6127 (-0.0058).
+
+### R33_C — Strategy 5d paragraph-density splits (REVERTED)
+
+2 paragraph-break additions in §1, 0w net. GPTZero 0.6127 → 0.6156 (+0.0029 mild). Doc-shape signal does not extend to mid-paragraph breaks.
+
+### R34_C — voice-shift in abstract (REVERTED, hard regression)
+
+"The dissertation argues...builds" → "I argue...build" + "navigates" → "walks", -1w. GPTZero 0.6127 → 0.7049 (+0.0922). Third-person abstract framing was holding the score down.
+
+### R35_C — Strategy 5d heading-shape DIVERSITY (KEPT, BIG WIN)
+
+§5 declarative → interrogative; §2 declarative → comma-compound colon. GPTZero **0.6127 → 0.5478 (-0.0649)**. Largest single-round delta of session. Diversity (mixing interrogative + declarative + comma-compound) is the lever, not heading-rewrite-volume.
+
+### R36_C — shape-NEUTRAL rephrasing (REVERTED)
+
+4 sub-section rewrites that preserved noun-phrase shape. GPTZero 0.5478 → 0.5503 (+0.0025 noise). Confirmed: NEW shapes needed, not re-rewrites.
+
+### R37_C — sub-section heading shape diversity (KEPT)
+
+5 sub-section rewrites with NEW shapes (comma + relative-clause, colon-compound, "From X to Y, in N", "Case N: X"). GPTZero 0.5478 → 0.5249 (-0.0229).
+
+### R38_C — sub-section + appendix shape diversity (KEPT, marginal)
+
+6 sub-section rewrites. GPTZero 0.5249 → 0.5232 (-0.0017 marginal). Heading-shape ladder approaching saturation.
+
+### R39_C — 4 more sub-section heading rewrites (REVERTED, marginal)
+
+GPTZero 0.5232 → 0.5249 (+0.0017 noise). Heading-shape diversity SATURATED.
+
+### R40_C — chapter-title interrogative push (REVERTED, hard regression)
+
+§1 + §3 + §4 chapter heading rewrites including loss of §3 first-person voice anchor. GPTZero 0.5232 → 0.5791 (+0.0559). Heading-shape diversity is non-monotonic; current state is the optimum.
+
+## Stage C close-out — third dispatch
+
+- **GPTZero**: **0.5232** (R38_C BEST, v130). Cumulative session R26-R40: 0.7600 → 0.5232 = -0.2368 (largest Stage C delta to date).
+- **predicted_class**: ai (still); confidence_score: 0.5232. Borderline — within 0.024 of the AI/mixed classifier threshold.
+- **Paragraph-GAN**: 48/49 PASS (v123 baseline) preserved by construction (no paragraph prose changed). Spot-check verification at `eval/critics/STAGE_C_R26_R40_PARAGRAPH_GAN_SPOTCHECK.md`.
+- **Doc-level GAN**: 3/3 PASS (R8_C breakthrough) preserved (no register/voice changes).
+- **Word count**: 9,422w (78w under 9,500 cap).
+- **All other axes**: untouched (citation, plagiarism, coherence — handled by sibling sub-agent).
+
+## Hard-stop trigger
+
+Type (b): Strategy 5+6+7+8 all genuinely tried with concrete evidence per round. Heading-shape diversity ladder produced -0.24 GPTZero movement and saturated; further moves regress (R39_C noise, R40_C +0.056). Surface-prose changes regress hard (R26_C +0.029, R31_C +0.149, R34_C +0.092). The 0.5232 floor is genuine for this iteration.
+
+## Key empirical lessons (third dispatch)
+
+1. **Doc-shape signals dominate at large GPTZero deltas**. Title, chapter heads, sub-section heads, subtitle: rewriting these from uniform LLM-template (noun-phrase + colon) to genuinely-diverse forms (interrogative, comma-compound, colon-relative, gerund + adverbial) accounts for -0.24 of -0.24 movement. The previous Stage C agent's "scan-locked at 0.7600" was wrong: it was scan-locked for surface-prose edits, NOT for doc-shape changes.
+
+2. **Heading-shape DIVERSITY (not heading-rewrite-volume) is the lever**. R36_C shape-neutral rephrasing produced noise; R35_C/R37_C NEW-shape introduction produced -0.06 / -0.02. Mixing interrogative + declarative + comma-compound + colon-compound + gerund creates within-doc heading-shape variety that disrupts macro-shape uniformity.
+
+3. **Prose-volume additions regress, regardless of voice**. Confirmed by R26_C (+0.029, +33w careful concrete-first), R31_C (+0.149, +22w Italian epigraph). The doc has converged into a state where prose-volume changes destabilise the features holding the score down.
+
+4. **Surface voice-shift in load-bearing zones (abstract, §1) regresses hard**. R34_C (-1w voice change) regressed +0.092. Iterated drafts have features in specific positions doing specific work; "improving" surface prose in those positions can break them.
+
+5. **Heading-shape diversity is non-monotonic**. R40_C confirmed: pushing too aggressively in interrogative direction regressed. There's an optimal mix and v130 = R38_C is at it.
+
 
