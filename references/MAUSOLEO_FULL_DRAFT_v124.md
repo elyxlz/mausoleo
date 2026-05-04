@@ -20,7 +20,7 @@ I thank Dr Yi Gong for supervising. Her comments on the cognitive-science framin
 
 ---
 
-## Chapter 1: Reading across a regime change
+## Chapter 1: Reading across the regime change of July 1943
 
 *Il Messaggero* in July 1943 ran daily across thirty issues, covering the war on the eastern and African fronts in parallel with the domestic crisis that culminated in the Grand Council vote on the night of 24 to 25 July, the King's intervention in the afternoon of the 25th, and the formation of the Badoglio government in the days that followed. The dissertation works with the digitised fund of those issues, held in the *Emeroteca digitale* of the Italian *Biblioteca Nazionale Centrale di Roma*. The reading question that motivated the system this dissertation builds was about the editorial-register shift across the deposition: how did the front-page rhetoric of *Il Messaggero* move between the *MinCulPop*-aligned register of mid-July and the new-government register of late-July, and what shape did the war and domestic-politics coverage take across the month around that pivot.
 
@@ -39,17 +39,17 @@ A recent NLP literature on hierarchical retrieval, surveyed in chapter two, deri
 
 ---
 
-## Chapter 2: Two literatures and a corpus
+## Chapter 2: What two literatures and one corpus contribute
 
 The dominant access mode in the long line of digital newspaper archives remains the keyword query against an OCR'd full text. A more recent strand in information-retrieval research has been doing hierarchical access, with the hierarchies usually induced from the corpus itself by clustering or graph-community methods. A much older body of cognitive-science work on how memory organises temporal material at multiple resolutions has not been much operationalised for archival interface design, and the corpus carries its own source-critical context that the case studies in chapter four read with.
 
-### Existing digitised newspaper archives
+### What the existing digitised newspaper archives do
 
 Two systems set the comparison points. *Europeana Newspapers* aggregates around 28 million pages across forty European languages through full-text search backed by OCR of variable quality and limited named-entity enrichment, the largest pan-European digitised newspaper aggregator and the natural baseline for any new venture working at the European scale. *Impresso*, the Swiss and Luxembourgish project, sits at the enriched end of the spectrum: alongside OCR it offers named-entity recognition, topic models, lexical-semantic comparison and text-reuse browsing across roughly two centuries of French, German and Luxembourgish newspapers (Ehrmann et al., 2020; Düring et al., 2024). The US comparator *Chronicling America* (the National Digital Newspaper Program at the Library of Congress, around 23 million pages from 1690 to 1963) is omitted from the head-to-head because the case studies in this dissertation are Italian-language. It remains the third major reference point in the field at scale.
 
 What unites these systems is the access template. The user arrives with a query, receives a ranked article list, optionally facets the result by date, year or source, and then reads articles individually. Düring et al. (2024) describe the Impresso interface as one of "transparent generosity" about exposing intermediate structure; the user is still expected to come with a search term already in mind. The presupposition is reasonable for most historical research, where the historian arrives with a question already framed. It is less reasonable for the historian who wants to understand a corpus they cannot read in full at the article level. It is less reasonable, too, for one whose answer is not a list of articles, where the answer is a shape that moves across days, or an absence that might matter more than what was printed.
 
-### The hierarchical-retrieval lineage
+### Where the hierarchical-retrieval lineage breaks from this
 
 Classical information retrieval supplies the baseline. Salton, Wong and Yang (1975) introduced the vector space model; Robertson and Zaragoza (2009) consolidated the probabilistic-relevance tradition that culminated in BM25, still the strongest sparse baseline. Both treat the document collection as a flat set: relevance is computed per document and the structure of the collection plays no role in retrieval.
 
@@ -59,7 +59,7 @@ Murugaraj et al. (2025) is the closest prior work on retrieval-augmented generat
 
 Mausoleo changes the source of the hierarchy again. Daily newspapers carry a temporal hierarchy in their production schedule: paragraph in article in issue in day in week in month. The index inherits that structure directly. The navigation surface stays predictable to a working historian without depending on extraction quality or a clustering choice that external data might disrupt.
 
-### Memory, hierarchy and external structure
+### Why memory hierarchy is the right shape for this index
 
 Why the calendar-given hierarchy should be the right shape of index for an archival interface, beyond one designer's preference, is the substantive cognitive-science claim the dissertation rests on. Several converging strands from cognitive science support it, and they are worth taking in turn.
 
@@ -76,11 +76,11 @@ If the cognitive framing motivates the design, the corpus context decides whethe
 
 ---
 
-## Chapter 3: How Mausoleo is built
+## Chapter 3: How I built Mausoleo
 
 Three loosely coupled stages of Mausoleo connect through a single ClickHouse table called `nodes`. An OCR pipeline produces hand-cleanable article-level transcriptions from page scans; a recursive summariser builds the calendar-shaped tree over those transcriptions; and a small JSON-emitting command-line interface lets a researcher agent read the tree. The boundary between stages is the schema of the table, so each stage can be swapped or replayed without touching the others.
 
-### From scanned pages to article transcriptions
+### Getting from scanned pages to article transcriptions
 
 The OCR stage receives scanned JPEGs as input, with six pages per issue on average across the thirty surviving July 1943 issues of *Il Messaggero*. Output takes the form of per-issue JSON files that list detected articles, including headline, body text and page span. The pipeline operates only in cold-cache run mode, where every prediction regenerates from raw images on each invocation within a budget of thirty minutes wall-clock per issue on two GPUs.
 
@@ -106,7 +106,7 @@ For July 1943, 6,480 article nodes aggregate into 31 day nodes, 5 weeks, and 1 m
 
 ![Figure 1. Calendar-shaped index for the July 1943 *Il Messaggero* slice. Five-level hierarchy (paragraph → article → day → week → month); recursive summarisation runs bottom-up from leaves.](figures/fig1_calendar_tree.png){ width=65% }
 
-### How the agent reads the tree
+### How the agent actually reads the tree
 
 A small server backed by ClickHouse and a typer-based command-line interface exposes retrieval, with a researcher agent as the user and every command emitting structured JSON to standard output. Tree traversal is exposed through `GET /root`, `/nodes/{id}`, `/nodes/{id}/children`, `/nodes/{id}/parent` and `/nodes/{id}/text` (raw text for leaves, reconstructed from descendants for higher nodes). Search capabilities include `POST /search/semantic` (vector approximate-nearest-neighbour over the vector-similarity index, filterable by level or date range), `/search/text` (token-bloom over summary text) and `/search/hybrid` (a weighted combination). A `GET /stats` endpoint reports per-level node counts.
 
@@ -114,11 +114,11 @@ The reading loop is a ReAct loop in the sense of Yao et al. (2022), not single-s
 
 ---
 
-## Chapter 4: The missing 26 July, and two contrast cases
+## Chapter 4: Reading the missing 26 July, with two contrast cases
 
 Each case is run twice. The baseline arm gives the researcher agent a BM25 retriever over the same hand-cleaned article transcriptions sitting in the `documents` table; the agent has no access to the `nodes` hierarchy at all. The Mausoleo arm gives the same agent the tree-traversal procedure from the previous chapter, plus the `documents` table, plus the semantic, text and hybrid search endpoints over both. The agent itself is the same contemporary commercial LLM under the same system prompt in both arms. I cap tool calls at thirty per trial and run three trials per cell with different seed prompts. The three metrics that come out of each cell are not symmetric. Efficiency is just tool calls and total characters that came back into the agent's context window. Recall is measured only on the first two cases, against a hand-built relevance ground truth that I assembled myself from four works of historiography (Pavone, 1991; Murialdi, 1986; Bosworth, 2005; Deakin, 1962). The third case has no recall figure, because the question is about a quantitative coverage shape rather than a list of relevant articles, so I report ratio MAE and RMSE against a per-week war-versus-domestic oracle in its place. Quality is the mean rubric score from two LLM judges scoring zero to five on each of the three rubric dimensions written out in the supplementary material.
 
-### The missing 26 July
+### Reading the missing 26 July
 
 What did *Il Messaggero* report on 26 July 1943, the day after the deposition of Mussolini? The most consequential fact in the digitised corpus is that the issue is not there. A date-bounded query against the article-level corpus returns the empty set. For an episodic-retrieval task this is the case the design was built around. In Mausoleo the day node `1943-07-26` exists in the table whether or not its leaves contain text, with a summary attached that contextualises the gap; the agent reads the summary directly. Episodic memory works the same way at the cognitive level: events whose temporal slot the memory system does not hold cannot be flagged as missing, only as failures of recall.
 
@@ -136,11 +136,11 @@ The failure here sits at the data model itself, which holds only article-shaped 
 
 Reading the actual 27 July reappearance issue alongside the day node sharpens what the gap holds. The 27 July paper opens with the King's proclamation in centre-page and the Badoglio government list to the right; the *Grandi ordine del giorno* is reproduced verbatim further down the front page; the editorials drop the *MinCulPop*-aligned register that had still been audible in the 25 July morning paper without commenting on the change. The summary node for 26 July does not contain any of that, of course (it cannot, because the issue does not exist). Reading the 27 July issue against the 26 July summary makes legible what the 26 July issue would have had to do had it appeared. No editorial line on the deposition was available in time, and an issue without one would have had no plausible front page. The summariser has no way of choosing among these counterfactuals. The index makes it possible for the researcher to ask the counterfactual at all by holding a slot for the missing day in which to ask it.
 
-### Two shorter cases
+### Two shorter contrast cases
 
 The 25-to-27 July regime-change reconstruction cleared in 12.3 Mausoleo tool calls against a baseline that saturated its thirty-call budget on every trial, posting recall of 0.76 versus 0.62 and quality scores of 4.83 versus 4.44, κ = 0.57. One detail in the agent log is worth flagging: in the second of three Mausoleo trials the agent reached the week-of-25-July node only after first descending through four day nodes, retracing prose it had already read at the day level, which counts as four wasted tool calls on the budget; the cell-mean tool-call figure conceals this without the trace. The day-summary nodes already carry editorial tone, so the agent reads it directly off the prose without needing further abstraction. The per-week war-versus-domestic-balance question presented a different challenge: it is an aggregate question where touched-set recall becomes the wrong instrument, a first run having yielded a misleading 0.07 versus 0.11. The task was rerun against an oracle built by classifying all 6,480 articles into WAR / DOMESTIC / OTHER categories and then reducing to a per-week war fraction (W26 0.558, W27 0.589, W28 0.620, W29 0.733, W30 0.416). On this corrected oracle, Mausoleo wins on ratio MAE (0.149 vs 0.194), on tool calls (8.3 vs 28.3), and on quality metrics (4.06 vs 3.17), which marks the largest quality gap across all three cases, with κ = 0.14.
 
-### Aggregate numbers
+### What the aggregate numbers say
 
 All eighteen planned trials completed. Per-cell means are below.
 
@@ -165,7 +165,7 @@ The regime-change case cleared in roughly twelve Mausoleo tool calls against a b
 
 ---
 
-## Chapter 5: Discussion
+## Chapter 5: What the case studies do and do not warrant
 
 Of the three case studies, the regime-change case is the one whose result is most straightforward: the calendar-shaped index does the work the baseline has to do article by article, and the cost gap is what would be expected from compression at the day-summary level. The comparative-coverage case is harder to read: the largest quality gap of the three sits there. The κ between judges is also the lowest. That low κ is partly an artefact of the rubric (a narrative-completeness rubric does not fit an aggregate-shape answer well, and the spread between the two judges' scores tracks that misfit more than it tracks disagreement about the underlying answer). The missing-day case is the case the design was built around, and the recall tie at 0.67 deserves a sentence of its own: the baseline arrived at the absence through a route the metric cannot tell apart from Mausoleo's, by reading the 25th and 27th issues and reasoning around the gap from training-corpus knowledge of the regime change. A touched-set recall metric cannot distinguish a grounded answer from a backfilled one.
 
@@ -241,7 +241,7 @@ Zhang, M. and Tang, J. (2025) 'PageIndex: vectorless, reasoning-based RAG via hi
 
 This appendix collects the rubric, variance, OCR-decomposition, index-build, and tool-set material the chapter-four prose refers to. Sources are the project repository at `commit 5cdb52c` (master): `eval/case_studies/aggregate.json` (per-cell statistics), `eval/case_studies/runs/*.json` (per-trial judge results), `eval/autoresearch/program.md` and `eval/autoresearch/log.jsonl` (OCR ablation trace), `scripts/build_index.py` (summariser configuration), `src/mausoleo/case_studies/judges.py` (rubric prompts), `src/mausoleo/case_studies/tools.py` (tool schemas), and `src/mausoleo/index/schema.py` (ClickHouse vector index).
 
-### A.1: The three-dimension judge rubric
+### A.1: How the three-dimension judge rubric is scored
 
 Each judge scores a (question, candidate-answer) pair on three independent dimensions, each on the integer 0-5 scale used in `judges.py`. The two judges share the rubric definitions but apply distinct system prompts: judge 1 is framed as a senior historian-of-fascist-Italy reviewer (Opus 4.5 preferred, Sonnet 4.5 fallback when the Opus id is not accepted on OAuth), judge 2 as a critical computational-humanities reviewer (Sonnet 4.5; substituted from the original GPT-5 plan, documented in the case-study RUNLOG). Both judges receive the same `JUDGE_PROMPT_TEMPLATE` and emit strict JSON containing the three integer scores plus a one-paragraph rationale. Output is parsed with a permissive regex; malformed JSON falls back to zero across the board.
 
@@ -256,7 +256,7 @@ Each judge scores a (question, candidate-answer) pair on three independent dimen
 
 The three dimensions narrow the anchor to a specific epistemic test. **Factual accuracy** asks whether the answer correctly states what *Il Messaggero* reported and what is independently known about the corpus and the events; unverifiable claims are penalised under judge 2's stricter framing. **Comprehensiveness** asks whether the answer covers the major sub-questions and cites specific evidence (dates, headlines, article ids). **Insight** asks whether the answer interprets the evidence (regime trajectory, editorial register, structural absence) rather than merely describing it. Inter-judge κ on the integer-discretised quality means is 0.33 (case 1), 0.57 (case 2), 0.14 (case 3); the low case-3 κ reflects the rubric's poor fit to an aggregate-shape answer, not disagreement about the underlying material. The rubric is shared across both arms, only the toolset varies between Mausoleo and the keyword baseline.
 
-### A.2: Per-cell variance for the three case studies
+### A.2: Per-cell variance across the three case studies
 
 Per-cell variance is computed across three trials for each (case × system) cell, and judges' integer scores are aggregated as means. The reported 95% confidence intervals assume a small-sample t-distribution with n=3 (df=2, t≈4.30); the intervals are wide and serve as honest bands of dispersion rather than power-bearing tests.
 
@@ -273,7 +273,7 @@ Paired sign-test p-values are 0.625 (case 1 quality, n=4 decisive), 0.375 (case 
 
 The case-1 Mausoleo recall variance (0.45 / 0.79 / 0.79 across trials) was diagnosed against the per-trial agent logs in `eval/case_studies/runs/case1_mausoleo_t{1,2,3}.json`. The three trials open identically, with node 07-26, sibling reads of 07-25 and 07-27, and `children(limit=20)` on each, then diverge at call six. Trials 1 and 3 eventually reissue `children(node_id="1943-07-27", limit=60)`, paginating beyond the default twenty-article window and surfacing thirteen of the fourteen otherwise-missing GT items (a021, a022, a024, a026, a029, a030, a032, a033, a036, a038, a040, a048, a049). Trial 2 never paginated past the first twenty children: after `children 07-27 lim=20` it issued four search calls (one `search_text` against 27-27, one against 24-24, one against 27-28, one `search_semantic` against 27-27) plus a `text(node_id="1943-07-27")` full-day pull. The four searches all returned empty payloads (88, 64, 79, 105 chars respectively) and the day-text call returned the day summary (12,309 chars) which does not enumerate article ids. Same answer quality (judge means 4.0 and 4.0, vs 4.33 and 5.0 on the other trials), but the recall metric is sharply penalised because it counts ids enumerated, not facts grounded. The trial is kept in the reported mean because three trials is already a small sample and removing it inflates the apparent stability; the variance is real and informative, and the chapter-five limitation notes the metric's sensitivity to whether the agent paginates exhaustively or answers from a compressed summary.
 
-### A.3: OCR composite weighting and per-pass decomposition
+### A.3: How the OCR composite is weighted and decomposed per pass
 
 The cold-cache composite reported in chapter three is a weighted mean of five components, each in [0, 1], following `eval/autoresearch/program.md` line 14:
 
@@ -299,7 +299,7 @@ The 1885 page-accuracy floor of 0.683 is a ground-truth annotation error: every 
 
 Per-pass cumulative scores along the ablation hill-climb (cf. Figure 4) sit at 0.8824 → 0.8854 → 0.8865 → 0.8880 → 0.8893 → 0.9057 across the five ensemble adds, with the +fullpage stack supplying the largest single jump (+0.0164) by combining two model families at the same column-split. Both LLM post-correction passes regress the score: exp_173 (single-pass Qwen2.5-7B post-correct) drops to 0.8997, exp_175 (two-pass consensus) to 0.8950. The cleaner LLM "fixes" character-perfect articles into modernised paraphrases more often than it repairs OCR errors, which is why the deployed pipeline does not include any LLM post-correction step.
 
-### A.4: Index-construction parameters
+### A.4: What index-construction parameters were used
 
 The index-build script (`scripts/build_index.py`) issues one call to the Anthropic Messages API per node level. Article-level summaries use Claude Haiku 4.5; summaries for days, weeks, and months use Claude Sonnet 4.5. Both calls run over the OAuth subscription path (`anthropic-beta: oauth-2025-04-20`) with the historical-summariser prompt placed at the first user-message block so that the API system field stays as the Claude Code identity required by OAuth. Sampling temperature is left at the API default (1.0, not pinned). `max_tokens` is 700 for article summaries and 900 for day, week, and month summaries. Retry budget is 8 attempts with exponential backoff capped at 240 seconds. Branching factors are determined by the calendar rather than by configuration: roughly 209 articles per day on average in July 1943 (range 0 to 300, with the absent 26 July at 0), 6 to 7 days per week, 5 weeks per month, 12 months per year, 10 years per decade, and approximately six decades per archive root in the production schema. The case study uses the first five levels (paragraph, article, day, week, month).
 
@@ -307,7 +307,7 @@ Embeddings are produced locally using `paraphrase-multilingual-MiniLM-L12-v2` (3
 
 Storage and retrieval sit in a single ClickHouse table (`src/mausoleo/index/schema.py`). The table uses `MergeTree` engine ordered by `(level, date_start, position)` with `index_granularity = 8192`. Two secondary indexes accelerate retrieval. The summary column carries a token-bloom-filter index `tokenbf_v1(10240, 3, 0)` with granularity 1: bloom size 10,240 bits per granule, three hash functions, deterministic seed 0. The embedding column carries a vector-similarity index declared as `vector_similarity('hnsw', 'L2Distance', 1024)` with granularity 1; ClickHouse's HNSW implementation runs at default M = 32 and ef_construction = 128 (the experimental setting tolerates absence, since the `L2Distance()` function works regardless), and the vector index field width is set to 1024 to accommodate the originally planned BGE-M3 dimensionality should the re-embed run land. Smoke-test confirmation at runner startup verifies the embedder is loaded and the nearest day node by L2 distance to the query "Mussolini" is `1943-07-26`, the regime-change day (distance 0.900). Table footprint at the July 1943 scale is 25.21 MiB compressed on disk, of which 7.6 MiB is the embedding column.
 
-### A.5: Researcher-agent tool-set
+### A.5: What tools the researcher-agent has
 
 The Mausoleo arm exposes nine tools, each declared as a JSON schema and dispatched against the ClickHouse `nodes` table:
 
