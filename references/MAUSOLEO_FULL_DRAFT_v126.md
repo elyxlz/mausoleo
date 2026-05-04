@@ -1,6 +1,6 @@
 # Mausoleo, or how to read across the day a newspaper did not appear
 
-BASC0024 Final Year Dissertation
+A final-year dissertation submitted for BASC0024 (Arts and Sciences, UCL).
 
 ---
 
@@ -94,7 +94,7 @@ The cold-cache composite was evaluated on two hand-cleaned issues (1885-06-15, 4
 
 Of the 9,456 raw articles emitted by the ensemble, the 6,480 article-level transcriptions used downstream derive from a hand-cleaned post-pass that performs deduplication and cross-page stitching; this post-pass falls outside the OCR composite score.
 
-### The calendar-shaped tree
+### How the calendar-shaped tree is built
 
 All index storage resides in a single table in ClickHouse. Each row represents a level of a node, with the leaf level being paragraphs, followed by articles, days, weeks, and months. The full schema also includes levels for years and decades above months and an archive root above decades. Each row stores a parent identifier, a sibling position, a date range, a summary, an embedding vector, and raw OCR text for leaf paragraphs only. Higher levels contain no raw text but instead contain summaries and pointers downward. I follow Ketelaar (2001) on archival description as a tacit narrative: summaries are treated as derived and authority rests at the leaf level paragraphs.
 
