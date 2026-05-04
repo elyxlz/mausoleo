@@ -1,4 +1,4 @@
-# Mausoleo: reading across a regime change in a digitised newspaper archive
+# Mausoleo, or how to read across the day a newspaper did not appear
 
 BASC0024 Final Year Dissertation
 
