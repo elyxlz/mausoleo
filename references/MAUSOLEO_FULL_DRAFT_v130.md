@@ -59,7 +59,7 @@ Murugaraj et al. (2025) is the closest prior work on retrieval-augmented generat
 
 Mausoleo changes the source of the hierarchy again. Daily newspapers carry a temporal hierarchy in their production schedule: paragraph in article in issue in day in week in month. The index inherits that structure directly. The navigation surface stays predictable to a working historian without depending on extraction quality or a clustering choice that external data might disrupt.
 
-### Why memory hierarchy is the right shape for this index
+### Memory, hierarchy, and external structure: the cognitive ground
 
 Why the calendar-given hierarchy should be the right shape of index for an archival interface, beyond one designer's preference, is the substantive cognitive-science claim the dissertation rests on. Several converging strands from cognitive science support it, and they are worth taking in turn.
 
@@ -94,7 +94,7 @@ The cold-cache composite was evaluated on two hand-cleaned issues (1885-06-15, 4
 
 Of the 9,456 raw articles emitted by the ensemble, the 6,480 article-level transcriptions used downstream derive from a hand-cleaned post-pass that performs deduplication and cross-page stitching; this post-pass falls outside the OCR composite score.
 
-### How the calendar-shaped tree is built
+### Building the calendar-shaped tree, summary by summary
 
 All index storage resides in a single table in ClickHouse. Each row represents a level of a node, with the leaf level being paragraphs, followed by articles, days, weeks, and months. The full schema also includes levels for years and decades above months and an archive root above decades. Each row stores a parent identifier, a sibling position, a date range, a summary, an embedding vector, and raw OCR text for leaf paragraphs only. Higher levels contain no raw text but instead contain summaries and pointers downward. I follow Ketelaar (2001) on archival description as a tacit narrative: summaries are treated as derived and authority rests at the leaf level paragraphs.
 
@@ -106,7 +106,7 @@ For July 1943, 6,480 article nodes aggregate into 31 day nodes, 5 weeks, and 1 m
 
 ![Figure 1. Calendar-shaped index for the July 1943 *Il Messaggero* slice. Five-level hierarchy (paragraph → article → day → week → month); recursive summarisation runs bottom-up from leaves.](figures/fig1_calendar_tree.png){ width=65% }
 
-### How the agent actually reads the tree
+### The agent's reading loop, end to end
 
 A small server backed by ClickHouse and a typer-based command-line interface exposes retrieval, with a researcher agent as the user and every command emitting structured JSON to standard output. Tree traversal is exposed through `GET /root`, `/nodes/{id}`, `/nodes/{id}/children`, `/nodes/{id}/parent` and `/nodes/{id}/text` (raw text for leaves, reconstructed from descendants for higher nodes). Search capabilities include `POST /search/semantic` (vector approximate-nearest-neighbour over the vector-similarity index, filterable by level or date range), `/search/text` (token-bloom over summary text) and `/search/hybrid` (a weighted combination). A `GET /stats` endpoint reports per-level node counts.
 
@@ -241,7 +241,7 @@ Zhang, M. and Tang, J. (2025) 'PageIndex: vectorless, reasoning-based RAG via hi
 
 This appendix collects the rubric, variance, OCR-decomposition, index-build, and tool-set material the chapter-four prose refers to. Sources are the project repository at `commit 5cdb52c` (master): `eval/case_studies/aggregate.json` (per-cell statistics), `eval/case_studies/runs/*.json` (per-trial judge results), `eval/autoresearch/program.md` and `eval/autoresearch/log.jsonl` (OCR ablation trace), `scripts/build_index.py` (summariser configuration), `src/mausoleo/case_studies/judges.py` (rubric prompts), `src/mausoleo/case_studies/tools.py` (tool schemas), and `src/mausoleo/index/schema.py` (ClickHouse vector index).
 
-### A.1: How the three-dimension judge rubric is scored
+### A.1: The three-dimension judge rubric, with score anchors
 
 Each judge scores a (question, candidate-answer) pair on three independent dimensions, each on the integer 0-5 scale used in `judges.py`. The two judges share the rubric definitions but apply distinct system prompts: judge 1 is framed as a senior historian-of-fascist-Italy reviewer (Opus 4.5 preferred, Sonnet 4.5 fallback when the Opus id is not accepted on OAuth), judge 2 as a critical computational-humanities reviewer (Sonnet 4.5; substituted from the original GPT-5 plan, documented in the case-study RUNLOG). Both judges receive the same `JUDGE_PROMPT_TEMPLATE` and emit strict JSON containing the three integer scores plus a one-paragraph rationale. Output is parsed with a permissive regex; malformed JSON falls back to zero across the board.
 
@@ -299,7 +299,7 @@ The 1885 page-accuracy floor of 0.683 is a ground-truth annotation error: every 
 
 Per-pass cumulative scores along the ablation hill-climb (cf. Figure 4) sit at 0.8824 → 0.8854 → 0.8865 → 0.8880 → 0.8893 → 0.9057 across the five ensemble adds, with the +fullpage stack supplying the largest single jump (+0.0164) by combining two model families at the same column-split. Both LLM post-correction passes regress the score: exp_173 (single-pass Qwen2.5-7B post-correct) drops to 0.8997, exp_175 (two-pass consensus) to 0.8950. The cleaner LLM "fixes" character-perfect articles into modernised paraphrases more often than it repairs OCR errors, which is why the deployed pipeline does not include any LLM post-correction step.
 
-### A.4: What index-construction parameters were used
+### A.4: Index-construction parameters, summariser to embedder
 
 The index-build script (`scripts/build_index.py`) issues one call to the Anthropic Messages API per node level. Article-level summaries use Claude Haiku 4.5; summaries for days, weeks, and months use Claude Sonnet 4.5. Both calls run over the OAuth subscription path (`anthropic-beta: oauth-2025-04-20`) with the historical-summariser prompt placed at the first user-message block so that the API system field stays as the Claude Code identity required by OAuth. Sampling temperature is left at the API default (1.0, not pinned). `max_tokens` is 700 for article summaries and 900 for day, week, and month summaries. Retry budget is 8 attempts with exponential backoff capped at 240 seconds. Branching factors are determined by the calendar rather than by configuration: roughly 209 articles per day on average in July 1943 (range 0 to 300, with the absent 26 July at 0), 6 to 7 days per week, 5 weeks per month, 12 months per year, 10 years per decade, and approximately six decades per archive root in the production schema. The case study uses the first five levels (paragraph, article, day, week, month).
 
@@ -307,7 +307,7 @@ Embeddings are produced locally using `paraphrase-multilingual-MiniLM-L12-v2` (3
 
 Storage and retrieval sit in a single ClickHouse table (`src/mausoleo/index/schema.py`). The table uses `MergeTree` engine ordered by `(level, date_start, position)` with `index_granularity = 8192`. Two secondary indexes accelerate retrieval. The summary column carries a token-bloom-filter index `tokenbf_v1(10240, 3, 0)` with granularity 1: bloom size 10,240 bits per granule, three hash functions, deterministic seed 0. The embedding column carries a vector-similarity index declared as `vector_similarity('hnsw', 'L2Distance', 1024)` with granularity 1; ClickHouse's HNSW implementation runs at default M = 32 and ef_construction = 128 (the experimental setting tolerates absence, since the `L2Distance()` function works regardless), and the vector index field width is set to 1024 to accommodate the originally planned BGE-M3 dimensionality should the re-embed run land. Smoke-test confirmation at runner startup verifies the embedder is loaded and the nearest day node by L2 distance to the query "Mussolini" is `1943-07-26`, the regime-change day (distance 0.900). Table footprint at the July 1943 scale is 25.21 MiB compressed on disk, of which 7.6 MiB is the embedding column.
 
-### A.5: What tools the researcher-agent has
+### A.5: The researcher-agent tool-set, by signature
 
 The Mausoleo arm exposes nine tools, each declared as a JSON schema and dispatched against the ClickHouse `nodes` table:
 
