@@ -17,3 +17,4 @@ data/
 user_data/
 output/
 auth.json
+.claude/scheduled_tasks.lock

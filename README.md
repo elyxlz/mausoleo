@@ -132,6 +132,10 @@ uv run pytest tests/test_end_to_end.py    # requires a running ClickHouse
 The end-to-end tests boot the FastAPI app via `TestClient` (no separate
 uvicorn process), so you only need ClickHouse running on localhost:8123.
 
+## References
+
+- [Baidu Unlimited-OCR](https://github.com/baidu/Unlimited-OCR)
+
 ## License
 
 MIT
