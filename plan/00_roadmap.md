@@ -17,7 +17,6 @@ Applied to Il Messaggero (Rome), 1880–1959, ~175K pages (~29K issues) stored o
 | 03 | Hierarchical Index (ClickHouse)  | LATER — rebuild (code removed 2026-07-16, see git history; design in [03_hierarchical_index.md](03_hierarchical_index.md)) |
 | 04 | Search & Navigation API + CLI    | LATER — rebuild ([04_search_and_cli.md](04_search_and_cli.md)) |
 | 05 | Open Source Packaging            | LATER ([05_packaging.md](05_packaging.md)) |
-| 06 | Dissertation                     | LATER — drafts backed up in `~/dissertation_backup_2026-07-16.tar.gz` on ripperred ([06_dissertation.md](06_dissertation.md)) |
 
 ## What we learnt (2026-07, supersedes earlier assumptions)
 
