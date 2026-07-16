@@ -1,18 +1,24 @@
-# Session Handoff — 2026-07-16
+# Session Handoff — 2026-07-16 (evening update)
 
 Continuation point for the autoresearch loop running on ripperred (tmux). Read `program.md` (objective, budget, protocol), `registry.md` (approach families), and the last entries of `log.jsonl` first. Work the loop per `.claude/skills/ocr-autoresearch/SKILL.md`; self-pace with ScheduleWakeup.
 
-## Immediate verification queue (do before new experiments)
-1. **Ensemble rewrite equivalence**: `ParallelEnsembleOcr` was rewritten (inline sub_configs + dynamic GPU queue + subprocess isolation via `scripts/run_sub_pipeline.py`); `configs/ocr/ensemble_30min.py` is now self-contained. Merge-only rerun on cached predictions completed for both dates, but byte-equivalence was only backed up for 1910 (`/tmp/ens_1910_before.json` on ripperred). Compare it against `eval/predictions/ensemble_30min_1910-06-15.json` — articles must be identical. Also verify a fresh sub-pipeline run works end-to-end (delete one cached sub prediction, rerun, watch the queue schedule it).
-2. **1 failing test**: `pytest tests/test_ocr_pipeline.py tests/test_all_pipelines.py` on ripperred showed "1 failed, 15 passed" (before dead-operator removal). Identify and fix; also rerun after the operator deletions (ensemble_ocr, sub_pipeline, merge_ensemble, page_pairs_vlm, chandra_layout, llm_post_correct were deleted — archive configs referencing them will no longer import, which is accepted).
-3. **Eval review DONE, composite_v2 IMPLEMENTED** (see `eval_review.md`): wCER over all GT capped per-article, F1 replaces recall, ordering=0 when <2 matches. Verify tests pass (`tests/test_eval.py` rewritten — it previously imported a nonexistent `mausoleo.eval.metrics` module, likely unrelated to the other failing test), then re-run `scripts/research.py board` and re-base registry/baseline numbers in v2. Strategic note: v2 charges the ensemble's spam — its 1910 lead over exp_045 shrinks to +0.07, which materially changes what's worth pursuing under the corpus budget.
+## Verification queue — ALL DONE (see log.jsonl 2026-07-16T20:3x entries)
+1. **Ensemble rewrite equivalence VERIFIED**: fresh ParallelEnsembleOcr merges reproduce the documented v1 baselines exactly (1885 0.8719, 1910 0.9257). `/tmp/ens_1910_before.json` was a stale April artifact — ignore it. v2 baseline: 0.7514 avg (0.7111 / 0.7917).
+2. **Failing test FIXED**: `crop_page()` now tolerates YoloLayout's per-page region-list shape; stale `/ocr` server tests removed. Full suite green (47 pipeline tests), pyright clean on touched files.
+3. **Leaderboard re-based to v2** (program.md table): lean 3-source `ensemble_3way_textrep` leads at 0.7537 → F4 reopened for source pruning.
+4. **Fresh sub-pipeline runs FIXED**: vllm 0.19.1/torch 2.10 upgrade broke cold-start of the 20480-len fullpage subs (KV 2.55 vs 2.81 GiB needed, both GPUs). `gpu_memory_utilization` field on VlmOcr; 0.94 for the two fullpage subs; verified end-to-end on GPU1.
 
-## Experiment queue (registry priorities)
-- **exp_045 steady-state throughput**: benchmark Qwen3-VL-8B col3 vllm GPU-s/page (2 issues back-to-back, exclude load) — the production reference vs the 6.9–13.9 budget.
-- **olmOCR-2-7B native prompt + MergeMarkdownPages** (cached on ripperred, F1 family, untested with correct usage).
-- **Unlimited-OCR column-crop sequence** (F2 unblock condition: legible crops as page sequence via `scripts/run_unlimited_standalone.py`, `~/unlimited_env`).
-- **PaddleOCR-VL segmentation**: recall/headlines are the bottleneck (registry F1). Try YOLO title-class regions for headlines instead of first-line heuristic.
+## Environment notes
+- **GITHUB_TOKEN on ripperred is EXPIRED** — commits land locally, `git push` fails. User must refresh auth; then push the pending commits.
+- An unrelated Audiogen service (`eve`, ~350 MiB) sits on GPU0 — do not kill. GPU1 preferred for tight-memory engines (`CUDA_VISIBLE_DEVICES=1`).
+- Disk: ~12 GB free on /home (100% full rounding) — prune before any model download.
+
+## Experiment queue
+- **exp_045 steady-state throughput** (RUNNING at handoff): both dates back-to-back on GPU1, `--force`, log in scratchpad `exp045_bench.log`; canonical exp_045 predictions backed up in scratchpad and MUST be restored after timing extraction (benchmark outputs are vllm-noise variants; keep the verified cache stack).
+- **exp_151_olmocr_native_col3** (config READY): olmOCR-2-7B native front-matter prompt + MergeMarkdownPages (front-matter stripping added). One variable vs exp_047 (prompt/adapter).
+- **exp_152_paddleocr_yolo_titles** (config + mechanism READY): exp_148 + YoloCrop separate title regions + MergePages nearest-below headline attachment. Unit-tested; flag-off paths byte-identical.
+- **Unlimited-OCR column-crop sequence** (F2 unblock): col3 crops as page sequence via `scripts/run_unlimited_standalone.py` + `~/unlimited_env`; crops pre-generated in scratchpad if session survived.
 
 ## Constraints (already in CLAUDE.md/program.md — enforced)
-- Budget 6.9–13.9 GPU-s/page; record timing every run (`scripts/research.py run <config>` does run→fetch→eval→audit→runs.jsonl).
+- Budget 6.9–13.9 GPU-s/page; record timing every run.
 - One config → one run → one result. All compute on ripperred. One variable per experiment. Log everything with mechanism lines; update registry.md every iteration; never stop the loop on failed waves.

@@ -13,7 +13,7 @@ Goal: OCR the ENTIRE corpus (1880 → 1959, ~175K pages ≈ 29K issues; ~1.07M p
 
 - Budget accounting is **steady-state throughput** (continuous batching across issues, model loaded once), not cold-start single-issue latency. Measure with ≥2 issues back-to-back, exclude model load.
 - Every experiment/run MUST record measured GPU-s/page; a config that beats the score but exceeds ~14 GPU-s/page is a research artifact, not a production candidate.
-- Reference points: the 8-source ensemble_30min ≈ 600 GPU-s/page (~40–90× over budget — dead as production). One Qwen3-VL-8B col3 vllm pass ≈ roughly the 1-week budget (measure precisely). Sub-1B specialized models (PaddleOCR-VL-1.6, GLM-OCR) are the natural fit — quality permitting.
+- Reference points (MEASURED 2026-07-16): the 8-source ensemble_30min ≈ 600 GPU-s/page (~40–90× over budget — dead as production). One Qwen3-VL-8B col3 vllm pass = **74 GPU-s/page (1885) / 178 (1910), avg ~136** — 5–26× over budget, NOT near the 1-week line as previously assumed; decode volume (~13K chars/crop on dense 1910 pages at ~63 tok/s eager) is the binding cost. Sub-1B specialized models are the only budget-feasible family measured so far: PaddleOCR-VL-1.6 ≈ 10 GPU-s/page (exp_149).
 - Old 30-min framing and its ensembles remain useful as **oracle/reference predictions** for GT work and quality upper bounds.
 
 Prior program versions with full session narratives live in `history/`. Every experiment ever run is in `log.jsonl`.

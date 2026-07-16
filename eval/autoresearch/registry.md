@@ -34,3 +34,5 @@ Families grouped by underlying mechanism. Statuses: ACTIVE (worth iterating), BL
 
 ## Cross-cutting constraint (2026-07-16)
 Corpus-scale production budget (program.md): the score-maximization target is now composite-per-GPU-second, not composite alone. Every family's value is re-weighted by throughput.
+
+**Throughput ground truth (measured 2026-07-16, exp_045 benchmark):** Qwen3-VL-8B col3 single pass = ~136 GPU-s/page avg (74 on 1885, 178 on dense 1910) — 5–26× over budget. Every ≥7B full-coverage pass is production-infeasible on 2×3090; 7–8B models remain useful only as oracle/GT/ensemble-reference sources. Production quality must come from F1 sub-1B models (Paddle ~10 GPU-s/page) + cheap layout (F3). Open lever: enforce_eager=False (CUDA graphs) could recover 2–3× on decode, still leaves 8B marginal at best.
