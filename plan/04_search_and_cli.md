@@ -1,211 +1,52 @@
-# Phase 4: Search & Navigation API + CLI
+# Phase 4: Agent Navigation — API + CLI/MCP
 
-> **STATUS 2026-07-16: deferred; implementation removed from the repo** (recoverable from git history). To be rebuilt after phase 3.
+> **STATUS 2026-07-17: deferred; earlier implementation removed** (git history). Rebuilt after phase 3. Design sketch, kept lean.
 
 ## Goal
 
-Build the API server and CLI that let an LLM agent explore the hierarchical knowledge index. The agent should be able to efficiently navigate from the archive root down to specific primary sources across 60+ years of newspaper data.
+Let an LLM agent explore the phase-3 index efficiently: from the archive root down to primary-source paragraphs across 80 years (1880–1959) of Il Messaggero. The agent is the only user — every interface returns structured JSON, no human formatting.
 
-## 4.1 API Server
+## Interfaces
 
-### Tech Stack
+Three thin layers over one service:
 
-- FastAPI (already a dependency)
-- Async ClickHouse client (clickhouse-connect or asynch)
-- Embedding model loaded in-process for query embedding (or call out to a separate service)
+1. **FastAPI server** — owns the ClickHouse connection and query logic.
+2. **MCP server** — first-class, not a nice-to-have: in 2026 this is how agents consume tools. Wraps the same operations as native MCP tools.
+3. **CLI** (`mausoleo ...`, typer + httpx) — same operations for shell-tool agents and scripting; JSON to stdout.
 
-### Deployment: Docker Only
+## Operations
 
-The server runs exclusively via Docker. A single `docker compose up` starts both the API server and ClickHouse together. No manual ClickHouse setup, no systemd — fully self-contained.
+| Operation | API | CLI |
+|---|---|---|
+| Get node (summary, level, metadata incl. unit_type/headline/pages at article level) | `GET /nodes/{id}` | `mausoleo node <id>` |
+| Children, ordered, paginated — the core drill-down | `GET /nodes/{id}/children` | `mausoleo children <id>` |
+| Parent | `GET /nodes/{id}/parent` | `mausoleo parent <id>` |
+| Full text (leaf raw text; non-leaf reconstructed from descendant paragraphs in order) | `GET /nodes/{id}/text` | `mausoleo text <id>` |
+| Archive root (entry point) | `GET /root` | `mausoleo root` |
+| Semantic search (level + date-range + unit_type filters) | `POST /search/semantic` | `mausoleo search semantic "<q>" [--level] [--from] [--to] [--limit]` |
+| Keyword search | `POST /search/text` | `mausoleo search text "<q>" ...` |
+| Index stats (nodes per level, date range, corpus version) | `GET /stats` | `mausoleo stats` |
 
-```
-docker compose up        # starts clickhouse + mausoleo server
-docker compose down      # stops everything
-```
+Hybrid search only if pure semantic or pure keyword proves insufficient in agent testing.
 
-On startup, the server waits for ClickHouse to be healthy (Docker healthcheck + retry loop), then runs schema migrations automatically.
+## Agent contract
 
-### Endpoints
+Tool descriptions ship with the server (MCP tool descriptions / system-prompt snippet): explain the 7-level tree, the strategy (start broad at root, read summaries, drill into relevant branches, use search when the target is known, fetch `text` only at the bottom), and the ID scheme so agents can jump directly to dates (`1922-10`, `1922-10-28`).
 
-#### Tree Traversal
+The real deliverable of this phase is not endpoints — it is an agent that navigates well. Budget explicit iteration time on tool descriptions and response shapes driven by transcripts of a real agent (Claude) answering test queries.
 
-**`GET /nodes/{node_id}`**
-Returns a single node with its summary, level, metadata.
+## Benchmark queries (exit test)
 
-```json
-{
-  "node_id": "1923-03",
-  "level": "month",
-  "parent_id": "1923",
-  "date_start": "1923-03-01",
-  "date_end": "1923-03-31",
-  "summary": "...",
-  "child_count": 31,
-  "source": "il_messaggero"
-}
-```
+- "Tell me everything about the Pichinon family"
+- "How did the collective consciousness of ordinary Romans change during fascism?"
+- "Interesting restaurant stories from Trastevere"
 
-**`GET /nodes/{node_id}/children`**
-Returns all direct children of a node, ordered by position. This is the core "drill down" operation.
+## Exit criteria
 
-Optional params:
-- `offset`, `limit` for pagination (months with 30+ days, days with many articles)
+- All operations functional over the full phase-3 index; MCP + CLI both working against the API.
+- An LLM agent answers the benchmark queries, reaching primary-source paragraphs, in a reasonable number of tool calls (target: ≤15 for the entity query).
+- Tool descriptions iterated against real agent transcripts at least once.
 
-```json
-{
-  "parent_id": "1923-03",
-  "children": [
-    {"node_id": "1923-03-01", "level": "day", "position": 1, "summary": "..."},
-    {"node_id": "1923-03-02", "level": "day", "position": 2, "summary": "..."},
-    ...
-  ]
-}
-```
+## Deployment
 
-**`GET /nodes/{node_id}/parent`**
-Navigate up the tree.
-
-**`GET /nodes/{node_id}/text`**
-For leaf nodes (paragraphs): return raw text.
-For non-leaf nodes: reconstruct full text by fetching all descendant paragraphs in order.
-
-#### Search
-
-**`POST /search/semantic`**
-Vector similarity search across the index.
-
-```json
-{
-  "query": "public reaction to March on Rome",
-  "level": "article",        // optional: filter by level
-  "date_start": "1922-10-01", // optional: date range filter
-  "date_end": "1922-11-30",
-  "limit": 20
-}
-```
-
-Returns nodes ranked by similarity with their summaries.
-
-**`POST /search/text`**
-Full-text / keyword search.
-
-```json
-{
-  "query": "Pichinon",
-  "level": null,              // search all levels
-  "date_start": null,
-  "date_end": null,
-  "limit": 20
-}
-```
-
-**`POST /search/hybrid`**
-Combined semantic + text search with configurable weighting. Optional — implement if pure semantic or pure text search proves insufficient.
-
-#### Utility
-
-**`GET /root`**
-Returns the archive root node. Entry point for top-down traversal.
-
-**`GET /stats`**
-Returns index statistics: total nodes per level, date range, source archives.
-
-## 4.2 CLI (Agent Tool Interface)
-
-### Tech Stack
-
-- typer for CLI framework
-- httpx for API calls
-- All output as structured JSON (the CLI user is an LLM agent)
-
-### Commands
-
-```bash
-# Tree navigation
-mausoleo node <node_id>                    # get node details
-mausoleo children <node_id>                # list children
-mausoleo parent <node_id>                  # go up
-mausoleo text <node_id>                    # get full text (leaf or reconstructed)
-mausoleo root                              # get archive root
-
-# Search
-mausoleo search semantic "<query>" [--level <level>] [--from <date>] [--to <date>] [--limit N]
-mausoleo search text "<query>" [--level <level>] [--from <date>] [--to <date>] [--limit N]
-
-# Utility
-mausoleo stats                             # index statistics
-```
-
-### Output Format
-
-Every command outputs JSON to stdout. No human-friendly formatting, no colors, no tables. Pure structured data for the agent to parse.
-
-```bash
-$ mausoleo children 1923-03-15
-{
-  "parent_id": "1923-03-15",
-  "children": [
-    {"node_id": "1923-03-15_a01", "level": "article", "position": 1, "summary": "..."},
-    ...
-  ]
-}
-```
-
-### Configuration
-
-```bash
-mausoleo --server http://localhost:8000    # API server URL
-```
-
-Or via environment variable `MAUSOLEO_SERVER_URL`.
-
-## 4.3 Agent Integration
-
-### Tool Descriptions for LLM Agents
-
-The CLI commands should be described as tools that an LLM agent can use. Write clear tool descriptions that explain what each command does and when to use it.
-
-Example MCP tool description or system prompt snippet:
-
-```
-You have access to a historical newspaper knowledge index covering Il Messaggero (Rome) from 1880 to ~1945. The index is organized as a hierarchical tree:
-
-Paragraph → Article → Day → Month → Year → Decade → Archive
-
-You can navigate this tree and search it using these tools:
-- `mausoleo root` — start here. Returns the archive root with a high-level summary.
-- `mausoleo children <node_id>` — drill down. See all items at the next level of detail.
-- `mausoleo node <node_id>` — inspect a specific node's summary.
-- `mausoleo text <node_id>` — read the full original text of an article or paragraph.
-- `mausoleo search semantic "<query>"` — find relevant nodes by meaning.
-- `mausoleo search text "<query>"` — find nodes by keyword.
-
-Strategy: start broad (root → decades → years), read summaries to identify relevant branches, drill down to articles and paragraphs for primary sources. Use search when you know what you're looking for.
-```
-
-### Potential MCP Server
-
-Consider wrapping the API as an MCP (Model Context Protocol) server so Claude and other agents can use it natively as tools without CLI invocation. This is a nice-to-have, not essential.
-
-## 4.4 Implementation Steps
-
-1. Set up FastAPI server skeleton with ClickHouse connection
-2. Implement `GET /nodes/{node_id}` and `GET /nodes/{node_id}/children`
-3. Implement `GET /nodes/{node_id}/text` (with recursive descendant fetching for non-leaves)
-4. Implement `POST /search/semantic` (embed query, ANN search in ClickHouse)
-5. Implement `POST /search/text`
-6. Implement remaining endpoints (parent, root, stats)
-7. Build CLI with typer wrapping all endpoints
-8. Write agent tool descriptions
-9. Test with an actual LLM agent (Claude via CLI tools) on real queries
-10. Iterate on tool descriptions and output format based on how well the agent navigates
-
-### Definition of Done
-
-- API server running, all endpoints functional
-- CLI installed via pip, all commands working
-- An LLM agent can successfully answer the example queries from our brainstorm:
-  - "Tell me everything about the Pichinon family"
-  - "How did the collective consciousness of ordinary Romans change during fascism?"
-  - "Interesting restaurant stories from Trastevere"
-- Agent can navigate from root to primary source paragraphs in a reasonable number of tool calls
+Server + ClickHouse as one `docker compose up` (schema migrations on startup, ClickHouse never exposed to the host). How this is distributed to anyone else is phase 5's question, not this phase's.
