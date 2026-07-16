@@ -19,6 +19,7 @@ class YoloCrop(BaseOperatorConfig):
     merge_vertical_gap: int = 50
     merge_horizontal_overlap: float = 0.5
     padding: int = 10
+    separate_title_regions: bool = False
 
 
 def _merge_column_boxes(
@@ -134,13 +135,22 @@ class YoloCropOperator(StatefulOperator[YoloCrop]):
                     continue
                 raw_boxes.append((x1, y1, x2, y2, cls_name, float(box.conf)))
 
+            title_boxes: list[tuple[int, int, int, int, str, float]] = []
+            if self.config.separate_title_regions:
+                title_boxes = [b for b in raw_boxes if b[4] == "title"]
+                raw_boxes = [b for b in raw_boxes if b[4] != "title"]
+
             merged = _merge_column_boxes(raw_boxes, self.config.merge_vertical_gap, self.config.merge_horizontal_overlap)
 
-            if not merged:
+            if not merged and not title_boxes:
                 merged = [(0, 0, img_w, img_h)]
 
+            regions = [(x1, y1, x2, y2, "text") for x1, y1, x2, y2 in merged]
+            regions += [(x1, y1, x2, y2, "title") for x1, y1, x2, y2, _, _ in title_boxes]
+            regions.sort(key=lambda r: (r[0], r[1]))
+
             pad = self.config.padding
-            for x1, y1, x2, y2 in merged:
+            for x1, y1, x2, y2, region_class in regions:
                 x1 = max(0, x1 - pad)
                 y1 = max(0, y1 - pad)
                 x2 = min(img_w, x2 + pad)
@@ -150,7 +160,10 @@ class YoloCropOperator(StatefulOperator[YoloCrop]):
                 buf = io.BytesIO()
                 crop.save(buf, format="JPEG", quality=95)
                 all_crops.append(buf.getvalue())
-                all_regions.append({"page": page_num + 1, "bbox": [x1, y1, x2, y2]})
+                region: dict[str, tp.Any] = {"page": page_num + 1, "bbox": [x1, y1, x2, y2]}
+                if self.config.separate_title_regions:
+                    region["class"] = region_class
+                all_regions.append(region)
 
         if not all_crops:
             all_crops = raw_images

@@ -18,9 +18,19 @@ def _vlm_sub(
     max_model_len: int,
     prompt: str = prompts.VLM_OCR_STRUCTURED_V2,
     strict: bool = False,
+    gpu_memory_utilization: float = 0.92,
 ) -> OcrPipelineConfig:
     split = [ColumnSplit(num_columns=columns, overlap_pct=0.03)] if columns else []
-    vlm = VlmOcr(model=model, prompt=prompt, backend="vllm", max_tokens=8192, max_model_len=max_model_len, gpu_fraction=1.0, vllm_strict=strict)
+    vlm = VlmOcr(
+        model=model,
+        prompt=prompt,
+        backend="vllm",
+        max_tokens=8192,
+        max_model_len=max_model_len,
+        gpu_fraction=1.0,
+        gpu_memory_utilization=gpu_memory_utilization,
+        vllm_strict=strict,
+    )
     return OcrPipelineConfig(name=name, operators=[*split, vlm, MergePages(), ParseIssue()])
 
 
@@ -47,8 +57,8 @@ def _yolo_sub(name: str) -> OcrPipelineConfig:
 
 
 SUB_CONFIGS = (
-    _vlm_sub("exp_107_fullpage_qwen25vl", QWEN25, columns=None, max_model_len=20480),
-    _vlm_sub("exp_102_fullpage_vllm", QWEN3, columns=None, max_model_len=20480),
+    _vlm_sub("exp_107_fullpage_qwen25vl", QWEN25, columns=None, max_model_len=20480, gpu_memory_utilization=0.94),
+    _vlm_sub("exp_102_fullpage_vllm", QWEN3, columns=None, max_model_len=20480, gpu_memory_utilization=0.94),
     _vlm_sub("exp_055_col6_ads_prompt", QWEN3, columns=6, max_model_len=12288, prompt=prompts.VLM_OCR_ADS_FOCUSED),
     _yolo_sub("exp_140_yolo_smallregion_vllm"),
     _vlm_sub("exp_138_col4_qwen25_vllm", QWEN25, columns=4, max_model_len=16384),
