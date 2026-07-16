@@ -21,7 +21,7 @@ Families grouped by underlying mechanism. Statuses: ACTIVE (worth iterating), BL
 - Chandra layout operator exists (chandra_layout.py), integration untested.
 
 ## F4 — Ensemble merge/quality-select tuning
-**Status: SATURATED at 0.89878 (50+ evals tied within ±0.0001). Do not micro-tune without new diverse sources. NOTE: the 8-source design violates the new corpus-scale budget — production architecture must shrink drastically (see program.md Resource Budget).**
+**Status: REOPENED for pruning under composite_v2 (2026-07-16).** v1-saturated at 0.89878; do not micro-tune weights. v2 charges spam (F1 replaces recall): the archived 3-source `ensemble_3way_textrep` (col3+yolo+col4 Qwen3-8B) scores 0.7537 v2 vs the 8-source ensemble's 0.7514, at ~3/8 the GPU cost. Next lever: source PRUNING / precision filtering, not addition. The 8-source design still violates the corpus budget regardless.
 
 ## F5 — Prompt engineering on the structured-JSON VLM path
 **Status: SATURATED/BLOCKED — V2 is the optimum; complex prompts hallucinate (V3), /no_think degrades. Unblock: a new model family with different prompt affordances.**

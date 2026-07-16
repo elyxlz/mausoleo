@@ -6,11 +6,13 @@ import re
 import typing as tp
 
 from mausoleo.ocr.operators.base import BaseOperatorConfig, OperatorType, register_operator
+from mausoleo.ocr.operators.merge import crop_page
 
 _HEADING_RE = re.compile(r"^\s{0,3}#{1,6}\s+(.*)$")
 _BOLD_LINE_RE = re.compile(r"^\s*\*\*(.+?)\*\*\s*$")
 _EMPHASIS_RE = re.compile(r"(\*\*|__|(?<!\w)[*_](?!\s))")
 _IMAGE_TAG_RE = re.compile(r"!\[[^\]]*\]\([^)]*\)|<img[^>]*>|<!--.*?-->", re.DOTALL)
+_FRONT_MATTER_RE = re.compile(r"\A\s*---\s*\n.*?\n---\s*\n", re.DOTALL)
 
 
 def _clean_inline(text: str) -> str:
@@ -40,6 +42,7 @@ def _build_article(headline: str | None, lines: list[str]) -> dict[str, tp.Any] 
 
 
 def split_markdown_articles(markdown: str) -> list[dict[str, tp.Any]]:
+    markdown = _FRONT_MATTER_RE.sub("", markdown)
     articles: list[dict[str, tp.Any]] = []
     headline: str | None = None
     lines: list[str] = []
@@ -77,9 +80,7 @@ def merge_markdown_pages(row: dict[str, tp.Any], *, config: MergeMarkdownPages) 
 
     all_articles: list[dict[str, tp.Any]] = []
     for crop_idx, page_text in enumerate(page_texts):
-        real_page = crop_idx + 1
-        if crop_idx < len(layout_regions):
-            real_page = layout_regions[crop_idx].get("page", crop_idx + 1)
+        real_page = crop_page(layout_regions, crop_idx)
         for article in split_markdown_articles(page_text):
             article["page_span"] = [real_page]
             all_articles.append(article)

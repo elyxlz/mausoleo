@@ -23,6 +23,12 @@ class MergePages(BaseOperatorConfig):
     raw_first_line_headline: bool = False
 
 
+def crop_page(layout_regions: list[tp.Any], crop_idx: int) -> int:
+    if crop_idx < len(layout_regions) and isinstance(layout_regions[crop_idx], dict):
+        return layout_regions[crop_idx].get("page", crop_idx + 1)
+    return crop_idx + 1
+
+
 def _split_raw_headline(text: str) -> tuple[str | None, str]:
     lines = text.strip().splitlines()
     if len(lines) < 2:
@@ -46,9 +52,7 @@ def merge_pages(row: dict[str, tp.Any], *, config: MergePages) -> dict[str, tp.A
 
     all_articles: list[dict[str, tp.Any]] = []
     for crop_idx, page_text in enumerate(page_texts):
-        real_page = crop_idx + 1
-        if crop_idx < len(layout_regions):
-            real_page = layout_regions[crop_idx].get("page", crop_idx + 1)
+        real_page = crop_page(layout_regions, crop_idx)
 
         page_data: tp.Any
         try:

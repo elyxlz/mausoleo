@@ -15,6 +15,16 @@ VLM_OCR_MARKDOWN_NATIVE = (
     "Preserve the original Italian text exactly as printed."
 )
 
+VLM_OCR_OLMOCR_NATIVE = (
+    "Attached is one page of a document that you must process. "
+    "Just return the plain text representation of this document as if you were reading it naturally. "
+    "Convert equations to LateX and tables to HTML.\n\n"
+    "If there are any figures or charts, label them with the following markdown syntax "
+    "![Alt text describing the contents of the figure](page_startx_starty_width_height.png)\n\n"
+    "Return your output as markdown, with a front matter section on top specifying values for the "
+    "primary_language, is_rotation_valid, rotation_correction, is_table, and is_diagram parameters."
+)
+
 VLM_OCR_STRUCTURED = (
     "Transcribe this newspaper page and identify distinct content units "
     "(articles, advertisements, obituaries, notices). For each unit, provide:\n"
