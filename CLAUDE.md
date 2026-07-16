@@ -7,6 +7,15 @@
 - ⚠️ **ZERO TOLERANCE**: The user will not accept violations of these guidelines
 - ❌ **REPEATED MISTAKES**: Will result in degraded user trust and experience
 
+## Research & Infrastructure Constraints (2026-07-16, per Elio)
+
+- **All compute on ripperred** (`ssh -p 62022 audiogen@81.105.49.222`): tests, inference, experiments. Never run compute locally (laptop OOMs) or on endeavour (corpus storage only, /media/sdr).
+- **Corpus-scale budget**: full-corpus OCR (1880–1959, ~175K pages) must fit ~1 week on 2×3090, 2 weeks max → **6.9–13.9 GPU-s/page steady-state**. Every experiment records GPU-s/page; over-budget configs are research artifacts, not production.
+- **One config → one run → one result**: every config, ensembles included, runs via a single `run_real_ocr.py <config> <date>` call. Ensembles = inline sub-configs + subprocess isolation per sub-pipeline (`ParallelEnsembleOcr`), never external orchestrator scripts.
+- **Autoresearch loop**: follow `.claude/skills/ocr-autoresearch/SKILL.md` → `eval/autoresearch/program.md` (budget, metrics, generalization protocol) + `registry.md` (approach families). Use `uv run python scripts/research.py run <config>` for the run→fetch→eval→audit cycle.
+- **Eval integrity**: never modify eval metrics or GT to improve scores; audit every result for matcher gaming (overgeneration, giant blobs, holdout regression, probe degradation).
+- **Simplicity mandate**: keep abstractions and interfaces minimal and low-cognitive-load; remove dead code aggressively; isolate complexity (e.g. model-specific quirks live in their own operator/env, never leak into shared paths).
+
 ## Package Management
 
 - **uv**: This project uses `uv` for Python package management

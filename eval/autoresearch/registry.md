@@ -4,8 +4,8 @@ Families grouped by underlying mechanism. Statuses: ACTIVE (worth iterating), BL
 
 ## F1 — Fast specialized OCR models as sources (0.9–3B, markdown-native)
 **Status: ACTIVE — top priority under the corpus-scale budget (small = fast).**
-- PaddleOCR-VL-1.6 (0.9B, vllm-supported, downloaded): UNTESTED → exp_147 next.
-- HunyuanOCR (1B, cached): retry with NATIVE markdown prompt + MergeMarkdownPages (previous attempts misused the V2 JSON prompt). Needs transformers ≥5.13 (main venv has 5.5.4) or own env. UNTESTED with correct usage.
+- PaddleOCR-VL-1.6 (0.9B, vllm-supported): col3 misuse FAILS (exp_147, 0.23); YOLO-region usage matches design (exp_148, 0.302 on 1885; text CER down to 0.07 on best articles, catches back-page ads Qwen misses; ~10 GPU-s/page at per-issue batching). ACTIVE: segmentation/recall is the bottleneck, not OCR quality. First-line-headline heuristic neutral (exp_149).
+- HunyuanOCR (1B, cached): **BLOCKED** — native markdown prompt on col3 crops yields hallucinated gibberish (exp_150, composite 0.15) and transformers-eager runs 35min/issue (~50x over budget). Unblock: vllm HunYuanVL support AND evidence it reads broadsheet type.
 - olmOCR-2-7B (cached): retry with native prompt + adapter. UNTESTED with correct usage.
 - GLM-OCR (0.9B, downloaded): **BLOCKED** — degenerate repetition loops on broadsheet column crops (exp_145, composite 0.15). Unblock: vllm no-repeat logit processor from the GLM-OCR recipe, or its MTP path, or evidence it works on sub-page crops of modern-density text.
 

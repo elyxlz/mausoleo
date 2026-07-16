@@ -200,10 +200,26 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
         import torch
         from transformers import AutoModel, AutoModelForCausalLM, AutoProcessor, BitsAndBytesConfig
 
+        candidates: list[tp.Any] = []
+        try:
+            from transformers import HunYuanVLForConditionalGeneration
+
+            candidates.append(HunYuanVLForConditionalGeneration)
+        except ImportError:
+            pass
+        try:
+            from transformers import AutoModelForImageTextToText
+
+            candidates.append(AutoModelForImageTextToText)
+        except ImportError:
+            pass
         try:
             from transformers import AutoModelForVision2Seq
+
+            candidates.append(AutoModelForVision2Seq)
         except ImportError:
-            AutoModelForVision2Seq = AutoModel
+            pass
+        candidates.extend([AutoModel, AutoModelForCausalLM])
 
         self.processor = AutoProcessor.from_pretrained(self.config.model, trust_remote_code=True)
 
@@ -217,12 +233,14 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
         else:
             load_kwargs["torch_dtype"] = torch.bfloat16
 
-        for auto_cls in [AutoModelForVision2Seq, AutoModel, AutoModelForCausalLM]:
+        for auto_cls in candidates:
             try:
-                self.hf_model = auto_cls.from_pretrained(self.config.model, **load_kwargs)
-                break
+                model = auto_cls.from_pretrained(self.config.model, **load_kwargs)
             except (ValueError, ImportError):
                 continue
+            if hasattr(model, "generate"):
+                self.hf_model = model
+                break
 
     def _init_internvl(self) -> None:
         import torch
