@@ -1,7 +1,20 @@
 # OCR Pipeline Auto-Research Program
 
 ## Objective
-Maximize average composite score on the two GT issues (1885-06-15, 1910-06-15) with changes that **generalize to any historical Italian newspaper issue (1880–1945)**. Hard production constraint: full pipeline for one issue ≤ **30 min wall-clock** on 2× RTX 3090.
+Maximize average composite score on the two GT issues (1885-06-15, 1910-06-15) with changes that **generalize to any historical Italian newspaper issue (1880–1959)** — subject to the corpus-scale Resource Budget below. The optimization target is **best composite achievable within the per-page GPU budget**, not composite alone.
+
+## Resource Budget (2026-07-16, per Elio — supersedes the old 30-min/issue constraint)
+Goal: OCR the ENTIRE corpus (1880 → 1959, ~175K pages ≈ 29K issues; ~1.07M pages exist in total through 1996) on ripperred in ~1 week, 2 weeks absolute max.
+
+| Target | GPU-s/page | GPU-s/issue (avg 6pp) | wall/issue on 2 GPUs |
+|---|---|---|---|
+| 1 week | **6.9** | ~42 | ~21 s |
+| 2 weeks (hard cap) | **13.9** | ~84 | ~42 s |
+
+- Budget accounting is **steady-state throughput** (continuous batching across issues, model loaded once), not cold-start single-issue latency. Measure with ≥2 issues back-to-back, exclude model load.
+- Every experiment/run MUST record measured GPU-s/page; a config that beats the score but exceeds ~14 GPU-s/page is a research artifact, not a production candidate.
+- Reference points: the 8-source ensemble_30min ≈ 600 GPU-s/page (~40–90× over budget — dead as production). One Qwen3-VL-8B col3 vllm pass ≈ roughly the 1-week budget (measure precisely). Sub-1B specialized models (PaddleOCR-VL-1.6, GLM-OCR) are the natural fit — quality permitting.
+- Old 30-min framing and its ensembles remain useful as **oracle/reference predictions** for GT work and quality upper bounds.
 
 Prior program versions with full session narratives live in `history/`. Every experiment ever run is in `log.jsonl`.
 

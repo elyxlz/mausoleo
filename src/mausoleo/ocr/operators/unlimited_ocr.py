@@ -5,6 +5,7 @@ import dataclasses as dc
 import json
 import pathlib as pl
 import re
+import subprocess
 import tempfile
 import typing as tp
 
@@ -28,21 +29,15 @@ class UnlimitedOcr(BaseOperatorConfig):
     max_length: int = 32768
     no_repeat_ngram_size: int = 35
     ngram_window: int = 1024
+    python_bin: str = "~/unlimited_env/bin/python"
+    runner_script: str = "scripts/run_unlimited_standalone.py"
+    timeout_s: int = 3600
 
 
 @register_operator(UnlimitedOcr, operation=OperatorType.MAP_BATCHES)
 class UnlimitedOcrOperator(StatefulOperator[UnlimitedOcr]):
     def __init__(self, config: UnlimitedOcr) -> None:
         self.config = config
-        if config.mock:
-            return
-        import torch
-        from transformers import AutoModel, AutoTokenizer
-
-        self.tokenizer = AutoTokenizer.from_pretrained(config.model, trust_remote_code=True)
-        self.hf_model = (
-            AutoModel.from_pretrained(config.model, trust_remote_code=True, torch_dtype=torch.bfloat16, use_safetensors=True).eval().cuda()
-        )
 
     def __call__(self, batch: dict[str, tp.Any]) -> dict[str, tp.Any]:
         if self.config.mock:
@@ -70,18 +65,31 @@ class UnlimitedOcrOperator(StatefulOperator[UnlimitedOcr]):
                 image_files.append(str(img_path))
             out_dir = tmp_dir / "out"
             out_dir.mkdir()
-            returned = self.hf_model.infer_multi(
-                self.tokenizer,
-                prompt=self.config.prompt,
-                image_files=image_files,
-                output_path=str(out_dir),
-                image_size=self.config.image_size,
-                max_length=self.config.max_length,
-                no_repeat_ngram_size=self.config.no_repeat_ngram_size,
-                ngram_window=self.config.ngram_window,
-                save_results=True,
-            )
-            output_text = returned if isinstance(returned, str) else _read_saved_output(out_dir)
+            cmd = [
+                str(pl.Path(self.config.python_bin).expanduser()),
+                self.config.runner_script,
+                "--model",
+                self.config.model,
+                "--prompt",
+                self.config.prompt,
+                "--output-dir",
+                str(out_dir),
+                "--image-size",
+                str(self.config.image_size),
+                "--max-length",
+                str(self.config.max_length),
+                "--no-repeat-ngram-size",
+                str(self.config.no_repeat_ngram_size),
+                "--ngram-window",
+                str(self.config.ngram_window),
+                *image_files,
+            ]
+            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=self.config.timeout_s)
+            if proc.returncode != 0:
+                raise RuntimeError(f"unlimited-ocr runner failed: {proc.stderr[-2000:]}")
+            runner_result = json.loads((out_dir / "runner_result.json").read_text())
+            returned_text = runner_result.get("returned_text")
+            output_text = returned_text if isinstance(returned_text, str) and returned_text.strip() else _read_saved_output(out_dir)
 
         page_texts = split_pages(output_text, len(raw_images))
         result = dict(batch)
