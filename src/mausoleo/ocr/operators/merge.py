@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import dataclasses as dc
 import json
+import re
 import typing as tp
 
 from mausoleo.ocr.operators.base import BaseOperatorConfig, OperatorType, register_operator
@@ -22,6 +23,14 @@ def _strip_markdown(text: str) -> str:
 class MergePages(BaseOperatorConfig):
     raw_first_line_headline: bool = False
     title_class_headlines: bool = False
+    squeeze_char_runs: bool = False
+
+
+_CHAR_RUN_RE = re.compile(r"(.)\1{5,}")
+
+
+def squeeze_char_runs(text: str) -> str:
+    return _CHAR_RUN_RE.sub(lambda m: m.group(1) * 5, text)
 
 
 def crop_page(layout_regions: list[tp.Any], crop_idx: int) -> int:
@@ -130,6 +139,9 @@ def merge_pages(row: dict[str, tp.Any], *, config: MergePages) -> dict[str, tp.A
             continue
         for art in articles:
             art["page_span"] = [real_page]
+            if config.squeeze_char_runs:
+                for para in art.get("paragraphs", []):
+                    para["text"] = squeeze_char_runs(str(para.get("text", "")))
             all_articles.append(art)
 
     return {**row, "result_json": json.dumps({"articles": all_articles})}
