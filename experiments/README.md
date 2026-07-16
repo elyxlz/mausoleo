@@ -36,7 +36,7 @@ Every experiment is one self-contained Python script. No framework, no config re
 
 - One variable per experiment relative to a named baseline.
 - Never read `eval/ground_truth/*/ground_truth.json` at inference; never re-emit another experiment's prediction file.
-- Evaluate with `scripts/research.py eval <exp_name>` (audit + holdout included); throughput with `scripts/bench_throughput.py` where applicable — production candidates must report steady-state GPU-s/page vs the 6.9–13.9 budget.
+- Evaluate with `scripts/research.py eval <exp_name>` (audit + holdout; also `holdout`/`probe`/`board` subcommands); throughput with `scripts/bench_throughput.py` where applicable — production candidates must report steady-state GPU-s/page vs the 6.9–13.9 budget.
 - Log every result to `eval/autoresearch/log.jsonl` with a mechanism line; update `registry.md`.
 
 ## Reusable pieces (optional)
@@ -45,4 +45,4 @@ Every experiment is one self-contained Python script. No framework, no config re
 
 ## Legacy harness
 
-`configs/ocr/` + `scripts/run_real_ocr.py` remain ONLY for the verified oracle ensembles (`ensemble_30min`, `ensemble_prune5`) and existing baselines (`exp_045`, `exp_152`, `exp_157`). New work goes here.
+`configs/ocr/` + `scripts/run_real_ocr.py` remain ONLY for the verified oracle ensembles (`ensemble_30min`, `ensemble_prune5`) and the production candidate (`exp_157`). New work goes here.

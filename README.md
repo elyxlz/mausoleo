@@ -8,13 +8,12 @@ High-quality OCR of the Il Messaggero historical newspaper corpus (1880–1959, 
 - `configs/ocr/` + `scripts/run_real_ocr.py` — legacy Ray harness, kept only for the verified oracle ensembles (`ensemble_30min` recall-oracle, `ensemble_prune5` v2 leader) and current baselines.
 - `src/mausoleo/ocr/` — pipeline operators used by the legacy harness; reusable pieces (merge, trim, prompts) importable from experiments.
 - `src/mausoleo/eval/` — metrics (`evaluate_issue`, composite_v2). **Never modified to improve a score.**
-- `eval/autoresearch/` — the research program: `program.md` (objective, budget, protocol), `registry.md` (approach families), `log.jsonl` (every experiment), `HANDOFF.md` (session state).
+- `eval/autoresearch/` — the research program: `program.md` (objective, budget, protocol), `registry.md` (approach families), `log.jsonl` (every experiment), `eval_review.md` (metric audit).
 - `eval/ground_truth/<date>/` — page images per issue; `ground_truth.json` where human-verified GT exists (1885-06-15, 1910-06-15).
 - `eval/tentative_gt/<date>/` — machine-reconstructed draft GT awaiting human review (`scripts/build_tentative_gt.py`).
 - `eval/predictions/` — one JSON per (config|experiment, date).
-- `scripts/` — harness utilities: `research.py` (eval/audit/board), `bench_throughput.py` (steady-state GPU-s/page), `eval_holdout.py`, `probe_metrics.py`.
+- `scripts/` — `research.py` (eval / board / holdout / probe), `bench_throughput.py` (steady-state GPU-s/page), `build_tentative_gt.py`, `run_real_ocr.py` + `run_sub_pipeline.py` (legacy oracle harness), `scrape_messaggero.py`.
 - `plan/` — roadmap including the later phases (hierarchical index, search & CLI, packaging).
-- `scrape_messaggero.py` — corpus scraper (Playwright).
 
 ## Rules
 

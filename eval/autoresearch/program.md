@@ -16,7 +16,7 @@ Goal: OCR the ENTIRE corpus (1880 → 1959, ~175K pages ≈ 29K issues; ~1.07M p
 - Reference points (MEASURED 2026-07-16): the 8-source ensemble_30min ≈ 600 GPU-s/page (~40–90× over budget — dead as production). One Qwen3-VL-8B col3 vllm pass = **74 GPU-s/page (1885) / 178 (1910), avg ~136** — 5–26× over budget, NOT near the 1-week line as previously assumed; decode volume (~13K chars/crop on dense 1910 pages at ~63 tok/s eager) is the binding cost. Sub-1B specialized models are the only budget-feasible family measured so far: PaddleOCR-VL-1.6 ≈ 10 GPU-s/page (exp_149).
 - Old 30-min framing and its ensembles remain useful as **oracle/reference predictions** for GT work and quality upper bounds.
 
-Prior program versions with full session narratives live in `history/`. Every experiment ever run is in `log.jsonl`.
+Every experiment ever run is in `log.jsonl` (prior program versions archived outside the repo: `~/mausoleo_archive/`).
 
 ## Eval Metrics
 `evaluate_issue()` in `src/mausoleo/eval/evaluate.py` (never modify to improve a score; metric changes only via a documented reward-hacking audit like eval_review.md):
@@ -46,8 +46,8 @@ The 8-source/30-min architecture is at its local optimum. Further gains need **n
 All tuning so far used the same two issues that produce the headline score; ±0.0001 "wins" at saturation are noise-fitting. Rules:
 
 1. **Effect-size floor.** Accept a change only if avg composite improves by ≥ 0.002 (ensemble/merge changes) or ≥ 0.005 (single-source/config changes), AND the delta is non-negative on both dates. Below-floor deltas are ties — prefer the simpler variant.
-2. **Holdout halves.** For merge/ensemble hyperparameter tuning: tune on even-indexed GT articles, verify on odd-indexed (script: `scripts/eval_holdout.py`). A change that wins on the tune half but regresses on the holdout half is overfit — reject.
-3. **Unsupervised probes.** Fixed probe set of unlabeled issues from a different era: **1943-07-03, 1943-07-15, 1943-07-25** (images in `eval/ground_truth/<date>/`, no GT). Before promoting any structural change to the production config, run it on ≥1 probe issue and check `scripts/probe_metrics.py` outputs (lexicon validity rate, repetition rate, article count/length distribution) don't degrade vs the baseline's probe numbers. Catches era-specific overfitting the 1885/1910 pair can't.
+2. **Holdout halves.** For merge/ensemble hyperparameter tuning: tune on even-indexed GT articles, verify on odd-indexed (`scripts/research.py holdout`). A change that wins on the tune half but regresses on the holdout half is overfit — reject.
+3. **Unsupervised probes.** Fixed probe set of unlabeled issues from a different era: **1943-07-03, 1943-07-15, 1943-07-25** (images in `eval/ground_truth/<date>/`, no GT). Before promoting any structural change to the production config, run it on ≥1 probe issue and check `scripts/research.py probe` outputs (lexicon validity rate, repetition rate, article count/length distribution) don't degrade vs the baseline's probe numbers. Catches era-specific overfitting the 1885/1910 pair can't.
 4. **Mechanism rule.** Every accepted change gets a one-line generalization argument in `log.jsonl` ("why this helps any issue, not just these two"). No per-date hyperparameters, ever.
 5. **Known noise floors.** Single Qwen3-VL transformers runs: ±0.15 composite run-to-run. vllm single-source runs: ~±0.01. Full 8-source ensemble: ~±0.002. Only trust deltas well above the relevant floor; when in doubt re-run once.
 

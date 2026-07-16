@@ -1,6 +1,6 @@
 # Mausoleo di Roma — Project Roadmap
 
-Updated 2026-07-16 to reflect the OCR-autoresearch refocus. Phase 3+ code was removed from the repo (recoverable from git history) — those phases will be rebuilt on top of the finished OCR corpus. This file is the strategic map; live OCR research state is in `eval/autoresearch/` (program.md, registry.md, log.jsonl, HANDOFF.md).
+Updated 2026-07-16 to reflect the OCR-autoresearch refocus. Phase 3+ code was removed from the repo (recoverable from git history) — those phases will be rebuilt on top of the finished OCR corpus. This file is the strategic map; live OCR research state is in `eval/autoresearch/` (program.md, registry.md, log.jsonl).
 
 ## Overview
 

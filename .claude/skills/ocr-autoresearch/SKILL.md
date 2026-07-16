@@ -19,8 +19,8 @@ Read `eval/autoresearch/program.md` and follow it. Use `/loop` (ScheduleWakeup) 
 
 5. **Adversarial audit before accepting ANY change** (all must pass):
    - both eval dates same-sign delta, above the noise floor for the change class
-   - tune/holdout halves: no holdout regression (`scripts/eval_holdout.py`)
-   - probe issues: no degradation in lexicon validity / repetition / length distribution (`scripts/probe_metrics.py`)
+   - tune/holdout halves: no holdout regression (`scripts/research.py holdout`)
+   - probe issues: no degradation in lexicon validity / repetition / length distribution (`scripts/research.py probe`)
    - matcher-gaming check: no giant blob articles inflating text_overlap; article length distribution sane
    - silent-truncation check: outputs not bumping against max_tokens/max_model_len
    - per-issue time budget respected (program.md Resource Budget section)
