@@ -41,10 +41,12 @@ def merge_pages(row: dict[str, tp.Any], *, config: MergePages) -> dict[str, tp.A
         if crop_idx < len(layout_regions):
             real_page = layout_regions[crop_idx].get("page", crop_idx + 1)
 
+        page_data: tp.Any
         try:
             page_data = json.loads(_strip_markdown(page_text))
         except json.JSONDecodeError:
-            page_data = {"articles": [{"unit_type": "article", "headline": None, "paragraphs": [{"text": page_text}]}]}
+            fallback_article: dict[str, tp.Any] = {"unit_type": "article", "headline": None, "paragraphs": [{"text": page_text}]}
+            page_data = {"articles": [fallback_article]}
 
         articles: list[dict[str, tp.Any]] = []
         if isinstance(page_data, dict):

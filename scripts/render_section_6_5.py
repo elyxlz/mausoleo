@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import pathlib
+import typing as tp
 
 REPO = pathlib.Path("/tmp/mausoleo")
 AGG = REPO / "eval/case_studies/aggregate.json"
@@ -16,7 +17,7 @@ RUNS = REPO / "eval/case_studies/runs"
 OUT = REPO / "references/section_6_5_results.md"
 
 
-def fmt(v, n=2):
+def fmt(v: tp.Any, n: int = 2) -> str:
     if v is None:
         return "n/a"
     if isinstance(v, float):
@@ -24,13 +25,13 @@ def fmt(v, n=2):
     return str(v)
 
 
-def summary(d, n=2):
+def summary(d: dict[str, tp.Any] | None, n: int = 2) -> str:
     if not d or d.get("n", 0) == 0:
         return "n/a"
     return f"{fmt(d['mean'], n)} (min {fmt(d['min'], n)}, max {fmt(d['max'], n)})"
 
 
-def quality_combined(j1, j2):
+def quality_combined(j1: dict[str, tp.Any] | None, j2: dict[str, tp.Any] | None) -> dict[str, tp.Any]:
     if not j1 or not j2 or j1.get("n", 0) == 0 or j2.get("n", 0) == 0:
         return {"mean": 0.0, "min": 0.0, "max": 0.0, "n": 0}
     return {

@@ -357,7 +357,7 @@ def build_nodes(cfg: LoaderConfig | None = None) -> list[Node]:
         out.append(
             Node(
                 node_id=nid,
-                level=tp.cast(tp.Any, level),
+                level=level,
                 parent_id=payload.get("parent_id") or parent_for(nid, level),
                 position=int(payload.get("position", 0)),
                 date_start=ds,

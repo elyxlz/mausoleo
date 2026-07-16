@@ -49,20 +49,19 @@ def _parse_chandra_layout(raw_text: str) -> list[dict[str, tp.Any]]:
 
 
 def _parse_bbox(bbox_val: tp.Any) -> tuple[int, int, int, int] | None:
+    values: tp.Sequence[tp.Any]
     if isinstance(bbox_val, str):
-        parts = bbox_val.split()
-        if len(parts) != 4:
-            return None
-        try:
-            return tuple(int(p) for p in parts)  # type: ignore[return-value]
-        except ValueError:
-            return None
-    if isinstance(bbox_val, (list, tuple)) and len(bbox_val) == 4:
-        try:
-            return tuple(int(v) for v in bbox_val)  # type: ignore[return-value]
-        except (ValueError, TypeError):
-            return None
-    return None
+        values = bbox_val.split()
+    elif isinstance(bbox_val, (list, tuple)):
+        values = bbox_val
+    else:
+        return None
+    if len(values) != 4:
+        return None
+    try:
+        return int(values[0]), int(values[1]), int(values[2]), int(values[3])
+    except (ValueError, TypeError):
+        return None
 
 
 def _merge_column_boxes(

@@ -221,7 +221,7 @@ def select_best_text(
 
         best_text = art_text
         best_quality = art_quality
-        best_paragraphs: list[dict[str, str]] | None = None
+        best_paragraphs: list[tp.Any] | None = None
         best_headline: str | None = art_headline or None
         best_hl_quality = art_hl_quality
 

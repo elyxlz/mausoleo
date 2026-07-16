@@ -75,12 +75,17 @@ target-version = "py311"
 ignore = ["E402", "E702", "E731", "UP008", "E712"]
 extend-select = ["UP"]
 
+[tool.ty.rules]
+unresolved-import = "ignore"
+
 [tool.pyright]
 pythonVersion = "3.11"
 typeCheckingMode = "strict"
 venvPath = "."
 venv = ".venv"
+exclude = ["**/__pycache__", ".venv", "scripts/_archive", "configs/ocr/_archive", "eval/critics", "references", "user_data"]
 reportMissingImports = "warning"
+reportMissingTypeStubs = false
 reportUnknownMemberType = "warning"
 reportUnknownVariableType = "warning"
 reportUnknownParameterType = "warning"

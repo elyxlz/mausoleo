@@ -143,7 +143,7 @@ def build_case2() -> dict[str, tp.Any]:
     ).result_rows
     gt: list[dict[str, str]] = []
     seen: set[str] = set()
-    for aid, hl, txt, date in rows:
+    for aid, hl, _txt, date in rows:
         # Headline-first matching keeps GT focussed on pivot articles, not
         # every random Sicily bulletin from 24/25 July that mentions
         # "Mussolini" once in passing.
@@ -265,7 +265,7 @@ def build_case3() -> dict[str, tp.Any]:
 
 
 def main() -> None:
-    out = {
+    out: dict[str, tp.Any] = {
         "case1": build_case1(),
         "case2": build_case2(),
         "case3": build_case3(),

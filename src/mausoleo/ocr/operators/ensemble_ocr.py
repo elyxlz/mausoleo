@@ -28,7 +28,7 @@ class EnsembleOcr(BaseOperatorConfig):
 
 
 @register_operator(EnsembleOcr, operation=OperatorType.MAP)
-def _ensemble_ocr(row: dict[str, tp.Any], *, config: EnsembleOcr) -> dict[str, tp.Any]:
+def ensemble_ocr(row: dict[str, tp.Any], *, config: EnsembleOcr) -> dict[str, tp.Any]:
     import pathlib as pl
 
     from mausoleo.ocr.merge import (

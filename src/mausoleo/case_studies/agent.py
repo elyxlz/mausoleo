@@ -34,7 +34,7 @@ PRICING = {
 CC_SYSTEM = "You are Claude Code, Anthropic's official CLI for Claude."
 
 
-def _load_token() -> str:
+def load_token() -> str:
     p = os.path.expanduser("~/.claude/.credentials.json")
     with open(p) as f:
         creds = json.load(f)
@@ -130,7 +130,7 @@ def run_trial(
     explore different paths under temperature > 0.
     """
     client = anthropic.Anthropic(
-        auth_token=_load_token(),
+        auth_token=load_token(),
         default_headers={"anthropic-beta": OAUTH_BETA},
     )
     if system == "mausoleo":

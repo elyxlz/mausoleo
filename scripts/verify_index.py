@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import pathlib
 import sys
+import typing as tp
 
 OUT = pathlib.Path("/tmp/mausoleo/eval/summaries")
 LEVELS = ("paragraph", "article", "day", "week", "month")
@@ -13,7 +14,7 @@ EMBED_DIM = 384  # paraphrase-multilingual-MiniLM-L12-v2; was 1024 for BGE-M3
 
 
 def main() -> int:
-    nodes: dict[str, dict] = {}
+    nodes: dict[str, dict[str, tp.Any]] = {}
     counts: dict[str, int] = {}
     errors: list[str] = []
 

@@ -28,14 +28,14 @@ import clickhouse_connect
 # Connection
 # ---------------------------------------------------------------------------
 
-_CLIENT: tp.Any = None
+_client_cache: tp.Any = None
 
 
 def get_client() -> tp.Any:
-    global _CLIENT
-    if _CLIENT is None:
-        _CLIENT = clickhouse_connect.get_client(host="127.0.0.1", port=8123, database="default")
-    return _CLIENT
+    global _client_cache
+    if _client_cache is None:
+        _client_cache = clickhouse_connect.get_client(host="127.0.0.1", port=8123, database="default")
+    return _client_cache
 
 
 # ---------------------------------------------------------------------------
@@ -247,27 +247,27 @@ def mausoleo_search_text(
 # return real L2-nearest matches against stored vectors instead of
 # silently falling back to text search.
 
-_EMBED_MODEL: tp.Any = None
-_EMBED_LOAD_ERROR: str | None = None
+_embed_model_cache: tp.Any = None
+_embed_load_error: str | None = None
 
 
 def _load_embedder() -> tp.Any | None:
-    global _EMBED_MODEL, _EMBED_LOAD_ERROR
-    if _EMBED_MODEL is not None:
-        return _EMBED_MODEL
-    if _EMBED_LOAD_ERROR is not None:
+    global _embed_model_cache, _embed_load_error
+    if _embed_model_cache is not None:
+        return _embed_model_cache
+    if _embed_load_error is not None:
         return None
     try:
         from sentence_transformers import SentenceTransformer
     except Exception as e:
-        _EMBED_LOAD_ERROR = f"import failed: {e}"
+        _embed_load_error = f"import failed: {e}"
         return None
     try:
-        _EMBED_MODEL = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2", device="cpu")
-        _EMBED_MODEL.max_seq_length = 384
-        return _EMBED_MODEL
+        _embed_model_cache = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2", device="cpu")
+        _embed_model_cache.max_seq_length = 384
+        return _embed_model_cache
     except Exception as e:
-        _EMBED_LOAD_ERROR = f"load failed: {e}"
+        _embed_load_error = f"load failed: {e}"
         return None
 
 
@@ -279,7 +279,7 @@ def ensure_embedder() -> dict[str, tp.Any]:
     """
     m = _load_embedder()
     if m is None:
-        return {"loaded": False, "error": _EMBED_LOAD_ERROR}
+        return {"loaded": False, "error": _embed_load_error}
     # Smoke test against a known node.
     cli = get_client()
     try:
@@ -432,13 +432,13 @@ def _bm25_search_python(query: str, date_from: str | None, date_to: str | None, 
     return {"query": query, "count": len(out), "results": out}
 
 
-_DOCS_CACHE: dict[str, tp.Any] | None = None
+_docs_cache: dict[str, tp.Any] | None = None
 
 
 def _bm25_corpus() -> dict[str, tp.Any]:
-    global _DOCS_CACHE
-    if _DOCS_CACHE is not None:
-        return _DOCS_CACHE
+    global _docs_cache
+    if _docs_cache is not None:
+        return _docs_cache
     cli = get_client()
     rows = list(
         cli.query(
@@ -468,13 +468,13 @@ def _bm25_corpus() -> dict[str, tp.Any]:
                 "dl": len(toks),
             }
         )
-    _DOCS_CACHE = {
+    _docs_cache = {
         "rows": docs,
         "df": df,
         "N": len(docs),
         "avgdl": (total_dl / max(len(docs), 1)),
     }
-    return _DOCS_CACHE
+    return _docs_cache
 
 
 def baseline_search(query: str, date_from: str | None = None, date_to: str | None = None, limit: int = 15) -> dict[str, tp.Any]:

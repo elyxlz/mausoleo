@@ -1,9 +1,8 @@
 from __future__ import annotations
 
-import pathlib as pl
+import dataclasses as dc
 
-
-from mausoleo.eval.evaluate import evaluate_issue, load_images
+from mausoleo.eval.evaluate import evaluate_issue
 from mausoleo.eval.metrics import compute_cer, compute_kendalls_tau, compute_wer
 from mausoleo.ocr.models import Article, Issue, Paragraph
 
@@ -66,17 +65,8 @@ def test_evaluate_issue() -> None:
         ],
     )
 
-    result = evaluate_issue(predicted, expected)
-    assert result.cer == 0.0
-    assert result.wer == 0.0
-    assert result.predicted_articles == 1
-    assert result.expected_articles == 1
-
-
-def test_load_images(tmp_path: pl.Path) -> None:
-    for i in range(3):
-        (tmp_path / f"{i + 1}.jpeg").write_bytes(b"\xff\xd8" + b"\x00" * 50)
-
-    images = load_images(tmp_path)
-    assert len(images) == 3
-    assert all(isinstance(img, bytes) for img in images)
+    result = evaluate_issue(dc.asdict(expected), dc.asdict(predicted))
+    assert result.mean_cer == 0.0
+    assert result.mean_wer == 0.0
+    assert result.total_pred_articles == 1
+    assert result.total_gt_articles == 1

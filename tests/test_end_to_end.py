@@ -15,11 +15,15 @@ from __future__ import annotations
 import datetime as dt
 import os
 import pathlib as pl
+import typing as tp
 
 import pytest
 
 clickhouse_connect = pytest.importorskip("clickhouse_connect")
 fastapi_testclient = pytest.importorskip("fastapi.testclient")
+
+if tp.TYPE_CHECKING:
+    from fastapi.testclient import TestClient
 
 
 def _ch_available() -> bool:
@@ -58,7 +62,7 @@ def loaded_db() -> str:
 
 
 @pytest.fixture
-def client(loaded_db: str) -> fastapi_testclient.TestClient:
+def client(loaded_db: str) -> TestClient:
     os.environ["MAUSOLEO_EMBED_BACKEND"] = "zero"
     from mausoleo.server.app import create_app
 
@@ -66,13 +70,13 @@ def client(loaded_db: str) -> fastapi_testclient.TestClient:
     return fastapi_testclient.TestClient(app)
 
 
-def test_health(client: fastapi_testclient.TestClient) -> None:
+def test_health(client: TestClient) -> None:
     r = client.get("/health")
     assert r.status_code == 200
     assert r.json()["status"] == "ok"
 
 
-def test_root(client: fastapi_testclient.TestClient) -> None:
+def test_root(client: TestClient) -> None:
     r = client.get("/root")
     assert r.status_code == 200
     body = r.json()
@@ -80,7 +84,7 @@ def test_root(client: fastapi_testclient.TestClient) -> None:
     assert body["level"] == "archive"
 
 
-def test_stats(client: fastapi_testclient.TestClient) -> None:
+def test_stats(client: TestClient) -> None:
     r = client.get("/stats")
     assert r.status_code == 200
     body = r.json()
@@ -90,7 +94,7 @@ def test_stats(client: fastapi_testclient.TestClient) -> None:
     assert levels.get("paragraph", 0) > 0
 
 
-def test_drill_down(client: fastapi_testclient.TestClient) -> None:
+def test_drill_down(client: TestClient) -> None:
     """root → month → day → article → paragraph chain."""
     r = client.get("/root")
     assert r.status_code == 200
@@ -118,13 +122,13 @@ def test_drill_down(client: fastapi_testclient.TestClient) -> None:
     assert body["paragraph_count"] >= 1
 
 
-def test_parent(client: fastapi_testclient.TestClient) -> None:
+def test_parent(client: TestClient) -> None:
     r = client.get("/nodes/1943-07-01/parent")
     assert r.status_code == 200
     assert r.json()["node_id"] == "1943-07"
 
 
-def test_text_search(client: fastapi_testclient.TestClient) -> None:
+def test_text_search(client: TestClient) -> None:
     r = client.post(
         "/search/text",
         json={"query": "Mussolini", "limit": 5},
@@ -135,7 +139,7 @@ def test_text_search(client: fastapi_testclient.TestClient) -> None:
     assert len(body["results"]) > 0
 
 
-def test_semantic_search(client: fastapi_testclient.TestClient) -> None:
+def test_semantic_search(client: TestClient) -> None:
     r = client.post(
         "/search/semantic",
         json={"query": "guerra", "limit": 5},
@@ -148,7 +152,7 @@ def test_semantic_search(client: fastapi_testclient.TestClient) -> None:
     assert len(body["results"]) > 0
 
 
-def test_hybrid_search(client: fastapi_testclient.TestClient) -> None:
+def test_hybrid_search(client: TestClient) -> None:
     r = client.post(
         "/search/hybrid",
         json={"query": "Roma", "limit": 5},
@@ -159,7 +163,7 @@ def test_hybrid_search(client: fastapi_testclient.TestClient) -> None:
     assert len(body["results"]) > 0
 
 
-def test_recursive_text_for_day(client: fastapi_testclient.TestClient) -> None:
+def test_recursive_text_for_day(client: TestClient) -> None:
     """Day-level text should reconstruct from descendant paragraphs."""
     r = client.get("/nodes/1943-07-01/text")
     assert r.status_code == 200

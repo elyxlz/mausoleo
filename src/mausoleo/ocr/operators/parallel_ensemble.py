@@ -29,18 +29,6 @@ def _repo_root() -> pl.Path:
     return pl.Path(__file__).resolve().parent.parent.parent.parent.parent
 
 
-def _run_chain(configs: list[str], date: str, gpu_index: int, log_path: pl.Path) -> int:
-    if not configs:
-        return 0
-    env = os.environ.copy()
-    env["CUDA_VISIBLE_DEVICES"] = str(gpu_index)
-    env["RAY_ADDRESS"] = ""
-    root = _repo_root()
-    cmd = [sys.executable, str(root / "scripts" / "run_real_ocr.py"), *configs, date]
-    with open(log_path, "w") as f:
-        return subprocess.Popen(cmd, env=env, stdout=f, stderr=subprocess.STDOUT, cwd=str(root)).wait()
-
-
 def _launch_parallel(configs0: list[str], configs1: list[str], date: str, log_dir: pl.Path) -> tuple[int, int]:
     if not configs0 and not configs1:
         return 0, 0
@@ -67,7 +55,7 @@ def _launch_parallel(configs0: list[str], configs1: list[str], date: str, log_di
 
 
 @register_operator(ParallelEnsembleOcr, operation=OperatorType.MAP)
-def _parallel_ensemble_ocr(row: dict[str, tp.Any], *, config: ParallelEnsembleOcr) -> dict[str, tp.Any]:
+def parallel_ensemble_ocr(row: dict[str, tp.Any], *, config: ParallelEnsembleOcr) -> dict[str, tp.Any]:
     from mausoleo.ocr.merge import (
         merge_with_replacement,
         replace_with_pairs,

@@ -11,6 +11,10 @@ from mausoleo.ocr.operators.base import BaseOperatorConfig, OperatorType, Statef
 ModelType = tp.Literal["default", "florence", "got_ocr", "minicpm", "phi3", "internvl", "hunyuan", "gemma", "chandra"]
 
 
+def _convert_to_rgb(img: tp.Any) -> tp.Any:
+    return img.convert("RGB") if img.mode != "RGB" else img
+
+
 def _detect_model_type(model_name: str) -> ModelType:
     lower = model_name.lower()
     if "florence" in lower:
@@ -71,7 +75,7 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
 
             _orig_normalize = image_transforms.normalize
 
-            def _patched_normalize(image, mean, std, *args, **kwargs):
+            def _patched_normalize(image: tp.Any, mean: tp.Any, std: tp.Any, *args: tp.Any, **kwargs: tp.Any) -> tp.Any:
                 import numpy as np
 
                 m = np.asarray(mean)
@@ -382,7 +386,7 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
 
             self._internvl_transform = T.Compose(
                 [
-                    T.Lambda(lambda img: img.convert("RGB") if img.mode != "RGB" else img),
+                    T.Lambda(_convert_to_rgb),
                     T.Resize((448, 448), interpolation=InterpolationMode.BICUBIC),
                     T.ToTensor(),
                     T.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),

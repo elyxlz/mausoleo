@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+import contextlib
 import logging
 import os
+import typing as tp
 
 import fastapi as fa
 
@@ -15,14 +17,10 @@ log = logging.getLogger(__name__)
 
 
 def create_app(db_cfg: DbConfig | None = None) -> fa.FastAPI:
-    app = fa.FastAPI(title="Mausoleo Search API", version="0.1.0")
     db = Db(db_cfg or DbConfig.from_env())
-    app.state.db = db
 
-    @app.on_event("startup")
-    async def _on_startup() -> None:
-        # Best-effort schema install on startup. The loader's ``setup_schema``
-        # is idempotent so repeated boots are safe.
+    @contextlib.asynccontextmanager
+    async def _lifespan(_: fa.FastAPI) -> tp.AsyncIterator[None]:
         if os.environ.get("MAUSOLEO_AUTO_SCHEMA", "1") == "1":
             try:
                 index_loader.setup_schema(
@@ -32,6 +30,9 @@ def create_app(db_cfg: DbConfig | None = None) -> fa.FastAPI:
                 )
             except Exception as exc:  # pragma: no cover
                 log.warning("schema setup failed on startup: %s", exc)
+        yield
 
+    app = fa.FastAPI(title="Mausoleo Search API", version="0.1.0", lifespan=_lifespan)
+    app.state.db = db
     app.include_router(router)
     return app

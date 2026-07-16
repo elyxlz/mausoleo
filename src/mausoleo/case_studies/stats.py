@@ -6,9 +6,9 @@ import math
 import typing as tp
 
 try:
-    from scipy.stats import binomtest  # type: ignore
+    from scipy.stats import binomtest
 except Exception:
-    binomtest = None  # type: ignore
+    binomtest = None
 
 
 def sign_test(pairs: list[tuple[float, float]]) -> dict[str, tp.Any]:

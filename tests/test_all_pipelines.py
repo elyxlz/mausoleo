@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import dataclasses as dc
+import json
 import pathlib as pl
 
 import pytest
 
-from mausoleo.eval.evaluate import evaluate_issue, load_ground_truth
+from mausoleo.eval.evaluate import evaluate_issue
 from mausoleo.ocr.config import OcrPipelineConfig
 from mausoleo.ocr.models import Issue
 from mausoleo.ocr.operators import LlmCleanup, MergePages, ParseIssue, Preprocess, SuryaOcr, VlmOcr, WholeIssueVlm, YoloLayout
@@ -95,9 +97,9 @@ def test_pipeline_eval_against_ground_truth(config: OcrPipelineConfig) -> None:
 
         images = [FAKE_JPEG] * page_count
         predicted = run_pipeline(config, images, date=date)
-        expected = load_ground_truth(gt_path)
+        expected = json.loads(gt_path.read_text())
 
-        result = evaluate_issue(predicted, expected)
-        assert result.issue_id == date
-        assert result.predicted_articles > 0
-        assert result.expected_articles > 0
+        result = evaluate_issue(expected, dc.asdict(predicted), date=date)
+        assert result.date == date
+        assert result.total_pred_articles > 0
+        assert result.total_gt_articles > 0

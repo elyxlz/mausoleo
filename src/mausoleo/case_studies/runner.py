@@ -162,7 +162,7 @@ def case3_ratio_score(answer: str, oracle: dict[str, dict[str, tp.Any]]) -> dict
 
 
 def _now() -> str:
-    return dt.datetime.utcnow().isoformat() + "Z"
+    return dt.datetime.now(dt.UTC).replace(tzinfo=None).isoformat() + "Z"
 
 
 def _save_trial(case_id: str, system: str, trial: int, payload: dict[str, tp.Any]) -> pathlib.Path:

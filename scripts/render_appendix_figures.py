@@ -212,7 +212,7 @@ def fig3_quality_rubric() -> pathlib.Path:
     fig, axes = plt.subplots(1, 3, figsize=(6.4, 3.4), sharey=True)
     palette = {"Mausoleo": MAUSOLEO_C, "Baseline": BASELINE_C}
     for ax, cid in zip(axes, cases):
-        sub = df[df["case"] == cid]
+        sub: pd.DataFrame = df.loc[df["case"] == cid]
         sns.barplot(
             data=sub,
             x="dim",

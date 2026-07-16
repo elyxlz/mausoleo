@@ -80,8 +80,9 @@ class YoloCropOperator(StatefulOperator[YoloCrop]):
         import os
         import torch
 
-        torch_lib = os.path.join(os.path.dirname(torch.__file__), "lib")
-        cudnn_lib = os.path.join(os.path.dirname(torch.__file__), "..", "nvidia", "cudnn", "lib")
+        torch_file = torch.__file__ or ""
+        torch_lib = os.path.join(os.path.dirname(torch_file), "lib")
+        cudnn_lib = os.path.join(os.path.dirname(torch_file), "..", "nvidia", "cudnn", "lib")
         existing_ld = os.environ.get("LD_LIBRARY_PATH", "")
         os.environ["LD_LIBRARY_PATH"] = f"{torch_lib}:{cudnn_lib}:{existing_ld}"
 

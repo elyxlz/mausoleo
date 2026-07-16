@@ -18,7 +18,7 @@ MOCK_CONFIG = OcrPipelineConfig(
 
 @pytest.fixture
 def client() -> TestClient:
-    app = create_app(config=MOCK_CONFIG)
+    app = create_app()
     return TestClient(app)
 
 
@@ -40,7 +40,7 @@ def test_ocr_endpoint(client: TestClient) -> None:
 
 
 def test_ocr_no_config() -> None:
-    app = create_app(config=None)
+    app = create_app(db_cfg=None)
     client = TestClient(app)
     files = [("files", ("1.jpeg", FAKE_JPEG, "image/jpeg"))]
     response = client.post("/ocr", files=files, data={"date": "1885-06-15"})

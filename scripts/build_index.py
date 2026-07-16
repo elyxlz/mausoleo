@@ -26,6 +26,7 @@ import os
 import pathlib
 import sys
 import time
+import typing as tp
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -442,11 +443,12 @@ async def run(args: argparse.Namespace) -> None:
 
             device = "cuda" if torch.cuda.is_available() else "cpu"
             print(f"[embed] loading {EMBED_MODEL_NAME} on {device}...", flush=True)
-            embed_model = SentenceTransformer(EMBED_MODEL_NAME, device=device)
+            model = SentenceTransformer(EMBED_MODEL_NAME, device=device)
             # Cap sequence length: summaries are 200-400 words; BGE-M3 default
             # is 8192 which is intractable on CPU. 384 tokens captures the
             # leading content of every summary at ~2.5 nodes/sec on this i7.
-            embed_model.max_seq_length = 384
+            model.max_seq_length = 384
+            embed_model = model
         return embed_model
 
     # ---- 1. Load all transcriptions ----
@@ -533,7 +535,7 @@ async def run(args: argparse.Namespace) -> None:
     day_tasks = [do_day(did) for did in day_data]
     day_results = await asyncio.gather(*day_tasks, return_exceptions=True)
     for did, r in zip(day_data, day_results, strict=True):
-        if isinstance(r, Exception):
+        if isinstance(r, BaseException):
             print(f"  ! day {did} failed: {r}", file=sys.stderr)
         else:
             day_nodes[did] = r
@@ -606,7 +608,7 @@ async def run(args: argparse.Namespace) -> None:
     print(json.dumps(report, indent=2))
 
 
-async def embed_all(get_embed_model) -> None:
+async def embed_all(get_embed_model: tp.Callable[[], SentenceTransformer]) -> None:
     """Embed every node's summary. Process in small chunks so we have progress
     visibility and can resume if interrupted."""
     print("[embed] computing embeddings for all nodes ...", flush=True)
@@ -652,8 +654,8 @@ async def embed_all(get_embed_model) -> None:
 
 def write_manifest() -> None:
     print("[manifest] writing manifest.json ...", flush=True)
-    manifest = {
-        "generated_at": dt.datetime.utcnow().isoformat() + "Z",
+    manifest: dict[str, Any] = {
+        "generated_at": dt.datetime.now(dt.UTC).replace(tzinfo=None).isoformat() + "Z",
         "source": "il_messaggero",
         "date_range": ["1943-07-01", "1943-07-31"],
         "levels": {},

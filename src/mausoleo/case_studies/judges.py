@@ -23,7 +23,7 @@ from mausoleo.case_studies.agent import (
     CC_SYSTEM,
     OAUTH_BETA,
     PRICING,
-    _load_token,
+    load_token,
 )
 
 JUDGE1_MODEL_PREF = "claude-opus-4-5"  # actual id resolved at runtime
@@ -104,7 +104,7 @@ def _parse_score(text: str) -> dict[str, tp.Any]:
 
 def _judge_call(model: str, system_prompt: str, user_prompt: str) -> tuple[str, tp.Any]:
     client = anthropic.Anthropic(
-        auth_token=_load_token(),
+        auth_token=load_token(),
         default_headers={"anthropic-beta": OAUTH_BETA},
     )
     # Same OAuth trick: API system field stays as Claude Code identity, real
@@ -127,7 +127,7 @@ def _resolve_judge1_model() -> str:
     # called out in §6.5 as a methodology adjustment).
     try:
         client = anthropic.Anthropic(
-            auth_token=_load_token(),
+            auth_token=load_token(),
             default_headers={"anthropic-beta": OAUTH_BETA},
         )
         # Just attempt a tiny ping with the preferred id.
@@ -142,14 +142,14 @@ def _resolve_judge1_model() -> str:
         return JUDGE1_MODEL_FALLBACK
 
 
-_JUDGE1_RESOLVED: str | None = None
+_judge1_resolved: str | None = None
 
 
 def judge_one(question: str, answer: str, system: str) -> JudgeResult:
-    global _JUDGE1_RESOLVED
-    if _JUDGE1_RESOLVED is None:
-        _JUDGE1_RESOLVED = _resolve_judge1_model()
-    model = _JUDGE1_RESOLVED
+    global _judge1_resolved
+    if _judge1_resolved is None:
+        _judge1_resolved = _resolve_judge1_model()
+    model = _judge1_resolved
     user_prompt = JUDGE_PROMPT_TEMPLATE.format(question=question, answer=answer or "(empty)", system=system)
     try:
         text, usage = _judge_call(model, JUDGE1_SYSTEM, user_prompt)

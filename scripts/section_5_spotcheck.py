@@ -24,6 +24,7 @@ import random
 import re
 import time
 import unicodedata
+import typing as tp
 
 import anthropic
 
@@ -113,7 +114,7 @@ def _call(
 _JSON_ARRAY_RE = re.compile(r"\[.*\]", re.DOTALL)
 
 
-def _parse_json_array(text: str) -> list:
+def _parse_json_array(text: str) -> list[tp.Any]:
     m = _JSON_ARRAY_RE.search(text)
     if not m:
         return []
@@ -181,7 +182,7 @@ def _verdict(hits: int, total: int) -> str:
     return "FAIL"
 
 
-def task_1_spotcheck(client: anthropic.Anthropic) -> dict:
+def task_1_spotcheck(client: anthropic.Anthropic) -> dict[str, tp.Any]:
     rng = random.Random(1943)
     candidates = [d for d in range(1, 32) if d != 26]
     picks = sorted(rng.sample(candidates, 10))
@@ -243,11 +244,7 @@ def _article_text(date: str, art_id: str) -> str:
     return ""
 
 
-def _entity_set(items: list[dict]) -> set:
-    return {_normalise(e["entity"]) for e in items if e.get("entity")}
-
-
-def task_2_infoloss(client: anthropic.Anthropic) -> dict:
+def task_2_infoloss(client: anthropic.Anthropic) -> dict[str, tp.Any]:
     rng = random.Random(1944)
     spot = sorted(random.Random(1943).sample([d for d in range(1, 32) if d != 26], 10))
     candidates = [d for d in range(1, 32) if d != 26 and d not in spot]
@@ -264,7 +261,7 @@ def task_2_infoloss(client: anthropic.Anthropic) -> dict:
     top3 = sized[:3]
 
     article_payload = []
-    article_ent_union: list[dict] = []
+    article_ent_union: list[dict[str, tp.Any]] = []
     for sz, f, doc in top3:
         art_id = doc["node_id"]
         text = _article_text(date, art_id)
@@ -324,7 +321,7 @@ def task_2_infoloss(client: anthropic.Anthropic) -> dict:
     surv_month = art_set & month_set
 
     # Type breakdown for which types compress out.
-    by_type: dict[str, dict] = {}
+    by_type: dict[str, dict[str, int]] = {}
     art_typed = {(_normalise(e["entity"]), e.get("type", "")) for e in article_ent_union if e.get("entity")}
     for ent_norm, typ in art_typed:
         rec = by_type.setdefault(typ or "UNK", {"article": 0, "day": 0, "week": 0, "month": 0})
@@ -370,7 +367,7 @@ def task_2_infoloss(client: anthropic.Anthropic) -> dict:
     }
 
 
-def task_3_july25() -> dict:
+def task_3_july25() -> dict[str, tp.Any]:
     day = json.load(open(DAY / "1943-07-25.json"))
     week = json.load(open(WEEK / f"{day['parent_id']}.json"))
     month = json.load(open(MONTH))

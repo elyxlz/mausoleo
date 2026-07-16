@@ -65,11 +65,11 @@ class Embedder:
 
 
 # Singleton — created lazily by FastAPI startup or first call.
-_DEFAULT: Embedder | None = None
+_default_embedder: Embedder | None = None
 
 
 def default_embedder() -> Embedder:
-    global _DEFAULT
-    if _DEFAULT is None:
-        _DEFAULT = Embedder()
-    return _DEFAULT
+    global _default_embedder
+    if _default_embedder is None:
+        _default_embedder = Embedder()
+    return _default_embedder

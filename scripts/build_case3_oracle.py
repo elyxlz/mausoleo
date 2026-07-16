@@ -205,7 +205,7 @@ def main() -> None:
     # Compute ratios. ratio = war / (war + domestic) (so it's bounded in
     # [0,1] and "other" is excluded — what fraction of the political
     # foreground is war coverage, vs domestic coverage).
-    for w, b in per_week.items():
+    for b in per_week.values():
         denom = b["war"] + b["domestic"]
         b["ratio_war_over_war_plus_domestic"] = (b["war"] / denom) if denom else None
         b["war_to_domestic"] = (b["war"] / b["domestic"]) if b["domestic"] else None

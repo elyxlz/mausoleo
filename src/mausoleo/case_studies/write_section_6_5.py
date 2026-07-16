@@ -150,7 +150,7 @@ def render_runlog_summary(agg: dict[str, tp.Any]) -> str:
     embed = agg.get("embedder_status", {})
     return textwrap.dedent(f"""
 
-## Rerun 2026-05-03 final summary {dt.datetime.utcnow().isoformat()}Z
+## Rerun 2026-05-03 final summary {dt.datetime.now(dt.UTC).replace(tzinfo=None).isoformat()}Z
 
 - **trials completed**: {n_trials} / 18 (3 cases × 2 systems × 3 trials)
 - **wall time**: {wall / 60:.1f} min ({wall:.0f} s)
