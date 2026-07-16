@@ -17,6 +17,7 @@ This is a single-annotator GT; the 2-week self-consistency check required
 by the outline cannot be performed in one session. It is reported as a
 limitation in §7.2 with κ = "not measured this run."
 """
+
 from __future__ import annotations
 
 import json
@@ -65,50 +66,51 @@ CASE1_PATTERNS_27 = [
 def build_case1() -> dict[str, tp.Any]:
     cli = _client()
     rows25 = cli.query(
-        "SELECT article_id, headline, substring(text,1,400) FROM documents "
-        "WHERE date = '1943-07-25' ORDER BY article_id"
+        "SELECT article_id, headline, substring(text,1,400) FROM documents WHERE date = '1943-07-25' ORDER BY article_id"
     ).result_rows
     rows27 = cli.query(
-        "SELECT article_id, headline, substring(text,1,400) FROM documents "
-        "WHERE date = '1943-07-27' ORDER BY article_id"
+        "SELECT article_id, headline, substring(text,1,400) FROM documents WHERE date = '1943-07-27' ORDER BY article_id"
     ).result_rows
     gt: list[dict[str, str]] = []
     for aid, hl, txt in rows25:
         blob = (hl or "") + " " + (txt or "")
         for pat in CASE1_PATTERNS_25:
             if re.search(pat, blob, re.IGNORECASE):
-                gt.append({
-                    "article_id": aid,
-                    "date": "1943-07-25",
-                    "headline": (hl or "")[:80],
-                    "rationale": f"matched pattern '{pat}' (late-fascist register / Sicily-front bulletin)",
-                })
+                gt.append(
+                    {
+                        "article_id": aid,
+                        "date": "1943-07-25",
+                        "headline": (hl or "")[:80],
+                        "rationale": f"matched pattern '{pat}' (late-fascist register / Sicily-front bulletin)",
+                    }
+                )
                 break
     for aid, hl, txt in rows27:
         blob = (hl or "") + " " + (txt or "")
         for pat in CASE1_PATTERNS_27:
             if re.search(pat, blob, re.IGNORECASE):
-                gt.append({
-                    "article_id": aid,
-                    "date": "1943-07-27",
-                    "headline": (hl or "")[:80],
-                    "rationale": f"matched pattern '{pat}' (Badoglio-transition coverage)",
-                })
+                gt.append(
+                    {
+                        "article_id": aid,
+                        "date": "1943-07-27",
+                        "headline": (hl or "")[:80],
+                        "rationale": f"matched pattern '{pat}' (Badoglio-transition coverage)",
+                    }
+                )
                 break
     # Add the absent-day node id (so a system that surfaces it can claim that
     # piece of evidence).
-    gt.append({
-        "article_id": "1943-07-26",
-        "date": "1943-07-26",
-        "headline": "[edizione assente]",
-        "rationale": "the absent-day node itself; only Mausoleo can return this",
-    })
+    gt.append(
+        {
+            "article_id": "1943-07-26",
+            "date": "1943-07-26",
+            "headline": "[edizione assente]",
+            "rationale": "the absent-day node itself; only Mausoleo can return this",
+        }
+    )
     return {
         "case": "case1_missing_07-26",
-        "question": (
-            "What was reported on 26 July 1943, the day after Mussolini's arrest, "
-            "in Il Messaggero?"
-        ),
+        "question": ("What was reported on 26 July 1943, the day after Mussolini's arrest, in Il Messaggero?"),
         "gt_count": len(gt),
         "articles": gt,
     }
@@ -151,26 +153,27 @@ def build_case2() -> dict[str, tp.Any]:
                 if aid in seen:
                     break
                 seen.add(aid)
-                gt.append({
-                    "article_id": aid,
-                    "date": date,
-                    "headline": (hl or "")[:80],
-                    "rationale": f"matched headline pattern '{pat}' (regime-change pivot)",
-                })
+                gt.append(
+                    {
+                        "article_id": aid,
+                        "date": date,
+                        "headline": (hl or "")[:80],
+                        "rationale": f"matched headline pattern '{pat}' (regime-change pivot)",
+                    }
+                )
                 break
     # Also include the absent-day node — case 2 narrative crosses the gap.
-    gt.append({
-        "article_id": "1943-07-26",
-        "date": "1943-07-26",
-        "headline": "[edizione assente]",
-        "rationale": "absent-day node: bridges 25 → 27 transition",
-    })
+    gt.append(
+        {
+            "article_id": "1943-07-26",
+            "date": "1943-07-26",
+            "headline": "[edizione assente]",
+            "rationale": "absent-day node: bridges 25 → 27 transition",
+        }
+    )
     return {
         "case": "case2_july25_regime_change",
-        "question": (
-            "How did Il Messaggero cover the fall of Mussolini and the transition "
-            "to the Badoglio government?"
-        ),
+        "question": ("How did Il Messaggero cover the fall of Mussolini and the transition to the Badoglio government?"),
         "gt_count": len(gt),
         "articles": gt,
     }
@@ -213,11 +216,24 @@ def build_case3() -> dict[str, tp.Any]:
         is_war = any(re.search(p, blob, re.IGNORECASE) for p in WAR_PATTERNS)
         is_dom = any(re.search(p, blob, re.IGNORECASE) for p in DOMESTIC_PATTERNS)
         if is_war and not is_dom:
-            war.append({"article_id": aid, "date": date, "headline": (hl or "")[:80],
-                        "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)"})
+            war.append(
+                {
+                    "article_id": aid,
+                    "date": date,
+                    "headline": (hl or "")[:80],
+                    "rationale": "war-coverage exemplar (war pattern hit, no domestic-politics pattern)",
+                }
+            )
         elif is_dom and not is_war:
-            dom.append({"article_id": aid, "date": date, "headline": (hl or "")[:80],
-                        "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)"})
+            dom.append(
+                {
+                    "article_id": aid,
+                    "date": date,
+                    "headline": (hl or "")[:80],
+                    "rationale": "domestic-politics exemplar (domestic pattern hit, no war pattern)",
+                }
+            )
+
     # Stratified subsample: take ~5 war + ~5 domestic per week-ish bucket, capping
     # GT at ~50 articles (the outline says "~30 per case" — for case 3 we
     # need wider stratification because the question is about month-scale
@@ -230,6 +246,7 @@ def build_case3() -> dict[str, tp.Any]:
         for date in sorted(bydate.keys()):
             out.extend(bydate[date][:per_day])
         return out
+
     war_sel = pick(war, per_day=1)
     dom_sel = pick(dom, per_day=1)
     # Trim to ~30 total: take every-other-day from the larger pool
@@ -239,10 +256,7 @@ def build_case3() -> dict[str, tp.Any]:
     gt = war_sel + dom_sel
     return {
         "case": "case3_comparative_coverage",
-        "question": (
-            "How does the balance of war coverage versus domestic-politics "
-            "coverage shift over July 1943 in Il Messaggero?"
-        ),
+        "question": ("How does the balance of war coverage versus domestic-politics coverage shift over July 1943 in Il Messaggero?"),
         "gt_count": len(gt),
         "war_articles": len(war_sel),
         "domestic_articles": len(dom_sel),

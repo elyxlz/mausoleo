@@ -22,7 +22,7 @@ logging.basicConfig(
 )
 
 # Base URL with a placeholder for date.
-BASE_URL = "https://archivio.ilmessaggero.it/sfoglio?" "testata=MG&edition=NAZIONALE&date={date}&page=1" "#page=1&zoom=page-fit&pagemode=none"
+BASE_URL = "https://archivio.ilmessaggero.it/sfoglio?testata=MG&edition=NAZIONALE&date={date}&page=1#page=1&zoom=page-fit&pagemode=none"
 
 USER_DATA_DIR = "user_data"
 AUTH_FILE = "auth.json"
@@ -202,9 +202,7 @@ async def get_browser_context(p, headless: bool, login_url: str):
         context = await p.chromium.launch_persistent_context(
             USER_DATA_DIR,
             headless=headless,
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " "AppleWebKit/537.36 (KHTML, like Gecko) " "Chrome/117.0.0.0 Safari/537.36"
-            ),
+            user_agent=("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"),
             args=["--disable-blink-features=AutomationControlled"] + extra_args,
         )
         page = await context.new_page()

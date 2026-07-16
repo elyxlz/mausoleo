@@ -18,6 +18,7 @@ Usage:
 Outputs eval/predictions/ensemble_30min_<date>.json.
 Sub-pipeline predictions cached via standard run_real_ocr.py paths.
 """
+
 from __future__ import annotations
 
 import json
@@ -64,27 +65,27 @@ GPU1_CHAIN: list[str] = [
 PRIMARY = "exp_045_qwen3vl_vllm"
 
 REPLACEMENT_CHAIN: list[tuple[str, float, float]] = [
-    ("col3_qwen3_8b_v2_structured",   0.75, 1.02),
-    ("exp_055_col6_ads_prompt",       0.75, 1.05),
-    ("exp_010_yolo_qwen3_8b",         0.50, 1.08),
-    ("exp_107_fullpage_qwen25vl",     0.50, 1.02),
-    ("exp_099_col2_qwen3vl_vllm",     0.75, 1.05),
-    ("yolo_qwen25_7b_v2_structured",  0.12, 1.20),
-    ("exp_108_col3_qwen25vl",         0.75, 1.05),
-    ("exp_028_yolo_smallregion",      0.75, 1.05),
-    ("col4_qwen3_8b_v2_structured",   0.85, 1.05),
+    ("col3_qwen3_8b_v2_structured", 0.75, 1.02),
+    ("exp_055_col6_ads_prompt", 0.75, 1.05),
+    ("exp_010_yolo_qwen3_8b", 0.50, 1.08),
+    ("exp_107_fullpage_qwen25vl", 0.50, 1.02),
+    ("exp_099_col2_qwen3vl_vllm", 0.75, 1.05),
+    ("yolo_qwen25_7b_v2_structured", 0.12, 1.20),
+    ("exp_108_col3_qwen25vl", 0.75, 1.05),
+    ("exp_028_yolo_smallregion", 0.75, 1.05),
+    ("col4_qwen3_8b_v2_structured", 0.85, 1.05),
 ]
 
 ADDITIVE_SOURCES: list[tuple[str, float, float]] = [
-    ("exp_098_col5_qwen3vl_vllm",     0.60, 100.0),
-    ("exp_052_col6_vllm",             0.50, 100.0),
-    ("exp_102_fullpage_vllm",         0.75, 100.0),
-    ("exp_028_yolo_smallregion",      0.85, 100.0),
-    ("qwen3b_structured",             0.75, 100.0),
-    ("qwen_vl_3b_structured",         0.75, 100.0),
-    ("col5_qwen3_8b_v2_structured",   0.50, 100.0),
-    ("col3_qwen25_3b_v2_structured",  0.50, 100.0),
-    ("exp_111_col2_qwen25vl",         0.85, 100.0),
+    ("exp_098_col5_qwen3vl_vllm", 0.60, 100.0),
+    ("exp_052_col6_vllm", 0.50, 100.0),
+    ("exp_102_fullpage_vllm", 0.75, 100.0),
+    ("exp_028_yolo_smallregion", 0.85, 100.0),
+    ("qwen3b_structured", 0.75, 100.0),
+    ("qwen_vl_3b_structured", 0.75, 100.0),
+    ("col5_qwen3_8b_v2_structured", 0.50, 100.0),
+    ("col3_qwen25_3b_v2_structured", 0.50, 100.0),
+    ("exp_111_col2_qwen25vl", 0.85, 100.0),
 ]
 
 QUALITY_SELECT_SOURCES: list[str] = [

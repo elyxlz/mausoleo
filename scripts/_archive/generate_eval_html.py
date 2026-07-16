@@ -134,7 +134,7 @@ def generate_html() -> str:
     for date in ISSUE_DATES:
         if date not in gt_data:
             continue
-        parts.append(f'<div class="date-section">')
+        parts.append('<div class="date-section">')
         parts.append(f"<h2>Ground Truth: {date}</h2>")
         parts.append('<div class="images">')
         img_dir = GROUND_TRUTH_DIR / date
@@ -146,7 +146,7 @@ def generate_html() -> str:
         parts.append("</div>")
 
     parts.append("<h2>Leaderboard</h2>")
-    parts.append('<p>Click a row to see its full OCR output for each date.</p>')
+    parts.append("<p>Click a row to see its full OCR output for each date.</p>")
     parts.append('<table class="leaderboard" id="leaderboard">')
     parts.append("<thead><tr><th>#</th><th>Config</th><th>Dates</th><th>Avg CER ↑↓</th><th>Avg WER</th></tr></thead>")
     parts.append("<tbody>")
@@ -154,7 +154,7 @@ def generate_html() -> str:
         cer_class = "good" if cer < 0.5 else "ok" if cer < 1.0 else "bad"
         wer_class = "good" if wer < 0.5 else "ok" if wer < 1.0 else "bad"
         parts.append(f'<tr onclick="showConfig(\'{cfg}\')" data-cfg="{cfg}">')
-        parts.append(f'<td class="rank">{i+1}</td>')
+        parts.append(f'<td class="rank">{i + 1}</td>')
         parts.append(f"<td>{cfg}</td>")
         parts.append(f'<td><span class="badge badge-dates">{n_dates}</span></td>')
         parts.append(f'<td class="metric {cer_class}">{cer:.4f}</td>')
@@ -168,7 +168,7 @@ def generate_html() -> str:
         parts.append('<div class="tabs">')
         for j, date in enumerate(ISSUE_DATES):
             active = "active" if j == 0 else ""
-            parts.append(f'<div class="tab {active}" onclick="switchTab(this, \'{cfg}\', \'{date}\')">{date}</div>')
+            parts.append(f"<div class=\"tab {active}\" onclick=\"switchTab(this, '{cfg}', '{date}')\">{date}</div>")
         parts.append("</div>")
         for j, date in enumerate(ISSUE_DATES):
             active = "active" if j == 0 else ""

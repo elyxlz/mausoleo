@@ -16,7 +16,9 @@ config = OcrPipelineConfig(
     operators=[
         Preprocess(grayscale=False, max_dimension=1024),
         ColumnSplit(num_columns=4, overlap_pct=0.03),
-        VlmOcr(model="tencent/HunyuanOCR", prompt=prompts.VLM_OCR_STRUCTURED_V2, backend="transformers", max_tokens=8192, runtime_env=HUNYUAN_ENV),
+        VlmOcr(
+            model="tencent/HunyuanOCR", prompt=prompts.VLM_OCR_STRUCTURED_V2, backend="transformers", max_tokens=8192, runtime_env=HUNYUAN_ENV
+        ),
         MergePages(),
         ParseIssue(),
     ],

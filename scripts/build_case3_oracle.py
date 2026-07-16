@@ -15,6 +15,7 @@ The output records:
   per-article classification, per-day counts, and per-week war:domestic
   ratios for the five ISO weeks that overlap July 1943.
 """
+
 from __future__ import annotations
 
 import datetime as dt
@@ -22,7 +23,6 @@ import json
 import os
 import pathlib
 import re
-import sys
 import time
 import typing as tp
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -105,16 +105,12 @@ def _parse_response(text: str, n: int) -> list[str]:
 
 
 def _classify_batch(
-    client: anthropic.Anthropic, batch: list[dict[str, tp.Any]],
-    *, attempt: int = 0,
+    client: anthropic.Anthropic,
+    batch: list[dict[str, tp.Any]],
+    *,
+    attempt: int = 0,
 ) -> tuple[list[str], int, int]:
-    user = (
-        CLASSIFIER_PROMPT
-        + "\n\nClassify these "
-        + str(len(batch))
-        + " items:\n\n"
-        + _format_batch(batch)
-    )
+    user = CLASSIFIER_PROMPT + "\n\nClassify these " + str(len(batch)) + " items:\n\n" + _format_batch(batch)
     try:
         r = client.messages.create(
             model=MODEL,
@@ -123,7 +119,7 @@ def _classify_batch(
             temperature=0.0,
             messages=[{"role": "user", "content": user}],
         )
-    except anthropic.APIStatusError as e:
+    except anthropic.APIStatusError:
         if attempt < 2:
             time.sleep(1.5 + attempt * 2)
             return _classify_batch(client, batch, attempt=attempt + 1)

@@ -60,16 +60,20 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
 
     @staticmethod
     def _prime_cuda() -> None:
-        import os, torch
+        import os
+        import torch
+
         os.environ.setdefault("TORCH_CUDNN_V8_API_DISABLED", "1")
         torch.backends.cudnn.enabled = False
 
         try:
             from transformers import image_transforms
+
             _orig_normalize = image_transforms.normalize
 
             def _patched_normalize(image, mean, std, *args, **kwargs):
                 import numpy as np
+
                 m = np.asarray(mean)
                 s = np.asarray(std)
                 if m.ndim > 1:
@@ -121,6 +125,7 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
     def _init_transformers_generic(self) -> None:
         import torch
         from transformers import AutoModel, AutoModelForImageTextToText, AutoProcessor, AutoTokenizer, BitsAndBytesConfig
+
         try:
             from transformers import AutoModelForVision2Seq
         except ImportError:
@@ -155,9 +160,7 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
         from transformers import AutoModelForCausalLM, AutoProcessor
 
         self.processor = AutoProcessor.from_pretrained(self.config.model, trust_remote_code=True)
-        self.hf_model = AutoModelForCausalLM.from_pretrained(
-            self.config.model, trust_remote_code=True, torch_dtype=torch.float32
-        ).to("cuda")
+        self.hf_model = AutoModelForCausalLM.from_pretrained(self.config.model, trust_remote_code=True, torch_dtype=torch.float32).to("cuda")
 
     def _init_got_ocr(self) -> None:
         import torch
@@ -174,9 +177,7 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
         except ImportError:
             from transformers import AutoModel
 
-            self.hf_model = AutoModel.from_pretrained(
-                self.config.model, device_map="auto", trust_remote_code=True, torch_dtype=torch.bfloat16
-            )
+            self.hf_model = AutoModel.from_pretrained(self.config.model, device_map="auto", trust_remote_code=True, torch_dtype=torch.bfloat16)
 
     def _init_phi3(self) -> None:
         import torch
@@ -194,6 +195,7 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
     def _init_hunyuan(self) -> None:
         import torch
         from transformers import AutoModel, AutoModelForCausalLM, AutoProcessor, BitsAndBytesConfig
+
         try:
             from transformers import AutoModelForVision2Seq
         except ImportError:
@@ -222,9 +224,7 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
         import torch
         from transformers import AutoModel, AutoTokenizer
 
-        self.hf_model = AutoModel.from_pretrained(
-            self.config.model, trust_remote_code=True, torch_dtype=torch.bfloat16
-        ).cuda().eval()
+        self.hf_model = AutoModel.from_pretrained(self.config.model, trust_remote_code=True, torch_dtype=torch.bfloat16).cuda().eval()
         self.processor = AutoTokenizer.from_pretrained(self.config.model, trust_remote_code=True)
 
     def _init_image_text_model(self, *, padding_side: str | None = None) -> None:
@@ -380,12 +380,14 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
             import torchvision.transforms as T
             from torchvision.transforms.functional import InterpolationMode
 
-            self._internvl_transform = T.Compose([
-                T.Lambda(lambda img: img.convert("RGB") if img.mode != "RGB" else img),
-                T.Resize((448, 448), interpolation=InterpolationMode.BICUBIC),
-                T.ToTensor(),
-                T.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
-            ])
+            self._internvl_transform = T.Compose(
+                [
+                    T.Lambda(lambda img: img.convert("RGB") if img.mode != "RGB" else img),
+                    T.Resize((448, 448), interpolation=InterpolationMode.BICUBIC),
+                    T.ToTensor(),
+                    T.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
+                ]
+            )
         return self._internvl_transform(pil_img).unsqueeze(0).to(torch.bfloat16).cuda()
 
     def _format_prompt_vllm(self, image: tp.Any) -> str:

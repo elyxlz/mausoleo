@@ -35,7 +35,7 @@ def looks_like_json_blob(text: str) -> bool:
         return True
     if first200.startswith("{") and ('"unit_type"' in first200 or '"paragraphs"' in first200):
         return True
-    if first200.startswith("[") and '{' in first200 and '"text"' in first200:
+    if first200.startswith("[") and "{" in first200 and '"text"' in first200:
         return True
     if '"unit_type"' in text[:500] and '"paragraphs"' in text[:500]:
         return True

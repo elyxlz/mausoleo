@@ -207,10 +207,7 @@ def select_best_text(
     if headline_delta is None:
         headline_delta = min_quality_delta
     ensemble_articles = ensemble.get("articles", [])
-    source_normed = [
-        [(i, normalize_text(article_text(a)), a) for i, a in enumerate(src.get("articles", []))]
-        for src in sources
-    ]
+    source_normed = [[(i, normalize_text(article_text(a)), a) for i, a in enumerate(src.get("articles", []))] for src in sources]
 
     replaced = 0
     headline_replaced = 0

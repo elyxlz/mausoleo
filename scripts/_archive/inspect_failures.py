@@ -12,7 +12,9 @@ def inspect(config: str, date: str) -> None:
     r = evaluate_issue(gt, pred, config=config, date=date)
 
     print(f"Config: {config} | Date: {date}")
-    print(f"Composite: {r.composite_score:.3f} | CER: {r.mean_cer:.3f} | wCER: {r.weighted_cer:.3f} | Recall: {r.article_recall:.1%} | Pred articles: {r.total_pred_articles}")
+    print(
+        f"Composite: {r.composite_score:.3f} | CER: {r.mean_cer:.3f} | wCER: {r.weighted_cer:.3f} | Recall: {r.article_recall:.1%} | Pred articles: {r.total_pred_articles}"
+    )
     print()
 
     print("=== WORST 15 MATCHED ARTICLES (highest CER) ===")

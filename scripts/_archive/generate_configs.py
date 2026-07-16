@@ -7,7 +7,9 @@ CONFIGS_DIR = pl.Path("configs/ocr")
 
 def w(name: str, imports: str, operators: str) -> None:
     path = CONFIGS_DIR / f"{name}.py"
-    path.write_text(f"from mausoleo.ocr import prompts\nfrom mausoleo.ocr.config import OcrPipelineConfig\n{imports}\n\nconfig = OcrPipelineConfig(\n    name=\"{name}\",\n    operators=[\n{operators}\n    ],\n)\n")
+    path.write_text(
+        f'from mausoleo.ocr import prompts\nfrom mausoleo.ocr.config import OcrPipelineConfig\n{imports}\n\nconfig = OcrPipelineConfig(\n    name="{name}",\n    operators=[\n{operators}\n    ],\n)\n'
+    )
     print(f"  {name}")
 
 
@@ -76,20 +78,32 @@ def main() -> None:
         vmodel, vbackend = VLMS[vtag]
         lmodel, lbackend = LLMS["qwen25_3b"]
         name = f"{vtag}_v2_postcorrect"
-        w(name, imp_postcorrect, f"{vlm(vmodel, 'VLM_OCR_STRUCTURED_V2', vbackend)}\n{postcorrect(lmodel, lbackend)}\n        MergePages(),\n        ParseIssue(),")
+        w(
+            name,
+            imp_postcorrect,
+            f"{vlm(vmodel, 'VLM_OCR_STRUCTURED_V2', vbackend)}\n{postcorrect(lmodel, lbackend)}\n        MergePages(),\n        ParseIssue(),",
+        )
 
     print("\n=== 4. Preprocessing + full-page ===")
     for vtag in ["qwen25_7b"]:
         vmodel, vbackend = VLMS[vtag]
         name = f"preproc_{vtag}_v2_structured"
-        w(name, imp_preproc, f"        Preprocess(grayscale=True, max_dimension=2000),\n{vlm(vmodel, 'VLM_OCR_STRUCTURED_V2', vbackend)}\n        MergePages(),\n        ParseIssue(),")
+        w(
+            name,
+            imp_preproc,
+            f"        Preprocess(grayscale=True, max_dimension=2000),\n{vlm(vmodel, 'VLM_OCR_STRUCTURED_V2', vbackend)}\n        MergePages(),\n        ParseIssue(),",
+        )
 
     print("\n=== 5. Column split + structured (main VLMs, different col counts) ===")
     for ncols in [3, 4, 5]:
         for vtag in ["qwen25_7b", "qwen25_3b", "qwen3_8b", "gemma3_9b"]:
             vmodel, vbackend = VLMS[vtag]
             name = f"col{ncols}_{vtag}_v2_structured"
-            w(name, imp_col, f"{colsplit(ncols)}\n{vlm(vmodel, 'VLM_OCR_STRUCTURED_V2', vbackend)}\n        MergePages(),\n        ParseIssue(),")
+            w(
+                name,
+                imp_col,
+                f"{colsplit(ncols)}\n{vlm(vmodel, 'VLM_OCR_STRUCTURED_V2', vbackend)}\n        MergePages(),\n        ParseIssue(),",
+            )
 
     print("\n=== 6. Column split + raw column OCR + cleanup ===")
     for ncols in [4]:
@@ -97,7 +111,11 @@ def main() -> None:
             vmodel, vbackend = VLMS[vtag]
             lmodel, lbackend = LLMS["qwen25_3b"]
             name = f"col{ncols}_{vtag}_v2_column_cleanup"
-            w(name, imp_col_cleanup, f"{colsplit(ncols)}\n{vlm(vmodel, 'VLM_OCR_COLUMN', vbackend)}\n{cleanup(lmodel, lbackend)}\n        ParseIssue(),")
+            w(
+                name,
+                imp_col_cleanup,
+                f"{colsplit(ncols)}\n{vlm(vmodel, 'VLM_OCR_COLUMN', vbackend)}\n{cleanup(lmodel, lbackend)}\n        ParseIssue(),",
+            )
 
     print("\n=== 7. Column split + raw (no cleanup) ===")
     for ncols in [4]:
@@ -111,20 +129,32 @@ def main() -> None:
         for vtag in ["qwen25_7b"]:
             vmodel, vbackend = VLMS[vtag]
             name = f"col{ncols}_nolap_{vtag}_v2_structured"
-            w(name, imp_col, f"{colsplit(ncols, 0.0)}\n{vlm(vmodel, 'VLM_OCR_STRUCTURED_V2', vbackend)}\n        MergePages(),\n        ParseIssue(),")
+            w(
+                name,
+                imp_col,
+                f"{colsplit(ncols, 0.0)}\n{vlm(vmodel, 'VLM_OCR_STRUCTURED_V2', vbackend)}\n        MergePages(),\n        ParseIssue(),",
+            )
 
     print("\n=== 9. Preprocess + column split ===")
     for ncols in [4]:
         for vtag in ["qwen25_7b"]:
             vmodel, vbackend = VLMS[vtag]
             name = f"preproc_col{ncols}_{vtag}_v2_structured"
-            w(name, imp_preproc_col, f"        Preprocess(grayscale=True, max_dimension=2000),\n{colsplit(ncols)}\n{vlm(vmodel, 'VLM_OCR_STRUCTURED_V2', vbackend)}\n        MergePages(),\n        ParseIssue(),")
+            w(
+                name,
+                imp_preproc_col,
+                f"        Preprocess(grayscale=True, max_dimension=2000),\n{colsplit(ncols)}\n{vlm(vmodel, 'VLM_OCR_STRUCTURED_V2', vbackend)}\n        MergePages(),\n        ParseIssue(),",
+            )
 
     print("\n=== 10. YOLO crop + VLM ===")
     for vtag in ["qwen25_7b"]:
         vmodel, vbackend = VLMS[vtag]
         name = f"yolo_{vtag}_v2_structured"
-        w(name, imp_yolo, f"        YoloCrop(conf_threshold=0.2, gpu_fraction=0.3, merge_vertical_gap=80, merge_horizontal_overlap=0.7),\n{vlm(vmodel, 'VLM_OCR_STRUCTURED_V2', vbackend)}\n        MergePages(),\n        ParseIssue(),")
+        w(
+            name,
+            imp_yolo,
+            f"        YoloCrop(conf_threshold=0.2, gpu_fraction=0.3, merge_vertical_gap=80, merge_horizontal_overlap=0.7),\n{vlm(vmodel, 'VLM_OCR_STRUCTURED_V2', vbackend)}\n        MergePages(),\n        ParseIssue(),",
+        )
 
     configs = sorted(f.stem for f in CONFIGS_DIR.glob("*.py"))
     print(f"\n=== TOTAL: {len(configs)} configs ===")

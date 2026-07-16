@@ -77,7 +77,8 @@ class YoloCropOperator(StatefulOperator[YoloCrop]):
         if config.mock:
             return
 
-        import os, torch
+        import os
+        import torch
 
         torch_lib = os.path.join(os.path.dirname(torch.__file__), "lib")
         cudnn_lib = os.path.join(os.path.dirname(torch.__file__), "..", "nvidia", "cudnn", "lib")
@@ -97,9 +98,11 @@ class YoloCropOperator(StatefulOperator[YoloCrop]):
         weights_path = hf_hub_download(config.model, "doclayout_yolo_docstructbench_imgsz1024.pt")
         try:
             from doclayout_yolo import YOLOv10
+
             self.yolo = YOLOv10(weights_path)
         except ImportError:
             from ultralytics import YOLO
+
             self.yolo = YOLO(weights_path)
 
     def __call__(self, batch: dict[str, tp.Any]) -> dict[str, tp.Any]:
@@ -164,10 +167,12 @@ class YoloCropOperator(StatefulOperator[YoloCrop]):
         page_count = len(images_b64.split("|"))
         mock_regions = []
         for i in range(page_count):
-            mock_regions.extend([
-                {"page": i + 1, "bbox": [10, 10, 500, 1500]},
-                {"page": i + 1, "bbox": [510, 10, 1000, 1500]},
-            ])
+            mock_regions.extend(
+                [
+                    {"page": i + 1, "bbox": [10, 10, 500, 1500]},
+                    {"page": i + 1, "bbox": [510, 10, 1000, 1500]},
+                ]
+            )
         result = dict(batch)
         result["layout_json"] = [json.dumps(mock_regions)]
         return result

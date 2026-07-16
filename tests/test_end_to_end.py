@@ -9,6 +9,7 @@ These tests assume:
 The tests boot the FastAPI app with FastAPI's ``TestClient`` (no separate
 uvicorn process), so they don't need the server running on a port.
 """
+
 from __future__ import annotations
 
 import datetime as dt
@@ -44,9 +45,7 @@ def loaded_db() -> str:
     """Load a small slice of the corpus and return the database name."""
     from mausoleo.index import loader
 
-    transcriptions = pl.Path(
-        os.environ.get("MAUSOLEO_TX_DIR", "/tmp/mausoleo/eval/transcriptions")
-    )
+    transcriptions = pl.Path(os.environ.get("MAUSOLEO_TX_DIR", "/tmp/mausoleo/eval/transcriptions"))
     if not transcriptions.exists():
         pytest.skip(f"no transcriptions at {transcriptions}")
     cfg = loader.LoaderConfig(
@@ -59,7 +58,7 @@ def loaded_db() -> str:
 
 
 @pytest.fixture
-def client(loaded_db: str) -> "fastapi_testclient.TestClient":
+def client(loaded_db: str) -> fastapi_testclient.TestClient:
     os.environ["MAUSOLEO_EMBED_BACKEND"] = "zero"
     from mausoleo.server.app import create_app
 
@@ -67,13 +66,13 @@ def client(loaded_db: str) -> "fastapi_testclient.TestClient":
     return fastapi_testclient.TestClient(app)
 
 
-def test_health(client: "fastapi_testclient.TestClient") -> None:
+def test_health(client: fastapi_testclient.TestClient) -> None:
     r = client.get("/health")
     assert r.status_code == 200
     assert r.json()["status"] == "ok"
 
 
-def test_root(client: "fastapi_testclient.TestClient") -> None:
+def test_root(client: fastapi_testclient.TestClient) -> None:
     r = client.get("/root")
     assert r.status_code == 200
     body = r.json()
@@ -81,7 +80,7 @@ def test_root(client: "fastapi_testclient.TestClient") -> None:
     assert body["level"] == "archive"
 
 
-def test_stats(client: "fastapi_testclient.TestClient") -> None:
+def test_stats(client: fastapi_testclient.TestClient) -> None:
     r = client.get("/stats")
     assert r.status_code == 200
     body = r.json()
@@ -91,7 +90,7 @@ def test_stats(client: "fastapi_testclient.TestClient") -> None:
     assert levels.get("paragraph", 0) > 0
 
 
-def test_drill_down(client: "fastapi_testclient.TestClient") -> None:
+def test_drill_down(client: fastapi_testclient.TestClient) -> None:
     """root → month → day → article → paragraph chain."""
     r = client.get("/root")
     assert r.status_code == 200
@@ -119,13 +118,13 @@ def test_drill_down(client: "fastapi_testclient.TestClient") -> None:
     assert body["paragraph_count"] >= 1
 
 
-def test_parent(client: "fastapi_testclient.TestClient") -> None:
+def test_parent(client: fastapi_testclient.TestClient) -> None:
     r = client.get("/nodes/1943-07-01/parent")
     assert r.status_code == 200
     assert r.json()["node_id"] == "1943-07"
 
 
-def test_text_search(client: "fastapi_testclient.TestClient") -> None:
+def test_text_search(client: fastapi_testclient.TestClient) -> None:
     r = client.post(
         "/search/text",
         json={"query": "Mussolini", "limit": 5},
@@ -136,7 +135,7 @@ def test_text_search(client: "fastapi_testclient.TestClient") -> None:
     assert len(body["results"]) > 0
 
 
-def test_semantic_search(client: "fastapi_testclient.TestClient") -> None:
+def test_semantic_search(client: fastapi_testclient.TestClient) -> None:
     r = client.post(
         "/search/semantic",
         json={"query": "guerra", "limit": 5},
@@ -149,7 +148,7 @@ def test_semantic_search(client: "fastapi_testclient.TestClient") -> None:
     assert len(body["results"]) > 0
 
 
-def test_hybrid_search(client: "fastapi_testclient.TestClient") -> None:
+def test_hybrid_search(client: fastapi_testclient.TestClient) -> None:
     r = client.post(
         "/search/hybrid",
         json={"query": "Roma", "limit": 5},
@@ -160,7 +159,7 @@ def test_hybrid_search(client: "fastapi_testclient.TestClient") -> None:
     assert len(body["results"]) > 0
 
 
-def test_recursive_text_for_day(client: "fastapi_testclient.TestClient") -> None:
+def test_recursive_text_for_day(client: fastapi_testclient.TestClient) -> None:
     """Day-level text should reconstruct from descendant paragraphs."""
     r = client.get("/nodes/1943-07-01/text")
     assert r.status_code == 200

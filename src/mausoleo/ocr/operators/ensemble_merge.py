@@ -15,6 +15,7 @@ class EnsembleMerge(BaseOperatorConfig):
 
 def _normalize(text: str) -> str:
     import re
+
     return re.sub(r"\s+", " ", text).strip().lower()
 
 
@@ -57,11 +58,7 @@ def ensemble_merge(row: dict[str, tp.Any], *, config: EnsembleMerge) -> dict[str
             if _word_overlap(p, _normalize(_article_text(s))) >= config.overlap_threshold:
                 used.add(si)
 
-    new = [
-        sa[si]
-        for si in range(len(sa))
-        if si not in used and len(_article_text(sa[si]).strip()) >= config.min_article_chars
-    ]
+    new = [sa[si] for si in range(len(sa)) if si not in used and len(_article_text(sa[si]).strip()) >= config.min_article_chars]
 
     merged = list(pa) + new
     indexed = list(enumerate(merged))

@@ -29,7 +29,7 @@ def _parse_chandra_layout(raw_text: str) -> list[dict[str, tp.Any]]:
     if not first_chunk.startswith("["):
         match = re.search(r"\[\s*\{", first_chunk)
         if match:
-            first_chunk = first_chunk[match.start():]
+            first_chunk = first_chunk[match.start() :]
     depth = 0
     end_idx = -1
     for i, ch in enumerate(first_chunk):
@@ -43,7 +43,7 @@ def _parse_chandra_layout(raw_text: str) -> list[dict[str, tp.Any]]:
     if end_idx < 0:
         return []
     try:
-        return json.loads(first_chunk[:end_idx + 1])
+        return json.loads(first_chunk[: end_idx + 1])
     except json.JSONDecodeError:
         return []
 
@@ -129,7 +129,10 @@ class ChandraLayoutOperator(StatefulOperator[ChandraLayout]):
                 "role": "user",
                 "content": [
                     {"type": "image", "image": pil_img},
-                    {"type": "text", "text": "Detect the layout regions in this document. Output JSON array of regions with 'label' and 'bbox' (normalized 0-1000)."},
+                    {
+                        "type": "text",
+                        "text": "Detect the layout regions in this document. Output JSON array of regions with 'label' and 'bbox' (normalized 0-1000).",
+                    },
                 ],
             }
         ]
@@ -137,7 +140,7 @@ class ChandraLayoutOperator(StatefulOperator[ChandraLayout]):
         inputs = self.processor(text=[text], images=[pil_img], return_tensors="pt").to(self.hf_model.device)
         with torch.no_grad():
             output_ids = self.hf_model.generate(**inputs, max_new_tokens=self.config.max_tokens, do_sample=False)
-        generated = output_ids[:, inputs.input_ids.shape[1]:]
+        generated = output_ids[:, inputs.input_ids.shape[1] :]
         raw = self.processor.batch_decode(generated, skip_special_tokens=True)[0]
         return _parse_chandra_layout(raw)
 

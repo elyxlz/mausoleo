@@ -17,6 +17,7 @@ declared per-week war-vs-domestic ratio against the oracle ratios at
 explicitly state its per-week ratio in its final answer; the runner
 parses that and scores it.
 """
+
 from __future__ import annotations
 
 import dataclasses as dc
@@ -113,9 +114,7 @@ def parse_week_ratios(answer: str) -> dict[str, float]:
     return out
 
 
-def case3_ratio_score(
-    answer: str, oracle: dict[str, dict[str, tp.Any]]
-) -> dict[str, tp.Any]:
+def case3_ratio_score(answer: str, oracle: dict[str, dict[str, tp.Any]]) -> dict[str, tp.Any]:
     """Score the agent's per-week war-fraction estimates against oracle."""
     target_weeks = ["1943-W26", "1943-W27", "1943-W28", "1943-W29", "1943-W30"]
     pred = parse_week_ratios(answer)
@@ -161,20 +160,19 @@ def case3_ratio_score(
 # I/O helpers
 # ---------------------------------------------------------------------------
 
+
 def _now() -> str:
     return dt.datetime.utcnow().isoformat() + "Z"
 
 
-def _save_trial(case_id: str, system: str, trial: int,
-                payload: dict[str, tp.Any]) -> pathlib.Path:
+def _save_trial(case_id: str, system: str, trial: int, payload: dict[str, tp.Any]) -> pathlib.Path:
     RUNS_DIR.mkdir(parents=True, exist_ok=True)
     p = RUNS_DIR / f"{case_id}_{system}_t{trial}.json"
     p.write_text(json.dumps(payload, ensure_ascii=False, indent=2, default=str))
     return p
 
 
-def _save_judge(case_id: str, system: str, trial: int, judge_name: str,
-                payload: dict[str, tp.Any]) -> pathlib.Path:
+def _save_judge(case_id: str, system: str, trial: int, judge_name: str, payload: dict[str, tp.Any]) -> pathlib.Path:
     RUNS_DIR.mkdir(parents=True, exist_ok=True)
     p = RUNS_DIR / f"{case_id}_{system}_t{trial}_{judge_name}.json"
     p.write_text(json.dumps(payload, ensure_ascii=False, indent=2, default=str))
@@ -215,6 +213,7 @@ def _append_runlog(line: str) -> None:
 # Spend bookkeeping
 # ---------------------------------------------------------------------------
 
+
 @dc.dataclass
 class Spend:
     researcher_usd: float = 0.0
@@ -228,6 +227,7 @@ class Spend:
 # ---------------------------------------------------------------------------
 # Main orchestrator
 # ---------------------------------------------------------------------------
+
 
 def run_all(*, only_cases: tuple[str, ...] | None = None) -> dict[str, tp.Any]:
     spend = Spend()
@@ -254,10 +254,7 @@ def run_all(*, only_cases: tuple[str, ...] | None = None) -> dict[str, tp.Any]:
         for system in SYSTEMS:
             for trial in range(1, N_TRIALS + 1):
                 seed = trial * 1009 + hash(case["case_id"]) % 997
-                _append_runlog(
-                    f"- starting {case['case_id']} / {system} / trial {trial} "
-                    f"(seed={seed}) at tok_in={tok_in} tok_out={tok_out}"
-                )
+                _append_runlog(f"- starting {case['case_id']} / {system} / trial {trial} (seed={seed}) at tok_in={tok_in} tok_out={tok_out}")
                 trial_t0 = time.time()
                 u = agent.run_trial(
                     question=case["question"],
@@ -321,11 +318,17 @@ def run_all(*, only_cases: tuple[str, ...] | None = None) -> dict[str, tp.Any]:
                     # score 0 across the board so the trial appears in stats.
                     for jn in ("judge1", "judge2"):
                         empty = {
-                            "judge": jn, "model": "n/a",
-                            "factual": 0.0, "comprehensive": 0.0, "insight": 0.0,
+                            "judge": jn,
+                            "model": "n/a",
+                            "factual": 0.0,
+                            "comprehensive": 0.0,
+                            "insight": 0.0,
                             "rationale": "no answer produced (agent error)",
-                            "cost_usd": 0.0, "raw_text": "",
-                            "case_id": case["case_id"], "system": system, "trial": trial,
+                            "cost_usd": 0.0,
+                            "raw_text": "",
+                            "case_id": case["case_id"],
+                            "system": system,
+                            "trial": trial,
                             "error": u.error,
                         }
                         _save_judge(case["case_id"], system, trial, jn, empty)
@@ -355,9 +358,7 @@ def run_all(*, only_cases: tuple[str, ...] | None = None) -> dict[str, tp.Any]:
                 ratio_log = ""
                 if case["case_id"] == "case3":
                     ratio_log = (
-                        f" rmse={trial_row.get('case3_rmse')} "
-                        f"mae={trial_row.get('case3_mae')} "
-                        f"weeks={trial_row.get('case3_n_weeks_scored')}/5"
+                        f" rmse={trial_row.get('case3_rmse')} mae={trial_row.get('case3_mae')} weeks={trial_row.get('case3_n_weeks_scored')}/5"
                     )
                 _append_runlog(
                     f"  done {case['case_id']}/{system}/t{trial}: "
@@ -382,16 +383,14 @@ def run_all(*, only_cases: tuple[str, ...] | None = None) -> dict[str, tp.Any]:
     aggregate["phantom_cost_usd"] = round(spend.total, 4)
     AGG_PATH.write_text(json.dumps(aggregate, ensure_ascii=False, indent=2, default=str))
     DONE_FLAG.write_text("DONE: rerun complete\n")
-    _append_runlog(
-        f"\nfinished tokens in/out {tok_in}/{tok_out} "
-        f"(phantom $={spend.total:.2f}) wall={aggregate['wall_time_sec']:.0f}s"
-    )
+    _append_runlog(f"\nfinished tokens in/out {tok_in}/{tok_out} (phantom $={spend.total:.2f}) wall={aggregate['wall_time_sec']:.0f}s")
     return aggregate
 
 
 # ---------------------------------------------------------------------------
 # Aggregation
 # ---------------------------------------------------------------------------
+
 
 def compute_per_case_stats(trials: list[dict[str, tp.Any]]) -> dict[str, tp.Any]:
     by_case: dict[str, dict[str, list[dict[str, tp.Any]]]] = {}
@@ -449,8 +448,7 @@ def compute_per_case_stats(trials: list[dict[str, tp.Any]]) -> dict[str, tp.Any]
             # Sign test on completeness recall.
             pairs_complete: list[tuple[float, float]] = []
             for trial_idx in range(min(len(m), len(b))):
-                pairs_complete.append((m[trial_idx]["completeness_recall"],
-                                       b[trial_idx]["completeness_recall"]))
+                pairs_complete.append((m[trial_idx]["completeness_recall"], b[trial_idx]["completeness_recall"]))
             case_block["sign_test_completeness"] = stats.sign_test(pairs_complete)
 
         # Inter-judge κ (discretised 0-5, paired across (system, trial)).
@@ -480,5 +478,6 @@ def _summary(values: list[float]) -> dict[str, float]:
 
 if __name__ == "__main__":
     import sys
+
     only = tuple(sys.argv[1:]) if len(sys.argv) > 1 else None
     print(json.dumps(run_all(only_cases=only), default=str, indent=2)[:2000])

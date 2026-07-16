@@ -8,7 +8,14 @@ config = OcrPipelineConfig(
     name="minicpm_o_4bit_v2_structured",
     operators=[
         Preprocess(grayscale=False, max_dimension=1024),
-        VlmOcr(model="openbmb/MiniCPM-o-2_6", prompt=prompts.VLM_OCR_STRUCTURED_V2, backend="transformers", max_tokens=8192, load_in_4bit=True, runtime_env=LEGACY_ENV),
+        VlmOcr(
+            model="openbmb/MiniCPM-o-2_6",
+            prompt=prompts.VLM_OCR_STRUCTURED_V2,
+            backend="transformers",
+            max_tokens=8192,
+            load_in_4bit=True,
+            runtime_env=LEGACY_ENV,
+        ),
         MergePages(),
         ParseIssue(),
     ],

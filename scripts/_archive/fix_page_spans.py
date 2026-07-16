@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import json
 import sys
-import typing as tp
 
 from mausoleo.eval.evaluate import article_text, normalize_text, text_overlap
 
@@ -31,10 +30,7 @@ def union_page_spans(
     ensemble = json.loads(open(ensemble_path).read())
     sources = [json.loads(open(p).read()) for p in source_paths]
 
-    source_normed = [
-        [normalize_text(article_text(a)) for a in s.get("articles", [])]
-        for s in sources
-    ]
+    source_normed = [[normalize_text(article_text(a)) for a in s.get("articles", [])] for s in sources]
 
     fixed_count = 0
     out_articles = []

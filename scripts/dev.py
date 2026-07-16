@@ -5,6 +5,7 @@ Usage:
     python scripts/dev.py inspect
     python scripts/dev.py html-report
 """
+
 from __future__ import annotations
 
 import base64
@@ -202,7 +203,7 @@ def cmd_html_report(_args: list[str]) -> None:
         parts.append('<div class="tabs">')
         for j, date in enumerate(ISSUE_DATES):
             active = "active" if j == 0 else ""
-            parts.append(f'<div class="tab {active}" onclick="switchTab(this, \'{cfg}\', \'{date}\')">{date}</div>')
+            parts.append(f"<div class=\"tab {active}\" onclick=\"switchTab(this, '{cfg}', '{date}')\">{date}</div>")
         parts.append("</div>")
         for j, date in enumerate(ISSUE_DATES):
             active = "active" if j == 0 else ""

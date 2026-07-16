@@ -3,11 +3,11 @@
 Reads the rebuilt aggregate.json + oracle ratios + per-trial JSON files
 and produces references/section_6_5_results.md end-to-end.
 """
+
 from __future__ import annotations
 
 import json
 import pathlib
-import statistics
 
 REPO = pathlib.Path("/tmp/mausoleo")
 AGG = REPO / "eval/case_studies/aggregate.json"
@@ -48,13 +48,9 @@ def main() -> None:
 
     # Pull one Mausoleo case-3 trial's final answer to quote ratios.
     case3_trials = [
-        json.loads((RUNS / f"case3_mausoleo_t{i}.json").read_text())
-        for i in (1, 2, 3) if (RUNS / f"case3_mausoleo_t{i}.json").exists()
+        json.loads((RUNS / f"case3_mausoleo_t{i}.json").read_text()) for i in (1, 2, 3) if (RUNS / f"case3_mausoleo_t{i}.json").exists()
     ]
-    case3_b_trials = [
-        json.loads((RUNS / f"case3_baseline_t{i}.json").read_text())
-        for i in (1, 2, 3) if (RUNS / f"case3_baseline_t{i}.json").exists()
-    ]
+    [json.loads((RUNS / f"case3_baseline_t{i}.json").read_text()) for i in (1, 2, 3) if (RUNS / f"case3_baseline_t{i}.json").exists()]
 
     embed = agg.get("embedder_status", {})
     tok_in = agg.get("tokens_in_total", 0)
@@ -72,22 +68,28 @@ def main() -> None:
     for cid in ("case1", "case2", "case3"):
         cb = per[cid]
         lbl = labels[cid]
-        rows.append(f"| {lbl} | Tool calls | {summary(cb['efficiency_tool_calls']['mausoleo'], 1)} | {summary(cb['efficiency_tool_calls']['baseline'], 1)} |")
-        rows.append(f"| {lbl} | Chars read | {summary(cb['efficiency_chars_read']['mausoleo'], 0)} | {summary(cb['efficiency_chars_read']['baseline'], 0)} |")
+        rows.append(
+            f"| {lbl} | Tool calls | {summary(cb['efficiency_tool_calls']['mausoleo'], 1)} | {summary(cb['efficiency_tool_calls']['baseline'], 1)} |"
+        )
+        rows.append(
+            f"| {lbl} | Chars read | {summary(cb['efficiency_chars_read']['mausoleo'], 0)} | {summary(cb['efficiency_chars_read']['baseline'], 0)} |"
+        )
         if cid == "case3":
-            rows.append(f"| {lbl} | Ratio MAE (lower=better) | {summary(cb['case3_ratio_mae']['mausoleo'], 3)} | {summary(cb['case3_ratio_mae']['baseline'], 3)} |")
-            rows.append(f"| {lbl} | Ratio RMSE (lower=better) | {summary(cb['case3_ratio_rmse']['mausoleo'], 3)} | {summary(cb['case3_ratio_rmse']['baseline'], 3)} |")
+            rows.append(
+                f"| {lbl} | Ratio MAE (lower=better) | {summary(cb['case3_ratio_mae']['mausoleo'], 3)} | {summary(cb['case3_ratio_mae']['baseline'], 3)} |"
+            )
+            rows.append(
+                f"| {lbl} | Ratio RMSE (lower=better) | {summary(cb['case3_ratio_rmse']['mausoleo'], 3)} | {summary(cb['case3_ratio_rmse']['baseline'], 3)} |"
+            )
         else:
-            rows.append(f"| {lbl} | Recall vs GT | {summary(cb['completeness_recall']['mausoleo'], 2)} | {summary(cb['completeness_recall']['baseline'], 2)} |")
+            rows.append(
+                f"| {lbl} | Recall vs GT | {summary(cb['completeness_recall']['mausoleo'], 2)} | {summary(cb['completeness_recall']['baseline'], 2)} |"
+            )
         q_m = quality_combined(cb["quality_judge1_mean"]["mausoleo"], cb["quality_judge2_mean"]["mausoleo"])
         q_b = quality_combined(cb["quality_judge1_mean"]["baseline"], cb["quality_judge2_mean"]["baseline"])
         rows.append(f"| {lbl} | Quality (judge mean) | {summary(q_m, 2)} | {summary(q_b, 2)} |")
 
-    table = (
-        "| Case | Metric | Mausoleo (mean, min, max) | Baseline (mean, min, max) |\n"
-        "|---|---|---|---|\n"
-        + "\n".join(rows)
-    )
+    table = "| Case | Metric | Mausoleo (mean, min, max) | Baseline (mean, min, max) |\n|---|---|---|---|\n" + "\n".join(rows)
 
     # Sign tests
     sign_lines: list[str] = []
@@ -96,19 +98,19 @@ def main() -> None:
         sq = cb["sign_test_quality"]
         n_q = sq.get("n_decisive", 0) + sq.get("ties", 0)
         sign_lines.append(
-            f"- **{labels[cid]} quality** (n={n_q} of 6 = 3 trials × 2 judges; {sq.get('n_decisive',0)} decisive, {sq.get('ties',0)} ties): M wins {sq.get('wins',0)}, B wins {sq.get('losses',0)}; two-sided sign-test p = {fmt(sq.get('p_value'), 3)}."
+            f"- **{labels[cid]} quality** (n={n_q} of 6 = 3 trials × 2 judges; {sq.get('n_decisive', 0)} decisive, {sq.get('ties', 0)} ties): M wins {sq.get('wins', 0)}, B wins {sq.get('losses', 0)}; two-sided sign-test p = {fmt(sq.get('p_value'), 3)}."
         )
         if cid == "case3":
             sr = cb.get("sign_test_case3_rmse_lower_better", {})
             n_r = sr.get("n_decisive", 0) + sr.get("ties", 0)
             sign_lines.append(
-                f"- **{labels[cid]} ratio-RMSE** (n={n_r} of 3 trials, lower=better; {sr.get('n_decisive',0)} decisive, {sr.get('ties',0)} ties): M wins {sr.get('wins',0)}, B wins {sr.get('losses',0)}; p = {fmt(sr.get('p_value'), 3)}."
+                f"- **{labels[cid]} ratio-RMSE** (n={n_r} of 3 trials, lower=better; {sr.get('n_decisive', 0)} decisive, {sr.get('ties', 0)} ties): M wins {sr.get('wins', 0)}, B wins {sr.get('losses', 0)}; p = {fmt(sr.get('p_value'), 3)}."
             )
         else:
             sc = cb["sign_test_completeness"]
             n_c = sc.get("n_decisive", 0) + sc.get("ties", 0)
             sign_lines.append(
-                f"- **{labels[cid]} completeness** (n={n_c} of 3 trials; {sc.get('n_decisive',0)} decisive, {sc.get('ties',0)} ties): M wins {sc.get('wins',0)}, B wins {sc.get('losses',0)}; p = {fmt(sc.get('p_value'), 3)}."
+                f"- **{labels[cid]} completeness** (n={n_c} of 3 trials; {sc.get('n_decisive', 0)} decisive, {sc.get('ties', 0)} ties): M wins {sc.get('wins', 0)}, B wins {sc.get('losses', 0)}; p = {fmt(sc.get('p_value'), 3)}."
             )
     sign_block = "\n".join(sign_lines)
 
@@ -121,12 +123,9 @@ def main() -> None:
     kappa_block = "\n".join(kappa_lines)
 
     # Oracle ratios + sample agent prediction
-    oracle_table = (
-        "| Week | Oracle war fraction |\n|---|---|\n"
-        + "\n".join(
-            f"| {w} | {fmt(oracle_per_week[w]['ratio_war_over_war_plus_domestic'], 3)} |"
-            for w in ("1943-W26", "1943-W27", "1943-W28", "1943-W29", "1943-W30")
-        )
+    oracle_table = "| Week | Oracle war fraction |\n|---|---|\n" + "\n".join(
+        f"| {w} | {fmt(oracle_per_week[w]['ratio_war_over_war_plus_domestic'], 3)} |"
+        for w in ("1943-W26", "1943-W27", "1943-W28", "1943-W29", "1943-W30")
     )
 
     # Pull the best mausoleo case3 trial's parsed ratios.
@@ -134,9 +133,7 @@ def main() -> None:
     for tj in case3_trials:
         rm = tj.get("completeness", {}).get("ratio_metric", {}).get("parsed_ratios", {})
         if rm and len(rm) >= 4:
-            sample_ratios = ", ".join(
-                f"{w}: {fmt(rm.get(w), 3)}" for w in ("1943-W26", "1943-W27", "1943-W28", "1943-W29", "1943-W30")
-            )
+            sample_ratios = ", ".join(f"{w}: {fmt(rm.get(w), 3)}" for w in ("1943-W26", "1943-W27", "1943-W28", "1943-W29", "1943-W30"))
             break
 
     # Per-system tool-call breakdowns: did Mausoleo actually use semantic search?
@@ -194,7 +191,7 @@ metric collapses to almost zero by construction, even when its compiled
 answer is qualitatively excellent.
 
 For the rerun the case-3 metric is replaced. We classified all
-{json.loads(ORACLE.read_text())['n_articles_total']} July-1943 articles
+{json.loads(ORACLE.read_text())["n_articles_total"]} July-1943 articles
 with Sonnet 4.5 over OAuth (one-shot, batched 10 per call, deterministic
 temperature) into WAR / DOMESTIC / OTHER, and aggregated to per-ISO-week
 counts. The oracle war fraction (war / (war + domestic)) is:
@@ -207,18 +204,18 @@ answer; the runner parses those lines and scores MAE + RMSE against the
 oracle vector. Article-id recall is retained as a diagnostic only.
 
 Sample Mausoleo case-3 prediction parsed from one trial:
-{sample_ratios or '(no Mausoleo case-3 trial parsed five weeks)'}
+{sample_ratios or "(no Mausoleo case-3 trial parsed five weeks)"}
 
 ### Case 1 — the missing 1943-07-26
 
 The dissertation's signature finding stands: Mausoleo reaches the
-absent-day node in {fmt(per['case1']['efficiency_tool_calls']['mausoleo']['mean'], 1)}
+absent-day node in {fmt(per["case1"]["efficiency_tool_calls"]["mausoleo"]["mean"], 1)}
 tool calls on average vs the baseline's
-{fmt(per['case1']['efficiency_tool_calls']['baseline']['mean'], 1)},
+{fmt(per["case1"]["efficiency_tool_calls"]["baseline"]["mean"], 1)},
 and consistently surfaces the editorial context that frames the absence
 as evidence of regime collapse. Mausoleo recall vs the article-id GT is
-{fmt(per['case1']['completeness_recall']['mausoleo']['mean'], 2)},
-baseline {fmt(per['case1']['completeness_recall']['baseline']['mean'], 2)}.
+{fmt(per["case1"]["completeness_recall"]["mausoleo"]["mean"], 2)},
+baseline {fmt(per["case1"]["completeness_recall"]["baseline"]["mean"], 2)}.
 The case is reported as a definitional capability gap (the BM25
 baseline cannot return any 26 July article because none exist in the
 corpus); the quantitative numbers in the table reflect this asymmetry.
@@ -226,13 +223,13 @@ corpus); the quantitative numbers in the table reflect this asymmetry.
 ### Case 2 — July 25 regime change
 
 Mausoleo wins on tool calls
-({fmt(per['case2']['efficiency_tool_calls']['mausoleo']['mean'], 1)} vs
-{fmt(per['case2']['efficiency_tool_calls']['baseline']['mean'], 1)}),
-on recall ({fmt(per['case2']['completeness_recall']['mausoleo']['mean'], 2)} vs
-{fmt(per['case2']['completeness_recall']['baseline']['mean'], 2)}), and on
+({fmt(per["case2"]["efficiency_tool_calls"]["mausoleo"]["mean"], 1)} vs
+{fmt(per["case2"]["efficiency_tool_calls"]["baseline"]["mean"], 1)}),
+on recall ({fmt(per["case2"]["completeness_recall"]["mausoleo"]["mean"], 2)} vs
+{fmt(per["case2"]["completeness_recall"]["baseline"]["mean"], 2)}), and on
 quality (judge mean
-{fmt(quality_combined(per['case2']['quality_judge1_mean']['mausoleo'], per['case2']['quality_judge2_mean']['mausoleo'])['mean'], 2)}
-vs {fmt(quality_combined(per['case2']['quality_judge1_mean']['baseline'], per['case2']['quality_judge2_mean']['baseline'])['mean'], 2)}).
+{fmt(quality_combined(per["case2"]["quality_judge1_mean"]["mausoleo"], per["case2"]["quality_judge2_mean"]["mausoleo"])["mean"], 2)}
+vs {fmt(quality_combined(per["case2"]["quality_judge1_mean"]["baseline"], per["case2"]["quality_judge2_mean"]["baseline"])["mean"], 2)}).
 The Mausoleo agent typically descends from the month root to the days
 of 25 and 27 July, reads their summaries, and identifies the editorial
 register shift directly from the summary text; the baseline must
@@ -242,15 +239,15 @@ costs both calls and narrative coherence.
 ### Case 3 — comparative coverage across July
 
 With the ratio-RMSE metric, Mausoleo
-{('beats' if per['case3']['case3_ratio_rmse']['mausoleo']['mean'] < per['case3']['case3_ratio_rmse']['baseline']['mean'] else 'does not clearly beat')}
+{("beats" if per["case3"]["case3_ratio_rmse"]["mausoleo"]["mean"] < per["case3"]["case3_ratio_rmse"]["baseline"]["mean"] else "does not clearly beat")}
 the baseline on ratio accuracy
-(Mausoleo MAE {fmt(per['case3']['case3_ratio_mae']['mausoleo']['mean'], 3)},
-RMSE {fmt(per['case3']['case3_ratio_rmse']['mausoleo']['mean'], 3)};
-Baseline MAE {fmt(per['case3']['case3_ratio_mae']['baseline']['mean'], 3)},
-RMSE {fmt(per['case3']['case3_ratio_rmse']['baseline']['mean'], 3)}),
+(Mausoleo MAE {fmt(per["case3"]["case3_ratio_mae"]["mausoleo"]["mean"], 3)},
+RMSE {fmt(per["case3"]["case3_ratio_rmse"]["mausoleo"]["mean"], 3)};
+Baseline MAE {fmt(per["case3"]["case3_ratio_mae"]["baseline"]["mean"], 3)},
+RMSE {fmt(per["case3"]["case3_ratio_rmse"]["baseline"]["mean"], 3)}),
 while still using fewer tool calls
-({fmt(per['case3']['efficiency_tool_calls']['mausoleo']['mean'], 1)} vs
-{fmt(per['case3']['efficiency_tool_calls']['baseline']['mean'], 1)}) and
+({fmt(per["case3"]["efficiency_tool_calls"]["mausoleo"]["mean"], 1)} vs
+{fmt(per["case3"]["efficiency_tool_calls"]["baseline"]["mean"], 1)}) and
 producing higher judge-quality scores on average. The crucial point is
 methodological: the article-id recall Phase-1 metric scored case 3 at
 0.07 vs 0.11 in Mausoleo's disfavour, but that was an artefact of the
@@ -264,7 +261,7 @@ sentence-transformer model wasn't loaded. The rerun loads
 `paraphrase-multilingual-MiniLM-L12-v2` (384-dim, the same model used
 to build the stored ClickHouse `embedding` column). Smoke-test: the
 nearest day node to the query "Mussolini" by L2 distance is
-**{embed.get('nearest_day_to_mussolini', ['n/a','n/a'])[0]}** (the
+**{embed.get("nearest_day_to_mussolini", ["n/a", "n/a"])[0]}** (the
 regime-change day), which is the right answer. Across the run the
 Mausoleo agent issued
 {semantic_uses} `search_semantic` calls,
@@ -288,7 +285,7 @@ Mausoleo's index-build cost is paid once at corpus ingest and amortises
 across all queries (Phase 1: $28.87 USD for 6,480 article summaries +
 32 day summaries + 1 month summary). The Phase 2 case-study rerun
 consumed {tok_in:,} input tokens + {tok_out:,} output tokens across
-{n_trials} trials over a {wall/60:.1f}-minute wall-time window, billed
+{n_trials} trials over a {wall / 60:.1f}-minute wall-time window, billed
 against the Claude Max subscription quota. The baseline's per-query
 cost is recurrent; Mausoleo's per-query cost is dominated by fast
 summary lookups. The break-even on a single-month corpus is

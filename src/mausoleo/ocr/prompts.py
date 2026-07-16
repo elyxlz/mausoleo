@@ -217,7 +217,7 @@ VLM_OCR_STRUCTURED_V4_CROSSPAGE = (
     '- "text": the COMPLETE transcribed text (do not truncate)\n'
     '- "page_span": [page_number]\n'
     '- "continues": true if the article text is clearly truncated at the end (ends mid-sentence, '
-    'mid-word, or with a dash/ellipsis), false otherwise\n\n'
+    "mid-word, or with a dash/ellipsis), false otherwise\n\n"
     'Output valid JSON: {"articles": [...]}\n'
     "Do NOT wrap in markdown code blocks. Output raw JSON only."
 )

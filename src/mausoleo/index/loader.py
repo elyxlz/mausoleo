@@ -36,6 +36,7 @@ Design constraints:
   yet, we still emit a structural node with an empty summary so the tree is
   navigable end-to-end.
 """
+
 from __future__ import annotations
 
 import dataclasses as dc
@@ -60,6 +61,7 @@ DEFAULT_SUMMARY_DIR = pl.Path("/tmp/mausoleo/eval/summaries")
 # ---------------------------------------------------------------------------
 # ID derivation helpers
 # ---------------------------------------------------------------------------
+
 
 def date_for(node_id: str, level: str) -> tuple[dt.date, dt.date]:
     """Derive ``(date_start, date_end)`` from a deterministic node id."""
@@ -116,6 +118,7 @@ def parent_for(node_id: str, level: str) -> str:
 # ---------------------------------------------------------------------------
 # Reading transcriptions and summaries
 # ---------------------------------------------------------------------------
+
 
 @dc.dataclass(frozen=True)
 class LoaderConfig:
@@ -252,9 +255,7 @@ def build_nodes(cfg: LoaderConfig | None = None) -> list[Node]:
                     )
                 pos = int(art.get("position_in_issue", art_id.rsplit("_a", 1)[-1]))
                 headline = art.get("headline", "")
-                fallback = headline if headline else (
-                    paragraphs[0].get("text", "")[:400] if paragraphs else ""
-                )
+                fallback = headline if headline else (paragraphs[0].get("text", "")[:400] if paragraphs else "")
                 node = _enrich(
                     art_id,
                     "article",
@@ -374,6 +375,7 @@ def build_nodes(cfg: LoaderConfig | None = None) -> list[Node]:
 # ---------------------------------------------------------------------------
 # ClickHouse writes
 # ---------------------------------------------------------------------------
+
 
 def _client(host: str, port: int, database: str) -> tp.Any:
     return clickhouse_connect.get_client(host=host, port=port, database=database)

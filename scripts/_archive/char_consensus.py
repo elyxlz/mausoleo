@@ -10,6 +10,7 @@ The hope: where vetturini's primary says "Taroni" and 3 other sources say
 might be closer to the actual word. Won't fix systematic errors (where ALL
 sources misread the same way) but should help when only the primary disagrees.
 """
+
 from __future__ import annotations
 
 import collections
@@ -57,7 +58,9 @@ def _text_overlap(a: str, b: str) -> float:
     return len(a_words & b_words) / len(a_words | b_words)
 
 
-def _find_matching_versions(target: dict[str, tp.Any], sources: list[dict[str, tp.Any]], min_overlap: float = 0.45, max_versions: int = 4) -> list[str]:
+def _find_matching_versions(
+    target: dict[str, tp.Any], sources: list[dict[str, tp.Any]], min_overlap: float = 0.45, max_versions: int = 4
+) -> list[str]:
     target_text = _article_text(target)
     if len(target_text) < 200:
         return []
@@ -94,9 +97,7 @@ def _consensus_via_alignment(versions: list[str]) -> str:
         return versions[0]
     spine = versions[0]
     others = versions[1:]
-    out_parts: list[str] = []
-    spine_pos = 0
-    consensus = list(spine)
+    list(spine)
     for other in others:
         sm = difflib.SequenceMatcher(None, spine, other, autojunk=False)
         for tag, i1, i2, j1, j2 in sm.get_opcodes():

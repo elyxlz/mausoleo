@@ -13,6 +13,7 @@ markdown drafter cites.
 
 Auth: OAuth via ~/.claude/.credentials.json + oauth-2025-04-20 header.
 """
+
 from __future__ import annotations
 
 import datetime as dt
@@ -21,9 +22,7 @@ import os
 import pathlib
 import random
 import re
-import sys
 import time
-import typing as tp
 import unicodedata
 
 import anthropic
@@ -89,7 +88,10 @@ def _client() -> anthropic.Anthropic:
 
 
 def _call(
-    client: anthropic.Anthropic, user: str, *, max_tokens: int = 800,
+    client: anthropic.Anthropic,
+    user: str,
+    *,
+    max_tokens: int = 800,
     attempt: int = 0,
 ) -> str:
     try:
@@ -100,7 +102,7 @@ def _call(
             temperature=0.0,
             messages=[{"role": "user", "content": user}],
         )
-    except anthropic.APIStatusError as e:
+    except anthropic.APIStatusError:
         if attempt < 2:
             time.sleep(2 + attempt * 3)
             return _call(client, user, max_tokens=max_tokens, attempt=attempt + 1)
@@ -161,7 +163,7 @@ def _day_haystack(date: str) -> str:
     for art in d["articles"]:
         if art.get("headline"):
             parts.append(art["headline"])
-        for para in (art.get("paragraphs") or []):
+        for para in art.get("paragraphs") or []:
             t = para.get("text") or ""
             if t:
                 parts.append(t)
@@ -195,10 +197,12 @@ def task_1_spotcheck(client: anthropic.Anthropic) -> dict:
         clean = []
         for e in ents:
             if isinstance(e, dict) and e.get("entity") and e.get("type"):
-                clean.append({
-                    "entity": str(e["entity"]),
-                    "type": str(e["type"]).upper(),
-                })
+                clean.append(
+                    {
+                        "entity": str(e["entity"]),
+                        "type": str(e["type"]).upper(),
+                    }
+                )
             if len(clean) == 5:
                 break
         haystack = _day_haystack(date)
@@ -209,15 +213,17 @@ def task_1_spotcheck(client: anthropic.Anthropic) -> dict:
             checks.append({**e, "present_in_source": present, "match": how})
             if present:
                 hits += 1
-        results.append({
-            "date": date,
-            "child_count": day_doc.get("child_count"),
-            "summary": summary,
-            "top5_entities": checks,
-            "hits": hits,
-            "out_of": len(checks),
-            "verdict": _verdict(hits, len(checks)),
-        })
+        results.append(
+            {
+                "date": date,
+                "child_count": day_doc.get("child_count"),
+                "summary": summary,
+                "top5_entities": checks,
+                "hits": hits,
+                "out_of": len(checks),
+                "verdict": _verdict(hits, len(checks)),
+            }
+        )
     agg = {
         "PASS": sum(1 for r in results if r["verdict"] == "PASS"),
         "PARTIAL": sum(1 for r in results if r["verdict"] == "PARTIAL"),
@@ -243,9 +249,7 @@ def _entity_set(items: list[dict]) -> set:
 
 def task_2_infoloss(client: anthropic.Anthropic) -> dict:
     rng = random.Random(1944)
-    spot = sorted(random.Random(1943).sample(
-        [d for d in range(1, 32) if d != 26], 10
-    ))
+    spot = sorted(random.Random(1943).sample([d for d in range(1, 32) if d != 26], 10))
     candidates = [d for d in range(1, 32) if d != 26 and d not in spot]
     day_n = rng.choice(candidates)
     date = f"1943-07-{day_n:02d}"
@@ -267,51 +271,47 @@ def task_2_infoloss(client: anthropic.Anthropic) -> dict:
         # NER on the article TRANSCRIPTION (full text), not the summary,
         # so we get a faithful "what entities exist at article level".
         full = text if text else (doc.get("summary") or "")
-        raw = _call(client, NER_FULL_PROMPT.format(summary=full[:6000]),
-                    max_tokens=900)
+        raw = _call(client, NER_FULL_PROMPT.format(summary=full[:6000]), max_tokens=900)
         ents = _parse_json_array(raw)
         clean = []
         for e in ents:
             if isinstance(e, dict) and e.get("entity"):
-                clean.append({
-                    "entity": str(e["entity"]),
-                    "type": str(e.get("type", "")).upper(),
-                })
-        topics_raw = _call(client, TOPICS_PROMPT.format(text=full[:6000]),
-                           max_tokens=300)
+                clean.append(
+                    {
+                        "entity": str(e["entity"]),
+                        "type": str(e.get("type", "")).upper(),
+                    }
+                )
+        topics_raw = _call(client, TOPICS_PROMPT.format(text=full[:6000]), max_tokens=300)
         topics = _parse_json_array(topics_raw)
-        article_payload.append({
-            "article_id": art_id,
-            "headline": doc.get("summary", "").splitlines()[0][:200],
-            "char_len": sz,
-            "entities": clean,
-            "topics": topics,
-        })
+        article_payload.append(
+            {
+                "article_id": art_id,
+                "headline": doc.get("summary", "").splitlines()[0][:200],
+                "char_len": sz,
+                "entities": clean,
+                "topics": topics,
+            }
+        )
         article_ent_union.extend(clean)
 
     # Day, week, month NER + topics.
     day_doc = json.load(open(DAY / f"{date}.json"))
-    day_raw = _call(client, NER_FULL_PROMPT.format(summary=day_doc["summary"]),
-                    max_tokens=900)
+    day_raw = _call(client, NER_FULL_PROMPT.format(summary=day_doc["summary"]), max_tokens=900)
     day_ents = _parse_json_array(day_raw)
-    day_topics = _parse_json_array(_call(
-        client, TOPICS_PROMPT.format(text=day_doc["summary"]), max_tokens=300))
+    day_topics = _parse_json_array(_call(client, TOPICS_PROMPT.format(text=day_doc["summary"]), max_tokens=300))
 
     # Find covering week.
     week_node_id = day_doc["parent_id"]
     week_doc = json.load(open(WEEK / f"{week_node_id}.json"))
-    week_raw = _call(client, NER_FULL_PROMPT.format(summary=week_doc["summary"]),
-                     max_tokens=900)
+    week_raw = _call(client, NER_FULL_PROMPT.format(summary=week_doc["summary"]), max_tokens=900)
     week_ents = _parse_json_array(week_raw)
-    week_topics = _parse_json_array(_call(
-        client, TOPICS_PROMPT.format(text=week_doc["summary"]), max_tokens=300))
+    week_topics = _parse_json_array(_call(client, TOPICS_PROMPT.format(text=week_doc["summary"]), max_tokens=300))
 
     month_doc = json.load(open(MONTH))
-    month_raw = _call(client, NER_FULL_PROMPT.format(summary=month_doc["summary"]),
-                      max_tokens=900)
+    month_raw = _call(client, NER_FULL_PROMPT.format(summary=month_doc["summary"]), max_tokens=900)
     month_ents = _parse_json_array(month_raw)
-    month_topics = _parse_json_array(_call(
-        client, TOPICS_PROMPT.format(text=month_doc["summary"]), max_tokens=300))
+    month_topics = _parse_json_array(_call(client, TOPICS_PROMPT.format(text=month_doc["summary"]), max_tokens=300))
 
     art_set = {_normalise(e["entity"]) for e in article_ent_union if e.get("entity")}
     day_set = {_normalise(e.get("entity", "")) for e in day_ents}
@@ -404,7 +404,7 @@ def main() -> None:
     print("[3/3] 25-July side-by-side (no LLM)...", flush=True)
     t3 = task_3_july25()
     out = {
-        "generated": dt.datetime.now(dt.timezone.utc).isoformat(),
+        "generated": dt.datetime.now(dt.UTC).isoformat(),
         "model": MODEL,
         "task_1_spotcheck": t1,
         "task_2_infoloss": t2,

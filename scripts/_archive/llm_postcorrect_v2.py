@@ -11,11 +11,11 @@ ensemble has "Taroni", the LLM has clear evidence which is right.
 Usage:
     uv run --no-project python scripts/llm_postcorrect_v2.py <ens.json> <date> <out.json>
 """
+
 from __future__ import annotations
 
 import difflib
 import json
-import os
 import pathlib as pl
 import re
 import sys
@@ -155,7 +155,7 @@ def main() -> None:
     prompts: list[str] = []
     for idx, original, alts in candidates:
         all_versions = [original] + alts
-        version_block = "\n\n".join(f"VERSION {k+1}:\n\"\"\"\n{v}\n\"\"\"" for k, v in enumerate(all_versions))
+        version_block = "\n\n".join(f'VERSION {k + 1}:\n"""\n{v}\n"""' for k, v in enumerate(all_versions))
         prompt_text = CONSENSUS_PROMPT.format(N=len(all_versions), VERSIONS=version_block)
         msg = [{"role": "user", "content": prompt_text}]
         prompts.append(tokenizer.apply_chat_template(msg, tokenize=False, add_generation_prompt=True))

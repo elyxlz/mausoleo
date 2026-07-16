@@ -8,13 +8,12 @@ Reads eval/predictions/ensemble_30min_<date>.json, applies:
 
 Writes eval/transcriptions/<date>.json with cleaned articles.
 """
+
 from __future__ import annotations
 
-import dataclasses as dc
 import json
 import pathlib as pl
 import re
-import sys
 import typing as tp
 from difflib import SequenceMatcher
 
@@ -36,9 +35,7 @@ def article_chars(art: dict[str, tp.Any]) -> int:
     return sum(len(p.get("text", "")) for p in art.get("paragraphs", []))
 
 
-_PAGE_HEADER_RE = re.compile(
-    r"^\s*IL MESSAGGERO\s*[-–—]\s*\w+\s+\d+\s+\w+\s+19\d{2}", re.IGNORECASE
-)
+_PAGE_HEADER_RE = re.compile(r"^\s*IL MESSAGGERO\s*[-–—]\s*\w+\s+\d+\s+\w+\s+19\d{2}", re.IGNORECASE)
 _TRUNC_END_RE = re.compile(r"[a-z,;\-—–](\s|$)$")
 _LOWER_START_RE = re.compile(r"^[a-zàèéìòù]")
 
@@ -62,13 +59,21 @@ def is_truncated_headline(h: str) -> bool:
     first_word = h.split()[0] if h.split() else ""
     if not first_word:
         return False
-    if first_word[0].islower() and not first_word[0] in "lda":
+    if first_word[0].islower() and first_word[0] not in "lda":
         return True
     if first_word in {"di", "el", "al", "il", "la", "le", "lo", "del", "dal"}:
         return False
     truncated_starts = (
-        "ACCIA", "ATTAGLIA", "EL MEDITERRANEO", "RICANI", "OGGIO", "ortofrutticoli",
-        "AN SOCIE", "OGGI al SU", "GI ", "incrociatore",
+        "ACCIA",
+        "ATTAGLIA",
+        "EL MEDITERRANEO",
+        "RICANI",
+        "OGGIO",
+        "ortofrutticoli",
+        "AN SOCIE",
+        "OGGI al SU",
+        "GI ",
+        "incrociatore",
     )
     if any(h.startswith(s) for s in truncated_starts):
         return True
@@ -202,19 +207,10 @@ def stitch_fragments(articles: list[dict[str, tp.Any]]) -> tuple[list[dict[str, 
             continue
         body = article_text(a).strip()
         headline = (a.get("headline") or "").strip()
-        if (
-            i + 1 < len(articles)
-            and headline
-            and len(body) < 100
-            and a.get("unit_type") == "article"
-        ):
+        if i + 1 < len(articles) and headline and len(body) < 100 and a.get("unit_type") == "article":
             nxt = articles[i + 1]
             nxt_body = article_text(nxt).strip()
-            if (
-                not (nxt.get("headline") or "").strip()
-                and len(nxt_body) > 200
-                and nxt.get("unit_type") == "article"
-            ):
+            if not (nxt.get("headline") or "").strip() and len(nxt_body) > 200 and nxt.get("unit_type") == "article":
                 merged = dict(a)
                 merged_paragraphs = list(a.get("paragraphs", []))
                 merged_paragraphs.extend(nxt.get("paragraphs", []))
@@ -237,13 +233,7 @@ def stitch_crosspage(articles: list[dict[str, tp.Any]]) -> tuple[list[dict[str, 
             skip_next -= 1
             continue
         body = article_text(a).rstrip()
-        if (
-            i + 1 < len(articles)
-            and a.get("unit_type") == "article"
-            and body
-            and _TRUNC_END_RE.search(body)
-            and len(body) > 150
-        ):
+        if i + 1 < len(articles) and a.get("unit_type") == "article" and body and _TRUNC_END_RE.search(body) and len(body) > 150:
             nxt = articles[i + 1]
             nxt_body = article_text(nxt).lstrip()
             if (
@@ -332,8 +322,12 @@ def main() -> None:
         out_path.write_text(json.dumps(cleaned, indent=2, ensure_ascii=False))
         for k, v in stats.items():
             total_stats[k] += v
-        print(f"{cleaned['date']:<12} {stats['before']:>6} {stats['after']:>6} {stats['dropped_garbage']:>6} {stats['stitched_fragments']:>8} {stats['stitched_crosspage']:>8} {stats['deduped']:>6}")
-    print(f"\n{'TOTAL':<12} {total_stats['before']:>6} {total_stats['after']:>6} {total_stats['dropped_garbage']:>6} {total_stats['stitched_fragments']:>8} {total_stats['stitched_crosspage']:>8} {total_stats['deduped']:>6}")
+        print(
+            f"{cleaned['date']:<12} {stats['before']:>6} {stats['after']:>6} {stats['dropped_garbage']:>6} {stats['stitched_fragments']:>8} {stats['stitched_crosspage']:>8} {stats['deduped']:>6}"
+        )
+    print(
+        f"\n{'TOTAL':<12} {total_stats['before']:>6} {total_stats['after']:>6} {total_stats['dropped_garbage']:>6} {total_stats['stitched_fragments']:>8} {total_stats['stitched_crosspage']:>8} {total_stats['deduped']:>6}"
+    )
 
 
 if __name__ == "__main__":

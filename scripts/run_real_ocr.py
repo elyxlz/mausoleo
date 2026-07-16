@@ -118,7 +118,7 @@ def main() -> None:
 
     if len(sys.argv) < 2 or sys.argv[1] in ("-h", "--help"):
         configs = list_configs()
-        print(f"usage: run_real_ocr.py <config|all> [<config> ...] [date|all] [--force]")
+        print("usage: run_real_ocr.py <config|all> [<config> ...] [date|all] [--force]")
         print(f"\navailable configs ({len(configs)}):")
         for c in configs:
             print(f"  {c}")

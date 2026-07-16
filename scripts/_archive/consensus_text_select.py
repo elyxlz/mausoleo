@@ -77,8 +77,7 @@ def consensus_select(
         chosen = candidates[best_idx]
         new_art = dict(art)
         new_art["paragraphs"] = [
-            {"id": p.get("id", f"p{j}") if isinstance(p, dict) else f"p{j}",
-             "text": p.get("text", str(p)) if isinstance(p, dict) else str(p)}
+            {"id": p.get("id", f"p{j}") if isinstance(p, dict) else f"p{j}", "text": p.get("text", str(p)) if isinstance(p, dict) else str(p)}
             for j, p in enumerate(chosen.get("paragraphs", []))
         ]
         out_articles.append(new_art)

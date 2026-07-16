@@ -11,6 +11,7 @@ re-runs skip cached work. Fresh runtime ~2-3h per issue on 2x RTX 3090.
 Violates the 30-min/issue budget; use configs/ocr/ensemble_30min.py or
 scripts/ensemble_pipeline_30min.py for the budget-constrained variant (0.8824).
 """
+
 from mausoleo.ocr import prompts
 from mausoleo.ocr.config import OcrPipelineConfig
 from mausoleo.ocr.operators import (
@@ -85,23 +86,23 @@ def _col_qwen25(name, n, max_model_len=12288):
 
 
 SUB_PIPELINES = (
-    _col_vlm("exp_045_qwen3vl_vllm",           3, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
-    _col_vlm("col3_qwen3_8b_v2_structured",    3, prompts.VLM_OCR_STRUCTURED_V2, "transformers"),
-    _col_vlm("exp_055_col6_ads_prompt",        6, prompts.VLM_OCR_ADS_FOCUSED,   "vllm"),
-    _yolo_vlm("exp_010_yolo_qwen3_8b",         "Qwen/Qwen3-VL-8B-Instruct"),
-    _col_vlm("col4_qwen3_8b_v2_structured",    4, prompts.VLM_OCR_STRUCTURED_V2, "transformers"),
-    _col_vlm("exp_097_col4_qwen3vl_vllm",      4, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
-    _col_vlm("col5_qwen3_8b_v2_structured",    5, prompts.VLM_OCR_STRUCTURED_V2, "transformers"),
-    _col_vlm("exp_052_col6_vllm",              6, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
-    _yolo_vlm("yolo_qwen25_7b_v2_structured",  "Qwen/Qwen2.5-VL-7B-Instruct"),
-    _col_vlm("exp_098_col5_qwen3vl_vllm",      5, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
-    _col_vlm("exp_099_col2_qwen3vl_vllm",      2, prompts.VLM_OCR_STRUCTURED_V2, "vllm", max_model_len=20480),
-    _fullpage("exp_102_fullpage_vllm",         "Qwen/Qwen3-VL-8B-Instruct"),
-    _col_vlm("exp_105_col1_qwen3vl_vllm",      1, prompts.VLM_OCR_STRUCTURED_V2, "vllm", max_model_len=20480),
-    _fullpage("exp_107_fullpage_qwen25vl",     "Qwen/Qwen2.5-VL-7B-Instruct"),
-    _col_qwen25("exp_108_col3_qwen25vl",       3),
-    _col_qwen25("exp_109_col4_qwen25vl",       4),
-    _col_qwen25("exp_111_col2_qwen25vl",       2, max_model_len=20480),
+    _col_vlm("exp_045_qwen3vl_vllm", 3, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
+    _col_vlm("col3_qwen3_8b_v2_structured", 3, prompts.VLM_OCR_STRUCTURED_V2, "transformers"),
+    _col_vlm("exp_055_col6_ads_prompt", 6, prompts.VLM_OCR_ADS_FOCUSED, "vllm"),
+    _yolo_vlm("exp_010_yolo_qwen3_8b", "Qwen/Qwen3-VL-8B-Instruct"),
+    _col_vlm("col4_qwen3_8b_v2_structured", 4, prompts.VLM_OCR_STRUCTURED_V2, "transformers"),
+    _col_vlm("exp_097_col4_qwen3vl_vllm", 4, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
+    _col_vlm("col5_qwen3_8b_v2_structured", 5, prompts.VLM_OCR_STRUCTURED_V2, "transformers"),
+    _col_vlm("exp_052_col6_vllm", 6, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
+    _yolo_vlm("yolo_qwen25_7b_v2_structured", "Qwen/Qwen2.5-VL-7B-Instruct"),
+    _col_vlm("exp_098_col5_qwen3vl_vllm", 5, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
+    _col_vlm("exp_099_col2_qwen3vl_vllm", 2, prompts.VLM_OCR_STRUCTURED_V2, "vllm", max_model_len=20480),
+    _fullpage("exp_102_fullpage_vllm", "Qwen/Qwen3-VL-8B-Instruct"),
+    _col_vlm("exp_105_col1_qwen3vl_vllm", 1, prompts.VLM_OCR_STRUCTURED_V2, "vllm", max_model_len=20480),
+    _fullpage("exp_107_fullpage_qwen25vl", "Qwen/Qwen2.5-VL-7B-Instruct"),
+    _col_qwen25("exp_108_col3_qwen25vl", 3),
+    _col_qwen25("exp_109_col4_qwen25vl", 4),
+    _col_qwen25("exp_111_col2_qwen25vl", 2, max_model_len=20480),
     OcrPipelineConfig(
         name="exp_125_yolo_smallconf_vllm",
         operators=[
@@ -128,25 +129,25 @@ config = OcrPipelineConfig(
             sub_configs=SUB_PIPELINES,
             primary_name="exp_045_qwen3vl_vllm",
             replacement_chain=(
-                ("col3_qwen3_8b_v2_structured",   0.75, 1.15),
-                ("exp_055_col6_ads_prompt",       0.75, 1.08),
-                ("exp_010_yolo_qwen3_8b",         0.50, 1.08),
-                ("col4_qwen3_8b_v2_structured",   0.75, 1.02),
-                ("exp_097_col4_qwen3vl_vllm",     0.75, 1.02),
+                ("col3_qwen3_8b_v2_structured", 0.75, 1.15),
+                ("exp_055_col6_ads_prompt", 0.75, 1.08),
+                ("exp_010_yolo_qwen3_8b", 0.50, 1.08),
+                ("col4_qwen3_8b_v2_structured", 0.75, 1.02),
+                ("exp_097_col4_qwen3vl_vllm", 0.75, 1.02),
             ),
             additive_sources=(
-                ("col5_qwen3_8b_v2_structured",   0.50, 100.0),
-                ("exp_052_col6_vllm",             0.30, 100.0),
-                ("yolo_qwen25_7b_v2_structured",  0.50, 100.0),
-                ("exp_098_col5_qwen3vl_vllm",     0.50, 100.0),
-                ("exp_099_col2_qwen3vl_vllm",     0.75, 100.0),
-                ("exp_102_fullpage_vllm",         0.75, 100.0),
-                ("exp_105_col1_qwen3vl_vllm",     0.75, 100.0),
-                ("exp_107_fullpage_qwen25vl",     0.75, 100.0),
-                ("exp_108_col3_qwen25vl",         0.75, 100.0),
-                ("exp_109_col4_qwen25vl",         0.75, 100.0),
-                ("exp_111_col2_qwen25vl",         0.75, 100.0),
-                ("exp_125_yolo_smallconf_vllm",   0.75, 100.0),
+                ("col5_qwen3_8b_v2_structured", 0.50, 100.0),
+                ("exp_052_col6_vllm", 0.30, 100.0),
+                ("yolo_qwen25_7b_v2_structured", 0.50, 100.0),
+                ("exp_098_col5_qwen3vl_vllm", 0.50, 100.0),
+                ("exp_099_col2_qwen3vl_vllm", 0.75, 100.0),
+                ("exp_102_fullpage_vllm", 0.75, 100.0),
+                ("exp_105_col1_qwen3vl_vllm", 0.75, 100.0),
+                ("exp_107_fullpage_qwen25vl", 0.75, 100.0),
+                ("exp_108_col3_qwen25vl", 0.75, 100.0),
+                ("exp_109_col4_qwen25vl", 0.75, 100.0),
+                ("exp_111_col2_qwen25vl", 0.75, 100.0),
+                ("exp_125_yolo_smallconf_vllm", 0.75, 100.0),
             ),
             quality_select_sources=(
                 "exp_045_qwen3vl_vllm",

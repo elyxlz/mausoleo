@@ -41,7 +41,9 @@ class LlmPostCorrectOperator(StatefulOperator[LlmPostCorrect]):
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
         self.tokenizer = AutoTokenizer.from_pretrained(self.config.model, trust_remote_code=True)
-        self.hf_model = AutoModelForCausalLM.from_pretrained(self.config.model, device_map="auto", trust_remote_code=True, torch_dtype=torch.bfloat16)
+        self.hf_model = AutoModelForCausalLM.from_pretrained(
+            self.config.model, device_map="auto", trust_remote_code=True, torch_dtype=torch.bfloat16
+        )
 
     def __call__(self, batch: dict[str, tp.Any]) -> dict[str, tp.Any]:
         if self.config.mock:
@@ -64,7 +66,7 @@ class LlmPostCorrectOperator(StatefulOperator[LlmPostCorrect]):
                 inputs = inputs.to(self.hf_model.device)
                 with torch.no_grad():
                     output_ids = self.hf_model.generate(inputs, max_new_tokens=self.config.max_tokens)
-                generated = output_ids[:, inputs.shape[1]:]
+                generated = output_ids[:, inputs.shape[1] :]
                 corrected.append(self.tokenizer.batch_decode(generated, skip_special_tokens=True)[0].strip())
 
         result = dict(batch)

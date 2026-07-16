@@ -13,6 +13,7 @@ def length_quality(text: str) -> float:
     if q < 0.30:
         return 0.0
     import math
+
     return q * math.sqrt(max(len(text), 1))
 
 
@@ -24,10 +25,7 @@ def select_longest_quality_text(
     headline_delta: float = 0.15,
 ) -> dict[str, tp.Any]:
     ensemble_articles = ensemble.get("articles", [])
-    source_normed = [
-        [(normalize_text(article_text(a)), a) for a in src.get("articles", [])]
-        for src in sources
-    ]
+    source_normed = [[(normalize_text(article_text(a)), a) for a in src.get("articles", [])] for src in sources]
 
     replaced = 0
     headline_replaced = 0

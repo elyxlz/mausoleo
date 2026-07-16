@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import dataclasses as dc
-import json
 import pathlib as pl
 import typing as tp
 
@@ -48,6 +47,7 @@ class SubPipelineOcrOperator(StatefulOperator[SubPipelineOcr]):
     def _ensure_vlm(self) -> tp.Any:
         if self._vlm is None:
             from mausoleo.ocr.operators.vlm_ocr import VlmOcr, VlmOcrOperator
+
             vlm_config = VlmOcr(
                 model=self.config.model,
                 prompt=self.config.prompt,
@@ -65,6 +65,7 @@ class SubPipelineOcrOperator(StatefulOperator[SubPipelineOcr]):
     def _ensure_yolo(self) -> tp.Any:
         if self._yolo is None:
             from mausoleo.ocr.operators.yolo_crop import YoloCrop, YoloCropOperator
+
             yolo_config = YoloCrop(
                 model=self.config.yolo_model,
                 conf_threshold=self.config.yolo_conf,
@@ -95,6 +96,7 @@ class SubPipelineOcrOperator(StatefulOperator[SubPipelineOcr]):
     def _run_detector(self, row: dict[str, tp.Any]) -> dict[str, tp.Any]:
         if self.config.detector == "column_split":
             from mausoleo.ocr.operators.column_split import ColumnSplit, column_split
+
             cs_config = ColumnSplit(
                 num_columns=self.config.num_columns,
                 overlap_pct=self.config.overlap_pct,
@@ -119,6 +121,7 @@ class SubPipelineOcrOperator(StatefulOperator[SubPipelineOcr]):
     def _run_merge_parse(self, row: dict[str, tp.Any]) -> str:
         from mausoleo.ocr.operators.merge import MergePages, merge_pages
         from mausoleo.ocr.operators.parse import ParseIssue, parse_issue
+
         row = merge_pages(row, config=MergePages(mock=self.config.mock))
         row = parse_issue(row, config=ParseIssue(mock=self.config.mock))
         return str(row["issue_json"])

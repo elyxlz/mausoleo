@@ -12,6 +12,7 @@ Algorithm:
 Usage:
     uv run --no-project python scripts/blob_replace_v2.py <ens.json> <date> <out.json>
 """
+
 from __future__ import annotations
 
 import difflib

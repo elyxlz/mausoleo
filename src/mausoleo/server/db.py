@@ -5,6 +5,7 @@ adapter. clickhouse-connect ships an async client too, but its API is
 slightly different and not needed for our throughput; the sync calls run in
 FastAPI's worker thread pool.
 """
+
 from __future__ import annotations
 
 import dataclasses as dc
@@ -24,7 +25,7 @@ class DbConfig:
     password: str = ""
 
     @classmethod
-    def from_env(cls) -> "DbConfig":
+    def from_env(cls) -> DbConfig:
         return cls(
             host=os.environ.get("CLICKHOUSE_HOST", "127.0.0.1"),
             port=int(os.environ.get("CLICKHOUSE_PORT", "8123")),

@@ -3,6 +3,7 @@
 All endpoints return plain ``dict`` payloads (FastAPI auto-serializes them).
 The CLI consumes the JSON directly; we keep the schema simple and stable.
 """
+
 from __future__ import annotations
 
 import datetime as dt
@@ -22,6 +23,7 @@ router = fa.APIRouter()
 # Request models
 # ---------------------------------------------------------------------------
 
+
 class SearchRequest(pyd.BaseModel):
     query: str
     level: str | None = None
@@ -33,6 +35,7 @@ class SearchRequest(pyd.BaseModel):
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
 
 def _get_db(request: fa.Request) -> Db:
     db = getattr(request.app.state, "db", None)
@@ -57,6 +60,7 @@ def _serialize_node(row: dict[str, tp.Any]) -> dict[str, tp.Any]:
 # Tree traversal
 # ---------------------------------------------------------------------------
 
+
 @router.get("/health")
 async def health() -> dict[str, str]:
     return {"status": "ok"}
@@ -66,13 +70,9 @@ async def health() -> dict[str, str]:
 async def root_node(request: fa.Request) -> dict[str, tp.Any]:
     db = _get_db(request)
     # Prefer a real archive node; fall back to the highest-level node we have.
-    row = db.query_one(
-        "SELECT * FROM nodes WHERE node_id = 'archive' LIMIT 1"
-    )
+    row = db.query_one("SELECT * FROM nodes WHERE node_id = 'archive' LIMIT 1")
     if not row:
-        row = db.query_one(
-            "SELECT * FROM nodes ORDER BY level DESC, date_start ASC LIMIT 1"
-        )
+        row = db.query_one("SELECT * FROM nodes ORDER BY level DESC, date_start ASC LIMIT 1")
     if not row:
         raise fa.HTTPException(status_code=404, detail="empty index")
     return _serialize_node(row)
@@ -99,9 +99,7 @@ async def get_children(
 ) -> dict[str, tp.Any]:
     db = _get_db(request)
     rows = db.query(
-        "SELECT * FROM nodes WHERE parent_id = {nid:String} "
-        "ORDER BY position ASC, date_start ASC "
-        "LIMIT {lim:UInt32} OFFSET {off:UInt32}",
+        "SELECT * FROM nodes WHERE parent_id = {nid:String} ORDER BY position ASC, date_start ASC LIMIT {lim:UInt32} OFFSET {off:UInt32}",
         {"nid": node_id, "lim": int(limit), "off": int(offset)},
     )
     total_row = db.query_one(
@@ -158,8 +156,7 @@ async def get_text(node_id: str, request: fa.Request) -> dict[str, tp.Any]:
     visited: set[str] = set()
     while frontier:
         rows = db.query(
-            "SELECT node_id, level, parent_id, position, date_start, raw_text "
-            "FROM nodes WHERE parent_id IN ({ids:Array(String)})",
+            "SELECT node_id, level, parent_id, position, date_start, raw_text FROM nodes WHERE parent_id IN ({ids:Array(String)})",
             {"ids": frontier},
         )
         next_frontier: list[str] = []
@@ -193,6 +190,7 @@ async def get_text(node_id: str, request: fa.Request) -> dict[str, tp.Any]:
 # ---------------------------------------------------------------------------
 # Search
 # ---------------------------------------------------------------------------
+
 
 @router.post("/search/semantic")
 async def search_semantic(req: SearchRequest, request: fa.Request) -> dict[str, tp.Any]:
@@ -245,33 +243,21 @@ async def search_hybrid(req: SearchRequest, request: fa.Request) -> dict[str, tp
 # Stats
 # ---------------------------------------------------------------------------
 
+
 @router.get("/stats")
 async def stats(request: fa.Request) -> dict[str, tp.Any]:
     db = _get_db(request)
     total = db.query_one("SELECT count() AS c FROM nodes")
-    by_level = db.query(
-        "SELECT level, count() AS n, min(date_start) AS d_min, max(date_end) AS d_max "
-        "FROM nodes GROUP BY level ORDER BY level"
-    )
-    sources = db.query(
-        "SELECT source, count() AS n FROM nodes GROUP BY source ORDER BY n DESC"
-    )
+    by_level = db.query("SELECT level, count() AS n, min(date_start) AS d_min, max(date_end) AS d_max FROM nodes GROUP BY level ORDER BY level")
+    sources = db.query("SELECT source, count() AS n FROM nodes GROUP BY source ORDER BY n DESC")
     return {
         "total": int(total["c"]) if total else 0,
         "by_level": [
             {
                 "level": r["level"],
                 "count": int(r["n"]),
-                "date_min": (
-                    r["d_min"].isoformat()
-                    if isinstance(r["d_min"], (dt.date, dt.datetime))
-                    else r["d_min"]
-                ),
-                "date_max": (
-                    r["d_max"].isoformat()
-                    if isinstance(r["d_max"], (dt.date, dt.datetime))
-                    else r["d_max"]
-                ),
+                "date_min": (r["d_min"].isoformat() if isinstance(r["d_min"], (dt.date, dt.datetime)) else r["d_min"]),
+                "date_max": (r["d_max"].isoformat() if isinstance(r["d_max"], (dt.date, dt.datetime)) else r["d_max"]),
             }
             for r in by_level
         ],

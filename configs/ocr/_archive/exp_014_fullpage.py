@@ -5,7 +5,13 @@ from mausoleo.ocr.operators import MergePages, ParseIssue, VlmOcr
 config = OcrPipelineConfig(
     name="exp_014_fullpage",
     operators=[
-        VlmOcr(model="Qwen/Qwen3-VL-8B-Instruct", prompt=prompts.VLM_OCR_STRUCTURED_V2, backend="transformers", max_tokens=8192, max_model_len=16384),
+        VlmOcr(
+            model="Qwen/Qwen3-VL-8B-Instruct",
+            prompt=prompts.VLM_OCR_STRUCTURED_V2,
+            backend="transformers",
+            max_tokens=8192,
+            max_model_len=16384,
+        ),
         MergePages(),
         ParseIssue(),
     ],

@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import dataclasses as dc
 import json
-import sys
 import typing as tp
 
 from mausoleo.ocr.operators.base import BaseOperatorConfig, OperatorType, register_operator
@@ -26,6 +25,7 @@ def _import_merge_helpers() -> tuple[tp.Callable[..., tp.Any], ...]:
         select_best_text,
         trim_predictions,
     )
+
     return trim_predictions, merge_with_replacement, select_best_text, replace_with_pairs
 
 

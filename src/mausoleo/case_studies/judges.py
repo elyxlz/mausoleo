@@ -9,6 +9,7 @@ Both judges score a (question, answer) pair on three dimensions: factual
 accuracy, comprehensiveness, insight, each on a 0-5 scale. Output is a
 strict JSON object plus a one-paragraph rationale.
 """
+
 from __future__ import annotations
 
 import dataclasses as dc
@@ -23,7 +24,6 @@ from mausoleo.case_studies.agent import (
     OAUTH_BETA,
     PRICING,
     _load_token,
-    _add_cost,
 )
 
 JUDGE1_MODEL_PREF = "claude-opus-4-5"  # actual id resolved at runtime
@@ -59,8 +59,8 @@ JUDGE_PROMPT_TEMPLATE = (
     "Evaluate the answer on the three-dimension rubric (factual accuracy, "
     "comprehensiveness, insight). Output STRICT JSON only, no prose, no code "
     "fences, exactly:\n"
-    "{{\"factual\": <0-5>, \"comprehensive\": <0-5>, \"insight\": <0-5>, "
-    "\"rationale\": \"<one paragraph, 1-3 sentences>\"}}"
+    '{{"factual": <0-5>, "comprehensive": <0-5>, "insight": <0-5>, '
+    '"rationale": "<one paragraph, 1-3 sentences>"}}'
 )
 
 
@@ -150,9 +150,7 @@ def judge_one(question: str, answer: str, system: str) -> JudgeResult:
     if _JUDGE1_RESOLVED is None:
         _JUDGE1_RESOLVED = _resolve_judge1_model()
     model = _JUDGE1_RESOLVED
-    user_prompt = JUDGE_PROMPT_TEMPLATE.format(
-        question=question, answer=answer or "(empty)", system=system
-    )
+    user_prompt = JUDGE_PROMPT_TEMPLATE.format(question=question, answer=answer or "(empty)", system=system)
     try:
         text, usage = _judge_call(model, JUDGE1_SYSTEM, user_prompt)
     except Exception as e:
@@ -168,17 +166,14 @@ def judge_one(question: str, answer: str, system: str) -> JudgeResult:
         raw_text=text[:1000],
     )
     p = PRICING.get(model, {"in": 3.0, "out": 15.0})
-    res.cost_usd = (
-        (getattr(usage, "input_tokens", 0) or 0) / 1_000_000 * p["in"]
-        + (getattr(usage, "output_tokens", 0) or 0) / 1_000_000 * p["out"]
-    )
+    res.cost_usd = (getattr(usage, "input_tokens", 0) or 0) / 1_000_000 * p["in"] + (getattr(usage, "output_tokens", 0) or 0) / 1_000_000 * p[
+        "out"
+    ]
     return res
 
 
 def judge_two(question: str, answer: str, system: str) -> JudgeResult:
-    user_prompt = JUDGE_PROMPT_TEMPLATE.format(
-        question=question, answer=answer or "(empty)", system=system
-    )
+    user_prompt = JUDGE_PROMPT_TEMPLATE.format(question=question, answer=answer or "(empty)", system=system)
     try:
         text, usage = _judge_call(JUDGE2_MODEL, JUDGE2_SYSTEM, user_prompt)
     except Exception as e:
@@ -194,8 +189,7 @@ def judge_two(question: str, answer: str, system: str) -> JudgeResult:
         raw_text=text[:1000],
     )
     p = PRICING.get(JUDGE2_MODEL, {"in": 3.0, "out": 15.0})
-    res.cost_usd = (
-        (getattr(usage, "input_tokens", 0) or 0) / 1_000_000 * p["in"]
-        + (getattr(usage, "output_tokens", 0) or 0) / 1_000_000 * p["out"]
-    )
+    res.cost_usd = (getattr(usage, "input_tokens", 0) or 0) / 1_000_000 * p["in"] + (getattr(usage, "output_tokens", 0) or 0) / 1_000_000 * p[
+        "out"
+    ]
     return res

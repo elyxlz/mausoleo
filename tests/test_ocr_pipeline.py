@@ -4,7 +4,7 @@ import dataclasses as dc
 
 from mausoleo.ocr.config import OcrPipelineConfig
 from mausoleo.ocr.models import Issue, extract_full_text, issue_from_dict
-from mausoleo.ocr.operators import LlmCleanup, MergePages, ParseIssue, VlmOcr, WholeIssueVlm
+from mausoleo.ocr.operators import LlmCleanup, ParseIssue, VlmOcr, WholeIssueVlm
 from mausoleo.ocr.pipeline import run_pipeline
 
 

@@ -20,6 +20,7 @@ def setup_ray(n_gpu_operators: int = 1) -> int:
     if not ray.is_initialized():
         import os
         import torch
+
         torch_lib = os.path.join(os.path.dirname(torch.__file__), "lib")
         cudnn_lib = os.path.join(os.path.dirname(torch.__file__), "..", "nvidia", "cudnn", "lib")
         existing_ld = os.environ.get("LD_LIBRARY_PATH", "")

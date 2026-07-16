@@ -3,12 +3,12 @@
 One OcrPipelineConfig can contain an EnsembleOcr op that internally orchestrates
 all column-split/yolo/VLM variants, then applies trim + merge + quality_text_select.
 """
+
 from __future__ import annotations
 
 import base64
 import dataclasses as dc
 import json
-import sys
 import typing as tp
 
 from mausoleo.ocr.operators.base import BaseOperatorConfig, OperatorType, register_operator

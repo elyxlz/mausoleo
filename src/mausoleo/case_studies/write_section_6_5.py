@@ -3,6 +3,7 @@
 Updated 2026-05-03 for the rerun: case-3 metric is ratio-RMSE instead of
 article-id-touched recall; embedding is now loaded; no dollar cap.
 """
+
 from __future__ import annotations
 
 import datetime as dt
@@ -29,17 +30,11 @@ def _fmt(v: tp.Any, n: int = 2) -> str:
 def _summary_str(d: dict[str, tp.Any], n_decimals: int = 2) -> str:
     if not d or d.get("n", 0) == 0:
         return "n/a"
-    return (
-        f"{_fmt(d['mean'], n_decimals)} "
-        f"(min {_fmt(d['min'], n_decimals)}, max {_fmt(d['max'], n_decimals)})"
-    )
+    return f"{_fmt(d['mean'], n_decimals)} (min {_fmt(d['min'], n_decimals)}, max {_fmt(d['max'], n_decimals)})"
 
 
 def _row(case_label: str, metric: str, m: dict[str, tp.Any], b: dict[str, tp.Any], n: int = 2) -> str:
-    return (
-        f"| {case_label} | {metric} | "
-        f"{_summary_str(m, n)} | {_summary_str(b, n)} |"
-    )
+    return f"| {case_label} | {metric} | {_summary_str(m, n)} | {_summary_str(b, n)} |"
 
 
 def _quality_combined(j1: dict[str, tp.Any], j2: dict[str, tp.Any]) -> dict[str, tp.Any]:
@@ -68,33 +63,39 @@ def render_table(agg: dict[str, tp.Any]) -> str:
             continue
         cb = per_case[case_id]
         label = CASE_LABELS[case_id]
-        rows.append(_row(label, "Tool calls",
-                          cb["efficiency_tool_calls"]["mausoleo"],
-                          cb["efficiency_tool_calls"]["baseline"], n=1))
-        rows.append(_row(label, "Chars read",
-                          cb["efficiency_chars_read"]["mausoleo"],
-                          cb["efficiency_chars_read"]["baseline"], n=0))
+        rows.append(_row(label, "Tool calls", cb["efficiency_tool_calls"]["mausoleo"], cb["efficiency_tool_calls"]["baseline"], n=1))
+        rows.append(_row(label, "Chars read", cb["efficiency_chars_read"]["mausoleo"], cb["efficiency_chars_read"]["baseline"], n=0))
         if case_id == "case3":
-            rows.append(_row(label, "Ratio RMSE (lower=better)",
-                              cb.get("case3_ratio_rmse", {}).get("mausoleo", {}),
-                              cb.get("case3_ratio_rmse", {}).get("baseline", {}), n=3))
-            rows.append(_row(label, "Ratio MAE (lower=better)",
-                              cb.get("case3_ratio_mae", {}).get("mausoleo", {}),
-                              cb.get("case3_ratio_mae", {}).get("baseline", {}), n=3))
+            rows.append(
+                _row(
+                    label,
+                    "Ratio RMSE (lower=better)",
+                    cb.get("case3_ratio_rmse", {}).get("mausoleo", {}),
+                    cb.get("case3_ratio_rmse", {}).get("baseline", {}),
+                    n=3,
+                )
+            )
+            rows.append(
+                _row(
+                    label,
+                    "Ratio MAE (lower=better)",
+                    cb.get("case3_ratio_mae", {}).get("mausoleo", {}),
+                    cb.get("case3_ratio_mae", {}).get("baseline", {}),
+                    n=3,
+                )
+            )
         else:
-            rows.append(_row(label, "Recall vs GT",
-                              cb["completeness_recall"]["mausoleo"],
-                              cb["completeness_recall"]["baseline"], n=2))
-        rows.append(_row(label, "Quality (judge mean)",
-                          _quality_combined(cb["quality_judge1_mean"]["mausoleo"],
-                                              cb["quality_judge2_mean"]["mausoleo"]),
-                          _quality_combined(cb["quality_judge1_mean"]["baseline"],
-                                              cb["quality_judge2_mean"]["baseline"]),
-                          n=2))
-    header_table = (
-        "| Case | Metric | Mausoleo (mean, min, max) | Baseline (mean, min, max) |\n"
-        "|---|---|---|---|\n"
-    ) + "\n".join(rows)
+            rows.append(_row(label, "Recall vs GT", cb["completeness_recall"]["mausoleo"], cb["completeness_recall"]["baseline"], n=2))
+        rows.append(
+            _row(
+                label,
+                "Quality (judge mean)",
+                _quality_combined(cb["quality_judge1_mean"]["mausoleo"], cb["quality_judge2_mean"]["mausoleo"]),
+                _quality_combined(cb["quality_judge1_mean"]["baseline"], cb["quality_judge2_mean"]["baseline"]),
+                n=2,
+            )
+        )
+    header_table = ("| Case | Metric | Mausoleo (mean, min, max) | Baseline (mean, min, max) |\n|---|---|---|---|\n") + "\n".join(rows)
     return header_table
 
 
@@ -137,9 +138,7 @@ def render_kappa(agg: dict[str, tp.Any]) -> str:
         cb = per_case[case_id]
         k = cb.get("inter_judge_kappa_quality_mean", float("nan"))
         if isinstance(k, float):
-            out.append(
-                f"- {CASE_LABELS[case_id]}: Cohen's κ on discretised 0-5 quality means = {_fmt(k, 2)}."
-            )
+            out.append(f"- {CASE_LABELS[case_id]}: Cohen's κ on discretised 0-5 quality means = {_fmt(k, 2)}.")
     return "\n".join(out)
 
 
@@ -154,10 +153,10 @@ def render_runlog_summary(agg: dict[str, tp.Any]) -> str:
 ## Rerun 2026-05-03 final summary {dt.datetime.utcnow().isoformat()}Z
 
 - **trials completed**: {n_trials} / 18 (3 cases × 2 systems × 3 trials)
-- **wall time**: {wall/60:.1f} min ({wall:.0f} s)
+- **wall time**: {wall / 60:.1f} min ({wall:.0f} s)
 - **tokens (Anthropic, OAuth subscription quota; dollar cost is meaningless)**:
   input {tok_in:,}, output {tok_out:,}.
-- **embedder loaded**: {embed.get('loaded', False)} ({embed.get('model', 'n/a')}, dim {embed.get('dim', 'n/a')}); smoke-test nearest day to "Mussolini" = {embed.get('nearest_day_to_mussolini')}.
+- **embedder loaded**: {embed.get("loaded", False)} ({embed.get("model", "n/a")}, dim {embed.get("dim", "n/a")}); smoke-test nearest day to "Mussolini" = {embed.get("nearest_day_to_mussolini")}.
 - **case-3 metric**: replaced article-id-touched recall with per-ISO-week
   war-fraction MAE/RMSE against an LLM-built oracle
   (`eval/case_studies/case3_oracle_ratios.json`, 6480 articles classified).

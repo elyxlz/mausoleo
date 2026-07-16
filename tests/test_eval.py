@@ -1,9 +1,7 @@
 from __future__ import annotations
 
-import json
 import pathlib as pl
 
-import pytest
 
 from mausoleo.eval.evaluate import evaluate_issue, load_images
 from mausoleo.eval.metrics import compute_cer, compute_kendalls_tau, compute_wer

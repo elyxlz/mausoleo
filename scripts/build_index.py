@@ -50,8 +50,8 @@ for lvl in LEVELS:
 
 # Pricing per 1M tokens, USD. Source: anthropic.com/pricing 2025/2026.
 PRICING = {
-    "claude-haiku-4-5":   {"in": 1.00, "out": 5.00},
-    "claude-sonnet-4-5":  {"in": 3.00, "out": 15.00},
+    "claude-haiku-4-5": {"in": 1.00, "out": 5.00},
+    "claude-sonnet-4-5": {"in": 3.00, "out": 15.00},
 }
 
 # Article-level: cheap, lots of calls. Higher levels: smarter model, fewer calls.
@@ -256,11 +256,10 @@ class LLM:
                     self.cost.failures += 1
                     raise
                 # Exponential backoff with cap; rate-limit errors get longer waits.
-                base = 30 if "rate_limit" in str(e).lower() or "429" in str(e) else 2 ** attempt
+                base = 30 if "rate_limit" in str(e).lower() or "429" in str(e) else 2**attempt
                 wait = min(base * (1 + attempt * 0.5), 240)
                 print(
-                    f"  ! retry {attempt + 1}/{max_attempts - 1} after {wait:.0f}s "
-                    f"({type(e).__name__}: {str(e)[:200]})",
+                    f"  ! retry {attempt + 1}/{max_attempts - 1} after {wait:.0f}s ({type(e).__name__}: {str(e)[:200]})",
                     file=sys.stderr,
                     flush=True,
                 )
@@ -440,6 +439,7 @@ async def run(args: argparse.Namespace) -> None:
             # Try CUDA if available; on CPU BGE-M3 takes ~1-2 sec/doc which is
             # impractical for 6500 nodes.
             import torch
+
             device = "cuda" if torch.cuda.is_available() else "cpu"
             print(f"[embed] loading {EMBED_MODEL_NAME} on {device}...", flush=True)
             embed_model = SentenceTransformer(EMBED_MODEL_NAME, device=device)
@@ -502,7 +502,7 @@ async def run(args: argparse.Namespace) -> None:
             eta = (len(tasks) - done) / max(rate, 0.001)
             print(
                 f"  [{done}/{len(tasks)}] cost=${cost.cost_usd:.2f} "
-                f"calls={cost.calls} fails={cost.failures} rate={rate:.1f}/s eta={eta/60:.1f}min",
+                f"calls={cost.calls} fails={cost.failures} rate={rate:.1f}/s eta={eta / 60:.1f}min",
                 flush=True,
             )
             last_log = time.time()
@@ -644,8 +644,7 @@ async def embed_all(get_embed_model) -> None:
             rate = done / max(elapsed, 0.001)
             eta = (len(to_embed) - done) / max(rate, 0.001)
             print(
-                f"  [{level}] {done}/{len(to_embed)} done in {elapsed:.0f}s "
-                f"({rate:.1f}/s, eta {eta:.0f}s)",
+                f"  [{level}] {done}/{len(to_embed)} done in {elapsed:.0f}s ({rate:.1f}/s, eta {eta:.0f}s)",
                 flush=True,
             )
         print(f"  [{level}] complete", flush=True)
@@ -665,16 +664,18 @@ def write_manifest() -> None:
         manifest["levels"][level] = len(files)
         for f in files:
             d = json.loads(f.read_text())
-            manifest["nodes"].append({
-                "node_id": d["node_id"],
-                "level": d["level"],
-                "parent_id": d["parent_id"],
-                "date_start": d["date_start"],
-                "date_end": d["date_end"],
-                "child_count": d["child_count"],
-                "embedding_dim": len(d.get("embedding") or []),
-                "has_raw_text": bool(d.get("raw_text")),
-            })
+            manifest["nodes"].append(
+                {
+                    "node_id": d["node_id"],
+                    "level": d["level"],
+                    "parent_id": d["parent_id"],
+                    "date_start": d["date_start"],
+                    "date_end": d["date_end"],
+                    "child_count": d["child_count"],
+                    "embedding_dim": len(d.get("embedding") or []),
+                    "has_raw_text": bool(d.get("raw_text")),
+                }
+            )
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2))
     print(f"[manifest] {sum(manifest['levels'].values())} nodes total", flush=True)
 

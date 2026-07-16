@@ -17,6 +17,7 @@ This post-processor:
 Usage:
     uv run --no-project python scripts/crosspage_completion.py <ens.json> <date> <out.json>
 """
+
 from __future__ import annotations
 
 import difflib
@@ -107,10 +108,9 @@ def complete_crosspage(
             new_articles.append(art)
             continue
         candidates += 1
-        tail_raw = text[-tail_chars * 2:]
+        tail_raw = text[-tail_chars * 2 :]
         tail = _normalize(tail_raw)[-tail_chars:]
         best_extension: str | None = None
-        best_blob_idx = -1
         for bi, blob_norm in enumerate(blobs):
             seg_start = _find_fuzzy_position(blob_norm, tail)
             if seg_start < 0:
@@ -120,7 +120,6 @@ def complete_crosspage(
             if len(extension) >= min_extension:
                 if best_extension is None or len(extension) > len(best_extension):
                     best_extension = extension
-                    best_blob_idx = bi
         if best_extension is None:
             new_articles.append(art)
             continue

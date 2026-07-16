@@ -1,4 +1,3 @@
-import dataclasses as dc
 import json
 import pathlib as pl
 
@@ -22,12 +21,14 @@ def repair_article(article: dict) -> dict:
                     ea_paras = ea.get("paragraphs", [])
                     if not ea_paras and "text" in ea:
                         ea_paras = [{"text": ea["text"]}]
-                    return_articles.append({
-                        "unit_type": ea.get("unit_type", article.get("unit_type", "article")),
-                        "headline": ea.get("headline", article.get("headline")),
-                        "paragraphs": ea_paras,
-                        "page_span": ea.get("page_span", article.get("page_span", [])),
-                    })
+                    return_articles.append(
+                        {
+                            "unit_type": ea.get("unit_type", article.get("unit_type", "article")),
+                            "headline": ea.get("headline", article.get("headline")),
+                            "paragraphs": ea_paras,
+                            "page_span": ea.get("page_span", article.get("page_span", [])),
+                        }
+                    )
                 return return_articles
             else:
                 new_paras.append({"id": para.get("id", ""), "text": text})
@@ -49,7 +50,7 @@ def extract_from_json_blob(text: str) -> list[dict] | None:
     except json.JSONDecodeError:
         pass
 
-    for suffix in ['"}]}', '"}]', '"]', '"}', '}', ']', '"} ]}', '"}  ]}']:
+    for suffix in ['"}]}', '"}]', '"]', '"}', "}", "]", '"} ]}', '"}  ]}']:
         try:
             data = json.loads(cleaned + suffix)
             if isinstance(data, dict) and "articles" in data:

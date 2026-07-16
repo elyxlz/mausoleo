@@ -1,6 +1,6 @@
 from mausoleo.ocr import prompts
 from mausoleo.ocr.config import OcrPipelineConfig
-from mausoleo.ocr.operators import MergePages, PagePairVlm, ParseIssue
+from mausoleo.ocr.operators import PagePairVlm, ParseIssue
 
 config = OcrPipelineConfig(
     name="exp_126_page_pairs_v2",

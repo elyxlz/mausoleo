@@ -11,10 +11,10 @@ If yes, merges paragraphs and updates page_span.
 Usage:
     uv run --no-project python scripts/llm_stitch_crosspage.py <input.json> <output.json>
 """
+
 from __future__ import annotations
 
 import json
-import re
 import sys
 import typing as tp
 

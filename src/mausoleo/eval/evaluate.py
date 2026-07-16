@@ -113,12 +113,22 @@ def match_articles(
         gt_t = gt_texts[gi]
         gt_chars = len(gt_t.strip())
         if gt_chars < 20:
-            matches.append(ArticleMatch(
-                gt_index=gi, gt_headline=gt_art.get("headline", ""), gt_chars=gt_chars,
-                pred_index=None, pred_headline=None,
-                cer=1.0, wer=1.0, headline_cer=1.0, text_overlap=0.0,
-                page_span_correct=False, gt_pages=article_pages(gt_art), pred_pages=[],
-            ))
+            matches.append(
+                ArticleMatch(
+                    gt_index=gi,
+                    gt_headline=gt_art.get("headline", ""),
+                    gt_chars=gt_chars,
+                    pred_index=None,
+                    pred_headline=None,
+                    cer=1.0,
+                    wer=1.0,
+                    headline_cer=1.0,
+                    text_overlap=0.0,
+                    page_span_correct=False,
+                    gt_pages=article_pages(gt_art),
+                    pred_pages=[],
+                )
+            )
             continue
 
         best_pi, best_ov = -1, 0.0
@@ -140,23 +150,39 @@ def match_articles(
             pred_h = normalize_text(pred_art.get("headline", "").split("\n")[0] if pred_art.get("headline") else "")
             h_cer = compute_cer(gt_h, pred_h) if gt_h else 0.0
 
-            matches.append(ArticleMatch(
-                gt_index=gi, gt_headline=gt_art.get("headline", ""), gt_chars=gt_chars,
-                pred_index=best_pi, pred_headline=pred_art.get("headline", ""),
-                cer=compute_cer(gt_norm, pred_norm),
-                wer=compute_wer(gt_norm, pred_norm),
-                headline_cer=h_cer,
-                text_overlap=best_ov,
-                page_span_correct=set(article_pages(gt_art)) == set(article_pages(pred_art)),
-                gt_pages=article_pages(gt_art), pred_pages=article_pages(pred_art),
-            ))
+            matches.append(
+                ArticleMatch(
+                    gt_index=gi,
+                    gt_headline=gt_art.get("headline", ""),
+                    gt_chars=gt_chars,
+                    pred_index=best_pi,
+                    pred_headline=pred_art.get("headline", ""),
+                    cer=compute_cer(gt_norm, pred_norm),
+                    wer=compute_wer(gt_norm, pred_norm),
+                    headline_cer=h_cer,
+                    text_overlap=best_ov,
+                    page_span_correct=set(article_pages(gt_art)) == set(article_pages(pred_art)),
+                    gt_pages=article_pages(gt_art),
+                    pred_pages=article_pages(pred_art),
+                )
+            )
         else:
-            matches.append(ArticleMatch(
-                gt_index=gi, gt_headline=gt_art.get("headline", ""), gt_chars=gt_chars,
-                pred_index=None, pred_headline=None,
-                cer=1.0, wer=1.0, headline_cer=1.0, text_overlap=0.0,
-                page_span_correct=False, gt_pages=article_pages(gt_art), pred_pages=[],
-            ))
+            matches.append(
+                ArticleMatch(
+                    gt_index=gi,
+                    gt_headline=gt_art.get("headline", ""),
+                    gt_chars=gt_chars,
+                    pred_index=None,
+                    pred_headline=None,
+                    cer=1.0,
+                    wer=1.0,
+                    headline_cer=1.0,
+                    text_overlap=0.0,
+                    page_span_correct=False,
+                    gt_pages=article_pages(gt_art),
+                    pred_pages=[],
+                )
+            )
 
     return matches
 
@@ -208,14 +234,23 @@ def evaluate_issue(
     )
 
     return IssueResult(
-        config=config, date=date, matches=matches,
-        article_precision=precision, article_recall=recall, article_f1=f1,
-        mean_cer=mean_cer, mean_wer=mean_wer,
-        weighted_cer=weighted_cer, headline_cer=mean_headline_cer,
-        full_text_cer=full_cer, full_text_wer=full_wer,
-        page_accuracy=page_accuracy, ordering_score=ordering,
+        config=config,
+        date=date,
+        matches=matches,
+        article_precision=precision,
+        article_recall=recall,
+        article_f1=f1,
+        mean_cer=mean_cer,
+        mean_wer=mean_wer,
+        weighted_cer=weighted_cer,
+        headline_cer=mean_headline_cer,
+        full_text_cer=full_cer,
+        full_text_wer=full_wer,
+        page_accuracy=page_accuracy,
+        ordering_score=ordering,
         composite_score=composite,
-        total_gt_articles=len(gt_articles), total_pred_articles=len(pred_articles),
+        total_gt_articles=len(gt_articles),
+        total_pred_articles=len(pred_articles),
     )
 
 

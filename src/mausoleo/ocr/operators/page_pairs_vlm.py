@@ -65,9 +65,6 @@ class PagePairVlmOperator(StatefulOperator[PagePairVlm]):
                 break
             i += s
 
-        window_articles: list[dict[str, tp.Any]] = []
-        window_page_lists: list[list[int]] = []
-
         prompts: list[dict[str, tp.Any]] = []
         for window_start, imgs in windows:
             content: list[dict[str, tp.Any]] = [{"type": "image", "image": img} for img in imgs]
@@ -114,7 +111,7 @@ class PagePairVlmOperator(StatefulOperator[PagePairVlm]):
             if isinstance(data, list):
                 return data
         except json.JSONDecodeError:
-            for closer in ['"}]}', '"}]', ']', '}']:
+            for closer in ['"}]}', '"}]', "]", "}"]:
                 try:
                     data = json.loads(text + closer)
                     if isinstance(data, dict):

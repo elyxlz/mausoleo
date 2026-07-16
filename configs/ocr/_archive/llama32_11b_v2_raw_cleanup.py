@@ -1,6 +1,6 @@
 from mausoleo.ocr import prompts
 from mausoleo.ocr.config import OcrPipelineConfig
-from mausoleo.ocr.operators import LlmCleanup, MergePages, ParseIssue, VlmOcr
+from mausoleo.ocr.operators import LlmCleanup, ParseIssue, VlmOcr
 
 config = OcrPipelineConfig(
     name="llama32_11b_v2_raw_cleanup",

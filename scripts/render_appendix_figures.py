@@ -11,6 +11,7 @@ Figure 2 - sns.barplot, tool calls per case, 3 cases x 2 systems
 Figure 3 - sns.catplot/grouped barplot, quality rubric per case
 Figure 4 - sns.barplot, OCR composite by pipeline pass
 """
+
 from __future__ import annotations
 
 import json
@@ -71,37 +72,32 @@ def fig1_calendar_tree() -> pathlib.Path:
         (1.8, "paragraphs", "leaves: raw text + embedding", TREE_LEAF),
     ]
     for y, label, count, colour in levels:
-        ax.add_patch(mpatches.FancyBboxPatch(
-            (0.6, y - 0.30), 3.6, 0.60,
-            boxstyle="round,pad=0.04", linewidth=0.7,
-            facecolor=colour, edgecolor="#333"))
-        ax.text(2.4, y, label, ha="center", va="center", fontsize=9.5,
-                fontweight="bold", color="#1a1a1a")
-        ax.text(4.5, y, count, ha="left", va="center", fontsize=8.0,
-                color="#333")
+        ax.add_patch(
+            mpatches.FancyBboxPatch((0.6, y - 0.30), 3.6, 0.60, boxstyle="round,pad=0.04", linewidth=0.7, facecolor=colour, edgecolor="#333")
+        )
+        ax.text(2.4, y, label, ha="center", va="center", fontsize=9.5, fontweight="bold", color="#1a1a1a")
+        ax.text(4.5, y, count, ha="left", va="center", fontsize=8.0, color="#333")
 
     # Vertical "child" arrows (top-down).
     for y_top, y_bot in [(6.6, 5.4), (5.4, 4.2), (4.2, 3.0), (3.0, 1.8)]:
-        ax.annotate("", xy=(2.4, y_bot + 0.32), xytext=(2.4, y_top - 0.32),
-                    arrowprops=dict(arrowstyle="-|>", color="#333", lw=0.9))
+        ax.annotate("", xy=(2.4, y_bot + 0.32), xytext=(2.4, y_top - 0.32), arrowprops=dict(arrowstyle="-|>", color="#333", lw=0.9))
 
     # Recursive-summarisation flow on the right (bottom-up arrows + label).
     for y_bot, y_top in [(1.8, 3.0), (3.0, 4.2), (4.2, 5.4), (5.4, 6.6)]:
-        ax.annotate("", xy=(8.9, y_top - 0.32), xytext=(8.9, y_bot + 0.32),
-                    arrowprops=dict(arrowstyle="-|>", color="#a4133c", lw=1.2))
-    ax.text(8.9, 7.25, "recursive\nsummarisation\n(bottom-up)",
-            ha="center", va="bottom", fontsize=7.5, color="#a4133c",
-            fontweight="bold")
+        ax.annotate("", xy=(8.9, y_top - 0.32), xytext=(8.9, y_bot + 0.32), arrowprops=dict(arrowstyle="-|>", color="#a4133c", lw=1.2))
+    ax.text(8.9, 7.25, "recursive\nsummarisation\n(bottom-up)", ha="center", va="bottom", fontsize=7.5, color="#a4133c", fontweight="bold")
 
     # Top-left annotation - kept short to avoid overlap.
-    ax.text(0.0, 7.25,
-            "calendar-shaped\nhierarchical index",
-            ha="left", va="bottom", fontsize=8.5, color="#1a1a1a",
-            fontweight="bold")
-    ax.text(0.0, -0.55,
-            "leaf store: per-paragraph OCR + 384-d MiniLM embedding\n"
-            "ClickHouse: single nodes table; 6,517 nodes total",
-            ha="left", va="bottom", fontsize=7.0, color="#444")
+    ax.text(0.0, 7.25, "calendar-shaped\nhierarchical index", ha="left", va="bottom", fontsize=8.5, color="#1a1a1a", fontweight="bold")
+    ax.text(
+        0.0,
+        -0.55,
+        "leaf store: per-paragraph OCR + 384-d MiniLM embedding\nClickHouse: single nodes table; 6,517 nodes total",
+        ha="left",
+        va="bottom",
+        fontsize=7.0,
+        color="#444",
+    )
 
     p = OUT / "fig1_calendar_tree.png"
     fig.savefig(p)
@@ -139,8 +135,7 @@ def fig2_tool_calls() -> pathlib.Path:
         ax.bar_label(container, fmt="%.1f", padding=2, fontsize=7.5)
 
     ax.axhline(30, color="#555", linestyle=":", linewidth=0.8)
-    ax.text(2.45, 30.4, "30-call cap", color="#555",
-            fontsize=7.0, ha="right", va="bottom")
+    ax.text(2.45, 30.4, "30-call cap", color="#555", fontsize=7.0, ha="right", va="bottom")
 
     ax.set_ylabel("Mean tool calls per trial (3 trials)")
     ax.set_xlabel("")
@@ -210,10 +205,8 @@ def fig3_quality_rubric() -> pathlib.Path:
                 rows.append({"case": cid, "dim": dim_labels[d], "system": "Baseline", "score": b})
         else:
             for i, d in enumerate(dims):
-                rows.append({"case": cid, "dim": dim_labels[d], "system": "Mausoleo",
-                             "score": fallback[cid]["mausoleo"][i]})
-                rows.append({"case": cid, "dim": dim_labels[d], "system": "Baseline",
-                             "score": fallback[cid]["baseline"][i]})
+                rows.append({"case": cid, "dim": dim_labels[d], "system": "Mausoleo", "score": fallback[cid]["mausoleo"][i]})
+                rows.append({"case": cid, "dim": dim_labels[d], "system": "Baseline", "score": fallback[cid]["baseline"][i]})
     df = pd.DataFrame(rows)
 
     fig, axes = plt.subplots(1, 3, figsize=(6.4, 3.4), sharey=True)
@@ -221,8 +214,14 @@ def fig3_quality_rubric() -> pathlib.Path:
     for ax, cid in zip(axes, cases):
         sub = df[df["case"] == cid]
         sns.barplot(
-            data=sub, x="dim", y="score", hue="system",
-            palette=palette, ax=ax, edgecolor="#222", linewidth=0.4,
+            data=sub,
+            x="dim",
+            y="score",
+            hue="system",
+            palette=palette,
+            ax=ax,
+            edgecolor="#222",
+            linewidth=0.4,
         )
         for container in ax.containers:
             ax.bar_label(container, fmt="%.1f", padding=1, fontsize=6.5)
@@ -243,8 +242,7 @@ def fig3_quality_rubric() -> pathlib.Path:
             if leg is not None:
                 leg.remove()
 
-    fig.suptitle("Three-dimension judge rubric, Mausoleo vs keyword baseline",
-                 fontsize=9.5, y=1.02)
+    fig.suptitle("Three-dimension judge rubric, Mausoleo vs keyword baseline", fontsize=9.5, y=1.02)
     fig.tight_layout()
 
     p = OUT / "fig3_quality_rubric.png"
@@ -267,23 +265,28 @@ def fig4_ocr_composite() -> pathlib.Path:
     ]
     scores = [0.8824, 0.8854, 0.8865, 0.8880, 0.8893, 0.9057, 0.8997, 0.8950]
     is_postcorr = [False] * 6 + [True, True]
-    df = pd.DataFrame({
-        "pass": passes,
-        "score": scores,
-        "kind": [
-            "LLM post-correction (regression)" if p else "Ensemble add (cumulative gain)"
-            for p in is_postcorr
-        ],
-    })
+    df = pd.DataFrame(
+        {
+            "pass": passes,
+            "score": scores,
+            "kind": ["LLM post-correction (regression)" if p else "Ensemble add (cumulative gain)" for p in is_postcorr],
+        }
+    )
 
     fig, ax = plt.subplots(figsize=(6.0, 3.8))
     sns.barplot(
-        data=df, x="pass", y="score", hue="kind",
+        data=df,
+        x="pass",
+        y="score",
+        hue="kind",
         palette={
             "Ensemble add (cumulative gain)": "#3a86ff",
             "LLM post-correction (regression)": "#9d4edd",
         },
-        ax=ax, edgecolor="#222", linewidth=0.5, dodge=False,
+        ax=ax,
+        edgecolor="#222",
+        linewidth=0.5,
+        dodge=False,
     )
     for container in ax.containers:
         ax.bar_label(container, fmt="%.4f", padding=1.5, fontsize=6.5)
@@ -295,8 +298,7 @@ def fig4_ocr_composite() -> pathlib.Path:
     ax.tick_params(axis="x", labelsize=6.5)
 
     ax.axhline(0.89878, color="#a4133c", linestyle="--", linewidth=0.8)
-    ax.text(-0.4, 0.89878 + 0.0008, "headline 0.899",
-            color="#a4133c", fontsize=7.0, ha="left", va="bottom")
+    ax.text(-0.4, 0.89878 + 0.0008, "headline 0.899", color="#a4133c", fontsize=7.0, ha="left", va="bottom")
 
     ax.legend(loc="lower left", frameon=False, fontsize=7.0)
 

@@ -15,6 +15,7 @@ not in the base dependency set, so we degrade gracefully:
 Embedding dim defaults to 1024 (BGE-M3 dense). It's overridable via
 ``MAUSOLEO_EMBED_DIM``.
 """
+
 from __future__ import annotations
 
 import logging

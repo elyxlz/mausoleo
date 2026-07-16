@@ -8,6 +8,7 @@ prediction article (inheriting the matched ensemble article's headline).
 Usage:
     uv run --no-project python scripts/blob_split.py <input.json> <output.json> <ensemble.json>
 """
+
 from __future__ import annotations
 
 import json

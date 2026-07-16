@@ -7,7 +7,14 @@ config = OcrPipelineConfig(
     operators=[
         Preprocess(grayscale=False, max_dimension=512),
         ColumnSplit(num_columns=4, overlap_pct=0.03),
-        VlmOcr(model="google/gemma-3-12b-it", prompt=prompts.VLM_OCR_STRUCTURED_V2, backend="transformers", max_tokens=8192, max_model_len=16384, gpu_fraction=2.0),
+        VlmOcr(
+            model="google/gemma-3-12b-it",
+            prompt=prompts.VLM_OCR_STRUCTURED_V2,
+            backend="transformers",
+            max_tokens=8192,
+            max_model_len=16384,
+            gpu_fraction=2.0,
+        ),
         MergePages(),
         ParseIssue(),
     ],

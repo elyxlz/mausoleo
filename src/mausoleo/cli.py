@@ -7,6 +7,7 @@ LLM agent that needs predictable structured data.
 Server URL precedence: ``--server`` flag > ``MAUSOLEO_SERVER_URL`` env var >
 ``http://127.0.0.1:8000``.
 """
+
 from __future__ import annotations
 
 import datetime as dt
@@ -24,8 +25,7 @@ app = typer.Typer(name="mausoleo", no_args_is_help=True, add_completion=False)
 search_app = typer.Typer(name="search", no_args_is_help=True, add_completion=False)
 app.add_typer(search_app, name="search", help="Search the index (semantic / text / hybrid).")
 baseline_app = typer.Typer(name="baseline", no_args_is_help=True, add_completion=False)
-app.add_typer(baseline_app, name="baseline",
-               help="Flat-OCR BM25 baseline (no hierarchy access).")
+app.add_typer(baseline_app, name="baseline", help="Flat-OCR BM25 baseline (no hierarchy access).")
 
 
 def _server_url(override: str | None) -> str:
@@ -65,6 +65,7 @@ def _post(server: str, path: str, body: dict[str, tp.Any]) -> tp.Any:
 # ---------------------------------------------------------------------------
 # Tree navigation commands
 # ---------------------------------------------------------------------------
+
 
 @app.command()
 def root(
@@ -129,6 +130,7 @@ def stats(
 # ---------------------------------------------------------------------------
 # Search commands
 # ---------------------------------------------------------------------------
+
 
 def _search_body(
     query: str,
@@ -211,6 +213,7 @@ def search_hybrid(
 # Baseline (flat-OCR BM25) sub-app
 # ---------------------------------------------------------------------------
 
+
 @baseline_app.command("search")
 def baseline_search_cmd(
     query: str,
@@ -220,6 +223,7 @@ def baseline_search_cmd(
 ) -> None:
     """BM25 ranked search over the flat ``documents`` table (case-study baseline)."""
     from mausoleo.case_studies.tools import baseline_search
+
     _print(baseline_search(query, date_from=date_from, date_to=date_to, limit=limit))
 
 
@@ -227,6 +231,7 @@ def baseline_search_cmd(
 def baseline_read_cmd(article_id: str) -> None:
     """Fetch the full text of a single article by id."""
     from mausoleo.case_studies.tools import baseline_read_article
+
     _print(baseline_read_article(article_id))
 
 
@@ -245,13 +250,9 @@ def load_cmd(
     date_from: str | None = typer.Option(None, "--from"),
     date_to: str | None = typer.Option(None, "--to"),
     truncate: bool = typer.Option(True, "--truncate/--no-truncate"),
-    host: str = typer.Option(
-        os.environ.get("CLICKHOUSE_HOST", "127.0.0.1"), "--host"
-    ),
+    host: str = typer.Option(os.environ.get("CLICKHOUSE_HOST", "127.0.0.1"), "--host"),
     port: int = typer.Option(int(os.environ.get("CLICKHOUSE_PORT", "8123")), "--port"),
-    database: str = typer.Option(
-        os.environ.get("CLICKHOUSE_DATABASE", "default"), "--database"
-    ),
+    database: str = typer.Option(os.environ.get("CLICKHOUSE_DATABASE", "default"), "--database"),
 ) -> None:
     """Load transcriptions + summaries into ClickHouse."""
     import pathlib as pl

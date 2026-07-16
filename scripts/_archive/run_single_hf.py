@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import base64
 import dataclasses as dc
 import io
 import json
@@ -9,7 +8,7 @@ import sys
 import time
 
 from mausoleo.ocr import prompts
-from mausoleo.ocr.models import Issue, extract_full_text, issue_from_dict
+from mausoleo.ocr.models import extract_full_text, issue_from_dict
 from mausoleo.ocr.operators.parse import _build_issue_json
 from mausoleo.ocr.operators.merge import _strip_markdown
 
@@ -90,7 +89,9 @@ def run_vllm(model_name: str, images: list[bytes], prompt: str, max_tokens: int 
 
     print(f"  loading vLLM: {model_name}", flush=True)
     processor = AutoProcessor.from_pretrained(model_name, trust_remote_code=True)
-    llm = LLM(model=model_name, trust_remote_code=True, gpu_memory_utilization=0.85, max_model_len=max_model_len, limit_mm_per_prompt={"image": 1})
+    llm = LLM(
+        model=model_name, trust_remote_code=True, gpu_memory_utilization=0.85, max_model_len=max_model_len, limit_mm_per_prompt={"image": 1}
+    )
     sampling_params = SamplingParams(temperature=0.0, max_tokens=max_tokens)
 
     vllm_prompts = []
@@ -106,12 +107,18 @@ def run_vllm(model_name: str, images: list[bytes], prompt: str, max_tokens: int 
 
     page_texts = [out.outputs[0].text for out in outputs]
     del llm
-    import gc; gc.collect()
-    import torch; torch.cuda.empty_cache()
+    import gc
+
+    gc.collect()
+    import torch
+
+    torch.cuda.empty_cache()
     return page_texts
 
 
-def run_vllm_text(model_name: str, text: str, prompt_template: str, max_tokens: int = 8192, max_model_len: int = 32768, **fmt_kwargs: str) -> str:
+def run_vllm_text(
+    model_name: str, text: str, prompt_template: str, max_tokens: int = 8192, max_model_len: int = 32768, **fmt_kwargs: str
+) -> str:
     from transformers import AutoTokenizer
     from vllm import LLM, SamplingParams
 
@@ -130,8 +137,12 @@ def run_vllm_text(model_name: str, text: str, prompt_template: str, max_tokens: 
 
     result = outputs[0].outputs[0].text.strip()
     del llm
-    import gc; gc.collect()
-    import torch; torch.cuda.empty_cache()
+    import gc
+
+    gc.collect()
+    import torch
+
+    torch.cuda.empty_cache()
     return result
 
 
@@ -151,6 +162,7 @@ def run_hf(model_name: str, images: list[bytes], prompt: str, max_tokens: int = 
     model = None
     try:
         from transformers import AutoModelForImageTextToText
+
         model = AutoModelForImageTextToText.from_pretrained(model_name, **load_kwargs)
     except Exception:
         pass
@@ -173,12 +185,15 @@ def run_hf(model_name: str, images: list[bytes], prompt: str, max_tokens: int = 
         if hasattr(model, "chat"):
             import torchvision.transforms as T
             from torchvision.transforms.functional import InterpolationMode
-            transform = T.Compose([
-                T.Lambda(lambda img: img.convert("RGB") if img.mode != "RGB" else img),
-                T.Resize((448, 448), interpolation=InterpolationMode.BICUBIC),
-                T.ToTensor(),
-                T.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
-            ])
+
+            transform = T.Compose(
+                [
+                    T.Lambda(lambda img: img.convert("RGB") if img.mode != "RGB" else img),
+                    T.Resize((448, 448), interpolation=InterpolationMode.BICUBIC),
+                    T.ToTensor(),
+                    T.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
+                ]
+            )
             pixel_values = transform(pil_img).unsqueeze(0).to(torch.bfloat16).cuda()
             response = model.chat(processor, pixel_values, f"<image>\n{prompt}", generation_config={"max_new_tokens": max_tokens})
             page_texts.append(response)
@@ -186,7 +201,7 @@ def run_hf(model_name: str, images: list[bytes], prompt: str, max_tokens: int = 
             inputs = processor(pil_img, return_tensors="pt").to(model.device)
             with torch.no_grad():
                 output_ids = model.generate(**inputs, max_new_tokens=max_tokens, do_sample=False)
-            generated = output_ids[:, inputs.input_ids.shape[1]:]
+            generated = output_ids[:, inputs.input_ids.shape[1] :]
             page_texts.append(processor.batch_decode(generated, skip_special_tokens=True)[0])
         else:
             messages = [{"role": "user", "content": [{"type": "image", "image": pil_img}, {"type": "text", "text": prompt}]}]
@@ -198,14 +213,18 @@ def run_hf(model_name: str, images: list[bytes], prompt: str, max_tokens: int = 
                 inputs = processor(text=[text], images=[pil_img], return_tensors="pt").to(model.device)
             with torch.no_grad():
                 output_ids = model.generate(**inputs, max_new_tokens=max_tokens)
-            generated = output_ids[:, inputs.input_ids.shape[1]:]
+            generated = output_ids[:, inputs.input_ids.shape[1] :]
             page_texts.append(processor.batch_decode(generated, skip_special_tokens=True)[0])
 
         print(f" {time.time() - t0:.1f}s", flush=True)
 
     del model
-    import gc; gc.collect()
-    import torch; torch.cuda.empty_cache()
+    import gc
+
+    gc.collect()
+    import torch
+
+    torch.cuda.empty_cache()
     return page_texts
 
 
@@ -251,28 +270,122 @@ def save_result(config_name: str, issue_date: str, result_json: str, page_count:
 
 
 PIPELINES: dict[str, dict] = {
-    "qwen7b_structured": {"vlm": "Qwen/Qwen2.5-VL-7B-Instruct", "prompt": prompts.VLM_OCR_STRUCTURED, "mode": "structured", "backend": "vllm", "max_tokens": 4096},
-    "qwen3b_structured": {"vlm": "Qwen/Qwen2.5-VL-3B-Instruct", "prompt": prompts.VLM_OCR_STRUCTURED, "mode": "structured", "backend": "vllm", "max_tokens": 4096},
+    "qwen7b_structured": {
+        "vlm": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "prompt": prompts.VLM_OCR_STRUCTURED,
+        "mode": "structured",
+        "backend": "vllm",
+        "max_tokens": 4096,
+    },
+    "qwen3b_structured": {
+        "vlm": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "prompt": prompts.VLM_OCR_STRUCTURED,
+        "mode": "structured",
+        "backend": "vllm",
+        "max_tokens": 4096,
+    },
     "qwen7b_raw": {"vlm": "Qwen/Qwen2.5-VL-7B-Instruct", "prompt": prompts.VLM_OCR_RAW, "mode": "raw", "backend": "vllm", "max_tokens": 4096},
     "qwen3b_raw": {"vlm": "Qwen/Qwen2.5-VL-3B-Instruct", "prompt": prompts.VLM_OCR_RAW, "mode": "raw", "backend": "vllm", "max_tokens": 4096},
-    "internvl4b_structured": {"vlm": "OpenGVLab/InternVL2_5-4B", "prompt": prompts.VLM_OCR_STRUCTURED, "mode": "structured", "backend": "hf", "max_tokens": 4096},
+    "internvl4b_structured": {
+        "vlm": "OpenGVLab/InternVL2_5-4B",
+        "prompt": prompts.VLM_OCR_STRUCTURED,
+        "mode": "structured",
+        "backend": "hf",
+        "max_tokens": 4096,
+    },
     "got_ocr2_raw": {"vlm": "stepfun-ai/GOT-OCR-2.0-hf", "prompt": prompts.VLM_OCR_RAW, "mode": "raw", "backend": "hf", "max_tokens": 4096},
-
-    "qwen7b_v2_structured": {"vlm": "Qwen/Qwen2.5-VL-7B-Instruct", "prompt": prompts.VLM_OCR_STRUCTURED_V2, "mode": "structured", "backend": "vllm", "max_tokens": 8192},
-    "qwen7b_v2_raw": {"vlm": "Qwen/Qwen2.5-VL-7B-Instruct", "prompt": prompts.VLM_OCR_RAW_V2, "mode": "raw", "backend": "vllm", "max_tokens": 8192},
-    "qwen3b_v2_structured": {"vlm": "Qwen/Qwen2.5-VL-3B-Instruct", "prompt": prompts.VLM_OCR_STRUCTURED_V2, "mode": "structured", "backend": "vllm", "max_tokens": 8192},
-    "qwen7b_v2_raw_cleanup": {"vlm": "Qwen/Qwen2.5-VL-7B-Instruct", "prompt": prompts.VLM_OCR_RAW_V2, "mode": "raw_cleanup", "backend": "vllm", "max_tokens": 8192, "cleanup_model": "Qwen/Qwen2.5-7B-Instruct", "cleanup_prompt": prompts.LLM_CLEANUP_V2},
-    "qwen7b_v2_raw_postcorrect": {"vlm": "Qwen/Qwen2.5-VL-7B-Instruct", "prompt": prompts.VLM_OCR_RAW_V2, "mode": "raw_postcorrect", "backend": "vllm", "max_tokens": 8192, "correction_model": "Qwen/Qwen2.5-7B-Instruct"},
-
-    "preproc_qwen7b_v2_structured": {"vlm": "Qwen/Qwen2.5-VL-7B-Instruct", "prompt": prompts.VLM_OCR_STRUCTURED_V2, "mode": "structured", "backend": "vllm", "max_tokens": 8192, "preprocess": True},
-    "preproc_qwen7b_v2_raw": {"vlm": "Qwen/Qwen2.5-VL-7B-Instruct", "prompt": prompts.VLM_OCR_RAW_V2, "mode": "raw", "backend": "vllm", "max_tokens": 8192, "preprocess": True},
-
-    "yolo_qwen7b_column": {"vlm": "Qwen/Qwen2.5-VL-7B-Instruct", "prompt": prompts.VLM_OCR_COLUMN, "mode": "yolo_raw", "backend": "vllm", "max_tokens": 4096},
-    "yolo_qwen7b_structured": {"vlm": "Qwen/Qwen2.5-VL-7B-Instruct", "prompt": prompts.VLM_OCR_STRUCTURED_V2, "mode": "yolo_structured", "backend": "vllm", "max_tokens": 4096},
-    "yolo_qwen3b_column": {"vlm": "Qwen/Qwen2.5-VL-3B-Instruct", "prompt": prompts.VLM_OCR_COLUMN, "mode": "yolo_raw", "backend": "vllm", "max_tokens": 4096},
-    "yolo_qwen7b_column_cleanup": {"vlm": "Qwen/Qwen2.5-VL-7B-Instruct", "prompt": prompts.VLM_OCR_COLUMN, "mode": "yolo_raw_cleanup", "backend": "vllm", "max_tokens": 4096, "cleanup_model": "Qwen/Qwen2.5-7B-Instruct", "cleanup_prompt": prompts.LLM_CLEANUP_V2},
-
-    "qwen72b_awq_structured": {"vlm": "Qwen/Qwen2.5-VL-72B-Instruct-AWQ", "prompt": prompts.VLM_OCR_STRUCTURED_V2, "mode": "structured", "backend": "vllm", "max_tokens": 8192, "max_model_len": 8192},
+    "qwen7b_v2_structured": {
+        "vlm": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "prompt": prompts.VLM_OCR_STRUCTURED_V2,
+        "mode": "structured",
+        "backend": "vllm",
+        "max_tokens": 8192,
+    },
+    "qwen7b_v2_raw": {
+        "vlm": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "prompt": prompts.VLM_OCR_RAW_V2,
+        "mode": "raw",
+        "backend": "vllm",
+        "max_tokens": 8192,
+    },
+    "qwen3b_v2_structured": {
+        "vlm": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "prompt": prompts.VLM_OCR_STRUCTURED_V2,
+        "mode": "structured",
+        "backend": "vllm",
+        "max_tokens": 8192,
+    },
+    "qwen7b_v2_raw_cleanup": {
+        "vlm": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "prompt": prompts.VLM_OCR_RAW_V2,
+        "mode": "raw_cleanup",
+        "backend": "vllm",
+        "max_tokens": 8192,
+        "cleanup_model": "Qwen/Qwen2.5-7B-Instruct",
+        "cleanup_prompt": prompts.LLM_CLEANUP_V2,
+    },
+    "qwen7b_v2_raw_postcorrect": {
+        "vlm": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "prompt": prompts.VLM_OCR_RAW_V2,
+        "mode": "raw_postcorrect",
+        "backend": "vllm",
+        "max_tokens": 8192,
+        "correction_model": "Qwen/Qwen2.5-7B-Instruct",
+    },
+    "preproc_qwen7b_v2_structured": {
+        "vlm": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "prompt": prompts.VLM_OCR_STRUCTURED_V2,
+        "mode": "structured",
+        "backend": "vllm",
+        "max_tokens": 8192,
+        "preprocess": True,
+    },
+    "preproc_qwen7b_v2_raw": {
+        "vlm": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "prompt": prompts.VLM_OCR_RAW_V2,
+        "mode": "raw",
+        "backend": "vllm",
+        "max_tokens": 8192,
+        "preprocess": True,
+    },
+    "yolo_qwen7b_column": {
+        "vlm": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "prompt": prompts.VLM_OCR_COLUMN,
+        "mode": "yolo_raw",
+        "backend": "vllm",
+        "max_tokens": 4096,
+    },
+    "yolo_qwen7b_structured": {
+        "vlm": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "prompt": prompts.VLM_OCR_STRUCTURED_V2,
+        "mode": "yolo_structured",
+        "backend": "vllm",
+        "max_tokens": 4096,
+    },
+    "yolo_qwen3b_column": {
+        "vlm": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "prompt": prompts.VLM_OCR_COLUMN,
+        "mode": "yolo_raw",
+        "backend": "vllm",
+        "max_tokens": 4096,
+    },
+    "yolo_qwen7b_column_cleanup": {
+        "vlm": "Qwen/Qwen2.5-VL-7B-Instruct",
+        "prompt": prompts.VLM_OCR_COLUMN,
+        "mode": "yolo_raw_cleanup",
+        "backend": "vllm",
+        "max_tokens": 4096,
+        "cleanup_model": "Qwen/Qwen2.5-7B-Instruct",
+        "cleanup_prompt": prompts.LLM_CLEANUP_V2,
+    },
+    "qwen72b_awq_structured": {
+        "vlm": "Qwen/Qwen2.5-VL-72B-Instruct-AWQ",
+        "prompt": prompts.VLM_OCR_STRUCTURED_V2,
+        "mode": "structured",
+        "backend": "vllm",
+        "max_tokens": 8192,
+        "max_model_len": 8192,
+    },
 }
 
 
@@ -369,12 +482,14 @@ def run_pipeline(config_name: str, issue_date: str) -> None:
         save_result(config_name, issue_date, result_json, page_count, elapsed)
     except Exception as e:
         print(f"FAILED saving: {e}")
-        import traceback; traceback.print_exc()
+        import traceback
+
+        traceback.print_exc()
 
 
 def main() -> None:
     if len(sys.argv) < 2:
-        print(f"usage: run_single_hf.py <config|all> [date|all]")
+        print("usage: run_single_hf.py <config|all> [date|all]")
         print(f"configs: {', '.join(sorted(PIPELINES.keys()))}")
         return
 

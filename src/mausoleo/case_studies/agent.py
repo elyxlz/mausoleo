@@ -8,6 +8,7 @@ Tracks: tool-call count, total characters returned by tools (the agent's
 "context-side" read budget), final compiled answer, and per-call token
 usage so the runner can compute spend.
 """
+
 from __future__ import annotations
 
 import dataclasses as dc
@@ -117,7 +118,7 @@ def _extract_article_ids(payload: tp.Any) -> list[str]:
 
 def run_trial(
     question: str,
-    system: str,           # "mausoleo" | "baseline"
+    system: str,  # "mausoleo" | "baseline"
     *,
     seed: int = 0,
     max_tool_calls: int = 30,
@@ -149,9 +150,7 @@ def run_trial(
     # Claude Code identity (per the OAuth restriction).
     seeded_question = f"[trial-seed {seed}]\n\n{question}"
     user_first = f"{SYSTEM_PROMPT}\n\n---\n\n{seeded_question}"
-    messages: list[dict[str, tp.Any]] = [
-        {"role": "user", "content": user_first}
-    ]
+    messages: list[dict[str, tp.Any]] = [{"role": "user", "content": user_first}]
 
     for _ in range(max_tool_calls + 4):  # +4 to give room for final wrap-up
         try:
@@ -189,30 +188,36 @@ def run_trial(
                 payload = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
             payload_json = json.dumps(payload, ensure_ascii=False, default=str)
             usage.chars_read += len(payload_json)
-            usage.tool_call_log.append({
-                "name": tu.name,
-                "input": dict(tu.input),
-                "output_chars": len(payload_json),
-            })
+            usage.tool_call_log.append(
+                {
+                    "name": tu.name,
+                    "input": dict(tu.input),
+                    "output_chars": len(payload_json),
+                }
+            )
             usage.article_ids_touched.extend(_extract_article_ids(payload))
-            tool_result_blocks.append({
-                "type": "tool_result",
-                "tool_use_id": tu.id,
-                "content": payload_json,
-            })
+            tool_result_blocks.append(
+                {
+                    "type": "tool_result",
+                    "tool_use_id": tu.id,
+                    "content": payload_json,
+                }
+            )
         messages.append({"role": "user", "content": tool_result_blocks})
 
         if usage.tool_calls >= max_tool_calls:
             usage.stopped_at_cap = True
             # Force compile: append the cap notice in a follow-up user turn.
-            messages.append({
-                "role": "user",
-                "content": (
-                    "You have reached the tool-call cap. Stop calling tools "
-                    "and produce your final compiled answer now (250-450 words, "
-                    "English)."
-                ),
-            })
+            messages.append(
+                {
+                    "role": "user",
+                    "content": (
+                        "You have reached the tool-call cap. Stop calling tools "
+                        "and produce your final compiled answer now (250-450 words, "
+                        "English)."
+                    ),
+                }
+            )
             try:
                 final_resp = client.messages.create(
                     model=RESEARCHER_MODEL,

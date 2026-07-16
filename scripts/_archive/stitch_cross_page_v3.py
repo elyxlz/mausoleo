@@ -38,7 +38,7 @@ def _ends_with_obvious_truncation(text: str) -> bool:
     text = text.rstrip()
     if not text:
         return False
-    if text[-1] in ".!?»\")]}":
+    if text[-1] in '.!?»")]}':
         return False
     if text.endswith("—") or text.endswith("…"):
         return True

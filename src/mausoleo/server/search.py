@@ -1,4 +1,5 @@
 """Search logic: semantic, text, hybrid (RRF)."""
+
 from __future__ import annotations
 
 import datetime as dt

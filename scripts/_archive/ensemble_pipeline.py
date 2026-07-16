@@ -21,6 +21,7 @@ kept as the research upper bound.
 For a budget-constrained pipeline (0.8824 in ≤30 min), use
 scripts/ensemble_pipeline_30min.py.
 """
+
 from __future__ import annotations
 
 import json
@@ -82,18 +83,18 @@ def _yolo_vlm(name: str, model: str) -> OcrPipelineConfig:
 
 
 SUB_PIPELINES: dict[str, OcrPipelineConfig] = {
-    "exp_045_qwen3vl_vllm":           _col_vlm("exp_045_qwen3vl_vllm",           3, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
-    "col3_qwen3_8b_v2_structured":    _col_vlm("col3_qwen3_8b_v2_structured",    3, prompts.VLM_OCR_STRUCTURED_V2, "transformers"),
-    "exp_055_col6_ads_prompt":        _col_vlm("exp_055_col6_ads_prompt",        6, prompts.VLM_OCR_ADS_FOCUSED,   "vllm"),
-    "exp_010_yolo_qwen3_8b":          _yolo_vlm("exp_010_yolo_qwen3_8b",         "Qwen/Qwen3-VL-8B-Instruct"),
-    "col4_qwen3_8b_v2_structured":    _col_vlm("col4_qwen3_8b_v2_structured",    4, prompts.VLM_OCR_STRUCTURED_V2, "transformers"),
-    "exp_097_col4_qwen3vl_vllm":      _col_vlm("exp_097_col4_qwen3vl_vllm",      4, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
-    "col5_qwen3_8b_v2_structured":    _col_vlm("col5_qwen3_8b_v2_structured",    5, prompts.VLM_OCR_STRUCTURED_V2, "transformers"),
-    "exp_052_col6_vllm":              _col_vlm("exp_052_col6_vllm",              6, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
-    "yolo_qwen25_7b_v2_structured":   _yolo_vlm("yolo_qwen25_7b_v2_structured",  "Qwen/Qwen2.5-VL-7B-Instruct"),
-    "exp_098_col5_qwen3vl_vllm":      _col_vlm("exp_098_col5_qwen3vl_vllm",      5, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
-    "exp_099_col2_qwen3vl_vllm":      _col_vlm("exp_099_col2_qwen3vl_vllm",      2, prompts.VLM_OCR_STRUCTURED_V2, "vllm", max_model_len=20480),
-    "exp_102_fullpage_vllm":          OcrPipelineConfig(
+    "exp_045_qwen3vl_vllm": _col_vlm("exp_045_qwen3vl_vllm", 3, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
+    "col3_qwen3_8b_v2_structured": _col_vlm("col3_qwen3_8b_v2_structured", 3, prompts.VLM_OCR_STRUCTURED_V2, "transformers"),
+    "exp_055_col6_ads_prompt": _col_vlm("exp_055_col6_ads_prompt", 6, prompts.VLM_OCR_ADS_FOCUSED, "vllm"),
+    "exp_010_yolo_qwen3_8b": _yolo_vlm("exp_010_yolo_qwen3_8b", "Qwen/Qwen3-VL-8B-Instruct"),
+    "col4_qwen3_8b_v2_structured": _col_vlm("col4_qwen3_8b_v2_structured", 4, prompts.VLM_OCR_STRUCTURED_V2, "transformers"),
+    "exp_097_col4_qwen3vl_vllm": _col_vlm("exp_097_col4_qwen3vl_vllm", 4, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
+    "col5_qwen3_8b_v2_structured": _col_vlm("col5_qwen3_8b_v2_structured", 5, prompts.VLM_OCR_STRUCTURED_V2, "transformers"),
+    "exp_052_col6_vllm": _col_vlm("exp_052_col6_vllm", 6, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
+    "yolo_qwen25_7b_v2_structured": _yolo_vlm("yolo_qwen25_7b_v2_structured", "Qwen/Qwen2.5-VL-7B-Instruct"),
+    "exp_098_col5_qwen3vl_vllm": _col_vlm("exp_098_col5_qwen3vl_vllm", 5, prompts.VLM_OCR_STRUCTURED_V2, "vllm"),
+    "exp_099_col2_qwen3vl_vllm": _col_vlm("exp_099_col2_qwen3vl_vllm", 2, prompts.VLM_OCR_STRUCTURED_V2, "vllm", max_model_len=20480),
+    "exp_102_fullpage_vllm": OcrPipelineConfig(
         name="exp_102_fullpage_vllm",
         operators=[
             VlmOcr(
@@ -108,8 +109,8 @@ SUB_PIPELINES: dict[str, OcrPipelineConfig] = {
             ParseIssue(),
         ],
     ),
-    "exp_105_col1_qwen3vl_vllm":      _col_vlm("exp_105_col1_qwen3vl_vllm",      1, prompts.VLM_OCR_STRUCTURED_V2, "vllm", max_model_len=20480),
-    "exp_107_fullpage_qwen25vl":      OcrPipelineConfig(
+    "exp_105_col1_qwen3vl_vllm": _col_vlm("exp_105_col1_qwen3vl_vllm", 1, prompts.VLM_OCR_STRUCTURED_V2, "vllm", max_model_len=20480),
+    "exp_107_fullpage_qwen25vl": OcrPipelineConfig(
         name="exp_107_fullpage_qwen25vl",
         operators=[
             VlmOcr(
@@ -124,29 +125,50 @@ SUB_PIPELINES: dict[str, OcrPipelineConfig] = {
             ParseIssue(),
         ],
     ),
-    "exp_108_col3_qwen25vl":          OcrPipelineConfig(
+    "exp_108_col3_qwen25vl": OcrPipelineConfig(
         name="exp_108_col3_qwen25vl",
         operators=[
             ColumnSplit(num_columns=3, overlap_pct=0.03),
-            VlmOcr(model="Qwen/Qwen2.5-VL-7B-Instruct", prompt=prompts.VLM_OCR_STRUCTURED_V2, backend="vllm", max_tokens=8192, max_model_len=12288, gpu_fraction=1.0),
+            VlmOcr(
+                model="Qwen/Qwen2.5-VL-7B-Instruct",
+                prompt=prompts.VLM_OCR_STRUCTURED_V2,
+                backend="vllm",
+                max_tokens=8192,
+                max_model_len=12288,
+                gpu_fraction=1.0,
+            ),
             MergePages(),
             ParseIssue(),
         ],
     ),
-    "exp_109_col4_qwen25vl":          OcrPipelineConfig(
+    "exp_109_col4_qwen25vl": OcrPipelineConfig(
         name="exp_109_col4_qwen25vl",
         operators=[
             ColumnSplit(num_columns=4, overlap_pct=0.03),
-            VlmOcr(model="Qwen/Qwen2.5-VL-7B-Instruct", prompt=prompts.VLM_OCR_STRUCTURED_V2, backend="vllm", max_tokens=8192, max_model_len=12288, gpu_fraction=1.0),
+            VlmOcr(
+                model="Qwen/Qwen2.5-VL-7B-Instruct",
+                prompt=prompts.VLM_OCR_STRUCTURED_V2,
+                backend="vllm",
+                max_tokens=8192,
+                max_model_len=12288,
+                gpu_fraction=1.0,
+            ),
             MergePages(),
             ParseIssue(),
         ],
     ),
-    "exp_111_col2_qwen25vl":          OcrPipelineConfig(
+    "exp_111_col2_qwen25vl": OcrPipelineConfig(
         name="exp_111_col2_qwen25vl",
         operators=[
             ColumnSplit(num_columns=2, overlap_pct=0.03),
-            VlmOcr(model="Qwen/Qwen2.5-VL-7B-Instruct", prompt=prompts.VLM_OCR_STRUCTURED_V2, backend="vllm", max_tokens=8192, max_model_len=20480, gpu_fraction=1.0),
+            VlmOcr(
+                model="Qwen/Qwen2.5-VL-7B-Instruct",
+                prompt=prompts.VLM_OCR_STRUCTURED_V2,
+                backend="vllm",
+                max_tokens=8192,
+                max_model_len=20480,
+                gpu_fraction=1.0,
+            ),
             MergePages(),
             ParseIssue(),
         ],
@@ -157,25 +179,25 @@ SUB_PIPELINES: dict[str, OcrPipelineConfig] = {
 PRIMARY = "exp_045_qwen3vl_vllm"
 
 REPLACEMENT_CHAIN: list[tuple[str, float, float]] = [
-    ("col3_qwen3_8b_v2_structured",   0.75, 1.15),
-    ("exp_055_col6_ads_prompt",       0.75, 1.08),
-    ("exp_010_yolo_qwen3_8b",         0.50, 1.08),
-    ("col4_qwen3_8b_v2_structured",   0.75, 1.02),
-    ("exp_097_col4_qwen3vl_vllm",     0.75, 1.02),
+    ("col3_qwen3_8b_v2_structured", 0.75, 1.15),
+    ("exp_055_col6_ads_prompt", 0.75, 1.08),
+    ("exp_010_yolo_qwen3_8b", 0.50, 1.08),
+    ("col4_qwen3_8b_v2_structured", 0.75, 1.02),
+    ("exp_097_col4_qwen3vl_vllm", 0.75, 1.02),
 ]
 
 ADDITIVE_SOURCES: list[tuple[str, float, float]] = [
-    ("col5_qwen3_8b_v2_structured",   0.50, 100.0),
-    ("exp_052_col6_vllm",             0.30, 100.0),
-    ("yolo_qwen25_7b_v2_structured",  0.50, 100.0),
-    ("exp_098_col5_qwen3vl_vllm",     0.50, 100.0),
-    ("exp_099_col2_qwen3vl_vllm",     0.75, 100.0),
-    ("exp_102_fullpage_vllm",         0.75, 100.0),
-    ("exp_105_col1_qwen3vl_vllm",     0.75, 100.0),
-    ("exp_107_fullpage_qwen25vl",     0.75, 100.0),
-    ("exp_108_col3_qwen25vl",         0.75, 100.0),
-    ("exp_109_col4_qwen25vl",         0.75, 100.0),
-    ("exp_111_col2_qwen25vl",         0.75, 100.0),
+    ("col5_qwen3_8b_v2_structured", 0.50, 100.0),
+    ("exp_052_col6_vllm", 0.30, 100.0),
+    ("yolo_qwen25_7b_v2_structured", 0.50, 100.0),
+    ("exp_098_col5_qwen3vl_vllm", 0.50, 100.0),
+    ("exp_099_col2_qwen3vl_vllm", 0.75, 100.0),
+    ("exp_102_fullpage_vllm", 0.75, 100.0),
+    ("exp_105_col1_qwen3vl_vllm", 0.75, 100.0),
+    ("exp_107_fullpage_qwen25vl", 0.75, 100.0),
+    ("exp_108_col3_qwen25vl", 0.75, 100.0),
+    ("exp_109_col4_qwen25vl", 0.75, 100.0),
+    ("exp_111_col2_qwen25vl", 0.75, 100.0),
 ]
 
 QUALITY_SELECT_SOURCES: list[str] = [
@@ -238,7 +260,7 @@ def run(date: str) -> pl.Path:
     for name, config in SUB_PIPELINES.items():
         _run_sub_pipeline(name, config, date)
 
-    print(f"Building ensemble...")
+    print("Building ensemble...")
     result = _ensemble(date)
 
     output_path = PREDICTIONS_DIR / f"ensemble_best_{date}.json"

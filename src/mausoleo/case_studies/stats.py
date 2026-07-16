@@ -1,4 +1,5 @@
 """Sign test + Cohen's kappa helpers."""
+
 from __future__ import annotations
 
 import math
@@ -40,9 +41,11 @@ def sign_test(pairs: list[tuple[float, float]]) -> dict[str, tp.Any]:
 
 def _binom_two_sided(k: int, n: int) -> float:
     """Manual two-sided binomial p-value at p=0.5."""
+
     # Two-sided = 2 * min-tail (clipped at 1) under symmetric null.
     def cdf(x: int) -> float:
-        return sum(math.comb(n, i) * 0.5 ** n for i in range(x + 1))
+        return sum(math.comb(n, i) * 0.5**n for i in range(x + 1))
+
     lower = cdf(min(k, n - k))
     return min(1.0, 2.0 * lower)
 

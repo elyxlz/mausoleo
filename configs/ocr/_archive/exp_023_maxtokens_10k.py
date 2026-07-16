@@ -6,7 +6,13 @@ config = OcrPipelineConfig(
     name="exp_023_maxtokens_10k",
     operators=[
         ColumnSplit(num_columns=3, overlap_pct=0.03),
-        VlmOcr(model="Qwen/Qwen3-VL-8B-Instruct", prompt=prompts.VLM_OCR_STRUCTURED_V2, backend="transformers", max_tokens=10240, max_model_len=32768),
+        VlmOcr(
+            model="Qwen/Qwen3-VL-8B-Instruct",
+            prompt=prompts.VLM_OCR_STRUCTURED_V2,
+            backend="transformers",
+            max_tokens=10240,
+            max_model_len=32768,
+        ),
         MergePages(),
         ParseIssue(),
     ],

@@ -14,6 +14,7 @@ Each tool returns a JSON-serialisable dict. Long string fields are truncated
 to keep the agent's context manageable; the agent can drill into ``text``
 explicitly when it needs the full primary source.
 """
+
 from __future__ import annotations
 
 import datetime as dt
@@ -33,15 +34,14 @@ _CLIENT: tp.Any = None
 def get_client() -> tp.Any:
     global _CLIENT
     if _CLIENT is None:
-        _CLIENT = clickhouse_connect.get_client(
-            host="127.0.0.1", port=8123, database="default"
-        )
+        _CLIENT = clickhouse_connect.get_client(host="127.0.0.1", port=8123, database="default")
     return _CLIENT
 
 
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
 
 def _trim(s: str | None, n: int = 600) -> str:
     if not s:
@@ -75,11 +75,11 @@ def _date(v: tp.Any) -> str | None:
 # Mausoleo tools (nodes table)
 # ---------------------------------------------------------------------------
 
+
 def mausoleo_root() -> dict[str, tp.Any]:
     cli = get_client()
     rows = cli.query(
-        "SELECT node_id, level, parent_id, date_start, date_end, summary, child_count "
-        "FROM nodes WHERE node_id = 'archive' LIMIT 1"
+        "SELECT node_id, level, parent_id, date_start, date_end, summary, child_count FROM nodes WHERE node_id = 'archive' LIMIT 1"
     ).named_results()
     rows = list(rows)
     if not rows:
@@ -98,8 +98,7 @@ def mausoleo_node(node_id: str) -> dict[str, tp.Any]:
     cli = get_client()
     rows = list(
         cli.query(
-            "SELECT node_id, level, parent_id, date_start, date_end, summary, child_count "
-            "FROM nodes WHERE node_id = {nid:String} LIMIT 1",
+            "SELECT node_id, level, parent_id, date_start, date_end, summary, child_count FROM nodes WHERE node_id = {nid:String} LIMIT 1",
             parameters={"nid": node_id},
         ).named_results()
     )
@@ -160,8 +159,7 @@ def mausoleo_text(node_id: str) -> dict[str, tp.Any]:
     while frontier:
         rows = list(
             cli.query(
-                "SELECT node_id, level, position, date_start, raw_text FROM nodes "
-                "WHERE parent_id IN ({ids:Array(String)})",
+                "SELECT node_id, level, position, date_start, raw_text FROM nodes WHERE parent_id IN ({ids:Array(String)})",
                 parameters={"ids": frontier},
             ).named_results()
         )
@@ -189,8 +187,7 @@ def mausoleo_stats() -> dict[str, tp.Any]:
     cli = get_client()
     by_level = list(
         cli.query(
-            "SELECT level, count() AS n, min(date_start) AS d_min, max(date_end) AS d_max "
-            "FROM nodes GROUP BY level ORDER BY level"
+            "SELECT level, count() AS n, min(date_start) AS d_min, max(date_end) AS d_max FROM nodes GROUP BY level ORDER BY level"
         ).named_results()
     )
     return {
@@ -227,8 +224,7 @@ def _text_search_summary(
         params["dt"] = dt.date.fromisoformat(date_to)
     sql = (
         "SELECT node_id, level, parent_id, date_start, date_end, summary, child_count "
-        "FROM nodes WHERE " + " AND ".join(where) +
-        " ORDER BY level ASC, date_start ASC, position ASC LIMIT {lim:UInt32}"
+        "FROM nodes WHERE " + " AND ".join(where) + " ORDER BY level ASC, date_start ASC, position ASC LIMIT {lim:UInt32}"
     )
     rows = list(cli.query(sql, parameters=params).named_results())
     return {
@@ -238,11 +234,10 @@ def _text_search_summary(
     }
 
 
-def mausoleo_search_text(query: str, level: str | None = None,
-                          date_from: str | None = None, date_to: str | None = None,
-                          limit: int = 15) -> dict[str, tp.Any]:
-    return _text_search_summary(query, level=level, date_from=date_from,
-                                date_to=date_to, limit=limit)
+def mausoleo_search_text(
+    query: str, level: str | None = None, date_from: str | None = None, date_to: str | None = None, limit: int = 15
+) -> dict[str, tp.Any]:
+    return _text_search_summary(query, level=level, date_from=date_from, date_to=date_to, limit=limit)
 
 
 # Semantic + hybrid require an embedding model. We use the same
@@ -268,9 +263,7 @@ def _load_embedder() -> tp.Any | None:
         _EMBED_LOAD_ERROR = f"import failed: {e}"
         return None
     try:
-        _EMBED_MODEL = SentenceTransformer(
-            "paraphrase-multilingual-MiniLM-L12-v2", device="cpu"
-        )
+        _EMBED_MODEL = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2", device="cpu")
         _EMBED_MODEL.max_seq_length = 384
         return _EMBED_MODEL
     except Exception as e:
@@ -293,8 +286,7 @@ def ensure_embedder() -> dict[str, tp.Any]:
         v = m.encode("Mussolini", normalize_embeddings=True).tolist()
         rows = list(
             cli.query(
-                "SELECT node_id, L2Distance(embedding, {q:Array(Float32)}) AS d "
-                "FROM nodes WHERE level = 'day' ORDER BY d ASC LIMIT 1",
+                "SELECT node_id, L2Distance(embedding, {q:Array(Float32)}) AS d FROM nodes WHERE level = 'day' ORDER BY d ASC LIMIT 1",
                 parameters={"q": v},
             ).result_rows
         )
@@ -309,15 +301,14 @@ def ensure_embedder() -> dict[str, tp.Any]:
     }
 
 
-def mausoleo_search_semantic(query: str, level: str | None = None,
-                              date_from: str | None = None, date_to: str | None = None,
-                              limit: int = 15) -> dict[str, tp.Any]:
+def mausoleo_search_semantic(
+    query: str, level: str | None = None, date_from: str | None = None, date_to: str | None = None, limit: int = 15
+) -> dict[str, tp.Any]:
     cli = get_client()
     embedder = _load_embedder()
     if embedder is None:
         # Fallback to text-search; documented in RUNLOG.
-        return mausoleo_search_text(query, level=level, date_from=date_from,
-                                    date_to=date_to, limit=limit)
+        return mausoleo_search_text(query, level=level, date_from=date_from, date_to=date_to, limit=limit)
     vec = embedder.encode(query, normalize_embeddings=True).tolist()
     where: list[str] = ["1=1"]
     params: dict[str, tp.Any] = {"q": vec, "lim": int(limit)}
@@ -333,8 +324,7 @@ def mausoleo_search_semantic(query: str, level: str | None = None,
     sql = (
         "SELECT node_id, level, parent_id, date_start, date_end, summary, child_count, "
         "L2Distance(embedding, {q:Array(Float32)}) AS distance "
-        "FROM nodes WHERE " + " AND ".join(where) +
-        " ORDER BY distance ASC LIMIT {lim:UInt32}"
+        "FROM nodes WHERE " + " AND ".join(where) + " ORDER BY distance ASC LIMIT {lim:UInt32}"
     )
     rows = list(cli.query(sql, parameters=params).named_results())
     return {
@@ -344,14 +334,12 @@ def mausoleo_search_semantic(query: str, level: str | None = None,
     }
 
 
-def mausoleo_search_hybrid(query: str, level: str | None = None,
-                            date_from: str | None = None, date_to: str | None = None,
-                            limit: int = 15) -> dict[str, tp.Any]:
+def mausoleo_search_hybrid(
+    query: str, level: str | None = None, date_from: str | None = None, date_to: str | None = None, limit: int = 15
+) -> dict[str, tp.Any]:
     """RRF over semantic + text. Falls back to text-only if no embedder."""
-    sem = mausoleo_search_semantic(query, level=level, date_from=date_from,
-                                    date_to=date_to, limit=limit * 4)
-    txt = mausoleo_search_text(query, level=level, date_from=date_from,
-                                date_to=date_to, limit=limit * 4)
+    sem = mausoleo_search_semantic(query, level=level, date_from=date_from, date_to=date_to, limit=limit * 4)
+    txt = mausoleo_search_text(query, level=level, date_from=date_from, date_to=date_to, limit=limit * 4)
     score: dict[str, float] = {}
     rec: dict[str, dict[str, tp.Any]] = {}
     for r in sem.get("results", []):
@@ -391,16 +379,14 @@ def _tokenise(s: str) -> list[str]:
     return [t.lower() for t in _TOK_RE.findall(s) if len(t) > 1 and t.lower() not in _STOP]
 
 
-def _bm25_search_python(
-    query: str, date_from: str | None, date_to: str | None, limit: int
-) -> dict[str, tp.Any]:
+def _bm25_search_python(query: str, date_from: str | None, date_to: str | None, limit: int) -> dict[str, tp.Any]:
     """In-Python BM25 over the documents table.
 
     Loaded once (memoised) — the corpus is ~1M tokens, fits comfortably in RAM.
     Stronger than ClickHouse's positionCaseInsensitive baseline because it
     actually scores by IDF-weighted overlap.
     """
-    cli = get_client()
+    get_client()
     docs = _bm25_corpus()
     qterms = _tokenise(query)
     if not qterms:
@@ -434,13 +420,15 @@ def _bm25_search_python(
     out = []
     for score, i in scored[:limit]:
         d = docs["rows"][i]
-        out.append({
-            "article_id": d["article_id"],
-            "date": d["date"].isoformat(),
-            "headline": d["headline"],
-            "snippet": _trim(d["text"], 220),
-            "score": round(score, 4),
-        })
+        out.append(
+            {
+                "article_id": d["article_id"],
+                "date": d["date"].isoformat(),
+                "headline": d["headline"],
+                "snippet": _trim(d["text"], 220),
+                "score": round(score, 4),
+            }
+        )
     return {"query": query, "count": len(out), "results": out}
 
 
@@ -470,14 +458,16 @@ def _bm25_corpus() -> dict[str, tp.Any]:
         for t in tf:
             df[t] = df.get(t, 0) + 1
         total_dl += len(toks)
-        docs.append({
-            "article_id": r["article_id"],
-            "date": r["date"] if isinstance(r["date"], dt.date) else dt.date.fromisoformat(str(r["date"])),
-            "headline": r.get("headline", ""),
-            "text": r["text"],
-            "tf": tf,
-            "dl": len(toks),
-        })
+        docs.append(
+            {
+                "article_id": r["article_id"],
+                "date": r["date"] if isinstance(r["date"], dt.date) else dt.date.fromisoformat(str(r["date"])),
+                "headline": r.get("headline", ""),
+                "text": r["text"],
+                "tf": tf,
+                "dl": len(toks),
+            }
+        )
     _DOCS_CACHE = {
         "rows": docs,
         "df": df,
@@ -487,8 +477,7 @@ def _bm25_corpus() -> dict[str, tp.Any]:
     return _DOCS_CACHE
 
 
-def baseline_search(query: str, date_from: str | None = None,
-                     date_to: str | None = None, limit: int = 15) -> dict[str, tp.Any]:
+def baseline_search(query: str, date_from: str | None = None, date_to: str | None = None, limit: int = 15) -> dict[str, tp.Any]:
     """BM25 over the flat documents table. Returns ranked article snippets."""
     return _bm25_search_python(query, date_from, date_to, limit)
 
@@ -497,8 +486,7 @@ def baseline_read_article(article_id: str) -> dict[str, tp.Any]:
     cli = get_client()
     rows = list(
         cli.query(
-            "SELECT article_id, date, headline, text, page_span FROM documents "
-            "WHERE article_id = {aid:String} LIMIT 1",
+            "SELECT article_id, date, headline, text, page_span FROM documents WHERE article_id = {aid:String} LIMIT 1",
             parameters={"aid": article_id},
         ).named_results()
     )
@@ -665,19 +653,28 @@ def dispatch_mausoleo(name: str, kwargs: dict[str, tp.Any]) -> dict[str, tp.Any]
         return mausoleo_stats()
     if name == "search_semantic":
         return mausoleo_search_semantic(
-            kwargs["query"], level=kwargs.get("level"),
-            date_from=kwargs.get("date_from"), date_to=kwargs.get("date_to"),
-            limit=int(kwargs.get("limit", 15)))
+            kwargs["query"],
+            level=kwargs.get("level"),
+            date_from=kwargs.get("date_from"),
+            date_to=kwargs.get("date_to"),
+            limit=int(kwargs.get("limit", 15)),
+        )
     if name == "search_text":
         return mausoleo_search_text(
-            kwargs["query"], level=kwargs.get("level"),
-            date_from=kwargs.get("date_from"), date_to=kwargs.get("date_to"),
-            limit=int(kwargs.get("limit", 15)))
+            kwargs["query"],
+            level=kwargs.get("level"),
+            date_from=kwargs.get("date_from"),
+            date_to=kwargs.get("date_to"),
+            limit=int(kwargs.get("limit", 15)),
+        )
     if name == "search_hybrid":
         return mausoleo_search_hybrid(
-            kwargs["query"], level=kwargs.get("level"),
-            date_from=kwargs.get("date_from"), date_to=kwargs.get("date_to"),
-            limit=int(kwargs.get("limit", 15)))
+            kwargs["query"],
+            level=kwargs.get("level"),
+            date_from=kwargs.get("date_from"),
+            date_to=kwargs.get("date_to"),
+            limit=int(kwargs.get("limit", 15)),
+        )
     return {"error": f"unknown tool: {name}"}
 
 
