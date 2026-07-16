@@ -10,9 +10,10 @@ Families grouped by underlying mechanism. Statuses: ACTIVE (worth iterating), BL
 - GLM-OCR (0.9B, downloaded): **BLOCKED** — degenerate repetition loops on broadsheet column crops (exp_145, composite 0.15). Unblock: vllm no-repeat logit processor from the GLM-OCR recipe, or its MTP path, or evidence it works on sub-page crops of modern-density text.
 
 ## F2 — Long-horizon multi-page parsing (cross-page continuity)
-**Status: ACTIVE, one route BLOCKED.**
-- Unlimited-OCR multi-page mode at 1024px/page: **BLOCKED** — broadsheet text illegible at 1024px; model hallucinates numeric sequences (exp_146 smoke, 45KB of "A. NNNN"). Unblock: feed legible sub-page crops (column/half-column) as the page sequence so R-SWA context spans crops — materially different input distribution, untested.
-- Caveat: 32K context bounds whole-issue output (1910 issue ≈ 185K chars ≈ 60K+ tokens) → windowed passes required regardless.
+**Status: BLOCKED (2026-07-16) — both Unlimited-OCR routes dead.**
+- Multi-page mode at 1024px/page: BLOCKED — broadsheet text illegible at 1024px (exp_146, hallucinated numerics).
+- Legible-tile sequence (the former unblock condition): **tested and FAILED** — square 730px tiles are legible to the model (real headlines read) but output garbles far below Paddle quality and degenerates into repetition loops at any sequence length (12 or 4 tiles) and anti-repeat setting. `infer_multi` letterboxes every image to a square canvas; tiles were the correct input shape, failure is distributional.
+- Unblock: a NEW long-horizon model release, not parameter/prompt nudges. Cross-page continuity must meanwhile come from layout/reading-order (F3) or merge-level stitching (F6).
 
 ## F3 — Layout detection & reading order
 **Status: ACTIVE, underexplored.**
