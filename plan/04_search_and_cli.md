@@ -1,5 +1,7 @@
 # Phase 4: Search & Navigation API + CLI
 
+> **STATUS 2026-07-16: deferred; implementation removed from the repo** (recoverable from git history). To be rebuilt after phase 3.
+
 ## Goal
 
 Build the API server and CLI that let an LLM agent explore the hierarchical knowledge index. The agent should be able to efficiently navigate from the archive root down to specific primary sources across 60+ years of newspaper data.

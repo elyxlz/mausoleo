@@ -81,10 +81,10 @@ Only worthwhile with NEW diverse sources from Tiers 1–2. Cross-model-family di
 ## The Loop
 1. **Read state** — this file + last entries of `log.jsonl`
 2. **Propose** — ONE change (one variable at a time)
-3. **Write config** — `configs/ocr/exp_NNN_desc.py` (next NNN from log; prompts go in `src/mausoleo/ocr/prompts.py`)
-4. **Run** — sync to ripperred, run BOTH dates, copy predictions back
-5. **Evaluate** — `evaluate_issue()` locally on both dates; apply the Generalization Protocol
-6. **Inspect** — read actual predictions vs GT and the ray log (never judge from the score alone)
+3. **Write the experiment** — `experiments/exp_NNN_desc.py` (next NNN from log), self-contained per `experiments/README.md`: `<date...>` argv in, `eval/predictions/<name>_<date>.json` out, implementation free (Ray not required). Oracle ensembles stay on the legacy `configs/ocr` harness.
+4. **Run** — on ripperred, BOTH GT dates (plus probe dates when relevant)
+5. **Evaluate** — `scripts/research.py eval <name>` (audit + holdout); apply the Generalization Protocol
+6. **Inspect** — read actual predictions vs GT and the run log (never judge from the score alone)
 7. **Decide** — accept (update baselines here) or revert; log to `log.jsonl` either way, with mechanism line
 8. **Report + schedule** — one-line result; ScheduleWakeup for next iteration
 

@@ -1,5 +1,7 @@
 # Phase 5: Open Source Packaging
 
+> **STATUS 2026-07-16: deferred.**
+
 ## Goal
 
 Package the project for public release. Uses `uv` throughout for dependency management, running scripts, and builds. Clean repo structure, documentation, and easy setup.

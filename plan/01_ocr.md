@@ -1,5 +1,7 @@
 # Phase 1–2: OCR Pipeline — Eval, Design, and Production
 
+> **STATUS 2026-07-16: superseded by the live autoresearch program.** Current objective, budget, metrics, and protocol live in `eval/autoresearch/program.md`; approach families in `registry.md`; every experiment in `log.jsonl`. New experiments are self-contained scripts under `experiments/` (see `experiments/README.md`); the Ray harness remains only for the oracle ensembles. This file is kept as historical design context.
+
 ## Goal
 
 Build and evaluate an OCR pipeline for 1880–1945 Italian newspaper archives (Il Messaggero). Find the best approach through systematic benchmarking, then process the full archive (~130K pages) at scale using Ray Data.

@@ -1,5 +1,7 @@
 # Phase 6: Dissertation
 
+> **STATUS 2026-07-16: deferred; drafts and figures backed up to `~/dissertation_backup_2026-07-16.tar.gz` on ripperred** (papers/ and gan_corpus/ deleted — re-downloadable).
+
 ## Goal
 
 Write the BASc (Arts and Sciences, UCL) dissertation around this system. The dissertation must be interdisciplinary — the technical system is the vehicle, but the argument must engage with theories and frameworks from multiple disciplines beyond CS/AI.

@@ -1,5 +1,7 @@
 # Phase 3: Hierarchical Index (ClickHouse)
 
+> **STATUS 2026-07-16: deferred; implementation removed from the repo** (recoverable from git history, commit c397f0c and earlier). To be rebuilt on the finished OCR corpus. Design below still stands — see plan/00_roadmap.md "Key decisions still standing".
+
 ## Goal
 
 Build the recursive hierarchical summary tree from OCR output and store it in ClickHouse. This is the core intellectual contribution of the project — a navigable, multi-resolution knowledge structure over 60+ years of newspaper data.
