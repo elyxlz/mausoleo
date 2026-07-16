@@ -1,10 +1,16 @@
 from __future__ import annotations
 
-import dataclasses as dc
+import typing as tp
 
-from mausoleo.eval.evaluate import evaluate_issue
-from mausoleo.eval.metrics import compute_cer, compute_kendalls_tau, compute_wer
-from mausoleo.ocr.models import Article, Issue, Paragraph
+from mausoleo.eval.evaluate import compute_cer, compute_ordering_score, compute_wer, evaluate_issue, match_articles
+
+
+def _article(headline: str, text: str, pages: list[int]) -> dict[str, tp.Any]:
+    return {"unit_type": "article", "headline": headline, "paragraphs": [{"text": text}], "page_span": pages}
+
+
+LONG_A = "Il consiglio comunale ha approvato ieri sera il nuovo bilancio della città di Roma dopo lunga discussione."
+LONG_B = "Un violento temporale si è abbattuto ieri sul litorale laziale causando gravi danni alle campagne circostanti."
 
 
 def test_cer_identical() -> None:
@@ -12,8 +18,7 @@ def test_cer_identical() -> None:
 
 
 def test_cer_different() -> None:
-    cer = compute_cer("hello", "hallo")
-    assert 0.0 < cer < 1.0
+    assert 0.0 < compute_cer("hello", "hallo") < 1.0
 
 
 def test_wer_identical() -> None:
@@ -21,52 +26,41 @@ def test_wer_identical() -> None:
 
 
 def test_wer_different() -> None:
-    wer = compute_wer("hello world", "hallo world")
-    assert 0.0 < wer <= 1.0
+    assert 0.0 < compute_wer("hello world", "hallo world") <= 1.0
 
 
-def test_kendalls_tau_identical() -> None:
-    assert compute_kendalls_tau([1, 2, 3], [1, 2, 3]) == 1.0
+def test_ordering_degenerate_is_zero() -> None:
+    gt = {"articles": [_article("Uno", LONG_A, [1])]}
+    matches = match_articles(gt["articles"], gt["articles"])
+    assert compute_ordering_score(matches) == 0.0
 
 
-def test_kendalls_tau_reversed() -> None:
-    assert compute_kendalls_tau([3, 2, 1], [1, 2, 3]) == -1.0
-
-
-def test_evaluate_issue() -> None:
-    predicted = Issue(
-        date="1885-06-15",
-        source="il_messaggero",
-        page_count=4,
-        articles=[
-            Article(
-                id="1885-06-15_a00",
-                unit_type="article",
-                headline="Test",
-                paragraphs=[Paragraph(id="1885-06-15_a00_p00", text="Testo di prova")],
-                page_span=[1],
-                position_in_issue=0,
-            ),
-        ],
-    )
-    expected = Issue(
-        date="1885-06-15",
-        source="il_messaggero",
-        page_count=4,
-        articles=[
-            Article(
-                id="1885-06-15_a00",
-                unit_type="article",
-                headline="Test",
-                paragraphs=[Paragraph(id="1885-06-15_a00_p00", text="Testo di prova")],
-                page_span=[1],
-                position_in_issue=0,
-            ),
-        ],
-    )
-
-    result = evaluate_issue(dc.asdict(expected), dc.asdict(predicted))
+def test_evaluate_issue_perfect_match() -> None:
+    issue = {"articles": [_article("Uno", LONG_A, [1]), _article("Due", LONG_B, [2])]}
+    result = evaluate_issue(issue, issue)
     assert result.mean_cer == 0.0
-    assert result.mean_wer == 0.0
-    assert result.total_pred_articles == 1
-    assert result.total_gt_articles == 1
+    assert result.weighted_cer == 0.0
+    assert result.article_recall == 1.0
+    assert result.article_precision == 1.0
+    assert result.composite_score > 0.95
+
+
+def test_spam_lowers_composite() -> None:
+    gt = {"articles": [_article("Uno", LONG_A, [1]), _article("Due", LONG_B, [2])]}
+    fabricated = [_article("", f"articolo inventato numero {i} senza alcuna corrispondenza reale", [1]) for i in range(50)]
+    spammed = {"articles": [*gt["articles"], *fabricated]}
+    assert evaluate_issue(gt, spammed).composite_score < evaluate_issue(gt, gt).composite_score - 0.05
+
+
+def test_unmatched_gt_counts_in_wcer() -> None:
+    gt = {"articles": [_article("Uno", LONG_A, [1]), _article("Due", LONG_B, [2])]}
+    partial = {"articles": [gt["articles"][0]]}
+    result = evaluate_issue(gt, partial)
+    assert result.weighted_cer > 0.4
+    assert result.composite_score < 0.6
+
+
+def test_empty_prediction_scores_near_zero() -> None:
+    gt = {"articles": [_article("Uno", LONG_A, [1]), _article("Due", LONG_B, [2])]}
+    result = evaluate_issue(gt, {"articles": []})
+    assert result.composite_score < 0.05

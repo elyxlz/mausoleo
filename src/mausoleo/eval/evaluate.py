@@ -76,6 +76,7 @@ class IssueResult:
     page_accuracy: float
     ordering_score: float
     composite_score: float
+    composite_v1_score: float
     total_gt_articles: int
     total_pred_articles: int
 
@@ -84,7 +85,7 @@ def compute_ordering_score(matches: list[ArticleMatch]) -> float:
     paired = [(m.gt_index, m.pred_index) for m in matches if m.pred_index is not None]
     n = len(paired)
     if n < 2:
-        return 1.0
+        return 0.0
 
     gt_ranks = sorted(range(n), key=lambda i: paired[i][0])
     pred_order = [paired[gt_ranks[i]][1] for i in range(n)]
@@ -209,11 +210,17 @@ def evaluate_issue(
     mean_cer = sum(m.cer for m in matched) / len(matched) if matched else 1.0
     mean_wer = sum(m.wer for m in matched) / len(matched) if matched else 1.0
 
-    total_chars = sum(m.gt_chars for m in matched)
-    weighted_cer = sum(m.cer * m.gt_chars for m in matched) / total_chars if total_chars > 0 else 1.0
+    total_gt_chars = sum(m.gt_chars for m in matches)
+    weighted_cer = sum(min(m.cer, 1.0) * m.gt_chars for m in matches) / total_gt_chars if total_gt_chars > 0 else 1.0
 
-    headline_cers = [m.headline_cer for m in matched if m.gt_headline]
+    matched_chars = sum(m.gt_chars for m in matched)
+    weighted_cer_v1 = sum(m.cer * m.gt_chars for m in matched) / matched_chars if matched_chars > 0 else 1.0
+
+    headline_cers = [min(m.headline_cer, 1.0) for m in matched if m.gt_headline]
     mean_headline_cer = sum(headline_cers) / len(headline_cers) if headline_cers else 1.0
+
+    headline_cers_v1 = [m.headline_cer for m in matched if m.gt_headline]
+    mean_headline_cer_v1 = sum(headline_cers_v1) / len(headline_cers_v1) if headline_cers_v1 else 1.0
 
     gt_full = " ".join(article_text(a) for a in gt_articles)
     pred_full = " ".join(article_text(a) for a in pred_articles)
@@ -224,12 +231,14 @@ def evaluate_issue(
     page_accuracy = page_correct / len(matches) if matches else 0.0
 
     ordering = compute_ordering_score(matches)
+    ordering_v1 = ordering if len(matched) >= 2 else 1.0
 
-    composite = (
-        0.40 * (1.0 - min(weighted_cer, 1.0))
+    composite = 0.40 * (1.0 - weighted_cer) + 0.25 * f1 + 0.15 * ordering + 0.10 * (1.0 - mean_headline_cer) + 0.10 * page_accuracy
+    composite_v1 = (
+        0.40 * (1.0 - min(weighted_cer_v1, 1.0))
         + 0.25 * recall
-        + 0.15 * ordering
-        + 0.10 * (1.0 - min(mean_headline_cer, 1.0))
+        + 0.15 * ordering_v1
+        + 0.10 * (1.0 - min(mean_headline_cer_v1, 1.0))
         + 0.10 * page_accuracy
     )
 
@@ -249,6 +258,7 @@ def evaluate_issue(
         page_accuracy=page_accuracy,
         ordering_score=ordering,
         composite_score=composite,
+        composite_v1_score=composite_v1,
         total_gt_articles=len(gt_articles),
         total_pred_articles=len(pred_articles),
     )

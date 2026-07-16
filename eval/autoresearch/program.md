@@ -19,21 +19,21 @@ Goal: OCR the ENTIRE corpus (1880 → 1959, ~175K pages ≈ 29K issues; ~1.07M p
 Prior program versions with full session narratives live in `history/`. Every experiment ever run is in `log.jsonl`.
 
 ## Eval Metrics
-`evaluate_issue()` in `src/mausoleo/eval/evaluate.py` (do not modify):
+`evaluate_issue()` in `src/mausoleo/eval/evaluate.py` (never modify to improve a score; metric changes only via a documented reward-hacking audit like eval_review.md):
 - **CER / wCER**: character error rate per matched article / length-weighted (lower better)
 - **hCER**: headline CER (lower better)
 - **Recall / F1**: GT article match rate (higher better)
 - **Ordering**: Spearman squared-displacement (higher better)
 - **Page accuracy**: correct page_span fraction (higher better)
-- **Composite** = 0.40·(1−wCER) + 0.25·recall + 0.15·ordering + 0.10·(1−hCER) + 0.10·page_accuracy
+- **Composite (v2, 2026-07-16)** = 0.40·(1−wCER_all) + 0.25·F1 + 0.15·ordering + 0.10·(1−hCER) + 0.10·page_accuracy — wCER over ALL GT articles with per-article cap 1.0; ordering=0 when <2 matches; hCER per-article capped. See `eval_review.md` for the reward-hacking audit that motivated v2. Pre-2026-07-16 log numbers are v1 (`composite_v1_score` field still computed for comparison).
 
-Always evaluate BOTH dates and report the average.
+Always evaluate BOTH dates and report the average. Report precision/F1 alongside composite; a change that drops precision >5pts needs explicit justification. The holdout rule covers structural changes that filter/drop articles, not just hyperparameters. Pipeline code must never read GT at inference nor re-emit another config's prediction file as its own.
 
 ## Current Baselines
 | Config | Score | 1885 | 1910 | Wall | Notes |
 |---|---|---|---|---|---|
-| `configs/ocr/ensemble_30min.py` (production) | **0.89878** | 0.87186 | 0.92569 | ~30.5 min | 8 sub-pipelines, 2 GPU chains, REPLACE+ADDITIVE+quality_select. Saturated: 50+ retune evals tied within ±0.0001. |
-| `scripts/ensemble_pipeline_30min.py` (research) | 0.9231 | 0.9037 | 0.9426 | ~50–60 min | 19 sources + cross-page completion. |
+| `configs/ocr/ensemble_30min.py` (oracle/reference) | v1 0.89878 (v2 pending re-run on 1885) | 0.87186 v1 | 0.92569 v1 / **0.7892 v2** | ~30.5 min | 8 inline sub-pipelines, dynamic GPU queue, subprocess isolation. v1-saturated. ~600 GPU-s/page: research artifact only. |
+| 19-source research orchestrator (archived: `scripts/_archive/ensemble_pipeline_30min.py`) | 0.9231 v1 | 0.9037 | 0.9426 | ~50–60 min | Violates one-config-one-run; port to ParallelEnsembleOcr if ever needed. |
 
 Reproduce: `uv run --no-project python scripts/run_real_ocr.py ensemble_30min 1885-06-15 1910-06-15` → `eval/predictions/ensemble_30min_<date>.json` (sub-pipeline predictions cached as `<name>_<date>.json`).
 
@@ -59,8 +59,8 @@ Ripperred: vllm 0.19.1, torch 2.10, transformers 5.5.4. Disk was 99% full (30GB 
 - **1D. olmOCR-2-7B** — ALREADY CACHED on ripperred (`allenai/olmOCR-2-7B-1025`). Previously dismissed because it ignores the V2 JSON prompt — that was misuse. Use its native prompt → markdown, then the markdown→articles adapter (Tier 2).
 - Note all these output **markdown/text, not our article JSON** — they need Tier 2 to become ensemble sources.
 
-### TIER 2: Markdown→articles adapter (unlocks Tier 1)
-New operator `ParseMarkdownArticles`: specialized OCR models emit markdown with headings; headings are natural article boundaries. Map heading→headline, following text→paragraphs, crop provenance→page_span. Once written, EVERY specialized OCR model becomes a candidate ensemble source. This is the highest-leverage single piece of code to write.
+### TIER 2: Markdown→articles adapter (unlocks Tier 1) — DONE 2026-07-16
+`MergeMarkdownPages` (src/mausoleo/ocr/operators/merge_markdown.py): headings/bold lines → headlines, blank-line blocks → paragraphs, crop provenance → page_span. Every markdown-native OCR model is now a candidate source. Reality check from exp_147/150: specialized models often emit NO headings on newspaper content — region-level detection (YOLO) provides the segmentation instead.
 
 ### TIER 3: Layout & cross-page
 - **PP-DocLayoutV3** (RT-DETR 31M, Apache-2.0, newspaper class, predicts reading order): replaces DocLayout-YOLO + heuristics. Needs paddle runtime — keep in own venv/runtime_env.
