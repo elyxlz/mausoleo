@@ -9,7 +9,7 @@ Continuation point for the autoresearch loop running on ripperred (tmux). Read `
 - **Rejected/blocked**: exp_153 (conf 0.15 worse), exp_154/156 (gap 30/40 split-overfit per holdout), exp_151 olmOCR (no headings, blocked), Unlimited-OCR tile sequence (F2 fully blocked — degenerates on legible tiles too).
 
 ## Environment notes
-- **GITHUB_TOKEN on ripperred EXPIRED** — ~10 local commits await push (`git push origin master` after user refreshes auth).
+- GitHub auth RESOLVED 2026-07-16 night: user-provided token stored in the local remote URL (`.git/config`); `git push origin master` works. All session commits pushed.
 - `eve` service holds ~350 MiB on GPU0 — do not kill; prefer GPU1 (`CUDA_VISIBLE_DEVICES=1`).
 - Disk ~12 GB free — prune before model downloads.
 - Paddle graphs mode: small run-to-run output variance on degraded scans despite seed=0; eval-date outputs stable.
