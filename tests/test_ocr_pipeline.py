@@ -63,3 +63,36 @@ def test_extract_full_text() -> None:
     text = extract_full_text(issue)
     assert len(text) > 0
     assert "Articolo" in text
+
+
+def test_split_markdown_articles() -> None:
+    from mausoleo.ocr.operators.merge_markdown import split_markdown_articles
+
+    markdown = "# TITOLO UNO\n\nPrimo paragrafo.\n\nSecondo paragrafo.\n\n## Titolo due\n\nAltro testo."
+    articles = split_markdown_articles(markdown)
+
+    assert len(articles) == 2
+    assert articles[0]["headline"] == "TITOLO UNO"
+    assert len(articles[0]["paragraphs"]) == 2
+    assert articles[1]["headline"] == "Titolo due"
+    assert articles[1]["paragraphs"][0]["text"] == "Altro testo."
+
+
+def test_split_markdown_articles_no_headings() -> None:
+    from mausoleo.ocr.operators.merge_markdown import split_markdown_articles
+
+    articles = split_markdown_articles("solo testo\n\nsenza titoli")
+
+    assert len(articles) == 1
+    assert articles[0]["headline"] is None
+    assert len(articles[0]["paragraphs"]) == 2
+
+
+def test_split_markdown_articles_bold_headline_and_noise() -> None:
+    from mausoleo.ocr.operators.merge_markdown import split_markdown_articles
+
+    markdown = "**UN FURTO**\n\n![figura](img.png) Testo con **enfasi** rimossa."
+    articles = split_markdown_articles(markdown)
+
+    assert articles[0]["headline"] == "UN FURTO"
+    assert articles[0]["paragraphs"][0]["text"] == "Testo con enfasi rimossa."

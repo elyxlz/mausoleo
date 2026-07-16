@@ -10,6 +10,7 @@ from mausoleo.ocr.operators.sub_pipeline import SubPipelineOcr
 from mausoleo.ocr.operators.llm_cleanup import LlmCleanup
 from mausoleo.ocr.operators.llm_post_correct import LlmPostCorrect
 from mausoleo.ocr.operators.merge import MergePages
+from mausoleo.ocr.operators.merge_markdown import MergeMarkdownPages
 from mausoleo.ocr.operators.page_pairs_vlm import PagePairVlm
 from mausoleo.ocr.operators.parse import ParseIssue
 from mausoleo.ocr.operators.preprocess import Preprocess
@@ -27,6 +28,7 @@ __all__ = [
     "LlmCleanup",
     "LlmPostCorrect",
     "MergeEnsemble",
+    "MergeMarkdownPages",
     "MergePages",
     "OperatorType",
     "PagePairVlm",
