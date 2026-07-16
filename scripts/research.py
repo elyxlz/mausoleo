@@ -58,8 +58,11 @@ def evaluate_config(config: str, dates: tp.Sequence[str]) -> dict[str, IssueResu
         pred_path = PRED_DIR / f"{config}_{date}.json"
         if not gt_path.exists() or not pred_path.exists():
             continue
-        gt_issue = json.loads(gt_path.read_text())
-        pred_issue = json.loads(pred_path.read_text())
+        try:
+            gt_issue = json.loads(gt_path.read_text())
+            pred_issue = json.loads(pred_path.read_text())
+        except json.JSONDecodeError:
+            continue
         results[date] = evaluate_issue(gt_issue, pred_issue, config=config, date=date)
     return results
 
