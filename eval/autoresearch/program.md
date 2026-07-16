@@ -29,13 +29,14 @@ Prior program versions with full session narratives live in `history/`. Every ex
 
 Always evaluate BOTH dates and report the average. Report precision/F1 alongside composite; a change that drops precision >5pts needs explicit justification. The holdout rule covers structural changes that filter/drop articles, not just hyperparameters. Pipeline code must never read GT at inference nor re-emit another config's prediction file as its own.
 
-## Current Baselines (re-based to composite_v2, 2026-07-16)
-| Config | v2 avg | 1885 v2 | 1910 v2 | v1 avg | Wall | Notes |
-|---|---|---|---|---|---|---|
-| `configs/ocr/ensemble_30min.py` (oracle/reference) | **0.7514** | 0.7111 | 0.7917 | 0.89878 (0.87186/0.92569) | ~30.5 min | 8 inline sub-pipelines, dynamic GPU queue, subprocess isolation. Rewrite verified 2026-07-16: fresh merge reproduces v1 baselines exactly. ~600 GPU-s/page: research artifact only. |
-| `ensemble_3way_textrep` (archived, exp_036 era: col3+yolo+col4 Qwen3-8B, text replacement) | **0.7537** | 0.7140 | 0.7930 | 0.827 (at exp_036 time) | ~3 sub runs | v2 board leader: beats the 8-source ensemble once spam is charged, at ~3/8 the cost. Lean-ensemble direction re-opened by v2. |
-| `exp_045_qwen3vl_vllm` (production reference, single source) | 0.6305 | — | — | 0.5372 | 1 vllm pass | Near the 1-week budget line; steady-state GPU-s/page to be measured (exp_151+ queue). |
-| 19-source research orchestrator (archived: `scripts/_archive/ensemble_pipeline_30min.py`) | — | — | — | 0.9231 (0.9037/0.9426) | ~50–60 min | Violates one-config-one-run; port to ParallelEnsembleOcr if ever needed. |
+## Current Baselines (composite_v2, updated 2026-07-16 late)
+| Config | v2 avg | 1885 v2 | 1910 v2 | GPU cost | Notes |
+|---|---|---|---|---|---|
+| `configs/ocr/ensemble_prune5.py` (**v2 leader / reference**) | **0.7776** | 0.7536 | 0.8016 | 5 sub runs (~18 min/issue fresh) | Greedy v2 prune of the 8-source ensemble (dropped 055/140/142 spam contributors). Precision 0.42/0.57, F1 0.57/0.69. Split-stable selection, holdout flat. |
+| `configs/ocr/ensemble_30min.py` (**recall-oracle** for GT work) | 0.7514 | 0.7111 | 0.7917 | ~600 GPU-s/page | 8 sources, recall 1.0/0.98 — keep for GT building & coverage upper bounds. Rewrite verified: reproduces v1 baselines (0.87186/0.92569) exactly. |
+| `configs/ocr/exp_155_paddleocr_titles_graphs.py` (**production candidate**) | 0.4285 | 0.4204 | 0.4366 | **5.13 GPU-s/page = 5.2-day corpus** | exp_152 + CUDA graphs; first config under the 1-week budget. Probe-metrics formal check pending. |
+| `exp_045_qwen3vl_vllm` (single 8B source) | 0.6305 | 0.5684 | 0.6882 | ~136 GPU-s/page | 5–26× over budget — oracle/ensemble source only. |
+| 19-source research orchestrator (archived) | — | — | — | ~50–60 min | v1 0.9231; violates one-config-one-run. |
 
 Reproduce: `uv run --no-project python scripts/run_real_ocr.py ensemble_30min 1885-06-15 1910-06-15` → `eval/predictions/ensemble_30min_<date>.json` (sub-pipeline predictions cached as `<name>_<date>.json`).
 

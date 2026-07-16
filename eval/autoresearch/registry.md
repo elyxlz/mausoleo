@@ -22,7 +22,7 @@ Families grouped by underlying mechanism. Statuses: ACTIVE (worth iterating), BL
 - Chandra layout operator exists (chandra_layout.py), integration untested.
 
 ## F4 — Ensemble merge/quality-select tuning
-**Status: REOPENED for pruning under composite_v2 (2026-07-16).** v1-saturated at 0.89878; do not micro-tune weights. v2 charges spam (F1 replaces recall): the archived 3-source `ensemble_3way_textrep` (col3+yolo+col4 Qwen3-8B) scores 0.7537 v2 vs the 8-source ensemble's 0.7514, at ~3/8 the GPU cost. Next lever: source PRUNING / precision filtering, not addition. The 8-source design still violates the corpus budget regardless.
+**Status: PRUNING DONE (2026-07-16) — `ensemble_prune5` is the v2 leader at 0.7776 (+0.026 over 8-source).** Greedy v2 backward-elimination removed exp_055 (additive ratio-100 spam, LOO +0.0148), exp_142, exp_140; selection split-stable, holdout flat. `ensemble_30min` retained as recall-oracle (recall 1.0/0.98) for GT building. Remaining F4 headroom: precision-filtering the survivors (dedup/confidence gating on the 88/301 remaining preds), or swapping a Qwen source for exp_155-Paddle as a cheap diversity source. Still oracle-tier cost — not production.
 
 ## F5 — Prompt engineering on the structured-JSON VLM path
 **Status: SATURATED/BLOCKED — V2 is the optimum; complex prompts hallucinate (V3), /no_think degrades. Unblock: a new model family with different prompt affordances.**
