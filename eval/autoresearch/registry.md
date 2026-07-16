@@ -4,7 +4,7 @@ Families grouped by underlying mechanism. Statuses: ACTIVE (worth iterating), BL
 
 ## F1 — Fast specialized OCR models as sources (0.9–3B, markdown-native)
 **Status: ACTIVE — top priority under the corpus-scale budget (small = fast).**
-- PaddleOCR-VL-1.6 (0.9B, vllm-supported): col3 misuse FAILS (exp_147, 0.23); YOLO-region usage matches design (exp_148, 0.302 on 1885; text CER down to 0.07 on best articles, catches back-page ads Qwen misses; ~10 GPU-s/page at per-issue batching). ACTIVE: segmentation/recall is the bottleneck, not OCR quality. First-line-headline heuristic neutral (exp_149).
+- PaddleOCR-VL-1.6 (0.9B, vllm-supported): col3 misuse FAILS (exp_147, 0.23); YOLO-region usage matches design (exp_148). **exp_152 WIN (2026-07-16): YOLO title-class regions as headlines → 0.4305 v2 avg (+0.025 over exp_149), hCER 1910 0.811→0.567, recall up both dates, ~10 GPU-s/page — best budget-feasible config.** Remaining bottleneck: recall 0.36–0.49 (region merging/misses) and text wCER 0.74–0.77. Next levers: conf_threshold/min_region_area sweep for recall; PP-DocLayoutV3 regions (F3); abandon-class filtering.
 - HunyuanOCR (1B, cached): **BLOCKED** — native markdown prompt on col3 crops yields hallucinated gibberish (exp_150, composite 0.15) and transformers-eager runs 35min/issue (~50x over budget). Unblock: vllm HunYuanVL support AND evidence it reads broadsheet type.
 - olmOCR-2-7B (cached): retry with native prompt + adapter. UNTESTED with correct usage.
 - GLM-OCR (0.9B, downloaded): **BLOCKED** — degenerate repetition loops on broadsheet column crops (exp_145, composite 0.15). Unblock: vllm no-repeat logit processor from the GLM-OCR recipe, or its MTP path, or evidence it works on sub-page crops of modern-density text.
