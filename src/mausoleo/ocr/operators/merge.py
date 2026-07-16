@@ -20,12 +20,21 @@ def _strip_markdown(text: str) -> str:
 
 @dc.dataclass(frozen=True, kw_only=True)
 class MergePages(BaseOperatorConfig):
-    pass
+    raw_first_line_headline: bool = False
+
+
+def _split_raw_headline(text: str) -> tuple[str | None, str]:
+    lines = text.strip().splitlines()
+    if len(lines) < 2:
+        return None, text
+    first = lines[0].strip()
+    if 3 <= len(first) <= 80 and not first.endswith((".", ",", ";", ":")):
+        return first, "\n".join(lines[1:]).strip()
+    return None, text
 
 
 @register_operator(MergePages, operation=OperatorType.MAP)
 def merge_pages(row: dict[str, tp.Any], *, config: MergePages) -> dict[str, tp.Any]:
-    _ = config
     page_texts: list[str] = json.loads(row["page_texts"])
 
     layout_regions: list[dict[str, tp.Any]] = []
@@ -45,7 +54,8 @@ def merge_pages(row: dict[str, tp.Any], *, config: MergePages) -> dict[str, tp.A
         try:
             page_data = json.loads(_strip_markdown(page_text))
         except json.JSONDecodeError:
-            fallback_article: dict[str, tp.Any] = {"unit_type": "article", "headline": None, "paragraphs": [{"text": page_text}]}
+            headline, body = _split_raw_headline(page_text) if config.raw_first_line_headline else (None, page_text)
+            fallback_article: dict[str, tp.Any] = {"unit_type": "article", "headline": headline, "paragraphs": [{"text": body}]}
             page_data = {"articles": [fallback_article]}
 
         articles: list[dict[str, tp.Any]] = []
