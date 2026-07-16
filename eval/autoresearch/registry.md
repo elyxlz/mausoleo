@@ -4,7 +4,7 @@ Families grouped by underlying mechanism. Statuses: ACTIVE (worth iterating), BL
 
 ## F1 — Fast specialized OCR models as sources (0.9–3B, markdown-native)
 **Status: ACTIVE — top priority under the corpus-scale budget (small = fast).**
-- PaddleOCR-VL-1.6 (0.9B, vllm-supported): col3 misuse FAILS (exp_147, 0.23); YOLO-region usage matches design (exp_148). **exp_152 WIN (2026-07-16): YOLO title-class regions as headlines → 0.4305 v2 avg (+0.025 over exp_149). exp_155 = exp_152 + CUDA graphs: 0.4285 at 5.13 GPU-s/page = 5.2-day corpus — PRODUCTION CANDIDATE, first config under the 1-week budget.** Dead levers: conf 0.15 (worse, noise boxes glue columns, exp_153); merge_vertical_gap 30/40 (tune-half-only gains, holdout-rejected, exp_154/156). Remaining bottleneck: recall 0.36–0.49 and wCER 0.74–0.77. Next levers: PP-DocLayoutV3 regions (F3); abandon-class filtering; horizontal_overlap.
+- PaddleOCR-VL-1.6 (0.9B, vllm-supported): col3 misuse FAILS (exp_147, 0.23); YOLO-region usage matches design (exp_148). **exp_152 WIN (2026-07-16): YOLO title-class regions as headlines → 0.4305 v2 avg (+0.025 over exp_149). exp_155 = exp_152 + CUDA graphs: 0.4285 at 5.13 GPU-s/page = 5.2-day corpus. exp_157 = exp_155 + char-run squeeze (F6 guard): eval-neutral, probe junk capped — CURRENT PRODUCTION CANDIDATE.** Dead levers: conf 0.15 (worse, noise boxes glue columns, exp_153); merge_vertical_gap 30/40 (tune-half-only gains, holdout-rejected, exp_154/156). Remaining bottleneck: recall 0.36–0.49 and wCER 0.74–0.77. Next levers: PP-DocLayoutV3 regions (F3); abandon-class filtering; horizontal_overlap.
 - HunyuanOCR (1B, cached): **BLOCKED** — native markdown prompt on col3 crops yields hallucinated gibberish (exp_150, composite 0.15) and transformers-eager runs 35min/issue (~50x over budget). Unblock: vllm HunYuanVL support AND evidence it reads broadsheet type.
 - olmOCR-2-7B (cached): **BLOCKED** — native front-matter prompt on col3 crops emits zero markdown headings (exp_151, 0.2761 v2 avg, hCER 1.0, one blob per crop); ~65 GPU-s/page, over budget even as a source. The exp_047 "misuse" hypothesis is settled — the model linearizes, it does not segment. Unblock: only as YOLO-region-level oracle diversity source if F4 pruning ever needs a non-Qwen text opinion.
 - GLM-OCR (0.9B, downloaded): **BLOCKED** — degenerate repetition loops on broadsheet column crops (exp_145, composite 0.15). Unblock: vllm no-repeat logit processor from the GLM-OCR recipe, or its MTP path, or evidence it works on sub-page crops of modern-density text.
@@ -28,7 +28,7 @@ Families grouped by underlying mechanism. Statuses: ACTIVE (worth iterating), BL
 **Status: SATURATED/BLOCKED — V2 is the optimum; complex prompts hallucinate (V3), /no_think degrades. Unblock: a new model family with different prompt affordances.**
 
 ## F6 — Post-processing (trim, repair, stitching)
-**Status: ACTIVE minor.** trim_predictions is the biggest historical win (+0.0165). Heuristic cross-page stitching BLOCKED (VLM naturalizes text; zero stitches).
+**Status: ACTIVE minor.** trim_predictions is the biggest historical win (+0.0165). squeeze_char_runs (2026-07-16) guards model degeneration on degraded scans (exp_157). Heuristic cross-page stitching BLOCKED (VLM naturalizes text; zero stitches).
 
 ## F7 — Segmentation adapters (model output → article JSON)
 **Status: ACTIVE.** MergeMarkdownPages written (2026-07-16), validated on synthetic input; unlocks F1. Embedding-similarity article grouping (STRAS-style) unexplored.
