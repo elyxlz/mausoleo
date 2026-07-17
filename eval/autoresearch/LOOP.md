@@ -16,8 +16,11 @@ Rewritten by the loop every iteration (see program.md §Running the Loop). Rules
 - GPUs free.
 - **Zoom-refinement pass DONE (2026-07-17 16:00)**: all four tentative GTs re-verified flag-by-flag at 2-14x zoom — 1895 (5 fixes), 1925 (5), 1935 (14), 1952 (7 + 1 missing ad added). Each REVIEW_NOTES has a 'Resolved by zoom pass' audit; remaining uncertain items are marked. Drafts are as clean as machine passes get — ready for Elio.
 
+## State addendum (18:00)
+- **exp_164 ceiling measured: 0.6980 avg, recall 0.90/0.79** (Opus grouper probe over exp_160's layout+OCR; research-only). Semantic grouping is the confirmed路线 for the recall bar.
+
 ## Queue (in order)
-1. **Recall via semantic grouping (F3 unblock candidate)**: prototype exp_164 — an LLM grouping pass over PP-DocLayoutV3 regions. Cheapest viable design: reuse exp_160's layout+OCR stages, then instead of rule-based grouping, feed a compact per-page listing (region index, class, bbox, first ~80 chars of OCR text) to a grouping model and get back article groupings (lists of region indices + which region is the headline). Grouper options in order of preference: (a) local Qwen3-VL-8B text-only via vllm on GPU0 (fits budget? measure), (b) an opus subagent per issue (research-only, not production — fine for measuring the ceiling first). Start with (b) to MEASURE THE CEILING on 1910 (recall 0.85/0.74 glimpsed), then decide if a local model can replicate. Evaluate both dates + probe.
+1. **exp_165 local grouper**: replicate exp_164 with a LOCAL model as grouper — Qwen3-VL-8B (cached) text-only via vllm: per-page prompt = region listing (idx/class/bbox/text first ~100 chars) -> JSON groups. Reuse exp_164's dump/assemble; new `group` stage calling vllm. Port exp_160's head-block merge into the assembler first (fixes hCER 0.48). Measure GPU-s/page of the grouping pass (region listings ~15K tok/page input, small output; prefill-dominated so likely cheap). Evaluate both dates + 1943 probe; compare to the 0.6980 ceiling and exp_160's 0.6180.
 2. **Over-split lever**: title score threshold sweep (only if evidence appears).
-3. On Elio's GT promotion: board over 6 issues; re-base baselines; check ship bar (composite ✓ 0.618, recall 0.68/0.61 vs proposed 0.70).
-(F4 exp_160-diversity closed NEGATIVE 2026-07-17 16:55 — see log.)
+3. On Elio's GT promotion: board over 6 issues; re-base baselines; ship-bar check.
+(F4 exp_160-diversity closed NEGATIVE; geometric grouping BLOCKED 0/3 — see log.)
