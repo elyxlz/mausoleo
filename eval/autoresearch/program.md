@@ -34,7 +34,8 @@ Always evaluate BOTH dates and report the average. Report precision/F1 alongside
 |---|---|---|---|---|---|
 | `configs/ocr/ensemble_prune5.py` (**v2 leader / reference**) | **0.7776** | 0.7536 | 0.8016 | 5 sub runs (~18 min/issue fresh) | Greedy v2 prune of the 8-source ensemble (dropped 055/140/142 spam contributors). Precision 0.42/0.57, F1 0.57/0.69. Split-stable selection, holdout flat. |
 | `configs/ocr/ensemble_30min.py` (**recall-oracle** for GT work) | 0.7514 | 0.7111 | 0.7917 | ~600 GPU-s/page | 8 sources, recall 1.0/0.98 — keep for GT building & coverage upper bounds. Rewrite verified: reproduces v1 baselines (0.87186/0.92569) exactly. |
-| `configs/ocr/exp_157_paddleocr_titles_squeeze.py` (**production candidate**) | 0.4284 | 0.4202 | 0.4366 | **5.13 GPU-s/page = 5.2-day corpus** | exp_155 + char-run squeeze guard; probe-checked on 1943 (junk capped, ~5pt graphs-mode lexicon gap vs eager accepted as the budget trade). |
+| `experiments/exp_159_ppdoclayout_grouped.py` (**production candidate**) | **0.6040** | 0.5663 | 0.6416 | ~5.1 GPU-s/page warm (formal bench pending) | PP-DocLayoutV3 regions + PaddleOCR-VL OCR + title-boundary grouping. F1 0.71/0.66, precision 0.74/0.71, probe-better on 1943. Cross-page articles emerge from reading order. |
+| `configs/ocr/exp_157_paddleocr_titles_squeeze.py` (YOLO-route reference) | 0.4284 | 0.4202 | 0.4366 | 5.13 GPU-s/page | Superseded by exp_159; kept as the DocLayout-YOLO comparison point. |
 | `exp_045_qwen3vl_vllm` (single 8B source) | 0.6305 | 0.5684 | 0.6882 | ~136 GPU-s/page | 5–26× over budget — oracle/ensemble source only. |
 | 19-source research orchestrator (archived) | — | — | — | ~50–60 min | v1 0.9231; violates one-config-one-run. |
 
