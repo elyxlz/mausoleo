@@ -103,16 +103,128 @@ def cmd_stitch(date: str) -> None:
     print(f"{gt_path}: applied {len(merges)} stitches -> {len(articles)} articles")
 
 
+def _unit_header(article: dict[str, tp.Any]) -> str:
+    pages = ",".join(str(n) for n in article["page_span"])
+    return f"## {article['id'].split('_')[-1]} | {article['unit_type']} | pages {pages}"
+
+
+def cmd_render(date: str) -> None:
+    issue_dir = TENTATIVE_DIR / date
+    issue = json.loads((issue_dir / "ground_truth.json").read_text())
+    md_lines: list[str] = [
+        f"# {date} — tentative GT review transcript",
+        "",
+        "Edit text freely. Unit header format: `## aNN | unit_type | pages N[,N]`.",
+        "Headline lines are `> ` blockquotes (one per printed head-block line); no blockquote = no headline.",
+        "Paragraphs are blocks separated by blank lines. Delete a unit by deleting its section; add one with a `## new | article | pages N` header.",
+        f"Apply edits back with: scripts/build_tentative_gt.py ingest {date}",
+        "",
+    ]
+    by_page: dict[int, list[dict[str, tp.Any]]] = {}
+    for article in issue["articles"]:
+        by_page.setdefault(article["page_span"][0], []).append(article)
+
+    html_units: list[str] = []
+    for page in sorted(by_page):
+        md_lines.append(f"----- PAGE {page} " + "-" * 50)
+        md_lines.append("")
+        unit_html: list[str] = []
+        for article in by_page[page]:
+            md_lines.append(_unit_header(article))
+            if article.get("headline"):
+                for line in article["headline"].split("\n"):
+                    md_lines.append(f"> {line}")
+            md_lines.append("")
+            for para in article["paragraphs"]:
+                md_lines.append(para["text"].strip())
+                md_lines.append("")
+            head_html = "".join(
+                f"<div class='hl'>{line}</div>" for line in (article.get("headline") or "").split("\n") if line
+            )
+            paras_html = "".join(f"<p>{para['text']}</p>" for para in article["paragraphs"])
+            meta = f"{article['id'].split('_')[-1]} · {article['unit_type']} · pages {','.join(str(n) for n in article['page_span'])}"
+            unit_html.append(f"<div class='unit'><div class='meta'>{meta}</div>{head_html}{paras_html}</div>")
+        html_units.append(
+            f"<section><div class='imgpane'><img src='pages/{page}.jpeg'></div><div class='textpane'>{''.join(unit_html)}</div></section>"
+        )
+
+    (issue_dir / "REVIEW.md").write_text("\n".join(md_lines))
+    html = (
+        "<!doctype html><meta charset='utf-8'><title>" + date + " review</title><style>"
+        "body{font-family:Georgia,serif;margin:0}section{display:flex;border-bottom:4px solid #333}"
+        ".imgpane{width:55%;position:sticky;top:0;align-self:flex-start;max-height:100vh;overflow:auto}"
+        ".imgpane img{width:100%}.textpane{width:45%;padding:1em 2em;box-sizing:border-box}"
+        ".unit{margin-bottom:1.6em;border-left:3px solid #ccc;padding-left:.8em}"
+        ".meta{font-family:monospace;font-size:.75em;color:#888}.hl{font-weight:bold;font-size:1.1em}"
+        "p{margin:.4em 0;line-height:1.35}</style>" + "".join(html_units)
+    )
+    (issue_dir / "REVIEW.html").write_text(html)
+    print(f"{issue_dir}/REVIEW.md + REVIEW.html ({sum(len(v) for v in by_page.values())} units)")
+
+
+def cmd_ingest(date: str) -> None:
+    import re
+
+    issue_dir = TENTATIVE_DIR / date
+    issue = json.loads((issue_dir / "ground_truth.json").read_text())
+    lines = (issue_dir / "REVIEW.md").read_text().split("\n")
+    header_re = re.compile(r"^## (\S+) \| (\w+) \| pages? ([\d, ]+)$")
+
+    articles: list[dict[str, tp.Any]] = []
+    current: dict[str, tp.Any] | None = None
+    block: list[str] = []
+
+    def flush_block() -> None:
+        if current is not None and block:
+            text = "\n".join(block).strip()
+            if text:
+                current["paragraphs"].append({"text": text})
+        block.clear()
+
+    for line in lines:
+        m = header_re.match(line)
+        if m:
+            flush_block()
+            if current is not None:
+                articles.append(current)
+            pages = [int(x) for x in m.group(3).replace(" ", "").split(",") if x]
+            current = {"unit_type": m.group(2), "headline": None, "paragraphs": [], "page_span": pages}
+            continue
+        if current is None or line.startswith("----- PAGE"):
+            flush_block()
+            continue
+        if line.startswith("> "):
+            flush_block()
+            head_line = line[2:].strip()
+            current["headline"] = head_line if current["headline"] is None else f"{current['headline']}\n{head_line}"
+            continue
+        if line.strip() == "":
+            flush_block()
+        else:
+            block.append(line)
+    flush_block()
+    if current is not None:
+        articles.append(current)
+
+    for idx, art in enumerate(articles):
+        art["id"] = f"{date}_a{idx:02d}"
+        art["position_in_issue"] = idx
+        for p_idx, para in enumerate(art["paragraphs"]):
+            para["id"] = f"{date}_a{idx:02d}_p{p_idx:02d}"
+    issue["articles"] = articles
+    (issue_dir / "ground_truth.json").write_text(json.dumps(issue, indent=2, ensure_ascii=False))
+    print(f"{issue_dir}/ground_truth.json rebuilt from REVIEW.md: {len(articles)} units")
+
+
 def main() -> None:
-    if len(sys.argv) < 3 or sys.argv[1] not in ("bundle", "assemble", "stitch"):
-        print("usage: build_tentative_gt.py bundle <date> <page> | assemble <date> | stitch <date>")
+    commands = {"stitch": cmd_stitch, "assemble": cmd_assemble, "render": cmd_render, "ingest": cmd_ingest}
+    if len(sys.argv) < 3 or sys.argv[1] not in ("bundle", *commands):
+        print("usage: build_tentative_gt.py bundle <date> <page> | assemble|stitch|render|ingest <date>")
         raise SystemExit(1)
     if sys.argv[1] == "bundle":
         cmd_bundle(sys.argv[2], int(sys.argv[3]))
-    elif sys.argv[1] == "stitch":
-        cmd_stitch(sys.argv[2])
     else:
-        cmd_assemble(sys.argv[2])
+        commands[sys.argv[1]](sys.argv[2])
 
 
 if __name__ == "__main__":
