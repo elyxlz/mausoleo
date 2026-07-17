@@ -161,7 +161,7 @@ def assemble(date: str, page_count: int, texts: list[str], regions: list[dict[st
     return {"date": date, "source": "il_messaggero", "page_count": page_count, "articles": articles}
 
 
-def run_date(date: str) -> None:
+def run_date(date: str) -> tuple[float, int]:
     pages = sorted(GROUND_TRUTH_DIR.joinpath(date).glob("*.jpeg"), key=lambda p: int(p.stem))
     if not pages:
         raise SystemExit(f"no images at {GROUND_TRUTH_DIR / date}")
@@ -181,13 +181,21 @@ def run_date(date: str) -> None:
         f"{date}: {len(issue['articles'])} articles from {len(crops)} regions | "
         f"layout {layout_s:.1f}s + ocr {ocr_s:.1f}s = {total:.1f}s | {total / len(pages):.2f} s/page -> {out}"
     )
+    return total, len(pages)
 
 
 def main() -> None:
     if len(sys.argv) < 2:
         raise SystemExit(f"usage: {EXP_NAME}.py <date> [<date> ...]")
-    for date in sys.argv[1:]:
-        run_date(date)
+    timings = [run_date(date) for date in sys.argv[1:]]
+    if len(timings) > 1:
+        steady = timings[1:]
+        total_s = sum(t for t, _ in steady)
+        total_pp = sum(n for _, n in steady)
+        gpu_s_page = total_s / total_pp
+        days = 175_000 * gpu_s_page / 2 / 86400
+        print(f"steady-state (excl. first issue): {gpu_s_page:.2f} GPU-s/page over {total_pp}pp")
+        print(f"corpus extrapolation: 175000 pages on 2 GPUs = {days:.1f} days (budget: 7-14)")
 
 
 if __name__ == "__main__":
