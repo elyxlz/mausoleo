@@ -97,6 +97,7 @@ config = OcrPipelineConfig(
             headline_delta=0.15,
             cache_dir=CACHE_DIR,
             num_gpus=2,
+            sub_timeout_s=10800,
         ),
         ParseIssue(),
     ],
