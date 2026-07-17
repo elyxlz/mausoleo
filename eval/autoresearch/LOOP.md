@@ -1,6 +1,6 @@
 # Loop state — live queue for the autoresearch loop
 
-Rewritten by the loop every iteration. Rules of the program live in `program.md` (+ `registry.md`); this file is only the CURRENT state and queue.
+Rewritten by the loop every iteration (see program.md §Running the Loop). Rules live in `program.md` (+ `registry.md`); this file is only the CURRENT state and queue.
 
 ## Standing context
 - Run everything locally on ripperred (`.venv/bin/python`); GPU1 preferred (`CUDA_VISIBLE_DEVICES=1`, eve holds ~350MB on GPU0).

@@ -101,6 +101,9 @@ Only worthwhile with NEW diverse sources from Tiers 1–2. Cross-model-family di
 
 8. **Search policy.** Web search is for integration knowledge (model usage, APIs, versions) — never to import benchmark numbers as our results.
 
+## Running the Loop
+Start with "continue the autoresearch" (or `/loop` with a prompt pointing here). The loop is self-paced: long GPU runs go in background tasks, ScheduleWakeup provides the heartbeat, and each iteration ends by rewriting `LOOP.md` (the live state + queue file next to this one) and scheduling the next wakeup with a prompt that just says to read `LOOP.md` and continue. All compute on ripperred; never endeavour (corpus storage only). Commit and push accepted work as you go.
+
 ## The Loop
 1. **Read state** — this file + last entries of `log.jsonl`
 2. **Propose** — ONE change (one variable at a time)
