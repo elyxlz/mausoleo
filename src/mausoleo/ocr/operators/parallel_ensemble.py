@@ -73,6 +73,7 @@ def _run_queue(
     task_queue: queue.Queue[tp.Any] = queue.Queue()
     for sub in subs:
         task_queue.put(sub)
+    retries: list[tuple[tp.Any, int]] = []
     errors: list[str] = []
 
     def worker(gpu: int) -> None:
@@ -85,13 +86,24 @@ def _run_queue(
             try:
                 _run_sub_config(sub, gpu, images_dir, date, out_path, work_dir, timeout_s)
             except Exception as exc:
-                errors.append(f"{sub.name}: {exc}")
+                retries.append((sub, gpu))
+                errors.append(f"{sub.name}: first attempt on gpu{gpu} failed: {exc}")
 
     threads = [threading.Thread(target=worker, args=(gpu,)) for gpu in range(num_gpus)]
     for t in threads:
         t.start()
     for t in threads:
         t.join()
+
+    for sub, failed_gpu in retries:
+        retry_gpu = (failed_gpu + 1) % max(num_gpus, 1)
+        out_path = cache / f"{sub.name}_{date}.json"
+        try:
+            _run_sub_config(sub, retry_gpu, images_dir, date, out_path, work_dir, timeout_s)
+            errors[:] = [e for e in errors if not e.startswith(f"{sub.name}:")]
+        except Exception as exc:
+            errors.append(f"{sub.name}: retry on gpu{retry_gpu} failed: {exc}")
+
     return errors
 
 

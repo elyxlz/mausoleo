@@ -57,7 +57,7 @@ def _yolo_sub(name: str) -> OcrPipelineConfig:
 
 
 SUB_CONFIGS = (
-    _vlm_sub("exp_107_fullpage_qwen25vl", QWEN25, columns=None, max_model_len=20480, gpu_memory_utilization=0.94),
+    _vlm_sub("exp_107_fullpage_qwen25vl", QWEN25, columns=None, max_model_len=20480),
     _vlm_sub("exp_102_fullpage_vllm", QWEN3, columns=None, max_model_len=20480, gpu_memory_utilization=0.94),
     _vlm_sub("exp_055_col6_ads_prompt", QWEN3, columns=6, max_model_len=12288, prompt=prompts.VLM_OCR_ADS_FOCUSED),
     _yolo_sub("exp_140_yolo_smallregion_vllm"),

@@ -32,7 +32,7 @@ def _vlm_sub(
 
 
 SUB_CONFIGS = (
-    _vlm_sub("exp_107_fullpage_qwen25vl", QWEN25, columns=None, max_model_len=20480, gpu_memory_utilization=0.94),
+    _vlm_sub("exp_107_fullpage_qwen25vl", QWEN25, columns=None, max_model_len=20480),
     _vlm_sub("exp_102_fullpage_vllm", QWEN3, columns=None, max_model_len=20480, gpu_memory_utilization=0.94),
     _vlm_sub("exp_138_col4_qwen25_vllm", QWEN25, columns=4, max_model_len=16384),
     _vlm_sub("exp_045_qwen3vl_vllm", QWEN3, columns=3, max_model_len=12288),
