@@ -17,7 +17,7 @@ Rewritten by the loop every iteration (see program.md §Running the Loop). Rules
 - **Zoom-refinement pass DONE (2026-07-17 16:00)**: all four tentative GTs re-verified flag-by-flag at 2-14x zoom — 1895 (5 fixes), 1925 (5), 1935 (14), 1952 (7 + 1 missing ad added). Each REVIEW_NOTES has a 'Resolved by zoom pass' audit; remaining uncertain items are marked. Drafts are as clean as machine passes get — ready for Elio.
 
 ## Queue (in order)
-1. **F4 (oracle-only)**: add exp_160 as diversity source to ensemble_prune5 — offline merge sweep over cached predictions (pattern: the 2026-07-16 prune search scripts in scratchpad, or rewrite small): try exp_160 in the replacement chain at several (overlap, ratio) points + as quality-select source; accept per ensemble floor (≥0.002 both dates + holdout). Then prune5 precision filtering.
-2. **Recall via semantic grouping (F3 unblock candidate)**: LLM/subagent grouping pass over PP-DocLayoutV3 region texts+geometry (group region indices into articles). Only prototype if F4 stalls — model-based, era-independent.
-3. **Over-split lever**: title score threshold sweep (only if evidence appears).
-4. On Elio's GT promotion: board over 6 issues; re-base baselines; check ship bar (composite ✓ 0.618, recall 0.68/0.61 vs proposed 0.70).
+1. **Recall via semantic grouping (F3 unblock candidate)**: prototype exp_164 — an LLM grouping pass over PP-DocLayoutV3 regions. Cheapest viable design: reuse exp_160's layout+OCR stages, then instead of rule-based grouping, feed a compact per-page listing (region index, class, bbox, first ~80 chars of OCR text) to a grouping model and get back article groupings (lists of region indices + which region is the headline). Grouper options in order of preference: (a) local Qwen3-VL-8B text-only via vllm on GPU0 (fits budget? measure), (b) an opus subagent per issue (research-only, not production — fine for measuring the ceiling first). Start with (b) to MEASURE THE CEILING on 1910 (recall 0.85/0.74 glimpsed), then decide if a local model can replicate. Evaluate both dates + probe.
+2. **Over-split lever**: title score threshold sweep (only if evidence appears).
+3. On Elio's GT promotion: board over 6 issues; re-base baselines; check ship bar (composite ✓ 0.618, recall 0.68/0.61 vs proposed 0.70).
+(F4 exp_160-diversity closed NEGATIVE 2026-07-17 16:55 — see log.)
