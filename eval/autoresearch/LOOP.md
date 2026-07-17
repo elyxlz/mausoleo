@@ -11,12 +11,9 @@ Rewritten by the loop every iteration (see program.md §Running the Loop). Rules
 - Commit and push as you go; log every result to `log.jsonl` with a mechanism line; update `registry.md` every iteration.
 
 ## In flight
-- **paddle env install** (task bjihh6qy5): `~/paddle_env` with paddlepaddle-gpu 3.2.0 cu126 + paddleocr. Dead-end HF caches pruned (126G free).
-- **exp_158** written: `experiments/exp_158_ppdoclayout_paddle.py` — PP-DocLayoutV3 layout (paddle_env subprocess) + PaddleOCR-VL-1.6 vllm OCR + MergePages(title_class_headlines, squeeze_char_runs). ONE variable vs exp_157: region source (PP-DocLayoutV3 vs DocLayout-YOLO).
+- **exp_158 running** (task bgomm858c, log scratchpad/exp158.log): both GT dates on GPU1. Paddle env verified (2 GPUs); PP-DocLayoutV3 smoke-tested on 1885 p1: 106 boxes (99 text, 6 paragraph_title, 1 header excluded) — labels match the script's sets. Note the granularity: ~100 regions/page (vs YOLO's ~11 merged columns) — expect many more, smaller OCR calls.
 
 ## Queue
-1. When paddle install completes: verify `~/paddle_env/bin/python -c "import paddle; paddle.utils.run_check()"` and `from paddleocr import LayoutDetection`; smoke-test `LayoutDetection(model_name="PP-DocLayoutV3")` on `eval/ground_truth/1885-06-15/1.jpeg` (downloads ~124M model; check emitted labels against exp_158's TITLE_LABELS/TEXT_LABELS, adjust if they differ).
-2. Run `CUDA_VISIBLE_DEVICES=1 .venv/bin/python experiments/exp_158_ppdoclayout_paddle.py 1885-06-15 1910-06-15` (background).
-3. Evaluate: `scripts/research.py eval exp_158_ppdoclayout_paddle` vs exp_157 (0.4284 avg; recall 0.488/0.358). Inspect concrete predictions vs GT; audit giant blobs; holdout; probe on 1943-07-15 (`research.py probe exp_158_ppdoclayout_paddle_1943-07-15` vs exp_157: lexicon 0.6757, high-rep 0.085). Accept per program.md floors (single-source ≥0.005 both dates). Log + registry F3 either way; commit+push.
+1. Evaluate: `scripts/research.py eval exp_158_ppdoclayout_paddle` vs exp_157 (0.4284 avg; recall 0.488/0.358). Inspect concrete predictions vs GT; audit giant blobs; holdout; probe on 1943-07-15 (`research.py probe exp_158_ppdoclayout_paddle_1943-07-15` vs exp_157: lexicon 0.6757, high-rep 0.085). Accept per program.md floors (single-source ≥0.005 both dates). Log + registry F3 either way; commit+push.
 4. If paddle is a dependency wall: log exact failure + unblock condition in registry F3; move to F1 abandon-class filtering (`experiments/exp_159`: exp_157 with "abandon" removed from YoloCrop text_classes — one variable).
 5. Backlog after that: horizontal_overlap lever (F1); prune5 precision filtering (F4, oracle-only); Paddle as prune5 diversity source (F4).
