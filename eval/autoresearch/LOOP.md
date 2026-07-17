@@ -13,6 +13,7 @@ Rewritten by the loop every iteration (see program.md §Running the Loop). Rules
 ## State (2026-07-17 19:05)
 - **Production candidate: exp_160** = 0.6180 avg, F1 0.75/0.68, 6.22 GPU-s/page = 6.3-day corpus. Oracle: ensemble_prune5 0.7776. Semantic-grouping ceiling documented at 0.6980 (exp_164 Opus probe); local replication BLOCKED 0/2 (see registry F3).
 - Today's arc complete: geometric grouping blocked 0/3, F4 diversity negative, local grouper blocked 0/2 — all logged with unblock conditions. Zoom-refinement of all 4 tentative GTs done and pushed.
+- **exp_160 probe-clean on all three 1943 issues** (lexicon 0.698-0.710, high-rep ~0, no era-collapse) — ship-bar probe evidence complete.
 - **Main gate is now Elio**: review/promote eval/tentative_gt/{1895,1925,1935,1952}-06-15 -> eval/ground_truth; sign off plan/01 ship bar + plan/02 corpus-v0-early.
 
 ## Queue (in order)
