@@ -14,7 +14,7 @@ The autoresearch loop hillclimbing composite_v2 under the hard corpus budget (6.
 | `ensemble_30min` | 0.7514 | ~600 | recall oracle (1.0/0.98), GT building |
 | `exp_157` Paddle-VL + YOLO titles | **0.4284** | **5.13** | production candidate, in budget |
 
-The production–oracle gap is **recall/segmentation** (exp_157 recall 0.36–0.49), not the accuracy of matched text. GT: 2 issues human-verified (1885/1910-06-15); 4 era-diverse drafts (1895/1925/1935/1952-06-15) in human review via `eval/tentative_gt/`.
+The production–oracle gap is **recall/segmentation** (exp_157 recall 0.36–0.49), not the accuracy of matched text. GT: **6 issues total, final size per Elio (2026-07-17)** — 2 human-verified (1885/1910-06-15) + 4 era-diverse drafts (1895/1925/1935/1952-06-15) in human review via `eval/tentative_gt/`. The 1925 issue is *Il Meridiano* (the publisher's Monday paper) — accepted. No issue-level held-out set (per Elio); anti-overfit protection stays at the article level (even/odd holdout halves) plus the 1943 GT-free probes.
 
 ## Ship bar for corpus v1 (proposed — needs Elio's sign-off)
 
