@@ -17,7 +17,7 @@ Families grouped by underlying mechanism. Statuses: ACTIVE (worth iterating), BL
 
 ## F3 — Layout detection & reading order
 **Status: ACTIVE, underexplored.**
-- PP-DocLayoutV3 (31M, ~/paddle_env): **STRONG SIGNAL (exp_158)** — near-doubles recall vs DocLayout-YOLO (0.83/0.78 vs 0.49/0.36) and page accuracy, layout only 4-6s/issue; composite still 0.385 because ~100 paragraph-level regions/page each become an article (precision collapse). Bottleneck moved detection->grouping. **exp_159 WIN (title-boundary grouping): 0.6040 avg (+0.18 over exp_157), F1 0.71/0.66, hCER 0.38, probe better everywhere, ~5.1 GPU-s/page warm — NEW PRODUCTION CANDIDATE.** Next micro-levers: share_tiny 0.14 title-only fragments; region-merge for over-split paragraphs; formal bench_throughput.
+- PP-DocLayoutV3 (31M, ~/paddle_env): **STRONG SIGNAL (exp_158)** — near-doubles recall vs DocLayout-YOLO (0.83/0.78 vs 0.49/0.36) and page accuracy, layout only 4-6s/issue; composite still 0.385 because ~100 paragraph-level regions/page each become an article (precision collapse). Bottleneck moved detection->grouping. exp_159 WIN (title-boundary grouping): 0.6040. **exp_160 WIN (consecutive-title head-block merge): 0.6180 avg, F1 0.75/0.68, precision 0.82/0.77, hCER 0.30/0.33, probe tiny-share 14x better, steady-state 6.22 GPU-s/page = 6.3-day corpus — PRODUCTION CANDIDATE.** Remaining levers: over-split paragraph_title false positives (title score threshold); recall gap 0.68/0.61 (missed GT units — inspect which classes); F4 diversity source.
 - DocLayout-YOLO param tuning: SATURATED (defaults near-optimal, two sweeps failed).
 - Chandra layout operator exists (chandra_layout.py), integration untested.
 
