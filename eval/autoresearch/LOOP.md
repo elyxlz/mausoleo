@@ -14,6 +14,7 @@ Rewritten by the loop every iteration (see program.md §Running the Loop). Rules
 - **Production candidate: exp_160** (experiments/exp_160_ppdoclayout_headblocks.py) = 0.6180 avg, F1 0.75/0.68, precision 0.82/0.77, hCER 0.30/0.33, steady-state 6.22 GPU-s/page = 6.3-day corpus (under 1-week goal). Chain: exp_158 (PP-DocLayoutV3 regions, recall signal) → exp_159 (title-boundary grouping, 0.6040) → exp_160 (head-block merge).
 - Ship-bar gap (plan/01, proposed): composite ≥0.60 ✓ (on the 2 verified issues), recall ≥0.70 ✗ (0.683/0.611) — recall is the open front.
 - GPUs free.
+- **IN FLIGHT: zoom-refinement pass (per Elio)** — 4 Opus agents (one per tentative GT issue) crop+zoom every flagged reading in the REVIEW_NOTES and fix ground_truth.json in place; on completion validate JSONs, commit+push per issue. Do not run exp_163 file edits that touch eval/tentative_gt meanwhile (experiments/ + predictions are fine).
 
 ## Queue (in order)
 1. **exp_163 column-sorted traversal**: recall work continues with a NEW mechanism (serial gates rejected 0/2 — see log 15:00/15:10). Per page: cluster regions into columns by x-overlap, sort within column by y, traverse column-by-column; then title-boundary grouping + head-block merge + flow gate on the now-true geometric neighbors. One structural variable vs exp_160. Evaluate both dates + 1943 probe; check 1910 p6 unit count (GT 45, currently 9).
