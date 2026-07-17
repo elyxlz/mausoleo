@@ -10,13 +10,13 @@ Rewritten by the loop every iteration (see program.md §Running the Loop). Rules
 - plan/01 ship bar + plan/02 corpus-v0-early await Elio's sign-off — no corpus run without it.
 - Commit and push as you go; log to `log.jsonl` with mechanism lines; update `registry.md` every iteration.
 
-## State (2026-07-17 14:15)
-- **exp_159 accepted as production candidate**: 0.6040 avg (0.5663/0.6416), F1 0.71/0.66, ~5.1 GPU-s/page warm. PP-DocLayoutV3 regions (paddle_env subprocess) + PaddleOCR-VL vllm OCR + title-boundary grouping. Baselines table in program.md updated.
-- GPUs free. paddle_env verified; PP-DocLayoutV3 cached in ~/.paddlex.
+## State (2026-07-17 14:35)
+- **Production candidate: exp_160** (experiments/exp_160_ppdoclayout_headblocks.py) = 0.6180 avg, F1 0.75/0.68, precision 0.82/0.77, hCER 0.30/0.33, steady-state 6.22 GPU-s/page = 6.3-day corpus (under 1-week goal). Chain: exp_158 (PP-DocLayoutV3 regions, recall signal) → exp_159 (title-boundary grouping, 0.6040) → exp_160 (head-block merge).
+- Ship-bar gap (plan/01, proposed): composite ≥0.60 ✓ (on the 2 verified issues), recall ≥0.70 ✗ (0.683/0.611) — recall is the open front.
+- GPUs free.
 
 ## Queue (in order)
-1. **Formal steady-state bench for exp_159**: adapt scripts/bench_throughput.py (it drives config-registry operators; exp_159 is an experiments/ script — simplest: add a bench mode/flag to exp_159 that loops the 5-issue era-diverse set [1885-06-15, 1910-06-15, 1943-07-03, 1943-07-15, 1943-07-25] in one process, reporting warm GPU-s/page excluding first issue). Record corpus extrapolation in log.jsonl.
-2. **share_tiny lever (exp_160)**: 1943 probe shows 14% tiny (<50 char) units — mostly title-only fragments. One variable: merge a title-article with empty/near-empty body into the NEXT article as its headline when that next article is headline-less (or drop <20-char orphans). Evaluate both dates + probe.
-3. **Over-split lever**: paragraph_title false positives may split single articles (check 1910 GT misses); consider min title score threshold sweep as its own experiment.
-4. **F4 (oracle-only)**: add exp_159 as a diversity source to ensemble_prune5; prune5 precision filtering.
-5. On Elio's GT promotion: re-run board over 6 issues; re-base baselines.
+1. **Recall inspection (no GPU)**: diff exp_160's 1910 predictions vs GT — list the ~75 unmatched GT units by unit_type/page. Hypotheses: ads/classifieds regions dropped by TEXT_LABELS filter (check what labels PP-DocLayoutV3 gives ads — maybe "image"/"figure" or excluded classes), tiny notices under min-area 1500, or grouping absorbing them into neighbors. Write findings to log.jsonl; pick the next one-variable lever from evidence (candidate exp_161: add missing label classes or lower min-area).
+2. **Over-split lever**: paragraph_title false positives splitting single articles — title score threshold sweep as its own experiment (only if evidence from item 1 points here).
+3. **F4 (oracle-only)**: add exp_160 as diversity source to ensemble_prune5; prune5 precision filtering.
+4. On Elio's GT promotion: board over 6 issues; re-base baselines; check ship bar on full set.
