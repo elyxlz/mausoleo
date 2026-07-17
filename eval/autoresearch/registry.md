@@ -17,7 +17,7 @@ Families grouped by underlying mechanism. Statuses: ACTIVE (worth iterating), BL
 
 ## F3 — Layout detection & reading order
 **Status: ACTIVE, underexplored.**
-- PP-DocLayoutV3 (31M, newspaper class, predicts reading order): untested; needs paddle runtime in own env.
+- PP-DocLayoutV3 (31M, ~/paddle_env): **STRONG SIGNAL (exp_158)** — near-doubles recall vs DocLayout-YOLO (0.83/0.78 vs 0.49/0.36) and page accuracy, layout only 4-6s/issue; composite still 0.385 because ~100 paragraph-level regions/page each become an article (precision collapse). Bottleneck moved detection->grouping. exp_159: title-boundary grouping of regions into articles.
 - DocLayout-YOLO param tuning: SATURATED (defaults near-optimal, two sweeps failed).
 - Chandra layout operator exists (chandra_layout.py), integration untested.
 
