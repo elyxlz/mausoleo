@@ -17,7 +17,7 @@ Rewritten by the loop every iteration (see program.md §Running the Loop). Rules
 - **Zoom-refinement pass DONE (2026-07-17 16:00)**: all four tentative GTs re-verified flag-by-flag at 2-14x zoom — 1895 (5 fixes), 1925 (5), 1935 (14), 1952 (7 + 1 missing ad added). Each REVIEW_NOTES has a 'Resolved by zoom pass' audit; remaining uncertain items are marked. Drafts are as clean as machine passes get — ready for Elio.
 
 ## Queue (in order)
-1. **exp_163 column-sorted traversal**: recall work continues with a NEW mechanism (serial gates rejected 0/2 — see log 15:00/15:10). Per page: cluster regions into columns by x-overlap, sort within column by y, traverse column-by-column; then title-boundary grouping + head-block merge + flow gate on the now-true geometric neighbors. One structural variable vs exp_160. Evaluate both dates + 1943 probe; check 1910 p6 unit count (GT 45, currently 9).
-2. **F4 (oracle-only)**: add exp_160 as diversity source to ensemble_prune5 (offline merge sweep over cached predictions like the prune search); prune5 precision filtering.
+1. **F4 (oracle-only)**: add exp_160 as diversity source to ensemble_prune5 — offline merge sweep over cached predictions (pattern: the 2026-07-16 prune search scripts in scratchpad, or rewrite small): try exp_160 in the replacement chain at several (overlap, ratio) points + as quality-select source; accept per ensemble floor (≥0.002 both dates + holdout). Then prune5 precision filtering.
+2. **Recall via semantic grouping (F3 unblock candidate)**: LLM/subagent grouping pass over PP-DocLayoutV3 region texts+geometry (group region indices into articles). Only prototype if F4 stalls — model-based, era-independent.
 3. **Over-split lever**: title score threshold sweep (only if evidence appears).
 4. On Elio's GT promotion: board over 6 issues; re-base baselines; check ship bar (composite ✓ 0.618, recall 0.68/0.61 vs proposed 0.70).
