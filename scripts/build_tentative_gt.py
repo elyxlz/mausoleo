@@ -79,12 +79,38 @@ def cmd_assemble(date: str) -> None:
     print(f"{out_path}: {len(articles)} articles, {len(images)} page images copied")
 
 
+def cmd_stitch(date: str) -> None:
+    issue_dir = TENTATIVE_DIR / date
+    gt_path = issue_dir / "ground_truth.json"
+    stitches_path = issue_dir / "stitches.json"
+    issue = json.loads(gt_path.read_text())
+    merges: list[list[str]] = json.loads(stitches_path.read_text())
+    by_id = {a["id"]: a for a in issue["articles"]}
+    absorbed: set[str] = set()
+    for keep_id, absorb_id in merges:
+        keep, absorb = by_id[keep_id], by_id[absorb_id]
+        keep["paragraphs"] = [*keep["paragraphs"], *absorb["paragraphs"]]
+        keep["page_span"] = sorted(set(keep["page_span"]) | set(absorb["page_span"]))
+        absorbed.add(absorb_id)
+    articles = [a for a in issue["articles"] if a["id"] not in absorbed]
+    for idx, art in enumerate(articles):
+        art["id"] = f"{date}_a{idx:02d}"
+        art["position_in_issue"] = idx
+        for p_idx, para in enumerate(art.get("paragraphs", [])):
+            para["id"] = f"{date}_a{idx:02d}_p{p_idx:02d}"
+    issue["articles"] = articles
+    gt_path.write_text(json.dumps(issue, indent=2, ensure_ascii=False))
+    print(f"{gt_path}: applied {len(merges)} stitches -> {len(articles)} articles")
+
+
 def main() -> None:
-    if len(sys.argv) < 3 or sys.argv[1] not in ("bundle", "assemble"):
-        print("usage: build_tentative_gt.py bundle <date> <page> | assemble <date>")
+    if len(sys.argv) < 3 or sys.argv[1] not in ("bundle", "assemble", "stitch"):
+        print("usage: build_tentative_gt.py bundle <date> <page> | assemble <date> | stitch <date>")
         raise SystemExit(1)
     if sys.argv[1] == "bundle":
         cmd_bundle(sys.argv[2], int(sys.argv[3]))
+    elif sys.argv[1] == "stitch":
+        cmd_stitch(sys.argv[2])
     else:
         cmd_assemble(sys.argv[2])
 
