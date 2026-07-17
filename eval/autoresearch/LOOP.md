@@ -20,7 +20,7 @@ Rewritten by the loop every iteration (see program.md §Running the Loop). Rules
 - **exp_164 ceiling measured: 0.6980 avg, recall 0.90/0.79** (Opus grouper probe over exp_160's layout+OCR; research-only). Semantic grouping is the confirmed route for the recall bar.
 
 ## Queue (in order)
-1. **exp_165 local grouper**: replicate exp_164 with a LOCAL model as grouper — Qwen3-VL-8B (cached) text-only via vllm: per-page prompt = region listing (idx/class/bbox/text first ~100 chars) -> JSON groups. Reuse exp_164's dump/assemble; new `group` stage calling vllm. Port exp_160's head-block merge into the assembler first (fixes hCER 0.48). Measure GPU-s/page of the grouping pass (region listings ~15K tok/page input, small output; prefill-dominated so likely cheap). Evaluate both dates + 1943 probe; compare to the 0.6980 ceiling and exp_160's 0.6180.
+1. **exp_166 boundary-format grouper**: fix exp_165's two defects in one change — grouper outputs BOUNDARIES (JSON array of {"start": idx, "unit_type": ..., "headline_region": idx|null}, one per unit; a unit spans start..next_start-1 in region order) instead of full idx lists (~10x fewer decode tokens -> fixes the 47 s/page cost), decoded with vllm structured outputs (guided_json / structured_outputs config) to kill the 5/10 parse-failure fallbacks. Reuse exp_165 scaffolding. Evaluate both dates; compare to exp_160 0.6180, exp_165 0.6222, ceiling 0.6980; measure s/page; 1943 probe (needs exp_164 dump 1943-07-15) if accepted.
 2. **Over-split lever**: title score threshold sweep (only if evidence appears).
 3. On Elio's GT promotion: board over 6 issues; re-base baselines; ship-bar check.
-(F4 exp_160-diversity closed NEGATIVE; geometric grouping BLOCKED 0/3 — see log.)
+(exp_165 REJECT_DIRECTIONAL; F4 diversity NEGATIVE; geometric grouping BLOCKED 0/3 — see log.)
