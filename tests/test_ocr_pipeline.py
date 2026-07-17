@@ -4,7 +4,7 @@ import dataclasses as dc
 
 from mausoleo.ocr.config import OcrPipelineConfig
 from mausoleo.ocr.models import Issue, extract_full_text, issue_from_dict
-from mausoleo.ocr.operators import LlmCleanup, ParseIssue, VlmOcr, WholeIssueVlm
+from mausoleo.ocr.operators import MergePages, ParseIssue, VlmOcr
 from mausoleo.ocr.pipeline import run_pipeline
 
 
@@ -14,7 +14,7 @@ FAKE_JPEG = b"\xff\xd8\xff\xe0" + b"\x00" * 100
 def test_mock_vlm_pipeline() -> None:
     config = OcrPipelineConfig(
         name="mock_vlm",
-        operators=[VlmOcr(mock=True), LlmCleanup(mock=True), ParseIssue()],
+        operators=[VlmOcr(mock=True), MergePages(), ParseIssue()],
     )
     issue = run_pipeline(config, [FAKE_JPEG] * 4, date="1885-06-15")
 
@@ -28,22 +28,10 @@ def test_mock_vlm_pipeline() -> None:
         assert len(article.paragraphs) >= 1
 
 
-def test_mock_whole_issue_pipeline() -> None:
-    config = OcrPipelineConfig(
-        name="mock_whole_issue",
-        operators=[WholeIssueVlm(mock=True), ParseIssue()],
-    )
-    issue = run_pipeline(config, [FAKE_JPEG] * 6, date="1940-04-01")
-
-    assert isinstance(issue, Issue)
-    assert issue.page_count == 6
-    assert len(issue.articles) == 6
-
-
 def test_issue_serialization() -> None:
     config = OcrPipelineConfig(
         name="mock",
-        operators=[VlmOcr(mock=True), LlmCleanup(mock=True), ParseIssue()],
+        operators=[VlmOcr(mock=True), MergePages(), ParseIssue()],
     )
     issue = run_pipeline(config, [FAKE_JPEG] * 2, date="1910-06-15")
 
@@ -56,13 +44,13 @@ def test_issue_serialization() -> None:
 def test_extract_full_text() -> None:
     config = OcrPipelineConfig(
         name="mock",
-        operators=[VlmOcr(mock=True), LlmCleanup(mock=True), ParseIssue()],
+        operators=[VlmOcr(mock=True), MergePages(), ParseIssue()],
     )
     issue = run_pipeline(config, [FAKE_JPEG] * 2, date="1910-06-15")
 
     text = extract_full_text(issue)
     assert len(text) > 0
-    assert "Articolo" in text
+    assert "Mock OCR output" in text
 
 
 def test_split_markdown_articles() -> None:

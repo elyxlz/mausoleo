@@ -9,7 +9,7 @@ import pytest
 from mausoleo.eval.evaluate import evaluate_issue
 from mausoleo.ocr.config import OcrPipelineConfig
 from mausoleo.ocr.models import Issue
-from mausoleo.ocr.operators import LlmCleanup, MergePages, ParseIssue, Preprocess, SuryaOcr, VlmOcr, WholeIssueVlm, YoloLayout
+from mausoleo.ocr.operators import MergePages, ParseIssue, VlmOcr, YoloCrop
 from mausoleo.ocr.pipeline import run_pipeline
 
 
@@ -19,44 +19,16 @@ GROUND_TRUTH_DIR = pl.Path(__file__).parent.parent / "eval" / "ground_truth"
 
 ALL_CONFIGS = [
     OcrPipelineConfig(
-        name="qwen_vl_7b_structured",
+        name="vlm_structured",
         operators=[VlmOcr(mock=True), MergePages(), ParseIssue()],
     ),
     OcrPipelineConfig(
-        name="qwen_vl_7b_raw_cleanup",
-        operators=[VlmOcr(mock=True), LlmCleanup(mock=True), ParseIssue()],
+        name="yolo_vlm_structured",
+        operators=[YoloCrop(mock=True), VlmOcr(mock=True), MergePages(), ParseIssue()],
     ),
     OcrPipelineConfig(
-        name="qwen_vl_72b_raw_cleanup",
-        operators=[VlmOcr(mock=True), LlmCleanup(mock=True), ParseIssue()],
-    ),
-    OcrPipelineConfig(
-        name="qwen_vl_7b_whole_issue",
-        operators=[WholeIssueVlm(mock=True), ParseIssue()],
-    ),
-    OcrPipelineConfig(
-        name="internvl_8b_raw_cleanup",
-        operators=[VlmOcr(mock=True), LlmCleanup(mock=True), ParseIssue()],
-    ),
-    OcrPipelineConfig(
-        name="got_ocr2_cleanup",
-        operators=[VlmOcr(mock=True), LlmCleanup(mock=True), ParseIssue()],
-    ),
-    OcrPipelineConfig(
-        name="surya_cleanup",
-        operators=[SuryaOcr(mock=True), LlmCleanup(mock=True), ParseIssue()],
-    ),
-    OcrPipelineConfig(
-        name="preprocess_qwen_cleanup",
-        operators=[Preprocess(mock=True), VlmOcr(mock=True), LlmCleanup(mock=True), ParseIssue()],
-    ),
-    OcrPipelineConfig(
-        name="yolo_qwen_structured",
-        operators=[YoloLayout(mock=True), VlmOcr(mock=True), MergePages(), ParseIssue()],
-    ),
-    OcrPipelineConfig(
-        name="yolo_surya_cleanup",
-        operators=[YoloLayout(mock=True), SuryaOcr(mock=True), LlmCleanup(mock=True), ParseIssue()],
+        name="yolo_vlm_titles",
+        operators=[YoloCrop(mock=True, separate_title_regions=True), VlmOcr(mock=True), MergePages(title_class_headlines=True), ParseIssue()],
     ),
 ]
 

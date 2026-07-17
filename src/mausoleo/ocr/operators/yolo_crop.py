@@ -122,7 +122,7 @@ class YoloCropOperator(StatefulOperator[YoloCrop]):
         for page_num, img_bytes in enumerate(raw_images):
             pil_img = Image.open(io.BytesIO(img_bytes))
             img_w, img_h = pil_img.size
-            results = self.yolo(pil_img, conf=self.config.conf_threshold, verbose=False)
+            results = self.yolo(pil_img, conf=self.config.conf_threshold, verbose=False)  # type: ignore[arg-type]
 
             raw_boxes: list[tuple[int, int, int, int, str, float]] = []
             for box in results[0].boxes:
