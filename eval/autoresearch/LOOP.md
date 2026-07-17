@@ -17,7 +17,7 @@ Rewritten by the loop every iteration (see program.md §Running the Loop). Rules
 - **Zoom-refinement pass DONE (2026-07-17 16:00)**: all four tentative GTs re-verified flag-by-flag at 2-14x zoom — 1895 (5 fixes), 1925 (5), 1935 (14), 1952 (7 + 1 missing ad added). Each REVIEW_NOTES has a 'Resolved by zoom pass' audit; remaining uncertain items are marked. Drafts are as clean as machine passes get — ready for Elio.
 
 ## State addendum (18:00)
-- **exp_164 ceiling measured: 0.6980 avg, recall 0.90/0.79** (Opus grouper probe over exp_160's layout+OCR; research-only). Semantic grouping is the confirmed路线 for the recall bar.
+- **exp_164 ceiling measured: 0.6980 avg, recall 0.90/0.79** (Opus grouper probe over exp_160's layout+OCR; research-only). Semantic grouping is the confirmed route for the recall bar.
 
 ## Queue (in order)
 1. **exp_165 local grouper**: replicate exp_164 with a LOCAL model as grouper — Qwen3-VL-8B (cached) text-only via vllm: per-page prompt = region listing (idx/class/bbox/text first ~100 chars) -> JSON groups. Reuse exp_164's dump/assemble; new `group` stage calling vllm. Port exp_160's head-block merge into the assembler first (fixes hCER 0.48). Measure GPU-s/page of the grouping pass (region listings ~15K tok/page input, small output; prefill-dominated so likely cheap). Evaluate both dates + 1943 probe; compare to the 0.6980 ceiling and exp_160's 0.6180.
