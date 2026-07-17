@@ -45,6 +45,7 @@ class VlmOcr(BaseOperatorConfig):
     gpu_fraction: float = 1.0
     gpu_memory_utilization: float = 0.92
     enforce_eager: bool = True
+    max_pixels: int | None = None
     max_model_len: int = 32768
     backend: tp.Literal["vllm", "transformers"] = "transformers"
     load_in_4bit: bool = False
@@ -103,6 +104,8 @@ class VlmOcrOperator(StatefulOperator[VlmOcr]):
             limit_mm_per_prompt={"image": 1},
             enforce_eager=self.config.enforce_eager,
         )
+        if self.config.max_pixels is not None:
+            llm_kwargs["mm_processor_kwargs"] = {"max_pixels": self.config.max_pixels}
         if self.config.vllm_strict:
             llm_kwargs["dtype"] = "bfloat16"
             llm_kwargs["enable_prefix_caching"] = False

@@ -47,6 +47,7 @@ def _yolo_sub(name: str) -> OcrPipelineConfig:
                 backend="vllm",
                 max_tokens=8192,
                 max_model_len=16384,
+                max_pixels=24_000_000,
                 gpu_fraction=1.0,
                 vllm_strict=True,
             ),
