@@ -16,7 +16,7 @@ Rewritten by the loop every iteration (see program.md §Running the Loop). Rules
 - GPUs free.
 
 ## Queue (in order)
-1. **Recall inspection (no GPU)**: diff exp_160's 1910 predictions vs GT — list the ~75 unmatched GT units by unit_type/page. Hypotheses: ads/classifieds regions dropped by TEXT_LABELS filter (check what labels PP-DocLayoutV3 gives ads — maybe "image"/"figure" or excluded classes), tiny notices under min-area 1500, or grouping absorbing them into neighbors. Write findings to log.jsonl; pick the next one-variable lever from evidence (candidate exp_161: add missing label classes or lower min-area).
-2. **Over-split lever**: paragraph_title false positives splitting single articles — title score threshold sweep as its own experiment (only if evidence from item 1 points here).
-3. **F4 (oracle-only)**: add exp_160 as diversity source to ensemble_prune5; prune5 precision filtering.
-4. On Elio's GT promotion: board over 6 issues; re-base baselines; check ship bar on full set.
+1. **exp_163 column-sorted traversal**: recall work continues with a NEW mechanism (serial gates rejected 0/2 — see log 15:00/15:10). Per page: cluster regions into columns by x-overlap, sort within column by y, traverse column-by-column; then title-boundary grouping + head-block merge + flow gate on the now-true geometric neighbors. One structural variable vs exp_160. Evaluate both dates + 1943 probe; check 1910 p6 unit count (GT 45, currently 9).
+2. **F4 (oracle-only)**: add exp_160 as diversity source to ensemble_prune5 (offline merge sweep over cached predictions like the prune search); prune5 precision filtering.
+3. **Over-split lever**: title score threshold sweep (only if evidence appears).
+4. On Elio's GT promotion: board over 6 issues; re-base baselines; check ship bar (composite ✓ 0.618, recall 0.68/0.61 vs proposed 0.70).
