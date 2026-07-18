@@ -90,10 +90,10 @@ function setStatus(cls, text) { const s = document.getElementById("status"); s.c
 
 /* ---------- zoom / pan viewer ---------- */
 function paneW() { return viewport.clientWidth; }
-function top() { return stack[stack.length - 1]; }
+function curView() { return stack[stack.length - 1]; }
 
 function applyView() {
-  const f = top();
+  const f = curView();
   const w = Math.max(paneW(), paneW() * f.zoom);
   canvas.style.width = w + "px";
   const rh = canvas.clientHeight || 1;
@@ -128,7 +128,7 @@ function pushBox(fx0, fy0, fx1, fy1) {
 }
 
 function zoomStep(factor) {
-  const f = top();
+  const f = curView();
   const nz = Math.max(1, Math.min(MAXZOOM, f.zoom * factor));
   const c = centerFractions();
   if (Math.abs(nz - f.zoom) < 1e-3) return;
@@ -138,7 +138,7 @@ function zoomStep(factor) {
 }
 
 function zoomAt(factor, clientX, clientY) {
-  const f = top();
+  const f = curView();
   const nz = Math.max(1, Math.min(MAXZOOM, f.zoom * factor));
   if (Math.abs(nz - f.zoom) < 1e-3) return;
   const r = viewport.getBoundingClientRect();
@@ -168,7 +168,7 @@ viewport.addEventListener("contextmenu", (e) => { e.preventDefault(); popView();
 viewport.addEventListener("mousedown", (e) => {
   if (e.button !== 0) return;
   const r = viewport.getBoundingClientRect();
-  if (spaceDown || top().zoom > 1.001 && e.shiftKey) {
+  if (spaceDown || curView().zoom > 1.001 && e.shiftKey) {
     drag = { mode: "pan", x: e.clientX, y: e.clientY, sl: viewport.scrollLeft, st: viewport.scrollTop };
     viewport.classList.add("panning");
   } else {
@@ -197,7 +197,7 @@ window.addEventListener("mousemove", (e) => {
 window.addEventListener("mouseup", (e) => {
   if (!drag) return;
   if (drag.mode === "pan") {
-    const c = centerFractions(); top().cx = c.cx; top().cy = c.cy;
+    const c = centerFractions(); curView().cx = c.cx; curView().cy = c.cy;
     viewport.classList.remove("panning"); drag = null; return;
   }
   marquee.style.display = "none";
@@ -372,6 +372,8 @@ class Handler(BaseHTTPRequestHandler):
         elif parts[0] == "api" and len(parts) == 2:
             path = TENTATIVE_DIR / parts[1] / "ground_truth.json"
             self._send(200, path.read_bytes(), "application/json")
+        elif parts == ["favicon.ico"]:
+            self._send(204, b"", "image/x-icon")
         elif parts[0] == "img" and len(parts) == 3:
             path = TENTATIVE_DIR / parts[1] / "pages" / f"{parts[2]}.jpeg"
             self._send(200, path.read_bytes(), "image/jpeg")
