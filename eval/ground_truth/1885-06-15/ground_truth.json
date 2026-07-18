@@ -381,7 +381,7 @@
     },
     {
       "headline": "Sciarada",
-      "unit_type": "entertainment",
+      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -393,7 +393,7 @@
     },
     {
       "headline": "Direttore e responsabile",
-      "unit_type": "masthead",
+      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -405,7 +405,7 @@
     },
     {
       "headline": "Capati ner mazzo",
-      "unit_type": "advertisement",
+      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -417,7 +417,7 @@
     },
     {
       "headline": "Nuovo ribasso dei prezzi - Orologi",
-      "unit_type": "advertisement",
+      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -429,7 +429,7 @@
     },
     {
       "headline": "BAGNI DELLE ACQUE ALBULE presso TIVOLI",
-      "unit_type": "advertisement",
+      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -441,7 +441,7 @@
     },
     {
       "headline": "Tabacco MIL",
-      "unit_type": "advertisement",
+      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -453,7 +453,7 @@
     },
     {
       "headline": "Contanti contro cessione",
-      "unit_type": "advertisement",
+      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -465,7 +465,7 @@
     },
     {
       "headline": "Dottore Alberto Mosso",
-      "unit_type": "advertisement",
+      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -477,7 +477,7 @@
     },
     {
       "headline": "Pasta Pettorale Balsamica",
-      "unit_type": "advertisement",
+      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -489,7 +489,7 @@
     },
     {
       "headline": "Balsamo Speciale",
-      "unit_type": "advertisement",
+      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -501,7 +501,7 @@
     },
     {
       "headline": "Motori a Gas",
-      "unit_type": "advertisement",
+      "unit_type": "article",
       "page_span": [
         4
       ],

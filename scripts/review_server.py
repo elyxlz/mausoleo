@@ -277,11 +277,6 @@ function unitEl(art, gi) {
   const bar = document.createElement("div");
   bar.className = "bar";
   bar.innerHTML = `<span class="id">${art.id.split("_").pop()}</span>`;
-  const type = document.createElement("select");
-  type.className = "type";
-  for (const t of ["article","advertisement","notice","obituary","editorial","other"]) type.append(new Option(t, t));
-  type.value = art.unit_type;
-  type.onchange = () => { art.unit_type = type.value; markDirty(); };
   const pages = document.createElement("input");
   pages.className = "pages";
   pages.value = art.page_span.join(",");
@@ -291,7 +286,7 @@ function unitEl(art, gi) {
   };
   const del = btn("\\u2715", () => { if (confirm("Delete this unit?")) { doc.articles.splice(gi, 1); markDirty(); renderUnits(); } });
   del.className = "del";
-  bar.append(type, pages, btn("\\u2191", () => move(gi, -1)), btn("\\u2193", () => move(gi, 1)), del);
+  bar.append(pages, btn("\\u2191", () => move(gi, -1)), btn("\\u2193", () => move(gi, 1)), del);
   d.append(bar);
 
   const hl = document.createElement("textarea");
@@ -349,6 +344,7 @@ def renumber(issue: dict[str, tp.Any]) -> dict[str, tp.Any]:
     for idx, art in enumerate(issue["articles"]):
         art["id"] = f"{date}_a{idx:02d}"
         art["position_in_issue"] = idx
+        art["unit_type"] = "article"
         art["page_span"] = sorted(set(art.get("page_span") or [1]))
         for p_idx, para in enumerate(art.get("paragraphs", [])):
             para["id"] = f"{date}_a{idx:02d}_p{p_idx:02d}"
