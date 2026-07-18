@@ -71,7 +71,7 @@ PAGE_HTML = """<!doctype html>
       <button onclick="resetView()" title="full page">reset</button>
       <span id="depthlbl"></span>
     </div>
-    <div id="hint">Drag a box to zoom &#183; Esc/right-click steps back &#183; Space+drag or scroll to pan &#183; &#8984;/Ctrl+scroll or dbl-click to zoom</div>
+    <div id="hint">Drag a box to zoom in &#183; click (or Esc) to zoom back out &#183; Space+drag or scroll to pan &#183; &#8984;/Ctrl+scroll to fine-zoom</div>
   </div>
   <div id="units"></div>
 </main>
@@ -210,6 +210,8 @@ window.addEventListener("mouseup", (e) => {
     const fx1 = (Math.max(drag.x0, e.clientX) - cr.left) / w;
     const fy1 = (Math.max(drag.y0, e.clientY) - cr.top) / h;
     pushBox(Math.max(0, fx0), Math.max(0, fy0), Math.min(1, fx1), Math.min(1, fy1));
+  } else if (dx < 6 && dy < 6 && stack.length > 1) {
+    popView();
   }
   drag = null;
 });
@@ -218,7 +220,6 @@ viewport.addEventListener("wheel", (e) => {
   if (e.ctrlKey || e.metaKey) { e.preventDefault(); zoomAt(e.deltaY < 0 ? 1.18 : 1 / 1.18, e.clientX, e.clientY); }
 }, { passive: false });
 
-viewport.addEventListener("dblclick", (e) => zoomAt(1.7, e.clientX, e.clientY));
 window.addEventListener("resize", applyView);
 
 /* ---------- data / units ---------- */
