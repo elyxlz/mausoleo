@@ -13,15 +13,27 @@ PAGE_HTML = """<!doctype html>
 <title>Tentative GT review</title>
 <style>
   body { font-family: -apple-system, Segoe UI, sans-serif; margin: 0; background: #f5f2ec; }
-  header { position: sticky; top: 0; z-index: 10; background: #1f2430; color: #fff; padding: .5em 1em;
+  header { position: sticky; top: 0; z-index: 20; background: #1f2430; color: #fff; padding: .5em 1em;
            display: flex; gap: 1em; align-items: center; flex-wrap: wrap; }
-  header a, header button, header select { font-size: .95em; }
+  header a { color: #9ec7ff; }
+  header button, header select { font-size: .95em; }
   header .status { margin-left: auto; font-family: monospace; }
   .saved { color: #7fdc9a; } .dirty { color: #ffce6b; } .error { color: #ff7b7b; }
   main { display: flex; align-items: flex-start; }
-  #imgpane { width: 55%; position: sticky; top: 3.2em; max-height: calc(100vh - 3.4em); overflow: auto;
-             background: #333; text-align: center; }
-  #imgpane img { width: 100%; display: block; }
+  #imgpane { width: 55%; position: sticky; top: 3.2em; height: calc(100vh - 3.4em); background: #2b2b2b; }
+  #viewport { width: 100%; height: 100%; overflow: auto; position: relative; cursor: crosshair; }
+  #viewport.panning { cursor: grabbing; }
+  #viewport.canpan { cursor: grab; }
+  #canvas { position: relative; width: 100%; }
+  #pageimg { width: 100%; display: block; user-select: none; -webkit-user-drag: none; }
+  #marquee { position: absolute; border: 2px solid #4da3ff; background: rgba(77,163,255,.18);
+             display: none; pointer-events: none; z-index: 5; }
+  #hud { position: absolute; left: 8px; bottom: 8px; z-index: 10; display: flex; gap: .35em; align-items: center;
+         background: rgba(0,0,0,.62); color: #fff; padding: .3em .5em; border-radius: 6px; font: 12px monospace; }
+  #hud button { font: 12px monospace; cursor: pointer; border: 0; border-radius: 4px; padding: .15em .55em; background: #4a4a4a; color: #fff; }
+  #hud button:hover { background: #666; }
+  #hint { position: absolute; right: 8px; top: 8px; z-index: 10; background: rgba(0,0,0,.55); color: #eee;
+          padding: .35em .6em; border-radius: 6px; font: 11px sans-serif; max-width: 16em; line-height: 1.35; }
   #units { width: 45%; padding: .8em 1.2em 6em; box-sizing: border-box; }
   .unit { background: #fff; border: 1px solid #ddd; border-radius: 6px; margin-bottom: .9em; padding: .6em .8em;
           box-shadow: 0 1px 2px rgba(0,0,0,.06); }
@@ -31,33 +43,185 @@ PAGE_HTML = """<!doctype html>
   .bar button { border: 1px solid #ccc; background: #fafafa; border-radius: 4px; cursor: pointer; padding: 0 .5em; }
   .bar button:hover { background: #eee; }
   .bar .del:hover { background: #ffdddd; }
-  select.type { font-size: .8em; }
-  input.pages { width: 4.5em; font-size: .8em; font-family: monospace; }
+  select.type { font-size: .8em; } input.pages { width: 4.5em; font-size: .8em; font-family: monospace; }
   textarea { width: 100%; box-sizing: border-box; border: 1px solid #e2ddd2; border-radius: 4px;
-             font-family: Georgia, serif; font-size: .95em; line-height: 1.35; padding: .35em .5em; resize: none; }
+             font-family: Georgia, serif; font-size: .95em; line-height: 1.35; padding: .35em .5em; resize: none; overflow: hidden; }
   textarea.hl { font-weight: bold; background: #fffbe8; margin-bottom: .35em; }
-  .pagejump { padding: .6em 0; text-align: center; }
-  .pagejump button { margin: 0 .2em; }
   .addrow { text-align: center; margin: 1em 0; }
 </style>
 <header>
+  <a href="/">&#8592; issues</a>
   <b id="title"></b>
   <span>page <select id="pagesel"></select> / <span id="pagecount"></span></span>
   <button onclick="shiftPage(-1)">&#8592; prev</button>
   <button onclick="shiftPage(1)">next &#8594;</button>
   <span id="unitcount"></span>
-  <span class="status" id="status">loading…</span>
+  <span class="status" id="status">loading&#8230;</span>
 </header>
 <main>
-  <div id="imgpane"><img id="pageimg"></div>
+  <div id="imgpane">
+    <div id="viewport">
+      <div id="canvas"><img id="pageimg"><div id="marquee"></div></div>
+    </div>
+    <div id="hud">
+      <button onclick="zoomStep(1/1.4)">&#8722;</button>
+      <span id="zoomlbl">100%</span>
+      <button onclick="zoomStep(1.4)">+</button>
+      <button onclick="popView()" title="step back out (Esc)">&#8617; back</button>
+      <button onclick="resetView()" title="full page">reset</button>
+      <span id="depthlbl"></span>
+    </div>
+    <div id="hint">Drag a box to zoom &#183; Esc/right-click steps back &#183; Space+drag or scroll to pan &#183; &#8984;/Ctrl+scroll or dbl-click to zoom</div>
+  </div>
   <div id="units"></div>
 </main>
 <script>
 const date = location.pathname.split("/").pop();
 let doc = null, page = 1, saveTimer = null;
 
+const viewport = document.getElementById("viewport");
+const canvas = document.getElementById("canvas");
+const img = document.getElementById("pageimg");
+const marquee = document.getElementById("marquee");
+const MAXZOOM = 8;
+let stack = [{ zoom: 1, cx: 0.5, cy: 0 }];
+
 function setStatus(cls, text) { const s = document.getElementById("status"); s.className = "status " + cls; s.textContent = text; }
 
+/* ---------- zoom / pan viewer ---------- */
+function paneW() { return viewport.clientWidth; }
+function top() { return stack[stack.length - 1]; }
+
+function applyView() {
+  const f = top();
+  const w = Math.max(paneW(), paneW() * f.zoom);
+  canvas.style.width = w + "px";
+  const rh = canvas.clientHeight || 1;
+  const maxL = Math.max(0, w - viewport.clientWidth);
+  const maxT = Math.max(0, rh - viewport.clientHeight);
+  viewport.scrollLeft = Math.min(maxL, Math.max(0, f.cx * w - viewport.clientWidth / 2));
+  viewport.scrollTop = Math.min(maxT, Math.max(0, f.cy * rh - viewport.clientHeight / 2));
+  document.getElementById("zoomlbl").textContent = Math.round(f.zoom * 100) + "%";
+  document.getElementById("depthlbl").textContent = stack.length > 1 ? "\\u25a2\\u00d7" + (stack.length - 1) : "";
+  viewport.classList.toggle("canpan", f.zoom > 1.001);
+}
+
+function centerFractions() {
+  const w = canvas.clientWidth || 1, h = canvas.clientHeight || 1;
+  return {
+    cx: (viewport.scrollLeft + viewport.clientWidth / 2) / w,
+    cy: (viewport.scrollTop + viewport.clientHeight / 2) / h,
+  };
+}
+
+function resetView() { stack = [{ zoom: 1, cx: 0.5, cy: 0 }]; applyView(); }
+function popView() { if (stack.length > 1) { stack.pop(); applyView(); } else resetView(); }
+
+function pushBox(fx0, fy0, fx1, fy1) {
+  const bw = Math.max(0.01, fx1 - fx0), bh = Math.max(0.01, fy1 - fy0);
+  const aspect = (canvas.clientHeight || 1) / (canvas.clientWidth || 1);
+  const zW = 1 / bw;
+  const zH = viewport.clientHeight / (bh * paneW() * aspect);
+  const zoom = Math.max(1, Math.min(MAXZOOM, Math.min(zW, zH)));
+  stack.push({ zoom, cx: (fx0 + fx1) / 2, cy: (fy0 + fy1) / 2 });
+  applyView();
+}
+
+function zoomStep(factor) {
+  const f = top();
+  const nz = Math.max(1, Math.min(MAXZOOM, f.zoom * factor));
+  const c = centerFractions();
+  if (Math.abs(nz - f.zoom) < 1e-3) return;
+  if (f.zoom === 1 && nz > 1) stack.push({ zoom: nz, cx: c.cx, cy: c.cy });
+  else { f.zoom = nz; f.cx = c.cx; f.cy = c.cy; }
+  applyView();
+}
+
+function zoomAt(factor, clientX, clientY) {
+  const f = top();
+  const nz = Math.max(1, Math.min(MAXZOOM, f.zoom * factor));
+  if (Math.abs(nz - f.zoom) < 1e-3) return;
+  const r = viewport.getBoundingClientRect();
+  const w = canvas.clientWidth || 1, h = canvas.clientHeight || 1;
+  const fracX = (viewport.scrollLeft + (clientX - r.left)) / w;
+  const fracY = (viewport.scrollTop + (clientY - r.top)) / h;
+  const target = (f.zoom === 1 && nz > 1) ? { zoom: nz, cx: fracX, cy: fracY } : f;
+  target.zoom = nz;
+  if (f.zoom === 1 && nz > 1) stack.push(target);
+  const w2 = paneW() * nz, h2 = w2 * ((canvas.clientHeight || 1) / (canvas.clientWidth || 1));
+  const sl = fracX * w2 - (clientX - r.left);
+  const st = fracY * h2 - (clientY - r.top);
+  target.cx = (sl + viewport.clientWidth / 2) / w2;
+  target.cy = (st + viewport.clientHeight / 2) / h2;
+  applyView();
+}
+
+let spaceDown = false, drag = null;
+window.addEventListener("keydown", (e) => {
+  if (e.code === "Space" && e.target.tagName !== "TEXTAREA" && e.target.tagName !== "INPUT") { spaceDown = true; viewport.classList.add("canpan"); e.preventDefault(); }
+  if (e.key === "Escape") popView();
+});
+window.addEventListener("keyup", (e) => { if (e.code === "Space") { spaceDown = false; viewport.classList.remove("canpan"); } });
+
+viewport.addEventListener("contextmenu", (e) => { e.preventDefault(); popView(); });
+
+viewport.addEventListener("mousedown", (e) => {
+  if (e.button !== 0) return;
+  const r = viewport.getBoundingClientRect();
+  if (spaceDown || top().zoom > 1.001 && e.shiftKey) {
+    drag = { mode: "pan", x: e.clientX, y: e.clientY, sl: viewport.scrollLeft, st: viewport.scrollTop };
+    viewport.classList.add("panning");
+  } else {
+    drag = { mode: "box", x0: e.clientX, y0: e.clientY };
+  }
+  e.preventDefault();
+});
+
+window.addEventListener("mousemove", (e) => {
+  if (!drag) return;
+  if (drag.mode === "pan") {
+    viewport.scrollLeft = drag.sl - (e.clientX - drag.x);
+    viewport.scrollTop = drag.st - (e.clientY - drag.y);
+    return;
+  }
+  const cr = canvas.getBoundingClientRect();
+  const x0 = Math.min(drag.x0, e.clientX), y0 = Math.min(drag.y0, e.clientY);
+  const x1 = Math.max(drag.x0, e.clientX), y1 = Math.max(drag.y0, e.clientY);
+  marquee.style.display = "block";
+  marquee.style.left = (x0 - cr.left) + "px";
+  marquee.style.top = (y0 - cr.top) + "px";
+  marquee.style.width = (x1 - x0) + "px";
+  marquee.style.height = (y1 - y0) + "px";
+});
+
+window.addEventListener("mouseup", (e) => {
+  if (!drag) return;
+  if (drag.mode === "pan") {
+    const c = centerFractions(); top().cx = c.cx; top().cy = c.cy;
+    viewport.classList.remove("panning"); drag = null; return;
+  }
+  marquee.style.display = "none";
+  const cr = canvas.getBoundingClientRect();
+  const w = canvas.clientWidth || 1, h = canvas.clientHeight || 1;
+  const dx = Math.abs(e.clientX - drag.x0), dy = Math.abs(e.clientY - drag.y0);
+  if (dx > 8 && dy > 8) {
+    const fx0 = (Math.min(drag.x0, e.clientX) - cr.left) / w;
+    const fy0 = (Math.min(drag.y0, e.clientY) - cr.top) / h;
+    const fx1 = (Math.max(drag.x0, e.clientX) - cr.left) / w;
+    const fy1 = (Math.max(drag.y0, e.clientY) - cr.top) / h;
+    pushBox(Math.max(0, fx0), Math.max(0, fy0), Math.min(1, fx1), Math.min(1, fy1));
+  }
+  drag = null;
+});
+
+viewport.addEventListener("wheel", (e) => {
+  if (e.ctrlKey || e.metaKey) { e.preventDefault(); zoomAt(e.deltaY < 0 ? 1.18 : 1 / 1.18, e.clientX, e.clientY); }
+}, { passive: false });
+
+viewport.addEventListener("dblclick", (e) => zoomAt(1.7, e.clientX, e.clientY));
+window.addEventListener("resize", applyView);
+
+/* ---------- data / units ---------- */
 async function load() {
   doc = await (await fetch(`/api/${date}`)).json();
   document.getElementById("title").textContent = date;
@@ -65,32 +229,46 @@ async function load() {
   const sel = document.getElementById("pagesel");
   sel.innerHTML = "";
   for (let p = 1; p <= doc.page_count; p++) sel.append(new Option(p, p));
-  sel.onchange = () => { page = +sel.value; render(); };
-  render();
+  sel.onchange = () => { page = +sel.value; showPage(); };
+  showPage();
   setStatus("saved", "loaded");
 }
 
-function shiftPage(d) { page = Math.min(doc.page_count, Math.max(1, page + d)); document.getElementById("pagesel").value = page; render(); }
-
-function markDirty() {
-  setStatus("dirty", "unsaved…");
-  clearTimeout(saveTimer);
-  saveTimer = setTimeout(save, 700);
+function showPage() {
+  document.getElementById("pagesel").value = page;
+  img.onload = () => { resetView(); };
+  img.src = `/img/${date}/${page}`;
+  renderUnits();
+  window.scrollTo(0, 0);
 }
 
+function shiftPage(d) { page = Math.min(doc.page_count, Math.max(1, page + d)); showPage(); }
+
+function markDirty() { setStatus("dirty", "unsaved\\u2026"); clearTimeout(saveTimer); saveTimer = setTimeout(save, 700); }
+
 async function save() {
-  setStatus("dirty", "saving…");
+  setStatus("dirty", "saving\\u2026");
   const res = await fetch(`/api/${date}`, { method: "POST", body: JSON.stringify(doc) });
-  if (res.ok) { doc = await res.json(); setStatus("saved", "saved ✓"); refreshIds(); }
+  if (res.ok) { doc = await res.json(); setStatus("saved", "saved \\u2713"); renderUnits(); }
   else setStatus("error", "SAVE FAILED");
 }
 
-function refreshIds() {
-  document.querySelectorAll(".unit").forEach((el, i) => {});
-  render(false);
+function autosize(t) { t.style.height = "auto"; t.style.height = t.scrollHeight + 2 + "px"; }
+function btn(label, fn) { const b = document.createElement("button"); b.textContent = label; b.onclick = fn; return b; }
+
+function visibleIndices() {
+  return doc.articles.map((a, i) => [a, i]).filter(([a]) => a.page_span.includes(page)).map(([, i]) => i);
 }
 
-function autosize(t) { t.style.height = "auto"; t.style.height = t.scrollHeight + 2 + "px"; }
+function move(gi, delta) {
+  const order = visibleIndices();
+  const pos = order.indexOf(gi);
+  const target = order[pos + delta];
+  if (target === undefined) return;
+  const [a] = doc.articles.splice(gi, 1);
+  doc.articles.splice(target, 0, a);
+  markDirty(); renderUnits();
+}
 
 function unitEl(art, gi) {
   const d = document.createElement("div");
@@ -108,20 +286,15 @@ function unitEl(art, gi) {
   pages.value = art.page_span.join(",");
   pages.onchange = () => {
     const ps = pages.value.split(",").map(x => parseInt(x.trim())).filter(x => x >= 1 && x <= doc.page_count);
-    if (ps.length) { art.page_span = [...new Set(ps)].sort((a,b)=>a-b); markDirty(); render(false); }
+    if (ps.length) { art.page_span = [...new Set(ps)].sort((a,b)=>a-b); markDirty(); renderUnits(); }
   };
-  const up = btn("↑", () => move(gi, -1));
-  const down = btn("↓", () => move(gi, 1));
-  const del = btn("✕ delete", () => { if (confirm("Delete this unit?")) { doc.articles.splice(gi, 1); markDirty(); render(false); } });
+  const del = btn("\\u2715", () => { if (confirm("Delete this unit?")) { doc.articles.splice(gi, 1); markDirty(); renderUnits(); } });
   del.className = "del";
-  bar.append(type, pages, up, down, del);
+  bar.append(type, pages, btn("\\u2191", () => move(gi, -1)), btn("\\u2193", () => move(gi, 1)), del);
   d.append(bar);
 
   const hl = document.createElement("textarea");
-  hl.className = "hl";
-  hl.placeholder = "(no headline)";
-  hl.value = art.headline || "";
-  hl.rows = 1;
+  hl.className = "hl"; hl.placeholder = "(no headline)"; hl.value = art.headline || ""; hl.rows = 1;
   hl.oninput = () => { art.headline = hl.value.trim() ? hl.value : null; autosize(hl); markDirty(); };
   d.append(hl);
 
@@ -136,38 +309,21 @@ function unitEl(art, gi) {
   return d;
 }
 
-function btn(label, fn) { const b = document.createElement("button"); b.textContent = label; b.onclick = fn; return b; }
-
-function move(gi, delta) {
-  const order = visibleIndices();
-  const pos = order.indexOf(gi);
-  const target = order[pos + delta];
-  if (target === undefined) return;
-  const [a] = doc.articles.splice(gi, 1);
-  doc.articles.splice(target > gi ? target : target, 0, a);
-  markDirty(); render(false);
-}
-
-function visibleIndices() {
-  return doc.articles.map((a, i) => [a, i]).filter(([a]) => a.page_span.includes(page)).map(([, i]) => i);
-}
-
-function render(resetScroll = true) {
-  document.getElementById("pageimg").src = `/img/${date}/${page}`;
+function renderUnits() {
   const box = document.getElementById("units");
   box.innerHTML = "";
   const idxs = visibleIndices();
-  document.getElementById("unitcount").textContent = `${idxs.length} units on page · ${doc.articles.length} total`;
+  document.getElementById("unitcount").textContent = `${idxs.length} on page \\u00b7 ${doc.articles.length} total`;
   for (const gi of idxs) box.append(unitEl(doc.articles[gi], gi));
   const addRow = document.createElement("div");
   addRow.className = "addrow";
   addRow.append(btn("+ add unit on this page", () => {
-    const last = idxs.length ? idxs[idxs.length - 1] + 1 : doc.articles.length;
-    doc.articles.splice(last, 0, { id: "new", unit_type: "article", headline: null, paragraphs: [], page_span: [page], position_in_issue: 0 });
-    markDirty(); render(false);
+    const idxs2 = visibleIndices();
+    const at = idxs2.length ? idxs2[idxs2.length - 1] + 1 : doc.articles.length;
+    doc.articles.splice(at, 0, { id: "new", unit_type: "article", headline: null, paragraphs: [], page_span: [page] });
+    markDirty(); renderUnits();
   }));
   box.append(addRow);
-  if (resetScroll) window.scrollTo(0, 0);
 }
 
 load();
