@@ -42,14 +42,14 @@ def test_evaluate_issue_perfect_match() -> None:
     assert result.weighted_cer == 0.0
     assert result.article_recall == 1.0
     assert result.article_precision == 1.0
-    assert result.composite_score > 0.95
+    assert result.mausoleobench_score > 0.95
 
 
 def test_spam_lowers_composite() -> None:
     gt = {"articles": [_article("Uno", LONG_A, [1]), _article("Due", LONG_B, [2])]}
     fabricated = [_article("", f"articolo inventato numero {i} senza alcuna corrispondenza reale", [1]) for i in range(50)]
     spammed = {"articles": [*gt["articles"], *fabricated]}
-    assert evaluate_issue(gt, spammed).composite_score < evaluate_issue(gt, gt).composite_score - 0.05
+    assert evaluate_issue(gt, spammed).mausoleobench_score < evaluate_issue(gt, gt).mausoleobench_score - 0.05
 
 
 def test_unmatched_gt_counts_in_wcer() -> None:
@@ -57,10 +57,10 @@ def test_unmatched_gt_counts_in_wcer() -> None:
     partial = {"articles": [gt["articles"][0]]}
     result = evaluate_issue(gt, partial)
     assert result.weighted_cer > 0.4
-    assert result.composite_score < 0.6
+    assert result.mausoleobench_score < 0.6
 
 
 def test_empty_prediction_scores_near_zero() -> None:
     gt = {"articles": [_article("Uno", LONG_A, [1]), _article("Due", LONG_B, [2])]}
     result = evaluate_issue(gt, {"articles": []})
-    assert result.composite_score < 0.05
+    assert result.mausoleobench_score < 0.05
