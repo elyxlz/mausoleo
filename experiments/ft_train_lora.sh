@@ -55,6 +55,7 @@ PY
 )"
 echo "best adapter checkpoint: ${BEST}"
 
+rm -rf "${MERGED}"
 CUDA_VISIBLE_DEVICES="${GPU}" USE_HF=1 "${REPO}/.venv/bin/swift" export \
   --adapters "${BEST}" \
   --merge_lora true \
