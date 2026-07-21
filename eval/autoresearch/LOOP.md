@@ -26,8 +26,13 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 
 - **exp_007 FAILED** (n=7): full-precision 8B on article crops OOM'd (big multi-region crops blow past 24GB even at max_num_seqs=32).
 
+## Done this slate
+- exp_005 = 0.3946 RECORD (article-level OCR + PaddleOCR-VL, 8.74 sec/page). exp_002 0.3826, exp_001 0.3802.
+- Dead ends confirmed: general VLMs < specialized PaddleOCR-VL at ANY crop size (region 8B 0.334, article AWQ-8B 0.367 @ 31.78 s/pg; all < PaddleOCR article 0.395). Column-JSON blobs (exp_003 0.19). CHURRO page-model hallucinates on crops (exp_004). Length-guard reverts gains (exp_006).
+
 ## Current
-- **exp_008 RUNNING** (chained task bai31mamu, after AWQ download): **AWQ-4bit Qwen3-VL-8B on article crops** (`cpatonn/Qwen3-VL-8B-Instruct-AWQ-4bit`, ~5GB weights → room + speed, awq_marlin on Ampere, max_pixels cap). 8B-quality text at article granularity within memory+budget. The task waits for the download, then runs caller-timed + evals. Key: 8B is only better WITH context (per-region 8B 0.334 < PaddleOCR 0.38; article/column context is where 8B wins toward the 0.46 seen with columns).
+- **exp_009 RUNNING** (waiter bf49slufu): exp_005 + **geometric fill-ratio guard** — use article-crop text only when the article's regions form a tight block (sum region area / union bbox area >= 0.5); else (scattered across columns = mis-group => blob) fall back to per-region text. Targets the dense-page (1935/1952) blob mechanism directly, GT-free.
+
 
 ## Queue (ranked)
 1. **exp_008 verdict** — does AWQ-8B article text beat 0.3946 within ≤50 sec/page? Watch for OOM (lower max_num_seqs / max_pixels if so) and blobs on dense pages.
