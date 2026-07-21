@@ -11,3 +11,4 @@
 {"config": "ensemble_30min", "n": 0, "score": 0.5941, "description": "8-source recall oracle ensemble (GT-building tool, not production)", "name": "30min", "reference": true}
 {"config": "ensemble_prune5", "n": 0, "score": 0.5622, "description": "pruned 5-source oracle ensemble", "name": "prune5", "reference": true}
 {"config": "exp_167_grouped", "exp": 167, "score": 0.3815, "description": "Trained boundary grouper (per-region start classifier, leave-one-issue-out) over PP-DocLayout regions + PaddleOCR-VL text. Solves recall (0.57-0.89) but text quality caps it.", "reference": false, "n": 11}
+{"config": "exp_168_grouped_qwen", "exp": 168, "score": 0.4342, "description": "Trained grouper (as exp_167) but each region re-OCR'd with Qwen3-VL-8B. Text quality confirmed as the lever (+0.05 over PaddleOCR text). Complementary to exp_045 per-issue; over budget (8B/region).", "reference": false, "n": 12}
