@@ -29,88 +29,277 @@ def build_payload() -> dict[str, tp.Any]:
     return {"attempts": attempts, "references": references, "best": best}
 
 
-PAGE = """<!doctype html><html><head><meta charset=utf-8>
+PAGE = """<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
 <title>MausoleoBench — live progress</title>
 <style>
-:root{color-scheme:dark}
-body{margin:0;background:#0d1117;color:#e6edf3;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-header{padding:20px 28px 8px}
-h1{margin:0;font-size:22px;letter-spacing:.5px}
-.sub{color:#8b949e;font-size:13px;margin-top:4px}
-#wrap{padding:8px 28px 40px}
-canvas{width:100%;max-width:1100px;background:#0d1117;display:block}
-table{border-collapse:collapse;width:100%;max-width:1100px;margin-top:18px;font-size:13px}
-th,td{text-align:left;padding:7px 12px;border-bottom:1px solid #21262d}
-th{color:#8b949e;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.6px}
-tr.rec td{color:#e6edf3}
-.score{font-variant-numeric:tabular-nums;font-weight:700;color:#f2cc60}
-.n{color:#8b949e;font-variant-numeric:tabular-nums}
-.name{font-family:ui-monospace,Menlo,monospace;color:#7ee787}
-.delta{color:#3fb950;font-variant-numeric:tabular-nums;font-size:12px}
-.legend{display:flex;gap:20px;margin:10px 0 0;color:#8b949e;font-size:12px;flex-wrap:wrap}
-.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
+:root{
+  color-scheme:dark;
+  --page:#0b0e13;--card:#12161c;--edge:#222a34;--grid:#1e242d;--baseline:#39424d;
+  --ink:#f2f5f7;--ink2:#a9b4bf;--ink3:#75808c;
+  --gold:#c98500;--gold-bright:#e8b04a;--violet:#9085e9;--mute-dot:#5b6673;--green:#0ca30c;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--page);color:var(--ink);font:14px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:1100px;margin:0 auto;padding:28px 24px 56px}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+h1{margin:0;font-size:21px;font-weight:650;letter-spacing:-.01em}
+h1 .dim{color:var(--ink3);font-weight:500}
+#statusline{margin:6px 0 0;font-size:13px;color:var(--ink2)}
+#statusline b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+#statusline .sep{color:var(--ink3);margin:0 7px}
+.live{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink3);white-space:nowrap;padding-bottom:3px}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(12,163,12,.45)}70%{box-shadow:0 0 0 7px rgba(12,163,12,0)}100%{box-shadow:0 0 0 0 rgba(12,163,12,0)}}
+.stale .pulse{background:#d03b3b;animation:none}
+.stale #livetext{color:#d03b3b}
+.card{background:var(--card);border:1px solid var(--edge);border-radius:12px;padding:18px 20px}
+.card+.card{margin-top:18px}
+.cardhead{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+.cardtitle{font-size:11px;font-weight:650;letter-spacing:.09em;text-transform:uppercase;color:var(--ink3)}
+#expcount{font-weight:500;letter-spacing:0;text-transform:none;margin-left:6px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--ink2)}
+.legend .sw{display:inline-block;vertical-align:-1px;margin-right:6px}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:inherit}
+.dot{transition:r .15s ease}
+.hit{fill:transparent}
+#tip{position:fixed;left:0;top:0;z-index:10;max-width:340px;pointer-events:none;background:#1a2029;border:1px solid #2c3540;border-radius:10px;padding:11px 13px;font-size:12.5px;line-height:1.5;box-shadow:0 10px 28px rgba(0,0,0,.45);opacity:0;transition:opacity .12s ease}
+#tip.show{opacity:1}
+.tiphead{display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.tipn{color:var(--ink3);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.tipscore{font-weight:700;font-variant-numeric:tabular-nums;font-size:14px}
+.tipcfg{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:12px;color:#b9c6d4;margin-top:3px;word-break:break-all}
+.tipbadge{display:inline-block;margin-top:6px;font-size:11px;font-weight:650;color:var(--gold-bright);background:rgba(201,133,0,.14);border:1px solid rgba(201,133,0,.35);border-radius:999px;padding:1px 8px}
+.tipdesc{color:var(--ink2);margin-top:6px}
+.seg{display:inline-flex;background:var(--page);border:1px solid var(--edge);border-radius:8px;padding:3px;gap:2px}
+.seg button{border:0;background:transparent;color:var(--ink2);font:inherit;font-size:12.5px;padding:5px 12px;border-radius:6px;cursor:pointer;transition:background .15s,color .15s}
+.seg button.on{background:#232a33;color:var(--ink)}
+.seg button:not(.on):hover{color:var(--ink)}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:6px 12px;color:var(--ink3);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.07em}
+td{padding:8px 12px;border-top:1px solid var(--grid);vertical-align:top}
+tbody tr{animation:rowin .2s ease both;transition:background .12s}
+tbody tr:hover{background:rgba(255,255,255,.03)}
+@keyframes rowin{from{opacity:0;transform:translateY(2px)}}
+.cn{color:var(--ink3);font-variant-numeric:tabular-nums;white-space:nowrap}
+.cs{font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody tr:not(.rec) .cs{color:var(--ink2);font-weight:500}
+.cd{color:var(--green);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:12px}
+.cd .nil{color:var(--ink3)}
+.cc{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:12px;color:#b9c6d4;word-break:break-all}
+.cx{color:var(--ink2)}
+.recdot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-right:7px;vertical-align:1px}
+.empty{color:var(--ink3);text-align:center;padding:22px}
 </style></head><body>
+<main>
 <header>
-<h1>MausoleoBench &mdash; live progress</h1>
-<div class=sub id=sub>loading&hellip;</div>
+  <div>
+    <h1>MausoleoBench <span class=dim>— live progress</span></h1>
+    <p id=statusline>connecting…</p>
+  </div>
+  <div class=live><span class=pulse></span><span id=livetext>live · 5s</span></div>
 </header>
-<div id=wrap>
-<div class=legend>
-<span><span class=dot style="background:#f2cc60"></span>new record (best so far)</span>
-<span><span class=dot style="background:#484f58"></span>attempt</span>
-<span><span class=dot style="background:#f2cc60;border-radius:0;width:16px;height:3px"></span>best-so-far frontier</span>
-<span><span class=dot style="background:#a371f7;border-radius:0;width:16px;height:3px"></span>oracle ceiling</span>
-</div>
-<canvas id=c width=1100 height=460></canvas>
-<h2 style="font-size:15px;margin:24px 0 0">Record-setting experiments</h2>
-<table id=t><thead><tr><th>#</th><th>MausoleoBench</th><th>&Delta;</th><th>experiment</th><th>description</th></tr></thead><tbody></tbody></table>
-</div>
+<section class=card>
+  <div class=cardhead>
+    <span class=cardtitle>MausoleoBench score vs attempt</span>
+    <div class=legend>
+      <span><span class=sw style="width:9px;height:9px;border-radius:50%;background:#c98500"></span>record</span>
+      <span><span class=sw style="width:7px;height:7px;border-radius:50%;background:#5b6673"></span>attempt</span>
+      <span><span class=sw style="width:18px;height:2px;background:#c98500"></span>best-so-far frontier</span>
+      <span><span class=sw style="width:18px;height:0;border-top:2px dashed #9085e9"></span>oracle ceiling</span>
+    </div>
+  </div>
+  <svg id=chart viewBox="0 0 1040 400" role=img aria-label="MausoleoBench score versus experiment attempt"></svg>
+</section>
+<section class=card>
+  <div class=cardhead>
+    <span class=cardtitle>Experiments<span id=expcount></span></span>
+    <div class=seg role=group aria-label="filter experiments">
+      <button type=button data-mode=records class=on aria-pressed=true>Record-setting</button>
+      <button type=button data-mode=all aria-pressed=false>All</button>
+    </div>
+  </div>
+  <div class=tablewrap>
+  <table>
+    <thead><tr><th>#</th><th>score</th><th>Δ record</th><th>config</th><th>description</th></tr></thead>
+    <tbody id=tbody></tbody>
+  </table>
+  </div>
+</section>
+</main>
+<div id=tip></div>
 <script>
-const C=document.getElementById('c'),X=C.getContext('2d');
-function draw(d){
-  const W=C.width,H=C.height,padL=54,padR=20,padT=20,padB=42;
-  X.clearRect(0,0,W,H);
+(()=>{
+'use strict';
+const chartEl=document.getElementById('chart');
+const tipEl=document.getElementById('tip');
+const statusEl=document.getElementById('statusline');
+const bodyEl=document.getElementById('tbody');
+const countEl=document.getElementById('expcount');
+const segBtns=Array.from(document.querySelectorAll('.seg button'));
+const view={filter:'records',raw:'',data:null,attempts:[],deltas:{}};
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const f4=v=>v.toFixed(4);
+const plus=v=>(v>=0?'+':'−')+Math.abs(v).toFixed(4);
+const W=1040,H=400,padL=48,padR=18,padT=20,padB=44;
+const rd=v=>Math.round(v*10)/10;
+
+function prepare(d){
   const A=d.attempts.slice().sort((a,b)=>a.n-b.n);
-  if(!A.length)return;
-  const refs=d.references||[];
-  const allS=A.map(a=>a.score).concat(refs.map(r=>r.score));
-  const ymax=Math.max(0.8,Math.ceil(Math.max(...allS)*10)/10+0.05), ymin=0;
-  const n=A.length;
-  const xat=i=>padL+(n<2?0.5:i/(n-1))*(W-padL-padR);
-  const yat=v=>padT+(1-(v-ymin)/(ymax-ymin))*(H-padT-padB);
-  X.strokeStyle='#21262d';X.fillStyle='#8b949e';X.font='11px sans-serif';X.lineWidth=1;
-  for(let g=0;g<=ymax*10+1e-9;g++){const v=g/10;const y=yat(v);
-    X.beginPath();X.moveTo(padL,y);X.lineTo(W-padR,y);X.stroke();
-    X.fillText(v.toFixed(1),8,y+3);}
-  refs.forEach(r=>{const y=yat(r.score);X.strokeStyle='#a371f7';X.setLineDash([6,5]);
-    X.beginPath();X.moveTo(padL,y);X.lineTo(W-padR,y);X.stroke();X.setLineDash([]);
-    X.fillStyle='#a371f7';X.fillText(r.name+' '+r.score.toFixed(3),W-padR-190,y-5);});
-  let best=0,fr=[];
-  A.forEach((a,i)=>{a._rec=a.score>best+1e-9;if(a._rec){best=a.score;fr.push([xat(i),yat(a.score)]);}});
-  if(fr.length){X.strokeStyle='#f2cc60';X.lineWidth=2;X.beginPath();
-    X.moveTo(fr[0][0],fr[0][1]);
-    for(let i=1;i<fr.length;i++){X.lineTo(fr[i][0],fr[i-1][1]);X.lineTo(fr[i][0],fr[i][1]);}
-    X.lineTo(xat(n-1),fr[fr.length-1][1]);X.stroke();}
-  A.forEach((a,i)=>{const x=xat(i),y=yat(a.score);
-    if(a._rec){X.fillStyle='#f2cc60';X.beginPath();X.arc(x,y,5.5,0,7);X.fill();}
-    else{X.fillStyle='#484f58';X.beginPath();X.arc(x,y,3,0,7);X.fill();}});
-  X.fillStyle='#8b949e';X.fillText('experiment attempt →',W-160,H-10);
+  const deltas={};
+  let best=0;
+  A.forEach(a=>{if(a.record){deltas[a.n]=a.score-best;best=a.score;}});
+  view.attempts=A;view.deltas=deltas;view.data=d;
 }
-function fmt(x){return (x>=0?'+':'')+x.toFixed(3);}
-async function tick(){
-  const d=await (await fetch('/data')).json();
-  draw(d);
-  const recs=d.attempts.filter(a=>a.score>0).sort((a,b)=>a.n-b.n);
-  let best=0;const rows=[];let prev=0;
-  recs.forEach(a=>{if(a.score>best+1e-9){rows.push([a,a.score-prev]);prev=a.score;best=a.score;}});
-  document.querySelector('#t tbody').innerHTML=rows.slice().reverse().map(([a,dl])=>
-    `<tr class=rec><td class=n>${a.n}</td><td class=score>${a.score.toFixed(4)}</td>`+
-    `<td class=delta>${fmt(dl)}</td><td class=name>${a.config}</td><td>${a.description||''}</td></tr>`).join('');
-  const b=d.attempts.reduce((m,a)=>Math.max(m,a.score),0);
-  document.getElementById('sub').textContent=
-    `${d.attempts.length} attempts · best ${b.toFixed(4)} · ${rows.length} records · auto-refresh 5s`;
+
+function renderStatus(){
+  const A=view.attempts;
+  const recs=A.filter(a=>a.record).length;
+  const refs=view.data.references||[];
+  const ceiling=refs.length?Math.max(...refs.map(r=>r.score)):null;
+  statusEl.innerHTML='<b>'+A.length+'</b> attempts<span class=sep>·</span>best <b>'+f4(view.data.best||0)+'</b>'
+    +'<span class=sep>·</span><b>'+recs+'</b> records'
+    +(ceiling!=null?'<span class=sep>·</span>oracle ceiling <b>'+f4(ceiling)+'</b>':'');
 }
-tick();setInterval(tick,5000);
+
+function tipHtml(a){
+  const d=view.deltas[a.n];
+  return '<div class=tiphead><span class=tipn>attempt '+a.n+'</span><span class=tipscore>'+f4(a.score)+'</span></div>'
+    +'<div class=tipcfg>'+esc(a.config)+'</div>'
+    +(a.record?'<span class=tipbadge>record '+plus(d)+' vs prior</span>':'')
+    +(a.description?'<div class=tipdesc>'+esc(a.description)+'</div>':'');
+}
+
+function placeTip(ev){
+  const r=tipEl.getBoundingClientRect();
+  let x=ev.clientX+16,y=ev.clientY+16;
+  if(x+r.width>window.innerWidth-10)x=ev.clientX-r.width-16;
+  if(y+r.height>window.innerHeight-10)y=ev.clientY-r.height-16;
+  tipEl.style.transform='translate('+Math.max(6,x)+'px,'+Math.max(6,y)+'px)';
+}
+
+function bindHover(){
+  const guide=chartEl.querySelector('#guide');
+  chartEl.querySelectorAll('.hit').forEach(h=>{
+    const i=+h.dataset.i,a=view.attempts[i];
+    const dot=chartEl.querySelector('.dot[data-i="'+i+'"]');
+    h.addEventListener('mouseenter',()=>{
+      tipEl.innerHTML=tipHtml(a);
+      tipEl.classList.add('show');
+      guide.setAttribute('x1',h.getAttribute('cx'));
+      guide.setAttribute('x2',h.getAttribute('cx'));
+      guide.setAttribute('opacity','.6');
+      dot.setAttribute('r',a.record?'7.5':'5');
+    });
+    h.addEventListener('mousemove',placeTip);
+    h.addEventListener('mouseleave',()=>{
+      tipEl.classList.remove('show');
+      guide.setAttribute('opacity','0');
+      dot.setAttribute('r',a.record?'5.5':'3.2');
+    });
+  });
+}
+
+function renderChart(){
+  const A=view.attempts;
+  const refs=(view.data.references||[]).slice().sort((a,b)=>b.score-a.score);
+  if(!A.length){chartEl.innerHTML='<text x="'+(W/2)+'" y="'+(H/2)+'" text-anchor="middle" fill="#75808c" font-size="13">no attempts yet</text>';return;}
+  const minN=A[0].n,maxN=A[A.length-1].n;
+  const hi=Math.max(...A.map(a=>a.score).concat(refs.map(r=>r.score)));
+  const yMax=Math.max(.8,Math.ceil((hi+.04)*10)/10);
+  const xAt=v=>maxN===minN?(padL+W-padR)/2:padL+(v-minN)/(maxN-minN)*(W-padL-padR);
+  const yAt=v=>padT+(1-v/yMax)*(H-padT-padB);
+  const P=[];
+  P.push('<defs><linearGradient id="gf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c98500" stop-opacity=".10"/><stop offset="1" stop-color="#c98500" stop-opacity="0"/></linearGradient></defs>');
+  for(let g=0;g<=Math.round(yMax*10);g++){
+    const y=rd(yAt(g/10));
+    P.push('<line x1="'+padL+'" y1="'+y+'" x2="'+(W-padR)+'" y2="'+y+'" stroke="'+(g===0?'#39424d':'#1e242d')+'"/>');
+    P.push('<text x="'+(padL-9)+'" y="'+(y+3.5)+'" text-anchor="end" fill="#75808c" font-size="11">'+(g/10).toFixed(1)+'</text>');
+  }
+  const stepN=Math.max(1,Math.ceil((maxN-minN)/14));
+  for(let v=minN;v<=maxN;v+=stepN){
+    P.push('<text x="'+rd(xAt(v))+'" y="'+(H-padB+18)+'" text-anchor="middle" fill="#75808c" font-size="11">'+v+'</text>');
+  }
+  P.push('<text x="'+rd((padL+W-padR)/2)+'" y="'+(H-8)+'" text-anchor="middle" fill="#75808c" font-size="11" letter-spacing=".06em">experiment attempt</text>');
+  let lastLabelY=-99;
+  refs.forEach(r=>{
+    const y=rd(yAt(r.score));
+    P.push('<line x1="'+padL+'" y1="'+y+'" x2="'+(W-padR)+'" y2="'+y+'" stroke="#9085e9" stroke-dasharray="6 5" opacity=".75"/>');
+    let ly=y-6;
+    if(Math.abs(ly-lastLabelY)<16)ly=y+16;
+    lastLabelY=ly;
+    P.push('<text x="'+(W-padR)+'" y="'+ly+'" text-anchor="end" fill="#9085e9" font-size="11">'+esc(r.name||r.config)+' · '+r.score.toFixed(3)+'</text>');
+  });
+  const recs=A.filter(a=>a.record);
+  if(recs.length){
+    let p='M'+rd(xAt(recs[0].n))+' '+rd(yAt(recs[0].score));
+    for(let i=1;i<recs.length;i++)p+=' H'+rd(xAt(recs[i].n))+' V'+rd(yAt(recs[i].score));
+    p+=' H'+rd(xAt(maxN));
+    P.push('<path d="'+p+' V'+rd(yAt(0))+' H'+rd(xAt(recs[0].n))+' Z" fill="url(#gf)"/>');
+    P.push('<path d="'+p+'" fill="none" stroke="#c98500" stroke-width="2" stroke-linejoin="round"/>');
+  }
+  P.push('<line id="guide" x1="0" y1="'+padT+'" x2="0" y2="'+(H-padB)+'" stroke="#3a4450" opacity="0"/>');
+  const lastRec=recs.length?recs[recs.length-1]:null;
+  A.forEach((a,i)=>{
+    const x=rd(xAt(a.n)),y=rd(yAt(a.score));
+    if(lastRec&&a.n===lastRec.n)P.push('<circle cx="'+x+'" cy="'+y+'" r="11" fill="#c98500" opacity=".14"/>');
+    if(a.record)P.push('<circle class="dot rec" data-i="'+i+'" cx="'+x+'" cy="'+y+'" r="5.5" fill="#c98500" stroke="#12161c" stroke-width="2"/>');
+    else P.push('<circle class="dot" data-i="'+i+'" cx="'+x+'" cy="'+y+'" r="3.2" fill="#5b6673"/>');
+  });
+  A.forEach((a,i)=>{
+    P.push('<circle class="hit" data-i="'+i+'" cx="'+rd(xAt(a.n))+'" cy="'+rd(yAt(a.score))+'" r="14"/>');
+  });
+  chartEl.innerHTML=P.join('');
+  bindHover();
+}
+
+function renderTable(){
+  const rows=view.attempts.slice().sort((a,b)=>b.n-a.n).filter(a=>view.filter==='all'||a.record);
+  countEl.textContent=' · '+rows.length+' of '+view.attempts.length;
+  if(!rows.length){bodyEl.innerHTML='<tr><td colspan=5 class=empty>no experiments yet</td></tr>';return;}
+  bodyEl.innerHTML=rows.map(a=>{
+    const d=view.deltas[a.n];
+    return '<tr'+(a.record?' class=rec':'')+'>'
+      +'<td class=cn>'+(a.record?'<span class=recdot></span>':'')+a.n+'</td>'
+      +'<td class=cs>'+f4(a.score)+'</td>'
+      +'<td class=cd>'+(a.record?plus(d):'<span class=nil>—</span>')+'</td>'
+      +'<td class=cc>'+esc(a.config)+'</td>'
+      +'<td class=cx>'+esc(a.description||'')+'</td></tr>';
+  }).join('');
+}
+
+segBtns.forEach(b=>b.addEventListener('click',()=>{
+  if(view.filter===b.dataset.mode)return;
+  view.filter=b.dataset.mode;
+  segBtns.forEach(x=>{
+    const on=x.dataset.mode===view.filter;
+    x.classList.toggle('on',on);
+    x.setAttribute('aria-pressed',String(on));
+  });
+  renderTable();
+}));
+
+async function refresh(){
+  try{
+    const res=await fetch('/data',{cache:'no-store'});
+    const txt=await res.text();
+    document.body.classList.remove('stale');
+    if(txt===view.raw)return;
+    view.raw=txt;
+    prepare(JSON.parse(txt));
+    renderStatus();
+    renderChart();
+    renderTable();
+  }catch(_e){
+    document.body.classList.add('stale');
+  }
+}
+refresh();
+setInterval(refresh,5000);
+})();
 </script></body></html>"""
 
 
