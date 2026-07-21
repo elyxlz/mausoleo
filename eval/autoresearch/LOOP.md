@@ -22,12 +22,14 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 
 - **exp_005 = 0.3946 RECORD** (n=5): article-level OCR (grouper boundaries + article-union-bbox crop OCR, PaddleOCR-VL) @ 8.74 sec/page. Context helps: 1885 +0.025, 1895 +0.083, 1910 +0.017, 1925 +0.027; but 1935 -0.063, 1952 -0.017 (dense pages: mis-grouped regions → huge multi-column crops → blobs).
 
+- **exp_006 = 0.3931** (n=6): length-ratio blob guard, NOT a record — too blunt (article text longer than region text is usually the GAIN, so it reverts wins). exp_005 stays record.
+
 ## Current
-- **exp_006 RUNNING** (waiter be1ritiz3): exp_005 + **GT-free blob guard** — per article, use the context-rich article-crop text UNLESS it's degenerate (len outside [0.5,1.8]× the region-text length = mis-grouped blob or truncation), then fall back to per-region text. Aim: keep the 4 gains, repair the 1935/1952 regressions.
+- **exp_007 RUNNING** (waiter bjbms2efy): **Qwen3-VL-8B on article crops** (plain text, not JSON) — 8B for both region OCR (grouper features) and article-crop OCR (output text), max_num_seqs=32. The real H1 quality lever: 8B text at article granularity. Budget-critical (two 8B passes; article crops fewer/bigger than regions) — watch sec/page ≤50.
 
 ## Queue (ranked)
-1. **exp_006 verdict** — if the guard keeps gains + fixes dense regressions → bigger record.
-2. **Stronger model on article crops** (Qwen3-VL-8B PLAIN text, not JSON) — article crops are fewer than regions, so an 8B article pass may fit ≤50; gets 8B text quality at article granularity (the real H1 quality lever).
-3. **E3 distill** a teacher → `lightonai/LightOnOCR-2-1B` (offline, highest ceiling).
-4. **E5 preprocessing** (CLAHE/upscale small-text regions, NO binarization) for 1952.
+1. **exp_007 verdict** — does 8B article text beat 0.3946, and does it fit ≤50 sec/page? If over budget, use PaddleOCR for region OCR + 8B only on article crops (sequential model load / subprocess), or AWQ 8B.
+2. **E3 distill** a strong teacher → `lightonai/LightOnOCR-2-1B` (offline, highest ceiling).
+3. **E5 preprocessing** (CLAHE/upscale small-text regions, NO binarization) for 1952.
+4. **Geometric guard** for exp_005's dense regressions: skip article-crop when the article's union bbox spans >~1.3 columns (wide = mis-grouped) — better than the length guard.
 - Infra: after killing a run, also kill orphaned vllm EngineCore procs (nvidia-smi --query-compute-apps=pid,used_memory) or the next run OOMs.
