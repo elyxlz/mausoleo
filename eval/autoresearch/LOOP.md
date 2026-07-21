@@ -24,12 +24,14 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 
 - **exp_006 = 0.3931** (n=6): length-ratio blob guard, NOT a record — too blunt (article text longer than region text is usually the GAIN, so it reverts wins). exp_005 stays record.
 
+- **exp_007 FAILED** (n=7): full-precision 8B on article crops OOM'd (big multi-region crops blow past 24GB even at max_num_seqs=32).
+
 ## Current
-- **exp_007 RUNNING** (waiter bjbms2efy): **Qwen3-VL-8B on article crops** (plain text, not JSON) — 8B for both region OCR (grouper features) and article-crop OCR (output text), max_num_seqs=32. The real H1 quality lever: 8B text at article granularity. Budget-critical (two 8B passes; article crops fewer/bigger than regions) — watch sec/page ≤50.
+- **exp_008 RUNNING** (chained task bai31mamu, after AWQ download): **AWQ-4bit Qwen3-VL-8B on article crops** (`cpatonn/Qwen3-VL-8B-Instruct-AWQ-4bit`, ~5GB weights → room + speed, awq_marlin on Ampere, max_pixels cap). 8B-quality text at article granularity within memory+budget. The task waits for the download, then runs caller-timed + evals. Key: 8B is only better WITH context (per-region 8B 0.334 < PaddleOCR 0.38; article/column context is where 8B wins toward the 0.46 seen with columns).
 
 ## Queue (ranked)
-1. **exp_007 verdict** — does 8B article text beat 0.3946, and does it fit ≤50 sec/page? If over budget, use PaddleOCR for region OCR + 8B only on article crops (sequential model load / subprocess), or AWQ 8B.
+1. **exp_008 verdict** — does AWQ-8B article text beat 0.3946 within ≤50 sec/page? Watch for OOM (lower max_num_seqs / max_pixels if so) and blobs on dense pages.
 2. **E3 distill** a strong teacher → `lightonai/LightOnOCR-2-1B` (offline, highest ceiling).
 3. **E5 preprocessing** (CLAHE/upscale small-text regions, NO binarization) for 1952.
-4. **Geometric guard** for exp_005's dense regressions: skip article-crop when the article's union bbox spans >~1.3 columns (wide = mis-grouped) — better than the length guard.
-- Infra: after killing a run, also kill orphaned vllm EngineCore procs (nvidia-smi --query-compute-apps=pid,used_memory) or the next run OOMs.
+4. **Geometric width-guard** for exp_005's dense regressions (skip article-crop when union bbox spans >~1.3 columns).
+- Infra: after killing a run, kill orphaned vllm EngineCore procs (nvidia-smi --query-compute-apps=pid,used_memory) or the next run OOMs. Pre-download models so download time doesn't pollute the caller budget.
