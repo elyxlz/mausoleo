@@ -20,7 +20,7 @@ def load_attempts() -> list[dict[str, tp.Any]]:
     return sorted(rows, key=lambda r: r["n"])
 
 
-BUDGET_CAP = 13.9
+BUDGET_CAP = 41.7
 
 
 def build_payload() -> dict[str, tp.Any]:
@@ -29,7 +29,8 @@ def build_payload() -> dict[str, tp.Any]:
     references = [r for r in rows if r.get("reference")]
     best = 0.0
     for r in sorted(attempts, key=lambda r: r["n"]):
-        r["budget_ok"] = bool(r.get("budget_ok"))
+        cost = r.get("gpu_s_per_page")
+        r["budget_ok"] = cost is not None and cost <= BUDGET_CAP
         r["record"] = r["budget_ok"] and r["score"] > best + 1e-9
         if r["record"]:
             best = r["score"]

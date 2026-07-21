@@ -10,7 +10,7 @@ sys.path.insert(0, "src")
 from research import EVAL_DATES, evaluate_config
 
 LOG = pl.Path("eval/autoresearch/mausoleobench_log.jsonl")
-BUDGET_CAP = 13.9
+BUDGET_CAP = 41.7
 
 GPU_COST: dict[str, float] = {
     "exp_045_qwen3vl_vllm": 136.0, "exp_055_col6_ads_prompt": 180.0,

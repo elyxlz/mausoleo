@@ -10,7 +10,7 @@
 ## Research & Infrastructure Constraints (2026-07-16, per Elio)
 
 - **All compute on ripperred** (`ssh -p 62022 audiogen@81.105.49.222`): tests, inference, experiments. Never run compute locally (laptop OOMs) or on endeavour (corpus storage only, /media/sdr).
-- **Corpus-scale budget**: full-corpus OCR (1880–1959, ~175K pages) must fit ~1 week on 2×3090, 2 weeks max → **6.9–13.9 GPU-s/page steady-state**. Every experiment records GPU-s/page; over-budget configs are research artifacts, not production.
+- **Corpus-scale budget (3× raise 2026-07-21, per Elio; was 6.9–13.9)**: full-corpus OCR (1880–1959, 172,600 pages measured on endeavour) on 2×3090 → **target 20.7, hard cap 41.7 GPU-s/page steady-state** (~3 weeks / ~6 weeks max). Every experiment records steady-state GPU-s/page; >41.7 is a research artifact, not production. Measured cold+independent (no reusing prior experiments' caches).
 - **One script → one run → one result (2026-07-16, per Elio)**: every experiment is a self-contained script `experiments/<name>.py <date...>` writing `eval/predictions/<name>_<date>.json` (contract in `experiments/README.md`); implementation is free — Ray not required. The legacy `configs/ocr` + `run_real_ocr.py` harness remains only for the verified oracle ensembles.
 - **Autoresearch loop**: follow `.claude/skills/ocr-autoresearch/SKILL.md` → `eval/autoresearch/program.md` (budget, metrics, generalization protocol) + `registry.md` (approach families). Use `uv run python scripts/research.py run <config>` for the run→fetch→eval→audit cycle.
 - **Eval integrity**: never modify eval metrics or GT to improve scores; audit every result for matcher gaming (overgeneration, giant blobs, holdout regression, probe degradation).
