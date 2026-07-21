@@ -5,7 +5,10 @@ description = "OCR autoresearch for the Il Messaggero historical newspaper corpu
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "ms-swift>=4.4.2",
+    "transformers==5.5.4",
+]
 
 [project.optional-dependencies]
 ocr = [

@@ -18,3 +18,8 @@ user_data/
 output/
 auth.json
 .claude/scheduled_tasks.lock
+
+# LoRA fine-tuning derived artifacts (regenerable via ft_prepare_data.py / ft_train_lora.sh)
+eval/autoresearch/paddleft/crops/
+eval/autoresearch/paddleft/merged_*/
+eval/autoresearch/paddleft/output/
