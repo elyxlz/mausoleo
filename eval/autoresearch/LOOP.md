@@ -30,8 +30,13 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - exp_005 = 0.3946 RECORD (article-level OCR + PaddleOCR-VL, 8.74 sec/page). exp_002 0.3826, exp_001 0.3802.
 - Dead ends confirmed: general VLMs < specialized PaddleOCR-VL at ANY crop size (region 8B 0.334, article AWQ-8B 0.367 @ 31.78 s/pg; all < PaddleOCR article 0.395). Column-JSON blobs (exp_003 0.19). CHURRO page-model hallucinates on crops (exp_004). Length-guard reverts gains (exp_006).
 
+## Board
+- **RECORD: exp_009 = 0.4071** @ 8.66 sec/page (article-level OCR + PaddleOCR-VL + geometric fill-ratio guard). Frontier: 0.3802 -> 0.3826 -> 0.3946 -> 0.4071. Oracle reference 0.5941.
+- Confirmed dead ends: general VLMs (2B/4B/8B/AWQ) < specialized PaddleOCR-VL at any crop size; column-JSON blobs; CHURRO hallucinates on region crops; length-guard reverts gains.
+
 ## Current
-- **exp_009 RUNNING** (waiter bf49slufu): exp_005 + **geometric fill-ratio guard** — use article-crop text only when the article's regions form a tight block (sum region area / union bbox area >= 0.5); else (scattered across columns = mis-group => blob) fall back to per-region text. Targets the dense-page (1935/1952) blob mechanism directly, GT-free.
+- **exp_010 RUNNING** (waiter b523hv5y3): exp_009 + CLAHE contrast enhancement on page images, targeting the degraded dense 1952 scans (weakest at 0.272). Cheap test; ship only if >=4/6 improve (anti-overfit).
+- **Fable agent a78db8656 designing the DOMAIN-ADAPTATION plan** (fine-tune/distill to close 0.41->0.59): PaddleOCR-VL LoRA feasibility, CHURRO on article crops (in-distribution), distillation from oracle teacher. Fold its plan into the queue on return.
 
 
 ## Queue (ranked)
