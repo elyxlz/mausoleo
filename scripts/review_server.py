@@ -6,7 +6,7 @@ import sys
 import typing as tp
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-TENTATIVE_DIR = pl.Path("eval/tentative_gt")
+TENTATIVE_DIR = pl.Path("eval/ground_truth")
 
 PAGE_HTML = """<!doctype html>
 <meta charset="utf-8">
@@ -372,7 +372,7 @@ class Handler(BaseHTTPRequestHandler):
         elif parts == ["favicon.ico"]:
             self._send(204, b"", "image/x-icon")
         elif parts[0] == "img" and len(parts) == 3:
-            path = TENTATIVE_DIR / parts[1] / "pages" / f"{parts[2]}.jpeg"
+            path = TENTATIVE_DIR / parts[1] / f"{parts[2]}.jpeg"
             self._send(200, path.read_bytes(), "image/jpeg")
         else:
             self._send(404, b"not found", "text/plain")
