@@ -10,3 +10,4 @@
 {"config": "exp_160_ppdoclayout_headblocks", "exp": 160, "score": 0.3576, "description": "PP-DocLayoutV3 regions + consecutive-title head-block grouping", "reference": false, "n": 10}
 {"config": "ensemble_30min", "n": 0, "score": 0.5941, "description": "8-source recall oracle ensemble (GT-building tool, not production)", "name": "30min", "reference": true}
 {"config": "ensemble_prune5", "n": 0, "score": 0.5622, "description": "pruned 5-source oracle ensemble", "name": "prune5", "reference": true}
+{"config": "exp_167_grouped", "exp": 167, "score": 0.3815, "description": "Trained boundary grouper (per-region start classifier, leave-one-issue-out) over PP-DocLayout regions + PaddleOCR-VL text. Solves recall (0.57-0.89) but text quality caps it.", "reference": false, "n": 11}
