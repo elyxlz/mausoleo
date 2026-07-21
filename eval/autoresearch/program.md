@@ -1,7 +1,7 @@
 # OCR Pipeline Auto-Research Program
 
 ## Objective
-Maximize **MausoleoBench** on the 6-issue eval with changes that generalize to any historical Italian newspaper issue (1880–1959), subject to the Resource Budget. The optimization target is the best score achievable **within budget** — score alone is not enough.
+The goal (maximize MausoleoBench within the budget cap) and success criterion live in `GOAL.md`. This file is the operating manual: budget mechanics, the metric, the experiment contract, adversarial review, the generalization protocol, and the current baseline. Changes must generalize to any 1880–1959 issue.
 
 ## Resource Budget
 The corpus is **172,600 pages** (1880–1959) on endeavour. Full-corpus OCR runs on ripperred (2×3090).
