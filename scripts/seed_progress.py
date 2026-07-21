@@ -9,7 +9,7 @@ sys.path.insert(0, "src")
 from research import EVAL_DATES, evaluate_config
 
 LOG = pl.Path("eval/autoresearch/mausoleobench_log.jsonl")
-BUDGET_CAP = 50.0
+BUDGET_CAP = 250.0
 
 REFERENCES: dict[str, tuple[str, float]] = {
     "ensemble_30min": ("Multi-source recall oracle ensemble (GT-building reference, far over budget)", 600.0),
