@@ -14,9 +14,9 @@ from mausoleo.eval.evaluate import IssueResult, evaluate_issue
 
 GT_DIR = pl.Path("eval/ground_truth")
 PRED_DIR = pl.Path("eval/predictions")
-EVAL_DATES = ("1885-06-15", "1910-06-15")
+EVAL_DATES = ("1885-06-15", "1895-06-15", "1910-06-15", "1925-06-15", "1935-06-15", "1952-06-15")
 BUDGET_GPU_S_PER_PAGE = (6.9, 13.9)
-LEXICON_DATES = ("1885-06-15", "1910-06-15")
+LEXICON_DATES = ("1885-06-15", "1895-06-15", "1910-06-15", "1925-06-15", "1935-06-15", "1952-06-15")
 WORD_RE = re.compile(r"[a-zàèéìòóù]{2,}")
 
 
