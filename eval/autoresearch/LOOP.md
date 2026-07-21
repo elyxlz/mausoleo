@@ -40,8 +40,8 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 
 
 ## Queue (domain adaptation — registry §F7; the real ceiling lever)
-1. **exp_011 — CHURRO-3B zero-shot on ARTICLE crops** (cheapest go/no-go, no training): PaddleOCR region OCR (grouper features) + sequential-load CHURRO-3B for article-crop OCR (cap max_pixels ~2.3M, kill PARENT not engine). Does historical specialization beat PaddleOCR when the crop is in-distribution? If yes → CHURRO-LoRA / Option-1 get strong priors; if it loses even here, adapt the winning model (PaddleOCR-VL LoRA) instead.
+1. **exp_011 RUNNING** (waiter bkhfzk0d6): CHURRO-3B on ARTICLE crops — two-phase two-model (PaddleOCR region OCR+grouping → free → CHURRO article OCR, max_pixels 2.3M, VLLM_WORKER_MULTIPROC_METHOD=spawn for the 2nd load). The go/no-go on historical specialization when the crop is in-distribution vs the 0.4071 record.
 2. **LoRA PaddleOCR-VL-1.6** single fold (train 5 issues' GT article-crops→GT-text, test 1935) via ms-swift/trl — the go/no-go on domain adaptation. If a fold shows real wCER drop → full 6-fold LOIO + synthetic augmentation.
 3. **Distill oracle → PaddleOCR-VL** on non-eval corpus pages (teacher labels), or ByT5 post-OCR corrector (stacks).
-- Pending: exp_010 (CLAHE) result — log when its waiter reports; adopt only if ≥4/6 improve.
+- exp_010 (CLAHE) REJECTED (0.4024 < 0.4071, preprocessing hurts).
 - Anti-overfit: strict LOIO, cross-decade split, GT-free probes on the 31 image-only 1943-07 issues.
