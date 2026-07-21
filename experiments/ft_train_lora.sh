@@ -9,7 +9,8 @@ DATA="${REPO}/eval/autoresearch/paddleft"
 OUT="${DATA}/lora_${TAG}"
 MERGED="${DATA}/merged_${TAG}"
 
-test -s "${DATA}/train_${TAG}.jsonl" || { echo "missing ${DATA}/train_${TAG}.jsonl — run ft_prepare_data.py ${FOLD} first"; exit 1; }
+TRAIN_JSONL="${TRAIN_JSONL:-${DATA}/train_${TAG}.jsonl}"
+test -s "${TRAIN_JSONL}" || { echo "missing ${TRAIN_JSONL} — run ft_prepare_data.py ${FOLD} first"; exit 1; }
 
 CUDA_VISIBLE_DEVICES="${GPU}" USE_HF=1 "${REPO}/.venv/bin/swift" sft \
   --model PaddlePaddle/PaddleOCR-VL-1.6 \
@@ -22,10 +23,10 @@ CUDA_VISIBLE_DEVICES="${GPU}" USE_HF=1 "${REPO}/.venv/bin/swift" sft \
   --target_modules all-linear \
   --freeze_vit true \
   --freeze_aligner false \
-  --dataset "${DATA}/train_${TAG}.jsonl" \
+  --dataset "${TRAIN_JSONL}" \
   --val_dataset "${DATA}/val_${TAG}.jsonl" \
   --split_dataset_ratio 0 \
-  --num_train_epochs 3 \
+  --num_train_epochs ${EPOCHS:-3} \
   --learning_rate 1e-4 \
   --warmup_ratio 0.05 \
   --per_device_train_batch_size 2 \

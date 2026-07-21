@@ -23,3 +23,7 @@ auth.json
 eval/autoresearch/paddleft/crops/
 eval/autoresearch/paddleft/merged_*/
 eval/autoresearch/paddleft/output/
+eval/autoresearch/synth/corpus/
+eval/autoresearch/synth/crops/
+eval/autoresearch/synth/synth_pairs.jsonl
+eval/autoresearch/paddleft/train_aug_*.jsonl
