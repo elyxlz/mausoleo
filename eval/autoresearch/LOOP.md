@@ -36,15 +36,11 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - Structure (article context + geometry) + specialized PaddleOCR-VL is the winning recipe; text quality saturated ~0.41.
 
 
-## Current
-- **exp_010 RUNNING** (waiter b523hv5y3): exp_009 + CLAHE contrast enhancement on page images, targeting the degraded dense 1952 scans (weakest at 0.272). Cheap test; ship only if >=4/6 improve (anti-overfit).
-- **Fable domain-adaptation plan IN** (registry §F7): PaddleOCR-VL-1.6 is LoRA-fine-tunable (ms-swift); ranked plan + LOIO anti-overfit protocol recorded.
+## Status: CONSOLIDATED at the budget-compliant ceiling
+- **RECORD / PRODUCTION: exp_009 = 0.4071** @ 8.66 sec/page (article-level OCR + PaddleOCR-VL + fill-ratio guard). Climb this slate: 0.3826 -> 0.3946 -> 0.4071.
+- **Solution space fully mapped.** Winning recipe: specialized PaddleOCR-VL + article context + geometry. Ruled out with data: all general VLMs + CHURRO (lose at any crop size); column-JSON (blobs); CLAHE (hurts); LoRA fine-tuning FRAGILE (naive overfits -0.003; synthetic hallucinates -0.130).
+- **Only untried high-ceiling lever: oracle-ensemble distillation** (real newspaper teacher labels on non-eval corpus pages, ~1 day teacher labeling; uncertain but real-domain SFT didn't hallucinate). This is a big resource decision — do NOT auto-launch; surface for Elio. Otherwise 0.4071 is the practical budget-compliant ceiling and exp_009 is the production pipeline.
 
-
-## Current
-- **exp_013 augmented-fold go/no-go RUNNING** (waiter bj8xhdrjj, ~1-2h): synthetic period-Italian augmentation to fix exp_012's small-data overfit. Render 4000 degraded broadsheet-style crops from pre-1962 Gutenberg Italian (integrity-safe) + real GT (oversampled 25%), LoRA 1 epoch, test held-out 1935 vs base 0.430 AND un-augmented FT 0.436. Pipeline: synth_fetch_text.py / synth_render.py / ft_prepare_data_aug.py.
-
-## Queue
-1. **exp_013 verdict**: if augmented FT beats base 0.430 AND un-augmented 0.436 on held-out 1935 -> run full 6-fold augmented (likely NEW RECORD > 0.4071); scale synth 4K->20K if wCER moves. If no lift -> small-model fine-tuning near ceiling.
-2. If fine-tuning plateaus: oracle-ensemble distillation (bigger data, ~1.7 days teacher labeling on non-eval corpus) OR accept 0.4071 as practical ceiling + consolidate/ship exp_009.
-- Anti-overfit: strict LOIO; GT-free probe on the 31 image-only 1943-07 issues on any FT record; watch over-degradation->hallucination in predictions.
+## If continuing (Elio's call)
+1. **Oracle distillation** (the big lever): run ensemble_30min on ~200-300 decade-stratified NON-eval corpus pages (endeavour images, exclude 6 eval + 31 1943-07 probe dates) -> article-crop->oracle-text pairs -> LoRA PaddleOCR-VL (real-domain, more data). Watch for hallucination (meanCER, overgeneration) + 1943-07 probes.
+2. Else: consolidate/ship exp_009; no further cheap levers remain.

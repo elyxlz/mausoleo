@@ -57,10 +57,10 @@ The goal is the best MausoleoBench **within budget**; the constraint is speed, n
 - **Consult Fable** (subagent) for strategy, design, or hard implementation.
 - **Research online** (WebSearch/WebFetch) for approaches, model releases, techniques.
 
-## Baseline
-Budget-compliant **record: exp_167 = 0.3815** (trained per-region boundary grouper over PP-DocLayout regions + PaddleOCR-VL text). Oracle references (not production, cost far over budget): `ensemble_30min` 0.5941, `ensemble_prune5` 0.5622.
+## Baseline / Production pipeline
+Budget-compliant **record: exp_009 = 0.4071** @ 8.66 sec/page (`experiments/exp_009_article_fillguard.py`): PP-DocLayoutV3 regions → trained boundary grouper (`experiments/grouper_features.py`) → each article's union-bbox crop OCR'd by PaddleOCR-VL-1.6, with a geometric fill-ratio guard (fall back to per-region text when regions scatter across columns). Climb: 0.3826 → 0.3946 (article context) → 0.4071 (fill guard). Oracle references (far over budget, GT-building only): `ensemble_30min` 0.5941, `ensemble_prune5` 0.5622.
 
-Segmentation is solved cheaply by the trained grouper (`experiments/grouper_features.py`). The open bottleneck is **budget-fit OCR text quality**.
+**Solution space mapped (this slate):** segmentation is solved cheaply by the grouper; text quality is the bottleneck. Winning recipe = specialized PaddleOCR-VL-0.9B + article-level context + geometry. Ruled out with data: all general VLMs (Qwen 2B/4B/8B, AWQ) and historical-tuned CHURRO-3B lose at any crop size; column-structured JSON blobs; CLAHE preprocessing hurts; **LoRA fine-tuning is fragile** — naive real-GT overfits (net −0.003), synthetic-augmented hallucinates (−0.130, the OCR model drifts to generation under SFT). The only untried high-ceiling lever is **oracle-ensemble distillation** on non-eval corpus pages (real-domain transcription labels, which — unlike literary synthetic — did NOT cause hallucination in the naive run; ~1 day teacher labeling; uncertain). Absent that, 0.4071 is the practical budget-compliant ceiling.
 
 ## Running the Loop
 Follow `LOOP.md` (current state + queue). Each iteration: advance ONE experiment, measure budget via the caller, adversarial-review, log a line to `mausoleobench_log.jsonl` (`{n, config, exp, score, description, gpu_s_per_page, budget_ok}`, n = last+1) so the live graph (`scripts/progress_server.py`, :8078 + cloudflare, with per-experiment prediction viewer) updates, commit + push, update `registry.md` and `LOOP.md`. Run compute on ripperred GPU1.
