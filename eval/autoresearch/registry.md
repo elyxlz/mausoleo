@@ -1,28 +1,24 @@
-# Approach Registry — MausoleoBench fresh slate (2026-07-21)
+# Approach Registry
 
-Scores are **MausoleoBench** (6-issue). composite_v2-era registry archived at `archive/registry_composite_v2.md`; old experiment scripts at `experiments/archive/`. Statuses: ACTIVE (worth iterating), BLOCKED (hard failure — reopen only with the stated unblock), SATURATED (works, no headroom without new inputs). Update every iteration.
+Approach families with current status. Statuses: **ACTIVE** (worth iterating), **BLOCKED** (hard failure — reopen only with the stated unblock condition), **SATURATED** (works, no headroom without new inputs). Update every iteration. Budget-compliant record: **exp_167 0.3815**.
 
-**BUDGET RULE (per Elio 2026-07-21): experiments over 6.9–13.9 GPU-s/page are DISQUALIFIED and do not count.** All Qwen3-VL-8B routes (~74–286 GPU-s/page) are DQ — exp_045 (0.4615), exp_168 (0.4342), exp_169 (0.5266) etc. do NOT count. Oracle ensembles (~600) are reference ceilings only.
-
-Board (budget-compliant only): **`exp_167_grouped` 0.3815 (6.2 GPU-s/page) = RECORD** · exp_160 0.3576 (6.2) · exp_157 0.1718 (5.1). All PaddleOCR-VL-1.6/PP-DocLayout. Live graph: `scripts/progress_server.py` (:8078 + cloudflare); over-budget attempts plot but never set records. The climb: max MausoleoBench within budget — segmentation solved cheaply (trained grouper), **bottleneck = budget-fit OCR text quality**.
-
-## F1 — Fast specialized OCR models as sources (0.9–3B)
-**Status: ACTIVE — cheapest route under corpus budget.** PaddleOCR-VL-1.6 (0.9B, vllm) works as a source; YOLO-title-class regions as headlines is the right usage. Budget-independent BLOCKS (carried forward, physical facts): HunyuanOCR — transformers-eager 35min/issue + col-crop gibberish; olmOCR-2-7B — linearizes, won't segment, ~65 GPU-s/page; GLM-OCR — degenerate repetition loops on column crops. Unblock any: vllm support + evidence it reads broadsheet type.
+## F1 — Fast specialized OCR models as sources (≤1B)
+**ACTIVE — cheapest route within budget.** PaddleOCR-VL-1.6 (0.9B, vllm) is the working budget-fit OCR source; its per-region text is the current record's input. Blocked alternatives (physical, not budget): HunyuanOCR (transformers-eager too slow + column-crop gibberish); olmOCR-2-7B (linearizes, won't segment); GLM-OCR (repetition loops on column crops). Unblock any: vllm support + evidence it reads broadsheet type.
 
 ## F2 — Long-horizon multi-page parsing
-**Status: BLOCKED (physical).** Broadsheet text illegible at 1024px/page; legible square tiles garble + repetition-loop. Unblock: a NEW long-horizon model release, not parameter nudges. Cross-page continuity must come from F3/F6 instead.
+**BLOCKED (physical).** Broadsheet text illegible at low resolution; legible tiles garble + repetition-loop. Unblock: a new long-horizon model. Cross-page continuity comes from F3/F6 instead.
 
 ## F3 — Layout detection & reading order
-**Status: ACTIVE — grouping is THE bottleneck.** PP-DocLayoutV3 (31M, `~/paddle_env`) gives strong detection recall (0.83/0.78) at 4–6s/issue, but ~100 paragraph regions/page → precision collapse unless grouped. Head-block grouping (ex-exp_160) reached composite_v2 0.5756 but only **0.3576 on MausoleoBench** — its matched text is high-CER, so the quality gate discounts it. Geometric region-grouping BLOCKED (intra-article vs inter-ad gaps overlap at every threshold). Local-LLM grouper BLOCKED (over-splits + 11–47 s/page busts budget). **Top unblock: train a small boundary grouper** (per-region "starts new article?" classifier, features in `experiments/grouper_features.py`, labels by aligning the 6 GTs to region dumps `semgroup/regions_<date>.json`). Region dumps ready for all 6 issues.
+**ACTIVE.** PP-DocLayoutV3 (`~/paddle_env`) gives strong detection recall at low cost, but paragraph-level regions must be grouped into articles. **Trained boundary grouper is the solution**: a per-region "does region i start a new article?" classifier (features in `experiments/grouper_features.py`, labels by aligning the 6 GTs to region decompositions, by-issue cross-validation). It solves segmentation cheaply — recall 0.57–0.89 at ~0 inference cost. Geometric grouping is BLOCKED (intra-article vs inter-ad gaps overlap at every threshold).
 
 ## F4 — Ensemble merge/quality-select
-**Status: reference only.** ensemble_30min/prune5 are oracle ceilings (recall ~1.0) used for GT-building and as the score ceiling; ~600 GPU-s/page = not production.
+**Reference only.** Multi-source oracle ensembles (`ensemble_30min`, `ensemble_prune5`) are recall ceilings used for GT-building; cost is far over budget — not production.
 
-## F5 — Structured-JSON VLM path (Qwen3-VL)
-**Status: ACTIVE — now the leading real pipeline on MausoleoBench (exp_045 0.4615).** The quality gate favors this route's clean per-article text. Column-split matters: col4/col6 variants (exp_055/097) score below the default; full-page (exp_102/107) collapses on dense pages. Cost ~136 GPU-s/page is over the 6.9–13.9 budget — a production win needs the same text quality at a fraction of the cost (smaller model, fewer crops, or PP-DocLayout regions feeding the VLM). Levers: better column/region cropping, ads-aware prompt that doesn't hurt precision, cheaper backbone.
+## F5 — VLM OCR text quality
+**ACTIVE — the open bottleneck.** Per-region text quality scales with model size (2B < 4B < 8B), and the specialized 0.9B PaddleOCR-VL sits between 4B and 8B general VLMs. The goal is the best text quality that fits ≤50 sec/page caller-measured. Levers: better budget-fit models, region-crop resolution/prompt, and merging complementary budget-fit sources.
 
 ## F6 — Post-processing (trim, repair, stitching)
-**Status: ACTIVE, low-cost.** Char-run squeeze is a cheap CER guard. Cross-page stitching at merge level is the F2 substitute. Open: dedup/confidence gating on over-generated predictions to lift gated-precision.
+**ACTIVE, low-cost.** Char-run squeeze / trailing-garbage trim are cheap CER guards (no-ops on already-clean PaddleOCR text). Cross-page stitching at merge level substitutes for F2. Open: dedup/confidence gating to lift gated-precision.
 
-## Cross-cutting insight (2026-07-21)
-MausoleoBench scores text-quality × correct-segmentation jointly. The two strong routes are complementary: **F3 (PP-DocLayout) has recall, F5 (Qwen3-VL) has text quality.** The highest-EV unexplored direction is grafting them — PP-DocLayout regions/reading-order as the crop plan feeding Qwen3-VL OCR, or a trained grouper over Qwen3-VL region text — pursued under the corpus budget.
+## Cross-cutting
+MausoleoBench scores text-quality × correct-segmentation jointly. Segmentation is solved cheaply (F3 trained grouper); the climb is now **F5 budget-fit text quality**, pursued under the 50 sec/page cap.
