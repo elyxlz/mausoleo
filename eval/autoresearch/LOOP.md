@@ -17,12 +17,16 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - exp_001 0.3802, **exp_002 0.3826 (record)** — grouper + PaddleOCR-VL per-region.
 - **exp_003 FAILED** (n=3): Qwen3-VL-8B column-structured JSON = 0.1934 @ 65.65 sec/page (DQ). Structured JSON merges columns into giant blobs (recall 0.16–0.68); did NOT reproduce archived exp_045 0.46. JSON is the wrong delivery for context.
 
-## Current
-- **exp_004 RUNNING** (waiter bxqcxwk2x): **CHURRO-3B** (`stanford-oval/churro-3B`, Qwen2.5-VL-3B fine-tuned on 100K historical pages) per-region + trained grouper — drop-in swap for PaddleOCR-VL in the working pipeline (keeps grouper segmentation), caller-measured. Tests H2 (historical domain fine-tuning) directly vs the 0.3826 baseline. CHURRO is page-trained so region crops are mildly OOD — informative either way.
+- **exp_003 FAILED** (n=3): column-structured JSON 8B = 0.1934 @ 65.65 (DQ) — JSON blobs.
+- **exp_004 FAILED** (n=4): CHURRO-3B per-region = ~0.15/cer 6.0 (DQ, hallucinates on crops + slow). Page-trained → region crops OOD.
 
-## Queue (Fable research plan, ranked)
-1. **exp_004 verdict** — if CHURRO-3B per-region beats 0.3826 within budget → record + H2 confirmed. If region crops too OOD, try CHURRO on column crops (needs column-text→region alignment for the grouper).
-2. **PLAIN-TEXT columns + grouper** (the report's real E1, not JSON): OCR column crops as plain text with a strong model, map column text back to regions via bbox y-alignment, feed the grouper. Gets context (H1) without JSON's blob-merging; keeps grouper segmentation.
-3. **E3 distill** a strong teacher → `lightonai/LightOnOCR-2-1B` (offline QLoRA on teacher-labeled non-eval corpus pages, decade-stratified; ~5–10 sec/page). Highest ceiling.
-4. **E5 preprocessing** (CLAHE/upscale small-text regions, NO binarization) for 1952 — cheap CPU; ship only if ≥4/6 issues improve.
-- Anti-overfit tell: a real H1/H2 gain lifts all 6 issues roughly uniformly.
+## Current
+- **exp_005 RUNNING** (waiter bnn3d755v): **article-level OCR** — the clean way to get context WITH grouper segmentation and NO fuzzy alignment. Grouper decides article boundaries from cheap per-region text, then OCR each article's union-bbox crop (context-rich) with PaddleOCR-VL for the output text. Budget-fit + robust (no OOM/blob/hallucination risk). Tests whether article-level context lifts text quality over per-region 0.3826.
+
+## Queue (ranked)
+1. **exp_005 verdict** — if article-crop context beats 0.3826 within budget → record + H1 confirmed cheaply. If PaddleOCR-VL gains from context, swap a stronger model for the article-crop OCR (fewer/bigger crops than region-level, so an 8B article pass is ~budget-fit).
+2. **Stronger model on article crops** (Qwen3-VL-8B PLAIN text, not JSON) — article crops are fewer than columns/regions, so 8B article OCR may fit ≤50; gets 8B text quality at article granularity.
+3. **E3 distill** a teacher → `lightonai/LightOnOCR-2-1B` (offline, highest ceiling).
+4. **E5 preprocessing** (CLAHE/upscale small-text regions, NO binarization) for 1952 — cheap; ship only if ≥4/6 issues improve.
+- Anti-overfit tell: a real gain lifts all 6 issues roughly uniformly.
+- Infra note: kill orphaned vllm EngineCore procs (nvidia-smi --query-compute-apps) after killing a run — the parent pkill leaves them holding GPU mem.
