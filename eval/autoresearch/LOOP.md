@@ -13,13 +13,16 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - Segmentation is solved cheaply by the trained grouper. Open bottleneck: **budget-fit OCR text quality** (`registry.md` §F5).
 - Note: **any gain counts** (no effect-size floor). 1952 dense-classifieds still the weak point (~0.27).
 
+## Done this slate
+- exp_001 0.3802, **exp_002 0.3826 (record)** — grouper + PaddleOCR-VL per-region.
+- **exp_003 FAILED** (n=3): Qwen3-VL-8B column-structured JSON = 0.1934 @ 65.65 sec/page (DQ). Structured JSON merges columns into giant blobs (recall 0.16–0.68); did NOT reproduce archived exp_045 0.46. JSON is the wrong delivery for context.
+
 ## Current
-- **exp_003 RUNNING** (waiter buuz4jyza): reproduce the 0.46 column-structured route self-contained — Qwen3-VL-8B on 3-column crops + structured-JSON article prompt (VLM_OCR_STRUCTURED_V2), batched (max_num_seqs=16), caller-measured. Tests whether the archived exp_045 quality (0.4615) fits ≤50 sec/page (per-region 8B was only 20 sec/page, so the old "136" was a stale estimate). If yes → big record jump.
+- **exp_004 RUNNING** (waiter bxqcxwk2x): **CHURRO-3B** (`stanford-oval/churro-3B`, Qwen2.5-VL-3B fine-tuned on 100K historical pages) per-region + trained grouper — drop-in swap for PaddleOCR-VL in the working pipeline (keeps grouper segmentation), caller-measured. Tests H2 (historical domain fine-tuning) directly vs the 0.3826 baseline. CHURRO is page-trained so region crops are mildly OOD — informative either way.
 
 ## Queue (Fable research plan, ranked)
-1. **exp_003 verdict** — if column-structured 8B is ≤50 sec/page AND ~0.46, huge record. If over budget, cut cost: plain-text prompt (JSON inflates decode), AWQ (`cpatonn/Qwen3-VL-8B-Instruct-AWQ-4bit`), higher max_num_seqs.
-2. **E2 CHURRO-3B on columns** — `stanford-oval/churro-3B` (Qwen2.5-VL-3B fine-tuned on 100K historical pages; loads in vllm). Purpose-built for H2; ~12–20 sec/page. Download needed.
-3. **E3 distill the column teacher → `lightonai/LightOnOCR-2-1B`** (offline QLoRA on teacher-labeled non-eval corpus pages, decade-stratified; ~5–10 sec/page inference). Highest ceiling; start teacher-labeling in background once E1/E2 picks the teacher.
-4. **E5 preprocessing** (CLAHE/upscale small-text regions, NO binarization) for the 1952 weak point — cheap CPU; ship only if ≥4/6 issues improve (anti-overfit).
-5. **E4 DeepSeek-OCR Gundam**, **E6 PaddleOCR-VL on columns** — opportunistic.
-- Anti-overfit tell: a real H1/H2 gain lifts all 6 issues roughly uniformly; single-issue gains = fitting.
+1. **exp_004 verdict** — if CHURRO-3B per-region beats 0.3826 within budget → record + H2 confirmed. If region crops too OOD, try CHURRO on column crops (needs column-text→region alignment for the grouper).
+2. **PLAIN-TEXT columns + grouper** (the report's real E1, not JSON): OCR column crops as plain text with a strong model, map column text back to regions via bbox y-alignment, feed the grouper. Gets context (H1) without JSON's blob-merging; keeps grouper segmentation.
+3. **E3 distill** a strong teacher → `lightonai/LightOnOCR-2-1B` (offline QLoRA on teacher-labeled non-eval corpus pages, decade-stratified; ~5–10 sec/page). Highest ceiling.
+4. **E5 preprocessing** (CLAHE/upscale small-text regions, NO binarization) for 1952 — cheap CPU; ship only if ≥4/6 issues improve.
+- Anti-overfit tell: a real H1/H2 gain lifts all 6 issues roughly uniformly.
