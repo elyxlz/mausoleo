@@ -2,7 +2,9 @@
 
 Scores are **MausoleoBench** (6-issue). composite_v2-era registry archived at `archive/registry_composite_v2.md`; old experiment scripts at `experiments/archive/`. Statuses: ACTIVE (worth iterating), BLOCKED (hard failure — reopen only with the stated unblock), SATURATED (works, no headroom without new inputs). Update every iteration.
 
-Board (fresh): oracle ceiling `ensemble_30min` 0.5941 · **best real `exp_045_qwen3vl_vllm` 0.4615** · exp_140 0.4170 · exp_160 0.3576. Live graph: `scripts/progress_server.py` (:8078 + cloudflare).
+**BUDGET RULE (per Elio 2026-07-21): experiments over 6.9–13.9 GPU-s/page are DISQUALIFIED and do not count.** All Qwen3-VL-8B routes (~74–286 GPU-s/page) are DQ — exp_045 (0.4615), exp_168 (0.4342), exp_169 (0.5266) etc. do NOT count. Oracle ensembles (~600) are reference ceilings only.
+
+Board (budget-compliant only): **`exp_167_grouped` 0.3815 (6.2 GPU-s/page) = RECORD** · exp_160 0.3576 (6.2) · exp_157 0.1718 (5.1). All PaddleOCR-VL-1.6/PP-DocLayout. Live graph: `scripts/progress_server.py` (:8078 + cloudflare); over-budget attempts plot but never set records. The climb: max MausoleoBench within budget — segmentation solved cheaply (trained grouper), **bottleneck = budget-fit OCR text quality**.
 
 ## F1 — Fast specialized OCR models as sources (0.9–3B)
 **Status: ACTIVE — cheapest route under corpus budget.** PaddleOCR-VL-1.6 (0.9B, vllm) works as a source; YOLO-title-class regions as headlines is the right usage. Budget-independent BLOCKS (carried forward, physical facts): HunyuanOCR — transformers-eager 35min/issue + col-crop gibberish; olmOCR-2-7B — linearizes, won't segment, ~65 GPU-s/page; GLM-OCR — degenerate repetition loops on column crops. Unblock any: vllm support + evidence it reads broadsheet type.
