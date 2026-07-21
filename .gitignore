@@ -27,3 +27,5 @@ eval/autoresearch/synth/corpus/
 eval/autoresearch/synth/crops/
 eval/autoresearch/synth/synth_pairs.jsonl
 eval/autoresearch/paddleft/train_aug_*.jsonl
+eval/autoresearch/paddleft/train_no*.jsonl
+eval/autoresearch/paddleft/val_no*.jsonl
