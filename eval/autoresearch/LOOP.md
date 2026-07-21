@@ -36,12 +36,12 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 
 ## Current
 - **exp_010 RUNNING** (waiter b523hv5y3): exp_009 + CLAHE contrast enhancement on page images, targeting the degraded dense 1952 scans (weakest at 0.272). Cheap test; ship only if >=4/6 improve (anti-overfit).
-- **Fable agent a78db8656 designing the DOMAIN-ADAPTATION plan** (fine-tune/distill to close 0.41->0.59): PaddleOCR-VL LoRA feasibility, CHURRO on article crops (in-distribution), distillation from oracle teacher. Fold its plan into the queue on return.
+- **Fable domain-adaptation plan IN** (registry §F7): PaddleOCR-VL-1.6 is LoRA-fine-tunable (ms-swift); ranked plan + LOIO anti-overfit protocol recorded.
 
 
-## Queue (ranked)
-1. **exp_008 verdict** — does AWQ-8B article text beat 0.3946 within ≤50 sec/page? Watch for OOM (lower max_num_seqs / max_pixels if so) and blobs on dense pages.
-2. **E3 distill** a strong teacher → `lightonai/LightOnOCR-2-1B` (offline, highest ceiling).
-3. **E5 preprocessing** (CLAHE/upscale small-text regions, NO binarization) for 1952.
-4. **Geometric width-guard** for exp_005's dense regressions (skip article-crop when union bbox spans >~1.3 columns).
-- Infra: to stop a run, kill the PARENT python proc (pgrep -f exp_NNN), NOT the vllm EngineCore — killing the engine orphans+hangs the parent (looks 'done' but holds host RAM). Verify GPU freed (nvidia-smi --query-compute-apps). Pre-download models so download time doesn't pollute the caller budget.
+## Queue (domain adaptation — registry §F7; the real ceiling lever)
+1. **exp_011 — CHURRO-3B zero-shot on ARTICLE crops** (cheapest go/no-go, no training): PaddleOCR region OCR (grouper features) + sequential-load CHURRO-3B for article-crop OCR (cap max_pixels ~2.3M, kill PARENT not engine). Does historical specialization beat PaddleOCR when the crop is in-distribution? If yes → CHURRO-LoRA / Option-1 get strong priors; if it loses even here, adapt the winning model (PaddleOCR-VL LoRA) instead.
+2. **LoRA PaddleOCR-VL-1.6** single fold (train 5 issues' GT article-crops→GT-text, test 1935) via ms-swift/trl — the go/no-go on domain adaptation. If a fold shows real wCER drop → full 6-fold LOIO + synthetic augmentation.
+3. **Distill oracle → PaddleOCR-VL** on non-eval corpus pages (teacher labels), or ByT5 post-OCR corrector (stacks).
+- Pending: exp_010 (CLAHE) result — log when its waiter reports; adopt only if ≥4/6 improve.
+- Anti-overfit: strict LOIO, cross-decade split, GT-free probes on the 31 image-only 1943-07 issues.
