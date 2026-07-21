@@ -29,15 +29,17 @@ Every experiment ever run is in `log.jsonl` (prior program versions archived out
 
 Always evaluate BOTH dates and report the average. Report precision/F1 alongside composite; a change that drops precision >5pts needs explicit justification. The holdout rule covers structural changes that filter/drop articles, not just hyperparameters. Pipeline code must never read GT at inference nor re-emit another config's prediction file as its own.
 
-## Current Baselines (composite_v2, updated 2026-07-16 late)
-| Config | v2 avg | 1885 v2 | 1910 v2 | GPU cost | Notes |
-|---|---|---|---|---|---|
-| `configs/ocr/ensemble_prune5.py` (**v2 leader / reference**) | **0.7776** | 0.7536 | 0.8016 | 5 sub runs (~18 min/issue fresh) | Greedy v2 prune of the 8-source ensemble (dropped 055/140/142 spam contributors). Precision 0.42/0.57, F1 0.57/0.69. Split-stable selection, holdout flat. |
-| `configs/ocr/ensemble_30min.py` (**recall-oracle** for GT work) | 0.7514 | 0.7111 | 0.7917 | ~600 GPU-s/page | 8 sources, recall 1.0/0.98 — keep for GT building & coverage upper bounds. Rewrite verified: reproduces v1 baselines (0.87186/0.92569) exactly. |
-| `experiments/exp_160_ppdoclayout_headblocks.py` (**production candidate**) | **0.6180** | 0.5846 | 0.6513 | **6.22 GPU-s/page = 6.3-day corpus** | PP-DocLayoutV3 regions + PaddleOCR-VL OCR + title-boundary grouping + head-block merge. F1 0.75/0.68, precision 0.82/0.77, hCER 0.30/0.33. Cross-page articles from reading order. |
-| `configs/ocr/exp_157_paddleocr_titles_squeeze.py` (YOLO-route reference) | 0.4284 | 0.4202 | 0.4366 | 5.13 GPU-s/page | Superseded by exp_159; kept as the DocLayout-YOLO comparison point. |
-| `exp_045_qwen3vl_vllm` (single 8B source) | 0.6305 | 0.5684 | 0.6882 | ~136 GPU-s/page | 5–26× over budget — oracle/ensemble source only. |
-| 19-source research orchestrator (archived) | — | — | — | ~50–60 min | v1 0.9231; violates one-config-one-run. |
+## Current Baselines (composite_v2, 6-issue eval 2026-07-21)
+Eval = 6 human-verified all-article issues: 1885, 1895, 1910, 1925, 1935, 1952 (June 15). All prior 2-issue numbers are superseded.
+
+| Config | 6-issue avg | Role | GPU cost |
+|---|---|---|---|
+| `configs/ocr/ensemble_30min.py` | **0.7091** | recall oracle (recall ~1.0), GT-building/upper bound | ~600 GPU-s/page |
+| `configs/ocr/ensemble_prune5.py` | 0.6917 | v2 oracle reference | oracle-tier |
+| `exp_045_qwen3vl_vllm` | 0.6087 | single 8B source | ~136 GPU-s/page (over budget) |
+| `experiments/exp_160_ppdoclayout_headblocks.py` | **0.5756** | **production candidate** | ~6.2 GPU-s/page = 6.3-day corpus |
+
+exp_160 per-issue: 1885 0.585 / 1895 0.547 / 1910 0.651 / 1925 0.649 / 1935 0.608 / 1952 0.414. Recall 0.37-0.66 — **article segmentation/grouping is the bottleneck, worst on dense classified pages (1952)**. Semantic-grouping ceiling (exp_164 Opus probe) = 0.698 on 2 issues; the recall prize a trained grouper could claim.
 
 Reproduce: `uv run --no-project python scripts/run_real_ocr.py ensemble_30min 1885-06-15 1910-06-15` → `eval/predictions/ensemble_30min_<date>.json` (sub-pipeline predictions cached as `<name>_<date>.json`).
 
