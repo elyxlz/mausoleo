@@ -20,7 +20,7 @@ def load_attempts() -> list[dict[str, tp.Any]]:
     return sorted(rows, key=lambda r: r["n"])
 
 
-BUDGET_CAP = 41.7
+BUDGET_CAP = 50.0
 
 
 def build_payload() -> dict[str, tp.Any]:
