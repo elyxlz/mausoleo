@@ -15,7 +15,11 @@ Approach families with current status. Statuses: **ACTIVE** (worth iterating), *
 **Reference only.** Multi-source oracle ensembles (`ensemble_30min`, `ensemble_prune5`) are recall ceilings used for GT-building; cost is far over budget — not production.
 
 ## F5 — VLM OCR text quality
-**ACTIVE — the open bottleneck.** Per-region text quality scales with model size (2B < 4B < 8B), and the specialized 0.9B PaddleOCR-VL sits between 4B and 8B general VLMs. The goal is the best text quality that fits ≤50 sec/page caller-measured. Levers: better budget-fit models, region-crop resolution/prompt, and merging complementary budget-fit sources.
+**ACTIVE — the open bottleneck.** Two evidence-backed hypotheses (Fable research, 2026-07-21):
+- **H1 context-per-crop is the dominant lever**: region OCR caps at 0.32–0.38 regardless of model size (Qwen3-VL 2B/4B/8B all ≈0.33); the archived column-structured route (exp_045) hit **0.46**. Region crops sever the decoder's language context. The quality is in the scans; the problem is delivering it ≤50 sec/page.
+- **H2 historical-print domain mismatch**: modern OCR models are trained on modern PDFs (CER multiplies 3–4× on historical print). CHURRO-3B (Stanford, Qwen2.5-VL-3B fine-tuned on 100K historical pages) and LightOnOCR-2-1B (distillable) target this directly.
+
+Prioritized queue (details in LOOP.md): **E1** cheapen the 0.46 column route (batched + plain-text + AWQ Qwen3-VL-8B) → within budget; **E2** CHURRO-3B on columns; **E3** distill the column teacher into LightOnOCR-2-1B (offline, highest ceiling); **E4** DeepSeek-OCR Gundam; **E5** cheap scan preprocessing (CLAHE/upscale, no binarization) for 1952; **E6** PaddleOCR-VL on column crops. Dead ends: scaling general VLMs on region crops; Nanonets-OCR2 (vllm lm_head bug); whole-page long-horizon.
 
 ## F6 — Post-processing (trim, repair, stitching)
 **ACTIVE, low-cost.** Char-run squeeze / trailing-garbage trim are cheap CER guards (no-ops on already-clean PaddleOCR text). Cross-page stitching at merge level substitutes for F2. Open: dedup/confidence gating to lift gated-precision.

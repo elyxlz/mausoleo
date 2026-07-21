@@ -13,6 +13,13 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - Segmentation is solved cheaply by the trained grouper. Open bottleneck: **budget-fit OCR text quality** (`registry.md` §F5).
 - Note: **any gain counts** (no effect-size floor). 1952 dense-classifieds still the weak point (~0.27).
 
-## Queue
-1. **exp_003 — await Fable strategy report** (agent a64a08fb, running): ranked budget-fit text-quality plan (context strategy, quantizing a strong model into budget, current specialized OCR models, distillation of the 0.46 column-structured teacher, scan preprocessing). Design exp_003 from its top recommendation. The evidence: per-region OCR caps at 0.32–0.38 regardless of model size; **context per crop is the big lever** (whole-column structured route hit 0.46 but cost 136 sec/page) — get that quality ≤50 sec/page. Budget is generous (50) so speed-engineering / quantization / distillation are all in scope (program.md §Research Toolbox).
-2. **1952 dense-classifieds**: the common weak point across every route (~0.27).
+## Current
+- **exp_003 RUNNING** (waiter buuz4jyza): reproduce the 0.46 column-structured route self-contained — Qwen3-VL-8B on 3-column crops + structured-JSON article prompt (VLM_OCR_STRUCTURED_V2), batched (max_num_seqs=16), caller-measured. Tests whether the archived exp_045 quality (0.4615) fits ≤50 sec/page (per-region 8B was only 20 sec/page, so the old "136" was a stale estimate). If yes → big record jump.
+
+## Queue (Fable research plan, ranked)
+1. **exp_003 verdict** — if column-structured 8B is ≤50 sec/page AND ~0.46, huge record. If over budget, cut cost: plain-text prompt (JSON inflates decode), AWQ (`cpatonn/Qwen3-VL-8B-Instruct-AWQ-4bit`), higher max_num_seqs.
+2. **E2 CHURRO-3B on columns** — `stanford-oval/churro-3B` (Qwen2.5-VL-3B fine-tuned on 100K historical pages; loads in vllm). Purpose-built for H2; ~12–20 sec/page. Download needed.
+3. **E3 distill the column teacher → `lightonai/LightOnOCR-2-1B`** (offline QLoRA on teacher-labeled non-eval corpus pages, decade-stratified; ~5–10 sec/page inference). Highest ceiling; start teacher-labeling in background once E1/E2 picks the teacher.
+4. **E5 preprocessing** (CLAHE/upscale small-text regions, NO binarization) for the 1952 weak point — cheap CPU; ship only if ≥4/6 issues improve (anti-overfit).
+5. **E4 DeepSeek-OCR Gundam**, **E6 PaddleOCR-VL on columns** — opportunistic.
+- Anti-overfit tell: a real H1/H2 gain lifts all 6 issues roughly uniformly; single-issue gains = fitting.
