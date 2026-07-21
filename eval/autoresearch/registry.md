@@ -1,6 +1,6 @@
 # Approach Registry
 
-Approach families with current status. Statuses: **ACTIVE** (worth iterating), **BLOCKED** (hard failure — reopen only with the stated unblock condition), **SATURATED** (works, no headroom without new inputs). Update every iteration. Budget-compliant record: **exp_167 0.3815**.
+Approach families with current status. Statuses: **ACTIVE** (worth iterating), **BLOCKED** (hard failure — reopen only with the stated unblock condition), **SATURATED** (works, no headroom without new inputs). Update every iteration. Budget-compliant record: **exp_009 0.4071** (article-level OCR + PaddleOCR-VL + fill-ratio guard).
 
 ## F1 — Fast specialized OCR models as sources (≤1B)
 **ACTIVE — cheapest route within budget.** PaddleOCR-VL-1.6 (0.9B, vllm) is the working budget-fit OCR source; its per-region text is the current record's input. Blocked alternatives (physical, not budget): HunyuanOCR (transformers-eager too slow + column-crop gibberish); olmOCR-2-7B (linearizes, won't segment); GLM-OCR (repetition loops on column crops). Unblock any: vllm support + evidence it reads broadsheet type.
