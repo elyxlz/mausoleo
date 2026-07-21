@@ -8,10 +8,10 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - Experiments numbered from **exp_001**. Log each full-6-issue run to `mausoleobench_log.jsonl` (`{n, config, exp, score, description, gpu_s_per_page, budget_ok}`, n = last+1) → live graph `scripts/progress_server.py` (:8078 + cloudflare, per-experiment prediction viewer). Commit + push; update `registry.md`.
 
 ## Board
-- **RECORD: exp_002 = 0.3826** (n=2) — grouper + PaddleOCR-VL with hi-res crops, 5.91 sec/page. exp_001 baseline 0.3802 (n=1).
-- Oracle references (not production): `ensemble_30min` 0.5941, `ensemble_prune5` 0.5622.
-- Segmentation is solved cheaply by the trained grouper. Open bottleneck: **budget-fit OCR text quality** (`registry.md` §F5).
-- Note: **any gain counts** (no effect-size floor). 1952 dense-classifieds still the weak point (~0.27).
+- **RECORD: exp_009 = 0.4071** @ 8.66 sec/page (article-level OCR + PaddleOCR-VL + fill-ratio guard). Frontier: 0.3802/0.3826/0.3946/0.4071.
+- Confirmed dead ends: general VLMs (2B/4B/8B/AWQ) + CHURRO all < specialized PaddleOCR-VL at any crop size; preprocessing (CLAHE) hurts; **naive LoRA fine-tune on real GT overfits (exp_012 0.4041, net -0.003)**.
+- Structure (article context + geometry) + specialized PaddleOCR-VL is the winning recipe; text quality saturated ~0.41.
+
 
 ## Done this slate
 - exp_001 0.3802, **exp_002 0.3826 (record)** — grouper + PaddleOCR-VL per-region.
@@ -31,20 +31,19 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - Dead ends confirmed: general VLMs < specialized PaddleOCR-VL at ANY crop size (region 8B 0.334, article AWQ-8B 0.367 @ 31.78 s/pg; all < PaddleOCR article 0.395). Column-JSON blobs (exp_003 0.19). CHURRO page-model hallucinates on crops (exp_004). Length-guard reverts gains (exp_006).
 
 ## Board
-- **RECORD: exp_009 = 0.4071** @ 8.66 sec/page (article-level OCR + PaddleOCR-VL + geometric fill-ratio guard). Frontier: 0.3802 -> 0.3826 -> 0.3946 -> 0.4071. Oracle reference 0.5941.
-- Confirmed dead ends: general VLMs (2B/4B/8B/AWQ) < specialized PaddleOCR-VL at any crop size; column-JSON blobs; CHURRO hallucinates on region crops; length-guard reverts gains.
+- **RECORD: exp_009 = 0.4071** @ 8.66 sec/page (article-level OCR + PaddleOCR-VL + fill-ratio guard). Frontier: 0.3802/0.3826/0.3946/0.4071.
+- Confirmed dead ends: general VLMs (2B/4B/8B/AWQ) + CHURRO all < specialized PaddleOCR-VL at any crop size; preprocessing (CLAHE) hurts; **naive LoRA fine-tune on real GT overfits (exp_012 0.4041, net -0.003)**.
+- Structure (article context + geometry) + specialized PaddleOCR-VL is the winning recipe; text quality saturated ~0.41.
+
 
 ## Current
 - **exp_010 RUNNING** (waiter b523hv5y3): exp_009 + CLAHE contrast enhancement on page images, targeting the degraded dense 1952 scans (weakest at 0.272). Cheap test; ship only if >=4/6 improve (anti-overfit).
 - **Fable domain-adaptation plan IN** (registry §F7): PaddleOCR-VL-1.6 is LoRA-fine-tunable (ms-swift); ranked plan + LOIO anti-overfit protocol recorded.
 
 
-## Queue (domain adaptation — registry §F7; the real ceiling lever)
-1. **exp_011 CHURRO-articles = LOSES** (finishing 1952; early read 5/6 all worse than exp_009: -0.02 to -0.08, wCER worse). Historical fine-tuning (CHURRO) does NOT beat specialized PaddleOCR-VL even on in-distribution article crops. Decision: adapt the WINNING model -> LoRA fine-tune PaddleOCR-VL-1.6.
-2. **exp_012 LoRA fine-tune PaddleOCR-VL — WORKS; 6-FOLD RUNNING** (waiter bgw6cbazd, ~3-4h). Single-fold proof: held-out 1935 base 0.430 -> finetuned 0.436 (+0.006, wCER 0.513->0.500, meanCER 0.423->0.395) @ 10.85 sec/page from 261 pairs, no augmentation. Now running full LOIO 6-fold (per date: ft_prepare_data -> ft_train_lora -> fix_merged.py -> exp_012_paddleft) -> assembled exp_012 predictions across all 6, likely a NEW RECORD. Then adversarial-review (GT-free probe on 1943-07) + log n=12.
-   - Checkpoint fix (fix_merged.py): ms-swift merged dir needs custom .py code copied, base config.json (empty text_config) swapped in, weights remapped (model.visual.->visual.) + 12 frozen vision-head weights filled from base. transformers pinned 5.5.4; USE_HF=1; GPU=1.
-   - AMPLIFIER (next if 6-fold positive): synthetic period-Italian degraded-text augmentation (Fable Option 1) and/or oracle-ensemble distillation on non-eval corpus pages — more/better training data is the path to bigger gains.
-2. **LoRA PaddleOCR-VL-1.6** single fold (train 5 issues' GT article-crops→GT-text, test 1935) via ms-swift/trl — the go/no-go on domain adaptation. If a fold shows real wCER drop → full 6-fold LOIO + synthetic augmentation.
-3. **Distill oracle → PaddleOCR-VL** on non-eval corpus pages (teacher labels), or ByT5 post-OCR corrector (stacks).
-- exp_010 (CLAHE) REJECTED (0.4024 < 0.4071, preprocessing hurts).
-- Anti-overfit: strict LOIO, cross-decade split, GT-free probes on the 31 image-only 1943-07 issues.
+## Queue — domain-adaptation amplifier (F7; naive fine-tune needs more data)
+1. **Synthetic period-Italian augmentation** (Fable building the pipeline): render 19-20c Italian text (Wikisource/Liber Liber, never eval) in period serif fonts, multi-column fragments + degradation (blur, bleed-through, skew, noise, JPEG); 20-50K crops mixed ~3:1 with real GT; retrain LoRA 6-fold LOIO. Directly fixes the small-data overfit. Cheap (rendering is CPU; training same ~30min/fold).
+2. **Cleaner labels** (Jaccard>=0.7) + gentler LoRA (lower LR/rank) — quicker variant if augmentation stalls.
+3. **Oracle-ensemble distillation** on non-eval corpus pages (highest ceiling, ~1.7 days teacher labeling; cleanest integrity — eval fully held out).
+- If all amplifiers fail to beat 0.4071, that is the practical budget-compliant ceiling for the specialized 0.9B model.
+- Anti-overfit: strict LOIO, GT-free probes on the 31 image-only 1943-07 issues, standard audit.
