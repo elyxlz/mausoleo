@@ -20,13 +20,14 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - **exp_003 FAILED** (n=3): column-structured JSON 8B = 0.1934 @ 65.65 (DQ) — JSON blobs.
 - **exp_004 FAILED** (n=4): CHURRO-3B per-region = ~0.15/cer 6.0 (DQ, hallucinates on crops + slow). Page-trained → region crops OOD.
 
+- **exp_005 = 0.3946 RECORD** (n=5): article-level OCR (grouper boundaries + article-union-bbox crop OCR, PaddleOCR-VL) @ 8.74 sec/page. Context helps: 1885 +0.025, 1895 +0.083, 1910 +0.017, 1925 +0.027; but 1935 -0.063, 1952 -0.017 (dense pages: mis-grouped regions → huge multi-column crops → blobs).
+
 ## Current
-- **exp_005 RUNNING** (waiter bnn3d755v): **article-level OCR** — the clean way to get context WITH grouper segmentation and NO fuzzy alignment. Grouper decides article boundaries from cheap per-region text, then OCR each article's union-bbox crop (context-rich) with PaddleOCR-VL for the output text. Budget-fit + robust (no OOM/blob/hallucination risk). Tests whether article-level context lifts text quality over per-region 0.3826.
+- **exp_006 RUNNING** (waiter be1ritiz3): exp_005 + **GT-free blob guard** — per article, use the context-rich article-crop text UNLESS it's degenerate (len outside [0.5,1.8]× the region-text length = mis-grouped blob or truncation), then fall back to per-region text. Aim: keep the 4 gains, repair the 1935/1952 regressions.
 
 ## Queue (ranked)
-1. **exp_005 verdict** — if article-crop context beats 0.3826 within budget → record + H1 confirmed cheaply. If PaddleOCR-VL gains from context, swap a stronger model for the article-crop OCR (fewer/bigger crops than region-level, so an 8B article pass is ~budget-fit).
-2. **Stronger model on article crops** (Qwen3-VL-8B PLAIN text, not JSON) — article crops are fewer than columns/regions, so 8B article OCR may fit ≤50; gets 8B text quality at article granularity.
+1. **exp_006 verdict** — if the guard keeps gains + fixes dense regressions → bigger record.
+2. **Stronger model on article crops** (Qwen3-VL-8B PLAIN text, not JSON) — article crops are fewer than regions, so an 8B article pass may fit ≤50; gets 8B text quality at article granularity (the real H1 quality lever).
 3. **E3 distill** a teacher → `lightonai/LightOnOCR-2-1B` (offline, highest ceiling).
-4. **E5 preprocessing** (CLAHE/upscale small-text regions, NO binarization) for 1952 — cheap; ship only if ≥4/6 issues improve.
-- Anti-overfit tell: a real gain lifts all 6 issues roughly uniformly.
-- Infra note: kill orphaned vllm EngineCore procs (nvidia-smi --query-compute-apps) after killing a run — the parent pkill leaves them holding GPU mem.
+4. **E5 preprocessing** (CLAHE/upscale small-text regions, NO binarization) for 1952.
+- Infra: after killing a run, also kill orphaned vllm EngineCore procs (nvidia-smi --query-compute-apps=pid,used_memory) or the next run OOMs.
