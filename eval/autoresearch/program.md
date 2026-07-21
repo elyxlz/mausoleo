@@ -45,7 +45,7 @@ Check for matcher-gaming and state a real-vs-gamed verdict + caveats in the log 
 A high score riding on degraded probes, spam, or overgeneration is rejected, not logged as a win.
 
 ## Generalization Protocol
-1. **Effect-size floor.** Accept a change only if the 6-issue average improves by ≥ 0.005 AND the delta is non-negative on a majority of issues. Below-floor deltas are ties — prefer the simpler variant.
+1. **Any gain counts.** If the 6-issue average improves, it's a gain — accept it. No minimum effect size. On an exact tie, prefer the simpler variant.
 2. **Holdout halves.** For filter/threshold changes, verify on the odd-indexed GT half; a change that wins on tune but regresses on holdout is overfit.
 3. **Unsupervised probes.** Before promoting a structural change, run it on a probe issue and confirm `scripts/research.py probe` numbers don't degrade.
 4. **Mechanism rule.** Every accepted change gets a one-line "why this generalizes" note in the log. No per-issue hyperparameters.

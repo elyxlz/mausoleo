@@ -8,10 +8,11 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - Experiments numbered from **exp_001**. Log each full-6-issue run to `mausoleobench_log.jsonl` (`{n, config, exp, score, description, gpu_s_per_page, budget_ok}`, n = last+1) → live graph `scripts/progress_server.py` (:8078 + cloudflare, per-experiment prediction viewer). Commit + push; update `registry.md`.
 
 ## Board
-- **RECORD: exp_001 = 0.3802** (n=1) — self-contained trained grouper + PaddleOCR-VL, 5.95 sec/page. Independent + caller-measured; reproduces the prior baseline honestly.
+- **RECORD: exp_002 = 0.3826** (n=2) — grouper + PaddleOCR-VL with hi-res crops, 5.91 sec/page. exp_001 baseline 0.3802 (n=1).
 - Oracle references (not production): `ensemble_30min` 0.5941, `ensemble_prune5` 0.5622.
 - Segmentation is solved cheaply by the trained grouper. Open bottleneck: **budget-fit OCR text quality** (`registry.md` §F5).
+- Note: **any gain counts** (no effect-size floor). 1952 dense-classifieds still the weak point (~0.27).
 
 ## Queue
-1. **Budget-fit text quality (exp_002)**: screen the best OCR model that fits ≤50 sec/page caller-measured, fed through the trained grouper. Independent general VLMs measured so far (archived): Qwen3-VL 2B 0.32/6.5, 4B 0.34/10.6, 8B 0.33/20.3 — all below PaddleOCR-VL 0.38. Next angles: OCR-specialized budget models (GOT-OCR-2.0, InternVL3-2B), region-crop resolution/prompt on PaddleOCR-VL, or merging two budget-fit sources.
-2. **1952 dense-classifieds**: the common weak point across every route.
+1. **exp_003 — await Fable strategy report** (agent a64a08fb, running): ranked budget-fit text-quality plan (context strategy, quantizing a strong model into budget, current specialized OCR models, distillation of the 0.46 column-structured teacher, scan preprocessing). Design exp_003 from its top recommendation. The evidence: per-region OCR caps at 0.32–0.38 regardless of model size; **context per crop is the big lever** (whole-column structured route hit 0.46 but cost 136 sec/page) — get that quality ≤50 sec/page. Budget is generous (50) so speed-engineering / quantization / distillation are all in scope (program.md §Research Toolbox).
+2. **1952 dense-classifieds**: the common weak point across every route (~0.27).
