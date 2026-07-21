@@ -34,4 +34,4 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 2. **E3 distill** a strong teacher → `lightonai/LightOnOCR-2-1B` (offline, highest ceiling).
 3. **E5 preprocessing** (CLAHE/upscale small-text regions, NO binarization) for 1952.
 4. **Geometric width-guard** for exp_005's dense regressions (skip article-crop when union bbox spans >~1.3 columns).
-- Infra: after killing a run, kill orphaned vllm EngineCore procs (nvidia-smi --query-compute-apps=pid,used_memory) or the next run OOMs. Pre-download models so download time doesn't pollute the caller budget.
+- Infra: to stop a run, kill the PARENT python proc (pgrep -f exp_NNN), NOT the vllm EngineCore — killing the engine orphans+hangs the parent (looks 'done' but holds host RAM). Verify GPU freed (nvidia-smi --query-compute-apps). Pre-download models so download time doesn't pollute the caller budget.
