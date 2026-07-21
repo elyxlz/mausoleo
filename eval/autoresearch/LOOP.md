@@ -30,11 +30,17 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this is only
 - **Budget-compliant attempts (the only ones that count)**: exp_157 0.1718 (5.1), exp_160 0.3576 (6.2), **exp_167 0.3815 (6.2) = CURRENT RECORD.** All use PaddleOCR-VL-1.6 (0.9B) / PP-DocLayout.
 - **The real game**: maximize MausoleoBench WITHIN budget. Segmentation is ~solved cheaply (trained grouper, exp_167). The bottleneck is **text quality from the budget-fit OCR model** — PaddleOCR-VL-0.9B text (wCER 0.42–0.70) vs the disqualified Qwen-8B. Record every experiment's GPU-s/page; disqualify > 13.9.
 
+## State (2026-07-21, later) — budget UI + viewer shipped, exp_172 running
+- exp_171 (attempt 15) = 0.3815 NULL (text cleanup no-op; PaddleOCR-VL text already clean → wCER gap is raw recognition, not formatting).
+- Dashboard: "Exp N" identity, over-budget = disqualified hollow rings off the frontier, GPU-s/page in tooltips, **each experiment click-opens a read-only prediction viewer (`/viewer?config=`) with marquee-zoom** in a new tab. Live on :8078 + cloudflare (35/35 puppeteer).
+- **Budget measured COLD, no cache (per Elio)**: no vllm prefix caching, no reusing cached dumps/preds as free; else DQ. In program.md.
+- **exp_172 RUNNING cold on GPU1** (waiter+eval task b7x431qar): full cold pipeline = fresh PP-DocLayout + fresh **Qwen3-VL-2B** region OCR (prefix caching off) + trained grouper, measuring steady-state GPU-s/page. Tests whether a budget-SIZE model beats PaddleOCR-VL-0.9B text while staying ≤13.9. If cold GPU-s/page >13.9 → DQ (informative either way). Cached budget-fit candidates also available: Qwen3-VL-4B, InternVL3-2B, Nanonets-OCR2-3B, GOT-OCR-2.0.
+
 ## Next (in order) — budget-compliant only
-1. **Better budget-fit text + trained grouper (exp_171).** Re-OCR the PP-DocLayout regions with PaddleOCR-VL-1.6 at higher resolution / a better transcription prompt (still ~5–6 GPU-s/page, within budget), then the exp_167 trained grouper. Target: lift exp_167's text quality (wCER) without leaving budget. GPU run on ripperred; record GPU-s/page; adversarial review; fixed a-priori params (no eval tuning).
-2. **Mid-size budget-fit OCR model** — a 2–3B OCR model that fits ~6.9–13.9 GPU-s/page with better broadsheet text than the 0.9B. Screen candidates; must stay under 13.9.
+1. **exp_172 verdict** — if Qwen3-VL-2B is ≤13.9 GPU-s/page AND beats exp_167 0.3815, it's a budget-compliant record. If over budget, try a smaller/faster config (fewer max_tokens, smaller crops) or InternVL3-2B / GOT-OCR-2.0.
+2. **Mid-size budget-fit OCR screen** — whichever cached 2–4B model gives the best text within 13.9 cold GPU-s/page + trained grouper.
 3. **1952 dense-classifieds** — common weak point across every route (0.19–0.45).
-- The exp_045⊕exp_168 complementarity finding is now only useful as an UPPER-BOUND intuition; both parents are DQ, so any merge of them is DQ. A budget-compliant analog would need two budget-fit sources.
+- Both exp_045 & exp_168 are DQ (over budget), so their 0.5266 merge is DQ; a budget-compliant analog needs two budget-fit sources.
 
 ## Queue (in order)
 1. **exp_167 — trained boundary grouper (top F3 unblock).** Frame grouping as per-region "does region i START a new article?" sequence labeling. (a) `experiments/grouper_features.py` already builds features+labels by aligning the 6 GTs to `regions_<date>.json`. (b) Train a small classifier (gradient-boosted trees / tiny MLP — NOT an 8B LLM; inference ~0 cost). By-issue cross-validation (train 5, test held-out) to avoid fitting 6. (c) Wire as `experiments/exp_167_grouped.py`: PP-DocLayout regions + classifier boundaries + head-block merge; but feed the **Qwen3-VL region text** (F5 quality) not the low-quality path, since MausoleoBench pays for text. Evaluate 6 issues + eval_probes; log to the graph; compare vs exp_045 0.4615.
