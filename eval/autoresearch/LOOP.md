@@ -40,7 +40,8 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 
 
 ## Queue (domain adaptation — registry §F7; the real ceiling lever)
-1. **exp_011 RUNNING** (waiter bkhfzk0d6): CHURRO-3B on ARTICLE crops — two-phase two-model (PaddleOCR region OCR+grouping → free → CHURRO article OCR, max_pixels 2.3M, VLLM_WORKER_MULTIPROC_METHOD=spawn for the 2nd load). The go/no-go on historical specialization when the crop is in-distribution vs the 0.4071 record.
+1. **exp_011 CHURRO-articles = LOSES** (finishing 1952; early read 5/6 all worse than exp_009: -0.02 to -0.08, wCER worse). Historical fine-tuning (CHURRO) does NOT beat specialized PaddleOCR-VL even on in-distribution article crops. Decision: adapt the WINNING model -> LoRA fine-tune PaddleOCR-VL-1.6.
+2. **exp_012 LoRA fine-tune PaddleOCR-VL-1.6** (Fable building the pipeline: ft_prepare_data.py [article-crop->GT-text pairs, strict LOIO train {1885,1895,1910,1925,1952}, test 1935], ft_train_lora.sh [ms-swift LoRA, vision frozen, merge], exp_012_paddleft.py [exp_009 pipeline w/ merged checkpoint]). Run training when GPU1 frees. The go/no-go on domain adaptation. If a fold shows real wCER drop -> full 6-fold + synthetic augmentation.
 2. **LoRA PaddleOCR-VL-1.6** single fold (train 5 issues' GT article-crops→GT-text, test 1935) via ms-swift/trl — the go/no-go on domain adaptation. If a fold shows real wCER drop → full 6-fold LOIO + synthetic augmentation.
 3. **Distill oracle → PaddleOCR-VL** on non-eval corpus pages (teacher labels), or ByT5 post-OCR corrector (stacks).
 - exp_010 (CLAHE) REJECTED (0.4024 < 0.4071, preprocessing hurts).
