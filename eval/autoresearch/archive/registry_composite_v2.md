@@ -1,0 +1,39 @@
+# Approach Registry
+
+Families grouped by underlying mechanism. Statuses: ACTIVE (worth iterating), BLOCKED (hard failure — reopen only with the stated unblock condition), SATURATED (works, no headroom without new inputs). Update every iteration.
+
+## F1 — Fast specialized OCR models as sources (0.9–3B, markdown-native)
+**Status: ACTIVE — top priority under the corpus-scale budget (small = fast).**
+- PaddleOCR-VL-1.6 (0.9B, vllm-supported): col3 misuse FAILS (exp_147, 0.23); YOLO-region usage matches design (exp_148). **exp_152 WIN (2026-07-16): YOLO title-class regions as headlines → 0.4305 v2 avg (+0.025 over exp_149). exp_155 = exp_152 + CUDA graphs: 0.4285 at 5.13 GPU-s/page = 5.2-day corpus. exp_157 = exp_155 + char-run squeeze (F6 guard). SUPERSEDED as production candidate by exp_159 (F3 PP-DocLayoutV3 grouping, 2026-07-17) — exp_157 stays as the YOLO-route reference.** Dead levers: conf 0.15 (worse, noise boxes glue columns, exp_153); merge_vertical_gap 30/40 (tune-half-only gains, holdout-rejected, exp_154/156). Remaining bottleneck: recall 0.36–0.49 and wCER 0.74–0.77. Next levers: PP-DocLayoutV3 regions (F3); abandon-class filtering; horizontal_overlap.
+- HunyuanOCR (1B, cached): **BLOCKED** — native markdown prompt on col3 crops yields hallucinated gibberish (exp_150, composite 0.15) and transformers-eager runs 35min/issue (~50x over budget). Unblock: vllm HunYuanVL support AND evidence it reads broadsheet type.
+- olmOCR-2-7B (cached): **BLOCKED** — native front-matter prompt on col3 crops emits zero markdown headings (exp_151, 0.2761 v2 avg, hCER 1.0, one blob per crop); ~65 GPU-s/page, over budget even as a source. The exp_047 "misuse" hypothesis is settled — the model linearizes, it does not segment. Unblock: only as YOLO-region-level oracle diversity source if F4 pruning ever needs a non-Qwen text opinion.
+- GLM-OCR (0.9B, downloaded): **BLOCKED** — degenerate repetition loops on broadsheet column crops (exp_145, composite 0.15). Unblock: vllm no-repeat logit processor from the GLM-OCR recipe, or its MTP path, or evidence it works on sub-page crops of modern-density text.
+
+## F2 — Long-horizon multi-page parsing (cross-page continuity)
+**Status: BLOCKED (2026-07-16) — both Unlimited-OCR routes dead.**
+- Multi-page mode at 1024px/page: BLOCKED — broadsheet text illegible at 1024px (exp_146, hallucinated numerics).
+- Legible-tile sequence (the former unblock condition): **tested and FAILED** — square 730px tiles are legible to the model (real headlines read) but output garbles far below Paddle quality and degenerates into repetition loops at any sequence length (12 or 4 tiles) and anti-repeat setting. `infer_multi` letterboxes every image to a square canvas; tiles were the correct input shape, failure is distributional.
+- Unblock: a NEW long-horizon model release, not parameter/prompt nudges. Cross-page continuity must meanwhile come from layout/reading-order (F3) or merge-level stitching (F6).
+
+## F3 — Layout detection & reading order
+**Status: ACTIVE, underexplored.**
+- PP-DocLayoutV3 (31M, ~/paddle_env): **STRONG SIGNAL (exp_158)** — near-doubles recall vs DocLayout-YOLO (0.83/0.78 vs 0.49/0.36) and page accuracy, layout only 4-6s/issue; composite still 0.385 because ~100 paragraph-level regions/page each become an article (precision collapse). Bottleneck moved detection->grouping. exp_159 WIN (title-boundary grouping): 0.6040. **exp_160 WIN (consecutive-title head-block merge): 0.6180 avg, F1 0.75/0.68, precision 0.82/0.77, hCER 0.30/0.33, probe tiny-share 14x better, steady-state 6.22 GPU-s/page = 6.3-day corpus — PRODUCTION CANDIDATE.** Recall diagnosis (2026-07-17): misses = short back-page ads absorbed into neighbors (p6: 9 units vs GT 45; layout sees 120 boxes). **Geometric region-grouping BLOCKED (0/3: exp_161 serial gate, exp_162 headline-less-only, exp_163 column-sorted)** — intra-article gaps overlap inter-ad gaps at every threshold; recall ceiling glimpsed at 0.85/0.74. Semantic grouping ceiling MEASURED (exp_164 Opus probe): 0.6980 avg, recall 0.90/0.79. **Local-grouper route BLOCKED 0/2** (exp_165 list-format: parse failures + tie; exp_166 boundary-format + structured outputs: reliable but over-splits 146-vs-41, and 11-47 s/page grouping alone busts the corpus budget). Unblock: distill/fine-tune a small grouper on the tentative-GT groupings, or a stronger cheap local model. exp_160 stands as production; the 0.6980 ceiling documents the prize.
+- DocLayout-YOLO param tuning: SATURATED (defaults near-optimal, two sweeps failed).
+- Chandra layout operator exists (chandra_layout.py), integration untested.
+
+## F4 — Ensemble merge/quality-select tuning
+**Status: PRUNING DONE (2026-07-16) — `ensemble_prune5` is the v2 leader at 0.7776 (+0.026 over 8-source).** Greedy v2 backward-elimination removed exp_055 (additive ratio-100 spam, LOO +0.0148), exp_142, exp_140; selection split-stable, holdout flat. `ensemble_30min` retained as recall-oracle (recall 1.0/0.98) for GT building. Remaining F4 headroom: precision-filtering the survivors (dedup/confidence gating on the 88/301 remaining preds), or swapping a Qwen source for exp_155-Paddle as a cheap diversity source. Still oracle-tier cost — not production.
+
+## F5 — Prompt engineering on the structured-JSON VLM path
+**Status: SATURATED/BLOCKED — V2 is the optimum; complex prompts hallucinate (V3), /no_think degrades. Unblock: a new model family with different prompt affordances.**
+
+## F6 — Post-processing (trim, repair, stitching)
+**Status: ACTIVE minor.** trim_predictions is the biggest historical win (+0.0165). squeeze_char_runs (2026-07-16) guards model degeneration on degraded scans (exp_157). Heuristic cross-page stitching BLOCKED (VLM naturalizes text; zero stitches).
+
+## F7 — Segmentation adapters (model output → article JSON)
+**Status: ACTIVE.** MergeMarkdownPages written (2026-07-16), validated on synthetic input; unlocks F1. Embedding-similarity article grouping (STRAS-style) unexplored.
+
+## Cross-cutting constraint (2026-07-16)
+Corpus-scale production budget (program.md): the score-maximization target is now composite-per-GPU-second, not composite alone. Every family's value is re-weighted by throughput.
+
+**Throughput ground truth (measured 2026-07-16, exp_045 benchmark):** Qwen3-VL-8B col3 single pass = ~136 GPU-s/page avg (74 on 1885, 178 on dense 1910) — 5–26× over budget. Every ≥7B full-coverage pass is production-infeasible on 2×3090; 7–8B models remain useful only as oracle/GT/ensemble-reference sources. Production quality must come from F1 sub-1B models (Paddle ~10 GPU-s/page) + cheap layout (F3). Open lever: enforce_eager=False (CUDA graphs) could recover 2–3× on decode, still leaves 8B marginal at best.

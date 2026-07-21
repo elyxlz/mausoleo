@@ -1,0 +1,12 @@
+{"config": "exp_045_qwen3vl_vllm", "exp": 45, "score": 0.4615, "description": "Qwen3-VL structured-JSON OCR over column crops (vllm)", "reference": false, "n": 1}
+{"config": "exp_055_col6_ads_prompt", "exp": 55, "score": 0.4036, "description": "Qwen3-VL, 6-column split + ads-aware prompt", "reference": false, "n": 2}
+{"config": "exp_097_col4_qwen3vl_vllm", "exp": 97, "score": 0.3722, "description": "Qwen3-VL, 4-column split", "reference": false, "n": 3}
+{"config": "exp_102_fullpage_vllm", "exp": 102, "score": 0.1091, "description": "Qwen full-page, no column split \u2014 collapses on dense pages", "reference": false, "n": 4}
+{"config": "exp_107_fullpage_qwen25vl", "exp": 107, "score": 0.1162, "description": "Qwen2.5-VL full-page", "reference": false, "n": 5}
+{"config": "exp_138_col4_qwen25_vllm", "exp": 138, "score": 0.3113, "description": "Qwen2.5-VL, 4-column split", "reference": false, "n": 6}
+{"config": "exp_140_yolo_smallregion_vllm", "exp": 140, "score": 0.417, "description": "DocLayout-YOLO small regions + vllm OCR", "reference": false, "n": 7}
+{"config": "exp_142_col5_qwen25_vllm", "exp": 142, "score": 0.3111, "description": "Qwen2.5-VL, 5-column split", "reference": false, "n": 8}
+{"config": "exp_157_paddleocr_titles_squeeze", "exp": 157, "score": 0.1718, "description": "PaddleOCR-VL, YOLO-title headlines + char-run squeeze", "reference": false, "n": 9}
+{"config": "exp_160_ppdoclayout_headblocks", "exp": 160, "score": 0.3576, "description": "PP-DocLayoutV3 regions + consecutive-title head-block grouping", "reference": false, "n": 10}
+{"config": "ensemble_30min", "n": 0, "score": 0.5941, "description": "8-source recall oracle ensemble (GT-building tool, not production)", "name": "30min", "reference": true}
+{"config": "ensemble_prune5", "n": 0, "score": 0.5622, "description": "pruned 5-source oracle ensemble", "name": "prune5", "reference": true}
