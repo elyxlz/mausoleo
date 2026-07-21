@@ -154,6 +154,8 @@ def run_date(date: str) -> tuple[dict, int, float]:
     regions_per_page = [build_regions(boxes, i + 1) for i, boxes in enumerate(layout)]
     crops, flat = crop_regions(date, regions_per_page)
     texts, ocr_s = ocr_crops(crops)
+    for r, t in zip(flat, texts):
+        r["text"] = t
     clf = _train(exclude=date)
     starts = clf.predict(np.array(features(flat))).tolist()
     if flat:
