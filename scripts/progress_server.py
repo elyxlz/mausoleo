@@ -109,7 +109,6 @@ tbody tr:not(.rec) .cs{color:var(--ink2);font-weight:500}
       <span><span class=sw style="width:9px;height:9px;border-radius:50%;background:#c98500"></span>record</span>
       <span><span class=sw style="width:7px;height:7px;border-radius:50%;background:#5b6673"></span>attempt</span>
       <span><span class=sw style="width:18px;height:2px;background:#c98500"></span>best-so-far frontier</span>
-      <span><span class=sw style="width:18px;height:0;border-top:2px dashed #9085e9"></span>oracle ceiling</span>
     </div>
   </div>
   <svg id=chart viewBox="0 0 1040 400" role=img aria-label="MausoleoBench score versus experiment attempt"></svg>
@@ -158,11 +157,8 @@ function prepare(d){
 function renderStatus(){
   const A=view.attempts;
   const recs=A.filter(a=>a.record).length;
-  const refs=view.data.references||[];
-  const ceiling=refs.length?Math.max(...refs.map(r=>r.score)):null;
   statusEl.innerHTML='<b>'+A.length+'</b> attempts<span class=sep>·</span>best <b>'+f4(view.data.best||0)+'</b>'
-    +'<span class=sep>·</span><b>'+recs+'</b> records'
-    +(ceiling!=null?'<span class=sep>·</span>oracle ceiling <b>'+f4(ceiling)+'</b>':'');
+    +'<span class=sep>·</span><b>'+recs+'</b> records';
 }
 
 function tipHtml(a){
@@ -205,10 +201,9 @@ function bindHover(){
 
 function renderChart(){
   const A=view.attempts;
-  const refs=(view.data.references||[]).slice().sort((a,b)=>b.score-a.score);
   if(!A.length){chartEl.innerHTML='<text x="'+(W/2)+'" y="'+(H/2)+'" text-anchor="middle" fill="#75808c" font-size="13">no attempts yet</text>';return;}
   const minN=A[0].n,maxN=A[A.length-1].n;
-  const hi=Math.max(...A.map(a=>a.score).concat(refs.map(r=>r.score)));
+  const hi=Math.max(...A.map(a=>a.score));
   const yMax=Math.max(.8,Math.ceil((hi+.04)*10)/10);
   const xAt=v=>maxN===minN?(padL+W-padR)/2:padL+(v-minN)/(maxN-minN)*(W-padL-padR);
   const yAt=v=>padT+(1-v/yMax)*(H-padT-padB);
@@ -224,15 +219,6 @@ function renderChart(){
     P.push('<text x="'+rd(xAt(v))+'" y="'+(H-padB+18)+'" text-anchor="middle" fill="#75808c" font-size="11">'+v+'</text>');
   }
   P.push('<text x="'+rd((padL+W-padR)/2)+'" y="'+(H-8)+'" text-anchor="middle" fill="#75808c" font-size="11" letter-spacing=".06em">experiment attempt</text>');
-  let lastLabelY=-99;
-  refs.forEach(r=>{
-    const y=rd(yAt(r.score));
-    P.push('<line x1="'+padL+'" y1="'+y+'" x2="'+(W-padR)+'" y2="'+y+'" stroke="#9085e9" stroke-dasharray="6 5" opacity=".75"/>');
-    let ly=y-6;
-    if(Math.abs(ly-lastLabelY)<16)ly=y+16;
-    lastLabelY=ly;
-    P.push('<text x="'+(W-padR)+'" y="'+ly+'" text-anchor="end" fill="#9085e9" font-size="11">'+esc(r.name||r.config)+' · '+r.score.toFixed(3)+'</text>');
-  });
   const recs=A.filter(a=>a.record);
   if(recs.length){
     let p='M'+rd(xAt(recs[0].n))+' '+rd(yAt(recs[0].score));
