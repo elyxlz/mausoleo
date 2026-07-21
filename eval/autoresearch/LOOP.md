@@ -41,9 +41,10 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - **Fable domain-adaptation plan IN** (registry §F7): PaddleOCR-VL-1.6 is LoRA-fine-tunable (ms-swift); ranked plan + LOIO anti-overfit protocol recorded.
 
 
-## Queue — domain-adaptation amplifier (F7; naive fine-tune needs more data)
-1. **Synthetic period-Italian augmentation** (Fable building the pipeline): render 19-20c Italian text (Wikisource/Liber Liber, never eval) in period serif fonts, multi-column fragments + degradation (blur, bleed-through, skew, noise, JPEG); 20-50K crops mixed ~3:1 with real GT; retrain LoRA 6-fold LOIO. Directly fixes the small-data overfit. Cheap (rendering is CPU; training same ~30min/fold).
-2. **Cleaner labels** (Jaccard>=0.7) + gentler LoRA (lower LR/rank) — quicker variant if augmentation stalls.
-3. **Oracle-ensemble distillation** on non-eval corpus pages (highest ceiling, ~1.7 days teacher labeling; cleanest integrity — eval fully held out).
-- If all amplifiers fail to beat 0.4071, that is the practical budget-compliant ceiling for the specialized 0.9B model.
-- Anti-overfit: strict LOIO, GT-free probes on the 31 image-only 1943-07 issues, standard audit.
+## Current
+- **exp_013 augmented-fold go/no-go RUNNING** (waiter bj8xhdrjj, ~1-2h): synthetic period-Italian augmentation to fix exp_012's small-data overfit. Render 4000 degraded broadsheet-style crops from pre-1962 Gutenberg Italian (integrity-safe) + real GT (oversampled 25%), LoRA 1 epoch, test held-out 1935 vs base 0.430 AND un-augmented FT 0.436. Pipeline: synth_fetch_text.py / synth_render.py / ft_prepare_data_aug.py.
+
+## Queue
+1. **exp_013 verdict**: if augmented FT beats base 0.430 AND un-augmented 0.436 on held-out 1935 -> run full 6-fold augmented (likely NEW RECORD > 0.4071); scale synth 4K->20K if wCER moves. If no lift -> small-model fine-tuning near ceiling.
+2. If fine-tuning plateaus: oracle-ensemble distillation (bigger data, ~1.7 days teacher labeling on non-eval corpus) OR accept 0.4071 as practical ceiling + consolidate/ship exp_009.
+- Anti-overfit: strict LOIO; GT-free probe on the 31 image-only 1943-07 issues on any FT record; watch over-degradation->hallucination in predictions.
