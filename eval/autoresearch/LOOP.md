@@ -10,10 +10,12 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this is only
 - **Fresh slate (2026-07-21)**: composite_v2 board + exp_158–166 scripts archived. New experiments start at exp_167. Every full-6-issue run logs one line to `eval/autoresearch/mausoleobench_log.jsonl` (schema: `{n,config,exp,score,description,reference}`) → live graph `scripts/progress_server.py` (:8078, cloudflare tunnel). Append n = last n + 1; re-seed historical points with `scripts/seed_progress.py`.
 - Commit + push as you go; update `registry.md` every iteration.
 
-## State (2026-07-21) — fresh slate seeded
-- MausoleoBench re-scored all prior full-coverage configs. **Board: oracle 0.5941 · best real exp_045 (Qwen3-VL structured JSON) 0.4615 · exp_140 0.4170 · exp_160 0.3576.**
-- Key finding: MausoleoBench reshuffled the board — the quality gate discounts exp_160's high-recall/high-CER matches; the text-quality-first Qwen3-VL route now leads. Grouping (F3) is still the bottleneck; text quality (F5) is now the lever that pays.
-- Progress dashboard live (score vs attempt, record frontier, references = oracle ceilings; table of record-setters). Records so far: exp_045 only (it tops the historical set); the climb is 0.46 → 0.59 ceiling under budget.
+## State (2026-07-21) — fresh slate seeded, climb resumed
+- MausoleoBench re-scored all prior full-coverage configs. **Board: oracle 0.5941 · best real exp_045 (Qwen3-VL structured JSON) 0.4615 · exp_140 0.4170 · exp_167 0.3815 · exp_160 0.3576.**
+- Key finding: MausoleoBench reshuffled the board — the quality gate discounts exp_160's high-recall/high-CER matches; text quality (F5) is the lever that pays.
+- **exp_167 (attempt 11, trained boundary grouper) = 0.3815** — beats ex-production exp_160; recall jumped to 0.57–0.89 (grouping ~solved). Bottleneck moved grouping → text quality (region text is cheap PaddleOCR-VL, wCER 0.42–0.70).
+- **exp_168 RUNNING (GPU1)**: same trained-grouper boundaries but each region re-OCR'd with Qwen3-VL (F3×F5 graft) to test the text-quality headroom. Waiter+eval task `bxoe4ydl0` will report on completion. If it lifts toward 0.46+, text quality is confirmed as the lever and a cheap high-quality-text path is the next target (exp_168 itself is over budget at 8B/region).
+- Progress dashboard live (`scripts/progress_server.py` :8078 + cloudflare). Records so far: exp_045 (tops the historical set); climb is 0.46 → 0.59 ceiling under budget.
 
 ## Queue (in order)
 1. **exp_167 — trained boundary grouper (top F3 unblock).** Frame grouping as per-region "does region i START a new article?" sequence labeling. (a) `experiments/grouper_features.py` already builds features+labels by aligning the 6 GTs to `regions_<date>.json`. (b) Train a small classifier (gradient-boosted trees / tiny MLP — NOT an 8B LLM; inference ~0 cost). By-issue cross-validation (train 5, test held-out) to avoid fitting 6. (c) Wire as `experiments/exp_167_grouped.py`: PP-DocLayout regions + classifier boundaries + head-block merge; but feed the **Qwen3-VL region text** (F5 quality) not the low-quality path, since MausoleoBench pays for text. Evaluate 6 issues + eval_probes; log to the graph; compare vs exp_045 0.4615.
