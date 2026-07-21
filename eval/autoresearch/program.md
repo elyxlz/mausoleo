@@ -50,6 +50,13 @@ A high score riding on degraded probes, spam, or overgeneration is rejected, not
 3. **Unsupervised probes.** Before promoting a structural change, run it on a probe issue and confirm `scripts/research.py probe` numbers don't degrade.
 4. **Mechanism rule.** Every accepted change gets a one-line "why this generalizes" note in the log. No per-issue hyperparameters.
 
+## Research Toolbox
+The goal is the best MausoleoBench **within budget**; the constraint is speed, not creativity. Beyond model/prompt swaps, these are all in scope (still: never touch the eval, self-contained + independent, caller-measured, adversarial-reviewed):
+- **Speed-engineering** to make a strong approach fit ≤50 sec/page: quantization (awq/fp8/int8), batching/`max_num_seqs`, crop strategy (fewer/larger crops, resolution), persistent models, vllm flags.
+- **Train / distill** budget-fit models (the trained boundary grouper is one; distilling a strong OCR/segmentation model into a cheap one is on the table).
+- **Consult Fable** (subagent) for strategy, design, or hard implementation.
+- **Research online** (WebSearch/WebFetch) for approaches, model releases, techniques.
+
 ## Baseline
 Budget-compliant **record: exp_167 = 0.3815** (trained per-region boundary grouper over PP-DocLayout regions + PaddleOCR-VL text). Oracle references (not production, cost far over budget): `ensemble_30min` 0.5941, `ensemble_prune5` 0.5622.
 
