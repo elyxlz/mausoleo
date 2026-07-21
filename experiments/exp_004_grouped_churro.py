@@ -86,9 +86,10 @@ def _engine() -> tuple[tp.Any, tp.Any]:
         from transformers import AutoProcessor
         from vllm import LLM
 
-        _ENGINE["llm"] = LLM(model=MODEL, trust_remote_code=True, gpu_memory_utilization=0.90,
+        _ENGINE["llm"] = LLM(model=MODEL, trust_remote_code=True, gpu_memory_utilization=0.85,
                              max_model_len=8192, limit_mm_per_prompt={"image": 1}, dtype="bfloat16",
-                             enable_prefix_caching=False, seed=0)
+                             mm_processor_kwargs={"max_pixels": 1003520},
+                             enable_prefix_caching=False, max_num_seqs=8, seed=0)
         _ENGINE["proc"] = AutoProcessor.from_pretrained(MODEL, trust_remote_code=True)
     return _ENGINE["llm"], _ENGINE["proc"]
 
@@ -100,8 +101,8 @@ def ocr_crops(crops: list[Image.Image]) -> list[str]:
     prompts = []
     for img in crops:
         w, h = img.size
-        if max(w, h) > 1600:
-            s = 1600 / max(w, h)
+        if max(w, h) > 1280:
+            s = 1280 / max(w, h)
             img = img.resize((max(1, int(w * s)), max(1, int(h * s))))
         messages = [{"role": "system", "content": "You are an expert in diplomatic transcription of historical documents from various languages."},
                     {"role": "user", "content": [{"type": "image", "image": img},
