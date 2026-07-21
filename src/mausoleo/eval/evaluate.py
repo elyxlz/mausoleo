@@ -117,7 +117,7 @@ def match_articles(
             matches.append(
                 ArticleMatch(
                     gt_index=gi,
-                    gt_headline=gt_art.get("headline", ""),
+                    gt_headline=(gt_art.get("headline") or ""),
                     gt_chars=gt_chars,
                     pred_index=None,
                     pred_headline=None,
@@ -147,17 +147,17 @@ def match_articles(
             gt_norm = normalize_text(gt_t)
             pred_norm = normalize_text(pred_texts[best_pi])
 
-            gt_h = normalize_text(gt_art.get("headline", "").split("\n")[0])
-            pred_h = normalize_text(pred_art.get("headline", "").split("\n")[0] if pred_art.get("headline") else "")
+            gt_h = normalize_text((gt_art.get("headline") or "").split("\n")[0])
+            pred_h = normalize_text((pred_art.get("headline") or "").split("\n")[0])
             h_cer = compute_cer(gt_h, pred_h) if gt_h else 0.0
 
             matches.append(
                 ArticleMatch(
                     gt_index=gi,
-                    gt_headline=gt_art.get("headline", ""),
+                    gt_headline=(gt_art.get("headline") or ""),
                     gt_chars=gt_chars,
                     pred_index=best_pi,
-                    pred_headline=pred_art.get("headline", ""),
+                    pred_headline=(pred_art.get("headline") or ""),
                     cer=compute_cer(gt_norm, pred_norm),
                     wer=compute_wer(gt_norm, pred_norm),
                     headline_cer=h_cer,
@@ -171,7 +171,7 @@ def match_articles(
             matches.append(
                 ArticleMatch(
                     gt_index=gi,
-                    gt_headline=gt_art.get("headline", ""),
+                    gt_headline=(gt_art.get("headline") or ""),
                     gt_chars=gt_chars,
                     pred_index=None,
                     pred_headline=None,
