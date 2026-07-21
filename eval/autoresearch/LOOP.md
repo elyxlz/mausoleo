@@ -36,11 +36,15 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - Structure (article context + geometry) + specialized PaddleOCR-VL is the winning recipe; text quality saturated ~0.41.
 
 
-## Status: CONSOLIDATED at the budget-compliant ceiling
-- **RECORD / PRODUCTION: exp_009 = 0.4071** @ 8.66 sec/page (article-level OCR + PaddleOCR-VL + fill-ratio guard). Climb this slate: 0.3826 -> 0.3946 -> 0.4071.
-- **Solution space fully mapped.** Winning recipe: specialized PaddleOCR-VL + article context + geometry. Ruled out with data: all general VLMs + CHURRO (lose at any crop size); column-JSON (blobs); CLAHE (hurts); LoRA fine-tuning FRAGILE (naive overfits -0.003; synthetic hallucinates -0.130).
-- **Only untried high-ceiling lever: oracle-ensemble distillation** (real newspaper teacher labels on non-eval corpus pages, ~1 day teacher labeling; uncertain but real-domain SFT didn't hallucinate). This is a big resource decision — do NOT auto-launch; surface for Elio. Otherwise 0.4071 is the practical budget-compliant ceiling and exp_009 is the production pipeline.
+## Status: REOPENED by the 5x budget raise (cap 250 sec/page, 2026-07-22)
+- **RECORD: exp_009 = 0.4071** @ 8.66 sec/page (article-level OCR + PaddleOCR-VL + fill-guard).
+- **The 5x budget unlocks the Qwen3-VL-8B routes** that were DQ'd only on cost. Top opportunity to beat 0.4071:
+  1. **Revive exp_045** (Qwen3-VL-8B column-structured, archived MausoleoBench 0.4615 @ ~136 sec/page) — rebuild self-contained + caller-measure to confirm ≤250, log as the new budget-compliant record.
+  2. **exp_168** (8B per-region + grouper, 0.4342 @ ~150) — likewise.
+  3. **Complementary merge**: exp_045 ⊕ exp_168 oracle-selected to 0.525; the two-8B merge (0.5266) is ~286 (just over cap) — build a cheaper complementary-source merge that fits ≤250.
+- GOAL.md now states the objective (maximize MausoleoBench within budget). Elio is running /goal on it — /goal may drive from here; keep this queue in sync.
+- Still-untried ceiling lever: oracle-ensemble distillation. Ruled out: general VLMs/CHURRO lose; LoRA fine-tune fragile.
 
-## If continuing (Elio's call)
-1. **Oracle distillation** (the big lever): run ensemble_30min on ~200-300 decade-stratified NON-eval corpus pages (endeavour images, exclude 6 eval + 31 1943-07 probe dates) -> article-crop->oracle-text pairs -> LoRA PaddleOCR-VL (real-domain, more data). Watch for hallucination (meanCER, overgeneration) + 1943-07 probes.
-2. Else: consolidate/ship exp_009; no further cheap levers remain.
+## If the loop continues
+1. Revive exp_045 (8B column-structured) self-contained, caller-measured; if ≤250 and ~0.46 -> NEW RECORD (n=14). Then exp_168; then the complementary merge.
+2. Anti-overfit/adversarial review as always; budget via caller.
