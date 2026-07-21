@@ -39,11 +39,11 @@ def evaluate_config(config: str, dates: tp.Sequence[str]) -> dict[str, IssueResu
 def audit_report(config: str, results: dict[str, IssueResult], wall_s: float | None, pages: int) -> list[str]:
     lines: list[str] = []
     if len(results) == len(EVAL_DATES):
-        avg = sum(r.composite_score for r in results.values()) / len(results)
-        lines.append(f"avg composite: {avg:.4f}")
+        avg = sum(r.mausoleobench_score for r in results.values()) / len(results)
+        lines.append(f"avg MausoleoBench: {avg:.4f}")
     for date, r in results.items():
         lines.append(
-            f"{date}: comp={r.composite_score:.4f} wCER={r.weighted_cer:.3f} recall={r.article_recall:.3f}"
+            f"{date}: mbench={r.mausoleobench_score:.4f} wCER={r.weighted_cer:.3f} cer={r.mean_cer:.3f} gF1={r.article_gated_f1:.3f} recall={r.article_recall:.3f}"
             f" hCER={r.headline_cer:.3f} ord={r.ordering_score:.3f} pgacc={r.page_accuracy:.3f}"
             f" preds={r.total_pred_articles}/gt={r.total_gt_articles}"
         )
@@ -77,8 +77,8 @@ def holdout_rows(config: str) -> list[str]:
         gt_issue = json.loads(gt_path.read_text())
         pred_issue = json.loads(pred_path.read_text())
         tune, holdout = split_gt(gt_issue)
-        t = evaluate_issue(tune, pred_issue, config=config, date=date).composite_score
-        h = evaluate_issue(holdout, pred_issue, config=config, date=date).composite_score
+        t = evaluate_issue(tune, pred_issue, config=config, date=date).mausoleobench_score
+        h = evaluate_issue(holdout, pred_issue, config=config, date=date).mausoleobench_score
         tune_scores.append(t)
         holdout_scores.append(h)
         lines.append(f"{config:<45} {date:>10} tune={t:.4f} holdout={h:.4f} gap={h - t:+.4f}")
@@ -152,16 +152,25 @@ def cmd_eval(args: argparse.Namespace) -> None:
 
 def cmd_board(args: argparse.Namespace) -> None:
     configs = sorted({p.stem.replace(f"_{d}", "") for d in EVAL_DATES for p in PRED_DIR.glob(f"*_{d}.json")})
-    rows: list[tuple[float, str, str]] = []
+    n_dates = len(EVAL_DATES)
+    full: list[tuple[float, str, str]] = []
+    partial: list[tuple[int, str]] = []
     for config in configs:
         results = evaluate_config(config, EVAL_DATES)
         if not results:
             continue
-        avg = sum(r.composite_score for r in results.values()) / len(results)
-        detail = " ".join(f"{d[:4]}={r.composite_score:.3f}" for d, r in results.items())
-        rows.append((avg, config, detail))
-    for avg, config, detail in sorted(rows, reverse=True)[: args.top]:
+        detail = " ".join(f"{d[:4]}={results[d].mausoleobench_score:.3f}" if d in results else f"{d[:4]}=--" for d in EVAL_DATES)
+        if len(results) == n_dates:
+            avg = sum(r.mausoleobench_score for r in results.values()) / n_dates
+            full.append((avg, config, detail))
+        else:
+            partial.append((len(results), f"{config:<45} [{len(results)}/{n_dates}]  {detail}"))
+    for avg, config, detail in sorted(full, reverse=True)[: args.top]:
         print(f"{avg:.4f}  {config:<45} {detail}")
+    if partial:
+        print(f"\n-- partial coverage (not ranked) --")
+        for _, line in sorted(partial, reverse=True):
+            print(f"        {line}")
 
 
 def cmd_holdout(args: argparse.Namespace) -> None:
