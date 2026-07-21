@@ -17,16 +17,20 @@ def load_attempts() -> list[dict[str, tp.Any]]:
     return sorted(rows, key=lambda r: r["n"])
 
 
+BUDGET_CAP = 13.9
+
+
 def build_payload() -> dict[str, tp.Any]:
     rows = load_attempts()
     attempts = [r for r in rows if not r.get("reference")]
     references = [r for r in rows if r.get("reference")]
     best = 0.0
     for r in sorted(attempts, key=lambda r: r["n"]):
-        r["record"] = r["score"] > best + 1e-9
+        r["budget_ok"] = bool(r.get("budget_ok"))
+        r["record"] = r["budget_ok"] and r["score"] > best + 1e-9
         if r["record"]:
             best = r["score"]
-    return {"attempts": attempts, "references": references, "best": best}
+    return {"attempts": attempts, "references": references, "best": best, "budget_cap": BUDGET_CAP}
 
 
 PAGE = """<!doctype html><html lang=en><head><meta charset=utf-8>
