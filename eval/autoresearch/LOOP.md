@@ -45,6 +45,10 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - GOAL.md now states the objective (maximize MausoleoBench within budget). Elio is running /goal on it — /goal may drive from here; keep this queue in sync.
 - Still-untried ceiling lever: oracle-ensemble distillation. Ruled out: general VLMs/CHURRO lose; LoRA fine-tune fragile.
 
-## If the loop continues
-1. Revive exp_045 (8B column-structured) self-contained, caller-measured; if ≤250 and ~0.46 -> NEW RECORD (n=14). Then exp_168; then the complementary merge.
-2. Anti-overfit/adversarial review as always; budget via caller.
+## Current
+- **exp_014 RUNNING** (waiter boy3ozty5): reproduce the archived exp_045 column-structured 8B route SELF-CONTAINED + caller-measured, now in-budget at the 5x cap (250). Root-caused why my earlier exp_003 reconstruction failed (0.19): it used max_tokens=4096 which TRUNCATED dense columns -> only ~2 articles/column; exp_045 used max_tokens=8192 -> proper segmentation (142 articles/1910). exp_014 = exp_003 + max_tokens 8192. Target: reproduce ~0.4615 at ≤250 sec/page -> NEW RECORD over 0.4071. exp_003 was 65.65 sec/page at 4096; expect ~100-130 at 8192.
+
+## Queue
+1. **exp_014 verdict**: if it reproduces ~0.46 within 250 -> NEW budget-compliant RECORD (n=14); log + adversarial-review (the archived exp_045 per-issue: 1885 .369/1895 .171/1910 .654/1925 .675/1935 .407/1952 .494 — note 1895 is weak).
+2. Then exp_168 (8B per-region + grouper) properly self-contained; and a cheaper complementary merge (exp_045-route ⊕ grouper-route) targeting >0.46 within budget.
+3. Ceiling lever still open: oracle distillation.
