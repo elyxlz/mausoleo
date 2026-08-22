@@ -1,6 +1,6 @@
 # Mausoleo di Roma — OCR Autoresearch
 
-High-quality OCR of the Il Messaggero historical newspaper corpus (1880–1959, ~175K pages scraped as JPEGs on endeavour). The repo contains phase 1 (the OCR research loop) only; later phases (hierarchical index, search, agent CLI) are planned in `plan/` and will be rebuilt on top of the finished OCR corpus.
+High-quality OCR of the Il Messaggero historical newspaper corpus (1880–1959, ~175K pages scraped as JPEGs on endeavour). The repo contains phase 1 (the OCR research loop) only; later phases (hierarchical index, search, agent CLI) are planned in `plan/roadmap.md` and will be rebuilt on top of the finished OCR corpus.
 
 ## Layout
 
@@ -12,7 +12,7 @@ High-quality OCR of the Il Messaggero historical newspaper corpus (1880–1959, 
 - `eval/ground_truth/<date>/` — page images per issue, plus `ground_truth.json` for the 6 human-verified eval issues (1885-06-15, 1895-06-15, 1910-06-15, 1925-06-15, 1935-06-15, 1952-06-15). The 1943-07-* issues are images only.
 - `eval/predictions/` — one JSON per (experiment, date); `archive/` holds the outputs still cited by `registry.md`.
 - `scripts/` — `research.py` (eval / board / holdout / probe), `eval_probes.py` (pinned anti-gaming invariants), `time_experiment.sh` (caller-side budget measurement), `progress_server.py` (live board + prediction viewer, owns `BUDGET_CAP`), `review_server.py` (human GT review UI), `scrape_messaggero.py` (corpus acquisition).
-- `plan/` — roadmap for the later phases (hierarchical index, search & CLI, packaging).
+- `plan/roadmap.md` — the whole roadmap: product, all five phases, standing decisions.
 
 ## Rules
 
