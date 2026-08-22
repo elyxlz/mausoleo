@@ -6,7 +6,8 @@ import io
 import json
 import typing as tp
 
-from mausoleo.ocr.operators.base import BaseOperatorConfig, OperatorType, StatefulOperator, register_operator
+from mausoleo.ocr.operators.base import BaseOperatorConfig
+
 
 @dc.dataclass(frozen=True, kw_only=True)
 class VlmOcr(BaseOperatorConfig):
@@ -14,7 +15,6 @@ class VlmOcr(BaseOperatorConfig):
     prompt: str = ""
     max_tokens: int = 4096
     temperature: float = 0.0
-    gpu_fraction: float = 1.0
     gpu_memory_utilization: float = 0.92
     enforce_eager: bool = True
     max_pixels: int | None = None
@@ -24,8 +24,7 @@ class VlmOcr(BaseOperatorConfig):
     vllm_strict: bool = False
 
 
-@register_operator(VlmOcr, operation=OperatorType.MAP_BATCHES)
-class VlmOcrOperator(StatefulOperator[VlmOcr]):
+class VlmOcrOperator:
     def __init__(self, config: VlmOcr) -> None:
         self.config = config
         if config.mock:

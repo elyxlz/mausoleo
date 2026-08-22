@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import dataclasses as dc
-import json
 import re
 import typing as tp
 
@@ -228,13 +227,7 @@ def evaluate_issue(
     # ordering only over good matches so scrambled/garbage text can't earn it
     ordering = compute_ordering_score([m for m in matched if m.cer <= 0.5])
 
-    mausoleobench = (
-        0.40 * (1.0 - weighted_cer)
-        + 0.35 * gated_f1
-        + 0.05 * ordering
-        + 0.10 * (1.0 - mean_headline_cer)
-        + 0.10 * page_accuracy
-    )
+    mausoleobench = 0.40 * (1.0 - weighted_cer) + 0.35 * gated_f1 + 0.05 * ordering + 0.10 * (1.0 - mean_headline_cer) + 0.10 * page_accuracy
 
     return IssueResult(
         config=config,

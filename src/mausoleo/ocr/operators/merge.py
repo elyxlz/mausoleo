@@ -5,7 +5,7 @@ import json
 import re
 import typing as tp
 
-from mausoleo.ocr.operators.base import BaseOperatorConfig, OperatorType, register_operator
+from mausoleo.ocr.operators.base import BaseOperatorConfig
 
 
 def _strip_markdown(text: str) -> str:
@@ -112,7 +112,6 @@ def _attach_title_headlines(entries: list[CropEntry]) -> None:
             best[0]["headline"] = headline
 
 
-@register_operator(MergePages, operation=OperatorType.MAP)
 def merge_pages(row: dict[str, tp.Any], *, config: MergePages) -> dict[str, tp.Any]:
     page_texts: list[str] = json.loads(row["page_texts"])
 

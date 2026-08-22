@@ -6,7 +6,7 @@ import io
 import json
 import typing as tp
 
-from mausoleo.ocr.operators.base import BaseOperatorConfig, OperatorType, register_operator
+from mausoleo.ocr.operators.base import BaseOperatorConfig
 
 
 @dc.dataclass(frozen=True, kw_only=True)
@@ -17,7 +17,6 @@ class ColumnSplit(BaseOperatorConfig):
     footer_crop_pct: float = 0.02
 
 
-@register_operator(ColumnSplit, operation=OperatorType.MAP)
 def column_split(row: dict[str, tp.Any], *, config: ColumnSplit) -> dict[str, tp.Any]:
     if config.mock:
         return row

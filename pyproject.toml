@@ -12,18 +12,13 @@ dependencies = [
 
 [project.optional-dependencies]
 ocr = [
-    "ray[data]>=2.9.0",
     "Pillow>=10.0.0",
     "transformers>=4.40.0",
     "accelerate>=0.25.0",
     "torch>=2.0.0",
-    "qwen-vl-utils>=0.0.8",
 ]
 ocr-vllm = [
     "vllm>=0.4.0",
-]
-ocr-yolo = [
-    "ultralytics>=8.0.0",
 ]
 eval = [
     "jiwer>=3.0.0",
@@ -38,7 +33,6 @@ dev = [
     "pyright>=1.1.0",
     "ruff>=0.3.0",
     "ty>=0.0.1a1",
-    "ray[data]>=2.9.0",
     "jiwer>=3.0.0",
 ]
 
@@ -66,7 +60,7 @@ pythonVersion = "3.11"
 typeCheckingMode = "strict"
 venvPath = "."
 venv = ".venv"
-exclude = ["**/__pycache__", ".venv", "scripts/_archive", "configs/ocr/_archive", "eval/critics", "references", "user_data"]
+exclude = ["**/__pycache__", ".venv"]
 reportMissingImports = "warning"
 reportMissingTypeStubs = false
 reportUnknownMemberType = "warning"

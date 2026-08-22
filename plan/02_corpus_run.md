@@ -1,6 +1,6 @@
 # Phase 2: Corpus-Scale Production OCR Run
 
-> **STATUS 2026-07-17: not started, no driver yet.** Runs the production config (exp_157 lineage) over all ~29K issues (~175K pages). At 5.13 GPU-s/page a full pass is ~5.2 days on 2×3090 (budget cap 13.9 → ~2 weeks) — cheap enough to rerun, so plan for corpus versions: **v0** early to unblock phase 3, **v1+** as phase-1 quality improves.
+> **STATUS 2026-07-17: not started, no driver yet.** Runs the production config (exp_157 lineage) over all ~29K issues (~175K pages). At 5.13 sec/page a full pass is ~5.2 days on 2×3090 (budget cap 250.0) — cheap enough to rerun, so plan for corpus versions: **v0** early to unblock phase 3, **v1+** as phase-1 quality improves.
 
 ## Known concerns (solve when building, not before)
 

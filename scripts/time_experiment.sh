@@ -4,11 +4,12 @@
 # total wall seconds and wall seconds/page. The experiment itself does NOT measure budget.
 # Usage: time_experiment.sh experiments/<name>.py
 set -e
+cd "$(dirname "$0")/.."
 DATES="1885-06-15 1895-06-15 1910-06-15 1925-06-15 1935-06-15 1952-06-15"
-PAGES=42
-cd /home/audiogen/mausoleo_di_roma
+PAGES=$(for d in $DATES; do ls eval/ground_truth/"$d"/[0-9]*.jpeg; done | wc -l)
+CAP=$(sed -n 's/^BUDGET_CAP = \(.*\)$/\1/p' scripts/progress_server.py)
 TORCH_LIBS=$(.venv/bin/python -c "import os,torch;d=os.path.dirname(torch.__file__);print(os.path.join(d,'lib')+':'+os.path.join(d,'..','nvidia','cudnn','lib'))")
 start=$(date +%s.%N)
 CUDA_VISIBLE_DEVICES=1 LD_LIBRARY_PATH="$TORCH_LIBS:$LD_LIBRARY_PATH" PYTHONPATH=experiments:src .venv/bin/python "$1" $DATES
 end=$(date +%s.%N)
-awk -v s="$start" -v e="$end" -v p="$PAGES" 'BEGIN{w=e-s; printf "BUDGET wall_seconds=%.1f pages=%d sec_per_page=%.2f (cap 250.0)\n", w, p, w/p}'
+awk -v s="$start" -v e="$end" -v p="$PAGES" -v c="$CAP" 'BEGIN{w=e-s; printf "BUDGET wall_seconds=%.1f pages=%d sec_per_page=%.2f (cap %s)\n", w, p, w/p, c}'

@@ -4,7 +4,7 @@
 
 ## What phase 1 is now
 
-The autoresearch loop hillclimbing composite_v2 under the hard corpus budget (6.9–13.9 GPU-s/page steady-state on 2×3090). Experiments are self-contained scripts (`experiments/README.md`); the cycle runs via `scripts/research.py` (eval + audit + holdout + probe), one variable per experiment, everything logged. The legacy Ray harness survives only for the oracle ensembles and `exp_157`. Metrics and GT are never touched to improve a score.
+The autoresearch loop hillclimbing MausoleoBench under the hard corpus budget (cap 250.0 sec/page caller-measured on 2×3090). Experiments are self-contained scripts (`experiments/README.md`); the cycle runs via `scripts/research.py` (eval + audit + holdout + probe), one variable per experiment, everything logged. The legacy Ray harness was removed on 2026-08-22. Metrics and GT are never touched to improve a score.
 
 ## Status (2026-07-17, composite_v2)
 
@@ -14,11 +14,11 @@ The autoresearch loop hillclimbing composite_v2 under the hard corpus budget (6.
 | `ensemble_30min` | 0.7514 | ~600 | recall oracle (1.0/0.98), GT building |
 | `exp_157` Paddle-VL + YOLO titles | **0.4284** | **5.13** | production candidate, in budget |
 
-The production–oracle gap is **recall/segmentation** (exp_157 recall 0.36–0.49), not the accuracy of matched text. GT: **6 issues total, final size per Elio (2026-07-17)** — 2 human-verified (1885/1910-06-15) + 4 era-diverse drafts (1895/1925/1935/1952-06-15) in human review via `eval/tentative_gt/`. The 1925 issue is *Il Meridiano* (the publisher's Monday paper) — accepted. No issue-level held-out set (per Elio); anti-overfit protection stays at the article level (even/odd holdout halves) plus the 1943 GT-free probes.
+The production–oracle gap is **recall/segmentation** (exp_157 recall 0.36–0.49), not the accuracy of matched text. GT: **6 issues total, final size per Elio (2026-07-17)** — 2 human-verified (1885/1910-06-15) + 4 era-diverse drafts (1895/1925/1935/1952-06-15) promoted to full GT on 2026-07-21 via `scripts/review_server.py`. The 1925 issue is *Il Meridiano* (the publisher's Monday paper) — accepted. No issue-level held-out set (per Elio); anti-overfit protection stays at the article level (even/odd holdout halves) plus the 1943 GT-free probes.
 
 ## Ship bar for corpus v1 (proposed — needs Elio's sign-off)
 
-On the promoted 6-era GT set, one in-budget config with: composite_v2 ≥ 0.60 avg, ≥ 0.50 on every issue (no era collapse), recall ≥ 0.70 avg, ≤ 13.9 GPU-s/page, no probe degradation on the 1943 set. Rationale: phase 3 can summarize noisy text but never recovers articles OCR missed — recall losses are permanent. Corpus v0 may run before the bar (02_corpus_run.md). If the bar proves unreachable within budget, that's a product decision (relax bar vs budget), not something to paper over.
+On the promoted 6-era GT set, one in-budget config with: composite_v2 ≥ 0.60 avg, ≥ 0.50 on every issue (no era collapse), recall ≥ 0.70 avg, ≤ 250.0 sec/page, no probe degradation on the 1943 set. Rationale: phase 3 can summarize noisy text but never recovers articles OCR missed — recall losses are permanent. Corpus v0 may run before the bar (02_corpus_run.md). If the bar proves unreachable within budget, that's a product decision (relax bar vs budget), not something to paper over.
 
 ## Open bets (statuses in registry.md)
 

@@ -10,7 +10,7 @@ import typing as tp
 
 sys.path.insert(0, "src")
 
-from mausoleo.eval.evaluate import IssueResult, evaluate_issue
+from mausoleo.eval.evaluate import IssueResult, article_text, evaluate_issue
 
 GT_DIR = pl.Path("eval/ground_truth")
 PRED_DIR = pl.Path("eval/predictions")
@@ -98,10 +98,6 @@ def build_lexicon() -> frozenset[str]:
             for paragraph in article.get("paragraphs", []):
                 words.update(WORD_RE.findall(paragraph.get("text", "").lower()))
     return frozenset(words)
-
-
-def article_text(article: dict[str, tp.Any]) -> str:
-    return "\n".join(p.get("text", "") for p in article.get("paragraphs", []))
 
 
 def lexicon_validity(text: str, lexicon: frozenset[str]) -> float:

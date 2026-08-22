@@ -35,14 +35,15 @@ Every experiment is one self-contained Python script. No framework, no config re
 ## Rules (unchanged from program.md)
 
 - One variable per experiment relative to a named baseline.
-- Never read `eval/ground_truth/*/ground_truth.json` at inference; never re-emit another experiment's prediction file.
-- Evaluate with `scripts/research.py eval <exp_name>` (audit + holdout; also `holdout`/`probe`/`board` subcommands); throughput with `scripts/bench_throughput.py` where applicable — production candidates must report steady-state GPU-s/page vs the 6.9–13.9 budget.
-- Log every result to `eval/autoresearch/log.jsonl` with a mechanism line; update `registry.md`.
+- Never read `eval/ground_truth/*/ground_truth.json` at inference; never re-emit another experiment's prediction file; never import `mausoleo.eval`.
+- Evaluate with `scripts/research.py eval <exp_name>` (audit + holdout; also `holdout`/`probe`/`board` subcommands).
+- Budget is measured by the caller: `scripts/time_experiment.sh experiments/<name>.py` reports sec/page over the 6 eval issues. Cap = `BUDGET_CAP` in `scripts/progress_server.py` (250.0).
+- Log every result to `eval/autoresearch/mausoleobench_log.jsonl` with a mechanism line; update `registry.md` and `LOOP.md`.
 
 ## Reusable pieces (optional)
 
-`src/mausoleo/ocr/` is importable when convenient (`sys.path.insert(0, "src")`): `mausoleo.ocr.merge` (trim_predictions, merge_with_replacement, select_best_text), `mausoleo.ocr.prompts`, operators like `YoloCropOperator`, `MergePages`, `MergeMarkdownPages` — see `experiments/_template.py` for the direct-call pattern (no Ray). Using none of it is equally fine.
+`src/mausoleo/ocr/` is importable when convenient (`sys.path.insert(0, "src")`): `mausoleo.ocr.prompts`, `mausoleo.ocr.models`, and the operators (`column_split`, `merge_pages`, `parse_issue`, `VlmOcrOperator`) — all plain functions/classes called directly, no framework. See `experiments/exp_017_column8b_direct.py` for the direct-call pattern, or `_template.py` to start from scratch. Using none of it is equally fine.
 
-## Legacy harness
+## Archive
 
-`configs/ocr/` + `scripts/run_real_ocr.py` remain ONLY for the verified oracle ensembles (`ensemble_30min`, `ensemble_prune5`) and the production candidate (`exp_157`). New work goes here.
+`experiments/archive/` holds superseded experiment scripts, kept as the reproducible record behind the claims in `registry.md`. Some of them import modules that no longer exist; they are history, not runnable code.

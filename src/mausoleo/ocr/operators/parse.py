@@ -4,7 +4,7 @@ import dataclasses as dc
 import json
 import typing as tp
 
-from mausoleo.ocr.operators.base import BaseOperatorConfig, OperatorType, register_operator
+from mausoleo.ocr.operators.base import BaseOperatorConfig
 
 
 @dc.dataclass(frozen=True, kw_only=True)
@@ -104,7 +104,6 @@ def _build_issue_json(raw: str, date: str, source: str, page_count: int) -> str:
     return json.dumps(issue)
 
 
-@register_operator(ParseIssue, operation=OperatorType.MAP)
 def parse_issue(row: dict[str, tp.Any], *, config: ParseIssue) -> dict[str, tp.Any]:
     _ = config
     raw = row["result_json"]

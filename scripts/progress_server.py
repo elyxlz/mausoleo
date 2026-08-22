@@ -17,7 +17,7 @@ def load_attempts() -> list[dict[str, tp.Any]]:
     if not LOG.exists():
         return []
     rows = [json.loads(line) for line in LOG.read_text().splitlines() if line.strip()]
-    return sorted(rows, key=lambda r: r["n"])
+    return sorted(rows, key=lambda r: r.get("n") or 0)
 
 
 BUDGET_CAP = 250.0
@@ -29,7 +29,7 @@ def build_payload() -> dict[str, tp.Any]:
     references = [r for r in rows if r.get("reference")]
     best = 0.0
     for r in sorted(attempts, key=lambda r: r["n"]):
-        cost = r.get("gpu_s_per_page")
+        cost = r.get("sec_per_page")
         r["budget_ok"] = cost is not None and cost <= BUDGET_CAP
         r["record"] = r["budget_ok"] and r["score"] > best + 1e-9
         if r["record"]:
@@ -229,7 +229,7 @@ function renderStatus(){
 }
 
 function costHtml(a){
-  const cost=fmtCost(a.gpu_s_per_page);
+  const cost=fmtCost(a.sec_per_page);
   if(!a.budget_ok)return '<div class="tipcost bad">'+(cost?cost+' · ':'')+'over budget · disqualified</div>';
   return cost?'<div class=tipcost>'+cost+' · within budget</div>':'';
 }
@@ -321,7 +321,7 @@ function renderChart(){
 }
 
 function costCell(a){
-  const cost=fmtCost(a.gpu_s_per_page);
+  const cost=fmtCost(a.sec_per_page);
   if(!a.budget_ok)return '<td class=cg>'+(cost?cost:'')+'<span class=dqtag>'+(cost?' · ':'')+'over budget · disqualified</span></td>';
   return '<td class=cg>'+(cost?cost:'<span class=nil>—</span>')+'</td>';
 }

@@ -23,7 +23,7 @@ DATES = ["1885-06-15", "1895-06-15", "1910-06-15", "1925-06-15", "1935-06-15", "
 
 _COLUMNS = ColumnSplit(num_columns=3, overlap_pct=0.03)
 _VLM = VlmOcr(model=QWEN3, prompt=prompts.VLM_OCR_STRUCTURED_V2, backend="vllm",
-              max_tokens=8192, max_model_len=12288, gpu_fraction=1.0,
+              max_tokens=8192, max_model_len=12288,
               gpu_memory_utilization=0.92, vllm_strict=False)
 _MERGE = MergePages()
 _PARSE = ParseIssue()

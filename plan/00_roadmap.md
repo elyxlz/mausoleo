@@ -1,6 +1,6 @@
 # Mausoleo di Roma — Project Roadmap
 
-Updated 2026-07-17. Strategic map only; live OCR research state is in `eval/autoresearch/` (program.md, registry.md, log.jsonl).
+Updated 2026-08-22. Strategic map only; live OCR research state is in `eval/autoresearch/` (program.md, registry.md, LOOP.md, mausoleobench_log.jsonl).
 
 ## Product
 
@@ -30,11 +30,11 @@ The production–oracle gap is recall/segmentation; closing it is phase 1's whol
 
 ## What we learnt (2026-07, supersedes earlier assumptions)
 
-- **Compute budget is the binding constraint**: 6.9–13.9 GPU-s/page on 2×3090. Any ≥7B full-coverage pass is 5–26× over budget; production quality comes from sub-1B OCR + cheap layout.
+- **Compute budget is the binding constraint**: cap 250.0 sec/page caller-measured on 2×3090 (target 103.5), raised 5× on 2026-07-22 from the earlier 6.9–13.9 GPU-s/page regime. The raise made 8B column routes affordable; the cheapest good route is still sub-1B OCR + cheap layout.
 - **Eval must charge spam** — composite_v2; metric changes only via documented reward-hacking audits.
 - **Big ensembles are oracles, not products** — GT building and upper bounds only.
 - **Structure comes from layout, not the OCR model** — specialized OCR emits no headings on newspapers; YOLO title regions provide segmentation. Long-horizon multi-page parsing is BLOCKED.
-- **Experiments are self-contained scripts**; legacy Ray harness only for oracles + exp_157.
+- **Experiments are self-contained scripts**; the legacy Ray harness was removed on 2026-08-22 (oracle numbers survive in the log and `eval/predictions/archive/`).
 - **Rerunning the corpus is cheap (~1 week)** — everything downstream must survive a re-OCR with a version bump.
 
 ## Key decisions still standing
