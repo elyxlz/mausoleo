@@ -31,7 +31,7 @@ Prioritized queue (details in LOOP.md): **E1** cheapen the 0.46 column route (ba
 3. **Distill oracle (0.594) → PaddleOCR-VL** on non-eval corpus pages (teacher labels; ~1.7 days for 500 pages). Cleanest integrity (eval never touched). Student backup: lightonai/LightOnOCR-2-1B.
 4. **ByT5 post-OCR corrector** (stacks, +1–2 sec/page; watch fluent-hallucination via edit-distance caps).
 
-**Anti-overfit protocol (mandatory for every fine-tune)**: strict LOIO (score for issue X only from the fold excluding X); cross-decade split (train 1885/1895/1910 → test 1935/1952 & reverse); GT-free probes on the **31 image-only 1943-07 issues** in eval/ground_truth/ (lexicon hit, LM perplexity, blob/repetition rate) — never sample 1943-07 for teacher labels; standard matcher-gaming audit.
+**Anti-overfit protocol (mandatory for every fine-tune)**: strict LOIO (score for issue X only from the fold excluding X); cross-decade split (train 1885/1895/1910 → test 1935/1952 & reverse); GT-free probes on the **5 image-only 1943-07 issues** in eval/ground_truth/ (01, 08, 15, 22, 31) (lexicon hit, LM perplexity, blob/repetition rate) — never sample 1943-07 for teacher labels; standard matcher-gaming audit.
 
 ## Cross-cutting
 MausoleoBench scores text-quality × correct-segmentation jointly. Segmentation is solved cheaply (F3 trained grouper); text-quality within budget saturated at ~0.41 via specialized PaddleOCR-VL + article context (F5). The remaining headroom is **F7 domain adaptation** (fine-tune/distill PaddleOCR-VL on historical Italian) — the path toward the 0.594 oracle.
