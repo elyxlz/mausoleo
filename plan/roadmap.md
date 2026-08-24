@@ -57,17 +57,29 @@ Standing decisions: 7-level tree Paragraph → Article → Day → Month → Yea
 
 **Open questions:** summarization + embedding GPU budget (~1.5M article summaries) and model choice, measured with the same discipline as the OCR budget; ClickHouse vector/FTS indexing specifics.
 
-## Phase 4 — Agent navigation, API + CLI/MCP (LATER)
+## Phase 4 — Navigation service, API + CLI/MCP + web (LATER)
 
-Standing decisions: agent-first (the only user is an LLM agent; every interface returns structured JSON, no human formatting); MCP first-class alongside a typer CLI, both thin layers over one FastAPI + ClickHouse service; core operations node / children / parent / text / root / semantic search / keyword search / stats, with level and date-range filters; tool descriptions ship with the server and get iterated against real agent transcripts; deployment is a single `docker compose up` (server + ClickHouse, DB never exposed).
+Standing decisions: **one Rust service over ClickHouse is the single source of truth** (per Elio, 2026-08-24 — replaces the earlier FastAPI decision). Every client is a thin layer over it: MCP first-class, a CLI, and a public website. Core operations node / children / parent / text / root / semantic search / keyword search / stats, with level and date-range filters. Tool descriptions ship with the server and get iterated against real agent transcripts. Deployment is a single `docker compose up` (server + ClickHouse, DB never exposed).
+
+**Two audiences, one retrieval path.** The API returns structured JSON only — no human formatting — but humans are now first-class users via the website (see phase 5). The website is a client of the same service; it must never grow a second query path or a private RAG pipeline, or the two will drift. The site's natural-language answers are an LLM agent driving the same tools an external agent would, which makes the tool surface self-testing.
+
+**Why Rust:** the workload is read-only, embarrassingly cacheable, and latency-sensitive at ~1.5M article nodes plus several M paragraph nodes; a compiled service with a real type system suits a long-lived index server, and the ClickHouse client and MCP/HTTP layers are mature enough. The Python side of the repo stays what it is — OCR, eval, GT tooling — and does not become a runtime dependency of the service.
 
 **Exit:** an LLM agent answers the benchmark queries — "tell me everything about the Pichinon family", "how did the collective consciousness of ordinary Romans change during fascism?", "interesting restaurant stories from Trastevere" — reaching primary-source paragraphs in a reasonable number of tool calls.
 
 **Open questions:** is hybrid search needed, or do semantic + keyword suffice; response shapes and pagination — decide from real agent transcripts, not upfront.
 
-## Phase 5 — Distribution (STUB)
+## Phase 5 — Public website + distribution (STUB)
 
-The value is the **built index over Il Messaggero**, not the code. Candidate forms (likeliest = hosted service + data release): hosted phase-4 API/MCP endpoint; self-host bundle (docker compose + index dump, tens of GB with embeddings); data release of the raw OCR corpus (Issue JSONs, low GB); code release (documentation value only, unusable without the corpus + GPUs).
+The value is the **built index over Il Messaggero**, not the code.
+
+**Website (per Elio, 2026-08-24).** A public site where people ask questions and get answers, navigate the hierarchical tree, and read individual issues. It is a client of the phase-4 Rust service, not a second backend.
+- **Server-rendered, not an SPA.** ~1.5M article-level pages of primary source text that exists nowhere else on the open web; individually addressable server-rendered pages are how historians find the archive at all. A client-only app makes that invisible to crawlers.
+- **URLs come free from the ID scheme**: `1923-03-15_a01_p02` maps to `/issue/1923-03-15`, `/article/1923-03-15_a01`, `/year/1923`. Stable, guessable, already designed.
+- **IIIF for page images** — the digitised-archive standard: a IIIF Image API endpoint plus OpenSeadragon gives tiled deep zoom over broadsheets, Presentation manifests make the collection interoperable with existing digital-humanities tooling, and it solves serving ~175K large JPEGs. Choosing it later means redoing the image path.
+- Read-only and version-pinned: the site serves an immutable index for a corpus version, so it caches aggressively, has no write path, and needs no auth for browsing.
+
+Other forms (likeliest = hosted service + data release): hosted phase-4 API/MCP endpoint; self-host bundle (docker compose + index dump, tens of GB with embeddings); data release of the raw OCR corpus (Issue JSONs, low GB); code release (documentation value only, unusable without the corpus + GPUs).
 
 **Decide before investing anything:** rights (can OCR text/summaries of Il Messaggero 1880–1959 be republished? early decades likely public domain, 1940s–50s unclear — this decides hosted-private vs open-data); audience (historians, agent developers, both?); corpus versioning (any public artifact pins a corpus + index version; rebuilds must not silently change published data).
 
@@ -75,7 +87,8 @@ Deliberately not planned: pip-installable pipeline library, generic multi-archiv
 
 ## Key decisions still standing
 
-- All agent-facing output is structured JSON; MCP first-class.
+- All API output is structured JSON; MCP first-class. Humans are served by a website that is a CLIENT of that API, never a second backend.
+- The navigation service is **Rust**; Python stays confined to OCR, eval and GT tooling.
 - Newspaper-specific for now; a generic multi-archive system is future work.
 - Big ensembles are oracles, not products — GT building and upper bounds only.
 - Structure comes from layout, not the OCR model — specialized OCR emits no headings on newspapers.
