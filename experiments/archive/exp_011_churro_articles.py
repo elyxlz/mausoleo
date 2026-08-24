@@ -43,7 +43,18 @@ for path in pages:
 print(json.dumps(results))
 """
 TITLE_LABELS = {"doc_title", "paragraph_title", "title"}
-TEXT_LABELS = {"text", "paragraph_title", "doc_title", "title", "abstract", "content", "figure_title", "table_title", "chart_title", "vision_footnote"}
+TEXT_LABELS = {
+    "text",
+    "paragraph_title",
+    "doc_title",
+    "title",
+    "abstract",
+    "content",
+    "figure_title",
+    "table_title",
+    "chart_title",
+    "vision_footnote",
+}
 
 
 def _pages(date: str) -> list[pl.Path]:
@@ -51,8 +62,7 @@ def _pages(date: str) -> list[pl.Path]:
 
 
 def detect_layout(page_paths: list[str]) -> list[list[dict[str, tp.Any]]]:
-    proc = subprocess.run([str(PADDLE_PYTHON), "-c", LAYOUT_SCRIPT], input=json.dumps(page_paths),
-                          capture_output=True, text=True, timeout=1800)
+    proc = subprocess.run([str(PADDLE_PYTHON), "-c", LAYOUT_SCRIPT], input=json.dumps(page_paths), capture_output=True, text=True, timeout=1800)
     if proc.returncode != 0:
         raise RuntimeError(f"layout failed:\n{proc.stderr[-3000:]}")
     return json.loads(proc.stdout.strip().splitlines()[-1])
@@ -87,9 +97,17 @@ def crop_regions(date: str, regions_per_page: list[list[dict[str, tp.Any]]]) -> 
 def _load_paddle() -> None:
     from transformers import AutoProcessor
     from vllm import LLM
-    _ENGINE["llm"] = LLM(model=PADDLE_MODEL, trust_remote_code=True, gpu_memory_utilization=0.85,
-                         max_model_len=16384, limit_mm_per_prompt={"image": 1}, dtype="bfloat16",
-                         enable_prefix_caching=False, seed=0)
+
+    _ENGINE["llm"] = LLM(
+        model=PADDLE_MODEL,
+        trust_remote_code=True,
+        gpu_memory_utilization=0.85,
+        max_model_len=16384,
+        limit_mm_per_prompt={"image": 1},
+        dtype="bfloat16",
+        enable_prefix_caching=False,
+        seed=0,
+    )
     _ENGINE["proc"] = AutoProcessor.from_pretrained(PADDLE_MODEL, trust_remote_code=True)
     _ENGINE["prompt"] = "OCR:"
     _ENGINE["cap"] = 1600
@@ -98,18 +116,30 @@ def _load_paddle() -> None:
 def _load_churro() -> None:
     from transformers import AutoProcessor
     from vllm import LLM
-    _ENGINE["llm"] = LLM(model=CHURRO_MODEL, trust_remote_code=True, gpu_memory_utilization=0.85,
-                         max_model_len=8192, limit_mm_per_prompt={"image": 1}, dtype="bfloat16",
-                         mm_processor_kwargs={"max_pixels": 2300000}, enable_prefix_caching=False,
-                         max_num_seqs=8, seed=0)
+
+    _ENGINE["llm"] = LLM(
+        model=CHURRO_MODEL,
+        trust_remote_code=True,
+        gpu_memory_utilization=0.85,
+        max_model_len=8192,
+        limit_mm_per_prompt={"image": 1},
+        dtype="bfloat16",
+        mm_processor_kwargs={"max_pixels": 2300000},
+        enable_prefix_caching=False,
+        max_num_seqs=8,
+        seed=0,
+    )
     _ENGINE["proc"] = AutoProcessor.from_pretrained(CHURRO_MODEL, trust_remote_code=True)
-    _ENGINE["prompt"] = "Transcribe all the text in reading order exactly as printed, preserving the original spelling. Output only the transcription."
+    _ENGINE["prompt"] = (
+        "Transcribe all the text in reading order exactly as printed, preserving the original spelling. Output only the transcription."
+    )
     _ENGINE["cap"] = 2000
     _ENGINE["sys"] = "You are an expert in diplomatic transcription of historical documents from various languages."
 
 
 def _free_engine() -> None:
     import torch
+
     for k in ("llm", "proc", "prompt", "cap", "sys"):
         _ENGINE.pop(k, None)
     gc.collect()
@@ -118,6 +148,7 @@ def _free_engine() -> None:
 
 def ocr_crops(crops: list[Image.Image]) -> list[str]:
     from vllm import SamplingParams
+
     llm, proc, prompt, cap = _ENGINE["llm"], _ENGINE["proc"], _ENGINE["prompt"], _ENGINE["cap"]
     sys_msg = _ENGINE.get("sys")
     prompts = []
@@ -128,8 +159,9 @@ def ocr_crops(crops: list[Image.Image]) -> list[str]:
             img = img.resize((max(1, int(w * s)), max(1, int(h * s))))
         content = [{"type": "image", "image": img}, {"type": "text", "text": prompt}]
         messages = ([{"role": "system", "content": sys_msg}] if sys_msg else []) + [{"role": "user", "content": content}]
-        prompts.append({"prompt": proc.apply_chat_template(messages, tokenize=False, add_generation_prompt=True),
-                        "multi_modal_data": {"image": img}})
+        prompts.append(
+            {"prompt": proc.apply_chat_template(messages, tokenize=False, add_generation_prompt=True), "multi_modal_data": {"image": img}}
+        )
     outputs = llm.generate(prompts, SamplingParams(temperature=0.0, max_tokens=2048))
     return [o.outputs[0].text.strip() for o in outputs]
 
@@ -170,8 +202,10 @@ def _article_crops(date: str, flat: list[dict], groups: list[list[int]]) -> tupl
         for page, boxes in sorted(by_page.items()):
             img = page_img[page]
             pad = 12
-            x1 = max(0, min(b[0] for b in boxes) - pad); y1 = max(0, min(b[1] for b in boxes) - pad)
-            x2 = min(img.width, max(b[2] for b in boxes) + pad); y2 = min(img.height, max(b[3] for b in boxes) + pad)
+            x1 = max(0, min(b[0] for b in boxes) - pad)
+            y1 = max(0, min(b[1] for b in boxes) - pad)
+            x2 = min(img.width, max(b[2] for b in boxes) + pad)
+            y2 = min(img.height, max(b[3] for b in boxes) + pad)
             crops.append(img.crop((x1, y1, x2, y2)))
             cmap.append((gi, page))
     return crops, cmap
@@ -180,18 +214,18 @@ def _article_crops(date: str, flat: list[dict], groups: list[list[int]]) -> tupl
 def _assemble(flat, groups, region_texts, group_text, group_pages) -> list[dict]:
     articles: list[dict] = []
     for gi, grp in enumerate(groups):
-        title = next((region_texts[idx].strip() for idx in grp
-                      if flat[idx]["class"] == "title" and region_texts[idx].strip()), None)
+        title = next((region_texts[idx].strip() for idx in grp if flat[idx]["class"] == "title" and region_texts[idx].strip()), None)
         art_text = "\n".join(x for x in group_text.get(gi, []) if x)
-        region_concat = "\n".join(region_texts[idx].strip() for idx in grp
-                                  if region_texts[idx].strip() and region_texts[idx].strip() != title)
+        region_concat = "\n".join(region_texts[idx].strip() for idx in grp if region_texts[idx].strip() and region_texts[idx].strip() != title)
         gb: dict[int, list] = {}
         for idx in grp:
             gb.setdefault(flat[idx]["page"], []).append(flat[idx]["bbox"])
         fills = []
         for boxes in gb.values():
-            ux1 = min(b[0] for b in boxes); uy1 = min(b[1] for b in boxes)
-            ux2 = max(b[2] for b in boxes); uy2 = max(b[3] for b in boxes)
+            ux1 = min(b[0] for b in boxes)
+            uy1 = min(b[1] for b in boxes)
+            ux2 = max(b[2] for b in boxes)
+            uy2 = max(b[3] for b in boxes)
             uarea = max(1, (ux2 - ux1) * (uy2 - uy1))
             rarea = sum((b[2] - b[0]) * (b[3] - b[1]) for b in boxes)
             fills.append(rarea / uarea)
@@ -202,8 +236,14 @@ def _assemble(flat, groups, region_texts, group_text, group_pages) -> list[dict]
         if not text.strip():
             continue
         pgs = sorted(group_pages.get(gi, {flat[grp[0]]["page"]}))
-        articles.append({"unit_type": "article", "headline": title, "paragraphs": [{"text": text}],
-                         "page_span": [pgs[0], pgs[-1]] if len(pgs) > 1 else [pgs[0]]})
+        articles.append(
+            {
+                "unit_type": "article",
+                "headline": title,
+                "paragraphs": [{"text": text}],
+                "page_span": [pgs[0], pgs[-1]] if len(pgs) > 1 else [pgs[0]],
+            }
+        )
     return articles
 
 
@@ -239,7 +279,8 @@ def main() -> None:
             group_pages.setdefault(gi, set()).add(page)
         articles = _assemble(st["flat"], st["groups"], st["region_texts"], group_text, group_pages)
         (PRED_DIR / f"exp_011_churro_articles_{date}.json").write_text(
-            json.dumps({"date": date, "source": "exp_011_churro_articles", "articles": articles}, ensure_ascii=False))
+            json.dumps({"date": date, "source": "exp_011_churro_articles", "articles": articles}, ensure_ascii=False)
+        )
         print(f"{date}: {len(articles)} articles (churro phase)", flush=True)
 
 

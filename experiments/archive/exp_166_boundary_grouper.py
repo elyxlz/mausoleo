@@ -69,8 +69,9 @@ def _page_prompt(regions: list[dict[str, tp.Any]]) -> str:
     lines = []
     for r in regions:
         text = " ".join(r["text"].split())[:100]
-        lines.append(f'{r["idx"]} | {r["class"]} | y{r["bbox"][1]}-{r["bbox"][3]} | {text}')
+        lines.append(f"{r['idx']} | {r['class']} | y{r['bbox'][1]}-{r['bbox'][3]} | {text}")
     return PROMPT_HEADER + "\n".join(lines) + "\n\nJSON:"
+
 
 def _parse_groups(raw: str) -> list[dict[str, tp.Any]] | None:
     raw = raw.strip()
@@ -96,8 +97,10 @@ def _fallback_groups(regions: list[dict[str, tp.Any]]) -> list[dict[str, tp.Any]
     current: dict[str, tp.Any] | None = None
     for r in regions:
         if r["class"] == "title":
-            if current is not None and current["headline_region"] is not None and len(current["regions"]) == sum(
-                1 for i in current["regions"] if i in current.get("_titles", set())
+            if (
+                current is not None
+                and current["headline_region"] is not None
+                and len(current["regions"]) == sum(1 for i in current["regions"] if i in current.get("_titles", set()))
             ):
                 current["regions"].append(r["idx"])
                 current.setdefault("_titles", set()).add(r["idx"])
@@ -192,7 +195,9 @@ def cmd_group(date: str) -> None:
     out_path = WORK_DIR / f"groups_boundary_{date}.json"
     out_path.write_text(json.dumps(all_groups, indent=1))
     n_pages = len(by_page)
-    print(f"{date}: {len(all_groups)} groups, {fallbacks} fallback pages | grouping {elapsed:.1f}s = {elapsed / n_pages:.2f} s/page -> {out_path}")
+    print(
+        f"{date}: {len(all_groups)} groups, {fallbacks} fallback pages | grouping {elapsed:.1f}s = {elapsed / n_pages:.2f} s/page -> {out_path}"
+    )
 
 
 def cmd_assemble(date: str) -> None:
@@ -226,7 +231,9 @@ def cmd_assemble(date: str) -> None:
         if not paragraphs:
             paragraphs = [{"text": headline}]
         page_span = sorted({regions[i]["page"] for i in idxs})
-        articles.append({"unit_type": group.get("unit_type", "article"), "headline": headline, "paragraphs": paragraphs, "page_span": page_span})
+        articles.append(
+            {"unit_type": group.get("unit_type", "article"), "headline": headline, "paragraphs": paragraphs, "page_span": page_span}
+        )
 
     for idx, art in enumerate(articles):
         art["id"] = f"{date}_a{idx:02d}"

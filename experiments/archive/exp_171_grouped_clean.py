@@ -44,9 +44,14 @@ def _group(regions: list[dict], starts: list[int]) -> list[dict]:
         body = [r for r in cur if not (r["class"] == "title" and clean_text(r["text"]) == title)]
         text = "\n".join(clean_text(r["text"]) for r in (body or cur) if clean_text(r["text"]))
         pages = sorted({r["page"] for r in cur})
-        articles.append({"unit_type": "article", "headline": title,
-                         "paragraphs": [{"text": text}],
-                         "page_span": [pages[0], pages[-1]] if len(pages) > 1 else [pages[0]]})
+        articles.append(
+            {
+                "unit_type": "article",
+                "headline": title,
+                "paragraphs": [{"text": text}],
+                "page_span": [pages[0], pages[-1]] if len(pages) > 1 else [pages[0]],
+            }
+        )
 
     for r, s in zip(regions, starts):
         if s and cur:
@@ -68,7 +73,7 @@ def predict_issue(date: str) -> dict:
 
 
 def main() -> None:
-    for date in (sys.argv[1:] or list(DATES)):
+    for date in sys.argv[1:] or list(DATES):
         pred = predict_issue(date)
         out = PRED_DIR / f"exp_171_grouped_clean_{date}.json"
         out.write_text(json.dumps(pred, ensure_ascii=False))

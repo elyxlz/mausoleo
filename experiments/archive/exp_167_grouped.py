@@ -39,12 +39,14 @@ def _group_regions(regions: list[dict[str, tp.Any]], starts: list[int]) -> list[
         body = [r for r in cur if not (r["class"] == "title" and r["text"].strip() == title)]
         text = "\n".join(r["text"].strip() for r in (body or cur) if r["text"].strip())
         pages = sorted({r["page"] for r in cur})
-        articles.append({
-            "unit_type": "article",
-            "headline": title,
-            "paragraphs": [{"text": text}],
-            "page_span": [pages[0], pages[-1]] if len(pages) > 1 else [pages[0]],
-        })
+        articles.append(
+            {
+                "unit_type": "article",
+                "headline": title,
+                "paragraphs": [{"text": text}],
+                "page_span": [pages[0], pages[-1]] if len(pages) > 1 else [pages[0]],
+            }
+        )
 
     for r, s in zip(regions, starts):
         if s and cur:

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import io
 import json
 import pathlib as pl
 import subprocess
@@ -39,7 +38,18 @@ print(json.dumps(results))
 """
 
 TITLE_LABELS = {"doc_title", "paragraph_title", "title"}
-TEXT_LABELS = {"text", "paragraph_title", "doc_title", "title", "abstract", "content", "figure_title", "table_title", "chart_title", "vision_footnote"}
+TEXT_LABELS = {
+    "text",
+    "paragraph_title",
+    "doc_title",
+    "title",
+    "abstract",
+    "content",
+    "figure_title",
+    "table_title",
+    "chart_title",
+    "vision_footnote",
+}
 _ENGINE: dict[str, tp.Any] = {}
 
 
@@ -48,8 +58,7 @@ def _pages(date: str) -> list[pl.Path]:
 
 
 def detect_layout(page_paths: list[str]) -> list[list[dict[str, tp.Any]]]:
-    proc = subprocess.run([str(PADDLE_PYTHON), "-c", LAYOUT_SCRIPT], input=json.dumps(page_paths),
-                          capture_output=True, text=True, timeout=1800)
+    proc = subprocess.run([str(PADDLE_PYTHON), "-c", LAYOUT_SCRIPT], input=json.dumps(page_paths), capture_output=True, text=True, timeout=1800)
     if proc.returncode != 0:
         raise RuntimeError(f"layout failed:\n{proc.stderr[-3000:]}")
     return json.loads(proc.stdout.strip().splitlines()[-1])
@@ -86,10 +95,18 @@ def _engine() -> tuple[tp.Any, tp.Any]:
         from transformers import AutoProcessor
         from vllm import LLM
 
-        _ENGINE["llm"] = LLM(model=MODEL, trust_remote_code=True, gpu_memory_utilization=0.85,
-                             max_model_len=8192, limit_mm_per_prompt={"image": 1}, dtype="bfloat16",
-                             mm_processor_kwargs={"max_pixels": 1003520},
-                             enable_prefix_caching=False, max_num_seqs=8, seed=0)
+        _ENGINE["llm"] = LLM(
+            model=MODEL,
+            trust_remote_code=True,
+            gpu_memory_utilization=0.85,
+            max_model_len=8192,
+            limit_mm_per_prompt={"image": 1},
+            dtype="bfloat16",
+            mm_processor_kwargs={"max_pixels": 1003520},
+            enable_prefix_caching=False,
+            max_num_seqs=8,
+            seed=0,
+        )
         _ENGINE["proc"] = AutoProcessor.from_pretrained(MODEL, trust_remote_code=True)
     return _ENGINE["llm"], _ENGINE["proc"]
 
@@ -104,11 +121,22 @@ def ocr_crops(crops: list[Image.Image]) -> list[str]:
         if max(w, h) > 1280:
             s = 1280 / max(w, h)
             img = img.resize((max(1, int(w * s)), max(1, int(h * s))))
-        messages = [{"role": "system", "content": "You are an expert in diplomatic transcription of historical documents from various languages."},
-                    {"role": "user", "content": [{"type": "image", "image": img},
-                     {"type": "text", "text": "Transcribe all the text in reading order exactly as printed, preserving the original spelling. Output only the transcription."}]}]
-        prompts.append({"prompt": proc.apply_chat_template(messages, tokenize=False, add_generation_prompt=True),
-                        "multi_modal_data": {"image": img}})
+        messages = [
+            {"role": "system", "content": "You are an expert in diplomatic transcription of historical documents from various languages."},
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image", "image": img},
+                    {
+                        "type": "text",
+                        "text": "Transcribe all the text in reading order exactly as printed, preserving the original spelling. Output only the transcription.",
+                    },
+                ],
+            },
+        ]
+        prompts.append(
+            {"prompt": proc.apply_chat_template(messages, tokenize=False, add_generation_prompt=True), "multi_modal_data": {"image": img}}
+        )
     outputs = llm.generate(prompts, SamplingParams(temperature=0.0, max_tokens=2048))
     return [o.outputs[0].text.strip() for o in outputs]
 
@@ -135,9 +163,14 @@ def _group(regions: list[dict], texts: list[str], starts: list[int]) -> list[dic
         title = next((t.strip() for r, t in cur if r["class"] == "title" and t.strip()), None)
         body = [t.strip() for r, t in cur if not (r["class"] == "title" and t.strip() == title) and t.strip()]
         pages = sorted({r["page"] for r, _ in cur})
-        articles.append({"unit_type": "article", "headline": title,
-                         "paragraphs": [{"text": "\n".join(body or [t for _, t in cur])}],
-                         "page_span": [pages[0], pages[-1]] if len(pages) > 1 else [pages[0]]})
+        articles.append(
+            {
+                "unit_type": "article",
+                "headline": title,
+                "paragraphs": [{"text": "\n".join(body or [t for _, t in cur])}],
+                "page_span": [pages[0], pages[-1]] if len(pages) > 1 else [pages[0]],
+            }
+        )
 
     for (r, t), s in zip([(r, texts[i]) for i, r in enumerate(regions)], starts):
         if s and cur:
@@ -164,7 +197,7 @@ def run_date(date: str) -> dict:
 
 
 def main() -> None:
-    for date in (sys.argv[1:] or list(DATES)):
+    for date in sys.argv[1:] or list(DATES):
         pred = run_date(date)
         (PRED_DIR / f"exp_004_grouped_churro_{date}.json").write_text(json.dumps(pred, ensure_ascii=False))
         print(f"{date}: {len(pred['articles'])} articles", flush=True)

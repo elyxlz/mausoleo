@@ -34,7 +34,18 @@ print(json.dumps(results))
 """
 
 TITLE_LABELS = {"doc_title", "paragraph_title", "title"}
-TEXT_LABELS = {"text", "paragraph_title", "doc_title", "title", "abstract", "content", "figure_title", "table_title", "chart_title", "vision_footnote"}
+TEXT_LABELS = {
+    "text",
+    "paragraph_title",
+    "doc_title",
+    "title",
+    "abstract",
+    "content",
+    "figure_title",
+    "table_title",
+    "chart_title",
+    "vision_footnote",
+}
 
 
 def detect_layout(page_paths: list[str]) -> list[list[dict[str, tp.Any]]]:

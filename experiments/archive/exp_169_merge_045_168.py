@@ -50,7 +50,7 @@ def merge_quality(primary: dict, secondary: dict) -> dict:
 
 
 def main() -> None:
-    for date in (sys.argv[1:] or DATES):
+    for date in sys.argv[1:] or DATES:
         pred = merge_quality(_load(PRIMARY, date), _load(SECONDARY, date))
         out = PRED_DIR / f"exp_169_merge_045_168_{date}.json"
         out.write_text(json.dumps(pred, ensure_ascii=False))

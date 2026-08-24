@@ -1,9 +1,7 @@
 from __future__ import annotations
 
-import io
 import json
 import pathlib as pl
-import re
 import sys
 import typing as tp
 
@@ -51,9 +49,17 @@ def _engine() -> tuple[tp.Any, tp.Any]:
         from transformers import AutoProcessor
         from vllm import LLM
 
-        _ENGINE["llm"] = LLM(model=MODEL, trust_remote_code=True, gpu_memory_utilization=0.90,
-                             max_model_len=12288, limit_mm_per_prompt={"image": 1}, dtype="bfloat16",
-                             enable_prefix_caching=False, max_num_seqs=16, seed=0)
+        _ENGINE["llm"] = LLM(
+            model=MODEL,
+            trust_remote_code=True,
+            gpu_memory_utilization=0.90,
+            max_model_len=12288,
+            limit_mm_per_prompt={"image": 1},
+            dtype="bfloat16",
+            enable_prefix_caching=False,
+            max_num_seqs=16,
+            seed=0,
+        )
         _ENGINE["proc"] = AutoProcessor.from_pretrained(MODEL, trust_remote_code=True)
     return _ENGINE["llm"], _ENGINE["proc"]
 
@@ -68,10 +74,10 @@ def ocr_columns(crops: list[Image.Image]) -> list[str]:
         if max(w, h) > 2200:
             s = 2200 / max(w, h)
             img = img.resize((max(1, int(w * s)), max(1, int(h * s))))
-        messages = [{"role": "user", "content": [{"type": "image", "image": img},
-                     {"type": "text", "text": VLM_OCR_STRUCTURED_V2}]}]
-        prompts.append({"prompt": proc.apply_chat_template(messages, tokenize=False, add_generation_prompt=True),
-                        "multi_modal_data": {"image": img}})
+        messages = [{"role": "user", "content": [{"type": "image", "image": img}, {"type": "text", "text": VLM_OCR_STRUCTURED_V2}]}]
+        prompts.append(
+            {"prompt": proc.apply_chat_template(messages, tokenize=False, add_generation_prompt=True), "multi_modal_data": {"image": img}}
+        )
     outputs = llm.generate(prompts, SamplingParams(temperature=0.0, max_tokens=8192, repetition_penalty=1.05))
     return [o.outputs[0].text.strip() for o in outputs]
 
@@ -102,7 +108,7 @@ def run_date(date: str) -> dict[str, tp.Any]:
 
 
 def main() -> None:
-    for date in (sys.argv[1:] or DATES):
+    for date in sys.argv[1:] or DATES:
         pred = run_date(date)
         (PRED_DIR / f"exp_015_column8b_parse_{date}.json").write_text(json.dumps(pred, ensure_ascii=False))
         print(f"{date}: {len(pred['articles'])} articles", flush=True)

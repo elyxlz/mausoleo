@@ -67,8 +67,18 @@ def _page_dims(regions: list[dict[str, tp.Any]]) -> dict[int, tuple[int, int]]:
 
 
 FEATURE_NAMES = [
-    "is_title", "prev_is_title", "page_changed", "y_gap_norm", "x_overlap", "same_column",
-    "log_len", "upper_ratio", "has_dateline", "is_page_top", "col_index", "prev_short",
+    "is_title",
+    "prev_is_title",
+    "page_changed",
+    "y_gap_norm",
+    "x_overlap",
+    "same_column",
+    "log_len",
+    "upper_ratio",
+    "has_dateline",
+    "is_page_top",
+    "col_index",
+    "prev_short",
 ]
 
 
@@ -100,12 +110,23 @@ def features(regions: list[dict[str, tp.Any]]) -> list[list[float]]:
             prev_title = 1.0 if prev["class"] == "title" else 0.0
             prev_short = 1.0 if len(prev["text"].strip()) < 40 else 0.0
         import math
-        feats.append([
-            is_title, prev_title, page_changed, y_gap, x_ov, same_col,
-            math.log1p(len(txt)), upper_ratio, has_dateline,
-            1.0 if (prev is None or prev["page"] != r["page"]) else 0.0,
-            col_index, prev_short,
-        ])
+
+        feats.append(
+            [
+                is_title,
+                prev_title,
+                page_changed,
+                y_gap,
+                x_ov,
+                same_col,
+                math.log1p(len(txt)),
+                upper_ratio,
+                has_dateline,
+                1.0 if (prev is None or prev["page"] != r["page"]) else 0.0,
+                col_index,
+                prev_short,
+            ]
+        )
         prev = r
     return feats
 

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import io
 import json
 import pathlib as pl
 import re
@@ -50,9 +49,17 @@ def _engine() -> tuple[tp.Any, tp.Any]:
         from transformers import AutoProcessor
         from vllm import LLM
 
-        _ENGINE["llm"] = LLM(model=MODEL, trust_remote_code=True, gpu_memory_utilization=0.90,
-                             max_model_len=12288, limit_mm_per_prompt={"image": 1}, dtype="bfloat16",
-                             enable_prefix_caching=False, max_num_seqs=16, seed=0)
+        _ENGINE["llm"] = LLM(
+            model=MODEL,
+            trust_remote_code=True,
+            gpu_memory_utilization=0.90,
+            max_model_len=12288,
+            limit_mm_per_prompt={"image": 1},
+            dtype="bfloat16",
+            enable_prefix_caching=False,
+            max_num_seqs=16,
+            seed=0,
+        )
         _ENGINE["proc"] = AutoProcessor.from_pretrained(MODEL, trust_remote_code=True)
     return _ENGINE["llm"], _ENGINE["proc"]
 
@@ -67,10 +74,10 @@ def ocr_columns(crops: list[Image.Image]) -> list[str]:
         if max(w, h) > 2200:
             s = 2200 / max(w, h)
             img = img.resize((max(1, int(w * s)), max(1, int(h * s))))
-        messages = [{"role": "user", "content": [{"type": "image", "image": img},
-                     {"type": "text", "text": VLM_OCR_STRUCTURED_V2}]}]
-        prompts.append({"prompt": proc.apply_chat_template(messages, tokenize=False, add_generation_prompt=True),
-                        "multi_modal_data": {"image": img}})
+        messages = [{"role": "user", "content": [{"type": "image", "image": img}, {"type": "text", "text": VLM_OCR_STRUCTURED_V2}]}]
+        prompts.append(
+            {"prompt": proc.apply_chat_template(messages, tokenize=False, add_generation_prompt=True), "multi_modal_data": {"image": img}}
+        )
     outputs = llm.generate(prompts, SamplingParams(temperature=0.0, max_tokens=8192, repetition_penalty=1.05))
     return [o.outputs[0].text.strip() for o in outputs]
 
@@ -80,7 +87,7 @@ def _parse(text: str) -> list[dict[str, tp.Any]]:
     if t.startswith("```"):
         t = re.sub(r"^```[a-z]*\n?", "", t)
         t = re.sub(r"\n?```$", "", t).strip()
-    for cand in (t, t[t.find("{"):] if "{" in t else t):
+    for cand in (t, t[t.find("{") :] if "{" in t else t):
         try:
             obj = json.loads(cand)
             arts = obj.get("articles", obj) if isinstance(obj, dict) else obj
@@ -103,13 +110,14 @@ def run_date(date: str) -> dict[str, tp.Any]:
             paras = [{"text": p.get("text", str(p)) if isinstance(p, dict) else str(p)} for p in paras]
             if not any(p["text"].strip() for p in paras):
                 continue
-            articles.append({"unit_type": art.get("unit_type", "article"),
-                             "headline": art.get("headline"), "paragraphs": paras, "page_span": [page]})
+            articles.append(
+                {"unit_type": art.get("unit_type", "article"), "headline": art.get("headline"), "paragraphs": paras, "page_span": [page]}
+            )
     return {"date": date, "source": "exp_014_column8b_full", "articles": articles}
 
 
 def main() -> None:
-    for date in (sys.argv[1:] or DATES):
+    for date in sys.argv[1:] or DATES:
         pred = run_date(date)
         (PRED_DIR / f"exp_014_column8b_full_{date}.json").write_text(json.dumps(pred, ensure_ascii=False))
         print(f"{date}: {len(pred['articles'])} articles", flush=True)

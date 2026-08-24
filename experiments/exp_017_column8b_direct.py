@@ -22,9 +22,15 @@ QWEN3 = "Qwen/Qwen3-VL-8B-Instruct"
 DATES = ["1885-06-15", "1895-06-15", "1910-06-15", "1925-06-15", "1935-06-15", "1952-06-15"]
 
 _COLUMNS = ColumnSplit(num_columns=3, overlap_pct=0.03)
-_VLM = VlmOcr(model=QWEN3, prompt=prompts.VLM_OCR_STRUCTURED_V2, backend="vllm",
-              max_tokens=8192, max_model_len=12288,
-              gpu_memory_utilization=0.92, vllm_strict=False)
+_VLM = VlmOcr(
+    model=QWEN3,
+    prompt=prompts.VLM_OCR_STRUCTURED_V2,
+    backend="vllm",
+    max_tokens=8192,
+    max_model_len=12288,
+    gpu_memory_utilization=0.92,
+    vllm_strict=False,
+)
 _MERGE = MergePages()
 _PARSE = ParseIssue()
 
@@ -61,7 +67,7 @@ def _run_issue(vlm: VlmOcrOperator, date: str) -> Issue:
 
 def main() -> None:
     vlm = VlmOcrOperator(_VLM)
-    for date in (sys.argv[1:] or DATES):
+    for date in sys.argv[1:] or DATES:
         issue = _run_issue(vlm, date)
         out = PRED_DIR / f"exp_017_column8b_direct_{date}.json"
         out.write_text(json.dumps(dc.asdict(issue), ensure_ascii=False))

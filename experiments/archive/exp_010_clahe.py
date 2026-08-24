@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import io
 import json
 import pathlib as pl
 import subprocess
@@ -38,27 +37,38 @@ print(json.dumps(results))
 """
 
 TITLE_LABELS = {"doc_title", "paragraph_title", "title"}
-TEXT_LABELS = {"text", "paragraph_title", "doc_title", "title", "abstract", "content", "figure_title", "table_title", "chart_title", "vision_footnote"}
+TEXT_LABELS = {
+    "text",
+    "paragraph_title",
+    "doc_title",
+    "title",
+    "abstract",
+    "content",
+    "figure_title",
+    "table_title",
+    "chart_title",
+    "vision_footnote",
+}
 _ENGINE: dict[str, tp.Any] = {}
 
 
-
-def _enhance(img: "Image.Image") -> "Image.Image":
+def _enhance(img: Image.Image) -> Image.Image:
     import cv2
     import numpy as np
+
     lab = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2LAB)
-    l, a, b = cv2.split(lab)
-    l2 = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8)).apply(l)
+    lightness, a, b = cv2.split(lab)
+    l2 = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8)).apply(lightness)
     out = cv2.cvtColor(cv2.merge((l2, a, b)), cv2.COLOR_LAB2RGB)
     return Image.fromarray(out)
+
 
 def _pages(date: str) -> list[pl.Path]:
     return sorted(GT_DIR.joinpath(date).glob("*.jpeg"), key=lambda p: int(p.stem))
 
 
 def detect_layout(page_paths: list[str]) -> list[list[dict[str, tp.Any]]]:
-    proc = subprocess.run([str(PADDLE_PYTHON), "-c", LAYOUT_SCRIPT], input=json.dumps(page_paths),
-                          capture_output=True, text=True, timeout=1800)
+    proc = subprocess.run([str(PADDLE_PYTHON), "-c", LAYOUT_SCRIPT], input=json.dumps(page_paths), capture_output=True, text=True, timeout=1800)
     if proc.returncode != 0:
         raise RuntimeError(f"layout failed:\n{proc.stderr[-3000:]}")
     return json.loads(proc.stdout.strip().splitlines()[-1])
@@ -95,9 +105,16 @@ def _engine() -> tuple[tp.Any, tp.Any]:
         from transformers import AutoProcessor
         from vllm import LLM
 
-        _ENGINE["llm"] = LLM(model=MODEL, trust_remote_code=True, gpu_memory_utilization=0.90,
-                             max_model_len=16384, limit_mm_per_prompt={"image": 1}, dtype="bfloat16",
-                             enable_prefix_caching=False, seed=0)
+        _ENGINE["llm"] = LLM(
+            model=MODEL,
+            trust_remote_code=True,
+            gpu_memory_utilization=0.90,
+            max_model_len=16384,
+            limit_mm_per_prompt={"image": 1},
+            dtype="bfloat16",
+            enable_prefix_caching=False,
+            seed=0,
+        )
         _ENGINE["proc"] = AutoProcessor.from_pretrained(MODEL, trust_remote_code=True)
     return _ENGINE["llm"], _ENGINE["proc"]
 
@@ -112,10 +129,10 @@ def ocr_crops(crops: list[Image.Image]) -> list[str]:
         if max(w, h) > 1600:
             s = 1600 / max(w, h)
             img = img.resize((max(1, int(w * s)), max(1, int(h * s))))
-        messages = [{"role": "user", "content": [{"type": "image", "image": img},
-                     {"type": "text", "text": "OCR:"}]}]
-        prompts.append({"prompt": proc.apply_chat_template(messages, tokenize=False, add_generation_prompt=True),
-                        "multi_modal_data": {"image": img}})
+        messages = [{"role": "user", "content": [{"type": "image", "image": img}, {"type": "text", "text": "OCR:"}]}]
+        prompts.append(
+            {"prompt": proc.apply_chat_template(messages, tokenize=False, add_generation_prompt=True), "multi_modal_data": {"image": img}}
+        )
     outputs = llm.generate(prompts, SamplingParams(temperature=0.0, max_tokens=2048))
     return [o.outputs[0].text.strip() for o in outputs]
 
@@ -130,6 +147,7 @@ def _train(exclude: str) -> GradientBoostingClassifier:
         X.extend(features(rg))
         y.extend(start_labels(rg, align_regions_to_gt(rg, load_gt(d))))
     return GradientBoostingClassifier(n_estimators=200, max_depth=3, learning_rate=0.05).fit(np.array(X), np.array(y))
+
 
 def _group_indices(starts: list[int]) -> list[list[int]]:
     groups: list[list[int]] = []
@@ -191,18 +209,18 @@ def run_date(date: str) -> dict:
 
     articles: list[dict] = []
     for gi, grp in enumerate(groups):
-        title = next((region_texts[idx].strip() for idx in grp
-                      if flat[idx]["class"] == "title" and region_texts[idx].strip()), None)
+        title = next((region_texts[idx].strip() for idx in grp if flat[idx]["class"] == "title" and region_texts[idx].strip()), None)
         art_text = "\n".join(x for x in group_text.get(gi, []) if x)
-        region_concat = "\n".join(region_texts[idx].strip() for idx in grp
-                                   if region_texts[idx].strip() and region_texts[idx].strip() != title)
+        region_concat = "\n".join(region_texts[idx].strip() for idx in grp if region_texts[idx].strip() and region_texts[idx].strip() != title)
         gb: dict[int, list] = {}
         for idx in grp:
             gb.setdefault(flat[idx]["page"], []).append(flat[idx]["bbox"])
         fills = []
         for boxes in gb.values():
-            ux1 = min(b[0] for b in boxes); uy1 = min(b[1] for b in boxes)
-            ux2 = max(b[2] for b in boxes); uy2 = max(b[3] for b in boxes)
+            ux1 = min(b[0] for b in boxes)
+            uy1 = min(b[1] for b in boxes)
+            ux2 = max(b[2] for b in boxes)
+            uy2 = max(b[3] for b in boxes)
             uarea = max(1, (ux2 - ux1) * (uy2 - uy1))
             rarea = sum((b[2] - b[0]) * (b[3] - b[1]) for b in boxes)
             fills.append(rarea / uarea)
@@ -213,14 +231,19 @@ def run_date(date: str) -> dict:
         if not text.strip():
             continue
         pages_sorted = sorted(group_pages.get(gi, {flat[grp[0]]["page"]}))
-        articles.append({"unit_type": "article", "headline": title,
-                         "paragraphs": [{"text": text}],
-                         "page_span": [pages_sorted[0], pages_sorted[-1]] if len(pages_sorted) > 1 else [pages_sorted[0]]})
+        articles.append(
+            {
+                "unit_type": "article",
+                "headline": title,
+                "paragraphs": [{"text": text}],
+                "page_span": [pages_sorted[0], pages_sorted[-1]] if len(pages_sorted) > 1 else [pages_sorted[0]],
+            }
+        )
     return {"date": date, "source": "exp_010_clahe", "articles": articles}
 
 
 def main() -> None:
-    for date in (sys.argv[1:] or list(DATES)):
+    for date in sys.argv[1:] or list(DATES):
         pred = run_date(date)
         (PRED_DIR / f"exp_010_clahe_{date}.json").write_text(json.dumps(pred, ensure_ascii=False))
         print(f"{date}: {len(pred['articles'])} articles", flush=True)

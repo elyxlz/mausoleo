@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import io
 import json
 import pathlib as pl
 import sys
@@ -25,8 +24,15 @@ def _engine() -> tuple[tp.Any, tp.Any]:
         from transformers import AutoProcessor
         from vllm import LLM
 
-        _ENGINE["llm"] = LLM(model=MODEL, trust_remote_code=True, gpu_memory_utilization=0.90,
-                             max_model_len=8192, limit_mm_per_prompt={"image": 1}, dtype="bfloat16", seed=0)
+        _ENGINE["llm"] = LLM(
+            model=MODEL,
+            trust_remote_code=True,
+            gpu_memory_utilization=0.90,
+            max_model_len=8192,
+            limit_mm_per_prompt={"image": 1},
+            dtype="bfloat16",
+            seed=0,
+        )
         _ENGINE["proc"] = AutoProcessor.from_pretrained(MODEL, trust_remote_code=True)
     return _ENGINE["llm"], _ENGINE["proc"]
 
@@ -53,8 +59,15 @@ def ocr_regions(date: str, regions: list[dict[str, tp.Any]]) -> list[str]:
         if max(w, h) > 1600:
             s = 1600 / max(w, h)
             img = img.resize((max(1, int(w * s)), max(1, int(h * s))))
-        messages = [{"role": "user", "content": [{"type": "image", "image": img},
-                     {"type": "text", "text": "Transcribe all the text in this image exactly. Output only the transcription."}]}]
+        messages = [
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image", "image": img},
+                    {"type": "text", "text": "Transcribe all the text in this image exactly. Output only the transcription."},
+                ],
+            }
+        ]
         text = proc.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         prompts.append({"prompt": text, "multi_modal_data": {"image": img}})
     outputs = llm.generate(prompts, SamplingParams(temperature=0.0, max_tokens=2048))
@@ -83,9 +96,14 @@ def _group(regions: list[dict[str, tp.Any]], texts: list[str], starts: list[int]
         title = next((t.strip() for r, t in cur if r["class"] == "title" and t.strip()), None)
         body = [t.strip() for r, t in cur if not (r["class"] == "title" and t.strip() == title) and t.strip()]
         pages = sorted({int(r["page"]) for r, _ in cur})
-        articles.append({"unit_type": "article", "headline": title,
-                         "paragraphs": [{"text": "\n".join(body or [t for _, t in cur])}],
-                         "page_span": [pages[0], pages[-1]] if len(pages) > 1 else [pages[0]]})
+        articles.append(
+            {
+                "unit_type": "article",
+                "headline": title,
+                "paragraphs": [{"text": "\n".join(body or [t for _, t in cur])}],
+                "page_span": [pages[0], pages[-1]] if len(pages) > 1 else [pages[0]],
+            }
+        )
 
     for (r, t), s in zip([(r, texts[i]) for i, r in enumerate(regions)], starts):
         if s and cur:
@@ -107,7 +125,7 @@ def predict_issue(date: str) -> dict[str, tp.Any]:
 
 
 def main() -> None:
-    for date in (sys.argv[1:] or list(DATES)):
+    for date in sys.argv[1:] or list(DATES):
         pred = predict_issue(date)
         out = PRED_DIR / f"exp_168_grouped_qwen_{date}.json"
         out.write_text(json.dumps(pred, ensure_ascii=False))

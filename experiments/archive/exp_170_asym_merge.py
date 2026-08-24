@@ -48,7 +48,7 @@ def asym_merge(base: dict, text_src: dict) -> dict:
 
 
 def main() -> None:
-    for date in (sys.argv[1:] or DATES):
+    for date in sys.argv[1:] or DATES:
         pred = asym_merge(_load(BASE, date), _load(TEXT_SOURCE, date))
         out = PRED_DIR / f"exp_170_asym_merge_{date}.json"
         out.write_text(json.dumps(pred, ensure_ascii=False))
