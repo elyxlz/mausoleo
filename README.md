@@ -17,5 +17,5 @@ High-quality OCR of the Il Messaggero historical newspaper corpus (1880–1959, 
 ## Rules
 
 - All compute on ripperred; endeavour is corpus storage only.
-- Budget cap **250.0 sec/page**, caller-measured by `scripts/time_experiment.sh`; `BUDGET_CAP` in `scripts/progress_server.py` is the single source of truth.
+- Budget cap **200.0 sec/page**, caller-measured by `scripts/time_experiment.sh`; `BUDGET_CAP` in `scripts/progress_server.py` is the single source of truth.
 - One variable per experiment; adversarial audit + holdout + probe checks before accepting anything; every run logged to `eval/autoresearch/mausoleobench_log.jsonl` with a mechanism line.

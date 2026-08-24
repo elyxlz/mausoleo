@@ -31,11 +31,11 @@ The production–oracle gap is **recall/segmentation**, not the accuracy of matc
 
 ## Phase 1 — OCR quality research (ACTIVE)
 
-The autoresearch loop hillclimbing MausoleoBench under the budget cap (250.0 sec/page, caller-measured). Experiments are self-contained scripts (`experiments/README.md`); the cycle runs via `scripts/research.py` (eval + audit + holdout + probe), one variable per experiment, everything logged. Metrics and GT are never touched to improve a score.
+The autoresearch loop hillclimbing MausoleoBench under the budget cap (200.0 sec/page, caller-measured). Experiments are self-contained scripts (`experiments/README.md`); the cycle runs via `scripts/research.py` (eval + audit + holdout + probe), one variable per experiment, everything logged. Metrics and GT are never touched to improve a score.
 
 **GT: 6 issues, final size per Elio (2026-07-17)** — 1885/1910-06-15 human-verified from the start, 1895/1925/1935/1952-06-15 promoted to full GT on 2026-07-21 via `scripts/review_server.py`. The 1925 issue is *Il Meridiano* (the publisher's Monday paper) — accepted. No issue-level held-out set (per Elio); anti-overfit protection is article-level (even/odd holdout halves) plus the GT-free 1943 probes.
 
-**Ship bar for corpus v1 (proposed — needs Elio's sign-off):** one in-budget config with MausoleoBench ≥ 0.60 avg, ≥ 0.50 on every issue (no era collapse), recall ≥ 0.70 avg, ≤ 250.0 sec/page, no probe degradation on the 1943 set. Rationale: phase 3 can summarize noisy text but never recovers articles OCR missed — recall losses are permanent. Corpus v0 may run before the bar. If the bar proves unreachable within budget, that's a product decision (relax bar vs budget), not something to paper over.
+**Ship bar for corpus v1 (proposed — needs Elio's sign-off):** one in-budget config with MausoleoBench ≥ 0.60 avg, ≥ 0.50 on every issue (no era collapse), recall ≥ 0.70 avg, ≤ 200.0 sec/page, no probe degradation on the 1943 set. Rationale: phase 3 can summarize noisy text but never recovers articles OCR missed — recall losses are permanent. Corpus v0 may run before the bar. If the bar proves unreachable within budget, that's a product decision (relax bar vs budget), not something to paper over.
 
 **Open bets** (statuses in `registry.md`): F3 layout/reading-order (PP-DocLayoutV3 regions, top bet for recall); F1 sub-1B refinements; F7 segmentation adapters (embedding-similarity grouping); F4 oracle-only precision filtering. **BLOCKED**: F2 long-horizon cross-page parsing (top failure category, waiting on a new model release), HunyuanOCR, GLM-OCR, olmOCR.
 

@@ -9,9 +9,9 @@ The corpus is **172,600 pages** (1880–1959) on endeavour. Full-corpus OCR runs
 | | sec/page | wall on 2×3090 |
 |---|---|---|
 | target | **103.5** | ~15 weeks |
-| hard cap | **250.0** | ~37 weeks |
+| hard cap | **200.0** | ~30 weeks |
 
-- **Disqualification line = 250.0 sec/page** (5× raise 2026-07-22, per Elio; was 50). A config that beats the score but exceeds the cap is a research artifact, not a production candidate. At this cap the Qwen3-VL-8B routes are now IN budget — archived **exp_045** (column-structured 8B, MausoleoBench 0.4615 @ ~136 sec/page) and **exp_168** (8B per-region, 0.4342 @ ~150) were DQ'd only on budget and are now the top opportunity to beat the record (0.4071). (The 0.5266 two-8B merge at ~286 is still just over the cap.)
+- **Disqualification line = 200.0 sec/page** (raised 5× to 250.0 on 2026-07-22, tightened to 200.0 on 2026-08-24, per Elio; originally 50). A config that beats the score but exceeds the cap is a research artifact, not a production candidate. At this cap the Qwen3-VL-8B routes are now IN budget — archived **exp_045** (column-structured 8B, MausoleoBench 0.4615 @ ~136 sec/page) and **exp_168** (8B per-region, 0.4342 @ ~150) were DQ'd only on budget and are now the top opportunity to beat the record (0.4071). (The 0.5266 two-8B merge at ~286 is still just over the cap.)
 - **Budget is measured by the caller, not the experiment.** `scripts/time_experiment.sh experiments/<name>.py` times the whole run over the 6 eval issues end-to-end (model load + layout + OCR + grouping + IO) and reports `sec_per_page = wall_seconds / 42`. That number is `sec_per_page` in the log.
 - `BUDGET_CAP` in `scripts/progress_server.py` is the single source of truth; the dashboard recomputes `budget_ok` from `sec_per_page` vs the cap.
 - The measure is a conservative upper bound (it includes one-time load that amortizes at corpus scale), so passing here means passing on the corpus.
