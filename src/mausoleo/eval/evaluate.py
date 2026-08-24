@@ -6,6 +6,7 @@ import typing as tp
 
 
 RECALL_BETA = 2.0
+PARAGRAPH_TOLERANCE = 0.01
 
 
 def compute_cer(reference: str, hypothesis: str) -> float:
@@ -38,6 +39,47 @@ def text_overlap(a: str, b: str) -> float:
 
 def article_text(article: dict[str, tp.Any]) -> str:
     return "\n".join(p.get("text", "") for p in article.get("paragraphs", []))
+
+
+def paragraph_boundaries(article: dict[str, tp.Any]) -> list[float]:
+    texts = [normalize_text(p.get("text", "")) for p in article.get("paragraphs", [])]
+    texts = [t for t in texts if t]
+    total = sum(len(t) for t in texts)
+    if total == 0 or len(texts) < 2:
+        return []
+    cuts, run = [], 0
+    for text in texts[:-1]:
+        run += len(text)
+        cuts.append(run / total)
+    return cuts
+
+
+def paragraph_agreement(gt_article: dict[str, tp.Any], pred_article: dict[str, tp.Any]) -> float:
+    gt_cuts = paragraph_boundaries(gt_article)
+    pred_cuts = paragraph_boundaries(pred_article)
+    if not gt_cuts and not pred_cuts:
+        return 1.0
+    if not gt_cuts or not pred_cuts:
+        return 0.0
+    used: set[int] = set()
+    hits = 0
+    for cut in gt_cuts:
+        best, index = PARAGRAPH_TOLERANCE, None
+        for j, other in enumerate(pred_cuts):
+            if j in used:
+                continue
+            distance = abs(cut - other)
+            if distance <= best:
+                best, index = distance, j
+        if index is not None:
+            used.add(index)
+            hits += 1
+    precision = hits / len(pred_cuts)
+    recall = hits / len(gt_cuts)
+    if precision + recall == 0:
+        return 0.0
+    ratio = min(len(gt_cuts), len(pred_cuts)) / max(len(gt_cuts), len(pred_cuts))
+    return 2 * precision * recall / (precision + recall) * ratio
 
 
 def article_pages(article: dict[str, tp.Any]) -> list[int]:
@@ -76,6 +118,7 @@ class IssueResult:
     full_text_cer: float
     full_text_wer: float
     page_accuracy: float
+    paragraph_score: float
     ordering_score: float
     mausoleobench_score: float
     total_gt_articles: int
@@ -231,10 +274,20 @@ def evaluate_issue(
     page_credit = sum(quality(m) for m in matched if m.page_span_correct)
     page_accuracy = page_credit / len(gt_articles) if gt_articles else 0.0
 
+    paragraph_credit = sum(quality(m) * paragraph_agreement(gt_articles[m.gt_index], pred_articles[m.pred_index]) for m in matched)
+    paragraph_score = paragraph_credit / len(gt_articles) if gt_articles else 0.0
+
     # ordering only over good matches so scrambled/garbage text can't earn it
     ordering = compute_ordering_score([m for m in matched if m.cer <= 0.5])
 
-    mausoleobench = 0.40 * (1.0 - weighted_cer) + 0.35 * gated_f1 + 0.05 * ordering + 0.10 * (1.0 - mean_headline_cer) + 0.10 * page_accuracy
+    mausoleobench = (
+        0.40 * (1.0 - weighted_cer)
+        + 0.35 * gated_f1
+        + 0.05 * ordering
+        + 0.10 * (1.0 - mean_headline_cer)
+        + 0.05 * page_accuracy
+        + 0.05 * paragraph_score
+    )
 
     return IssueResult(
         config=config,
@@ -251,6 +304,7 @@ def evaluate_issue(
         full_text_wer=full_wer,
         article_gated_f1=gated_f1,
         page_accuracy=page_accuracy,
+        paragraph_score=paragraph_score,
         ordering_score=ordering,
         mausoleobench_score=mausoleobench,
         total_gt_articles=len(gt_articles),
