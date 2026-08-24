@@ -31,18 +31,32 @@ PROMPT = (
     "You are an expert OCR system for historical Italian newspapers. Read each column "
     "top-to-bottom, then left-to-right. Transcribe ALL text; do not skip or summarize. "
     "Preserve archaic spelling. Separate distinct content units.\n"
-    'Return a JSON array: [{"headline": string or null, "text": string}]'
+    "Preserve the printed paragraph structure: each paragraph begins with an indented first "
+    "line in the original. Emit one array entry per printed paragraph. Join lines that are "
+    "merely wrapped, and join words split by an end-of-line hyphen.\n"
+    'Return a JSON array: [{"headline": string or null, "paragraphs": [string, ...]}]'
 )
 
 _MERGE = MergePages()
 _PARSE = ParseIssue()
 
 _HYPHEN_BREAK = re.compile(r"(\w)-\n(\w)")
+_PARA_BREAK = re.compile(r"\n[ \t]*\n+")
 _LINE_BREAK = re.compile(r"[ \t]*\n[ \t]*")
 
 
 def unwrap_lines(text: str) -> str:
-    return _LINE_BREAK.sub(" ", _HYPHEN_BREAK.sub(r"\1\2", text)).strip()
+    joined = _HYPHEN_BREAK.sub(r"\1\2", text)
+    return "\n\n".join(_LINE_BREAK.sub(" ", part).strip() for part in _PARA_BREAK.split(joined) if part.strip()).strip()
+
+
+def article_paragraphs(article: dict[str, tp.Any]) -> list[str]:
+    raw = article.get("paragraphs")
+    if isinstance(raw, list) and raw:
+        parts = [unwrap_lines(str(p)) for p in raw if str(p).strip()]
+    else:
+        parts = unwrap_lines(str(article.get("text") or "")).split("\n\n")
+    return [p.strip() for p in parts if p.strip()]
 
 
 def page_articles(raw: str) -> list[tp.Any]:
@@ -59,10 +73,15 @@ def unwrap_page_json(raw: str) -> str:
     articles = page_articles(raw)
     if not articles:
         return unwrap_lines(raw)
+    normalised = []
     for article in articles:
-        if isinstance(article, dict) and isinstance(article.get("text"), str):
-            article["text"] = unwrap_lines(article["text"])
-    return json.dumps(articles, ensure_ascii=False)
+        if not isinstance(article, dict):
+            continue
+        paragraphs = article_paragraphs(article)
+        if not paragraphs:
+            continue
+        normalised.append({"headline": article.get("headline"), "paragraphs": [{"text": p} for p in paragraphs]})
+    return json.dumps(normalised, ensure_ascii=False)
 
 
 def _client() -> tp.Any:
