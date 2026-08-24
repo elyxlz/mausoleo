@@ -31,23 +31,19 @@ PROMPT = (
     "You are an expert OCR system for historical Italian newspapers. Read each column "
     "top-to-bottom, then left-to-right. Transcribe ALL text; do not skip or summarize. "
     "Preserve archaic spelling. Separate distinct content units.\n"
-    "Preserve the printed paragraph structure: each paragraph begins with an indented first "
-    "line in the original. Emit one array entry per printed paragraph. Join lines that are "
-    "merely wrapped, and join words split by an end-of-line hyphen.\n"
-    'Return a JSON array: [{"headline": string or null, "paragraphs": [string, ...]}]'
+    'Return a JSON array: [{"headline": string or null, "text": string}]'
 )
 
 _MERGE = MergePages()
 _PARSE = ParseIssue()
 
 _HYPHEN_BREAK = re.compile(r"(\w)-\n(\w)")
-_PARA_BREAK = re.compile(r"\n[ \t]*\n+")
+_PARA_BREAK = re.compile(r"[ \t]*\n+[ \t]*")
 _LINE_BREAK = re.compile(r"[ \t]*\n[ \t]*")
 
 
 def unwrap_lines(text: str) -> str:
-    joined = _HYPHEN_BREAK.sub(r"\1\2", text)
-    return "\n\n".join(_LINE_BREAK.sub(" ", part).strip() for part in _PARA_BREAK.split(joined) if part.strip()).strip()
+    return _LINE_BREAK.sub(" ", _HYPHEN_BREAK.sub(r"\1\2", text)).strip()
 
 
 def article_headline(article: dict[str, tp.Any]) -> str | None:
@@ -61,10 +57,10 @@ def article_headline(article: dict[str, tp.Any]) -> str | None:
 def article_paragraphs(article: dict[str, tp.Any]) -> list[str]:
     raw = article.get("paragraphs")
     if isinstance(raw, list) and raw:
-        parts = [unwrap_lines(str(p)) for p in raw if str(p).strip()]
+        parts = [str(p) for p in raw if str(p).strip()]
     else:
-        parts = unwrap_lines(str(article.get("text") or "")).split("\n\n")
-    return [p.strip() for p in parts if p.strip()]
+        parts = _PARA_BREAK.split(_HYPHEN_BREAK.sub(r"\1\2", str(article.get("text") or "")))
+    return [cleaned for part in parts for cleaned in [unwrap_lines(part)] if cleaned]
 
 
 def page_articles(raw: str) -> list[tp.Any]:
