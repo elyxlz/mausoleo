@@ -5,7 +5,6 @@
   "articles": [
     {
       "id": "1885-06-15_a00",
-      "unit_type": "article",
       "headline": "I deputati-telegrafo BERNARDINO SOTTO SEQUESTRO",
       "paragraphs": [
         {
@@ -20,7 +19,6 @@
     },
     {
       "id": "1885-06-15_a01",
-      "unit_type": "article",
       "headline": "I FONDI SEGRETI",
       "paragraphs": [
         {
@@ -35,7 +33,6 @@
     },
     {
       "id": "1885-06-15_a02",
-      "unit_type": "article",
       "headline": "I MAESTRI ELEMENTARI NON SONO PAGATI",
       "paragraphs": [
         {
@@ -50,7 +47,6 @@
     },
     {
       "id": "1885-06-15_a03",
-      "unit_type": "article",
       "headline": "MAGNETIZZATA",
       "paragraphs": [
         {
@@ -65,7 +61,6 @@
     },
     {
       "headline": "Camera dei deputati",
-      "unit_type": "article",
       "page_span": [
         2
       ],
@@ -80,7 +75,6 @@
     },
     {
       "headline": "L'accoltellato della Lungara",
-      "unit_type": "article",
       "page_span": [
         2
       ],
@@ -95,7 +89,6 @@
     },
     {
       "headline": "L'arresto di tre falsi monetari",
-      "unit_type": "article",
       "page_span": [
         2
       ],
@@ -110,7 +103,6 @@
     },
     {
       "headline": "L'ammazzato di ieri",
-      "unit_type": "article",
       "page_span": [
         2
       ],
@@ -125,7 +117,6 @@
     },
     {
       "headline": "L'usciere accoltellato a Tivoli",
-      "unit_type": "article",
       "page_span": [
         2,
         3
@@ -141,7 +132,6 @@
     },
     {
       "headline": "La camorra nei municipi",
-      "unit_type": "article",
       "page_span": [
         3
       ],
@@ -156,7 +146,6 @@
     },
     {
       "headline": "Ne succedono delle graziose!",
-      "unit_type": "article",
       "page_span": [
         3,
         4
@@ -172,7 +161,6 @@
     },
     {
       "headline": "Il calcio del bue",
-      "unit_type": "article",
       "page_span": [
         3
       ],
@@ -187,7 +175,6 @@
     },
     {
       "headline": "L'inginocchiatore di piazza Montanara",
-      "unit_type": "article",
       "page_span": [
         3,
         4
@@ -203,7 +190,6 @@
     },
     {
       "headline": "Un dito per un sigaro",
-      "unit_type": "article",
       "page_span": [
         3
       ],
@@ -218,7 +204,6 @@
     },
     {
       "headline": "Gara dei ragazzi pel borseggio di un orologio e di un anello",
-      "unit_type": "article",
       "page_span": [
         3
       ],
@@ -233,7 +218,6 @@
     },
     {
       "headline": "Regalo della santa messa",
-      "unit_type": "article",
       "page_span": [
         3
       ],
@@ -248,7 +232,6 @@
     },
     {
       "headline": "Schiacciato da una trave di ferro in via Merulana",
-      "unit_type": "article",
       "page_span": [
         3
       ],
@@ -263,7 +246,6 @@
     },
     {
       "headline": "I vetturini hanno sempre torto",
-      "unit_type": "article",
       "page_span": [
         3,
         4
@@ -279,7 +261,6 @@
     },
     {
       "headline": "Tiro a segno",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -294,7 +275,6 @@
     },
     {
       "headline": "Circolo operai fornaio",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -309,7 +289,6 @@
     },
     {
       "headline": "Lavoranti parrucchieri",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -324,7 +303,6 @@
     },
     {
       "headline": "Al Quirino",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -339,7 +317,6 @@
     },
     {
       "headline": "L'assassinio di stanotte in via Cremona",
-      "unit_type": "article",
       "page_span": [
         2
       ],
@@ -354,7 +331,6 @@
     },
     {
       "headline": "Un ragazzo divorato dai cani",
-      "unit_type": "article",
       "page_span": [
         3
       ],
@@ -369,7 +345,6 @@
     },
     {
       "headline": "Il suicidio del preside del liceo di Faenza",
-      "unit_type": "article",
       "page_span": [
         3
       ],
@@ -384,7 +359,6 @@
     },
     {
       "headline": "La Russia in Italia",
-      "unit_type": "article",
       "page_span": [
         3
       ],
@@ -399,7 +373,6 @@
     },
     {
       "headline": "L'italiano liberato",
-      "unit_type": "article",
       "page_span": [
         3
       ],
@@ -414,7 +387,6 @@
     },
     {
       "headline": "La questione afgana",
-      "unit_type": "article",
       "page_span": [
         3
       ],
@@ -429,7 +401,6 @@
     },
     {
       "headline": "Bastimenti in moto",
-      "unit_type": "article",
       "page_span": [
         3
       ],
@@ -444,7 +415,6 @@
     },
     {
       "headline": "ANGELO PITOU",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -459,7 +429,6 @@
     },
     {
       "headline": "Sciarada",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -474,7 +443,6 @@
     },
     {
       "headline": "Direttore e responsabile",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -489,7 +457,6 @@
     },
     {
       "headline": "Capati ner mazzo",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -504,7 +471,6 @@
     },
     {
       "headline": "Nuovo ribasso dei prezzi - Orologi",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -519,7 +485,6 @@
     },
     {
       "headline": "BAGNI DELLE ACQUE ALBULE presso TIVOLI",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -534,7 +499,6 @@
     },
     {
       "headline": "Tabacco MIL",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -549,7 +513,6 @@
     },
     {
       "headline": "Contanti contro cessione",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -564,7 +527,6 @@
     },
     {
       "headline": "Dottore Alberto Mosso",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -579,7 +541,6 @@
     },
     {
       "headline": "Pasta Pettorale Balsamica",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -594,7 +555,6 @@
     },
     {
       "headline": "Balsamo Speciale",
-      "unit_type": "article",
       "page_span": [
         4
       ],
@@ -609,7 +569,6 @@
     },
     {
       "headline": "Motori a Gas",
-      "unit_type": "article",
       "page_span": [
         4
       ],

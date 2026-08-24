@@ -5,7 +5,6 @@
   "articles": [
     {
       "id": "1895-06-15_a00",
-      "unit_type": "article",
       "headline": "L'on. Giolitti ammalato",
       "paragraphs": [
         {
@@ -20,7 +19,6 @@
     },
     {
       "id": "1895-06-15_a01",
-      "unit_type": "article",
       "headline": "In Italia e fuori",
       "paragraphs": [
         {
@@ -35,7 +33,6 @@
     },
     {
       "id": "1895-06-15_a02",
-      "unit_type": "article",
       "headline": "Farse parlare",
       "paragraphs": [
         {
@@ -50,7 +47,6 @@
     },
     {
       "id": "1895-06-15_a03",
-      "unit_type": "article",
       "headline": "Odii ed amori",
       "paragraphs": [
         {
@@ -65,7 +61,6 @@
     },
     {
       "id": "1895-06-15_a04",
-      "unit_type": "article",
       "headline": "Farse parlamentari",
       "paragraphs": [
         {
@@ -80,7 +75,6 @@
     },
     {
       "id": "1895-06-15_a05",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -95,7 +89,6 @@
     },
     {
       "id": "1895-06-15_a06",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -110,7 +103,6 @@
     },
     {
       "id": "1895-06-15_a07",
-      "unit_type": "article",
       "headline": "L'esiologia del giorno successivo.",
       "paragraphs": [
         {
@@ -125,7 +117,6 @@
     },
     {
       "id": "1895-06-15_a08",
-      "unit_type": "article",
       "headline": "RIFORME IN TURCHIA",
       "paragraphs": [
         {
@@ -140,7 +131,6 @@
     },
     {
       "id": "1895-06-15_a09",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -155,7 +145,6 @@
     },
     {
       "id": "1895-06-15_a10",
-      "unit_type": "article",
       "headline": "LE CONSEGUENZE DELLA TASSA SUI FIANMIFERI",
       "paragraphs": [
         {
@@ -170,7 +159,6 @@
     },
     {
       "id": "1895-06-15_a11",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -185,7 +173,6 @@
     },
     {
       "id": "1895-06-15_a12",
-      "unit_type": "article",
       "headline": "LA RIVOLTA DI CUBA",
       "paragraphs": [
         {
@@ -200,7 +187,6 @@
     },
     {
       "id": "1895-06-15_a13",
-      "unit_type": "article",
       "headline": "SCIOPERO DI FORNAILI A BUDAPES-",
       "paragraphs": [
         {
@@ -215,7 +201,6 @@
     },
     {
       "id": "1895-06-15_a14",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -230,7 +215,6 @@
     },
     {
       "id": "1895-06-15_a15",
-      "unit_type": "article",
       "headline": "di anarchici italiani",
       "paragraphs": [
         {
@@ -245,7 +229,6 @@
     },
     {
       "id": "1895-06-15_a16",
-      "unit_type": "editorial",
       "headline": "LA QUESTIONE NAZIONALE, IN AUSTRIA",
       "paragraphs": [
         {
@@ -260,7 +243,6 @@
     },
     {
       "id": "1895-06-15_a17",
-      "unit_type": "article",
       "headline": "In Francia",
       "paragraphs": [
         {
@@ -275,7 +257,6 @@
     },
     {
       "id": "1895-06-15_a18",
-      "unit_type": "article",
       "headline": "DUE MORTE E QUATTRO FERITI NEL FULMINE",
       "paragraphs": [
         {
@@ -290,7 +271,6 @@
     },
     {
       "id": "1895-06-15_a19",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -305,7 +285,6 @@
     },
     {
       "id": "1895-06-15_a20",
-      "unit_type": "article",
       "headline": "GESTA ANARCHICHE IN RUSSIA\nUna banda d'incendiari",
       "paragraphs": [
         {
@@ -320,7 +299,6 @@
     },
     {
       "id": "1895-06-15_a21",
-      "unit_type": "article",
       "headline": "L’on. Giolitti scrive il dirittato — non ha potuto ancora portarsi a Roma per i lavori legislativi, perché malato di sciatica.",
       "paragraphs": [
         {
@@ -335,7 +313,6 @@
     },
     {
       "id": "1895-06-15_a22",
-      "unit_type": "article",
       "headline": "I FRANCESI AL MADAGASCAR",
       "paragraphs": [
         {
@@ -350,7 +327,6 @@
     },
     {
       "id": "1895-06-15_a23",
-      "unit_type": "article",
       "headline": "GESTA ANARCHICHE IN RUSSIA",
       "paragraphs": [
         {
@@ -365,7 +341,6 @@
     },
     {
       "id": "1895-06-15_a24",
-      "unit_type": "article",
       "headline": "In Italia e fuori",
       "paragraphs": [
         {
@@ -380,7 +355,6 @@
     },
     {
       "id": "1895-06-15_a25",
-      "unit_type": "article",
       "headline": "CAMERA DEI DEPUTATI",
       "paragraphs": [
         {
@@ -395,7 +369,6 @@
     },
     {
       "id": "1895-06-15_a26",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -410,7 +383,6 @@
     },
     {
       "id": "1895-06-15_a27",
-      "unit_type": "notice",
       "headline": "NOTIZIE PARLAMENTARI",
       "paragraphs": [
         {
@@ -425,7 +397,6 @@
     },
     {
       "id": "1895-06-15_a28",
-      "unit_type": "article",
       "headline": "La commissione del bilancio",
       "paragraphs": [
         {
@@ -440,7 +411,6 @@
     },
     {
       "id": "1895-06-15_a29",
-      "unit_type": "article",
       "headline": "Farse parlamentari",
       "paragraphs": [
         {
@@ -455,7 +425,6 @@
     },
     {
       "id": "1895-06-15_a30",
-      "unit_type": "article",
       "headline": "Odii ed amori",
       "paragraphs": [
         {
@@ -470,7 +439,6 @@
     },
     {
       "id": "1895-06-15_a31",
-      "unit_type": "article",
       "headline": "Farse parlamentari",
       "paragraphs": [
         {
@@ -485,7 +453,6 @@
     },
     {
       "id": "1895-06-15_a32",
-      "unit_type": "article",
       "headline": "RIFORME IN TURCHIA",
       "paragraphs": [
         {
@@ -500,7 +467,6 @@
     },
     {
       "id": "1895-06-15_a33",
-      "unit_type": "article",
       "headline": "Messaggero",
       "paragraphs": [
         {
@@ -515,7 +481,6 @@
     },
     {
       "id": "1895-06-15_a34",
-      "unit_type": "article",
       "headline": "NOTERELLE POLITICHE",
       "paragraphs": [
         {
@@ -530,7 +495,6 @@
     },
     {
       "id": "1895-06-15_a35",
-      "unit_type": "article",
       "headline": "LE CONSEGUENZE DELLA TASSA SUI FIAMMIFERI",
       "paragraphs": [
         {
@@ -545,7 +509,6 @@
     },
     {
       "id": "1895-06-15_a36",
-      "unit_type": "article",
       "headline": "LA RIVOLTA DI CUBA",
       "paragraphs": [
         {
@@ -560,7 +523,6 @@
     },
     {
       "id": "1895-06-15_a37",
-      "unit_type": "article",
       "headline": "SCIOPERO DI FORNAI A BUDAPEST",
       "paragraphs": [
         {
@@ -575,7 +537,6 @@
     },
     {
       "id": "1895-06-15_a38",
-      "unit_type": "article",
       "headline": "LA QUESTIONE NAZIONALE IN AUSTRIA",
       "paragraphs": [
         {
@@ -590,7 +551,6 @@
     },
     {
       "id": "1895-06-15_a39",
-      "unit_type": "article",
       "headline": "LA CALMA SI RISTABILISCE IN CHINA",
       "paragraphs": [
         {
@@ -605,7 +565,6 @@
     },
     {
       "id": "1895-06-15_a40",
-      "unit_type": "article",
       "headline": "LE ABITAZIONI A BUON MERCATO in Francia",
       "paragraphs": [
         {
@@ -620,7 +579,6 @@
     },
     {
       "id": "1895-06-15_a41",
-      "unit_type": "article",
       "headline": "DUE MORTI E QUATTRO FERITI DAL FULMINE",
       "paragraphs": [
         {
@@ -635,7 +593,6 @@
     },
     {
       "id": "1895-06-15_a42",
-      "unit_type": "article",
       "headline": "L'on. Giolitti ammalato",
       "paragraphs": [
         {
@@ -650,7 +607,6 @@
     },
     {
       "id": "1895-06-15_a43",
-      "unit_type": "article",
       "headline": "I FRANCESI AL MADAGASCAR",
       "paragraphs": [
         {
@@ -665,7 +621,6 @@
     },
     {
       "id": "1895-06-15_a44",
-      "unit_type": "article",
       "headline": "GESTA ANARCHICHE IN RUSSIA",
       "paragraphs": [
         {
@@ -680,7 +635,6 @@
     },
     {
       "id": "1895-06-15_a45",
-      "unit_type": "article",
       "headline": "In Italia e fuori",
       "paragraphs": [
         {
@@ -695,7 +649,6 @@
     },
     {
       "id": "1895-06-15_a46",
-      "unit_type": "article",
       "headline": "LE ELEZIONI AMMINISTRATIVE nella provincia romana",
       "paragraphs": [
         {
@@ -710,7 +663,6 @@
     },
     {
       "id": "1895-06-15_a47",
-      "unit_type": "article",
       "headline": "NOTIZIE DI BORSA",
       "paragraphs": [
         {
@@ -725,7 +677,6 @@
     },
     {
       "id": "1895-06-15_a48",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -740,7 +691,6 @@
     },
     {
       "id": "1895-06-15_a49",
-      "unit_type": "article",
       "headline": "DA TERNI",
       "paragraphs": [
         {
@@ -755,7 +705,6 @@
     },
     {
       "id": "1895-06-15_a50",
-      "unit_type": "article",
       "headline": "Passaggiere",
       "paragraphs": [
         {
@@ -770,7 +719,6 @@
     },
     {
       "id": "1895-06-15_a51",
-      "unit_type": "article",
       "headline": "La cittadinanza tutta, senza alcuna distinzione, è dolente di non poter essere più tra i suoi",
       "paragraphs": [
         {
@@ -785,7 +733,6 @@
     },
     {
       "id": "1895-06-15_a52",
-      "unit_type": "article",
       "headline": "Passaggiata",
       "paragraphs": [
         {
@@ -800,7 +747,6 @@
     },
     {
       "id": "1895-06-15_a53",
-      "unit_type": "article",
       "headline": "Politica",
       "paragraphs": [
         {
@@ -815,7 +761,6 @@
     },
     {
       "id": "1895-06-15_a54",
-      "unit_type": "article",
       "headline": "Fiera",
       "paragraphs": [
         {
@@ -830,7 +775,6 @@
     },
     {
       "id": "1895-06-15_a55",
-      "unit_type": "article",
       "headline": "DA SPOLETO",
       "paragraphs": [
         {
@@ -845,7 +789,6 @@
     },
     {
       "id": "1895-06-15_a56",
-      "unit_type": "article",
       "headline": "Partenza del reggimento",
       "paragraphs": [
         {
@@ -860,7 +803,6 @@
     },
     {
       "id": "1895-06-15_a57",
-      "unit_type": "article",
       "headline": "Poi banchettissimo",
       "paragraphs": [
         {
@@ -875,7 +817,6 @@
     },
     {
       "id": "1895-06-15_a58",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -890,7 +831,6 @@
     },
     {
       "id": "1895-06-15_a59",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -905,7 +845,6 @@
     },
     {
       "id": "1895-06-15_a60",
-      "unit_type": "article",
       "headline": "DA PERUGIA",
       "paragraphs": [
         {
@@ -920,7 +859,6 @@
     },
     {
       "id": "1895-06-15_a61",
-      "unit_type": "article",
       "headline": "DA PERUGIA",
       "paragraphs": [
         {
@@ -935,7 +873,6 @@
     },
     {
       "id": "1895-06-15_a62",
-      "unit_type": "article",
       "headline": "DA MONTALTO DI CASTRO",
       "paragraphs": [
         {
@@ -950,7 +887,6 @@
     },
     {
       "id": "1895-06-15_a63",
-      "unit_type": "article",
       "headline": "DA GROSSETO",
       "paragraphs": [
         {
@@ -965,7 +901,6 @@
     },
     {
       "id": "1895-06-15_a64",
-      "unit_type": "article",
       "headline": "DA PISA",
       "paragraphs": [
         {
@@ -980,7 +915,6 @@
     },
     {
       "id": "1895-06-15_a65",
-      "unit_type": "article",
       "headline": "DA SPEZIA",
       "paragraphs": [
         {
@@ -995,7 +929,6 @@
     },
     {
       "id": "1895-06-15_a66",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1010,7 +943,6 @@
     },
     {
       "id": "1895-06-15_a67",
-      "unit_type": "article",
       "headline": "DOMENICA 16",
       "paragraphs": [
         {
@@ -1025,7 +957,6 @@
     },
     {
       "id": "1895-06-15_a68",
-      "unit_type": "article",
       "headline": "DOMENICA 23",
       "paragraphs": [
         {
@@ -1040,7 +971,6 @@
     },
     {
       "id": "1895-06-15_a69",
-      "unit_type": "article",
       "headline": "DOMENICA 30",
       "paragraphs": [
         {
@@ -1055,7 +985,6 @@
     },
     {
       "id": "1895-06-15_a70",
-      "unit_type": "article",
       "headline": "IL SECONDO CONGRESSO DEGLI IMPIEGATI CIVILI",
       "paragraphs": [
         {
@@ -1070,7 +999,6 @@
     },
     {
       "id": "1895-06-15_a71",
-      "unit_type": "notice",
       "headline": "NOTIZIE DI BORSA",
       "paragraphs": [
         {
@@ -1085,7 +1013,6 @@
     },
     {
       "id": "1895-06-15_a72",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1100,7 +1027,6 @@
     },
     {
       "id": "1895-06-15_a73",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1115,7 +1041,6 @@
     },
     {
       "id": "1895-06-15_a74",
-      "unit_type": "article",
       "headline": "Il prezzo del cambio per certificati di pagamento di dazi doganali è fissato per oggi a lire 104.97.",
       "paragraphs": [
         {
@@ -1130,7 +1055,6 @@
     },
     {
       "id": "1895-06-15_a75",
-      "unit_type": "advertisement",
       "headline": "Borse italiana",
       "paragraphs": [
         {
@@ -1145,7 +1069,6 @@
     },
     {
       "id": "1895-06-15_a76",
-      "unit_type": "advertisement",
       "headline": "Parigi, 14 giugno",
       "paragraphs": [
         {
@@ -1160,7 +1083,6 @@
     },
     {
       "id": "1895-06-15_a77",
-      "unit_type": "advertisement",
       "headline": "Londra",
       "paragraphs": [
         {
@@ -1175,7 +1097,6 @@
     },
     {
       "id": "1895-06-15_a78",
-      "unit_type": "advertisement",
       "headline": "Banca d'Inghilterra",
       "paragraphs": [
         {
@@ -1190,7 +1111,6 @@
     },
     {
       "id": "1895-06-15_a79",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1205,7 +1125,6 @@
     },
     {
       "id": "1895-06-15_a80",
-      "unit_type": "article",
       "headline": "DALLE PROVINCE",
       "paragraphs": [
         {
@@ -1220,7 +1139,6 @@
     },
     {
       "id": "1895-06-15_a81",
-      "unit_type": "article",
       "headline": "L'OMICIDIO FUORI PORTA DEL POPOLO",
       "paragraphs": [
         {
@@ -1235,7 +1153,6 @@
     },
     {
       "id": "1895-06-15_a82",
-      "unit_type": "article",
       "headline": "Il fatto di tersera in via porta Leonina",
       "paragraphs": [
         {
@@ -1250,7 +1167,6 @@
     },
     {
       "id": "1895-06-15_a83",
-      "unit_type": "article",
       "headline": "Gli spacciatori di biglietti falsi arrestati in via del Canestrari",
       "paragraphs": [
         {
@@ -1265,7 +1181,6 @@
     },
     {
       "id": "1895-06-15_a84",
-      "unit_type": "article",
       "headline": "Partito socialista italiano",
       "paragraphs": [
         {
@@ -1280,7 +1195,6 @@
     },
     {
       "id": "1895-06-15_a85",
-      "unit_type": "article",
       "headline": "Alla bicicletta per De Felice i socialisti romani interverranno ben prima delle 10 essendo impegnati per l'adunanza",
       "paragraphs": [
         {
@@ -1295,7 +1209,6 @@
     },
     {
       "id": "1895-06-15_a86",
-      "unit_type": "article",
       "headline": "La vaccina in fuga in Trastevere",
       "paragraphs": [
         {
@@ -1310,7 +1223,6 @@
     },
     {
       "id": "1895-06-15_a87",
-      "unit_type": "article",
       "headline": "La disgrazia a ponte Mammolo",
       "paragraphs": [
         {
@@ -1325,7 +1237,6 @@
     },
     {
       "id": "1895-06-15_a88",
-      "unit_type": "article",
       "headline": "Il fatto in piazza Campari",
       "paragraphs": [
         {
@@ -1340,7 +1251,6 @@
     },
     {
       "id": "1895-06-15_a89",
-      "unit_type": "article",
       "headline": "Simposio di amici",
       "paragraphs": [
         {
@@ -1355,7 +1265,6 @@
     },
     {
       "id": "1895-06-15_a90",
-      "unit_type": "article",
       "headline": "Conferenza ciclistica",
       "paragraphs": [
         {
@@ -1370,7 +1279,6 @@
     },
     {
       "id": "1895-06-15_a91",
-      "unit_type": "article",
       "headline": "La farsetta in via Principe Amedeo",
       "paragraphs": [
         {
@@ -1385,7 +1293,6 @@
     },
     {
       "id": "1895-06-15_a92",
-      "unit_type": "article",
       "headline": "La sassaiola al ponte Margherita",
       "paragraphs": [
         {
@@ -1400,7 +1307,6 @@
     },
     {
       "id": "1895-06-15_a93",
-      "unit_type": "article",
       "headline": "Un'imprudenza salata",
       "paragraphs": [
         {
@@ -1415,7 +1321,6 @@
     },
     {
       "id": "1895-06-15_a94",
-      "unit_type": "article",
       "headline": "Il suicidio di ieri al ponte di Ripetta",
       "paragraphs": [
         {
@@ -1430,7 +1335,6 @@
     },
     {
       "id": "1895-06-15_a95",
-      "unit_type": "article",
       "headline": "I timpani di Belisario",
       "paragraphs": [
         {
@@ -1445,7 +1349,6 @@
     },
     {
       "id": "1895-06-15_a96",
-      "unit_type": "article",
       "headline": "Il bambino investito in piazza Romana",
       "paragraphs": [
         {
@@ -1460,7 +1363,6 @@
     },
     {
       "id": "1895-06-15_a97",
-      "unit_type": "article",
       "headline": "Il furto di galline fuori porta Trionfale",
       "paragraphs": [
         {
@@ -1475,7 +1377,6 @@
     },
     {
       "id": "1895-06-15_a98",
-      "unit_type": "article",
       "headline": "Il furto di galline fuori porta Trionfale",
       "paragraphs": [
         {
@@ -1490,7 +1391,6 @@
     },
     {
       "id": "1895-06-15_a99",
-      "unit_type": "article",
       "headline": "Le elezioni contestate",
       "paragraphs": [
         {
@@ -1505,7 +1405,6 @@
     },
     {
       "id": "1895-06-15_a100",
-      "unit_type": "article",
       "headline": "Società degli agricoltori italiani",
       "paragraphs": [
         {
@@ -1520,7 +1419,6 @@
     },
     {
       "id": "1895-06-15_a101",
-      "unit_type": "article",
       "headline": "Un' interpellanza dell'on. Bovio",
       "paragraphs": [
         {
@@ -1535,7 +1433,6 @@
     },
     {
       "id": "1895-06-15_a102",
-      "unit_type": "article",
       "headline": "Consiglio dei ministri \ne riunione della maggioranza",
       "paragraphs": [
         {
@@ -1550,7 +1447,6 @@
     },
     {
       "id": "1895-06-15_a103",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1565,7 +1461,6 @@
     },
     {
       "id": "1895-06-15_a104",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1580,7 +1475,6 @@
     },
     {
       "id": "1895-06-15_a105",
-      "unit_type": "article",
       "headline": "UN ALTRO PAZZO FUGGITO DAL MANICOMIO",
       "paragraphs": [
         {
@@ -1595,7 +1489,6 @@
     },
     {
       "id": "1895-06-15_a106",
-      "unit_type": "article",
       "headline": "LA CONDANNA DEL SERGENTE ladro di portafogli",
       "paragraphs": [
         {
@@ -1610,7 +1503,6 @@
     },
     {
       "id": "1895-06-15_a107",
-      "unit_type": "article",
       "headline": "Sei sei un fiammifero!",
       "paragraphs": [
         {
@@ -1625,7 +1517,6 @@
     },
     {
       "id": "1895-06-15_a108",
-      "unit_type": "article",
       "headline": "I LADRI AL CIRCOLO DELLA CACCIA",
       "paragraphs": [
         {
@@ -1640,7 +1531,6 @@
     },
     {
       "id": "1895-06-15_a109",
-      "unit_type": "article",
       "headline": "Altri due arresti",
       "paragraphs": [
         {
@@ -1655,7 +1545,6 @@
     },
     {
       "id": "1895-06-15_a110",
-      "unit_type": "article",
       "headline": "LA GRAVE DISGRAZIA FORI PORTA PIA",
       "paragraphs": [
         {
@@ -1670,7 +1559,6 @@
     },
     {
       "id": "1895-06-15_a111",
-      "unit_type": "article",
       "headline": "CONSIGLIO COMUNALE",
       "paragraphs": [
         {
@@ -1685,7 +1573,6 @@
     },
     {
       "id": "1895-06-15_a112",
-      "unit_type": "article",
       "headline": "LE GUARDE MUNICIPALI",
       "paragraphs": [
         {
@@ -1700,7 +1587,6 @@
     },
     {
       "id": "1895-06-15_a113",
-      "unit_type": "article",
       "headline": "LA SISTEMAZIONE DI PIAZZA COLONNA",
       "paragraphs": [
         {
@@ -1715,7 +1601,6 @@
     },
     {
       "id": "1895-06-15_a114",
-      "unit_type": "article",
       "headline": "L'OMICIDIO FUORI PORTA DEL POPOLO",
       "paragraphs": [
         {
@@ -1730,7 +1615,6 @@
     },
     {
       "id": "1895-06-15_a115",
-      "unit_type": "article",
       "headline": "Il fatto di iersera in via porta Leone",
       "paragraphs": [
         {
@@ -1745,7 +1629,6 @@
     },
     {
       "id": "1895-06-15_a116",
-      "unit_type": "article",
       "headline": "Gli spacciatori di biglietti falsi",
       "paragraphs": [
         {
@@ -1760,7 +1643,6 @@
     },
     {
       "id": "1895-06-15_a117",
-      "unit_type": "article",
       "headline": "Partito socialista italiano",
       "paragraphs": [
         {
@@ -1775,7 +1657,6 @@
     },
     {
       "id": "1895-06-15_a118",
-      "unit_type": "article",
       "headline": "La vaccina in fuga in Trastevere",
       "paragraphs": [
         {
@@ -1790,7 +1671,6 @@
     },
     {
       "id": "1895-06-15_a119",
-      "unit_type": "article",
       "headline": "Investigato",
       "paragraphs": [
         {
@@ -1805,7 +1685,6 @@
     },
     {
       "id": "1895-06-15_a120",
-      "unit_type": "article",
       "headline": "Il furto di",
       "paragraphs": [
         {
@@ -1820,7 +1699,6 @@
     },
     {
       "id": "1895-06-15_a121",
-      "unit_type": "article",
       "headline": "La disgrazia a ponte-Mammolo",
       "paragraphs": [
         {
@@ -1835,7 +1713,6 @@
     },
     {
       "id": "1895-06-15_a122",
-      "unit_type": "article",
       "headline": "Vennuti alle mani e cavati i coltelli in difesa dei Macari",
       "paragraphs": [
         {
@@ -1850,7 +1727,6 @@
     },
     {
       "id": "1895-06-15_a123",
-      "unit_type": "article",
       "headline": "Simpisio di amici",
       "paragraphs": [
         {
@@ -1865,7 +1741,6 @@
     },
     {
       "id": "1895-06-15_a124",
-      "unit_type": "article",
       "headline": "Conferenza ciclistica",
       "paragraphs": [
         {
@@ -1880,7 +1755,6 @@
     },
     {
       "id": "1895-06-15_a125",
-      "unit_type": "article",
       "headline": "La farsetta in via Principe Amedeo",
       "paragraphs": [
         {
@@ -1895,7 +1769,6 @@
     },
     {
       "id": "1895-06-15_a126",
-      "unit_type": "article",
       "headline": "La sassaiola al ponte Margherita",
       "paragraphs": [
         {
@@ -1910,7 +1783,6 @@
     },
     {
       "id": "1895-06-15_a127",
-      "unit_type": "article",
       "headline": "La sassata al ponte Margherita",
       "paragraphs": [
         {
@@ -1925,7 +1797,6 @@
     },
     {
       "id": "1895-06-15_a128",
-      "unit_type": "article",
       "headline": "Un'imprudenza salata",
       "paragraphs": [
         {
@@ -1940,7 +1811,6 @@
     },
     {
       "id": "1895-06-15_a129",
-      "unit_type": "article",
       "headline": "Il suicidio di ieri al ponte di Ripetta",
       "paragraphs": [
         {
@@ -1955,7 +1825,6 @@
     },
     {
       "id": "1895-06-15_a130",
-      "unit_type": "article",
       "headline": "timpani di Bellisario",
       "paragraphs": [
         {
@@ -1970,7 +1839,6 @@
     },
     {
       "id": "1895-06-15_a131",
-      "unit_type": "article",
       "headline": "Il bambino investito in piazza Romana",
       "paragraphs": [
         {
@@ -1985,7 +1853,6 @@
     },
     {
       "id": "1895-06-15_a132",
-      "unit_type": "article",
       "headline": "Investigato in piazza Romana",
       "paragraphs": [
         {
@@ -2000,7 +1867,6 @@
     },
     {
       "id": "1895-06-15_a133",
-      "unit_type": "article",
       "headline": "Il furto di galline fuori porta Trionfale",
       "paragraphs": [
         {
@@ -2015,7 +1881,6 @@
     },
     {
       "id": "1895-06-15_a134",
-      "unit_type": "article",
       "headline": "Francia e Russia\nIl trattato d'alleanza",
       "paragraphs": [
         {
@@ -2030,7 +1895,6 @@
     },
     {
       "id": "1895-06-15_a135",
-      "unit_type": "article",
       "headline": "L'incubo dello spionaggio\nin Francia",
       "paragraphs": [
         {
@@ -2045,7 +1909,6 @@
     },
     {
       "id": "1895-06-15_a136",
-      "unit_type": "article",
       "headline": "Italia e Francia in Africa",
       "paragraphs": [
         {
@@ -2060,7 +1923,6 @@
     },
     {
       "id": "1895-06-15_a137",
-      "unit_type": "article",
       "headline": "L'esercito italiano giudicato\nin Francia",
       "paragraphs": [
         {
@@ -2075,7 +1937,6 @@
     },
     {
       "id": "1895-06-15_a138",
-      "unit_type": "article",
       "headline": "Il concorso delle carrozze\nautomobili",
       "paragraphs": [
         {
@@ -2090,7 +1951,6 @@
     },
     {
       "id": "1895-06-15_a139",
-      "unit_type": "article",
       "headline": "Interpellanza rinviata",
       "paragraphs": [
         {
@@ -2105,7 +1965,6 @@
     },
     {
       "id": "1895-06-15_a140",
-      "unit_type": "article",
       "headline": "Gli operai stranieri a Vienna\nI socialisti — Il piccolo stato\nd'assedio",
       "paragraphs": [
         {
@@ -2120,7 +1979,6 @@
     },
     {
       "id": "1895-06-15_a141",
-      "unit_type": "article",
       "headline": "Il direttore della polizia\ndi Pietroburgo",
       "paragraphs": [
         {
@@ -2135,7 +1993,6 @@
     },
     {
       "id": "1895-06-15_a142",
-      "unit_type": "article",
       "headline": "La riforma tributaria in\nAustria",
       "paragraphs": [
         {
@@ -2150,7 +2007,6 @@
     },
     {
       "id": "1895-06-15_a143",
-      "unit_type": "article",
       "headline": "Un'altra accademia militare",
       "paragraphs": [
         {
@@ -2165,7 +2021,6 @@
     },
     {
       "id": "1895-06-15_a144",
-      "unit_type": "article",
       "headline": "Incidente franco-brasiliano\nIl villaggio distrutto da soldati\nfrancesi",
       "paragraphs": [
         {
@@ -2180,7 +2035,6 @@
     },
     {
       "id": "1895-06-15_a145",
-      "unit_type": "article",
       "headline": "Torpediniera giapponese\naffondata",
       "paragraphs": [
         {
@@ -2195,7 +2049,6 @@
     },
     {
       "id": "1895-06-15_a146",
-      "unit_type": "article",
       "headline": "Il furto di galline fuori porta Trionfale",
       "paragraphs": [
         {
@@ -2210,7 +2063,6 @@
     },
     {
       "id": "1895-06-15_a147",
-      "unit_type": "article",
       "headline": "Ultime Notizie",
       "paragraphs": [
         {
@@ -2225,7 +2077,6 @@
     },
     {
       "id": "1895-06-15_a148",
-      "unit_type": "article",
       "headline": "L'incubo dello spionaggio in Francia",
       "paragraphs": [
         {
@@ -2240,7 +2091,6 @@
     },
     {
       "id": "1895-06-15_a149",
-      "unit_type": "article",
       "headline": "Italia e Francia in Africa",
       "paragraphs": [
         {
@@ -2255,7 +2105,6 @@
     },
     {
       "id": "1895-06-15_a150",
-      "unit_type": "article",
       "headline": "L'esercito italiano giudicato in Francia",
       "paragraphs": [
         {
@@ -2270,7 +2119,6 @@
     },
     {
       "id": "1895-06-15_a151",
-      "unit_type": "article",
       "headline": "Il concorso delle carrozze automobili",
       "paragraphs": [
         {
@@ -2285,7 +2133,6 @@
     },
     {
       "id": "1895-06-15_a152",
-      "unit_type": "article",
       "headline": "Gli operai stranieri a Vienna",
       "paragraphs": [
         {
@@ -2300,7 +2147,6 @@
     },
     {
       "id": "1895-06-15_a153",
-      "unit_type": "article",
       "headline": "I socialisti - Il piccolo stato d'assedio",
       "paragraphs": [
         {
@@ -2315,7 +2161,6 @@
     },
     {
       "id": "1895-06-15_a154",
-      "unit_type": "article",
       "headline": "Il direttore della polizia a Pietroburgo",
       "paragraphs": [
         {
@@ -2330,7 +2175,6 @@
     },
     {
       "id": "1895-06-15_a155",
-      "unit_type": "article",
       "headline": "La riforma tributaria in Austria",
       "paragraphs": [
         {
@@ -2345,7 +2189,6 @@
     },
     {
       "id": "1895-06-15_a156",
-      "unit_type": "article",
       "headline": "Un'altra accademia militare",
       "paragraphs": [
         {
@@ -2360,7 +2203,6 @@
     },
     {
       "id": "1895-06-15_a157",
-      "unit_type": "article",
       "headline": "Incidente franco-brasiliano",
       "paragraphs": [
         {
@@ -2375,7 +2217,6 @@
     },
     {
       "id": "1895-06-15_a158",
-      "unit_type": "article",
       "headline": "Torpediniera giapponese affondata",
       "paragraphs": [
         {
@@ -2390,7 +2231,6 @@
     },
     {
       "id": "1895-06-15_a159",
-      "unit_type": "article",
       "headline": "Le elezioni contestate",
       "paragraphs": [
         {
@@ -2405,7 +2245,6 @@
     },
     {
       "id": "1895-06-15_a160",
-      "unit_type": "article",
       "headline": "Società degli agricoltori italiani",
       "paragraphs": [
         {
@@ -2420,7 +2259,6 @@
     },
     {
       "id": "1895-06-15_a161",
-      "unit_type": "article",
       "headline": "Consiglio dei ministri e riunione della maggioranza",
       "paragraphs": [
         {
@@ -2435,7 +2273,6 @@
     },
     {
       "id": "1895-06-15_a162",
-      "unit_type": "article",
       "headline": "CRONACA",
       "paragraphs": [
         {
@@ -2450,7 +2287,6 @@
     },
     {
       "id": "1895-06-15_a163",
-      "unit_type": "article",
       "headline": "ELEZIONI AMMINISTRATIVE",
       "paragraphs": [
         {
@@ -2465,7 +2301,6 @@
     },
     {
       "id": "1895-06-15_a164",
-      "unit_type": "article",
       "headline": "Curiosità",
       "paragraphs": [
         {
@@ -2480,7 +2315,6 @@
     },
     {
       "id": "1895-06-15_a165",
-      "unit_type": "article",
       "headline": "I versi",
       "paragraphs": [
         {
@@ -2495,7 +2329,6 @@
     },
     {
       "id": "1895-06-15_a166",
-      "unit_type": "article",
       "headline": "Corbellerie",
       "paragraphs": [
         {
@@ -2510,7 +2343,6 @@
     },
     {
       "id": "1895-06-15_a167",
-      "unit_type": "advertisement",
       "headline": "D. BETTMANN",
       "paragraphs": [
         {
@@ -2525,7 +2357,6 @@
     },
     {
       "id": "1895-06-15_a168",
-      "unit_type": "advertisement",
       "headline": "IL CONTE DI MONTECRISTO",
       "paragraphs": [
         {
@@ -2540,7 +2371,6 @@
     },
     {
       "id": "1895-06-15_a169",
-      "unit_type": "advertisement",
       "headline": "CHININA - MIGONE",
       "paragraphs": [
         {
@@ -2555,7 +2385,6 @@
     },
     {
       "id": "1895-06-15_a170",
-      "unit_type": "advertisement",
       "headline": "DI TATTI E MONTEMASSI",
       "paragraphs": [
         {
@@ -2570,7 +2399,6 @@
     },
     {
       "id": "1895-06-15_a171",
-      "unit_type": "advertisement",
       "headline": "ACCORRETE",
       "paragraphs": [
         {
@@ -2585,7 +2413,6 @@
     },
     {
       "id": "1895-06-15_a172",
-      "unit_type": "advertisement",
       "headline": "RICERCASI",
       "paragraphs": [
         {
@@ -2600,7 +2427,6 @@
     },
     {
       "id": "1895-06-15_a173",
-      "unit_type": "advertisement",
       "headline": "RAGIONERIA",
       "paragraphs": [
         {
@@ -2615,7 +2441,6 @@
     },
     {
       "id": "1895-06-15_a174",
-      "unit_type": "advertisement",
       "headline": "Tipografo",
       "paragraphs": [
         {
@@ -2630,7 +2455,6 @@
     },
     {
       "id": "1895-06-15_a175",
-      "unit_type": "article",
       "headline": "alcuni che si lasci versano lungo riposo dalle ragazze, i biologi, che riconoscono delle cause effettive e la circolazione del",
       "paragraphs": [
         {
@@ -2645,7 +2469,6 @@
     },
     {
       "id": "1895-06-15_a176",
-      "unit_type": "article",
       "headline": "I versi",
       "paragraphs": [
         {
@@ -2660,7 +2483,6 @@
     },
     {
       "id": "1895-06-15_a177",
-      "unit_type": "article",
       "headline": "Corbellerie",
       "paragraphs": [
         {
@@ -2675,7 +2497,6 @@
     },
     {
       "id": "1895-06-15_a178",
-      "unit_type": "article",
       "headline": "Dialogo coniugale a Chicago.",
       "paragraphs": [
         {
@@ -2690,7 +2511,6 @@
     },
     {
       "id": "1895-06-15_a179",
-      "unit_type": "article",
       "headline": "Scolarada",
       "paragraphs": [
         {
@@ -2705,7 +2525,6 @@
     },
     {
       "id": "1895-06-15_a180",
-      "unit_type": "article",
       "headline": "Spiegazione della precedente sciarada con-texto",
       "paragraphs": [
         {
@@ -2720,7 +2539,6 @@
     },
     {
       "id": "1895-06-15_a181",
-      "unit_type": "advertisement",
       "headline": "CARBONIFERE DI TATTI E MONTEMASSI",
       "paragraphs": [
         {
@@ -2735,7 +2553,6 @@
     },
     {
       "id": "1895-06-15_a182",
-      "unit_type": "advertisement",
       "headline": "ACCORRETE",
       "paragraphs": [
         {
@@ -2750,7 +2567,6 @@
     },
     {
       "id": "1895-06-15_a183",
-      "unit_type": "advertisement",
       "headline": "RICERCASI",
       "paragraphs": [
         {
@@ -2765,7 +2581,6 @@
     },
     {
       "id": "1895-06-15_a184",
-      "unit_type": "advertisement",
       "headline": "MALATTIE VENEREE",
       "paragraphs": [
         {
@@ -2780,7 +2595,6 @@
     },
     {
       "id": "1895-06-15_a185",
-      "unit_type": "advertisement",
       "headline": "RAGIONERIA",
       "paragraphs": [
         {
@@ -2795,7 +2609,6 @@
     },
     {
       "id": "1895-06-15_a186",
-      "unit_type": "advertisement",
       "headline": "CAVALLI",
       "paragraphs": [
         {
@@ -2810,7 +2623,6 @@
     },
     {
       "id": "1895-06-15_a187",
-      "unit_type": "advertisement",
       "headline": "Tipografo",
       "paragraphs": [
         {
@@ -2825,7 +2637,6 @@
     },
     {
       "id": "1895-06-15_a188",
-      "unit_type": "advertisement",
       "headline": "Il Conte di Montecristo",
       "paragraphs": [
         {
@@ -2840,7 +2651,6 @@
     },
     {
       "id": "1895-06-15_a189",
-      "unit_type": "advertisement",
       "headline": "CHININA-MIGONE",
       "paragraphs": [
         {
@@ -2855,7 +2665,6 @@
     },
     {
       "id": "1895-06-15_a190",
-      "unit_type": "article",
       "headline": "ELEZIONI AMMINISTRATIVE",
       "paragraphs": [
         {
@@ -2870,7 +2679,6 @@
     },
     {
       "id": "1895-06-15_a191",
-      "unit_type": "article",
       "headline": "Ordine del giorno:",
       "paragraphs": [
         {
@@ -2885,7 +2693,6 @@
     },
     {
       "id": "1895-06-15_a192",
-      "unit_type": "article",
       "headline": "IL BAMBINO CADUTO DALLA LOGGETTA",
       "paragraphs": [
         {
@@ -2900,7 +2707,6 @@
     },
     {
       "id": "1895-06-15_a193",
-      "unit_type": "article",
       "headline": "I versi",
       "paragraphs": [
         {
@@ -2915,7 +2721,6 @@
     },
     {
       "id": "1895-06-15_a194",
-      "unit_type": "article",
       "headline": "Corbellerte",
       "paragraphs": [
         {
@@ -2930,7 +2735,6 @@
     },
     {
       "id": "1895-06-15_a195",
-      "unit_type": "article",
       "headline": "Spiegazione della precedente sciarada",
       "paragraphs": [
         {
@@ -2945,7 +2749,6 @@
     },
     {
       "id": "1895-06-15_a196",
-      "unit_type": "advertisement",
       "headline": "DI TATTI E MONTEMASSI",
       "paragraphs": [
         {
@@ -2960,7 +2763,6 @@
     },
     {
       "id": "1895-06-15_a197",
-      "unit_type": "advertisement",
       "headline": "ACCORRETE",
       "paragraphs": [
         {
@@ -2975,7 +2777,6 @@
     },
     {
       "id": "1895-06-15_a198",
-      "unit_type": "advertisement",
       "headline": "RICERCASI",
       "paragraphs": [
         {
@@ -2990,7 +2791,6 @@
     },
     {
       "id": "1895-06-15_a199",
-      "unit_type": "advertisement",
       "headline": "MALATTIE VENEREE",
       "paragraphs": [
         {
@@ -3005,7 +2805,6 @@
     },
     {
       "id": "1895-06-15_a200",
-      "unit_type": "advertisement",
       "headline": "RACIONERIA",
       "paragraphs": [
         {
@@ -3020,7 +2819,6 @@
     },
     {
       "id": "1895-06-15_a201",
-      "unit_type": "advertisement",
       "headline": "CAVALLI",
       "paragraphs": [
         {
@@ -3035,7 +2833,6 @@
     },
     {
       "id": "1895-06-15_a202",
-      "unit_type": "article",
       "headline": "ELEZIONI AMMINISTRATIVE",
       "paragraphs": [
         {
@@ -3050,7 +2847,6 @@
     },
     {
       "id": "1895-06-15_a203",
-      "unit_type": "article",
       "headline": "LA RISSA DEI CAPRARI al Sette Camini",
       "paragraphs": [
         {
@@ -3065,7 +2861,6 @@
     },
     {
       "id": "1895-06-15_a204",
-      "unit_type": "article",
       "headline": "Che merlo!",
       "paragraphs": [
         {
@@ -3080,7 +2875,6 @@
     },
     {
       "id": "1895-06-15_a205",
-      "unit_type": "article",
       "headline": "Una rapina curiosa",
       "paragraphs": [
         {
@@ -3095,7 +2889,6 @@
     },
     {
       "id": "1895-06-15_a206",
-      "unit_type": "article",
       "headline": "L'avvelenata di via delle Grazie",
       "paragraphs": [
         {
@@ -3110,7 +2903,6 @@
     },
     {
       "id": "1895-06-15_a207",
-      "unit_type": "article",
       "headline": "VALIGIA",
       "paragraphs": [
         {
@@ -3125,7 +2917,6 @@
     },
     {
       "id": "1895-06-15_a208",
-      "unit_type": "article",
       "headline": "La fabbricazione della carta da sigarette",
       "paragraphs": [
         {
@@ -3140,7 +2931,6 @@
     },
     {
       "id": "1895-06-15_a209",
-      "unit_type": "article",
       "headline": "Le due estremità di esso erano dorate, e in mezzo, al posto della marca, vi era impressa la lettera N in oro.",
       "paragraphs": [
         {

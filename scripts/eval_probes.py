@@ -36,10 +36,10 @@ def probe(date: str) -> dict[str, float]:
     by_page: dict[int, list[str]] = {}
     for a in gt["articles"]:
         by_page.setdefault(a["page_span"][0], []).extend(p["text"] for p in a["paragraphs"])
-    page_blob = {**gt, "articles": [{"unit_type": "article", "headline": None, "paragraphs": [{"text": " ".join(txts)}], "page_span": [pg]} for pg, txts in sorted(by_page.items())]}
+    page_blob = {**gt, "articles": [{"headline": None, "paragraphs": [{"text": " ".join(txts)}], "page_span": [pg]} for pg, txts in sorted(by_page.items())]}
 
     all_text = " ".join(p["text"] for a in gt["articles"] for p in a["paragraphs"])
-    full_blob = {**gt, "articles": [{"unit_type": "article", "headline": None, "paragraphs": [{"text": all_text}], "page_span": [1]}]}
+    full_blob = {**gt, "articles": [{"headline": None, "paragraphs": [{"text": all_text}], "page_span": [1]}]}
 
     return {
         "clean": evaluate_issue(gt, gt, date=date).mausoleobench_score,

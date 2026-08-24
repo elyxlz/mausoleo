@@ -4,7 +4,6 @@
   "page_count": 8,
   "articles": [
     {
-      "unit_type": "article",
       "headline": "ABBONAMENTI",
       "paragraphs": [
         {
@@ -43,7 +42,6 @@
       "position_in_issue": 0
     },
     {
-      "unit_type": "article",
       "headline": "INSERZIONI",
       "paragraphs": [
         {
@@ -90,7 +88,6 @@
       "position_in_issue": 1
     },
     {
-      "unit_type": "article",
       "headline": "Padova festeggia solennemente i Marescialli Cadorna e Diaz\nLa cerimonia della consegna del \"bastone di maresciallo„ alla presenza del Duca delle Puglie",
       "paragraphs": [
         {
@@ -305,7 +302,6 @@
       "position_in_issue": 2
     },
     {
-      "unit_type": "article",
       "headline": "Un discorso del ministro Federzoni\nper l'inaugurazione del Monumento ai Caduti di Bondeno",
       "paragraphs": [
         {
@@ -464,7 +460,6 @@
       "position_in_issue": 3
     },
     {
-      "unit_type": "article",
       "headline": "Il ministro Perez a Sassari",
       "paragraphs": [
         {
@@ -487,7 +482,6 @@
       "position_in_issue": 4
     },
     {
-      "unit_type": "article",
       "headline": "Il gruppo fascista \"Baracca„ a Milano",
       "paragraphs": [
         {
@@ -514,7 +508,6 @@
       "position_in_issue": 5
     },
     {
-      "unit_type": "article",
       "headline": "LA GUERRA FRANCO-MAROCCHINA\nPainlevé a bordo di un aeroplano è ripartito per la Francia",
       "paragraphs": [
         {
@@ -569,7 +562,6 @@
       "position_in_issue": 6
     },
     {
-      "unit_type": "article",
       "headline": "La visita della squadra francese a Napoli",
       "paragraphs": [
         {
@@ -592,7 +584,6 @@
       "position_in_issue": 7
     },
     {
-      "unit_type": "article",
       "headline": "Il deputato comunista Grieco\narrestato in Francia",
       "paragraphs": [
         {
@@ -615,7 +606,6 @@
       "position_in_issue": 8
     },
     {
-      "unit_type": "article",
       "headline": "Miltenoff condannato a Morte\ndal Consiglio di guerra di Sofia",
       "paragraphs": [
         {
@@ -638,7 +628,6 @@
       "position_in_issue": 9
     },
     {
-      "unit_type": "article",
       "headline": "Un discorso di Caillaux\na Beauvais",
       "paragraphs": [
         {
@@ -669,7 +658,6 @@
       "position_in_issue": 10
     },
     {
-      "unit_type": "article",
       "headline": "La situazione in Cina\nLa propaganda xenofoba s'intensifica",
       "paragraphs": [
         {
@@ -744,7 +732,6 @@
       "position_in_issue": 11
     },
     {
-      "unit_type": "article",
       "headline": "IL \"RAID„ MOSCA-MONGOLIA-CINA\nGli aeroplani russi sono giunti a Kourgan",
       "paragraphs": [
         {
@@ -763,7 +750,6 @@
       "position_in_issue": 12
     },
     {
-      "unit_type": "article",
       "headline": "La legge per le preferenze doganali ai prodotti imperiali britannici\n(Nostra servizio particolare)",
       "paragraphs": [
         {
@@ -798,7 +784,6 @@
       "position_in_issue": 13
     },
     {
-      "unit_type": "article",
       "headline": "Concessioni minerarie sovietiche ad una Compagnia Americana",
       "paragraphs": [
         {
@@ -837,7 +822,6 @@
       "position_in_issue": 14
     },
     {
-      "unit_type": "article",
       "headline": "Comunisti italiani omicidi processati a Metz",
       "paragraphs": [
         {
@@ -876,7 +860,6 @@
       "position_in_issue": 15
     },
     {
-      "unit_type": "article",
       "headline": "Macabra scoperta a Marsiglia nell'appartamento di un dottore",
       "paragraphs": [
         {
@@ -907,7 +890,6 @@
       "position_in_issue": 16
     },
     {
-      "unit_type": "article",
       "headline": "La ricerca della paternità con le impronte digitali?",
       "paragraphs": [
         {
@@ -926,7 +908,6 @@
       "position_in_issue": 17
     },
     {
-      "unit_type": "article",
       "headline": "Per i rottami di ferro",
       "paragraphs": [
         {
@@ -945,7 +926,6 @@
       "position_in_issue": 18
     },
     {
-      "unit_type": "article",
       "headline": "Per i caduti della guardia di Finanza",
       "paragraphs": [
         {
@@ -980,7 +960,6 @@
       "position_in_issue": 19
     },
     {
-      "unit_type": "article",
       "headline": "Il Congresso d'igiene a Sassari",
       "paragraphs": [
         {
@@ -1035,7 +1014,6 @@
       "position_in_issue": 20
     },
     {
-      "unit_type": "article",
       "headline": "Il viale della Rimembranza a Castellarquato",
       "paragraphs": [
         {
@@ -1074,7 +1052,6 @@
       "position_in_issue": 21
     },
     {
-      "unit_type": "article",
       "headline": "Il Sindaco di Mantova all'on. Mussolini",
       "paragraphs": [
         {
@@ -1097,7 +1074,6 @@
       "position_in_issue": 22
     },
     {
-      "unit_type": "article",
       "headline": "Il generale Gandolfo passa in rivista tre legioni fasciste bolognesi",
       "paragraphs": [
         {
@@ -1148,7 +1124,6 @@
       "position_in_issue": 23
     },
     {
-      "unit_type": "article",
       "headline": "L'on. Giuriati a Pordenone",
       "paragraphs": [
         {
@@ -1187,7 +1162,6 @@
       "position_in_issue": 24
     },
     {
-      "unit_type": "article",
       "headline": "Il Congresso dei lavoratori agricoli",
       "paragraphs": [
         {
@@ -1230,7 +1204,6 @@
       "position_in_issue": 25
     },
     {
-      "unit_type": "article",
       "headline": "Genova per i postelegrafonici caduti in guerra",
       "paragraphs": [
         {
@@ -1261,7 +1234,6 @@
       "position_in_issue": 26
     },
     {
-      "unit_type": "article",
       "headline": "Il Congresso provinciale fascista a Verona",
       "paragraphs": [
         {
@@ -1292,7 +1264,6 @@
       "position_in_issue": 27
     },
     {
-      "unit_type": "article",
       "headline": "Imponente adunata a Bari di cooperatori pugliesi",
       "paragraphs": [
         {
@@ -1319,7 +1290,6 @@
       "position_in_issue": 28
     },
     {
-      "unit_type": "article",
       "headline": "Il primo Convegno dei telefonici",
       "paragraphs": [
         {
@@ -1342,7 +1312,6 @@
       "position_in_issue": 29
     },
     {
-      "unit_type": "article",
       "headline": "Il Re ha ricevuto l'inviato della Colonia italiana di Rio Janeiro",
       "paragraphs": [
         {
@@ -1361,7 +1330,6 @@
       "position_in_issue": 30
     },
     {
-      "unit_type": "article",
       "headline": "L'on. Larussa alla Stazione sperimentale di granicoltura di Rieti",
       "paragraphs": [
         {
@@ -1392,7 +1360,6 @@
       "position_in_issue": 31
     },
     {
-      "unit_type": "article",
       "headline": "Inaugurazione dell'Accademia Tuscolana e dell'autostrada Roma-Colli Laziali",
       "paragraphs": [
         {
@@ -1427,7 +1394,6 @@
       "position_in_issue": 32
     },
     {
-      "unit_type": "article",
       "headline": "La settimana",
       "paragraphs": [
         {
@@ -1706,7 +1672,6 @@
       "position_in_issue": 33
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1721,7 +1686,6 @@
       "position_in_issue": 34
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1736,7 +1700,6 @@
       "position_in_issue": 35
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1751,7 +1714,6 @@
       "position_in_issue": 36
     },
     {
-      "unit_type": "article",
       "headline": "L'inaugurazione dell'Esposizione all'Ospizio di S. Michele",
       "paragraphs": [
         {
@@ -1770,7 +1732,6 @@
       "position_in_issue": 37
     },
     {
-      "unit_type": "article",
       "headline": "Per i caduti del quartiere Ludovisi",
       "paragraphs": [
         {
@@ -1789,7 +1750,6 @@
       "position_in_issue": 38
     },
     {
-      "unit_type": "article",
       "headline": "Lo scoprimento della Lapide per i caduti del quartiere Esquilino",
       "paragraphs": [
         {
@@ -1804,7 +1764,6 @@
       "position_in_issue": 39
     },
     {
-      "unit_type": "article",
       "headline": "La bandiera della Scuola comunale \"Ernesto Nathan\"",
       "paragraphs": [
         {
@@ -1819,7 +1778,6 @@
       "position_in_issue": 40
     },
     {
-      "unit_type": "article",
       "headline": "BOBI",
       "paragraphs": [
         {
@@ -1958,7 +1916,6 @@
       "position_in_issue": 41
     },
     {
-      "unit_type": "article",
       "headline": "Un soldatino",
       "paragraphs": [
         {
@@ -2041,7 +1998,6 @@
       "position_in_issue": 42
     },
     {
-      "unit_type": "article",
       "headline": "Vestendo la bambola\nDialoghetto",
       "paragraphs": [
         {
@@ -2092,7 +2048,6 @@
       "position_in_issue": 43
     },
     {
-      "unit_type": "article",
       "headline": "Come una volta...",
       "paragraphs": [
         {
@@ -2159,7 +2114,6 @@
       "position_in_issue": 44
     },
     {
-      "unit_type": "article",
       "headline": "POVERI BIMBI!",
       "paragraphs": [
         {
@@ -2242,7 +2196,6 @@
       "position_in_issue": 45
     },
     {
-      "unit_type": "article",
       "headline": "L'origine di qualche pianta da frutto",
       "paragraphs": [
         {
@@ -2293,7 +2246,6 @@
       "position_in_issue": 46
     },
     {
-      "unit_type": "article",
       "headline": "Riconoscenza di un cane",
       "paragraphs": [
         {
@@ -2324,7 +2276,6 @@
       "position_in_issue": 47
     },
     {
-      "unit_type": "article",
       "headline": "\"A tu per tu\"",
       "paragraphs": [
         {
@@ -2359,7 +2310,6 @@
       "position_in_issue": 48
     },
     {
-      "unit_type": "article",
       "headline": "Artisti e maestranze dell'Ospizio di San Michele",
       "paragraphs": [
         {
@@ -2594,7 +2544,6 @@
       "position_in_issue": 49
     },
     {
-      "unit_type": "article",
       "headline": "Alla Biennale romana",
       "paragraphs": [
         {
@@ -2609,7 +2558,6 @@
       "position_in_issue": 50
     },
     {
-      "unit_type": "article",
       "headline": "La gara in salita Terni-Passo della Somma\nLa bella vittoria di Canestrari nella corsa automobilistica, alla media oraria di km. 68,980 - Moretti si aggiudica il primato nella motociclistica.",
       "paragraphs": [
         {
@@ -2864,7 +2812,6 @@
       "position_in_issue": 51
     },
     {
-      "unit_type": "article",
       "headline": "La II Coppa del Fucino\nRoccatani e Di Gennaro protagonisti della giornata",
       "paragraphs": [
         {
@@ -2935,7 +2882,6 @@
       "position_in_issue": 52
     },
     {
-      "unit_type": "article",
       "headline": "Le corse al galoppo in Italia",
       "paragraphs": [
         {
@@ -3006,7 +2952,6 @@
       "position_in_issue": 53
     },
     {
-      "unit_type": "article",
       "headline": "Il concorso ippico a Milano",
       "paragraphs": [
         {
@@ -3049,7 +2994,6 @@
       "position_in_issue": 54
     },
     {
-      "unit_type": "article",
       "headline": "Il Circuito di Castellammare Adriatico",
       "paragraphs": [
         {
@@ -3068,7 +3012,6 @@
       "position_in_issue": 55
     },
     {
-      "unit_type": "article",
       "headline": "La squadra ital. al Concorso ippico di Londra",
       "paragraphs": [
         {
@@ -3087,7 +3030,6 @@
       "position_in_issue": 56
     },
     {
-      "unit_type": "article",
       "headline": "La regata per la “Coppa di Roma„\nvinta dal R. C. Aniene",
       "paragraphs": [
         {
@@ -3138,7 +3080,6 @@
       "position_in_issue": 57
     },
     {
-      "unit_type": "article",
       "headline": "Risultati di gare",
       "paragraphs": [
         {
@@ -3181,7 +3122,6 @@
       "position_in_issue": 58
     },
     {
-      "unit_type": "article",
       "headline": "I grandi matches internazionali\nSpagna batte Italia 1 a 0",
       "paragraphs": [
         {
@@ -3216,7 +3156,6 @@
       "position_in_issue": 59
     },
     {
-      "unit_type": "article",
       "headline": "Giuliano Nostini vince la Coppa “Greco„",
       "paragraphs": [
         {
@@ -3251,7 +3190,6 @@
       "position_in_issue": 60
     },
     {
-      "unit_type": "article",
       "headline": "La riunione alla “Colombo„",
       "paragraphs": [
         {
@@ -3278,7 +3216,6 @@
       "position_in_issue": 61
     },
     {
-      "unit_type": "article",
       "headline": "Gare internazionali di tiro al piattello",
       "paragraphs": [
         {
@@ -3313,7 +3250,6 @@
       "position_in_issue": 62
     },
     {
-      "unit_type": "article",
       "headline": "La gita dell'U. M. A. R. a Fregene",
       "paragraphs": [
         {
@@ -3356,7 +3292,6 @@
       "position_in_issue": 63
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -3379,7 +3314,6 @@
       "position_in_issue": 64
     },
     {
-      "unit_type": "article",
       "headline": "Il Re inaugura la lapide\nei caduti dei Quartieri Alti",
       "paragraphs": [
         {
@@ -3414,7 +3348,6 @@
       "position_in_issue": 65
     },
     {
-      "unit_type": "article",
       "headline": "La consegna della bandiera\nalla scuola commerciale pareggiata E. Nathan",
       "paragraphs": [
         {
@@ -3493,7 +3426,6 @@
       "position_in_issue": 66
     },
     {
-      "unit_type": "article",
       "headline": "Il Giubileo del card. Merry del Val",
       "paragraphs": [
         {
@@ -3520,7 +3452,6 @@
       "position_in_issue": 67
     },
     {
-      "unit_type": "article",
       "headline": "La beatificazione della Veggente di Lourdes",
       "paragraphs": [
         {
@@ -3575,7 +3506,6 @@
       "position_in_issue": 68
     },
     {
-      "unit_type": "article",
       "headline": "Servizio di pronto soccorso a Fiumicino",
       "paragraphs": [
         {
@@ -3598,7 +3528,6 @@
       "position_in_issue": 69
     },
     {
-      "unit_type": "article",
       "headline": "Conferenze",
       "paragraphs": [
         {
@@ -3621,7 +3550,6 @@
       "position_in_issue": 70
     },
     {
-      "unit_type": "article",
       "headline": "Il Regio Commissario senatore Cremonesi\nal padre dell'ing. Dario Piperno",
       "paragraphs": [
         {
@@ -3644,7 +3572,6 @@
       "position_in_issue": 71
     },
     {
-      "unit_type": "article",
       "headline": "Lapide ai Caduti del Trionfale",
       "paragraphs": [
         {
@@ -3659,7 +3586,6 @@
       "position_in_issue": 72
     },
     {
-      "unit_type": "article",
       "headline": "Società Romana di antropologia",
       "paragraphs": [
         {
@@ -3678,7 +3604,6 @@
       "position_in_issue": 73
     },
     {
-      "unit_type": "article",
       "headline": "Una grave disgrazia automobilistica\nEdoardo Pompei in condizioni allarmanti\nI comm. Vincenzo Taburet e Ferruccio Ambrosi tra i feriti",
       "paragraphs": [
         {
@@ -3797,7 +3722,6 @@
       "position_in_issue": 74
     },
     {
-      "unit_type": "article",
       "headline": "Comitato centrale dell'Anno Santo",
       "paragraphs": [
         {
@@ -3828,7 +3752,6 @@
       "position_in_issue": 75
     },
     {
-      "unit_type": "article",
       "headline": "Saggio di pianoforte",
       "paragraphs": [
         {
@@ -3847,7 +3770,6 @@
       "position_in_issue": 76
     },
     {
-      "unit_type": "article",
       "headline": "Chiedete ovunque la\nBIRRA PERONI",
       "paragraphs": [
         {
@@ -3862,7 +3784,6 @@
       "position_in_issue": 77
     },
     {
-      "unit_type": "article",
       "headline": "Borse di studio per scienze commerciali",
       "paragraphs": [
         {
@@ -3881,7 +3802,6 @@
       "position_in_issue": 78
     },
     {
-      "unit_type": "article",
       "headline": "Il treno della Roma-Albano investe un camion\nal passaggio a livello in località Tavolato\nUn morto e due feriti",
       "paragraphs": [
         {
@@ -3932,7 +3852,6 @@
       "position_in_issue": 79
     },
     {
-      "unit_type": "article",
       "headline": "Fabbrica di fuochi pirotecnici\nsaltata in aria a Frosinone",
       "paragraphs": [
         {
@@ -3959,7 +3878,6 @@
       "position_in_issue": 80
     },
     {
-      "unit_type": "article",
       "headline": "TRIOFOSFORO\nRicostituente - Nervino eroico",
       "paragraphs": [
         {
@@ -3974,7 +3892,6 @@
       "position_in_issue": 81
     },
     {
-      "unit_type": "article",
       "headline": "Non bisogna dormire!",
       "paragraphs": [
         {
@@ -3989,7 +3906,6 @@
       "position_in_issue": 82
     },
     {
-      "unit_type": "article",
       "headline": "Due arresti per furto di piombo",
       "paragraphs": [
         {
@@ -4004,7 +3920,6 @@
       "position_in_issue": 83
     },
     {
-      "unit_type": "article",
       "headline": "Macabra pesca!",
       "paragraphs": [
         {
@@ -4019,7 +3934,6 @@
       "position_in_issue": 84
     },
     {
-      "unit_type": "article",
       "headline": "Per motivi di interesse",
       "paragraphs": [
         {
@@ -4042,7 +3956,6 @@
       "position_in_issue": 85
     },
     {
-      "unit_type": "article",
       "headline": "Per le SCUOLE ELEMENTARI",
       "paragraphs": [
         {
@@ -4081,7 +3994,6 @@
       "position_in_issue": 86
     },
     {
-      "unit_type": "article",
       "headline": "L'inaugurazione del vessillo\ndell'Associaz. reduci “Brigata Pescara„",
       "paragraphs": [
         {
@@ -4120,7 +4032,6 @@
       "position_in_issue": 87
     },
     {
-      "unit_type": "article",
       "headline": "Un carabiniere urta contro un'automobile\nin via del Babuino",
       "paragraphs": [
         {
@@ -4139,7 +4050,6 @@
       "position_in_issue": 88
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -4182,7 +4092,6 @@
       "position_in_issue": 89
     },
     {
-      "unit_type": "article",
       "headline": "RUBRICA FILATELICA",
       "paragraphs": [
         {
@@ -4285,7 +4194,6 @@
       "position_in_issue": 90
     },
     {
-      "unit_type": "article",
       "headline": "Il concerto \"pro Colonie marine,, all'Hôtel Plaza",
       "paragraphs": [
         {
@@ -4328,7 +4236,6 @@
       "position_in_issue": 91
     },
     {
-      "unit_type": "article",
       "headline": "Le ultime recite di Bragaglia",
       "paragraphs": [
         {
@@ -4343,7 +4250,6 @@
       "position_in_issue": 92
     },
     {
-      "unit_type": "article",
       "headline": "Il prof. Gabbrielli stasera al Margherita",
       "paragraphs": [
         {
@@ -4358,7 +4264,6 @@
       "position_in_issue": 93
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -4409,7 +4314,6 @@
       "position_in_issue": 94
     },
     {
-      "unit_type": "article",
       "headline": "Teatro della Gioventù",
       "paragraphs": [
         {
@@ -4432,7 +4336,6 @@
       "position_in_issue": 95
     },
     {
-      "unit_type": "article",
       "headline": "Spettacoli di questa sera",
       "paragraphs": [
         {
@@ -4475,7 +4378,6 @@
       "position_in_issue": 96
     },
     {
-      "unit_type": "article",
       "headline": "Monumenti musicali",
       "paragraphs": [
         {
@@ -4494,7 +4396,6 @@
       "position_in_issue": 97
     },
     {
-      "unit_type": "article",
       "headline": "Il Convento Veneziano",
       "paragraphs": [
         {
@@ -4513,7 +4414,6 @@
       "position_in_issue": 98
     },
     {
-      "unit_type": "article",
       "headline": "Un annuario degli artisti",
       "paragraphs": [
         {
@@ -4536,7 +4436,6 @@
       "position_in_issue": 99
     },
     {
-      "unit_type": "article",
       "headline": "Notizie varie",
       "paragraphs": [
         {
@@ -4571,7 +4470,6 @@
       "position_in_issue": 100
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -4590,7 +4488,6 @@
       "position_in_issue": 101
     },
     {
-      "unit_type": "article",
       "headline": "PICCOLA PUBBLICITA",
       "paragraphs": [
         {
@@ -4609,7 +4506,6 @@
       "position_in_issue": 102
     },
     {
-      "unit_type": "article",
       "headline": "NON PIU' PURGANTI",
       "paragraphs": [
         {
@@ -4624,7 +4520,6 @@
       "position_in_issue": 103
     },
     {
-      "unit_type": "article",
       "headline": "MALI VENEREI",
       "paragraphs": [
         {
@@ -4639,7 +4534,6 @@
       "position_in_issue": 104
     },
     {
-      "unit_type": "article",
       "headline": "SIFILIDE",
       "paragraphs": [
         {
@@ -4670,7 +4564,6 @@
       "position_in_issue": 105
     },
     {
-      "unit_type": "article",
       "headline": "Gotta, Artrite, Reumi \"Sciatica e Sinovite\"",
       "paragraphs": [
         {
@@ -4685,7 +4578,6 @@
       "position_in_issue": 106
     },
     {
-      "unit_type": "article",
       "headline": "VOCI NELLA NOTTE (Serenata)",
       "paragraphs": [
         {

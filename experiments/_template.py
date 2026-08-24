@@ -25,7 +25,6 @@ def build_issue(date: str, page_count: int, articles: list[dict[str, tp.Any]]) -
     for idx, art in enumerate(articles):
         art["id"] = f"{date}_a{idx:02d}"
         art["position_in_issue"] = idx
-        art.setdefault("unit_type", "article")
         art.setdefault("headline", None)
         for p_idx, para in enumerate(art.get("paragraphs", [])):
             para["id"] = f"{date}_a{idx:02d}_p{p_idx:02d}"

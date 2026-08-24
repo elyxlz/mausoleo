@@ -5,7 +5,6 @@
   "articles": [
     {
       "id": "1952-06-15_a00",
-      "unit_type": "article",
       "headline": "Truman assiste al varo del primo sommergibile atomico",
       "paragraphs": [
         {
@@ -20,7 +19,6 @@
     },
     {
       "id": "1952-06-15_a01",
-      "unit_type": "article",
       "headline": "La visita a Roma del generale Ridgway e la collaborazione militare",
       "paragraphs": [
         {
@@ -35,7 +33,6 @@
     },
     {
       "id": "1952-06-15_a02",
-      "unit_type": "article",
       "headline": "Sulla stampa",
       "paragraphs": [
         {
@@ -50,7 +47,6 @@
     },
     {
       "id": "1952-06-15_a03",
-      "unit_type": "article",
       "headline": "A GROTON NEL CONNECTICUT",
       "paragraphs": [
         {
@@ -65,7 +61,6 @@
     },
     {
       "id": "1952-06-15_a04",
-      "unit_type": "article",
       "headline": "L'Europa unita in un discorso di Spaak",
       "paragraphs": [
         {
@@ -80,7 +75,6 @@
     },
     {
       "id": "1952-06-15_a05",
-      "unit_type": "advertisement",
       "headline": "Nuovi arrivi:",
       "paragraphs": [
         {
@@ -95,7 +89,6 @@
     },
     {
       "id": "1952-06-15_a06",
-      "unit_type": "article",
       "headline": "COMANDI MEDITERRANEI",
       "paragraphs": [
         {
@@ -110,7 +103,6 @@
     },
     {
       "id": "1952-06-15_a07",
-      "unit_type": "article",
       "headline": "IL CONSIGLIO DEI MINISTRI",
       "paragraphs": [
         {
@@ -125,7 +117,6 @@
     },
     {
       "id": "1952-06-15_a08",
-      "unit_type": "article",
       "headline": "Il gen. Guido Frattini succede al gen. De Castiglioni",
       "paragraphs": [
         {
@@ -140,7 +131,6 @@
     },
     {
       "id": "1952-06-15_a09",
-      "unit_type": "article",
       "headline": "Assiste all'impostazione del sommergibile atomico",
       "paragraphs": [
         {
@@ -155,7 +145,6 @@
     },
     {
       "id": "1952-06-15_a10",
-      "unit_type": "article",
       "headline": "ROMA DEL GEN. RIDGWAY\nORAZIONE MEDITERRANEA",
       "paragraphs": [
         {
@@ -170,7 +159,6 @@
     },
     {
       "id": "1952-06-15_a11",
-      "unit_type": "obituary",
       "headline": "Onoranze alla salma del Maresciallo Caviglia",
       "paragraphs": [
         {
@@ -185,7 +173,6 @@
     },
     {
       "id": "1952-06-15_a12",
-      "unit_type": "article",
       "headline": "L'Europa unita in un discorso di Spaak",
       "paragraphs": [
         {
@@ -200,7 +187,6 @@
     },
     {
       "id": "1952-06-15_a13",
-      "unit_type": "advertisement",
       "headline": "Un disegno dallo scrittore - ...",
       "paragraphs": [
         {
@@ -215,7 +201,6 @@
     },
     {
       "id": "1952-06-15_a14",
-      "unit_type": "advertisement",
       "headline": "Il generale succede...",
       "paragraphs": [
         {
@@ -230,7 +215,6 @@
     },
     {
       "id": "1952-06-15_a15",
-      "unit_type": "article",
       "headline": "IL CONSIGLIO DEI MINISTRI, RIFORMA DELLA TUTELA DEL LAVORO",
       "paragraphs": [
         {
@@ -245,7 +229,6 @@
     },
     {
       "id": "1952-06-15_a16",
-      "unit_type": "article",
       "headline": "NIA STORICA A GROTON NEL",
       "paragraphs": [
         {
@@ -260,7 +243,6 @@
     },
     {
       "id": "1952-06-15_a17",
-      "unit_type": "article",
       "headline": "L’Eu\nin un dis",
       "paragraphs": [
         {
@@ -275,7 +257,6 @@
     },
     {
       "id": "1952-06-15_a18",
-      "unit_type": "advertisement",
       "headline": "Nuovi arrivi:",
       "paragraphs": [
         {
@@ -290,7 +271,6 @@
     },
     {
       "id": "1952-06-15_a19",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -305,7 +285,6 @@
     },
     {
       "id": "1952-06-15_a20",
-      "unit_type": "article",
       "headline": "COMANDI MEDITERRANEI",
       "paragraphs": [
         {
@@ -320,7 +299,6 @@
     },
     {
       "id": "1952-06-15_a21",
-      "unit_type": "article",
       "headline": "IL CONSIGLIO DEI MINISTRI DI IERI",
       "paragraphs": [
         {
@@ -335,7 +313,6 @@
     },
     {
       "id": "1952-06-15_a22",
-      "unit_type": "article",
       "headline": "CONCLUSE LE TRATTATIVE INTERCONFEDERALI",
       "paragraphs": [
         {
@@ -350,7 +327,6 @@
     },
     {
       "id": "1952-06-15_a23",
-      "unit_type": "article",
       "headline": "LA PORTATA DEL DISEGNO DI LEGGE",
       "paragraphs": [
         {
@@ -365,7 +341,6 @@
     },
     {
       "id": "1952-06-15_a24",
-      "unit_type": "article",
       "headline": "CERIMONIA STORICA A GROTON NEL CONNECTICUT",
       "paragraphs": [
         {
@@ -380,7 +355,6 @@
     },
     {
       "id": "1952-06-15_a25",
-      "unit_type": "article",
       "headline": "POLITICA INTERNA E SITUAZIONE INTERNAZIONALE",
       "paragraphs": [
         {
@@ -395,7 +369,6 @@
     },
     {
       "id": "1952-06-15_a26",
-      "unit_type": "article",
       "headline": "Il gen. Guido Frattini succede al gen. De Castiglioni",
       "paragraphs": [
         {
@@ -410,7 +383,6 @@
     },
     {
       "id": "1952-06-15_a27",
-      "unit_type": "editorial",
       "headline": null,
       "paragraphs": [
         {
@@ -425,7 +397,6 @@
     },
     {
       "id": "1952-06-15_a28",
-      "unit_type": "article",
       "headline": "GEN. RIDGWAY\nMEDITERRANEA",
       "paragraphs": [
         {
@@ -440,7 +411,6 @@
     },
     {
       "id": "1952-06-15_a29",
-      "unit_type": "article",
       "headline": "IL CONSIGLIO DEI MINISTRI",
       "paragraphs": [
         {
@@ -455,7 +425,6 @@
     },
     {
       "id": "1952-06-15_a30",
-      "unit_type": "article",
       "headline": "Cerimonia storica a Groton",
       "paragraphs": [
         {
@@ -470,7 +439,6 @@
     },
     {
       "id": "1952-06-15_a31",
-      "unit_type": "article",
       "headline": "Visita a Roma del gen. Ridgway collaborazione mediterranea",
       "paragraphs": [
         {
@@ -485,7 +453,6 @@
     },
     {
       "id": "1952-06-15_a32",
-      "unit_type": "article",
       "headline": "l'impostazione saggibile atomico",
       "paragraphs": [
         {
@@ -500,7 +467,6 @@
     },
     {
       "id": "1952-06-15_a33",
-      "unit_type": "article",
       "headline": "Europa unita un discorso di Spaak",
       "paragraphs": [
         {
@@ -515,7 +481,6 @@
     },
     {
       "id": "1952-06-15_a34",
-      "unit_type": "advertisement",
       "headline": "Nuovi arrivi:",
       "paragraphs": [
         {
@@ -530,7 +495,6 @@
     },
     {
       "id": "1952-06-15_a35",
-      "unit_type": "article",
       "headline": "CONCLUSE LE TRATTATIVE INTERCONFEDE RALI: ACCORDO PER GLI ASSEGNI FAMILIARI, L'INDENNITÀ E GLI SCATTI",
       "paragraphs": [
         {
@@ -545,7 +509,6 @@
     },
     {
       "id": "1952-06-15_a36",
-      "unit_type": "article",
       "headline": "GEN. GUIDO FRATTINI, NUOVO COMANDANTE DELLE FORZE TERRESTRI DELL'EUROPA MERIDIONALE",
       "paragraphs": [
         {
@@ -560,7 +523,6 @@
     },
     {
       "id": "1952-06-15_a37",
-      "unit_type": "article",
       "headline": "Onoranze alla salma del Maresciallo Caviglia",
       "paragraphs": [
         {
@@ -575,7 +537,6 @@
     },
     {
       "id": "1952-06-15_a38",
-      "unit_type": "article",
       "headline": "IL PROBLEMA DELLA CASA E LA SUA SOL",
       "paragraphs": [
         {
@@ -590,7 +551,6 @@
     },
     {
       "id": "1952-06-15_a39",
-      "unit_type": "article",
       "headline": "I carabinieri di scorta condannati dal Tribunale",
       "paragraphs": [
         {
@@ -605,7 +565,6 @@
     },
     {
       "id": "1952-06-15_a40",
-      "unit_type": "article",
       "headline": "UNA SERIE DI DIS",
       "paragraphs": [
         {
@@ -620,7 +579,6 @@
     },
     {
       "id": "1952-06-15_a41",
-      "unit_type": "article",
       "headline": "CASA E LA SUA SOLUZIONE",
       "paragraphs": [
         {
@@ -635,7 +593,6 @@
     },
     {
       "id": "1952-06-15_a42",
-      "unit_type": "article",
       "headline": "UNA BELLA INIZIATIVA DELL'",
       "paragraphs": [
         {
@@ -650,7 +607,6 @@
     },
     {
       "id": "1952-06-15_a43",
-      "unit_type": "article",
       "headline": "CA GIUDIZIARIA",
       "paragraphs": [
         {
@@ -665,7 +621,6 @@
     },
     {
       "id": "1952-06-15_a44",
-      "unit_type": "article",
       "headline": "Il cadavere dal “Ciriola”",
       "paragraphs": [
         {
@@ -680,7 +635,6 @@
     },
     {
       "id": "1952-06-15_a45",
-      "unit_type": "article",
       "headline": "Ieri sera a Pietralata",
       "paragraphs": [
         {
@@ -695,7 +649,6 @@
     },
     {
       "id": "1952-06-15_a46",
-      "unit_type": "article",
       "headline": "Dopo l'episodio nella chiesa della Trasfigurazione, i protagonisti del mancato matrimonio sposati ieri in Campidoglio",
       "paragraphs": [
         {
@@ -710,7 +663,6 @@
     },
     {
       "id": "1952-06-15_a47",
-      "unit_type": "article",
       "headline": "La responsabilità della Tip. Nava riaffermata dal Questore all'UIL",
       "paragraphs": [
         {
@@ -725,7 +677,6 @@
     },
     {
       "id": "1952-06-15_a48",
-      "unit_type": "editorial",
       "headline": "IL PROBLEMA DELLA CASA E LA SUA SOLUZIONE",
       "paragraphs": [
         {
@@ -740,7 +691,6 @@
     },
     {
       "id": "1952-06-15_a49",
-      "unit_type": "article",
       "headline": "Numerosi feriti in incidenti stradali",
       "paragraphs": [
         {
@@ -755,7 +705,6 @@
     },
     {
       "id": "1952-06-15_a50",
-      "unit_type": "notice",
       "headline": "NOTE DEL CRONISTA",
       "paragraphs": [
         {
@@ -770,7 +719,6 @@
     },
     {
       "id": "1952-06-15_a51",
-      "unit_type": "article",
       "headline": "Una Mostra didattica Leonardesca sarà aperta a Palazzo Venezia",
       "paragraphs": [
         {
@@ -785,7 +733,6 @@
     },
     {
       "id": "1952-06-15_a52",
-      "unit_type": "article",
       "headline": "Calendario turistico del mese di Giugno",
       "paragraphs": [
         {
@@ -800,7 +747,6 @@
     },
     {
       "id": "1952-06-15_a53",
-      "unit_type": "article",
       "headline": "La nota del giorno ABUSIVI",
       "paragraphs": [
         {
@@ -815,7 +761,6 @@
     },
     {
       "id": "1952-06-15_a54",
-      "unit_type": "article",
       "headline": "I giovani protagonisti del mancato matrimonio si sono sposati ieri in Campidoglio",
       "paragraphs": [
         {
@@ -830,7 +775,6 @@
     },
     {
       "id": "1952-06-15_a55",
-      "unit_type": "article",
       "headline": "Il cadavere dal «Ciriola»",
       "paragraphs": [
         {
@@ -845,7 +789,6 @@
     },
     {
       "id": "1952-06-15_a56",
-      "unit_type": "article",
       "headline": "La Festa dei bimbi oggi allo Zoo",
       "paragraphs": [
         {
@@ -860,7 +803,6 @@
     },
     {
       "id": "1952-06-15_a57",
-      "unit_type": "article",
       "headline": "Il ministro Scelba alla Mostra dei Vini",
       "paragraphs": [
         {
@@ -875,7 +817,6 @@
     },
     {
       "id": "1952-06-15_a58",
-      "unit_type": "article",
       "headline": "Ieri sera a Palazzo Venezia",
       "paragraphs": [
         {
@@ -890,7 +831,6 @@
     },
     {
       "id": "1952-06-15_a59",
-      "unit_type": "article",
       "headline": "Dopo l'episodio nella chiesa della Trasfigurazione",
       "paragraphs": [
         {
@@ -905,7 +845,6 @@
     },
     {
       "id": "1952-06-15_a60",
-      "unit_type": "article",
       "headline": "Una bella iniziativa della P.I.",
       "paragraphs": [
         {
@@ -920,7 +859,6 @@
     },
     {
       "id": "1952-06-15_a61",
-      "unit_type": "article",
       "headline": "ZIARIA",
       "paragraphs": [
         {
@@ -935,7 +873,6 @@
     },
     {
       "id": "1952-06-15_a62",
-      "unit_type": "article",
       "headline": "Per la formazione della Giunta Comunale",
       "paragraphs": [
         {
@@ -950,7 +887,6 @@
     },
     {
       "id": "1952-06-15_a63",
-      "unit_type": "article",
       "headline": "A PIETRALATA",
       "paragraphs": [
         {
@@ -965,7 +901,6 @@
     },
     {
       "id": "1952-06-15_a64",
-      "unit_type": "article",
       "headline": "RASFIGURAZIONE",
       "paragraphs": [
         {
@@ -980,7 +915,6 @@
     },
     {
       "id": "1952-06-15_a65",
-      "unit_type": "article",
       "headline": "La CISL contro le manifestazioni per l'arrivo del gen. Ridgway",
       "paragraphs": [
         {
@@ -995,7 +929,6 @@
     },
     {
       "id": "1952-06-15_a66",
-      "unit_type": "article",
       "headline": "L'orario estivo della Roma - Lido",
       "paragraphs": [
         {
@@ -1010,7 +943,6 @@
     },
     {
       "id": "1952-06-15_a67",
-      "unit_type": "advertisement",
       "headline": "Razionamento",
       "paragraphs": [
         {
@@ -1025,7 +957,6 @@
     },
     {
       "id": "1952-06-15_a68",
-      "unit_type": "advertisement",
       "headline": "RICORDI",
       "paragraphs": [
         {
@@ -1040,7 +971,6 @@
     },
     {
       "id": "1952-06-15_a69",
-      "unit_type": "advertisement",
       "headline": "VESTITO 11.90",
       "paragraphs": [
         {
@@ -1055,7 +985,6 @@
     },
     {
       "id": "1952-06-15_a70",
-      "unit_type": "advertisement",
       "headline": "SCONTI ANNUALITA'",
       "paragraphs": [
         {
@@ -1070,7 +999,6 @@
     },
     {
       "id": "1952-06-15_a71",
-      "unit_type": "advertisement",
       "headline": "STOMACO - INTESTINO -",
       "paragraphs": [
         {
@@ -1085,7 +1013,6 @@
     },
     {
       "id": "1952-06-15_a72",
-      "unit_type": "advertisement",
       "headline": "Terreno fabbricabile vendesi via Appia",
       "paragraphs": [
         {
@@ -1100,7 +1027,6 @@
     },
     {
       "id": "1952-06-15_a73",
-      "unit_type": "advertisement",
       "headline": "OPTICA VIA DEL",
       "paragraphs": [
         {
@@ -1115,7 +1041,6 @@
     },
     {
       "id": "1952-06-15_a74",
-      "unit_type": "article",
       "headline": "escato attorio",
       "paragraphs": [
         {
@@ -1130,7 +1055,6 @@
     },
     {
       "id": "1952-06-15_a75",
-      "unit_type": "advertisement",
       "headline": "VESTITI estivi IN TUTTE LE TINTE MODELLI NOVITA",
       "paragraphs": [
         {
@@ -1145,7 +1069,6 @@
     },
     {
       "id": "1952-06-15_a76",
-      "unit_type": "advertisement",
       "headline": "16.800",
       "paragraphs": [
         {
@@ -1160,7 +1083,6 @@
     },
     {
       "id": "1952-06-15_a77",
-      "unit_type": "advertisement",
       "headline": "L' ora \"Z\", è \"l'ora Gratuita\",",
       "paragraphs": [
         {
@@ -1175,7 +1097,6 @@
     },
     {
       "id": "1952-06-15_a78",
-      "unit_type": "advertisement",
       "headline": "TESSUTI DI FIDUCIA POPELIN SCOZZESE ORGANZE S. GALLO SVIZZERO BIANCHERIA DA CASA",
       "paragraphs": [
         {
@@ -1190,7 +1111,6 @@
     },
     {
       "id": "1952-06-15_a79",
-      "unit_type": "advertisement",
       "headline": "ELETTROSCALDABAGNI",
       "paragraphs": [
         {
@@ -1205,7 +1125,6 @@
     },
     {
       "id": "1952-06-15_a80",
-      "unit_type": "advertisement",
       "headline": "ASSUMIAMO COMMESI e AIUTO COMMESI",
       "paragraphs": [
         {
@@ -1220,7 +1139,6 @@
     },
     {
       "id": "1952-06-15_a81",
-      "unit_type": "advertisement",
       "headline": "Tutti possono FOTO - FILMARE a COLORE",
       "paragraphs": [
         {
@@ -1235,7 +1153,6 @@
     },
     {
       "id": "1952-06-15_a82",
-      "unit_type": "article",
       "headline": "I carabinieri e condannati da",
       "paragraphs": [
         {
@@ -1250,7 +1167,6 @@
     },
     {
       "id": "1952-06-15_a83",
-      "unit_type": "article",
       "headline": "SOLUZIONE",
       "paragraphs": [
         {
@@ -1265,7 +1181,6 @@
     },
     {
       "id": "1952-06-15_a84",
-      "unit_type": "article",
       "headline": "Il cadavere di un giovane dal \"Ciriola\", sotto",
       "paragraphs": [
         {
@@ -1280,7 +1195,6 @@
     },
     {
       "id": "1952-06-15_a85",
-      "unit_type": "article",
       "headline": "Dopo l'episodio nella chiesa della Trasfigurazione",
       "paragraphs": [
         {
@@ -1295,7 +1209,6 @@
     },
     {
       "id": "1952-06-15_a86",
-      "unit_type": "article",
       "headline": "Ridotta in dalla caduta",
       "paragraphs": [
         {
@@ -1310,7 +1223,6 @@
     },
     {
       "id": "1952-06-15_a87",
-      "unit_type": "article",
       "headline": "IL PROBLEMA DELLA CASA E LA SUA SOLUZIONE",
       "paragraphs": [
         {
@@ -1325,7 +1237,6 @@
     },
     {
       "id": "1952-06-15_a88",
-      "unit_type": "article",
       "headline": "Una Mostra didattica Leonardesca sarà aperta a Palazzo Venezia",
       "paragraphs": [
         {
@@ -1340,7 +1251,6 @@
     },
     {
       "id": "1952-06-15_a89",
-      "unit_type": "article",
       "headline": "Il cadavere di un giovane ripescato dal \"Ciriola\", sotto ponte Vittorio",
       "paragraphs": [
         {
@@ -1355,7 +1265,6 @@
     },
     {
       "id": "1952-06-15_a90",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1370,7 +1279,6 @@
     },
     {
       "id": "1952-06-15_a91",
-      "unit_type": "notice",
       "headline": "Smarrimento.",
       "paragraphs": [
         {
@@ -1385,7 +1293,6 @@
     },
     {
       "id": "1952-06-15_a92",
-      "unit_type": "article",
       "headline": "Razionamento",
       "paragraphs": [
         {
@@ -1400,7 +1307,6 @@
     },
     {
       "id": "1952-06-15_a93",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1415,7 +1321,6 @@
     },
     {
       "id": "1952-06-15_a94",
-      "unit_type": "notice",
       "headline": "Smarrimento.",
       "paragraphs": [
         {
@@ -1430,7 +1335,6 @@
     },
     {
       "id": "1952-06-15_a95",
-      "unit_type": "article",
       "headline": "Razionamento nel '53?",
       "paragraphs": [
         {
@@ -1445,7 +1349,6 @@
     },
     {
       "id": "1952-06-15_a96",
-      "unit_type": "advertisement",
       "headline": "RICORDATE!",
       "paragraphs": [
         {
@@ -1460,7 +1363,6 @@
     },
     {
       "id": "1952-06-15_a97",
-      "unit_type": "advertisement",
       "headline": "VESTITO 11.900 POPELIN",
       "paragraphs": [
         {
@@ -1475,7 +1377,6 @@
     },
     {
       "id": "1952-06-15_a98",
-      "unit_type": "advertisement",
       "headline": "SCONTIAMO ANNUALITA' STATALI",
       "paragraphs": [
         {
@@ -1490,7 +1391,6 @@
     },
     {
       "id": "1952-06-15_a99",
-      "unit_type": "advertisement",
       "headline": "STOMACO - FEGATO INTESTINO - RAGGI X",
       "paragraphs": [
         {
@@ -1505,7 +1405,6 @@
     },
     {
       "id": "1952-06-15_a100",
-      "unit_type": "advertisement",
       "headline": "Terreno fabbricabile vendesi via Appia Nuova viale Appio Claudia",
       "paragraphs": [
         {
@@ -1520,7 +1419,6 @@
     },
     {
       "id": "1952-06-15_a101",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -1535,7 +1433,6 @@
     },
     {
       "id": "1952-06-15_a102",
-      "unit_type": "article",
       "headline": "ripescato e Vittorio",
       "paragraphs": [
         {
@@ -1550,7 +1447,6 @@
     },
     {
       "id": "1952-06-15_a103",
-      "unit_type": "article",
       "headline": "zionamento nel '53?",
       "paragraphs": [
         {
@@ -1565,7 +1461,6 @@
     },
     {
       "id": "1952-06-15_a104",
-      "unit_type": "notice",
       "headline": "RICORDATE!",
       "paragraphs": [
         {
@@ -1580,7 +1475,6 @@
     },
     {
       "id": "1952-06-15_a105",
-      "unit_type": "advertisement",
       "headline": "ESTITO 11.900 POPELIN",
       "paragraphs": [
         {
@@ -1595,7 +1489,6 @@
     },
     {
       "id": "1952-06-15_a106",
-      "unit_type": "advertisement",
       "headline": "SCONTIAMO ANNUALITA’ STATALI",
       "paragraphs": [
         {
@@ -1610,7 +1503,6 @@
     },
     {
       "id": "1952-06-15_a107",
-      "unit_type": "advertisement",
       "headline": "OMACO - FEGATO TESTINO - RAGGI X",
       "paragraphs": [
         {
@@ -1625,7 +1517,6 @@
     },
     {
       "id": "1952-06-15_a108",
-      "unit_type": "advertisement",
       "headline": "Terreno fabbricabile",
       "paragraphs": [
         {
@@ -1640,7 +1531,6 @@
     },
     {
       "id": "1952-06-15_a109",
-      "unit_type": "advertisement",
       "headline": "VESTITI estivi IN TUTTE LE TINTE MODELLI NOVITA",
       "paragraphs": [
         {
@@ -1655,7 +1545,6 @@
     },
     {
       "id": "1952-06-15_a110",
-      "unit_type": "advertisement",
       "headline": "GIOIELLERIA %\nCito Vespasiani\nARGENTERIA",
       "paragraphs": [
         {
@@ -1670,7 +1559,6 @@
     },
     {
       "id": "1952-06-15_a111",
-      "unit_type": "advertisement",
       "headline": "Tutti possono\nFOTO - FILMARE\na COLORE",
       "paragraphs": [
         {
@@ -1685,7 +1573,6 @@
     },
     {
       "id": "1952-06-15_a112",
-      "unit_type": "article",
       "headline": "Per la formazione della Giunta Comunale",
       "paragraphs": [
         {
@@ -1700,7 +1587,6 @@
     },
     {
       "id": "1952-06-15_a113",
-      "unit_type": "article",
       "headline": "IERI SERA A PIETRALATA\nRidotto in fin di vita a coltellate per una banale questione d'interesse",
       "paragraphs": [
         {
@@ -1715,7 +1601,6 @@
     },
     {
       "id": "1952-06-15_a114",
-      "unit_type": "article",
       "headline": "Giovane ripescato dal ponte Vittorio",
       "paragraphs": [
         {
@@ -1730,7 +1615,6 @@
     },
     {
       "id": "1952-06-15_a115",
-      "unit_type": "advertisement",
       "headline": "VESTITI estivi",
       "paragraphs": [
         {
@@ -1745,7 +1629,6 @@
     },
     {
       "id": "1952-06-15_a116",
-      "unit_type": "article",
       "headline": "BELLA INIZIATIVA DELLA P.I. Mostra didattica Leonardesca aperta a Palazzo Venezia",
       "paragraphs": [
         {
@@ -1760,7 +1643,6 @@
     },
     {
       "id": "1952-06-15_a117",
-      "unit_type": "article",
       "headline": "Dopo l'episodio nella C",
       "paragraphs": [
         {
@@ -1775,7 +1657,6 @@
     },
     {
       "id": "1952-06-15_a118",
-      "unit_type": "article",
       "headline": "Festa dei bimbi oggi allo Zoo",
       "paragraphs": [
         {
@@ -1790,7 +1671,6 @@
     },
     {
       "id": "1952-06-15_a119",
-      "unit_type": "article",
       "headline": "Arresti",
       "paragraphs": [
         {
@@ -1805,7 +1685,6 @@
     },
     {
       "id": "1952-06-15_a120",
-      "unit_type": "article",
       "headline": "ripescato e Vittorio",
       "paragraphs": [
         {
@@ -1820,7 +1699,6 @@
     },
     {
       "id": "1952-06-15_a121",
-      "unit_type": "advertisement",
       "headline": "vestiti estivi in tutte le tinte, modelli novita'",
       "paragraphs": [
         {
@@ -1835,7 +1713,6 @@
     },
     {
       "id": "1952-06-15_a122",
-      "unit_type": "article",
       "headline": "Cronaca Giudiziaria",
       "paragraphs": [
         {
@@ -1850,7 +1727,6 @@
     },
     {
       "id": "1952-06-15_a123",
-      "unit_type": "article",
       "headline": "UNA SERIE DI DISGRAZIE",
       "paragraphs": [
         {
@@ -1865,7 +1741,6 @@
     },
     {
       "id": "1952-06-15_a124",
-      "unit_type": "article",
       "headline": "Ridotto in fin di per una banale querela",
       "paragraphs": [
         {
@@ -1880,7 +1755,6 @@
     },
     {
       "id": "1952-06-15_a125",
-      "unit_type": "article",
       "headline": "La responsabilità della Tip. Nava riaffermata dal Questore all'UIL",
       "paragraphs": [
         {
@@ -1895,7 +1769,6 @@
     },
     {
       "id": "1952-06-15_a126",
-      "unit_type": "advertisement",
       "headline": "Tutti possono FOTO - FILMARE a COLORE",
       "paragraphs": [
         {
@@ -1910,7 +1783,6 @@
     },
     {
       "id": "1952-06-15_a127",
-      "unit_type": "article",
       "headline": "RITORNO AD",
       "paragraphs": [
         {
@@ -1925,7 +1797,6 @@
     },
     {
       "id": "1952-06-15_a128",
-      "unit_type": "article",
       "headline": "Notiziario letterario",
       "paragraphs": [
         {
@@ -1940,7 +1811,6 @@
     },
     {
       "id": "1952-06-15_a129",
-      "unit_type": "article",
       "headline": "ASSISI",
       "paragraphs": [
         {
@@ -1955,7 +1825,6 @@
     },
     {
       "id": "1952-06-15_a130",
-      "unit_type": "article",
       "headline": "I GRANDI RISULTATI DI",
       "paragraphs": [
         {
@@ -1970,7 +1839,6 @@
     },
     {
       "id": "1952-06-15_a131",
-      "unit_type": "article",
       "headline": "Un sogno realizzato",
       "paragraphs": [
         {
@@ -1985,7 +1853,6 @@
     },
     {
       "id": "1952-06-15_a132",
-      "unit_type": "article",
       "headline": "IL PIU' SANO E LIB",
       "paragraphs": [
         {
@@ -2000,7 +1867,6 @@
     },
     {
       "id": "1952-06-15_a133",
-      "unit_type": "article",
       "headline": "Piccoli",
       "paragraphs": [
         {
@@ -2015,7 +1881,6 @@
     },
     {
       "id": "1952-06-15_a134",
-      "unit_type": "article",
       "headline": "C'è un napoletano",
       "paragraphs": [
         {
@@ -2030,7 +1895,6 @@
     },
     {
       "id": "1952-06-15_a135",
-      "unit_type": "advertisement",
       "headline": "Imbrogli con il prete",
       "paragraphs": [
         {
@@ -2045,7 +1909,6 @@
     },
     {
       "id": "1952-06-15_a136",
-      "unit_type": "article",
       "headline": "traverso la radio",
       "paragraphs": [
         {
@@ -2060,7 +1923,6 @@
     },
     {
       "id": "1952-06-15_a137",
-      "unit_type": "article",
       "headline": "BERO RIFORMATORIO DEL MONDO",
       "paragraphs": [
         {
@@ -2075,7 +1937,6 @@
     },
     {
       "id": "1952-06-15_a138",
-      "unit_type": "article",
       "headline": "I GRANDI RISULTATI DI UNA NOBILE INIZIATIVA",
       "paragraphs": [
         {
@@ -2090,7 +1951,6 @@
     },
     {
       "id": "1952-06-15_a139",
-      "unit_type": "article",
       "headline": "IL PIU' SANO E LIBERO RIFORMATORIO D",
       "paragraphs": [
         {
@@ -2105,7 +1965,6 @@
     },
     {
       "id": "1952-06-15_a140",
-      "unit_type": "article",
       "headline": "gli in grande stile testo della beneficenza",
       "paragraphs": [
         {
@@ -2120,7 +1979,6 @@
     },
     {
       "id": "1952-06-15_a141",
-      "unit_type": "article",
       "headline": "La radio nel cielo",
       "paragraphs": [
         {
@@ -2135,7 +1993,6 @@
     },
     {
       "id": "1952-06-15_a142",
-      "unit_type": "article",
       "headline": "Un grande vivaio forestale sta sorgendo a Cassino",
       "paragraphs": [
         {
@@ -2150,7 +2007,6 @@
     },
     {
       "id": "1952-06-15_a143",
-      "unit_type": "article",
       "headline": "La redenzione",
       "paragraphs": [
         {
@@ -2165,7 +2021,6 @@
     },
     {
       "id": "1952-06-15_a144",
-      "unit_type": "article",
       "headline": "LE PRIME CINEMA Furore",
       "paragraphs": [
         {
@@ -2180,7 +2035,6 @@
     },
     {
       "id": "1952-06-15_a145",
-      "unit_type": "article",
       "headline": "La luce rossa",
       "paragraphs": [
         {
@@ -2195,7 +2049,6 @@
     },
     {
       "id": "1952-06-15_a146",
-      "unit_type": "article",
       "headline": "Il più bel peccato del mondo",
       "paragraphs": [
         {
@@ -2210,7 +2063,6 @@
     },
     {
       "id": "1952-06-15_a147",
-      "unit_type": "article",
       "headline": "Un me- cura i m-",
       "paragraphs": [
         {
@@ -2225,7 +2077,6 @@
     },
     {
       "id": "1952-06-15_a148",
-      "unit_type": "article",
       "headline": "Fratelli in pericolo",
       "paragraphs": [
         {
@@ -2240,7 +2091,6 @@
     },
     {
       "id": "1952-06-15_a149",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -2255,7 +2105,6 @@
     },
     {
       "id": "1952-06-15_a150",
-      "unit_type": "article",
       "headline": "Traverso la terra e i mari",
       "paragraphs": [
         {
@@ -2270,7 +2119,6 @@
     },
     {
       "id": "1952-06-15_a151",
-      "unit_type": "article",
       "headline": "La nave della vita",
       "paragraphs": [
         {
@@ -2285,7 +2133,6 @@
     },
     {
       "id": "1952-06-15_a152",
-      "unit_type": "article",
       "headline": "gli in grande s testo della benefic",
       "paragraphs": [
         {
@@ -2300,7 +2147,6 @@
     },
     {
       "id": "1952-06-15_a153",
-      "unit_type": "article",
       "headline": "n radio nel cielo",
       "paragraphs": [
         {
@@ -2315,7 +2161,6 @@
     },
     {
       "id": "1952-06-15_a154",
-      "unit_type": "article",
       "headline": "Amerigo Ru",
       "paragraphs": [
         {
@@ -2330,7 +2175,6 @@
     },
     {
       "id": "1952-06-15_a155",
-      "unit_type": "article",
       "headline": "Ernesto Ca",
       "paragraphs": [
         {
@@ -2345,7 +2189,6 @@
     },
     {
       "id": "1952-06-15_a156",
-      "unit_type": "article",
       "headline": "Genova, giugno",
       "paragraphs": [
         {
@@ -2360,7 +2203,6 @@
     },
     {
       "id": "1952-06-15_a157",
-      "unit_type": "article",
       "headline": "Imbrogli in grande con il pretesto della",
       "paragraphs": [
         {
@@ -2375,7 +2217,6 @@
     },
     {
       "id": "1952-06-15_a158",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -2390,7 +2231,6 @@
     },
     {
       "id": "1952-06-15_a159",
-      "unit_type": "article",
       "headline": "I GRANDI RISULTATI DI Un medico attra cura i malati navigan",
       "paragraphs": [
         {
@@ -2405,7 +2245,6 @@
     },
     {
       "id": "1952-06-15_a160",
-      "unit_type": "article",
       "headline": "IL PIU' SANO E LIB Piccoli marinai sull",
       "paragraphs": [
         {
@@ -2420,7 +2259,6 @@
     },
     {
       "id": "1952-06-15_a161",
-      "unit_type": "article",
       "headline": "Festa a bordo",
       "paragraphs": [
         {
@@ -2435,7 +2273,6 @@
     },
     {
       "id": "1952-06-15_a162",
-      "unit_type": "article",
       "headline": "RITORNO",
       "paragraphs": [
         {
@@ -2450,7 +2287,6 @@
     },
     {
       "id": "1952-06-15_a163",
-      "unit_type": "article",
       "headline": "Ambrogli in grande con il pretesto della ben",
       "paragraphs": [
         {
@@ -2465,7 +2301,6 @@
     },
     {
       "id": "1952-06-15_a164",
-      "unit_type": "article",
       "headline": "uso la radio",
       "paragraphs": [
         {
@@ -2480,7 +2315,6 @@
     },
     {
       "id": "1952-06-15_a165",
-      "unit_type": "article",
       "headline": "MATORIO DEL MONDO",
       "paragraphs": [
         {
@@ -2495,7 +2329,6 @@
     },
     {
       "id": "1952-06-15_a166",
-      "unit_type": "article",
       "headline": "de stile beneficenza",
       "paragraphs": [
         {
@@ -2510,7 +2343,6 @@
     },
     {
       "id": "1952-06-15_a167",
-      "unit_type": "article",
       "headline": "LE PRIME CINEMA Furore",
       "paragraphs": [
         {
@@ -2525,7 +2357,6 @@
     },
     {
       "id": "1952-06-15_a168",
-      "unit_type": "article",
       "headline": "La luce rossa",
       "paragraphs": [
         {
@@ -2540,7 +2371,6 @@
     },
     {
       "id": "1952-06-15_a169",
-      "unit_type": "article",
       "headline": "Il più bel peccato del mondo",
       "paragraphs": [
         {
@@ -2555,7 +2385,6 @@
     },
     {
       "id": "1952-06-15_a170",
-      "unit_type": "article",
       "headline": "Festa a bordo",
       "paragraphs": [
         {
@@ -2570,7 +2399,6 @@
     },
     {
       "id": "1952-06-15_a171",
-      "unit_type": "article",
       "headline": "Ernesto Caballo",
       "paragraphs": [
         {
@@ -2585,7 +2413,6 @@
     },
     {
       "id": "1952-06-15_a172",
-      "unit_type": "article",
       "headline": "O AD ASSISI",
       "paragraphs": [
         {
@@ -2600,7 +2427,6 @@
     },
     {
       "id": "1952-06-15_a173",
-      "unit_type": "article",
       "headline": "ario letterario",
       "paragraphs": [
         {
@@ -2615,7 +2441,6 @@
     },
     {
       "id": "1952-06-15_a174",
-      "unit_type": "article",
       "headline": "Imbroglia con il prete",
       "paragraphs": [
         {
@@ -2630,7 +2455,6 @@
     },
     {
       "id": "1952-06-15_a175",
-      "unit_type": "article",
       "headline": "Un grande vivaio sta sorgendo a Cassino, 1",
       "paragraphs": [
         {
@@ -2645,7 +2469,6 @@
     },
     {
       "id": "1952-06-15_a176",
-      "unit_type": "article",
       "headline": "alla redenzion",
       "paragraphs": [
         {
@@ -2660,7 +2483,6 @@
     },
     {
       "id": "1952-06-15_a177",
-      "unit_type": "article",
       "headline": "Flora Antonioni",
       "paragraphs": [
         {
@@ -2675,7 +2497,6 @@
     },
     {
       "id": "1952-06-15_a178",
-      "unit_type": "article",
       "headline": "I MOTOCICLISTI IN GARA",
       "paragraphs": [
         {
@@ -2690,7 +2511,6 @@
     },
     {
       "id": "1952-06-15_a179",
-      "unit_type": "article",
       "headline": "LA DOMENICA SUGLI I",
       "paragraphs": [
         {
@@ -2705,7 +2525,6 @@
     },
     {
       "id": "1952-06-15_a180",
-      "unit_type": "article",
       "headline": "Rientra Vizio sulla pista del trotter romano - L'internazionale Premio Duomo a",
       "paragraphs": [
         {
@@ -2720,7 +2539,6 @@
     },
     {
       "id": "1952-06-15_a181",
-      "unit_type": "article",
       "headline": "TOMOBILISTICHE DI LE MANS",
       "paragraphs": [
         {
@@ -2735,7 +2553,6 @@
     },
     {
       "id": "1952-06-15_a182",
-      "unit_type": "article",
       "headline": "Concerti Cinema",
       "paragraphs": [
         {
@@ -2750,7 +2567,6 @@
     },
     {
       "id": "1952-06-15_a183",
-      "unit_type": "article",
       "headline": "Keteleer primo con distacco raguardo della Zurigo-Basilea",
       "paragraphs": [
         {
@@ -2765,7 +2581,6 @@
     },
     {
       "id": "1952-06-15_a184",
-      "unit_type": "article",
       "headline": "Ville di Roma a VillaGlori",
       "paragraphs": [
         {
@@ -2780,7 +2595,6 @@
     },
     {
       "id": "1952-06-15_a185",
-      "unit_type": "article",
       "headline": "Le previsioni sulle Olimpiadi di un giornale finlandese",
       "paragraphs": [
         {
@@ -2795,7 +2609,6 @@
     },
     {
       "id": "1952-06-15_a186",
-      "unit_type": "article",
       "headline": "Dichiarazioni alla stampa del giocatore Juventino",
       "paragraphs": [
         {
@@ -2810,7 +2623,6 @@
     },
     {
       "id": "1952-06-15_a187",
-      "unit_type": "article",
       "headline": "Oggi si disputa il XIV Circuito Valle del Liri",
       "paragraphs": [
         {
@@ -2825,7 +2637,6 @@
     },
     {
       "id": "1952-06-15_a188",
-      "unit_type": "article",
       "headline": "La Varietà",
       "paragraphs": [
         {
@@ -2840,7 +2651,6 @@
     },
     {
       "id": "1952-06-15_a189",
-      "unit_type": "article",
       "headline": "LA RADIO",
       "paragraphs": [
         {
@@ -2855,7 +2665,6 @@
     },
     {
       "id": "1952-06-15_a190",
-      "unit_type": "article",
       "headline": "Una buona ricetta!",
       "paragraphs": [
         {
@@ -2870,7 +2679,6 @@
     },
     {
       "id": "1952-06-15_a191",
-      "unit_type": "advertisement",
       "headline": "MARTIN GUMPERT",
       "paragraphs": [
         {
@@ -2885,7 +2693,6 @@
     },
     {
       "id": "1952-06-15_a192",
-      "unit_type": "advertisement",
       "headline": "CLIPS",
       "paragraphs": [
         {
@@ -2900,7 +2707,6 @@
     },
     {
       "id": "1952-06-15_a193",
-      "unit_type": "advertisement",
       "headline": "ALATU",
       "paragraphs": [
         {
@@ -2915,7 +2721,6 @@
     },
     {
       "id": "1952-06-15_a194",
-      "unit_type": "advertisement",
       "headline": "CINZANO",
       "paragraphs": [
         {
@@ -2930,7 +2735,6 @@
     },
     {
       "id": "1952-06-15_a195",
-      "unit_type": "advertisement",
       "headline": "Ceresa e Rampone",
       "paragraphs": [
         {
@@ -2945,7 +2749,6 @@
     },
     {
       "id": "1952-06-15_a196",
-      "unit_type": "advertisement",
       "headline": "SAISA S/A",
       "paragraphs": [
         {
@@ -2960,7 +2763,6 @@
     },
     {
       "id": "1952-06-15_a197",
-      "unit_type": "article",
       "headline": "Il Siracusa ultimo avversario dei giallo-rossi allo Stadio",
       "paragraphs": [
         {
@@ -2975,7 +2777,6 @@
     },
     {
       "id": "1952-06-15_a198",
-      "unit_type": "article",
       "headline": "Successo di Sandro Perrone nel Premio Città di Lecco",
       "paragraphs": [
         {
@@ -2990,7 +2791,6 @@
     },
     {
       "id": "1952-06-15_a199",
-      "unit_type": "article",
       "headline": "GLI INCONTRI DI PALLANUOTO",
       "paragraphs": [
         {
@@ -3005,7 +2805,6 @@
     },
     {
       "id": "1952-06-15_a200",
-      "unit_type": "article",
       "headline": "Napoli, 14 giugno",
       "paragraphs": [
         {
@@ -3020,7 +2819,6 @@
     },
     {
       "id": "1952-06-15_a201",
-      "unit_type": "article",
       "headline": "LE 24 ORE AUTOMOBILISTICHE DI",
       "paragraphs": [
         {
@@ -3035,7 +2833,6 @@
     },
     {
       "id": "1952-06-15_a202",
-      "unit_type": "article",
       "headline": "Le Mans (Francia), 14 giugno",
       "paragraphs": [
         {
@@ -3050,7 +2847,6 @@
     },
     {
       "id": "1952-06-15_a203",
-      "unit_type": "article",
       "headline": "Le dimissioni del comm. Bevilacqua da consigliere della Lazio",
       "paragraphs": [
         {
@@ -3065,7 +2861,6 @@
     },
     {
       "id": "1952-06-15_a204",
-      "unit_type": "article",
       "headline": "Quaranta maglie bianche alla III prova di indicazione",
       "paragraphs": [
         {
@@ -3080,7 +2875,6 @@
     },
     {
       "id": "1952-06-15_a205",
-      "unit_type": "article",
       "headline": "Sconfitti gli azzurri nel doppio della «Davis»",
       "paragraphs": [
         {
@@ -3095,7 +2889,6 @@
     },
     {
       "id": "1952-06-15_a206",
-      "unit_type": "advertisement",
       "headline": "TEATRI",
       "paragraphs": [
         {
@@ -3110,7 +2903,6 @@
     },
     {
       "id": "1952-06-15_a207",
-      "unit_type": "advertisement",
       "headline": "RCSSINI: Oggi alle 17.45 unico festivo con la commissima commedia in tre atti di Rocchi e Spaducci: «Civicusse Romano Summe». nella interpretazione di Anita e Checco Durante. Prenotaz. telef. 52-770 e all'ARPA (Città).",
       "paragraphs": [
         {
@@ -3125,7 +2917,6 @@
     },
     {
       "id": "1952-06-15_a208",
-      "unit_type": "advertisement",
       "headline": "DANCING - RITROVI",
       "paragraphs": [
         {
@@ -3140,7 +2931,6 @@
     },
     {
       "id": "1952-06-15_a209",
-      "unit_type": "advertisement",
       "headline": "TUTTI DA FASSI? Perché? Per l'armoniosa orchestra che tutte le sere allietà la sua spettabile clientela? E per gustare i suoi insuperabili prodotti, dell'arte gelateria? Allora tutti nel giardino Fassi Corso d'Italia. Telefono 848-275",
       "paragraphs": [
         {
@@ -3155,7 +2945,6 @@
     },
     {
       "id": "1952-06-15_a210",
-      "unit_type": "advertisement",
       "headline": "CINEMA - VARIETA'",
       "paragraphs": [
         {
@@ -3170,7 +2959,6 @@
     },
     {
       "id": "1952-06-15_a211",
-      "unit_type": "advertisement",
       "headline": "ARENE",
       "paragraphs": [
         {
@@ -3185,7 +2973,6 @@
     },
     {
       "id": "1952-06-15_a212",
-      "unit_type": "article",
       "headline": "Keteleer primo con al traguardo della Zurigo",
       "paragraphs": [
         {
@@ -3200,7 +2987,6 @@
     },
     {
       "id": "1952-06-15_a213",
-      "unit_type": "article",
       "headline": "Domenica sugli Ippodromi",
       "paragraphs": [
         {
@@ -3215,7 +3001,6 @@
     },
     {
       "id": "1952-06-15_a214",
-      "unit_type": "article",
       "headline": "Il Premio Frascati vinto da Marianna",
       "paragraphs": [
         {
@@ -3230,7 +3015,6 @@
     },
     {
       "id": "1952-06-15_a215",
-      "unit_type": "article",
       "headline": "Oggi si disputa il XIV Circuito Valle del Liri",
       "paragraphs": [
         {
@@ -3245,7 +3029,6 @@
     },
     {
       "id": "1952-06-15_a216",
-      "unit_type": "advertisement",
       "headline": "Cinema Varietà",
       "paragraphs": [
         {
@@ -3260,7 +3043,6 @@
     },
     {
       "id": "1952-06-15_a217",
-      "unit_type": "article",
       "headline": "n distacco\nLugano-Basilea",
       "paragraphs": [
         {
@@ -3275,7 +3057,6 @@
     },
     {
       "id": "1952-06-15_a218",
-      "unit_type": "article",
       "headline": "L'ordine dì arrivo",
       "paragraphs": [
         {
@@ -3290,7 +3071,6 @@
     },
     {
       "id": "1952-06-15_a219",
-      "unit_type": "notice",
       "headline": "NOTIZIE IN BREVE",
       "paragraphs": [
         {
@@ -3305,7 +3085,6 @@
     },
     {
       "id": "1952-06-15_a220",
-      "unit_type": "article",
       "headline": "I campionati di Atletica",
       "paragraphs": [
         {
@@ -3320,7 +3099,6 @@
     },
     {
       "id": "1952-06-15_a221",
-      "unit_type": "article",
       "headline": "Il Gran Premio Roma\noggi a Vallelunga",
       "paragraphs": [
         {
@@ -3335,7 +3113,6 @@
     },
     {
       "id": "1952-06-15_a222",
-      "unit_type": "article",
       "headline": "A Giuseppe Dordoni\nil Trofeo « Silla del Sole »",
       "paragraphs": [
         {
@@ -3350,7 +3127,6 @@
     },
     {
       "id": "1952-06-15_a223",
-      "unit_type": "article",
       "headline": "Il motociclista tedesco Horst Her-mann è morto ieri pomeriggio sul circuito di Feldberg, nei pressi di Francoforte. in seguito a un inci-dente, dopo aver abbandonato sulla strada bagnata. L'Hermann è stato sbalzato di macchina, fratturandosi la colonna vertebrale.",
       "paragraphs": [
         {
@@ -3365,7 +3141,6 @@
     },
     {
       "id": "1952-06-15_a224",
-      "unit_type": "article",
       "headline": "L'italiano Cor",
       "paragraphs": [
         {
@@ -3380,7 +3155,6 @@
     },
     {
       "id": "1952-06-15_a225",
-      "unit_type": "article",
       "headline": "Domenica sugli I",
       "paragraphs": [
         {
@@ -3395,7 +3169,6 @@
     },
     {
       "id": "1952-06-15_a226",
-      "unit_type": "article",
       "headline": "Mario Premio V",
       "paragraphs": [
         {
@@ -3410,7 +3183,6 @@
     },
     {
       "id": "1952-06-15_a227",
-      "unit_type": "article",
       "headline": "del trotter romano - L'internazionale Premio Duomo a",
       "paragraphs": [
         {
@@ -3425,7 +3197,6 @@
     },
     {
       "id": "1952-06-15_a228",
-      "unit_type": "article",
       "headline": "E DI LE MANS",
       "paragraphs": [
         {
@@ -3440,7 +3211,6 @@
     },
     {
       "id": "1952-06-15_a229",
-      "unit_type": "advertisement",
       "headline": "PALAZZO SISTINA",
       "paragraphs": [
         {
@@ -3455,7 +3225,6 @@
     },
     {
       "id": "1952-06-15_a230",
-      "unit_type": "advertisement",
       "headline": "Fiammetta",
       "paragraphs": [
         {
@@ -3470,7 +3239,6 @@
     },
     {
       "id": "1952-06-15_a231",
-      "unit_type": "advertisement",
       "headline": "Imminente al C",
       "paragraphs": [
         {
@@ -3485,7 +3253,6 @@
     },
     {
       "id": "1952-06-15_a232",
-      "unit_type": "advertisement",
       "headline": "un vastissimo assortimento di DISCHI",
       "paragraphs": [
         {
@@ -3500,7 +3267,6 @@
     },
     {
       "id": "1952-06-15_a233",
-      "unit_type": "article",
       "headline": "Una buona ricetta",
       "paragraphs": [
         {
@@ -3515,7 +3281,6 @@
     },
     {
       "id": "1952-06-15_a234",
-      "unit_type": "article",
       "headline": "GLI INCONTRI DI PALLANUOTO\nItalia - Germania 11-4",
       "paragraphs": [
         {
@@ -3530,7 +3295,6 @@
     },
     {
       "id": "1952-06-15_a235",
-      "unit_type": "article",
       "headline": "Rientra Vizio sulla pista del trotter romano - L'internazionale Premio Duomo a",
       "paragraphs": [
         {
@@ -3545,7 +3309,6 @@
     },
     {
       "id": "1952-06-15_a236",
-      "unit_type": "article",
       "headline": "Teatri Concerti",
       "paragraphs": [
         {
@@ -3560,7 +3323,6 @@
     },
     {
       "id": "1952-06-15_a237",
-      "unit_type": "article",
       "headline": "Sconfitti gli azzurri nel doppio della «Davis»",
       "paragraphs": [
         {
@@ -3575,7 +3337,6 @@
     },
     {
       "id": "1952-06-15_a238",
-      "unit_type": "advertisement",
       "headline": "ROMA - FREGENE",
       "paragraphs": [
         {
@@ -3590,7 +3351,6 @@
     },
     {
       "id": "1952-06-15_a239",
-      "unit_type": "advertisement",
       "headline": "CLIPS Originali-di Moda",
       "paragraphs": [
         {
@@ -3605,7 +3365,6 @@
     },
     {
       "id": "1952-06-15_a240",
-      "unit_type": "advertisement",
       "headline": "ALATI",
       "paragraphs": [
         {
@@ -3620,7 +3379,6 @@
     },
     {
       "id": "1952-06-15_a241",
-      "unit_type": "advertisement",
       "headline": "CINZANINO CINZANO Soda",
       "paragraphs": [
         {
@@ -3635,7 +3393,6 @@
     },
     {
       "id": "1952-06-15_a242",
-      "unit_type": "article",
       "headline": "GLI INCONTRI DI PALLANUOTO\nItalia - Germania 11-4",
       "paragraphs": [
         {
@@ -3650,7 +3407,6 @@
     },
     {
       "id": "1952-06-15_a243",
-      "unit_type": "article",
       "headline": "LE 24 ORE AUTOMOBILISTICHE\nAscari e Villoresi dopo i primi giri",
       "paragraphs": [
         {
@@ -3665,7 +3421,6 @@
     },
     {
       "id": "1952-06-15_a244",
-      "unit_type": "article",
       "headline": "Sconfitti gli azzurri nel doppio della «Davis»",
       "paragraphs": [
         {
@@ -3680,7 +3435,6 @@
     },
     {
       "id": "1952-06-15_a245",
-      "unit_type": "advertisement",
       "headline": "TEATRI",
       "paragraphs": [
         {
@@ -3695,7 +3449,6 @@
     },
     {
       "id": "1952-06-15_a246",
-      "unit_type": "article",
       "headline": "L'italiano Con",
       "paragraphs": [
         {
@@ -3710,7 +3463,6 @@
     },
     {
       "id": "1952-06-15_a247",
-      "unit_type": "article",
       "headline": "LA DOMENICA SUGLI I",
       "paragraphs": [
         {
@@ -3725,7 +3477,6 @@
     },
     {
       "id": "1952-06-15_a248",
-      "unit_type": "advertisement",
       "headline": "Concerti Cinema",
       "paragraphs": [
         {
@@ -3740,7 +3491,6 @@
     },
     {
       "id": "1952-06-15_a249",
-      "unit_type": "advertisement",
       "headline": "DAMAS",
       "paragraphs": [
         {
@@ -3755,7 +3505,6 @@
     },
     {
       "id": "1952-06-15_a250",
-      "unit_type": "article",
       "headline": "IL SIRACUSA ULTIMO\ndei giallo-rossi",
       "paragraphs": [
         {
@@ -3770,7 +3519,6 @@
     },
     {
       "id": "1952-06-15_a251",
-      "unit_type": "article",
       "headline": "Successo di Sandro Perrone nel Premio Città di Lecco",
       "paragraphs": [
         {
@@ -3785,7 +3533,6 @@
     },
     {
       "id": "1952-06-15_a252",
-      "unit_type": "article",
       "headline": "Teatri",
       "paragraphs": [
         {
@@ -3800,7 +3547,6 @@
     },
     {
       "id": "1952-06-15_a253",
-      "unit_type": "article",
       "headline": "GIRO CICLISTICO DELLA SVIZZERA",
       "paragraphs": [
         {
@@ -3815,7 +3561,6 @@
     },
     {
       "id": "1952-06-15_a254",
-      "unit_type": "article",
       "headline": "CINEMA",
       "paragraphs": [
         {
@@ -3830,7 +3575,6 @@
     },
     {
       "id": "1952-06-15_a255",
-      "unit_type": "article",
       "headline": "E' iniziata Ketel al tra",
       "paragraphs": [
         {
@@ -3845,7 +3589,6 @@
     },
     {
       "id": "1952-06-15_a256",
-      "unit_type": "advertisement",
       "headline": "CINEMA",
       "paragraphs": [
         {
@@ -3860,7 +3603,6 @@
     },
     {
       "id": "1952-06-15_a257",
-      "unit_type": "article",
       "headline": "In distacco: Giro-Basilea",
       "paragraphs": [
         {
@@ -3875,7 +3617,6 @@
     },
     {
       "id": "1952-06-15_a258",
-      "unit_type": "article",
       "headline": "L'ordine di arrivo",
       "paragraphs": [
         {
@@ -3890,7 +3631,6 @@
     },
     {
       "id": "1952-06-15_a259",
-      "unit_type": "article",
       "headline": "NOTIZIE IN BREVE",
       "paragraphs": [
         {
@@ -3905,7 +3645,6 @@
     },
     {
       "id": "1952-06-15_a260",
-      "unit_type": "article",
       "headline": "A DEL GIOCATORE JUVENTINO\nProbabilmente verrà alla Roma",
       "paragraphs": [
         {
@@ -3920,7 +3659,6 @@
     },
     {
       "id": "1952-06-15_a261",
-      "unit_type": "article",
       "headline": "Il Gran Premio Roma\noggi a Vallelunga",
       "paragraphs": [
         {
@@ -3935,7 +3673,6 @@
     },
     {
       "id": "1952-06-15_a262",
-      "unit_type": "article",
       "headline": "A Giuseppe Dordoni\nil Trofeo « Silla del Sole »",
       "paragraphs": [
         {
@@ -3950,7 +3687,6 @@
     },
     {
       "id": "1952-06-15_a263",
-      "unit_type": "advertisement",
       "headline": "TIN GUMPERT",
       "paragraphs": [
         {
@@ -3965,7 +3701,6 @@
     },
     {
       "id": "1952-06-15_a264",
-      "unit_type": "advertisement",
       "headline": "CLIPS Originali di Moda",
       "paragraphs": [
         {
@@ -3980,7 +3715,6 @@
     },
     {
       "id": "1952-06-15_a265",
-      "unit_type": "advertisement",
       "headline": "CINZANO Soda",
       "paragraphs": [
         {
@@ -3995,7 +3729,6 @@
     },
     {
       "id": "1952-06-15_a266",
-      "unit_type": "advertisement",
       "headline": "Casa e Rampone",
       "paragraphs": [
         {
@@ -4010,7 +3743,6 @@
     },
     {
       "id": "1952-06-15_a267",
-      "unit_type": "article",
       "headline": "IL TRAGICO CROLLO ALLA BOVISA",
       "paragraphs": [
         {
@@ -4025,7 +3757,6 @@
     },
     {
       "id": "1952-06-15_a268",
-      "unit_type": "article",
       "headline": "Le danze della Ruskaja al «Maggio di Bari»",
       "paragraphs": [
         {
@@ -4040,7 +3771,6 @@
     },
     {
       "id": "1952-06-15_a269",
-      "unit_type": "article",
       "headline": "Il vincitore dei 40 milioni chiede un periodo di ferie",
       "paragraphs": [
         {
@@ -4055,7 +3785,6 @@
     },
     {
       "id": "1952-06-15_a270",
-      "unit_type": "article",
       "headline": "Case scoperte a Spoleto durante un violento temporale",
       "paragraphs": [
         {
@@ -4070,7 +3799,6 @@
     },
     {
       "id": "1952-06-15_a271",
-      "unit_type": "article",
       "headline": "Il Congresso a Padova dei Coltivatori diretti",
       "paragraphs": [
         {
@@ -4085,7 +3813,6 @@
     },
     {
       "id": "1952-06-15_a272",
-      "unit_type": "article",
       "headline": "Ucciso da un colpo fortuito del fucile di un commilitone",
       "paragraphs": [
         {
@@ -4100,7 +3827,6 @@
     },
     {
       "id": "1952-06-15_a273",
-      "unit_type": "article",
       "headline": "Assegnazione di terre in provincia di Roma",
       "paragraphs": [
         {
@@ -4115,7 +3841,6 @@
     },
     {
       "id": "1952-06-15_a274",
-      "unit_type": "article",
       "headline": "IL MESSAGGERO di Roma - Domenica 15 giugno 1952",
       "paragraphs": [
         {
@@ -4130,7 +3855,6 @@
     },
     {
       "id": "1952-06-15_a275",
-      "unit_type": "advertisement",
       "headline": "ce ne vogliono 32 per fare un etto",
       "paragraphs": [
         {
@@ -4145,7 +3869,6 @@
     },
     {
       "id": "1952-06-15_a276",
-      "unit_type": "advertisement",
       "headline": "Margot APERITIVO BUTON",
       "paragraphs": [
         {
@@ -4160,7 +3883,6 @@
     },
     {
       "id": "1952-06-15_a277",
-      "unit_type": "advertisement",
       "headline": "Formaggio Pastorella",
       "paragraphs": [
         {
@@ -4175,7 +3897,6 @@
     },
     {
       "id": "1952-06-15_a278",
-      "unit_type": "article",
       "headline": "Fori sopra il metano scoperti durante gli scavi",
       "paragraphs": [
         {
@@ -4190,7 +3911,6 @@
     },
     {
       "id": "1952-06-15_a279",
-      "unit_type": "article",
       "headline": "Il vincitore dei",
       "paragraphs": [
         {
@@ -4205,7 +3925,6 @@
     },
     {
       "id": "1952-06-15_a280",
-      "unit_type": "article",
       "headline": "Due soldati muoiono in un incidente a Genova",
       "paragraphs": [
         {
@@ -4220,7 +3939,6 @@
     },
     {
       "id": "1952-06-15_a281",
-      "unit_type": "article",
       "headline": "Tre bersaglieri feriti durante una esercitazione",
       "paragraphs": [
         {
@@ -4235,7 +3953,6 @@
     },
     {
       "id": "1952-06-15_a282",
-      "unit_type": "article",
       "headline": "metanodotto e gli scavi di ieri",
       "paragraphs": [
         {
@@ -4250,7 +3967,6 @@
     },
     {
       "id": "1952-06-15_a283",
-      "unit_type": "article",
       "headline": "NON ABANDONERA' L'IMPIEGO\nIl vincitore dei 40 milioni chiede un periodo di ferie",
       "paragraphs": [
         {
@@ -4265,7 +3981,6 @@
     },
     {
       "id": "1952-06-15_a284",
-      "unit_type": "article",
       "headline": "Il Congresso a Padova dei Coltivatori diretti",
       "paragraphs": [
         {
@@ -4280,7 +3995,6 @@
     },
     {
       "id": "1952-06-15_a285",
-      "unit_type": "article",
       "headline": "Assegnazione di terre a provincia di Roma",
       "paragraphs": [
         {
@@ -4295,7 +4009,6 @@
     },
     {
       "id": "1952-06-15_a286",
-      "unit_type": "advertisement",
       "headline": "Attenzione!",
       "paragraphs": [
         {
@@ -4310,7 +4023,6 @@
     },
     {
       "id": "1952-06-15_a287",
-      "unit_type": "advertisement",
       "headline": "Margol",
       "paragraphs": [
         {
@@ -4325,7 +4037,6 @@
     },
     {
       "id": "1952-06-15_a288",
-      "unit_type": "article",
       "headline": "VIA QUELLA MASCHERA DI BRUTTEZZA",
       "paragraphs": [
         {
@@ -4340,7 +4051,6 @@
     },
     {
       "id": "1952-06-15_a289",
-      "unit_type": "article",
       "headline": "MAL DI SCHIENA",
       "paragraphs": [
         {
@@ -4355,7 +4065,6 @@
     },
     {
       "id": "1952-06-15_a290",
-      "unit_type": "advertisement",
       "headline": "Margot",
       "paragraphs": [
         {
@@ -4370,7 +4079,6 @@
     },
     {
       "id": "1952-06-15_a291",
-      "unit_type": "advertisement",
       "headline": "Biscotti",
       "paragraphs": [
         {
@@ -4385,7 +4093,6 @@
     },
     {
       "id": "1952-06-15_a292",
-      "unit_type": "advertisement",
       "headline": "ne gliono 32 r fare etto",
       "paragraphs": [
         {
@@ -4400,7 +4107,6 @@
     },
     {
       "id": "1952-06-15_a293",
-      "unit_type": "advertisement",
       "headline": "Locatelli insuperabile barriera",
       "paragraphs": [
         {
@@ -4415,7 +4121,6 @@
     },
     {
       "id": "1952-06-15_a294",
-      "unit_type": "article",
       "headline": "Le danze della Ruskaja al «Maggio di Bari»",
       "paragraphs": [
         {
@@ -4430,7 +4135,6 @@
     },
     {
       "id": "1952-06-15_a295",
-      "unit_type": "article",
       "headline": "Tre bersaglieri feriti durante una esercitazione",
       "paragraphs": [
         {
@@ -4445,7 +4149,6 @@
     },
     {
       "id": "1952-06-15_a296",
-      "unit_type": "notice",
       "headline": "VIA QUELLA MASCHERA DI BRUTTEZZA",
       "paragraphs": [
         {
@@ -4460,7 +4163,6 @@
     },
     {
       "id": "1952-06-15_a297",
-      "unit_type": "article",
       "headline": "Crollo alla Borsa: il metano sfuggiva ancora un soffio di gas - Lo scoppio da letto dei Suardi - Oggi le onoranze funebri",
       "paragraphs": [
         {
@@ -4475,7 +4177,6 @@
     },
     {
       "id": "1952-06-15_a298",
-      "unit_type": "article",
       "headline": "A VENEZIA ha inaugurato annuale d'Arte",
       "paragraphs": [
         {
@@ -4490,7 +4191,6 @@
     },
     {
       "id": "1952-06-15_a299",
-      "unit_type": "advertisement",
       "headline": "CENTRO PROFILATTICO delle malattie non infettive",
       "paragraphs": [
         {
@@ -4505,7 +4205,6 @@
     },
     {
       "id": "1952-06-15_a300",
-      "unit_type": "article",
       "headline": "Fori sopra il metano scoperti durante gli scavi",
       "paragraphs": [
         {
@@ -4520,7 +4219,6 @@
     },
     {
       "id": "1952-06-15_a301",
-      "unit_type": "article",
       "headline": "ERA' L'IMPIEGO",
       "paragraphs": [
         {
@@ -4535,7 +4233,6 @@
     },
     {
       "id": "1952-06-15_a302",
-      "unit_type": "article",
       "headline": "PER UN MALORE DELL'AUTISTA",
       "paragraphs": [
         {
@@ -4550,7 +4247,6 @@
     },
     {
       "id": "1952-06-15_a303",
-      "unit_type": "article",
       "headline": "metanodotto negli scavi di ieri",
       "paragraphs": [
         {
@@ -4565,7 +4261,6 @@
     },
     {
       "id": "1952-06-15_a304",
-      "unit_type": "article",
       "headline": "Einaudi ha inaugurato la Biennale",
       "paragraphs": [
         {
@@ -4580,7 +4275,6 @@
     },
     {
       "id": "1952-06-15_a305",
-      "unit_type": "article",
       "headline": "I A VENEZIA",
       "paragraphs": [
         {
@@ -4595,7 +4289,6 @@
     },
     {
       "id": "1952-06-15_a306",
-      "unit_type": "notice",
       "headline": "Pretura Unificata di Perugia",
       "paragraphs": [
         {
@@ -4610,7 +4303,6 @@
     },
     {
       "id": "1952-06-15_a307",
-      "unit_type": "advertisement",
       "headline": "MAL DI SCHIENA",
       "paragraphs": [
         {
@@ -4625,7 +4317,6 @@
     },
     {
       "id": "1952-06-15_a308",
-      "unit_type": "advertisement",
       "headline": "Biscotti P.A.",
       "paragraphs": [
         {
@@ -4640,7 +4331,6 @@
     },
     {
       "id": "1952-06-15_a309",
-      "unit_type": "advertisement",
       "headline": "Una totale,\ndel latte è\nfra la stalli\nIl Formaggio\nLOCATELLI\nrizzato, è\nMangiare P.\nbene, mangi",
       "paragraphs": [
         {
@@ -4655,7 +4345,6 @@
     },
     {
       "id": "1952-06-15_a310",
-      "unit_type": "article",
       "headline": "Crollo alla Bovisa",
       "paragraphs": [
         {
@@ -4670,7 +4359,6 @@
     },
     {
       "id": "1952-06-15_a311",
-      "unit_type": "article",
       "headline": "Il Congresso a Padova dei Coltivatori diretti",
       "paragraphs": [
         {
@@ -4685,7 +4373,6 @@
     },
     {
       "id": "1952-06-15_a312",
-      "unit_type": "article",
       "headline": "Assegnazione di terre in provincia di Roma",
       "paragraphs": [
         {
@@ -4700,7 +4387,6 @@
     },
     {
       "id": "1952-06-15_a313",
-      "unit_type": "article",
       "headline": "Einaudi ha inaugurato la Biennale d'Arte",
       "paragraphs": [
         {
@@ -4715,7 +4401,6 @@
     },
     {
       "id": "1952-06-15_a314",
-      "unit_type": "advertisement",
       "headline": "Margot",
       "paragraphs": [
         {
@@ -4730,7 +4415,6 @@
     },
     {
       "id": "1952-06-15_a315",
-      "unit_type": "advertisement",
       "headline": "ce ne vogliono 32 per fare un etto",
       "paragraphs": [
         {
@@ -4745,7 +4429,6 @@
     },
     {
       "id": "1952-06-15_a316",
-      "unit_type": "advertisement",
       "headline": "FORM Pasto ... mangia",
       "paragraphs": [
         {
@@ -4760,7 +4443,6 @@
     },
     {
       "id": "1952-06-15_a317",
-      "unit_type": "article",
       "headline": "via quella maschera di bruttezza",
       "paragraphs": [
         {
@@ -4775,7 +4457,6 @@
     },
     {
       "id": "1952-06-15_a318",
-      "unit_type": "article",
       "headline": "date disce!",
       "paragraphs": [
         {
@@ -4790,7 +4471,6 @@
     },
     {
       "id": "1952-06-15_a319",
-      "unit_type": "article",
       "headline": "Tre bersaglieri feriti durante una esercitazione",
       "paragraphs": [
         {
@@ -4805,7 +4485,6 @@
     },
     {
       "id": "1952-06-15_a320",
-      "unit_type": "article",
       "headline": "Le danze della Ruskaja al «Maggio di Bari»",
       "paragraphs": [
         {
@@ -4820,7 +4499,6 @@
     },
     {
       "id": "1952-06-15_a321",
-      "unit_type": "article",
       "headline": "NON ABBANDONERA' L'IMPIEGO",
       "paragraphs": [
         {
@@ -4835,7 +4513,6 @@
     },
     {
       "id": "1952-06-15_a322",
-      "unit_type": "article",
       "headline": "Un colpo fortuito di un commilitone",
       "paragraphs": [
         {
@@ -4850,7 +4527,6 @@
     },
     {
       "id": "1952-06-15_a323",
-      "unit_type": "article",
       "headline": "Uccisione a Genova",
       "paragraphs": [
         {
@@ -4865,7 +4541,6 @@
     },
     {
       "id": "1952-06-15_a324",
-      "unit_type": "notice",
       "headline": "Pretura Unificata di Perugia",
       "paragraphs": [
         {
@@ -4880,7 +4555,6 @@
     },
     {
       "id": "1952-06-15_a325",
-      "unit_type": "advertisement",
       "headline": "MAL DI SCHIENA",
       "paragraphs": [
         {
@@ -4895,7 +4569,6 @@
     },
     {
       "id": "1952-06-15_a326",
-      "unit_type": "advertisement",
       "headline": "…ricordate la natura non tradisce!",
       "paragraphs": [
         {
@@ -4910,7 +4583,6 @@
     },
     {
       "id": "1952-06-15_a327",
-      "unit_type": "advertisement",
       "headline": "ce ne vogliono 32 per fare un etto",
       "paragraphs": [
         {
@@ -4925,7 +4597,6 @@
     },
     {
       "id": "1952-06-15_a328",
-      "unit_type": "advertisement",
       "headline": "insuperabile",
       "paragraphs": [
         {
@@ -4940,7 +4611,6 @@
     },
     {
       "id": "1952-06-15_a329",
-      "unit_type": "article",
       "headline": "I tedeschi della zona sovietica vivono nel terrore della guerra",
       "paragraphs": [
         {
@@ -4955,7 +4625,6 @@
     },
     {
       "id": "1952-06-15_a330",
-      "unit_type": "article",
       "headline": "La “Rosa Maria,” farà scalo ad Aden?",
       "paragraphs": [
         {
@@ -4970,7 +4639,6 @@
     },
     {
       "id": "1952-06-15_a331",
-      "unit_type": "article",
       "headline": "Arrestato per spionaggio un impiegato del Foreign Office",
       "paragraphs": [
         {
@@ -4985,7 +4653,6 @@
     },
     {
       "id": "1952-06-15_a332",
-      "unit_type": "article",
       "headline": "L'assassina della piccola Joelle rinviata a giudizio per omicidio",
       "paragraphs": [
         {
@@ -5000,7 +4667,6 @@
     },
     {
       "id": "1952-06-15_a333",
-      "unit_type": "article",
       "headline": "Si barricata in casa e dà fuoco al letto",
       "paragraphs": [
         {
@@ -5015,7 +4681,6 @@
     },
     {
       "id": "1952-06-15_a334",
-      "unit_type": "advertisement",
       "headline": "Il Supergiallo",
       "paragraphs": [
         {
@@ -5030,7 +4695,6 @@
     },
     {
       "id": "1952-06-15_a335",
-      "unit_type": "advertisement",
       "headline": "Confetture Cirio: \"Energia\"",
       "paragraphs": [
         {
@@ -5045,7 +4709,6 @@
     },
     {
       "id": "1952-06-15_a336",
-      "unit_type": "advertisement",
       "headline": "Volate Sky Tourist TWA",
       "paragraphs": [
         {
@@ -5060,7 +4723,6 @@
     },
     {
       "id": "1952-06-15_a337",
-      "unit_type": "advertisement",
       "headline": "Bel Paese",
       "paragraphs": [
         {
@@ -5075,7 +4737,6 @@
     },
     {
       "id": "1952-06-15_a338",
-      "unit_type": "obituary",
       "headline": "PIETRO SOMMARIVA",
       "paragraphs": [
         {
@@ -5090,7 +4751,6 @@
     },
     {
       "id": "1952-06-15_a339",
-      "unit_type": "obituary",
       "headline": "RINGRAZIAMENTO",
       "paragraphs": [
         {
@@ -5105,7 +4765,6 @@
     },
     {
       "id": "1952-06-15_a340",
-      "unit_type": "obituary",
       "headline": "ELETTRA CAVATORTA nata BONANI",
       "paragraphs": [
         {
@@ -5120,7 +4779,6 @@
     },
     {
       "id": "1952-06-15_a341",
-      "unit_type": "advertisement",
       "headline": "TARIFFE POMPE FUNEBRI",
       "paragraphs": [
         {
@@ -5135,7 +4793,6 @@
     },
     {
       "id": "1952-06-15_a342",
-      "unit_type": "advertisement",
       "headline": "VOLATE Sky Tourist TWA",
       "paragraphs": [
         {
@@ -5150,7 +4807,6 @@
     },
     {
       "id": "1952-06-15_a343",
-      "unit_type": "advertisement",
       "headline": "TWA",
       "paragraphs": [
         {
@@ -5165,7 +4821,6 @@
     },
     {
       "id": "1952-06-15_a344",
-      "unit_type": "advertisement",
       "headline": "il Supergiallo",
       "paragraphs": [
         {
@@ -5180,7 +4835,6 @@
     },
     {
       "id": "1952-06-15_a345",
-      "unit_type": "advertisement",
       "headline": "per vincere",
       "paragraphs": [
         {
@@ -5195,7 +4849,6 @@
     },
     {
       "id": "1952-06-15_a346",
-      "unit_type": "advertisement",
       "headline": "supergiallo",
       "paragraphs": [
         {
@@ -5210,7 +4863,6 @@
     },
     {
       "id": "1952-06-15_a347",
-      "unit_type": "advertisement",
       "headline": "MAGNETIC DENT",
       "paragraphs": [
         {
@@ -5225,7 +4877,6 @@
     },
     {
       "id": "1952-06-15_a348",
-      "unit_type": "advertisement",
       "headline": "Per essere primi per essere primi",
       "paragraphs": [
         {
@@ -5240,7 +4891,6 @@
     },
     {
       "id": "1952-06-15_a349",
-      "unit_type": "advertisement",
       "headline": "BEL PAESE",
       "paragraphs": [
         {
@@ -5255,7 +4905,6 @@
     },
     {
       "id": "1952-06-15_a350",
-      "unit_type": "article",
       "headline": "I tedeschi della zona sovietica vivono nel terrore della guerra",
       "paragraphs": [
         {
@@ -5270,7 +4919,6 @@
     },
     {
       "id": "1952-06-15_a351",
-      "unit_type": "article",
       "headline": "Arrestato per spionaggio un impiegato del Foreign Office",
       "paragraphs": [
         {
@@ -5285,7 +4933,6 @@
     },
     {
       "id": "1952-06-15_a352",
-      "unit_type": "article",
       "headline": "L'ORRIBILE CRIMINE DI LILLA\nL'assassina della piccola Joelle rinviata a giudizio per omicidio",
       "paragraphs": [
         {
@@ -5300,7 +4947,6 @@
     },
     {
       "id": "1952-06-15_a353",
-      "unit_type": "article",
       "headline": "La \"Rosa Maria\", farà scalo ad Aden?",
       "paragraphs": [
         {
@@ -5315,7 +4961,6 @@
     },
     {
       "id": "1952-06-15_a354",
-      "unit_type": "article",
       "headline": "Inaugurazione Foreign Office",
       "paragraphs": [
         {
@@ -5330,7 +4975,6 @@
     },
     {
       "id": "1952-06-15_a355",
-      "unit_type": "article",
       "headline": "Sequestro a Pescara di un giornale murale",
       "paragraphs": [
         {
@@ -5345,7 +4989,6 @@
     },
     {
       "id": "1952-06-15_a356",
-      "unit_type": "article",
       "headline": "Si lancia dal treno in corsa e si sfracella al suolo",
       "paragraphs": [
         {
@@ -5360,7 +5003,6 @@
     },
     {
       "id": "1952-06-15_a357",
-      "unit_type": "article",
       "headline": "Annullata l'elezione del Sindaco di Genazzano",
       "paragraphs": [
         {
@@ -5375,7 +5017,6 @@
     },
     {
       "id": "1952-06-15_a358",
-      "unit_type": "article",
       "headline": "Il prof. Arangio Ruiz Presidente dei Lincei",
       "paragraphs": [
         {
@@ -5390,7 +5031,6 @@
     },
     {
       "id": "1952-06-15_a359",
-      "unit_type": "obituary",
       "headline": "ELETTRA CAVATORA nata BONANI",
       "paragraphs": [
         {
@@ -5405,7 +5045,6 @@
     },
     {
       "id": "1952-06-15_a360",
-      "unit_type": "obituary",
       "headline": "ANTONIO CIUCCI",
       "paragraphs": [
         {
@@ -5420,7 +5059,6 @@
     },
     {
       "id": "1952-06-15_a361",
-      "unit_type": "obituary",
       "headline": "ALFREDO PICCIRILLI",
       "paragraphs": [
         {
@@ -5435,7 +5073,6 @@
     },
     {
       "id": "1952-06-15_a362",
-      "unit_type": "advertisement",
       "headline": "PROTON",
       "paragraphs": [
         {
@@ -5450,7 +5087,6 @@
     },
     {
       "id": "1952-06-15_a363",
-      "unit_type": "article",
       "headline": "Arrestato un imputato pretata a Londra",
       "paragraphs": [
         {
@@ -5465,7 +5101,6 @@
     },
     {
       "id": "1952-06-15_a364",
-      "unit_type": "article",
       "headline": "Tre militari feriti gravemente per un'autoblinda che si rovescia",
       "paragraphs": [
         {
@@ -5480,7 +5115,6 @@
     },
     {
       "id": "1952-06-15_a365",
-      "unit_type": "article",
       "headline": "Un aereo decollando",
       "paragraphs": [
         {
@@ -5495,7 +5129,6 @@
     },
     {
       "id": "1952-06-15_a366",
-      "unit_type": "article",
       "headline": "Si be e dà",
       "paragraphs": [
         {
@@ -5510,7 +5143,6 @@
     },
     {
       "id": "1952-06-15_a367",
-      "unit_type": "article",
       "headline": "la zona sovietica core della guerra",
       "paragraphs": [
         {
@@ -5525,7 +5157,6 @@
     },
     {
       "id": "1952-06-15_a368",
-      "unit_type": "article",
       "headline": "LILLA - La Joelle omicidio del delitto affer- to di ubriachezza",
       "paragraphs": [
         {
@@ -5540,7 +5171,6 @@
     },
     {
       "id": "1952-06-15_a369",
-      "unit_type": "article",
       "headline": "TRE CASI DI FOLLIA A LIVORNO - Barrica in casa - à fuoco al letto",
       "paragraphs": [
         {
@@ -5555,7 +5185,6 @@
     },
     {
       "id": "1952-06-15_a370",
-      "unit_type": "article",
       "headline": "Conferenza del prof. Paolucci alla Camera di Comm. di Latina",
       "paragraphs": [
         {
@@ -5570,7 +5199,6 @@
     },
     {
       "id": "1952-06-15_a371",
-      "unit_type": "obituary",
       "headline": "Nel terzo anniversario della morte di\nMARIA RICCI SPINELLI",
       "paragraphs": [
         {
@@ -5585,7 +5213,6 @@
     },
     {
       "id": "1952-06-15_a372",
-      "unit_type": "advertisement",
       "headline": "Per essere pri",
       "paragraphs": [
         {
@@ -5600,7 +5227,6 @@
     },
     {
       "id": "1952-06-15_a373",
-      "unit_type": "advertisement",
       "headline": "Il «Bel Paese» ha cinquant’anni",
       "paragraphs": [
         {
@@ -5615,7 +5241,6 @@
     },
     {
       "id": "1952-06-15_a374",
-      "unit_type": "advertisement",
       "headline": "con 50 centesimi di energia elettrica la vostra biancheria sarà lavata perfettamente. ecco la HOVER",
       "paragraphs": [
         {
@@ -5630,7 +5255,6 @@
     },
     {
       "id": "1952-06-15_a375",
-      "unit_type": "advertisement",
       "headline": "SkyTourist TWA",
       "paragraphs": [
         {
@@ -5645,7 +5269,6 @@
     },
     {
       "id": "1952-06-15_a376",
-      "unit_type": "advertisement",
       "headline": "il Sup",
       "paragraphs": [
         {
@@ -5660,7 +5283,6 @@
     },
     {
       "id": "1952-06-15_a377",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -5675,7 +5297,6 @@
     },
     {
       "id": "1952-06-15_a378",
-      "unit_type": "article",
       "headline": "Tre militari feriti gravemente per un'autoblinda che si rovescia",
       "paragraphs": [
         {
@@ -5690,7 +5311,6 @@
     },
     {
       "id": "1952-06-15_a379",
-      "unit_type": "advertisement",
       "headline": "A. A. FAIR: DONALD LAM INVESTIGATORE SOTTILE",
       "paragraphs": [
         {
@@ -5705,7 +5325,6 @@
     },
     {
       "id": "1952-06-15_a380",
-      "unit_type": "advertisement",
       "headline": "LIRE 75.000",
       "paragraphs": [
         {
@@ -5720,7 +5339,6 @@
     },
     {
       "id": "1952-06-15_a381",
-      "unit_type": "advertisement",
       "headline": "Dr. Alberto PAOLELLA",
       "paragraphs": [
         {
@@ -5735,7 +5353,6 @@
     },
     {
       "id": "1952-06-15_a382",
-      "unit_type": "advertisement",
       "headline": "Per essere primi per essere primi",
       "paragraphs": [
         {
@@ -5750,7 +5367,6 @@
     },
     {
       "id": "1952-06-15_a383",
-      "unit_type": "article",
       "headline": "Il «Bel Paese» ha cinquant'anni",
       "paragraphs": [
         {
@@ -5765,7 +5381,6 @@
     },
     {
       "id": "1952-06-15_a384",
-      "unit_type": "advertisement",
       "headline": "BEL PAESE",
       "paragraphs": [
         {
@@ -5780,7 +5395,6 @@
     },
     {
       "id": "1952-06-15_a385",
-      "unit_type": "article",
       "headline": "sovietica la guerra",
       "paragraphs": [
         {
@@ -5795,7 +5409,6 @@
     },
     {
       "id": "1952-06-15_a386",
-      "unit_type": "article",
       "headline": "La \"Rosa Maria\" farà scalo ad Aden",
       "paragraphs": [
         {
@@ -5810,7 +5423,6 @@
     },
     {
       "id": "1952-06-15_a387",
-      "unit_type": "article",
       "headline": "MESSAGGI CIFRATI ALL'AMBASCIATA RUSSA\nper spionaggio\ndel Foreign Office",
       "paragraphs": [
         {
@@ -5825,7 +5437,6 @@
     },
     {
       "id": "1952-06-15_a388",
-      "unit_type": "article",
       "headline": "conferenza del prof. Paolucci\nCamera di Comm. di Latina",
       "paragraphs": [
         {
@@ -5840,7 +5451,6 @@
     },
     {
       "id": "1952-06-15_a389",
-      "unit_type": "advertisement",
       "headline": "VOLATE S",
       "paragraphs": [
         {
@@ -5855,7 +5465,6 @@
     },
     {
       "id": "1952-06-15_a390",
-      "unit_type": "obituary",
       "headline": "ALFREDO PICCI",
       "paragraphs": [
         {
@@ -5870,7 +5479,6 @@
     },
     {
       "id": "1952-06-15_a391",
-      "unit_type": "advertisement",
       "headline": "TARIFFE POMPE FUNEBRI",
       "paragraphs": [
         {
@@ -5885,7 +5493,6 @@
     },
     {
       "id": "1952-06-15_a392",
-      "unit_type": "advertisement",
       "headline": "il Sup",
       "paragraphs": [
         {
@@ -5900,7 +5507,6 @@
     },
     {
       "id": "1952-06-15_a393",
-      "unit_type": "article",
       "headline": "I tedeschi della zona vivono nel terrore",
       "paragraphs": [
         {
@@ -5915,7 +5521,6 @@
     },
     {
       "id": "1952-06-15_a394",
-      "unit_type": "article",
       "headline": "L'ORRIBILE CRIMINE DI LILLA",
       "paragraphs": [
         {
@@ -5930,7 +5535,6 @@
     },
     {
       "id": "1952-06-15_a395",
-      "unit_type": "advertisement",
       "headline": "il Supergiallo",
       "paragraphs": [
         {
@@ -5945,7 +5549,6 @@
     },
     {
       "id": "1952-06-15_a396",
-      "unit_type": "advertisement",
       "headline": "Per vincere",
       "paragraphs": [
         {
@@ -5960,7 +5563,6 @@
     },
     {
       "id": "1952-06-15_a397",
-      "unit_type": "advertisement",
       "headline": "Il «Bel Paese» ha cinquant'anni",
       "paragraphs": [
         {
@@ -5975,7 +5577,6 @@
     },
     {
       "id": "1952-06-15_a398",
-      "unit_type": "article",
       "headline": "I tedeschi della vivono nel terrore",
       "paragraphs": [
         {
@@ -5990,7 +5591,6 @@
     },
     {
       "id": "1952-06-15_a399",
-      "unit_type": "article",
       "headline": "L'ORRIBILE CRIMINE DI L L'assassina della piccola rinvia a giudizio per o",
       "paragraphs": [
         {
@@ -6005,7 +5605,6 @@
     },
     {
       "id": "1952-06-15_a400",
-      "unit_type": "article",
       "headline": "TRASMETTEVA I MESSAGGI CIFRATI ALL'AMBASCIATA - Arrestato per spia - Impiegato del Foreign Office",
       "paragraphs": [
         {
@@ -6020,7 +5619,6 @@
     },
     {
       "id": "1952-06-15_a401",
-      "unit_type": "obituary",
       "headline": "RINGRAZIAMENTO",
       "paragraphs": [
         {
@@ -6035,7 +5633,6 @@
     },
     {
       "id": "1952-06-15_a402",
-      "unit_type": "obituary",
       "headline": "Il tredici corrente, si è spenta, alla veneranda età di novanta anni, la cara esistenza di\nELETTRA CAVATORA nata BONANI",
       "paragraphs": [
         {
@@ -6050,7 +5647,6 @@
     },
     {
       "id": "1952-06-15_a403",
-      "unit_type": "advertisement",
       "headline": "Sky Tourist TWA",
       "paragraphs": [
         {
@@ -6065,7 +5661,6 @@
     },
     {
       "id": "1952-06-15_a404",
-      "unit_type": "advertisement",
       "headline": "Dr. Alberto PAOLELLA",
       "paragraphs": [
         {
@@ -6080,7 +5675,6 @@
     },
     {
       "id": "1952-06-15_a405",
-      "unit_type": "advertisement",
       "headline": "CONFETTURE CIRIO",
       "paragraphs": [
         {
@@ -6095,7 +5689,6 @@
     },
     {
       "id": "1952-06-15_a406",
-      "unit_type": "advertisement",
       "headline": "PAESE",
       "paragraphs": [
         {
@@ -6110,7 +5703,6 @@
     },
     {
       "id": "1952-06-15_a407",
-      "unit_type": "article",
       "headline": "I deputati comunisti un dibattito parlamentare",
       "paragraphs": [
         {
@@ -6125,7 +5717,6 @@
     },
     {
       "id": "1952-06-15_a408",
-      "unit_type": "article",
       "headline": "SOTTO LA MIN",
       "paragraphs": [
         {
@@ -6140,7 +5731,6 @@
     },
     {
       "id": "1952-06-15_a409",
-      "unit_type": "article",
       "headline": "LA SITUAZIONE NEL PROTETTORATO",
       "paragraphs": [
         {
@@ -6155,7 +5745,6 @@
     },
     {
       "id": "1952-06-15_a410",
-      "unit_type": "article",
       "headline": "Un tentativo di avvelenamento contro la famiglia del Bey di Tunisi ?",
       "paragraphs": [
         {
@@ -6170,7 +5759,6 @@
     },
     {
       "id": "1952-06-15_a411",
-      "unit_type": "article",
       "headline": "Un ragazzo annega in una vasca a Napoli",
       "paragraphs": [
         {
@@ -6185,7 +5773,6 @@
     },
     {
       "id": "1952-06-15_a412",
-      "unit_type": "advertisement",
       "headline": "CUCINE SCALDABAGNI",
       "paragraphs": [
         {
@@ -6200,7 +5787,6 @@
     },
     {
       "id": "1952-06-15_a413",
-      "unit_type": "article",
       "headline": "OPPO L'ESPULSIONE DEI DUE FUNZIONARI RUSSI",
       "paragraphs": [
         {
@@ -6215,7 +5801,6 @@
     },
     {
       "id": "1952-06-15_a414",
-      "unit_type": "article",
       "headline": "Lauro a Lisbona ricevuto da Umberto",
       "paragraphs": [
         {
@@ -6230,7 +5815,6 @@
     },
     {
       "id": "1952-06-15_a415",
-      "unit_type": "advertisement",
       "headline": "Tesoro in cantina",
       "paragraphs": [
         {
@@ -6245,7 +5829,6 @@
     },
     {
       "id": "1952-06-15_a416",
-      "unit_type": "advertisement",
       "headline": "FORTI SCONTI",
       "paragraphs": [
         {
@@ -6260,7 +5843,6 @@
     },
     {
       "id": "1952-06-15_a417",
-      "unit_type": "advertisement",
       "headline": "IDRO",
       "paragraphs": [
         {
@@ -6275,7 +5857,6 @@
     },
     {
       "id": "1952-06-15_a418",
-      "unit_type": "article",
       "headline": "SOTTO LA MINACCIA DI SCIOLGIMENTO",
       "paragraphs": [
         {
@@ -6290,7 +5871,6 @@
     },
     {
       "id": "1952-06-15_a419",
-      "unit_type": "article",
       "headline": "Cambio delle consegne fra Carney e Wright",
       "paragraphs": [
         {
@@ -6305,7 +5885,6 @@
     },
     {
       "id": "1952-06-15_a420",
-      "unit_type": "article",
       "headline": "Il farmaco giunto dall'America iniettato al malato napoletano",
       "paragraphs": [
         {
@@ -6320,7 +5899,6 @@
     },
     {
       "id": "1952-06-15_a421",
-      "unit_type": "article",
       "headline": "Rotte le relazioni diplomatiche tra il Venezuela e l'Unione Sovietica",
       "paragraphs": [
         {
@@ -6335,7 +5913,6 @@
     },
     {
       "id": "1952-06-15_a422",
-      "unit_type": "article",
       "headline": "Sperimentato a Rovigo un avvisatore di sorpasso",
       "paragraphs": [
         {
@@ -6350,7 +5927,6 @@
     },
     {
       "id": "1952-06-15_a423",
-      "unit_type": "article",
       "headline": "Arrestati per aver attaccato manifesti contro Ridgway",
       "paragraphs": [
         {
@@ -6365,7 +5941,6 @@
     },
     {
       "id": "1952-06-15_a424",
-      "unit_type": "article",
       "headline": "ESTRAZIONI DEL 14 GIUGNO",
       "paragraphs": [
         {
@@ -6380,7 +5955,6 @@
     },
     {
       "id": "1952-06-15_a425",
-      "unit_type": "article",
       "headline": "collecitano il caso Duclos",
       "paragraphs": [
         {
@@ -6395,7 +5969,6 @@
     },
     {
       "id": "1952-06-15_a426",
-      "unit_type": "article",
       "headline": "OG LIMENTO al Parlamento costituzionali",
       "paragraphs": [
         {
@@ -6410,7 +5983,6 @@
     },
     {
       "id": "1952-06-15_a427",
-      "unit_type": "advertisement",
       "headline": "FRIGORIFERI",
       "paragraphs": [
         {
@@ -6425,7 +5997,6 @@
     },
     {
       "id": "1952-06-15_a428",
-      "unit_type": "advertisement",
       "headline": "RADIO",
       "paragraphs": [
         {
@@ -6440,7 +6011,6 @@
     },
     {
       "id": "1952-06-15_a429",
-      "unit_type": "article",
       "headline": "Diplomatiche con la Sovietica",
       "paragraphs": [
         {
@@ -6455,7 +6025,6 @@
     },
     {
       "id": "1952-06-15_a430",
-      "unit_type": "advertisement",
       "headline": "TACQUA DEI BAMBINI",
       "paragraphs": [
         {
@@ -6470,7 +6039,6 @@
     },
     {
       "id": "1952-06-15_a431",
-      "unit_type": "advertisement",
       "headline": "CERCA AGENTE PER LA VENDITA IN ITALIA",
       "paragraphs": [
         {
@@ -6485,7 +6053,6 @@
     },
     {
       "id": "1952-06-15_a432",
-      "unit_type": "advertisement",
       "headline": "DOTTORE PIETRO MONACO ENDOCRINE",
       "paragraphs": [
         {
@@ -6500,7 +6067,6 @@
     },
     {
       "id": "1952-06-15_a433",
-      "unit_type": "advertisement",
       "headline": "Avvisi sanitari",
       "paragraphs": [
         {
@@ -6515,7 +6081,6 @@
     },
     {
       "id": "1952-06-15_a434",
-      "unit_type": "advertisement",
       "headline": "Come dovete comportarvi",
       "paragraphs": [
         {
@@ -6530,7 +6095,6 @@
     },
     {
       "id": "1952-06-15_a435",
-      "unit_type": "advertisement",
       "headline": "ASPIRAPOLVERI",
       "paragraphs": [
         {
@@ -6545,7 +6109,6 @@
     },
     {
       "id": "1952-06-15_a436",
-      "unit_type": "advertisement",
       "headline": "LAVABIANCHERIA",
       "paragraphs": [
         {
@@ -6560,7 +6123,6 @@
     },
     {
       "id": "1952-06-15_a437",
-      "unit_type": "advertisement",
       "headline": "Le MARCHE sono la vera garanzia",
       "paragraphs": [
         {
@@ -6575,7 +6137,6 @@
     },
     {
       "id": "1952-06-15_a438",
-      "unit_type": "notice",
       "headline": null,
       "paragraphs": [
         {
@@ -6590,7 +6151,6 @@
     },
     {
       "id": "1952-06-15_a439",
-      "unit_type": "advertisement",
       "headline": "DOTTOR PIETRO MONTE",
       "paragraphs": [
         {
@@ -6605,7 +6165,6 @@
     },
     {
       "id": "1952-06-15_a440",
-      "unit_type": "advertisement",
       "headline": "Prof. F. MUSUMECI UROLOGO",
       "paragraphs": [
         {
@@ -6620,7 +6179,6 @@
     },
     {
       "id": "1952-06-15_a441",
-      "unit_type": "advertisement",
       "headline": "DOTTOR DAVID STROM",
       "paragraphs": [
         {
@@ -6635,7 +6193,6 @@
     },
     {
       "id": "1952-06-15_a442",
-      "unit_type": "advertisement",
       "headline": "Dottor ALFREDO STROM",
       "paragraphs": [
         {
@@ -6650,7 +6207,6 @@
     },
     {
       "id": "1952-06-15_a443",
-      "unit_type": "advertisement",
       "headline": "Dottor DELLA SETA",
       "paragraphs": [
         {
@@ -6665,7 +6221,6 @@
     },
     {
       "id": "1952-06-15_a444",
-      "unit_type": "advertisement",
       "headline": "Come dovete comportarvi",
       "paragraphs": [
         {
@@ -6680,7 +6235,6 @@
     },
     {
       "id": "1952-06-15_a445",
-      "unit_type": "advertisement",
       "headline": "IDROLITINA",
       "paragraphs": [
         {
@@ -6695,7 +6249,6 @@
     },
     {
       "id": "1952-06-15_a446",
-      "unit_type": "advertisement",
       "headline": "VENERE PELLE",
       "paragraphs": [
         {
@@ -6710,7 +6263,6 @@
     },
     {
       "id": "1952-06-15_a447",
-      "unit_type": "advertisement",
       "headline": "SESSUOLOGIA",
       "paragraphs": [
         {
@@ -6725,7 +6277,6 @@
     },
     {
       "id": "1952-06-15_a448",
-      "unit_type": "advertisement",
       "headline": "comportarvi",
       "paragraphs": [
         {
@@ -6740,7 +6291,6 @@
     },
     {
       "id": "1952-06-15_a449",
-      "unit_type": "advertisement",
       "headline": "dovete comportarvi",
       "paragraphs": [
         {
@@ -6755,7 +6305,6 @@
     },
     {
       "id": "1952-06-15_a450",
-      "unit_type": "advertisement",
       "headline": "Tesoro in cantina",
       "paragraphs": [
         {
@@ -6770,7 +6319,6 @@
     },
     {
       "id": "1952-06-15_a451",
-      "unit_type": "advertisement",
       "headline": "ARTI SCONTI",
       "paragraphs": [
         {
@@ -6785,7 +6333,6 @@
     },
     {
       "id": "1952-06-15_a452",
-      "unit_type": "article",
       "headline": "FACCIAMO MARCIA INDIETRO",
       "paragraphs": [
         {
@@ -6800,7 +6347,6 @@
     },
     {
       "id": "1952-06-15_a453",
-      "unit_type": "article",
       "headline": "MINACCIA DI SCIOLIMENTO\n e ordina al Parlamento\ne riforme costituzionali",
       "paragraphs": [
         {
@@ -6815,7 +6361,6 @@
     },
     {
       "id": "1952-06-15_a454",
-      "unit_type": "article",
       "headline": "Cambio delle consegne\n a Carney e Wright",
       "paragraphs": [
         {
@@ -6830,7 +6375,6 @@
     },
     {
       "id": "1952-06-15_a455",
-      "unit_type": "article",
       "headline": "Framaco giunto dall'America\n stato al malato napoletano",
       "paragraphs": [
         {
@@ -6845,7 +6389,6 @@
     },
     {
       "id": "1952-06-15_a456",
-      "unit_type": "article",
       "headline": "Rotte\n tra il V",
       "paragraphs": [
         {
@@ -6860,7 +6403,6 @@
     },
     {
       "id": "1952-06-15_a457",
-      "unit_type": "advertisement",
       "headline": "Proi. F. MUSUMECI GRASSO UROLOGO",
       "paragraphs": [
         {
@@ -6875,7 +6417,6 @@
     },
     {
       "id": "1952-06-15_a458",
-      "unit_type": "advertisement",
       "headline": "IDROLITINA",
       "paragraphs": [
         {
@@ -6890,7 +6431,6 @@
     },
     {
       "id": "1952-06-15_a459",
-      "unit_type": "advertisement",
       "headline": "LAVABIANCHERIA",
       "paragraphs": [
         {
@@ -6905,7 +6445,6 @@
     },
     {
       "id": "1952-06-15_a460",
-      "unit_type": "article",
       "headline": "I deputati comu un dibattito parl",
       "paragraphs": [
         {
@@ -6920,7 +6459,6 @@
     },
     {
       "id": "1952-06-15_a461",
-      "unit_type": "article",
       "headline": "SOTTO",
       "paragraphs": [
         {
@@ -6935,7 +6473,6 @@
     },
     {
       "id": "1952-06-15_a462",
-      "unit_type": "article",
       "headline": "LA SITUAZIONE NEL PROTEKTORATO",
       "paragraphs": [
         {
@@ -6950,7 +6487,6 @@
     },
     {
       "id": "1952-06-15_a463",
-      "unit_type": "article",
       "headline": "Un ragazzo annega in una vasca a Napoli",
       "paragraphs": [
         {
@@ -6965,7 +6501,6 @@
     },
     {
       "id": "1952-06-15_a464",
-      "unit_type": "article",
       "headline": "Rotte le relazioni tra il Venezuela e",
       "paragraphs": [
         {
@@ -6980,7 +6515,6 @@
     },
     {
       "id": "1952-06-15_a465",
-      "unit_type": "advertisement",
       "headline": "Sangemini",
       "paragraphs": [
         {
@@ -6995,7 +6529,6 @@
     },
     {
       "id": "1952-06-15_a466",
-      "unit_type": "advertisement",
       "headline": "MONACO ENDOCRINE",
       "paragraphs": [
         {
@@ -7010,7 +6543,6 @@
     },
     {
       "id": "1952-06-15_a467",
-      "unit_type": "advertisement",
       "headline": "VENERE PELLE",
       "paragraphs": [
         {
@@ -7025,7 +6557,6 @@
     },
     {
       "id": "1952-06-15_a468",
-      "unit_type": "advertisement",
       "headline": "SESSUOLOGIA",
       "paragraphs": [
         {
@@ -7040,7 +6571,6 @@
     },
     {
       "id": "1952-06-15_a469",
-      "unit_type": "advertisement",
       "headline": "LITINA",
       "paragraphs": [
         {
@@ -7055,7 +6585,6 @@
     },
     {
       "id": "1952-06-15_a470",
-      "unit_type": "article",
       "headline": "I deputati con un dibattito parlamentare",
       "paragraphs": [
         {
@@ -7070,7 +6599,6 @@
     },
     {
       "id": "1952-06-15_a471",
-      "unit_type": "classified",
       "headline": "CERCA AGENTE PER LA VENDITA IN ITALIA",
       "paragraphs": [
         {
@@ -7085,7 +6613,6 @@
     },
     {
       "id": "1952-06-15_a472",
-      "unit_type": "advertisement",
       "headline": "DOTTOR DAVID STROM",
       "paragraphs": [
         {
@@ -7100,7 +6627,6 @@
     },
     {
       "id": "1952-06-15_a473",
-      "unit_type": "advertisement",
       "headline": "ASPIRAPOLVERI",
       "paragraphs": [
         {
@@ -7115,7 +6641,6 @@
     },
     {
       "id": "1952-06-15_a474",
-      "unit_type": "advertisement",
       "headline": "ENDOCRINE",
       "paragraphs": [
         {
@@ -7130,7 +6655,6 @@
     },
     {
       "id": "1952-06-15_a475",
-      "unit_type": "advertisement",
       "headline": "POSSONO INVIARE FIORI A UNA SIGNORA",
       "paragraphs": [
         {
@@ -7145,7 +6669,6 @@
     },
     {
       "id": "1952-06-15_a476",
-      "unit_type": "advertisement",
       "headline": "IDROLITINA",
       "paragraphs": [
         {
@@ -7160,7 +6683,6 @@
     },
     {
       "id": "1952-06-15_a477",
-      "unit_type": "advertisement",
       "headline": "SMARRITA",
       "paragraphs": [
         {
@@ -7175,7 +6697,6 @@
     },
     {
       "id": "1952-06-15_a478",
-      "unit_type": "advertisement",
       "headline": "MATRIMONIALI (L. 90)",
       "paragraphs": [
         {
@@ -7190,7 +6711,6 @@
     },
     {
       "id": "1952-06-15_a479",
-      "unit_type": "advertisement",
       "headline": "VILLEGGIATURE (L. 90)",
       "paragraphs": [
         {
@@ -7205,7 +6725,6 @@
     },
     {
       "id": "1952-06-15_a480",
-      "unit_type": "advertisement",
       "headline": "CONC. ASTE APPALTI (L. 90)",
       "paragraphs": [
         {
@@ -7220,7 +6739,6 @@
     },
     {
       "id": "1952-06-15_a481",
-      "unit_type": "advertisement",
       "headline": "SMARRIMENTI (L.80)",
       "paragraphs": [
         {
@@ -7235,7 +6753,6 @@
     },
     {
       "id": "1952-06-15_a482",
-      "unit_type": "advertisement",
       "headline": "T.A.C. G. Beltrami S.p.A. ROMA - VIA BARBERINI n. 64 - offre alla sua clientela I' OCCASIONE D'... con un ricco assortimento di abiti estivi per uomo e per signora a prezzi veramente eccezionali. Eccone alcuni esempi: ABITI per uomo in tessuto ingualcibile ABITI per uomo in tessuto di puro cotone ABITI per uomo in tessuto Tropical pura lana TAILLEUR per signora in puro cotone GONNE per signora in puro cotone GONNE per signora in puro cotone ingualcibile",
       "paragraphs": [
         {
@@ -7250,7 +6767,6 @@
     },
     {
       "id": "1952-06-15_a483",
-      "unit_type": "advertisement",
       "headline": "INTEGNERI O PERITI INDUSTRIALI",
       "paragraphs": [
         {
@@ -7265,7 +6781,6 @@
     },
     {
       "id": "1952-06-15_a484",
-      "unit_type": "advertisement",
       "headline": "SALOTTO MIRACOLO",
       "paragraphs": [
         {
@@ -7280,7 +6795,6 @@
     },
     {
       "id": "1952-06-15_a485",
-      "unit_type": "advertisement",
       "headline": "CASA DELL'ALLUMINIO",
       "paragraphs": [
         {
@@ -7295,7 +6809,6 @@
     },
     {
       "id": "1952-06-15_a486",
-      "unit_type": "advertisement",
       "headline": "Il Mobiliere di Roma Comm. STEFANO DE SANTIS VIA PALESTRO 28-A (sede) VIALE ADRIATICO 28-30 Monte Sacro (succursale)",
       "paragraphs": [
         {
@@ -7310,7 +6823,6 @@
     },
     {
       "id": "1952-06-15_a487",
-      "unit_type": "advertisement",
       "headline": "Non lasciate peggiorare la vostra ERNIA",
       "paragraphs": [
         {
@@ -7325,7 +6837,6 @@
     },
     {
       "id": "1952-06-15_a488",
-      "unit_type": "advertisement",
       "headline": "Piccolo Pubblicità COMMERCIALI (L. 85)",
       "paragraphs": [
         {
@@ -7340,7 +6851,6 @@
     },
     {
       "id": "1952-06-15_a489",
-      "unit_type": "advertisement",
       "headline": "ESTATE",
       "paragraphs": [
         {
@@ -7355,7 +6865,6 @@
     },
     {
       "id": "1952-06-15_a490",
-      "unit_type": "advertisement",
       "headline": "INDUSTRIALI",
       "paragraphs": [
         {
@@ -7370,7 +6879,6 @@
     },
     {
       "id": "1952-06-15_a491",
-      "unit_type": "advertisement",
       "headline": "DOLLO ....",
       "paragraphs": [
         {
@@ -7385,7 +6893,6 @@
     },
     {
       "id": "1952-06-15_a492",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -7400,7 +6907,6 @@
     },
     {
       "id": "1952-06-15_a493",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -7415,7 +6921,6 @@
     },
     {
       "id": "1952-06-15_a494",
-      "unit_type": "advertisement",
       "headline": "ANNUNZI VARI (L. 80)",
       "paragraphs": [
         {
@@ -7430,7 +6935,6 @@
     },
     {
       "id": "1952-06-15_a495",
-      "unit_type": "advertisement",
       "headline": "INFORMAZ. INVESTIG. (L. 80)",
       "paragraphs": [
         {
@@ -7445,7 +6949,6 @@
     },
     {
       "id": "1952-06-15_a496",
-      "unit_type": "advertisement",
       "headline": "AUTOMOBILI BICICL. (L. 90)",
       "paragraphs": [
         {
@@ -7460,7 +6963,6 @@
     },
     {
       "id": "1952-06-15_a497",
-      "unit_type": "advertisement",
       "headline": "I’ OCCASIONE D’ESTATE",
       "paragraphs": [
         {
@@ -7475,7 +6977,6 @@
     },
     {
       "id": "1952-06-15_a498",
-      "unit_type": "advertisement",
       "headline": "RADIO SMIRE",
       "paragraphs": [
         {
@@ -7490,7 +6991,6 @@
     },
     {
       "id": "1952-06-15_a499",
-      "unit_type": "advertisement",
       "headline": "RITIRO commercio",
       "paragraphs": [
         {
@@ -7505,7 +7005,6 @@
     },
     {
       "id": "1952-06-15_a500",
-      "unit_type": "advertisement",
       "headline": "ROLLEFLEX automatica",
       "paragraphs": [
         {
@@ -7520,7 +7019,6 @@
     },
     {
       "id": "1952-06-15_a501",
-      "unit_type": "advertisement",
       "headline": "SCAFFALATURE",
       "paragraphs": [
         {
@@ -7535,7 +7033,6 @@
     },
     {
       "id": "1952-06-15_a502",
-      "unit_type": "advertisement",
       "headline": "SCALDABAGNI Cosmos",
       "paragraphs": [
         {
@@ -7550,7 +7047,6 @@
     },
     {
       "id": "1952-06-15_a503",
-      "unit_type": "advertisement",
       "headline": "SERVIZIO piatti",
       "paragraphs": [
         {
@@ -7565,7 +7061,6 @@
     },
     {
       "id": "1952-06-15_a504",
-      "unit_type": "advertisement",
       "headline": "SINGER",
       "paragraphs": [
         {
@@ -7580,7 +7075,6 @@
     },
     {
       "id": "1952-06-15_a505",
-      "unit_type": "advertisement",
       "headline": "TAVOLI pingpong",
       "paragraphs": [
         {
@@ -7595,7 +7089,6 @@
     },
     {
       "id": "1952-06-15_a506",
-      "unit_type": "advertisement",
       "headline": "TELAIO mano Automat",
       "paragraphs": [
         {
@@ -7610,7 +7103,6 @@
     },
     {
       "id": "1952-06-15_a507",
-      "unit_type": "advertisement",
       "headline": "TORNO prismatico",
       "paragraphs": [
         {
@@ -7625,7 +7117,6 @@
     },
     {
       "id": "1952-06-15_a508",
-      "unit_type": "advertisement",
       "headline": "TORNO parallelo",
       "paragraphs": [
         {
@@ -7640,7 +7131,6 @@
     },
     {
       "id": "1952-06-15_a509",
-      "unit_type": "advertisement",
       "headline": "VALIGIA armadio",
       "paragraphs": [
         {
@@ -7655,7 +7145,6 @@
     },
     {
       "id": "1952-06-15_a510",
-      "unit_type": "advertisement",
       "headline": "REGISTRATORE Cassa Riv",
       "paragraphs": [
         {
@@ -7670,7 +7159,6 @@
     },
     {
       "id": "1952-06-15_a511",
-      "unit_type": "advertisement",
       "headline": "VENDESI vecchia scorniciatrice",
       "paragraphs": [
         {
@@ -7685,7 +7173,6 @@
     },
     {
       "id": "1952-06-15_a512",
-      "unit_type": "advertisement",
       "headline": "VENDESI stanza da letto",
       "paragraphs": [
         {
@@ -7700,7 +7187,6 @@
     },
     {
       "id": "1952-06-15_a513",
-      "unit_type": "advertisement",
       "headline": "VENDESI studio-salotto",
       "paragraphs": [
         {
@@ -7715,7 +7201,6 @@
     },
     {
       "id": "1952-06-15_a514",
-      "unit_type": "advertisement",
       "headline": "VENDO librerie, libri, quadri",
       "paragraphs": [
         {
@@ -7730,7 +7215,6 @@
     },
     {
       "id": "1952-06-15_a515",
-      "unit_type": "advertisement",
       "headline": "VENDO macchina cucire",
       "paragraphs": [
         {
@@ -7745,7 +7229,6 @@
     },
     {
       "id": "1952-06-15_a516",
-      "unit_type": "advertisement",
       "headline": "VENDO sopra ritratti",
       "paragraphs": [
         {
@@ -7760,7 +7243,6 @@
     },
     {
       "id": "1952-06-15_a517",
-      "unit_type": "advertisement",
       "headline": "VENDO tutto il arredamento",
       "paragraphs": [
         {
@@ -7775,7 +7257,6 @@
     },
     {
       "id": "1952-06-15_a518",
-      "unit_type": "advertisement",
       "headline": "VETRINE ingresso",
       "paragraphs": [
         {
@@ -7790,7 +7271,6 @@
     },
     {
       "id": "1952-06-15_a519",
-      "unit_type": "advertisement",
       "headline": "CAPITALI SOCIETÀ",
       "paragraphs": [
         {
@@ -7805,7 +7285,6 @@
     },
     {
       "id": "1952-06-15_a520",
-      "unit_type": "advertisement",
       "headline": "VILLEGGIATURE",
       "paragraphs": [
         {
@@ -7820,7 +7299,6 @@
     },
     {
       "id": "1952-06-15_a521",
-      "unit_type": "advertisement",
       "headline": "SMIRE: radio, radiofonografon",
       "paragraphs": [
         {
@@ -7835,7 +7313,6 @@
     },
     {
       "id": "1952-06-15_a522",
-      "unit_type": "advertisement",
       "headline": "MATRIMONIALI (L.90)",
       "paragraphs": [
         {
@@ -7850,7 +7327,6 @@
     },
     {
       "id": "1952-06-15_a523",
-      "unit_type": "advertisement",
       "headline": "A. VENDESI palazzina nuova vani 100 ottimo investimento - 765-654 (pasti)",
       "paragraphs": [
         {
@@ -7865,7 +7341,6 @@
     },
     {
       "id": "1952-06-15_a524",
-      "unit_type": "advertisement",
       "headline": "PRATI (centro) libero vendesi signore 6 camere (salone), biserviz. 683.783, lunedì.",
       "paragraphs": [
         {
@@ -7880,7 +7355,6 @@
     },
     {
       "id": "1952-06-15_a525",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI negozio moderna costruzio-n.",
       "paragraphs": [
         {
@@ -7895,7 +7369,6 @@
     },
     {
       "id": "1952-06-15_a526",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI 3 camere cucina Spoleto collina (volendo pensione). T. 364.260",
       "paragraphs": [
         {
@@ -7910,7 +7383,6 @@
     },
     {
       "id": "1952-06-15_a527",
-      "unit_type": "advertisement",
       "headline": "ROCCA DI PAPA vendesi villino gran dino. Telefono 553-592. ore 8-10",
       "paragraphs": [
         {
@@ -7925,7 +7397,6 @@
     },
     {
       "id": "1952-06-15_a528",
-      "unit_type": "advertisement",
       "headline": "MEDICINA IGIENE (L. 70)",
       "paragraphs": [
         {
@@ -7940,7 +7411,6 @@
     },
     {
       "id": "1952-06-15_a529",
-      "unit_type": "advertisement",
       "headline": "VILLINI CASE TERRENI (L. 90)",
       "paragraphs": [
         {
@@ -7955,7 +7425,6 @@
     },
     {
       "id": "1952-06-15_a530",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI 3 camere cucina Spoleto collina (volendo pensione). T. 364-260",
       "paragraphs": [
         {
@@ -7970,7 +7439,6 @@
     },
     {
       "id": "1952-06-15_a531",
-      "unit_type": "advertisement",
       "headline": "null",
       "paragraphs": [
         {
@@ -7985,7 +7453,6 @@
     },
     {
       "id": "1952-06-15_a532",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI",
       "paragraphs": [
         {
@@ -8000,7 +7467,6 @@
     },
     {
       "id": "1952-06-15_a533",
-      "unit_type": "advertisement",
       "headline": "OFFERTE AFFITTO APPART. NEGOZI E LOCALI (L.80)",
       "paragraphs": [
         {
@@ -8015,7 +7481,6 @@
     },
     {
       "id": "1952-06-15_a534",
-      "unit_type": "advertisement",
       "headline": "TASI negozio moderna costruzio-",
       "paragraphs": [
         {
@@ -8030,7 +7495,6 @@
     },
     {
       "id": "1952-06-15_a535",
-      "unit_type": "advertisement",
       "headline": "INFERMIERA cerca pratica camera operatoria, presentarsi lunedi mercoledi Viale Trastevere 150 ore 17-20",
       "paragraphs": [
         {
@@ -8045,7 +7509,6 @@
     },
     {
       "id": "1952-06-15_a536",
-      "unit_type": "advertisement",
       "headline": "ARTIGIANATO (L.60)",
       "paragraphs": [
         {
@@ -8060,7 +7523,6 @@
     },
     {
       "id": "1952-06-15_a537",
-      "unit_type": "advertisement",
       "headline": "A.A.A. RAGIONIERE pratico ogni amministrazione cauzione impiego serio. Telefono 484091, ore 17-19.",
       "paragraphs": [
         {
@@ -8075,7 +7537,6 @@
     },
     {
       "id": "1952-06-15_a538",
-      "unit_type": "advertisement",
       "headline": "SIGNORINA svizzera distinta ventenne occuperebbe posto istitutrice. Telef. 35-559",
       "paragraphs": [
         {
@@ -8090,7 +7551,6 @@
     },
     {
       "id": "1952-06-15_a539",
-      "unit_type": "classified",
       "headline": "CAPPUANTIERE",
       "paragraphs": [
         {
@@ -8105,7 +7565,6 @@
     },
     {
       "id": "1952-06-15_a540",
-      "unit_type": "classified",
       "headline": "CASSIERA",
       "paragraphs": [
         {
@@ -8120,7 +7579,6 @@
     },
     {
       "id": "1952-06-15_a541",
-      "unit_type": "classified",
       "headline": "COMPUTISTA",
       "paragraphs": [
         {
@@ -8135,7 +7593,6 @@
     },
     {
       "id": "1952-06-15_a542",
-      "unit_type": "classified",
       "headline": "CORRISPONDENTE",
       "paragraphs": [
         {
@@ -8150,7 +7607,6 @@
     },
     {
       "id": "1952-06-15_a543",
-      "unit_type": "classified",
       "headline": "DATILOGRAFIA",
       "paragraphs": [
         {
@@ -8165,7 +7621,6 @@
     },
     {
       "id": "1952-06-15_a544",
-      "unit_type": "classified",
       "headline": "DATILOGRAFA",
       "paragraphs": [
         {
@@ -8180,7 +7635,6 @@
     },
     {
       "id": "1952-06-15_a545",
-      "unit_type": "classified",
       "headline": "DATILOGRAFA",
       "paragraphs": [
         {
@@ -8195,7 +7649,6 @@
     },
     {
       "id": "1952-06-15_a546",
-      "unit_type": "classified",
       "headline": "DATILOGRAFA",
       "paragraphs": [
         {
@@ -8210,7 +7663,6 @@
     },
     {
       "id": "1952-06-15_a547",
-      "unit_type": "classified",
       "headline": "DATILOSCRITTI",
       "paragraphs": [
         {
@@ -8225,7 +7677,6 @@
     },
     {
       "id": "1952-06-15_a548",
-      "unit_type": "classified",
       "headline": "DICIONTENNE",
       "paragraphs": [
         {
@@ -8240,7 +7691,6 @@
     },
     {
       "id": "1952-06-15_a549",
-      "unit_type": "classified",
       "headline": "DIRETTORE",
       "paragraphs": [
         {
@@ -8255,7 +7705,6 @@
     },
     {
       "id": "1952-06-15_a550",
-      "unit_type": "classified",
       "headline": "DISEGNATORE",
       "paragraphs": [
         {
@@ -8270,7 +7719,6 @@
     },
     {
       "id": "1952-06-15_a551",
-      "unit_type": "classified",
       "headline": "DISEGNATORE",
       "paragraphs": [
         {
@@ -8285,7 +7733,6 @@
     },
     {
       "id": "1952-06-15_a552",
-      "unit_type": "classified",
       "headline": "DISTINTA",
       "paragraphs": [
         {
@@ -8300,7 +7747,6 @@
     },
     {
       "id": "1952-06-15_a553",
-      "unit_type": "classified",
       "headline": "DISTINTA",
       "paragraphs": [
         {
@@ -8315,7 +7761,6 @@
     },
     {
       "id": "1952-06-15_a554",
-      "unit_type": "classified",
       "headline": "DISTINTA",
       "paragraphs": [
         {
@@ -8330,7 +7775,6 @@
     },
     {
       "id": "1952-06-15_a555",
-      "unit_type": "classified",
       "headline": "DISTINTISSIMA",
       "paragraphs": [
         {
@@ -8345,7 +7789,6 @@
     },
     {
       "id": "1952-06-15_a556",
-      "unit_type": "classified",
       "headline": "DISTINTISSIMA",
       "paragraphs": [
         {
@@ -8360,7 +7803,6 @@
     },
     {
       "id": "1952-06-15_a557",
-      "unit_type": "classified",
       "headline": "DISTINTO",
       "paragraphs": [
         {
@@ -8375,7 +7817,6 @@
     },
     {
       "id": "1952-06-15_a558",
-      "unit_type": "classified",
       "headline": "DISTINTO",
       "paragraphs": [
         {
@@ -8390,7 +7831,6 @@
     },
     {
       "id": "1952-06-15_a559",
-      "unit_type": "classified",
       "headline": "DUECENTOMILA",
       "paragraphs": [
         {
@@ -8405,7 +7845,6 @@
     },
     {
       "id": "1952-06-15_a560",
-      "unit_type": "classified",
       "headline": "ESEGUO",
       "paragraphs": [
         {
@@ -8420,7 +7859,6 @@
     },
     {
       "id": "1952-06-15_a561",
-      "unit_type": "classified",
       "headline": "ESPERTA",
       "paragraphs": [
         {
@@ -8435,7 +7873,6 @@
     },
     {
       "id": "1952-06-15_a562",
-      "unit_type": "classified",
       "headline": "EX UFFICIALE",
       "paragraphs": [
         {
@@ -8450,7 +7887,6 @@
     },
     {
       "id": "1952-06-15_a563",
-      "unit_type": "classified",
       "headline": "FARMACISTA",
       "paragraphs": [
         {
@@ -8465,7 +7901,6 @@
     },
     {
       "id": "1952-06-15_a564",
-      "unit_type": "classified",
       "headline": "GEOMETRA",
       "paragraphs": [
         {
@@ -8480,7 +7915,6 @@
     },
     {
       "id": "1952-06-15_a565",
-      "unit_type": "classified",
       "headline": "GIOVANE",
       "paragraphs": [
         {
@@ -8495,7 +7929,6 @@
     },
     {
       "id": "1952-06-15_a566",
-      "unit_type": "classified",
       "headline": "GIOVANE",
       "paragraphs": [
         {
@@ -8510,7 +7943,6 @@
     },
     {
       "id": "1952-06-15_a567",
-      "unit_type": "classified",
       "headline": "GIOVANE",
       "paragraphs": [
         {
@@ -8525,7 +7957,6 @@
     },
     {
       "id": "1952-06-15_a568",
-      "unit_type": "classified",
       "headline": "GIOVANE",
       "paragraphs": [
         {
@@ -8540,7 +7971,6 @@
     },
     {
       "id": "1952-06-15_a569",
-      "unit_type": "classified",
       "headline": "GIOVANE",
       "paragraphs": [
         {
@@ -8555,7 +7985,6 @@
     },
     {
       "id": "1952-06-15_a570",
-      "unit_type": "classified",
       "headline": "GIOVANE",
       "paragraphs": [
         {
@@ -8570,7 +7999,6 @@
     },
     {
       "id": "1952-06-15_a571",
-      "unit_type": "classified",
       "headline": "INGEGNERE",
       "paragraphs": [
         {
@@ -8585,7 +8013,6 @@
     },
     {
       "id": "1952-06-15_a572",
-      "unit_type": "classified",
       "headline": "INGEGNERE",
       "paragraphs": [
         {
@@ -8600,7 +8027,6 @@
     },
     {
       "id": "1952-06-15_a573",
-      "unit_type": "classified",
       "headline": "INGEGNERE",
       "paragraphs": [
         {
@@ -8615,7 +8041,6 @@
     },
     {
       "id": "1952-06-15_a574",
-      "unit_type": "classified",
       "headline": "INGEGNERE",
       "paragraphs": [
         {
@@ -8630,7 +8055,6 @@
     },
     {
       "id": "1952-06-15_a575",
-      "unit_type": "classified",
       "headline": "INSEGNANTE",
       "paragraphs": [
         {
@@ -8645,7 +8069,6 @@
     },
     {
       "id": "1952-06-15_a576",
-      "unit_type": "classified",
       "headline": "INSEGNANTE",
       "paragraphs": [
         {
@@ -8660,7 +8083,6 @@
     },
     {
       "id": "1952-06-15_a577",
-      "unit_type": "classified",
       "headline": "INSEGNANTE",
       "paragraphs": [
         {
@@ -8675,7 +8097,6 @@
     },
     {
       "id": "1952-06-15_a578",
-      "unit_type": "classified",
       "headline": "LEGALE",
       "paragraphs": [
         {
@@ -8690,7 +8111,6 @@
     },
     {
       "id": "1952-06-15_a579",
-      "unit_type": "classified",
       "headline": "MAESTRA",
       "paragraphs": [
         {
@@ -8705,7 +8125,6 @@
     },
     {
       "id": "1952-06-15_a580",
-      "unit_type": "classified",
       "headline": "OCCUPEREBBESI",
       "paragraphs": [
         {
@@ -8720,7 +8139,6 @@
     },
     {
       "id": "1952-06-15_a581",
-      "unit_type": "classified",
       "headline": "ONESTISSIMA",
       "paragraphs": [
         {
@@ -8735,7 +8153,6 @@
     },
     {
       "id": "1952-06-15_a582",
-      "unit_type": "classified",
       "headline": "PRENDEREI",
       "paragraphs": [
         {
@@ -8750,7 +8167,6 @@
     },
     {
       "id": "1952-06-15_a583",
-      "unit_type": "classified",
       "headline": "RAGAZZO",
       "paragraphs": [
         {
@@ -8765,7 +8181,6 @@
     },
     {
       "id": "1952-06-15_a584",
-      "unit_type": "classified",
       "headline": "RAGIONIERA",
       "paragraphs": [
         {
@@ -8780,7 +8195,6 @@
     },
     {
       "id": "1952-06-15_a585",
-      "unit_type": "classified",
       "headline": "RAGIONIERE",
       "paragraphs": [
         {
@@ -8795,7 +8209,6 @@
     },
     {
       "id": "1952-06-15_a586",
-      "unit_type": "classified",
       "headline": "RAGIONIERE",
       "paragraphs": [
         {
@@ -8810,7 +8223,6 @@
     },
     {
       "id": "1952-06-15_a587",
-      "unit_type": "classified",
       "headline": "RAGIONIERE",
       "paragraphs": [
         {
@@ -8825,7 +8237,6 @@
     },
     {
       "id": "1952-06-15_a588",
-      "unit_type": "classified",
       "headline": "RAGIONIERE",
       "paragraphs": [
         {
@@ -8840,7 +8251,6 @@
     },
     {
       "id": "1952-06-15_a589",
-      "unit_type": "classified",
       "headline": "SETTENTRIONALE",
       "paragraphs": [
         {
@@ -8855,7 +8265,6 @@
     },
     {
       "id": "1952-06-15_a590",
-      "unit_type": "classified",
       "headline": "SIGNORA",
       "paragraphs": [
         {
@@ -8870,7 +8279,6 @@
     },
     {
       "id": "1952-06-15_a591",
-      "unit_type": "classified",
       "headline": "SIGNORA",
       "paragraphs": [
         {
@@ -8885,7 +8293,6 @@
     },
     {
       "id": "1952-06-15_a592",
-      "unit_type": "classified",
       "headline": "SIGNORINA",
       "paragraphs": [
         {
@@ -8900,7 +8307,6 @@
     },
     {
       "id": "1952-06-15_a593",
-      "unit_type": "classified",
       "headline": "SIGNORINA",
       "paragraphs": [
         {
@@ -8915,7 +8321,6 @@
     },
     {
       "id": "1952-06-15_a594",
-      "unit_type": "classified",
       "headline": "SIGNORINA",
       "paragraphs": [
         {
@@ -8930,7 +8335,6 @@
     },
     {
       "id": "1952-06-15_a595",
-      "unit_type": "classified",
       "headline": "SIGNORINA",
       "paragraphs": [
         {
@@ -8945,7 +8349,6 @@
     },
     {
       "id": "1952-06-15_a596",
-      "unit_type": "classified",
       "headline": "SPAGNOLO",
       "paragraphs": [
         {
@@ -8960,7 +8363,6 @@
     },
     {
       "id": "1952-06-15_a597",
-      "unit_type": "classified",
       "headline": "STRANIERA",
       "paragraphs": [
         {
@@ -8975,7 +8377,6 @@
     },
     {
       "id": "1952-06-15_a598",
-      "unit_type": "classified",
       "headline": "STENODATTILOGRAFA",
       "paragraphs": [
         {
@@ -8990,7 +8391,6 @@
     },
     {
       "id": "1952-06-15_a599",
-      "unit_type": "classified",
       "headline": "STENODATTILOGRAFA",
       "paragraphs": [
         {
@@ -9005,7 +8405,6 @@
     },
     {
       "id": "1952-06-15_a600",
-      "unit_type": "classified",
       "headline": "SVIZZERA",
       "paragraphs": [
         {
@@ -9020,7 +8419,6 @@
     },
     {
       "id": "1952-06-15_a601",
-      "unit_type": "classified",
       "headline": "TEDESCO",
       "paragraphs": [
         {
@@ -9035,7 +8433,6 @@
     },
     {
       "id": "1952-06-15_a602",
-      "unit_type": "classified",
       "headline": "TESI",
       "paragraphs": [
         {
@@ -9050,7 +8447,6 @@
     },
     {
       "id": "1952-06-15_a603",
-      "unit_type": "classified",
       "headline": "TRADUZIONI",
       "paragraphs": [
         {
@@ -9065,7 +8461,6 @@
     },
     {
       "id": "1952-06-15_a604",
-      "unit_type": "classified",
       "headline": "TRADUZIONI",
       "paragraphs": [
         {
@@ -9080,7 +8475,6 @@
     },
     {
       "id": "1952-06-15_a605",
-      "unit_type": "classified",
       "headline": "UNIVERSITARIA",
       "paragraphs": [
         {
@@ -9095,7 +8489,6 @@
     },
     {
       "id": "1952-06-15_a606",
-      "unit_type": "classified",
       "headline": "UNIVERSITARIA",
       "paragraphs": [
         {
@@ -9110,7 +8503,6 @@
     },
     {
       "id": "1952-06-15_a607",
-      "unit_type": "classified",
       "headline": "VENTICINQUENNE",
       "paragraphs": [
         {
@@ -9125,7 +8517,6 @@
     },
     {
       "id": "1952-06-15_a608",
-      "unit_type": "classified",
       "headline": "VENTISEIENNE",
       "paragraphs": [
         {
@@ -9140,7 +8531,6 @@
     },
     {
       "id": "1952-06-15_a609",
-      "unit_type": "classified",
       "headline": "VNETISTENNE",
       "paragraphs": [
         {
@@ -9155,7 +8545,6 @@
     },
     {
       "id": "1952-06-15_a610",
-      "unit_type": "classified",
       "headline": "45ENNE",
       "paragraphs": [
         {
@@ -9170,7 +8559,6 @@
     },
     {
       "id": "1952-06-15_a611",
-      "unit_type": "classified",
       "headline": "26ENNE",
       "paragraphs": [
         {
@@ -9185,7 +8573,6 @@
     },
     {
       "id": "1952-06-15_a612",
-      "unit_type": "classified",
       "headline": "24ENNE",
       "paragraphs": [
         {
@@ -9200,7 +8587,6 @@
     },
     {
       "id": "1952-06-15_a613",
-      "unit_type": "classified",
       "headline": "20ENNE",
       "paragraphs": [
         {
@@ -9215,7 +8601,6 @@
     },
     {
       "id": "1952-06-15_a614",
-      "unit_type": "advertisement",
       "headline": "DOMANDE LAVORI E PERSONALE",
       "paragraphs": [
         {
@@ -9230,7 +8615,6 @@
     },
     {
       "id": "1952-06-15_a615",
-      "unit_type": "advertisement",
       "headline": "Piccola Pubblicità (CONTINUAZ. DALLA 9ª PAGINA)",
       "paragraphs": [
         {
@@ -9245,7 +8629,6 @@
     },
     {
       "id": "1952-06-15_a616",
-      "unit_type": "advertisement",
       "headline": "CAMERE E PENS. (L.60)",
       "paragraphs": [
         {
@@ -9260,7 +8643,6 @@
     },
     {
       "id": "1952-06-15_a617",
-      "unit_type": "advertisement",
       "headline": "LEZIONI E CONVERS. (L.70)",
       "paragraphs": [
         {
@@ -9275,7 +8657,6 @@
     },
     {
       "id": "1952-06-15_a618",
-      "unit_type": "advertisement",
       "headline": "APPRESENT. PIAZZ. (L.70)",
       "paragraphs": [
         {
@@ -9290,7 +8671,6 @@
     },
     {
       "id": "1952-06-15_a619",
-      "unit_type": "advertisement",
       "headline": "FF LAVORO E IMP. (L.70)",
       "paragraphs": [
         {
@@ -9305,7 +8685,6 @@
     },
     {
       "id": "1952-06-15_a620",
-      "unit_type": "advertisement",
       "headline": "DUE camere una ingresso libero centralissime affittasi. Telefon. 492.152",
       "paragraphs": [
         {
@@ -9320,7 +8699,6 @@
     },
     {
       "id": "1952-06-15_a621",
-      "unit_type": "advertisement",
       "headline": "DOM. CAMERE E PENS. (L. 60)",
       "paragraphs": [
         {
@@ -9335,7 +8713,6 @@
     },
     {
       "id": "1952-06-15_a622",
-      "unit_type": "advertisement",
       "headline": "LEZIONI E CONVERS. (L. 70)",
       "paragraphs": [
         {
@@ -9350,7 +8727,6 @@
     },
     {
       "id": "1952-06-15_a623",
-      "unit_type": "advertisement",
       "headline": "RAPPRESENT. PIAZZ. (L. 70)",
       "paragraphs": [
         {
@@ -9365,7 +8741,6 @@
     },
     {
       "id": "1952-06-15_a624",
-      "unit_type": "advertisement",
       "headline": "OFF. LAVORO E IMP. (L. 70)",
       "paragraphs": [
         {
@@ -9380,7 +8755,6 @@
     },
     {
       "id": "1952-06-15_a625",
-      "unit_type": "advertisement",
       "headline": "DATTILOGRAFA",
       "paragraphs": [
         {
@@ -9395,7 +8769,6 @@
     },
     {
       "id": "1952-06-15_a626",
-      "unit_type": "advertisement",
       "headline": "CUOCA",
       "paragraphs": [
         {
@@ -9410,7 +8783,6 @@
     },
     {
       "id": "1952-06-15_a627",
-      "unit_type": "advertisement",
       "headline": "DISTINTA",
       "paragraphs": [
         {
@@ -9425,7 +8797,6 @@
     },
     {
       "id": "1952-06-15_a628",
-      "unit_type": "advertisement",
       "headline": "DISTINTA",
       "paragraphs": [
         {
@@ -9440,7 +8811,6 @@
     },
     {
       "id": "1952-06-15_a629",
-      "unit_type": "advertisement",
       "headline": "DISTINTA",
       "paragraphs": [
         {
@@ -9455,7 +8825,6 @@
     },
     {
       "id": "1952-06-15_a630",
-      "unit_type": "advertisement",
       "headline": "DISTINTA",
       "paragraphs": [
         {
@@ -9470,7 +8839,6 @@
     },
     {
       "id": "1952-06-15_a631",
-      "unit_type": "advertisement",
       "headline": "DISTINTA",
       "paragraphs": [
         {
@@ -9485,7 +8853,6 @@
     },
     {
       "id": "1952-06-15_a632",
-      "unit_type": "advertisement",
       "headline": "DISTINTA",
       "paragraphs": [
         {
@@ -9500,7 +8867,6 @@
     },
     {
       "id": "1952-06-15_a633",
-      "unit_type": "advertisement",
       "headline": "DISTINTA",
       "paragraphs": [
         {
@@ -9515,7 +8881,6 @@
     },
     {
       "id": "1952-06-15_a634",
-      "unit_type": "advertisement",
       "headline": "DISTINTA",
       "paragraphs": [
         {
@@ -9530,7 +8895,6 @@
     },
     {
       "id": "1952-06-15_a635",
-      "unit_type": "advertisement",
       "headline": "DISTINTA",
       "paragraphs": [
         {
@@ -9545,7 +8909,6 @@
     },
     {
       "id": "1952-06-15_a636",
-      "unit_type": "advertisement",
       "headline": "ELETTRICISTA",
       "paragraphs": [
         {
@@ -9560,7 +8923,6 @@
     },
     {
       "id": "1952-06-15_a637",
-      "unit_type": "advertisement",
       "headline": "EMILIANA",
       "paragraphs": [
         {
@@ -9575,7 +8937,6 @@
     },
     {
       "id": "1952-06-15_a638",
-      "unit_type": "advertisement",
       "headline": "ESPERTO",
       "paragraphs": [
         {
@@ -9590,7 +8951,6 @@
     },
     {
       "id": "1952-06-15_a639",
-      "unit_type": "advertisement",
       "headline": "FORTISSIMO",
       "paragraphs": [
         {
@@ -9605,7 +8965,6 @@
     },
     {
       "id": "1952-06-15_a640",
-      "unit_type": "advertisement",
       "headline": "GELATIERE",
       "paragraphs": [
         {
@@ -9620,7 +8979,6 @@
     },
     {
       "id": "1952-06-15_a641",
-      "unit_type": "advertisement",
       "headline": "GIARDINIERE",
       "paragraphs": [
         {
@@ -9635,7 +8993,6 @@
     },
     {
       "id": "1952-06-15_a642",
-      "unit_type": "advertisement",
       "headline": "GIOVANE",
       "paragraphs": [
         {
@@ -9650,7 +9007,6 @@
     },
     {
       "id": "1952-06-15_a643",
-      "unit_type": "advertisement",
       "headline": "GIOVANE",
       "paragraphs": [
         {
@@ -9665,7 +9021,6 @@
     },
     {
       "id": "1952-06-15_a644",
-      "unit_type": "advertisement",
       "headline": "GIOVANE",
       "paragraphs": [
         {
@@ -9680,7 +9035,6 @@
     },
     {
       "id": "1952-06-15_a645",
-      "unit_type": "advertisement",
       "headline": "GOVERNANTE",
       "paragraphs": [
         {
@@ -9695,7 +9049,6 @@
     },
     {
       "id": "1952-06-15_a646",
-      "unit_type": "advertisement",
       "headline": "GOVERNANTE",
       "paragraphs": [
         {
@@ -9710,7 +9063,6 @@
     },
     {
       "id": "1952-06-15_a647",
-      "unit_type": "advertisement",
       "headline": "INFIERIERA",
       "paragraphs": [
         {
@@ -9725,7 +9077,6 @@
     },
     {
       "id": "1952-06-15_a648",
-      "unit_type": "advertisement",
       "headline": "INFIERIERA",
       "paragraphs": [
         {
@@ -9740,7 +9091,6 @@
     },
     {
       "id": "1952-06-15_a649",
-      "unit_type": "advertisement",
       "headline": "ISTITUTRICE",
       "paragraphs": [
         {
@@ -9755,7 +9105,6 @@
     },
     {
       "id": "1952-06-15_a650",
-      "unit_type": "advertisement",
       "headline": "LOCOMOTORISTA",
       "paragraphs": [
         {
@@ -9770,7 +9119,6 @@
     },
     {
       "id": "1952-06-15_a651",
-      "unit_type": "advertisement",
       "headline": "MAMMA",
       "paragraphs": [
         {
@@ -9785,7 +9133,6 @@
     },
     {
       "id": "1952-06-15_a652",
-      "unit_type": "advertisement",
       "headline": "MANICURE",
       "paragraphs": [
         {
@@ -9800,7 +9147,6 @@
     },
     {
       "id": "1952-06-15_a653",
-      "unit_type": "advertisement",
       "headline": "MASSAGGIATRICE",
       "paragraphs": [
         {
@@ -9815,7 +9161,6 @@
     },
     {
       "id": "1952-06-15_a654",
-      "unit_type": "advertisement",
       "headline": "MASSAGGIATRICE",
       "paragraphs": [
         {
@@ -9830,7 +9175,6 @@
     },
     {
       "id": "1952-06-15_a655",
-      "unit_type": "advertisement",
       "headline": "MASSAGGIATRICE",
       "paragraphs": [
         {
@@ -9845,7 +9189,6 @@
     },
     {
       "id": "1952-06-15_a656",
-      "unit_type": "advertisement",
       "headline": "MEZZOSERVIZIO",
       "paragraphs": [
         {
@@ -9860,7 +9203,6 @@
     },
     {
       "id": "1952-06-15_a657",
-      "unit_type": "advertisement",
       "headline": "MURATORE",
       "paragraphs": [
         {
@@ -9875,7 +9217,6 @@
     },
     {
       "id": "1952-06-15_a658",
-      "unit_type": "advertisement",
       "headline": "OFFRESI",
       "paragraphs": [
         {
@@ -9890,7 +9231,6 @@
     },
     {
       "id": "1952-06-15_a659",
-      "unit_type": "advertisement",
       "headline": "OFFRESI",
       "paragraphs": [
         {
@@ -9905,7 +9245,6 @@
     },
     {
       "id": "1952-06-15_a660",
-      "unit_type": "advertisement",
       "headline": "OFFRESI",
       "paragraphs": [
         {
@@ -9920,7 +9259,6 @@
     },
     {
       "id": "1952-06-15_a661",
-      "unit_type": "advertisement",
       "headline": "OFFRESI",
       "paragraphs": [
         {
@@ -9935,7 +9273,6 @@
     },
     {
       "id": "1952-06-15_a662",
-      "unit_type": "advertisement",
       "headline": "OFFRESI",
       "paragraphs": [
         {
@@ -9950,7 +9287,6 @@
     },
     {
       "id": "1952-06-15_a663",
-      "unit_type": "advertisement",
       "headline": "OFFRESI",
       "paragraphs": [
         {
@@ -9965,7 +9301,6 @@
     },
     {
       "id": "1952-06-15_a664",
-      "unit_type": "advertisement",
       "headline": "OFFRIO",
       "paragraphs": [
         {
@@ -9980,7 +9315,6 @@
     },
     {
       "id": "1952-06-15_a665",
-      "unit_type": "advertisement",
       "headline": "OFFRIO",
       "paragraphs": [
         {
@@ -9995,7 +9329,6 @@
     },
     {
       "id": "1952-06-15_a666",
-      "unit_type": "advertisement",
       "headline": "OFFRIO",
       "paragraphs": [
         {
@@ -10010,7 +9343,6 @@
     },
     {
       "id": "1952-06-15_a667",
-      "unit_type": "advertisement",
       "headline": "PEDICURE",
       "paragraphs": [
         {
@@ -10025,7 +9357,6 @@
     },
     {
       "id": "1952-06-15_a668",
-      "unit_type": "advertisement",
       "headline": "PELICCIARIO",
       "paragraphs": [
         {
@@ -10040,7 +9371,6 @@
     },
     {
       "id": "1952-06-15_a669",
-      "unit_type": "advertisement",
       "headline": "PENSIONE",
       "paragraphs": [
         {
@@ -10055,7 +9385,6 @@
     },
     {
       "id": "1952-06-15_a670",
-      "unit_type": "advertisement",
       "headline": "PORTIERATO",
       "paragraphs": [
         {
@@ -10070,7 +9399,6 @@
     },
     {
       "id": "1952-06-15_a671",
-      "unit_type": "advertisement",
       "headline": "PROCURANDOMI",
       "paragraphs": [
         {
@@ -10085,7 +9413,6 @@
     },
     {
       "id": "1952-06-15_a672",
-      "unit_type": "advertisement",
       "headline": "PROSSIMI",
       "paragraphs": [
         {
@@ -10100,7 +9427,6 @@
     },
     {
       "id": "1952-06-15_a673",
-      "unit_type": "advertisement",
       "headline": "PROVETTO",
       "paragraphs": [
         {
@@ -10115,7 +9441,6 @@
     },
     {
       "id": "1952-06-15_a674",
-      "unit_type": "advertisement",
       "headline": "RAGAZZO",
       "paragraphs": [
         {
@@ -10130,7 +9455,6 @@
     },
     {
       "id": "1952-06-15_a675",
-      "unit_type": "advertisement",
       "headline": "REGALO",
       "paragraphs": [
         {
@@ -10145,7 +9469,6 @@
     },
     {
       "id": "1952-06-15_a676",
-      "unit_type": "advertisement",
       "headline": "SARTA",
       "paragraphs": [
         {
@@ -10160,7 +9483,6 @@
     },
     {
       "id": "1952-06-15_a677",
-      "unit_type": "advertisement",
       "headline": "SARTA",
       "paragraphs": [
         {
@@ -10175,7 +9497,6 @@
     },
     {
       "id": "1952-06-15_a678",
-      "unit_type": "advertisement",
       "headline": "SARTA",
       "paragraphs": [
         {
@@ -10190,7 +9511,6 @@
     },
     {
       "id": "1952-06-15_a679",
-      "unit_type": "advertisement",
       "headline": "SETTENTRIONALE",
       "paragraphs": [
         {
@@ -10205,7 +9525,6 @@
     },
     {
       "id": "1952-06-15_a680",
-      "unit_type": "advertisement",
       "headline": "SIGNORA",
       "paragraphs": [
         {
@@ -10220,7 +9539,6 @@
     },
     {
       "id": "1952-06-15_a681",
-      "unit_type": "advertisement",
       "headline": "SIGNORINA",
       "paragraphs": [
         {
@@ -10235,7 +9553,6 @@
     },
     {
       "id": "1952-06-15_a682",
-      "unit_type": "advertisement",
       "headline": "SIGNORINA",
       "paragraphs": [
         {
@@ -10250,7 +9567,6 @@
     },
     {
       "id": "1952-06-15_a683",
-      "unit_type": "advertisement",
       "headline": "SIGNORINA",
       "paragraphs": [
         {
@@ -10265,7 +9581,6 @@
     },
     {
       "id": "1952-06-15_a684",
-      "unit_type": "advertisement",
       "headline": "SIGNORINA",
       "paragraphs": [
         {
@@ -10280,7 +9595,6 @@
     },
     {
       "id": "1952-06-15_a685",
-      "unit_type": "advertisement",
       "headline": "SIGNORINA",
       "paragraphs": [
         {
@@ -10295,7 +9609,6 @@
     },
     {
       "id": "1952-06-15_a686",
-      "unit_type": "advertisement",
       "headline": "TAPPEZZIERE",
       "paragraphs": [
         {
@@ -10310,7 +9623,6 @@
     },
     {
       "id": "1952-06-15_a687",
-      "unit_type": "advertisement",
       "headline": "TAPPEZZIERE",
       "paragraphs": [
         {
@@ -10325,7 +9637,6 @@
     },
     {
       "id": "1952-06-15_a688",
-      "unit_type": "advertisement",
       "headline": "TIPOGRAFO",
       "paragraphs": [
         {
@@ -10340,7 +9651,6 @@
     },
     {
       "id": "1952-06-15_a689",
-      "unit_type": "advertisement",
       "headline": "TRASFORMAZIONI",
       "paragraphs": [
         {
@@ -10355,7 +9665,6 @@
     },
     {
       "id": "1952-06-15_a690",
-      "unit_type": "advertisement",
       "headline": "TRENTOTENNE",
       "paragraphs": [
         {
@@ -10370,7 +9679,6 @@
     },
     {
       "id": "1952-06-15_a691",
-      "unit_type": "advertisement",
       "headline": "VENETA",
       "paragraphs": [
         {
@@ -10385,7 +9693,6 @@
     },
     {
       "id": "1952-06-15_a692",
-      "unit_type": "advertisement",
       "headline": "VENETA",
       "paragraphs": [
         {
@@ -10400,7 +9707,6 @@
     },
     {
       "id": "1952-06-15_a693",
-      "unit_type": "advertisement",
       "headline": "VENETA",
       "paragraphs": [
         {
@@ -10415,7 +9721,6 @@
     },
     {
       "id": "1952-06-15_a694",
-      "unit_type": "advertisement",
       "headline": "VENETA",
       "paragraphs": [
         {
@@ -10430,7 +9735,6 @@
     },
     {
       "id": "1952-06-15_a695",
-      "unit_type": "advertisement",
       "headline": "VENETI",
       "paragraphs": [
         {
@@ -10445,7 +9749,6 @@
     },
     {
       "id": "1952-06-15_a696",
-      "unit_type": "advertisement",
       "headline": "VOLENTEROSO",
       "paragraphs": [
         {
@@ -10460,7 +9763,6 @@
     },
     {
       "id": "1952-06-15_a697",
-      "unit_type": "advertisement",
       "headline": "23ENNE",
       "paragraphs": [
         {

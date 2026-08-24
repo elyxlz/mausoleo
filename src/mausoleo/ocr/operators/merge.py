@@ -55,7 +55,7 @@ def _parse_crop_articles(page_text: str, raw_first_line_headline: bool) -> list[
         page_data = json.loads(_strip_markdown(page_text))
     except json.JSONDecodeError:
         headline, body = _split_raw_headline(page_text) if raw_first_line_headline else (None, page_text)
-        fallback_article: dict[str, tp.Any] = {"unit_type": "article", "headline": headline, "paragraphs": [{"text": body}]}
+        fallback_article: dict[str, tp.Any] = {"headline": headline, "paragraphs": [{"text": body}]}
         page_data = {"articles": [fallback_article]}
 
     if isinstance(page_data, dict):

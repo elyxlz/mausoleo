@@ -4,7 +4,6 @@
   "page_count": 10,
   "articles": [
     {
-      "unit_type": "article",
       "headline": "A. PAVIA",
       "paragraphs": [
         {
@@ -39,7 +38,6 @@
       "position_in_issue": 0
     },
     {
-      "unit_type": "article",
       "headline": "VEGETALLUMINA",
       "paragraphs": [
         {
@@ -66,7 +64,6 @@
       "position_in_issue": 1
     },
     {
-      "unit_type": "article",
       "headline": "COMANDI MEDITERRANEI",
       "paragraphs": [
         {
@@ -109,7 +106,6 @@
       "position_in_issue": 2
     },
     {
-      "unit_type": "article",
       "headline": "IL CONSIGLIO DEI MINISTRI DI IERI\nStampa, riforma agraria e tutela del consumatore\nUn disegno di legge che integra la legislazione sulla pubblicazione dei giornali - Esentati dallo scorporo alcuni tipi di aziende agricole - Il Governo chiederà l'esercizio provvisorio - Il generale Frattini, nuovo Comandante delle truppe del N.A.T.O. nel sud Europa",
       "paragraphs": [
         {
@@ -168,7 +164,6 @@
       "position_in_issue": 3
     },
     {
-      "unit_type": "article",
       "headline": "CONCLUSE LE TRATTATIVE INTERCONFEDERALI\nL'accordo per gli assegni famigliari l'indennità e gli scatti di anzianità\nGli aumenti di anzianità applicati sulla paga base aumentata dall'indennità di contingenza - L'indennità di licenziamento sarà calcolata anche per gli anni antecedenti al '45 comprendendo anche la contingenza",
       "paragraphs": [
         {
@@ -227,7 +222,6 @@
       "position_in_issue": 4
     },
     {
-      "unit_type": "article",
       "headline": "Il gen. Guido Frattini succede al gen. De Castiglioni\nLa figura e la carriera del nuovo Comandante delle Forze terrestri dell'Europa meridionale",
       "paragraphs": [
         {
@@ -254,7 +248,6 @@
       "position_in_issue": 5
     },
     {
-      "unit_type": "article",
       "headline": "LA PORTATA DEL DISEGNO DI LEGGE\nIl progetto sulla stampa illustrato dal Sottosegretario Tupini\nLa responsabilità del direttore attenuata - I casi e la procedura per il sequestro - La disciplina per i giornali murali e per l'importazione di pubblicazioni straniere - Le esigenze e i limiti della cronaca",
       "paragraphs": [
         {
@@ -329,7 +322,6 @@
       "position_in_issue": 6
     },
     {
-      "unit_type": "article",
       "headline": "CERIMONIA STORICA A GROTON NEL CONNECTICUT\nTruman assiste all'impostazione del primo sommergibile atomico\nIl Presidente afferma che il vascello è il precursore di navi mercantili e di aerei a motore atomico - Gli Stati Uniti hanno già alcune bombe all'idrogeno mentre ne possiedono tra mille e duemila atomiche - Il sen. Mac Mahon vuol costruire migliaia di bombe «H»",
       "paragraphs": [
         {
@@ -388,7 +380,6 @@
       "position_in_issue": 7
     },
     {
-      "unit_type": "article",
       "headline": "POLITICA INTERNA E SITUAZIONE INTERNAZIONALE\nLa visita a Roma del gen. Ridgway e la collaborazione mediterranea\nDe Gasperi risponderà alla interpellanza Togliatti - La relazione di Nenni al C.C. socialista - La discussione sullo statuto delle Forze atlantiche - L'esercizio finanziario provvisorio e la questione della sua durata",
       "paragraphs": [
         {
@@ -451,7 +442,6 @@
       "position_in_issue": 8
     },
     {
-      "unit_type": "article",
       "headline": "Onoranze alla salma del Maresciallo Caviglia",
       "paragraphs": [
         {
@@ -474,7 +464,6 @@
       "position_in_issue": 9
     },
     {
-      "unit_type": "article",
       "headline": "L'Europa unita in un discorso di Spaak\nI problemi del momento: riarmo, adeguato livello di vita, indipendenza europea e integrazione della Germania nell'Occidente",
       "paragraphs": [
         {
@@ -525,7 +514,6 @@
       "position_in_issue": 10
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -540,7 +528,6 @@
       "position_in_issue": 11
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -555,7 +542,6 @@
       "position_in_issue": 12
     },
     {
-      "unit_type": "article",
       "headline": "IL PROBLEMA DELLA CASA E LA SUA SOLUZIONE\nIl Municipio come ente coordinatore di un organico Piano biennale risolutivo\nCensire il bisogno e il numero degli alloggi in costruzione, costruiti e in progettazione - Distribuzione di compiti fra Comune, Enti e Cooperative - Facilitare le iniziative private - Finanziamenti e tassi ragionevoli",
       "paragraphs": [
         {
@@ -622,7 +608,6 @@
       "position_in_issue": 13
     },
     {
-      "unit_type": "article",
       "headline": "CRONACA GIUDIZIARIA\nI carabinieri di scorta a Lo Verso condannati dal Tribunale Militare\nIl brigadiere a 11 mesi e 19 giorni e i due carabinieri a due mesi di reclusione - Il maresciallo di Palermo è stato assolto - Diminuite le pene alla famiglia Plazzi - L'ing. Allegretti prosciolto in istruttoria",
       "paragraphs": [
         {
@@ -697,7 +682,6 @@
       "position_in_issue": 14
     },
     {
-      "unit_type": "article",
       "headline": "UNA SERIE DI DISGRAZIE\nRidotta in fin di vita dalla caduta di una tegola\nQuattro ragazze rimangono intossicate dal gas",
       "paragraphs": [
         {
@@ -736,7 +720,6 @@
       "position_in_issue": 15
     },
     {
-      "unit_type": "article",
       "headline": "Numerosi feriti in incidenti stradali",
       "paragraphs": [
         {
@@ -755,7 +738,6 @@
       "position_in_issue": 16
     },
     {
-      "unit_type": "article",
       "headline": "NOTE DEL CRONISTA",
       "paragraphs": [
         {
@@ -818,7 +800,6 @@
       "position_in_issue": 17
     },
     {
-      "unit_type": "article",
       "headline": "UNA BELLA INIZIATIVA DELLA P.I.\nUna Mostra didattica Leonardesca sarà aperta a Palazzo Venezia\nOltre cinquecento riproduzioni di disegni e di dipinti del Maestro - L'inaugurazione fissata per il pomeriggio del 20",
       "paragraphs": [
         {
@@ -845,7 +826,6 @@
       "position_in_issue": 18
     },
     {
-      "unit_type": "article",
       "headline": "Calendario turistico del mese di Giugno",
       "paragraphs": [
         {
@@ -880,7 +860,6 @@
       "position_in_issue": 19
     },
     {
-      "unit_type": "article",
       "headline": "La nota del giorno\nABUSIVI",
       "paragraphs": [
         {
@@ -899,7 +878,6 @@
       "position_in_issue": 20
     },
     {
-      "unit_type": "article",
       "headline": "La Festa dei bimbi oggi allo Zoo",
       "paragraphs": [
         {
@@ -930,7 +908,6 @@
       "position_in_issue": 21
     },
     {
-      "unit_type": "article",
       "headline": "Il ministro Scelba alla Mostra dei Vini",
       "paragraphs": [
         {
@@ -953,7 +930,6 @@
       "position_in_issue": 22
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -968,7 +944,6 @@
       "position_in_issue": 23
     },
     {
-      "unit_type": "article",
       "headline": "ALL'ALBA DI IERI\nIl cadavere di un giovane ripescato dal \"Ciriola,, sotto ponte Vittorio\nDai primi accertamenti sembra da escludersi l'ipotesi di un delitto - Il poveretto abitava a Fabrica di Roma - Domani sarà compiuta l'autopsia",
       "paragraphs": [
         {
@@ -999,7 +974,6 @@
       "position_in_issue": 24
     },
     {
-      "unit_type": "article",
       "headline": "Per la formazione della Giunta Comunale",
       "paragraphs": [
         {
@@ -1030,7 +1004,6 @@
       "position_in_issue": 25
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1045,7 +1018,6 @@
       "position_in_issue": 26
     },
     {
-      "unit_type": "article",
       "headline": "Razionamento nel '53?",
       "paragraphs": [
         {
@@ -1064,7 +1036,6 @@
       "position_in_issue": 27
     },
     {
-      "unit_type": "article",
       "headline": "IERI SERA A PIETRALATA\nRidotto in fn di vita a coltellate per una banale questione d'interesse\nIl feritore si è dato alla fuga - Un giovane arrestato per aver percosso e ferito la suocera",
       "paragraphs": [
         {
@@ -1123,7 +1094,6 @@
       "position_in_issue": 28
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1138,7 +1108,6 @@
       "position_in_issue": 29
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1153,7 +1122,6 @@
       "position_in_issue": 30
     },
     {
-      "unit_type": "article",
       "headline": "DOPO L'EPISODIO NELLA CHIESA DELLA TRASFIGURAZIONE\nI giovani protagonisti del mancato matrimonio si sono sposati ieri in Campidoglio col rito civile\nSi tratta di un barbiere ventenne e di una ragazza di diciassette anni",
       "paragraphs": [
         {
@@ -1184,7 +1152,6 @@
       "position_in_issue": 31
     },
     {
-      "unit_type": "article",
       "headline": "La responsabilità della Tip. Nava riaffermata dal Questore all'UIL",
       "paragraphs": [
         {
@@ -1203,7 +1170,6 @@
       "position_in_issue": 32
     },
     {
-      "unit_type": "article",
       "headline": "La CISL contro le manifestazioni per l'arrivo del gen. Ridgway",
       "paragraphs": [
         {
@@ -1218,7 +1184,6 @@
       "position_in_issue": 33
     },
     {
-      "unit_type": "article",
       "headline": "L'orario estivo della Roma - Lido",
       "paragraphs": [
         {
@@ -1249,7 +1214,6 @@
       "position_in_issue": 34
     },
     {
-      "unit_type": "article",
       "headline": "RICORDATE!",
       "paragraphs": [
         {
@@ -1264,7 +1228,6 @@
       "position_in_issue": 35
     },
     {
-      "unit_type": "article",
       "headline": "VESTITO 11.900 POPELIN",
       "paragraphs": [
         {
@@ -1291,7 +1254,6 @@
       "position_in_issue": 36
     },
     {
-      "unit_type": "article",
       "headline": "SCONTIAMO ANNUALITA' STATALI",
       "paragraphs": [
         {
@@ -1306,7 +1268,6 @@
       "position_in_issue": 37
     },
     {
-      "unit_type": "article",
       "headline": "STOMACO - FEGATO INTESTINO - RAGGI X",
       "paragraphs": [
         {
@@ -1321,7 +1282,6 @@
       "position_in_issue": 38
     },
     {
-      "unit_type": "article",
       "headline": "Terreno fabbricabile vendesi via Appia Nuova viale Appio Claudio",
       "paragraphs": [
         {
@@ -1344,7 +1304,6 @@
       "position_in_issue": 39
     },
     {
-      "unit_type": "article",
       "headline": "VESTITI estivi",
       "paragraphs": [
         {
@@ -1371,7 +1330,6 @@
       "position_in_issue": 40
     },
     {
-      "unit_type": "article",
       "headline": "16.800",
       "paragraphs": [
         {
@@ -1398,7 +1356,6 @@
       "position_in_issue": 41
     },
     {
-      "unit_type": "article",
       "headline": "L'ora \"Z,, è \"l'ora Gratuita,,",
       "paragraphs": [
         {
@@ -1429,7 +1386,6 @@
       "position_in_issue": 42
     },
     {
-      "unit_type": "article",
       "headline": "TESSUTI DI FIDUCIA",
       "paragraphs": [
         {
@@ -1464,7 +1420,6 @@
       "position_in_issue": 43
     },
     {
-      "unit_type": "article",
       "headline": "ELETTROSCALDABAGNI",
       "paragraphs": [
         {
@@ -1491,7 +1446,6 @@
       "position_in_issue": 44
     },
     {
-      "unit_type": "article",
       "headline": "GIOIELLERIA Tito Vespasiani ARGENTERIA",
       "paragraphs": [
         {
@@ -1506,7 +1460,6 @@
       "position_in_issue": 45
     },
     {
-      "unit_type": "article",
       "headline": "ASSUMIAMO COMMESSI e AIUTO COMMESSI",
       "paragraphs": [
         {
@@ -1533,7 +1486,6 @@
       "position_in_issue": 46
     },
     {
-      "unit_type": "article",
       "headline": "Tutti possono FOTO - FILMARE a COLORE",
       "paragraphs": [
         {
@@ -1572,7 +1524,6 @@
       "position_in_issue": 47
     },
     {
-      "unit_type": "article",
       "headline": "DOPO LA CONTESA\nRITORNO AD ASSISI",
       "paragraphs": [
         {
@@ -1643,7 +1594,6 @@
       "position_in_issue": 48
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1658,7 +1608,6 @@
       "position_in_issue": 49
     },
     {
-      "unit_type": "article",
       "headline": "Notiziario letterario",
       "paragraphs": [
         {
@@ -1673,7 +1622,6 @@
       "position_in_issue": 50
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1688,7 +1636,6 @@
       "position_in_issue": 51
     },
     {
-      "unit_type": "article",
       "headline": "I GRANDI RISULTATI DI UNA NOBILE INIZIATIVA\nUn medico attraverso la radio cura i malati naviganti sui mari e nel cielo\nCome nacque l'idea - Diagnosi e ricette a distanza di chilometri - Casi di pronto soccorso e casi di lunga degenza\nL'organizzazione si amplia e si perfeziona - L'assistenza radioclinica per gli aerei - Interesse in tutto il mondo",
       "paragraphs": [
         {
@@ -1767,7 +1714,6 @@
       "position_in_issue": 52
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1782,7 +1728,6 @@
       "position_in_issue": 53
     },
     {
-      "unit_type": "article",
       "headline": "DELINQUENZA SENZA PISTOLA\nImbrogli in grande stile con il pretesto della beneficenza\nUn dollaro in una busta e un appello di solidarietà umana - Utili colossali con gli spiccioli dei generosi - Cosa si nasconde dietro certe rispettabili imprese - Un avvertimento agli uomini onesti e ingenui",
       "paragraphs": [
         {
@@ -1821,7 +1766,6 @@
       "position_in_issue": 54
     },
     {
-      "unit_type": "article",
       "headline": "Un grande vivaio forestale sta sorgendo a Cassino",
       "paragraphs": [
         {
@@ -1840,7 +1784,6 @@
       "position_in_issue": 55
     },
     {
-      "unit_type": "article",
       "headline": "IL PIU' SANO E LIBERO RIFORMATORIO DEL MONDO\nPiccoli marinai sulla nave della redenzione\nPrime colpe e prime espiazioni — Si impara ad essere uomini — Attaccamento al dovere e desiderio di bontà — Festa a bordo",
       "paragraphs": [
         {
@@ -1907,7 +1850,6 @@
       "position_in_issue": 56
     },
     {
-      "unit_type": "article",
       "headline": "Furore",
       "paragraphs": [
         {
@@ -1930,7 +1872,6 @@
       "position_in_issue": 57
     },
     {
-      "unit_type": "article",
       "headline": "La luce rossa",
       "paragraphs": [
         {
@@ -1953,7 +1894,6 @@
       "position_in_issue": 58
     },
     {
-      "unit_type": "article",
       "headline": "Il più bel peccato del mondo",
       "paragraphs": [
         {
@@ -1972,7 +1912,6 @@
       "position_in_issue": 59
     },
     {
-      "unit_type": "article",
       "headline": "IL SALUTO DELLA ROMA AI SUOI TIFOSI\nIl Siracusa ultimo avversario dei giallo-rossi allo Stadio\nPotrebbe essere la partita di addio alla serie B - Sarà schierata la stessa formazione di domenica scorsa - La Lazio a Firenze - Le altre partite di oggi",
       "paragraphs": [
         {
@@ -2047,7 +1986,6 @@
       "position_in_issue": 60
     },
     {
-      "unit_type": "article",
       "headline": "Le dimissioni del comm. Bevilacqua da consigliere della Lazio",
       "paragraphs": [
         {
@@ -2066,7 +2004,6 @@
       "position_in_issue": 61
     },
     {
-      "unit_type": "article",
       "headline": "Quaranta maglie bianche alla III prova di indicazione",
       "paragraphs": [
         {
@@ -2089,7 +2026,6 @@
       "position_in_issue": 62
     },
     {
-      "unit_type": "article",
       "headline": "Sconfitti gli azzurri nel doppio della «Davis»",
       "paragraphs": [
         {
@@ -2112,7 +2048,6 @@
       "position_in_issue": 63
     },
     {
-      "unit_type": "article",
       "headline": "Successo di Sandro Perrone nel Premio Città di Lecco",
       "paragraphs": [
         {
@@ -2139,7 +2074,6 @@
       "position_in_issue": 64
     },
     {
-      "unit_type": "article",
       "headline": "GLI INCONTRI DI PALLANUOTO\nItalia - Germania 11-4",
       "paragraphs": [
         {
@@ -2186,7 +2120,6 @@
       "position_in_issue": 65
     },
     {
-      "unit_type": "article",
       "headline": "I MOTOCICLISTI IN GARA\nE' iniziata la Milano-Taranto",
       "paragraphs": [
         {
@@ -2217,7 +2150,6 @@
       "position_in_issue": 66
     },
     {
-      "unit_type": "article",
       "headline": "LA PRIMA TAPPA DEL GIRO CICLISTICO DELLA SVIZZERA\nKeteleer primo con distacco al traguardo della Zurigo-Basilea\nL'italiano Conterno si classifica al secondo posto, mentre Koblet, Kubler e gli altri italiani giungono con tre minuti di ritardo - Oggi si corre la tappa Basilea-Le Locle",
       "paragraphs": [
         {
@@ -2272,7 +2204,6 @@
       "position_in_issue": 67
     },
     {
-      "unit_type": "article",
       "headline": "L'ordine di arrivo",
       "paragraphs": [
         {
@@ -2287,7 +2218,6 @@
       "position_in_issue": 68
     },
     {
-      "unit_type": "article",
       "headline": "NOTIZIE IN BREVE",
       "paragraphs": [
         {
@@ -2302,7 +2232,6 @@
       "position_in_issue": 69
     },
     {
-      "unit_type": "article",
       "headline": "LA DOMENICA SUGLI IPPODROMI\nIl milionario Premio Ville di Roma al centro della \"notturna,, a VillaGlori\nRientra Vizio sulla pista del trotter romano - L'internazionale Premio Duomo a Firenze - Il galoppo ad Agnano e a S. Siro",
       "paragraphs": [
         {
@@ -2385,7 +2314,6 @@
       "position_in_issue": 70
     },
     {
-      "unit_type": "article",
       "headline": "Il Premio Frascati vinto da Marianna",
       "paragraphs": [
         {
@@ -2432,7 +2360,6 @@
       "position_in_issue": 71
     },
     {
-      "unit_type": "article",
       "headline": "Le previsioni sulle Olimpiadi di un giornale finlandese",
       "paragraphs": [
         {
@@ -2455,7 +2382,6 @@
       "position_in_issue": 72
     },
     {
-      "unit_type": "article",
       "headline": "LE 24 ORE AUTOMOBILISTICHE DI LE MANS\nAscari e Villoresi si ritirano dopo i primi velocissimi giri",
       "paragraphs": [
         {
@@ -2546,7 +2472,6 @@
       "position_in_issue": 73
     },
     {
-      "unit_type": "article",
       "headline": "DICHIARAZIONI ALLA STAMPA DEL GIOCATORE JUVENTINO\nMolto probabilmente Parola passerà alla Roma",
       "paragraphs": [
         {
@@ -2577,7 +2502,6 @@
       "position_in_issue": 74
     },
     {
-      "unit_type": "article",
       "headline": "Oggi si disputa il XIV Circuito Valle del Liri",
       "paragraphs": [
         {
@@ -2600,7 +2524,6 @@
       "position_in_issue": 75
     },
     {
-      "unit_type": "article",
       "headline": "I campionati di Atletica",
       "paragraphs": [
         {
@@ -2623,7 +2546,6 @@
       "position_in_issue": 76
     },
     {
-      "unit_type": "article",
       "headline": "Il Gran Premio Roma oggi a Vallelunga",
       "paragraphs": [
         {
@@ -2642,7 +2564,6 @@
       "position_in_issue": 77
     },
     {
-      "unit_type": "article",
       "headline": "A Giuseppe Dordoni il Trofeo « Silla del Sole »",
       "paragraphs": [
         {
@@ -2669,7 +2590,6 @@
       "position_in_issue": 78
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -2684,7 +2604,6 @@
       "position_in_issue": 79
     },
     {
-      "unit_type": "article",
       "headline": "una buona ricetta!",
       "paragraphs": [
         {
@@ -2699,7 +2618,6 @@
       "position_in_issue": 80
     },
     {
-      "unit_type": "article",
       "headline": "Ultime della lirica all'Eliseo",
       "paragraphs": [
         {
@@ -2718,7 +2636,6 @@
       "position_in_issue": 81
     },
     {
-      "unit_type": "article",
       "headline": "Nuovo programma alla Casina delle Rose",
       "paragraphs": [
         {
@@ -2733,7 +2650,6 @@
       "position_in_issue": 82
     },
     {
-      "unit_type": "article",
       "headline": "TEATRI",
       "paragraphs": [
         {
@@ -2780,7 +2696,6 @@
       "position_in_issue": 83
     },
     {
-      "unit_type": "article",
       "headline": "DANCING - RITROVI",
       "paragraphs": [
         {
@@ -2807,7 +2722,6 @@
       "position_in_issue": 84
     },
     {
-      "unit_type": "article",
       "headline": "CASINA delle ROSE",
       "paragraphs": [
         {
@@ -2826,7 +2740,6 @@
       "position_in_issue": 85
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -2841,7 +2754,6 @@
       "position_in_issue": 86
     },
     {
-      "unit_type": "article",
       "headline": "CINEMA - VARIETA'",
       "paragraphs": [
         {
@@ -2884,7 +2796,6 @@
       "position_in_issue": 87
     },
     {
-      "unit_type": "article",
       "headline": "ARENE",
       "paragraphs": [
         {
@@ -2915,7 +2826,6 @@
       "position_in_issue": 88
     },
     {
-      "unit_type": "article",
       "headline": "PALAZZO SISTINA",
       "paragraphs": [
         {
@@ -2938,7 +2848,6 @@
       "position_in_issue": 89
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -2981,7 +2890,6 @@
       "position_in_issue": 90
     },
     {
-      "unit_type": "article",
       "headline": "CINEMA",
       "paragraphs": [
         {
@@ -3448,7 +3356,6 @@
       "position_in_issue": 91
     },
     {
-      "unit_type": "article",
       "headline": "Imminente al CAPITOL",
       "paragraphs": [
         {
@@ -3475,7 +3382,6 @@
       "position_in_issue": 92
     },
     {
-      "unit_type": "article",
       "headline": "LA RADIO",
       "paragraphs": [
         {
@@ -3502,7 +3408,6 @@
       "position_in_issue": 93
     },
     {
-      "unit_type": "article",
       "headline": "MARTIN GUMPERT\nSIETE PIU' GIOVANI DI QUANTO CREDETE",
       "paragraphs": [
         {
@@ -3549,7 +3454,6 @@
       "position_in_issue": 94
     },
     {
-      "unit_type": "article",
       "headline": "ROMA - FREGENE",
       "paragraphs": [
         {
@@ -3580,7 +3484,6 @@
       "position_in_issue": 95
     },
     {
-      "unit_type": "article",
       "headline": "CLIPS",
       "paragraphs": [
         {
@@ -3607,7 +3510,6 @@
       "position_in_issue": 96
     },
     {
-      "unit_type": "article",
       "headline": "ALATI",
       "paragraphs": [
         {
@@ -3638,7 +3540,6 @@
       "position_in_issue": 97
     },
     {
-      "unit_type": "article",
       "headline": "CINZANINO CINZANO Soda",
       "paragraphs": [
         {
@@ -3673,7 +3574,6 @@
       "position_in_issue": 98
     },
     {
-      "unit_type": "article",
       "headline": "ceresa e rampone",
       "paragraphs": [
         {
@@ -3696,7 +3596,6 @@
       "position_in_issue": 99
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -3735,7 +3634,6 @@
       "position_in_issue": 100
     },
     {
-      "unit_type": "article",
       "headline": "SAISA S/A",
       "paragraphs": [
         {
@@ -3774,7 +3672,6 @@
       "position_in_issue": 101
     },
     {
-      "unit_type": "article",
       "headline": "IL TRAGICO CROLLO ALLA BOVISA\nFori sopra il metanodotto scoperti durante gli scavi di ieri\nDa un buco di circa tre millimetri sfuggiva ancora un soffio di gas - Lo scoppio sarebbe avvenuto in cantina e non nella camera da letto dei Suardi - Oggi le onoranze funebri alle dodici vittime",
       "paragraphs": [
         {
@@ -3829,7 +3726,6 @@
       "position_in_issue": 102
     },
     {
-      "unit_type": "article",
       "headline": "PER UN MALORE DELL'AUTISTA\nDue soldati muoiono in un incidente a Genova\nSi tratta di due romani precipitati con un camioncino da 90 metri",
       "paragraphs": [
         {
@@ -3856,7 +3752,6 @@
       "position_in_issue": 103
     },
     {
-      "unit_type": "article",
       "headline": "Tre bersaglieri feriti durante una esercitazione",
       "paragraphs": [
         {
@@ -3883,7 +3778,6 @@
       "position_in_issue": 104
     },
     {
-      "unit_type": "article",
       "headline": "Ucciso da un colpo fortuito del fucile di un commilitone",
       "paragraphs": [
         {
@@ -3902,7 +3796,6 @@
       "position_in_issue": 105
     },
     {
-      "unit_type": "article",
       "headline": "NON ABBANDONERA' L'IMPIEGO\nIl vincitore dei 40 milioni chiede un periodo di ferie\nLa moglie ha appreso da lui la notizia mentre stava spiegando ai suoi alunni l'episodio della «pazienza di Giobbe»",
       "paragraphs": [
         {
@@ -3945,7 +3838,6 @@
       "position_in_issue": 106
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -3960,7 +3852,6 @@
       "position_in_issue": 107
     },
     {
-      "unit_type": "article",
       "headline": "Le danze della Ruskaja al «Maggio di Bari»",
       "paragraphs": [
         {
@@ -3987,7 +3878,6 @@
       "position_in_issue": 108
     },
     {
-      "unit_type": "article",
       "headline": "Il Congresso a Padova dei Coltivatori diretti\nL'on. Bonomi parla dei problemi dell'agricoltura e visita la Fiera",
       "paragraphs": [
         {
@@ -4018,7 +3908,6 @@
       "position_in_issue": 109
     },
     {
-      "unit_type": "article",
       "headline": "Assegnazione di terre in provincia di Roma",
       "paragraphs": [
         {
@@ -4037,7 +3926,6 @@
       "position_in_issue": 110
     },
     {
-      "unit_type": "article",
       "headline": "Case scoperchiate a Spoleto durante un violento temporale",
       "paragraphs": [
         {
@@ -4056,7 +3944,6 @@
       "position_in_issue": 111
     },
     {
-      "unit_type": "article",
       "headline": "IERI A VENEZIA\nEinaudi ha inaugurato la Biennale d'Arte\nUn fastoso corteo di gondole sul Canal Grande",
       "paragraphs": [
         {
@@ -4087,7 +3974,6 @@
       "position_in_issue": 112
     },
     {
-      "unit_type": "article",
       "headline": "Attenzione!\nla vita moderna vi strappa dalle sane abitudini naturali",
       "paragraphs": [
         {
@@ -4130,7 +4016,6 @@
       "position_in_issue": 113
     },
     {
-      "unit_type": "article",
       "headline": "VIA QUELLA MASCHERA DI BRUTTEZZA",
       "paragraphs": [
         {
@@ -4153,7 +4038,6 @@
       "position_in_issue": 114
     },
     {
-      "unit_type": "article",
       "headline": "Pretura Unificata di Perugia",
       "paragraphs": [
         {
@@ -4184,7 +4068,6 @@
       "position_in_issue": 115
     },
     {
-      "unit_type": "article",
       "headline": "MAL DI SCHIENA\nPresto vinto.",
       "paragraphs": [
         {
@@ -4211,7 +4094,6 @@
       "position_in_issue": 116
     },
     {
-      "unit_type": "article",
       "headline": "CENTRO PROFILATTICO\ndelle malattie non infettive",
       "paragraphs": [
         {
@@ -4234,7 +4116,6 @@
       "position_in_issue": 117
     },
     {
-      "unit_type": "article",
       "headline": "ce ne vogliono 32 per fare un etto",
       "paragraphs": [
         {
@@ -4301,7 +4182,6 @@
       "position_in_issue": 118
     },
     {
-      "unit_type": "article",
       "headline": "insuperabile barriera",
       "paragraphs": [
         {
@@ -4328,7 +4208,6 @@
       "position_in_issue": 119
     },
     {
-      "unit_type": "article",
       "headline": "LA PAURA COME STRUMENTO DI GOVERNO\nI tedeschi della zona sovietica vivono nel terrore della guerra\nSono queste le conseguenze della propaganda comunista che mantiene la popolazione in uno stato di allarme permanente - E tutto questo ha lo scopo di giungere al riarmo della Germania Orientale",
       "paragraphs": [
         {
@@ -4387,7 +4266,6 @@
       "position_in_issue": 120
     },
     {
-      "unit_type": "article",
       "headline": "TRASMETTEVA I MESSAGGI CIFRATI ALL'AMBASCIATA RUSSA\nArrestato per spionaggio un impiegato del Foreign Office\nL'imputato rifiuta la libertà provvisoria - La nomina di Gromiko interpretata a Londra come indizio di una svolta nella politica estera sovietica",
       "paragraphs": [
         {
@@ -4446,7 +4324,6 @@
       "position_in_issue": 121
     },
     {
-      "unit_type": "article",
       "headline": "L'ORRIBILE CRIMINE DI LILLA\nL'assassina della piccola Joelle rinviata a giudizio per omicidio\nLa megera ha dato ieri una nuova versione del delitto affermando di avere ucciso la bambina in stato di ubriachezza",
       "paragraphs": [
         {
@@ -4477,7 +4354,6 @@
       "position_in_issue": 122
     },
     {
-      "unit_type": "article",
       "headline": "Tre militari feriti gravemente per un'autoblinda che si rovescia",
       "paragraphs": [
         {
@@ -4496,7 +4372,6 @@
       "position_in_issue": 123
     },
     {
-      "unit_type": "article",
       "headline": "Un aereo capotta decollando a Firenze",
       "paragraphs": [
         {
@@ -4519,7 +4394,6 @@
       "position_in_issue": 124
     },
     {
-      "unit_type": "article",
       "headline": "Conferenza del prof. Paolucci alla Camera di Comm. di Latina",
       "paragraphs": [
         {
@@ -4542,7 +4416,6 @@
       "position_in_issue": 125
     },
     {
-      "unit_type": "article",
       "headline": "TRE CASI DI FOLLIA A LIVORNO\nSi barrica in casa e dà fuoco al letto\nUna donna colta anch'ella da un attacco di pazzia blocca il traffico per mezz'ora - Escandescenze di un malato di nervi presso il porto",
       "paragraphs": [
         {
@@ -4573,7 +4446,6 @@
       "position_in_issue": 126
     },
     {
-      "unit_type": "article",
       "headline": "IL VIAGGIO DELLA PETROLIERA CON NAFTA PERSIANA\nLa «Rosa Maria» farà scalo ad Aden?\nI servizi d'informazioni inglesi seguono la nave come se questa volesse forzare un blocco - I rapporti anglo-italiani secondo il «Times»",
       "paragraphs": [
         {
@@ -4628,7 +4500,6 @@
       "position_in_issue": 127
     },
     {
-      "unit_type": "article",
       "headline": "Sequestro a Pescara di un giornale murale",
       "paragraphs": [
         {
@@ -4647,7 +4518,6 @@
       "position_in_issue": 128
     },
     {
-      "unit_type": "article",
       "headline": "Si lancia dal treno in corsa e si sfracella al suolo",
       "paragraphs": [
         {
@@ -4666,7 +4536,6 @@
       "position_in_issue": 129
     },
     {
-      "unit_type": "article",
       "headline": "Annullata l'elezione del Sindaco di Genazzano",
       "paragraphs": [
         {
@@ -4689,7 +4558,6 @@
       "position_in_issue": 130
     },
     {
-      "unit_type": "article",
       "headline": "Il prof. Arangio Ruiz Presidente dei Lincei",
       "paragraphs": [
         {
@@ -4716,7 +4584,6 @@
       "position_in_issue": 131
     },
     {
-      "unit_type": "article",
       "headline": "PROTON",
       "paragraphs": [
         {
@@ -4731,7 +4598,6 @@
       "position_in_issue": 132
     },
     {
-      "unit_type": "article",
       "headline": "ALFREDO PICCIRILLI",
       "paragraphs": [
         {
@@ -4754,7 +4620,6 @@
       "position_in_issue": 133
     },
     {
-      "unit_type": "article",
       "headline": "VOLATE Sky Tourist TWA",
       "paragraphs": [
         {
@@ -4805,7 +4670,6 @@
       "position_in_issue": 134
     },
     {
-      "unit_type": "article",
       "headline": "PIETRO SOMMARIVA",
       "paragraphs": [
         {
@@ -4824,7 +4688,6 @@
       "position_in_issue": 135
     },
     {
-      "unit_type": "article",
       "headline": "ETTORE BRONNER",
       "paragraphs": [
         {
@@ -4855,7 +4718,6 @@
       "position_in_issue": 136
     },
     {
-      "unit_type": "article",
       "headline": "RINGRAZIAMENTO\nAMINTA REFICE nata SIMONI",
       "paragraphs": [
         {
@@ -4874,7 +4736,6 @@
       "position_in_issue": 137
     },
     {
-      "unit_type": "article",
       "headline": "MARIA RICCI SPINELLI",
       "paragraphs": [
         {
@@ -4893,7 +4754,6 @@
       "position_in_issue": 138
     },
     {
-      "unit_type": "article",
       "headline": "ELETTRA CAVATORTA\nnata BONANI",
       "paragraphs": [
         {
@@ -4916,7 +4776,6 @@
       "position_in_issue": 139
     },
     {
-      "unit_type": "article",
       "headline": "ANTONIO CIUCCI",
       "paragraphs": [
         {
@@ -4935,7 +4794,6 @@
       "position_in_issue": 140
     },
     {
-      "unit_type": "article",
       "headline": "TARIFFE POMPE FUNEBRI",
       "paragraphs": [
         {
@@ -4982,7 +4840,6 @@
       "position_in_issue": 141
     },
     {
-      "unit_type": "article",
       "headline": "il Supergiallo",
       "paragraphs": [
         {
@@ -5037,7 +4894,6 @@
       "position_in_issue": 142
     },
     {
-      "unit_type": "article",
       "headline": "HOOVER",
       "paragraphs": [
         {
@@ -5080,7 +4936,6 @@
       "position_in_issue": 143
     },
     {
-      "unit_type": "article",
       "headline": "Dr. Alberto PAOLELLA",
       "paragraphs": [
         {
@@ -5123,7 +4978,6 @@
       "position_in_issue": 144
     },
     {
-      "unit_type": "article",
       "headline": "Per essere primi",
       "paragraphs": [
         {
@@ -5150,7 +5004,6 @@
       "position_in_issue": 145
     },
     {
-      "unit_type": "article",
       "headline": "Il «Bel Paese» ha cinquant'anni",
       "paragraphs": [
         {
@@ -5185,7 +5038,6 @@
       "position_in_issue": 146
     },
     {
-      "unit_type": "article",
       "headline": "IL COMUNISMO FRANCESE FA MARCIA INDIETRO\nI deputati comunisti non sollecitano un dibattito parlamentare sul caso Duclos\nI socialisti favorevoli a una discussione all'Assemblea Nazionale - Nuove perquisizioni presso Parigi e altre località - Respinta la querela del segretario del P.C.F. per la presunta illegalità del suo arresto",
       "paragraphs": [
         {
@@ -5256,7 +5108,6 @@
       "position_in_issue": 147
     },
     {
-      "unit_type": "article",
       "headline": "SOTTO LA MINACCIA DI SCIOGLIMENTO\nSyngman Rhee ordina al Parlamento di approvare le riforme costituzionali\nIndividuati a Kojedo i membri di un tribunale terroristico - Vano tentativo cinese contro le posizioni strategiche conquistate dagli americani nella zona di Chorwon",
       "paragraphs": [
         {
@@ -5291,7 +5142,6 @@
       "position_in_issue": 148
     },
     {
-      "unit_type": "article",
       "headline": "LA SITUAZIONE NEL PROTETTORATO\nUn tentativo di avvelenamento contro la famiglia del Bey di Tunisi?\nIl figlio stesso del Bey avrebbe visto un individuo nell'atto di versare del veleno in una marmitta nella cucina del palazzo",
       "paragraphs": [
         {
@@ -5326,7 +5176,6 @@
       "position_in_issue": 149
     },
     {
-      "unit_type": "article",
       "headline": "Un ragazzo annega in una vasca a Napoli",
       "paragraphs": [
         {
@@ -5345,7 +5194,6 @@
       "position_in_issue": 150
     },
     {
-      "unit_type": "article",
       "headline": "Cambio delle consegne fra Carney e Wright",
       "paragraphs": [
         {
@@ -5368,7 +5216,6 @@
       "position_in_issue": 151
     },
     {
-      "unit_type": "article",
       "headline": "Il farmaco giunto dall'America iniettato al malato napoletano",
       "paragraphs": [
         {
@@ -5399,7 +5246,6 @@
       "position_in_issue": 152
     },
     {
-      "unit_type": "article",
       "headline": "DOPO L'ESPULSIONE DEI DUE FUNZIONARI RUSSI\nRotte le relazioni diplomatiche tra il Venezuela e l'Unione Sovietica\nRichiamati i rispettivi rappresentanti diplomatici a Caracas ed a Mosca - Il Cremlino ha mancato agli elementari doveri verso uno Stato sovrano rifiutando di ricevere la nota del Governo venezuelano",
       "paragraphs": [
         {
@@ -5434,7 +5280,6 @@
       "position_in_issue": 153
     },
     {
-      "unit_type": "article",
       "headline": "Lauro a Lisbona ricevuto da Umberto\nSecondo il Presidente del P.N.M. la Monarchia rappresenta una terza forza fra D.C. e Comunismo",
       "paragraphs": [
         {
@@ -5477,7 +5322,6 @@
       "position_in_issue": 154
     },
     {
-      "unit_type": "article",
       "headline": "Sperimentato a Rovigo un avvisatore di sorpasso",
       "paragraphs": [
         {
@@ -5500,7 +5344,6 @@
       "position_in_issue": 155
     },
     {
-      "unit_type": "article",
       "headline": "Arrestati per aver attaccato manifesti contro Ridgway",
       "paragraphs": [
         {
@@ -5523,7 +5366,6 @@
       "position_in_issue": 156
     },
     {
-      "unit_type": "article",
       "headline": "ESTRAZIONI DEL 14 GIUGNO",
       "paragraphs": [
         {
@@ -5550,7 +5392,6 @@
       "position_in_issue": 157
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -5573,7 +5414,6 @@
       "position_in_issue": 158
     },
     {
-      "unit_type": "article",
       "headline": "Sangemini",
       "paragraphs": [
         {
@@ -5596,7 +5436,6 @@
       "position_in_issue": 159
     },
     {
-      "unit_type": "article",
       "headline": "Tesoro in cantina",
       "paragraphs": [
         {
@@ -5619,7 +5458,6 @@
       "position_in_issue": 160
     },
     {
-      "unit_type": "article",
       "headline": "FORTI SCONTI",
       "paragraphs": [
         {
@@ -5658,7 +5496,6 @@
       "position_in_issue": 161
     },
     {
-      "unit_type": "article",
       "headline": "Come dovete comportarvi",
       "paragraphs": [
         {
@@ -5709,7 +5546,6 @@
       "position_in_issue": 162
     },
     {
-      "unit_type": "article",
       "headline": "CERCA AGENTE PER LA VENDITA IN ITALIA",
       "paragraphs": [
         {
@@ -5728,7 +5564,6 @@
       "position_in_issue": 163
     },
     {
-      "unit_type": "article",
       "headline": "DOTTOR PIETRO MONACO",
       "paragraphs": [
         {
@@ -5763,7 +5598,6 @@
       "position_in_issue": 164
     },
     {
-      "unit_type": "article",
       "headline": "ENDOCRINE",
       "paragraphs": [
         {
@@ -5806,7 +5640,6 @@
       "position_in_issue": 165
     },
     {
-      "unit_type": "article",
       "headline": "Avvisi sanitari",
       "paragraphs": [
         {
@@ -5841,7 +5674,6 @@
       "position_in_issue": 166
     },
     {
-      "unit_type": "article",
       "headline": "Le MARCHE sono la vera garanzia\nRADIO SMIRE",
       "paragraphs": [
         {
@@ -5880,7 +5712,6 @@
       "position_in_issue": 167
     },
     {
-      "unit_type": "article",
       "headline": "T.A.C. G. Beltrame S.p.A.",
       "paragraphs": [
         {
@@ -5939,7 +5770,6 @@
       "position_in_issue": 168
     },
     {
-      "unit_type": "article",
       "headline": "INGEGNERI O PERITI INDUSTRIALI",
       "paragraphs": [
         {
@@ -5954,7 +5784,6 @@
       "position_in_issue": 169
     },
     {
-      "unit_type": "article",
       "headline": "SALOTTO MIRACOLO.....",
       "paragraphs": [
         {
@@ -5985,7 +5814,6 @@
       "position_in_issue": 170
     },
     {
-      "unit_type": "article",
       "headline": "CASA DELL'ALLUMINIO",
       "paragraphs": [
         {
@@ -6020,7 +5848,6 @@
       "position_in_issue": 171
     },
     {
-      "unit_type": "article",
       "headline": "Il Mobiliere di Roma\nComm. STEFANO DE SANTIS",
       "paragraphs": [
         {
@@ -6063,7 +5890,6 @@
       "position_in_issue": 172
     },
     {
-      "unit_type": "article",
       "headline": "Non lasciate peggiorare la vostra\nERNIA",
       "paragraphs": [
         {
@@ -6110,7 +5936,6 @@
       "position_in_issue": 173
     },
     {
-      "unit_type": "article",
       "headline": "Piccola Pubblicità\nCOMMERCIALI (L. 85)",
       "paragraphs": [
         {
@@ -6237,7 +6062,6 @@
       "position_in_issue": 174
     },
     {
-      "unit_type": "article",
       "headline": "CESS. NEGOZI AZIENDE (L. 90)",
       "paragraphs": [
         {
@@ -6616,7 +6440,6 @@
       "position_in_issue": 175
     },
     {
-      "unit_type": "article",
       "headline": "ANNUNZI VARI (L. 80)",
       "paragraphs": [
         {
@@ -6667,7 +6490,6 @@
       "position_in_issue": 176
     },
     {
-      "unit_type": "article",
       "headline": "INFORMAZ. INVESTIG. (L. 80)",
       "paragraphs": [
         {
@@ -6686,7 +6508,6 @@
       "position_in_issue": 177
     },
     {
-      "unit_type": "article",
       "headline": "AUTOMOBILI BICICL. (L. 90)",
       "paragraphs": [
         {
@@ -7505,7 +7326,6 @@
       "position_in_issue": 178
     },
     {
-      "unit_type": "article",
       "headline": "OCCASIONI (L. 85)",
       "paragraphs": [
         {
@@ -8108,7 +7928,6 @@
       "position_in_issue": 179
     },
     {
-      "unit_type": "article",
       "headline": "CAPITALI SOCIETA' (L. 90)",
       "paragraphs": [
         {
@@ -8291,7 +8110,6 @@
       "position_in_issue": 180
     },
     {
-      "unit_type": "article",
       "headline": "CONC. ASTE APPALTI (L. 90)",
       "paragraphs": [
         {
@@ -8314,7 +8132,6 @@
       "position_in_issue": 181
     },
     {
-      "unit_type": "article",
       "headline": "SMARRIMENTI (L. 80)",
       "paragraphs": [
         {
@@ -8337,7 +8154,6 @@
       "position_in_issue": 182
     },
     {
-      "unit_type": "article",
       "headline": "MATRIMONIALI (L. 90)",
       "paragraphs": [
         {
@@ -8484,7 +8300,6 @@
       "position_in_issue": 183
     },
     {
-      "unit_type": "article",
       "headline": "VILLEGGIATURE (L. 90)",
       "paragraphs": [
         {
@@ -8968,7 +8783,6 @@
       "position_in_issue": 184
     },
     {
-      "unit_type": "article",
       "headline": "MEDICINA IGIENE (L. 70)",
       "paragraphs": [
         {
@@ -8991,7 +8805,6 @@
       "position_in_issue": 185
     },
     {
-      "unit_type": "article",
       "headline": "VILLINI CASE TERRENI (L. 90)",
       "paragraphs": [
         {
@@ -9970,7 +9783,6 @@
       "position_in_issue": 186
     },
     {
-      "unit_type": "article",
       "headline": "OFFERTE AFFITTO APPART. NEGOZI E LOCALI (L. 80)",
       "paragraphs": [
         {
@@ -10874,7 +10686,6 @@
       "position_in_issue": 187
     },
     {
-      "unit_type": "article",
       "headline": "DOMANDE AFFITTO APPART. NEGOZI E LOCALI (L. 70)",
       "paragraphs": [
         {
@@ -11129,7 +10940,6 @@
       "position_in_issue": 188
     },
     {
-      "unit_type": "article",
       "headline": "OFF. CAMERE E PENS. (L. 70)",
       "paragraphs": [
         {
@@ -11532,7 +11342,6 @@
       "position_in_issue": 189
     },
     {
-      "unit_type": "article",
       "headline": "DOM. CAMERE E PENS. (L. 60)",
       "paragraphs": [
         {
@@ -11587,7 +11396,6 @@
       "position_in_issue": 190
     },
     {
-      "unit_type": "article",
       "headline": "LEZIONI E CONVERS. (L. 70)",
       "paragraphs": [
         {
@@ -11650,7 +11458,6 @@
       "position_in_issue": 191
     },
     {
-      "unit_type": "article",
       "headline": "RAPPRESENT. PIAZZ. (L. 70)",
       "paragraphs": [
         {
@@ -11737,7 +11544,6 @@
       "position_in_issue": 192
     },
     {
-      "unit_type": "article",
       "headline": "OFF. LAVORO E IMP. (L. 70)",
       "paragraphs": [
         {
@@ -12544,7 +12350,6 @@
       "position_in_issue": 193
     },
     {
-      "unit_type": "article",
       "headline": "ARTIGIANATO (L. 60)",
       "paragraphs": [
         {
@@ -12595,7 +12400,6 @@
       "position_in_issue": 194
     },
     {
-      "unit_type": "article",
       "headline": "DOMANDE D'IMPIEGO (L. 25)",
       "paragraphs": [
         {
@@ -12982,7 +12786,6 @@
       "position_in_issue": 195
     },
     {
-      "unit_type": "article",
       "headline": "DOMANDE LAVORO (L. 20) (operai e personale di servizio)",
       "paragraphs": [
         {

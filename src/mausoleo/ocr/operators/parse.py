@@ -61,7 +61,7 @@ def _repair_truncated_json(text: str) -> tp.Any:
             except json.JSONDecodeError:
                 continue
 
-    return {"articles": [{"unit_type": "article", "headline": None, "paragraphs": [{"text": text}]}]}
+    return {"articles": [{"headline": None, "paragraphs": [{"text": text}]}]}
 
 
 def _brace_combos(n: int) -> list[str]:
@@ -92,7 +92,6 @@ def _build_issue_json(raw: str, date: str, source: str, page_count: int) -> str:
         articles.append(
             {
                 "id": f"{date}_a{i:02d}",
-                "unit_type": art.get("unit_type", "article"),
                 "headline": art.get("headline"),
                 "paragraphs": paragraphs,
                 "page_span": art.get("page_span", []),

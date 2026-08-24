@@ -4,7 +4,6 @@
   "page_count": 4,
   "articles": [
     {
-      "unit_type": "article",
       "headline": "Farse parlamentari",
       "paragraphs": [
         {
@@ -83,7 +82,6 @@
       "position_in_issue": 0
     },
     {
-      "unit_type": "article",
       "headline": "RIFORME IN TURCHIA",
       "paragraphs": [
         {
@@ -98,7 +96,6 @@
       "position_in_issue": 1
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -113,7 +110,6 @@
       "position_in_issue": 2
     },
     {
-      "unit_type": "article",
       "headline": "NOTERELLE POLITICHE",
       "paragraphs": [
         {
@@ -172,7 +168,6 @@
       "position_in_issue": 3
     },
     {
-      "unit_type": "article",
       "headline": "Alle feste di Kiel",
       "paragraphs": [
         {
@@ -211,7 +206,6 @@
       "position_in_issue": 4
     },
     {
-      "unit_type": "article",
       "headline": "MENELICK E LO CZAR",
       "paragraphs": [
         {
@@ -238,7 +232,6 @@
       "position_in_issue": 5
     },
     {
-      "unit_type": "article",
       "headline": "L'INGHILTERRA IN AFRICA",
       "paragraphs": [
         {
@@ -289,7 +282,6 @@
       "position_in_issue": 6
     },
     {
-      "unit_type": "article",
       "headline": "LE CONSEGUENZE DELLA TASSA SUI FIAMMIFERI",
       "paragraphs": [
         {
@@ -316,7 +308,6 @@
       "position_in_issue": 7
     },
     {
-      "unit_type": "article",
       "headline": "LA RIVOLTA DI CUBA",
       "paragraphs": [
         {
@@ -339,7 +330,6 @@
       "position_in_issue": 8
     },
     {
-      "unit_type": "article",
       "headline": "SCIOPERO DI FORNAI A BUDAPEST",
       "paragraphs": [
         {
@@ -378,7 +368,6 @@
       "position_in_issue": 9
     },
     {
-      "unit_type": "article",
       "headline": "LA QUESTIONE NAZIONALE IN AUSTRIA",
       "paragraphs": [
         {
@@ -401,7 +390,6 @@
       "position_in_issue": 10
     },
     {
-      "unit_type": "article",
       "headline": "LA CALMA SI RISTABILISCE IN CHINA",
       "paragraphs": [
         {
@@ -420,7 +408,6 @@
       "position_in_issue": 11
     },
     {
-      "unit_type": "article",
       "headline": "LE ABITAZIONI A BUON MERCATO",
       "paragraphs": [
         {
@@ -451,7 +438,6 @@
       "position_in_issue": 12
     },
     {
-      "unit_type": "article",
       "headline": "DUE MORTI E QUATTRO FERITI DAL FULMINE",
       "paragraphs": [
         {
@@ -474,7 +460,6 @@
       "position_in_issue": 13
     },
     {
-      "unit_type": "article",
       "headline": "L'on. Giolitti ammalato",
       "paragraphs": [
         {
@@ -489,7 +474,6 @@
       "position_in_issue": 14
     },
     {
-      "unit_type": "article",
       "headline": "I FRANCESI AL MADAGASCAR",
       "paragraphs": [
         {
@@ -504,7 +488,6 @@
       "position_in_issue": 15
     },
     {
-      "unit_type": "article",
       "headline": "GESTA ANARCHICHE IN RUSSIA",
       "paragraphs": [
         {
@@ -535,7 +518,6 @@
       "position_in_issue": 16
     },
     {
-      "unit_type": "article",
       "headline": "In Italia e fuori",
       "paragraphs": [
         {
@@ -666,7 +648,6 @@
       "position_in_issue": 17
     },
     {
-      "unit_type": "article",
       "headline": "CAMERA DEI DEPUTATI",
       "paragraphs": [
         {
@@ -809,7 +790,6 @@
       "position_in_issue": 18
     },
     {
-      "unit_type": "article",
       "headline": "NOTIZIE PARLAMENTARI",
       "paragraphs": [
         {
@@ -857,7 +837,6 @@
       "position_in_issue": 19
     },
     {
-      "unit_type": "article",
       "headline": "Odii ed amori",
       "paragraphs": [
         {
@@ -1233,7 +1212,6 @@
       "position_in_issue": 20
     },
     {
-      "unit_type": "article",
       "headline": "La costituzione della Giunta delle elezioni",
       "paragraphs": [
         {
@@ -1268,7 +1246,6 @@
       "position_in_issue": 21
     },
     {
-      "unit_type": "article",
       "headline": "Contro l'on. Villa",
       "paragraphs": [
         {
@@ -1299,7 +1276,6 @@
       "position_in_issue": 22
     },
     {
-      "unit_type": "article",
       "headline": "Per il processo Giolitti",
       "paragraphs": [
         {
@@ -1322,7 +1298,6 @@
       "position_in_issue": 23
     },
     {
-      "unit_type": "article",
       "headline": "L' interpellanza per l'amnistia",
       "paragraphs": [
         {
@@ -1337,7 +1312,6 @@
       "position_in_issue": 24
     },
     {
-      "unit_type": "article",
       "headline": "Al Senato",
       "paragraphs": [
         {
@@ -1372,7 +1346,6 @@
       "position_in_issue": 25
     },
     {
-      "unit_type": "article",
       "headline": "La morte di M. R. Zorilla",
       "paragraphs": [
         {
@@ -1395,7 +1368,6 @@
       "position_in_issue": 26
     },
     {
-      "unit_type": "article",
       "headline": "INCENDIO IN ALTO MARE",
       "paragraphs": [
         {
@@ -1430,7 +1402,6 @@
       "position_in_issue": 27
     },
     {
-      "unit_type": "article",
       "headline": "DALLE PROVINCIE",
       "paragraphs": [
         {
@@ -1445,7 +1416,6 @@
       "position_in_issue": 28
     },
     {
-      "unit_type": "article",
       "headline": "DA TERNI",
       "paragraphs": [
         {
@@ -1588,7 +1558,6 @@
       "position_in_issue": 29
     },
     {
-      "unit_type": "article",
       "headline": "DA SPOLETO",
       "paragraphs": [
         {
@@ -1655,7 +1624,6 @@
       "position_in_issue": 30
     },
     {
-      "unit_type": "article",
       "headline": "DA RIETI",
       "paragraphs": [
         {
@@ -1702,7 +1670,6 @@
       "position_in_issue": 31
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1717,7 +1684,6 @@
       "position_in_issue": 32
     },
     {
-      "unit_type": "article",
       "headline": "DA PERUGIA",
       "paragraphs": [
         {
@@ -1752,7 +1718,6 @@
       "position_in_issue": 33
     },
     {
-      "unit_type": "article",
       "headline": "DA MONTALTO DI CASTRO",
       "paragraphs": [
         {
@@ -1791,7 +1756,6 @@
       "position_in_issue": 34
     },
     {
-      "unit_type": "article",
       "headline": "DA GROSSETO",
       "paragraphs": [
         {
@@ -1810,7 +1774,6 @@
       "position_in_issue": 35
     },
     {
-      "unit_type": "article",
       "headline": "DA PISA",
       "paragraphs": [
         {
@@ -1845,7 +1808,6 @@
       "position_in_issue": 36
     },
     {
-      "unit_type": "article",
       "headline": "DA SPEZIA",
       "paragraphs": [
         {
@@ -1920,7 +1882,6 @@
       "position_in_issue": 37
     },
     {
-      "unit_type": "article",
       "headline": "DA CIVITAVECCHIA",
       "paragraphs": [
         {
@@ -1971,7 +1932,6 @@
       "position_in_issue": 38
     },
     {
-      "unit_type": "article",
       "headline": "DA MARINO",
       "paragraphs": [
         {
@@ -2014,7 +1974,6 @@
       "position_in_issue": 39
     },
     {
-      "unit_type": "article",
       "headline": "A MONTE PORZIO CATONE",
       "paragraphs": [
         {
@@ -2041,7 +2000,6 @@
       "position_in_issue": 40
     },
     {
-      "unit_type": "article",
       "headline": "DA ZAGAROLO",
       "paragraphs": [
         {
@@ -2064,7 +2022,6 @@
       "position_in_issue": 41
     },
     {
-      "unit_type": "article",
       "headline": "Ferrovia Roma-Viterbo",
       "paragraphs": [
         {
@@ -2079,7 +2036,6 @@
       "position_in_issue": 42
     },
     {
-      "unit_type": "article",
       "headline": "LE ELEZIONI AMMINISTRATIVE nella provincia romana",
       "paragraphs": [
         {
@@ -2134,7 +2090,6 @@
       "position_in_issue": 43
     },
     {
-      "unit_type": "article",
       "headline": "IL SECONDO CONGRESSO DEGLI IMPIEGATI CIVILI",
       "paragraphs": [
         {
@@ -2153,7 +2108,6 @@
       "position_in_issue": 44
     },
     {
-      "unit_type": "article",
       "headline": "NOTIZIE DI BORSA",
       "paragraphs": [
         {
@@ -2224,7 +2178,6 @@
       "position_in_issue": 45
     },
     {
-      "unit_type": "article",
       "headline": "Borse italiane",
       "paragraphs": [
         {
@@ -2283,7 +2236,6 @@
       "position_in_issue": 46
     },
     {
-      "unit_type": "article",
       "headline": "Parigi, 14 giugno",
       "paragraphs": [
         {
@@ -2366,7 +2318,6 @@
       "position_in_issue": 47
     },
     {
-      "unit_type": "article",
       "headline": "Londra",
       "paragraphs": [
         {
@@ -2401,7 +2352,6 @@
       "position_in_issue": 48
     },
     {
-      "unit_type": "article",
       "headline": "Banca d'Inghilterra",
       "paragraphs": [
         {
@@ -2416,7 +2366,6 @@
       "position_in_issue": 49
     },
     {
-      "unit_type": "article",
       "headline": "Berlino | Vienna",
       "paragraphs": [
         {
@@ -2459,7 +2408,6 @@
       "position_in_issue": 50
     },
     {
-      "unit_type": "article",
       "headline": "Francia e Russia\nIl trattato d'alleanza",
       "paragraphs": [
         {
@@ -2494,7 +2442,6 @@
       "position_in_issue": 51
     },
     {
-      "unit_type": "article",
       "headline": "L'incubo dello spionaggio in Francia",
       "paragraphs": [
         {
@@ -2513,7 +2460,6 @@
       "position_in_issue": 52
     },
     {
-      "unit_type": "article",
       "headline": "Italia e Francia in Africa",
       "paragraphs": [
         {
@@ -2528,7 +2474,6 @@
       "position_in_issue": 53
     },
     {
-      "unit_type": "article",
       "headline": "L'esercito italiano giudicato in Francia",
       "paragraphs": [
         {
@@ -2547,7 +2492,6 @@
       "position_in_issue": 54
     },
     {
-      "unit_type": "article",
       "headline": "Il concorso delle carrozze automobili",
       "paragraphs": [
         {
@@ -2574,7 +2518,6 @@
       "position_in_issue": 55
     },
     {
-      "unit_type": "article",
       "headline": "Interpellanza rinviata",
       "paragraphs": [
         {
@@ -2589,7 +2532,6 @@
       "position_in_issue": 56
     },
     {
-      "unit_type": "article",
       "headline": "Gli operai stranieri a Vienna\nI socialisti — Il piccolo stato d'assedio",
       "paragraphs": [
         {
@@ -2624,7 +2566,6 @@
       "position_in_issue": 57
     },
     {
-      "unit_type": "article",
       "headline": "Il direttore della polizia di Pietroburgo",
       "paragraphs": [
         {
@@ -2643,7 +2584,6 @@
       "position_in_issue": 58
     },
     {
-      "unit_type": "article",
       "headline": "La riforma tributaria in Austria",
       "paragraphs": [
         {
@@ -2670,7 +2610,6 @@
       "position_in_issue": 59
     },
     {
-      "unit_type": "article",
       "headline": "Un'altra accademia militare",
       "paragraphs": [
         {
@@ -2685,7 +2624,6 @@
       "position_in_issue": 60
     },
     {
-      "unit_type": "article",
       "headline": "Incidente franco-brasiliano\nIl villaggio distrutto da soldati francesi",
       "paragraphs": [
         {
@@ -2716,7 +2654,6 @@
       "position_in_issue": 61
     },
     {
-      "unit_type": "article",
       "headline": "Torpediniera giapponese affondata\nTredici morti",
       "paragraphs": [
         {
@@ -2735,7 +2672,6 @@
       "position_in_issue": 62
     },
     {
-      "unit_type": "article",
       "headline": "Le elezioni contestate",
       "paragraphs": [
         {
@@ -2754,7 +2690,6 @@
       "position_in_issue": 63
     },
     {
-      "unit_type": "article",
       "headline": "L'indirizzo in risposta al discorso della Corona",
       "paragraphs": [
         {
@@ -2777,7 +2712,6 @@
       "position_in_issue": 64
     },
     {
-      "unit_type": "article",
       "headline": "Società degli agricoltori italiani",
       "paragraphs": [
         {
@@ -2808,7 +2742,6 @@
       "position_in_issue": 65
     },
     {
-      "unit_type": "article",
       "headline": "Un' interpellanza dell'on. Bovio",
       "paragraphs": [
         {
@@ -2827,7 +2760,6 @@
       "position_in_issue": 66
     },
     {
-      "unit_type": "article",
       "headline": "Consiglio dei ministri\ne riunione della maggioranza",
       "paragraphs": [
         {
@@ -2882,7 +2814,6 @@
       "position_in_issue": 67
     },
     {
-      "unit_type": "article",
       "headline": "UN ALTRO PAZZO FUGGITO DAL MANICOMIO\nripreso da due vigili ai Prati di Castello",
       "paragraphs": [
         {
@@ -2985,7 +2916,6 @@
       "position_in_issue": 68
     },
     {
-      "unit_type": "article",
       "headline": "LA CONDANNA DEL SERGENTE\nladro di portafogli",
       "paragraphs": [
         {
@@ -3068,7 +2998,6 @@
       "position_in_issue": 69
     },
     {
-      "unit_type": "article",
       "headline": "Tu sei un fiammifero!",
       "paragraphs": [
         {
@@ -3107,7 +3036,6 @@
       "position_in_issue": 70
     },
     {
-      "unit_type": "article",
       "headline": "I LADRI AL CIRCOLO DELLA CACCIA\nAltri due arresti",
       "paragraphs": [
         {
@@ -3126,7 +3054,6 @@
       "position_in_issue": 71
     },
     {
-      "unit_type": "article",
       "headline": "LA GRAVE DISGRAZIA FUORI PORTA PIA",
       "paragraphs": [
         {
@@ -3145,7 +3072,6 @@
       "position_in_issue": 72
     },
     {
-      "unit_type": "article",
       "headline": "CONSIGLIO COMUNALE",
       "paragraphs": [
         {
@@ -3208,7 +3134,6 @@
       "position_in_issue": 73
     },
     {
-      "unit_type": "article",
       "headline": "LE GUARDIE MUNICIPALI",
       "paragraphs": [
         {
@@ -3251,7 +3176,6 @@
       "position_in_issue": 74
     },
     {
-      "unit_type": "article",
       "headline": "LA SISTEMAZIONE DI PIAZZA COLONNA",
       "paragraphs": [
         {
@@ -3290,7 +3214,6 @@
       "position_in_issue": 75
     },
     {
-      "unit_type": "article",
       "headline": "L'OMICIDIO FUORI PORTA DEL POPOLO",
       "paragraphs": [
         {
@@ -3341,7 +3264,6 @@
       "position_in_issue": 76
     },
     {
-      "unit_type": "article",
       "headline": "Il fatto di iersera in via porta Leone",
       "paragraphs": [
         {
@@ -3404,7 +3326,6 @@
       "position_in_issue": 77
     },
     {
-      "unit_type": "article",
       "headline": "Gli spacciatori di biglietti falsi arrestati in via dei Canestrari",
       "paragraphs": [
         {
@@ -3435,7 +3356,6 @@
       "position_in_issue": 78
     },
     {
-      "unit_type": "article",
       "headline": "Partito socialista italiano",
       "paragraphs": [
         {
@@ -3478,7 +3398,6 @@
       "position_in_issue": 79
     },
     {
-      "unit_type": "article",
       "headline": "La vaccina in fuga in Trastevere",
       "paragraphs": [
         {
@@ -3529,7 +3448,6 @@
       "position_in_issue": 80
     },
     {
-      "unit_type": "article",
       "headline": "La disgrazia a ponte Mammolo",
       "paragraphs": [
         {
@@ -3560,7 +3478,6 @@
       "position_in_issue": 81
     },
     {
-      "unit_type": "article",
       "headline": "Il fatto in piazza Campani",
       "paragraphs": [
         {
@@ -3599,7 +3516,6 @@
       "position_in_issue": 82
     },
     {
-      "unit_type": "article",
       "headline": "Simposio di amici",
       "paragraphs": [
         {
@@ -3618,7 +3534,6 @@
       "position_in_issue": 83
     },
     {
-      "unit_type": "article",
       "headline": "Conferenza ciclistica",
       "paragraphs": [
         {
@@ -3645,7 +3560,6 @@
       "position_in_issue": 84
     },
     {
-      "unit_type": "article",
       "headline": "La farsetta in via Principe Amedeo",
       "paragraphs": [
         {
@@ -3676,7 +3590,6 @@
       "position_in_issue": 85
     },
     {
-      "unit_type": "article",
       "headline": "La sassaiola al ponte Margherita",
       "paragraphs": [
         {
@@ -3703,7 +3616,6 @@
       "position_in_issue": 86
     },
     {
-      "unit_type": "article",
       "headline": "Un'imprudenza salata",
       "paragraphs": [
         {
@@ -3726,7 +3638,6 @@
       "position_in_issue": 87
     },
     {
-      "unit_type": "article",
       "headline": "Il suicida di ieri al ponte di Ripetta",
       "paragraphs": [
         {
@@ -3749,7 +3660,6 @@
       "position_in_issue": 88
     },
     {
-      "unit_type": "article",
       "headline": "I timpani di Belisario",
       "paragraphs": [
         {
@@ -3768,7 +3678,6 @@
       "position_in_issue": 89
     },
     {
-      "unit_type": "article",
       "headline": "Il bambino investito in piazza Romana",
       "paragraphs": [
         {
@@ -3791,7 +3700,6 @@
       "position_in_issue": 90
     },
     {
-      "unit_type": "article",
       "headline": "Il furto di galline fuori porta Trionfale",
       "paragraphs": [
         {
@@ -3814,7 +3722,6 @@
       "position_in_issue": 91
     },
     {
-      "unit_type": "article",
       "headline": "ELEZIONI AMMINISTRATIVE",
       "paragraphs": [
         {
@@ -3933,7 +3840,6 @@
       "position_in_issue": 92
     },
     {
-      "unit_type": "article",
       "headline": "IL BAMBINO CADUTO DALLA LOGGETTA in via dei Cartari",
       "paragraphs": [
         {
@@ -3988,7 +3894,6 @@
       "position_in_issue": 93
     },
     {
-      "unit_type": "article",
       "headline": "LA RISSA DEI CAPRARI ai Sette Camini",
       "paragraphs": [
         {
@@ -4015,7 +3920,6 @@
       "position_in_issue": 94
     },
     {
-      "unit_type": "article",
       "headline": "Che merlo!",
       "paragraphs": [
         {
@@ -4050,7 +3954,6 @@
       "position_in_issue": 95
     },
     {
-      "unit_type": "article",
       "headline": "Una rapina curiosa",
       "paragraphs": [
         {
@@ -4121,7 +4024,6 @@
       "position_in_issue": 96
     },
     {
-      "unit_type": "article",
       "headline": "L'avvelenata di via delle Grazie",
       "paragraphs": [
         {
@@ -4148,7 +4050,6 @@
       "position_in_issue": 97
     },
     {
-      "unit_type": "article",
       "headline": "VALIGIA",
       "paragraphs": [
         {
@@ -4195,7 +4096,6 @@
       "position_in_issue": 98
     },
     {
-      "unit_type": "article",
       "headline": "Varietà",
       "paragraphs": [
         {
@@ -4362,7 +4262,6 @@
       "position_in_issue": 99
     },
     {
-      "unit_type": "article",
       "headline": "Consigli igienici",
       "paragraphs": [
         {
@@ -4449,7 +4348,6 @@
       "position_in_issue": 100
     },
     {
-      "unit_type": "article",
       "headline": "Curiosità",
       "paragraphs": [
         {
@@ -4544,7 +4442,6 @@
       "position_in_issue": 101
     },
     {
-      "unit_type": "article",
       "headline": "Un pensiero al giorno",
       "paragraphs": [
         {
@@ -4559,7 +4456,6 @@
       "position_in_issue": 102
     },
     {
-      "unit_type": "article",
       "headline": "I versi",
       "paragraphs": [
         {
@@ -4582,7 +4478,6 @@
       "position_in_issue": 103
     },
     {
-      "unit_type": "article",
       "headline": "Corbellerie",
       "paragraphs": [
         {
@@ -4617,7 +4512,6 @@
       "position_in_issue": 104
     },
     {
-      "unit_type": "article",
       "headline": "Sciarada",
       "paragraphs": [
         {
@@ -4632,7 +4526,6 @@
       "position_in_issue": 105
     },
     {
-      "unit_type": "article",
       "headline": "Spiegazione della precedente sciarada",
       "paragraphs": [
         {
@@ -4647,7 +4540,6 @@
       "position_in_issue": 106
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -4662,7 +4554,6 @@
       "position_in_issue": 107
     },
     {
-      "unit_type": "article",
       "headline": "D. BETTMANN",
       "paragraphs": [
         {
@@ -4677,7 +4568,6 @@
       "position_in_issue": 108
     },
     {
-      "unit_type": "article",
       "headline": "OLIO FINISSIMO",
       "paragraphs": [
         {
@@ -4692,7 +4582,6 @@
       "position_in_issue": 109
     },
     {
-      "unit_type": "article",
       "headline": "BRAVA PREPARATRICE",
       "paragraphs": [
         {
@@ -4707,7 +4596,6 @@
       "position_in_issue": 110
     },
     {
-      "unit_type": "article",
       "headline": "PER L. 95",
       "paragraphs": [
         {
@@ -4722,7 +4610,6 @@
       "position_in_issue": 111
     },
     {
-      "unit_type": "article",
       "headline": "Il Conte di MONTECRISTO",
       "paragraphs": [
         {
@@ -4757,7 +4644,6 @@
       "position_in_issue": 112
     },
     {
-      "unit_type": "article",
       "headline": "CHININA - MIGONE",
       "paragraphs": [
         {
@@ -4796,7 +4682,6 @@
       "position_in_issue": 113
     },
     {
-      "unit_type": "article",
       "headline": "MINIERE CARBONIFERE DI TATTI E MONTEMASSI",
       "paragraphs": [
         {
@@ -4835,7 +4720,6 @@
       "position_in_issue": 114
     },
     {
-      "unit_type": "article",
       "headline": "IL PROFESSORE",
       "paragraphs": [
         {
@@ -4850,7 +4734,6 @@
       "position_in_issue": 115
     },
     {
-      "unit_type": "article",
       "headline": "LA SCIATICA",
       "paragraphs": [
         {
@@ -4865,7 +4748,6 @@
       "position_in_issue": 116
     },
     {
-      "unit_type": "article",
       "headline": "DOTT. OTTONI",
       "paragraphs": [
         {
@@ -4880,7 +4762,6 @@
       "position_in_issue": 117
     },
     {
-      "unit_type": "article",
       "headline": "SCARPE GRATIS",
       "paragraphs": [
         {
@@ -4895,7 +4776,6 @@
       "position_in_issue": 118
     },
     {
-      "unit_type": "article",
       "headline": "PER LUCIDARE SCARPE GIALLE",
       "paragraphs": [
         {
@@ -4910,7 +4790,6 @@
       "position_in_issue": 119
     },
     {
-      "unit_type": "article",
       "headline": "CARTA DA PARATI",
       "paragraphs": [
         {
@@ -4925,7 +4804,6 @@
       "position_in_issue": 120
     },
     {
-      "unit_type": "article",
       "headline": "MANCIA DI L. 20",
       "paragraphs": [
         {
@@ -4940,7 +4818,6 @@
       "position_in_issue": 121
     },
     {
-      "unit_type": "article",
       "headline": "ACCORRETE",
       "paragraphs": [
         {
@@ -4955,7 +4832,6 @@
       "position_in_issue": 122
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -4970,7 +4846,6 @@
       "position_in_issue": 123
     },
     {
-      "unit_type": "article",
       "headline": "RICERCASI",
       "paragraphs": [
         {
@@ -4985,7 +4860,6 @@
       "position_in_issue": 124
     },
     {
-      "unit_type": "article",
       "headline": "MALATTIE VENEREE",
       "paragraphs": [
         {
@@ -5000,7 +4874,6 @@
       "position_in_issue": 125
     },
     {
-      "unit_type": "article",
       "headline": "RAGIONERIA",
       "paragraphs": [
         {
@@ -5015,7 +4888,6 @@
       "position_in_issue": 126
     },
     {
-      "unit_type": "article",
       "headline": "CAVALLA",
       "paragraphs": [
         {
@@ -5030,7 +4902,6 @@
       "position_in_issue": 127
     },
     {
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {

@@ -5,7 +5,6 @@
   "articles": [
     {
       "id": "1943-07-15_a00",
-      "unit_type": "article",
       "headline": "Dimensioni",
       "paragraphs": [
         {
@@ -20,7 +19,6 @@
     },
     {
       "id": "1943-07-15_a01",
-      "unit_type": "article",
       "headline": "LA BATTAGLIA",
       "paragraphs": [
         {
@@ -35,7 +33,6 @@
     },
     {
       "id": "1943-07-15_a02",
-      "unit_type": "article",
       "headline": "ATTAGLIA CONTINUA IN",
       "paragraphs": [
         {
@@ -50,7 +47,6 @@
     },
     {
       "id": "1943-07-15_a03",
-      "unit_type": "article",
       "headline": "L'Asse impegnate in duri combattimenti",
       "paragraphs": [
         {
@@ -65,7 +61,6 @@
     },
     {
       "id": "1943-07-15_a04",
-      "unit_type": "article",
       "headline": "LA GRANDE BATTAGLIA ALL'EST SI ESPANDI",
       "paragraphs": [
         {
@@ -80,7 +75,6 @@
     },
     {
       "id": "1943-07-15_a05",
-      "unit_type": "article",
       "headline": "IN SICILIA\nImpegnate\nCombattimenti",
       "paragraphs": [
         {
@@ -95,7 +89,6 @@
     },
     {
       "id": "1943-07-15_a06",
-      "unit_type": "article",
       "headline": "Il comunicato germanico",
       "paragraphs": [
         {
@@ -110,7 +103,6 @@
     },
     {
       "id": "1943-07-15_a07",
-      "unit_type": "article",
       "headline": "13° PUNTO IN ATTO",
       "paragraphs": [
         {
@@ -125,7 +117,6 @@
     },
     {
       "id": "1943-07-15_a08",
-      "unit_type": "article",
       "headline": "Dove arrivano i “liberatori,”\nMarocchini affamati all’assalto di un convoglio viveri",
       "paragraphs": [
         {
@@ -140,7 +131,6 @@
     },
     {
       "id": "1943-07-15_a09",
-      "unit_type": "article",
       "headline": "ESTENDE 800 km.\nriserve bolsceviche gettate co soltanto in questi settori",
       "paragraphs": [
         {
@@ -155,7 +145,6 @@
     },
     {
       "id": "1943-07-15_a10",
-      "unit_type": "article",
       "headline": "13 aerei sovietici abbattuti nell’estremo settore nord",
       "paragraphs": [
         {
@@ -170,7 +159,6 @@
     },
     {
       "id": "1943-07-15_a11",
-      "unit_type": "article",
       "headline": "Il IX Annuale della Milmart",
       "paragraphs": [
         {
@@ -185,7 +173,6 @@
     },
     {
       "id": "1943-07-15_a12",
-      "unit_type": "article",
       "headline": "Studenti siciliani chiedono e ottengono di recarsi a combattere nell’Isola",
       "paragraphs": [
         {
@@ -200,7 +187,6 @@
     },
     {
       "id": "1943-07-15_a13",
-      "unit_type": "article",
       "headline": "Conferma britannica della responsabilità inglese per la guerra aerea",
       "paragraphs": [
         {
@@ -215,7 +201,6 @@
     },
     {
       "id": "1943-07-15_a14",
-      "unit_type": "article",
       "headline": "Gli estremi si toccano",
       "paragraphs": [
         {
@@ -230,7 +215,6 @@
     },
     {
       "id": "1943-07-15_a15",
-      "unit_type": "article",
       "headline": "Gruppi di giovani americani chiedono la libertà per l’India",
       "paragraphs": [
         {
@@ -245,7 +229,6 @@
     },
     {
       "id": "1943-07-15_a16",
-      "unit_type": "article",
       "headline": "Quattro società comuniste sciolte dal Governo argentino",
       "paragraphs": [
         {
@@ -260,7 +243,6 @@
     },
     {
       "id": "1943-07-15_a17",
-      "unit_type": "editorial",
       "headline": null,
       "paragraphs": [
         {
@@ -275,7 +257,6 @@
     },
     {
       "id": "1943-07-15_a18",
-      "unit_type": "article",
       "headline": "IN SICILIA\nImpegnate\nCombattimenti",
       "paragraphs": [
         {
@@ -290,7 +271,6 @@
     },
     {
       "id": "1943-07-15_a19",
-      "unit_type": "article",
       "headline": "13° PUNTO\n\"Spoliazione\ne dei tesori d'arte\"",
       "paragraphs": [
         {
@@ -305,7 +285,6 @@
     },
     {
       "id": "1943-07-15_a20",
-      "unit_type": "article",
       "headline": "BATTAGLIA ALL'EST SI ESTENDE\n di fuoco di 800 km",
       "paragraphs": [
         {
@@ -320,7 +299,6 @@
     },
     {
       "id": "1943-07-15_a21",
-      "unit_type": "article",
       "headline": "13 aerei sovietici abbattuti\nnell'estremo settore nord",
       "paragraphs": [
         {
@@ -335,7 +313,6 @@
     },
     {
       "id": "1943-07-15_a22",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -350,7 +327,6 @@
     },
     {
       "id": "1943-07-15_a23",
-      "unit_type": "article",
       "headline": "LA BATTAGLIA",
       "paragraphs": [
         {
@@ -365,7 +341,6 @@
     },
     {
       "id": "1943-07-15_a24",
-      "unit_type": "article",
       "headline": "A BATTAGLIA CON",
       "paragraphs": [
         {
@@ -380,7 +355,6 @@
     },
     {
       "id": "1943-07-15_a25",
-      "unit_type": "article",
       "headline": "Asse impegnato in duri combattimenti",
       "paragraphs": [
         {
@@ -395,7 +369,6 @@
     },
     {
       "id": "1943-07-15_a26",
-      "unit_type": "article",
       "headline": "Due reggimenti nemici annientati",
       "paragraphs": [
         {
@@ -410,7 +383,6 @@
     },
     {
       "id": "1943-07-15_a27",
-      "unit_type": "article",
       "headline": "Le notizie su tante fronti",
       "paragraphs": [
         {
@@ -425,7 +397,6 @@
     },
     {
       "id": "1943-07-15_a28",
-      "unit_type": "article",
       "headline": "BATTAGLIA ALL'EST SI ESPANDI\nDi fuoco di 800000 proiettili",
       "paragraphs": [
         {
@@ -440,7 +411,6 @@
     },
     {
       "id": "1943-07-15_a29",
-      "unit_type": "article",
       "headline": "13° PUNTO IN ATTO\n\"Spoliazione dei musei e dei tesori d'arte pubblici e privati\"",
       "paragraphs": [
         {
@@ -455,7 +425,6 @@
     },
     {
       "id": "1943-07-15_a30",
-      "unit_type": "article",
       "headline": "13 aerei sovietici abbattuti nell'estremo settore nord",
       "paragraphs": [
         {
@@ -470,7 +439,6 @@
     },
     {
       "id": "1943-07-15_a31",
-      "unit_type": "article",
       "headline": "Il IX Anno della Milite",
       "paragraphs": [
         {
@@ -485,7 +453,6 @@
     },
     {
       "id": "1943-07-15_a32",
-      "unit_type": "article",
       "headline": "Studenti si dichiedono e ottengono a combattere nel fronte",
       "paragraphs": [
         {
@@ -500,7 +467,6 @@
     },
     {
       "id": "1943-07-15_a33",
-      "unit_type": "article",
       "headline": "Conferma britannica della responsabilità per la guerra",
       "paragraphs": [
         {
@@ -515,7 +481,6 @@
     },
     {
       "id": "1943-07-15_a34",
-      "unit_type": "article",
       "headline": "Gli estremi si toccano",
       "paragraphs": [
         {
@@ -530,7 +495,6 @@
     },
     {
       "id": "1943-07-15_a35",
-      "unit_type": "article",
       "headline": "Gruppi di giovani americani chiedono la libertà per l'India",
       "paragraphs": [
         {
@@ -545,7 +509,6 @@
     },
     {
       "id": "1943-07-15_a36",
-      "unit_type": "article",
       "headline": "Quattro società comuniste sciolte dal Governo argentino",
       "paragraphs": [
         {
@@ -560,7 +523,6 @@
     },
     {
       "id": "1943-07-15_a37",
-      "unit_type": "article",
       "headline": "Cronaca di Roma",
       "paragraphs": [
         {
@@ -575,7 +537,6 @@
     },
     {
       "id": "1943-07-15_a38",
-      "unit_type": "advertisement",
       "headline": "SOLTANTO TU...",
       "paragraphs": [
         {
@@ -590,7 +551,6 @@
     },
     {
       "id": "1943-07-15_a39",
-      "unit_type": "advertisement",
       "headline": "CINEMA QUIRINETTA",
       "paragraphs": [
         {
@@ -605,7 +565,6 @@
     },
     {
       "id": "1943-07-15_a40",
-      "unit_type": "advertisement",
       "headline": "3ª SETTIMANA DI SUCCESSO",
       "paragraphs": [
         {
@@ -620,7 +579,6 @@
     },
     {
       "id": "1943-07-15_a41",
-      "unit_type": "advertisement",
       "headline": "BANCA COMMERCIALE ITALIANA",
       "paragraphs": [
         {
@@ -635,7 +593,6 @@
     },
     {
       "id": "1943-07-15_a42",
-      "unit_type": "advertisement",
       "headline": "OSPEDALE S. GIOVANNI",
       "paragraphs": [
         {
@@ -650,7 +607,6 @@
     },
     {
       "id": "1943-07-15_a43",
-      "unit_type": "advertisement",
       "headline": "TAPPETI PERSIANI",
       "paragraphs": [
         {
@@ -665,7 +621,6 @@
     },
     {
       "id": "1943-07-15_a44",
-      "unit_type": "advertisement",
       "headline": "SCUOLA SUPERIORE GERMANICA",
       "paragraphs": [
         {
@@ -680,7 +635,6 @@
     },
     {
       "id": "1943-07-15_a45",
-      "unit_type": "advertisement",
       "headline": "INSETTI",
       "paragraphs": [
         {
@@ -695,7 +649,6 @@
     },
     {
       "id": "1943-07-15_a46",
-      "unit_type": "advertisement",
       "headline": "Con 10 biglietti concorri 10 volte all'estrazione che può farti milionario...",
       "paragraphs": [
         {
@@ -710,7 +663,6 @@
     },
     {
       "id": "1943-07-15_a47",
-      "unit_type": "editorial",
       "headline": "Calma e certezza nel popolo dell'Urbe",
       "paragraphs": [
         {
@@ -725,7 +677,6 @@
     },
     {
       "id": "1943-07-15_a48",
-      "unit_type": "article",
       "headline": "All'opera nelle officine",
       "paragraphs": [
         {
@@ -740,7 +691,6 @@
     },
     {
       "id": "1943-07-15_a49",
-      "unit_type": "article",
       "headline": "I Concorsi nazionali",
       "paragraphs": [
         {
@@ -755,7 +705,6 @@
     },
     {
       "id": "1943-07-15_a50",
-      "unit_type": "article",
       "headline": "PRESENTI ALLE BANDIERE",
       "paragraphs": [
         {
@@ -770,7 +719,6 @@
     },
     {
       "id": "1943-07-15_a51",
-      "unit_type": "article",
       "headline": "Spettacolo per i feriti del Centro Mutilati",
       "paragraphs": [
         {
@@ -785,7 +733,6 @@
     },
     {
       "id": "1943-07-15_a52",
-      "unit_type": "article",
       "headline": "L'Albo d'Oro della Sezione Cacciatori",
       "paragraphs": [
         {
@@ -800,7 +747,6 @@
     },
     {
       "id": "1943-07-15_a53",
-      "unit_type": "article",
       "headline": "Censimento della lana da materassi",
       "paragraphs": [
         {
@@ -815,7 +761,6 @@
     },
     {
       "id": "1943-07-15_a54",
-      "unit_type": "article",
       "headline": "Notiziario",
       "paragraphs": [
         {
@@ -830,7 +775,6 @@
     },
     {
       "id": "1943-07-15_a55",
-      "unit_type": "article",
       "headline": "Orti di famiglia",
       "paragraphs": [
         {
@@ -845,7 +789,6 @@
     },
     {
       "id": "1943-07-15_a56",
-      "unit_type": "article",
       "headline": "La festa nazionale spagnola",
       "paragraphs": [
         {
@@ -860,7 +803,6 @@
     },
     {
       "id": "1943-07-15_a57",
-      "unit_type": "article",
       "headline": "Radiodis",
       "paragraphs": [
         {
@@ -875,7 +817,6 @@
     },
     {
       "id": "1943-07-15_a58",
-      "unit_type": "article",
       "headline": "Patria",
       "paragraphs": [
         {
@@ -890,7 +831,6 @@
     },
     {
       "id": "1943-07-15_a59",
-      "unit_type": "article",
       "headline": "ziario",
       "paragraphs": [
         {
@@ -905,7 +845,6 @@
     },
     {
       "id": "1943-07-15_a60",
-      "unit_type": "article",
       "headline": "di famiglia",
       "paragraphs": [
         {
@@ -920,7 +859,6 @@
     },
     {
       "id": "1943-07-15_a61",
-      "unit_type": "article",
       "headline": "“Il Rigoletto,” al Teatro Brancaccio",
       "paragraphs": [
         {
@@ -935,7 +873,6 @@
     },
     {
       "id": "1943-07-15_a62",
-      "unit_type": "advertisement",
       "headline": "Previtali all'Adriano",
       "paragraphs": [
         {
@@ -950,7 +887,6 @@
     },
     {
       "id": "1943-07-15_a63",
-      "unit_type": "advertisement",
       "headline": "AI'ELISED",
       "paragraphs": [
         {
@@ -965,7 +901,6 @@
     },
     {
       "id": "1943-07-15_a64",
-      "unit_type": "advertisement",
       "headline": "AI QUIRIN",
       "paragraphs": [
         {
@@ -980,7 +915,6 @@
     },
     {
       "id": "1943-07-15_a65",
-      "unit_type": "article",
       "headline": "I PROGRAMMI D'OGGI",
       "paragraphs": [
         {
@@ -995,7 +929,6 @@
     },
     {
       "id": "1943-07-15_a66",
-      "unit_type": "article",
       "headline": "TACOLI",
       "paragraphs": [
         {
@@ -1010,7 +943,6 @@
     },
     {
       "id": "1943-07-15_a67",
-      "unit_type": "article",
       "headline": "LA RADIO",
       "paragraphs": [
         {
@@ -1025,7 +957,6 @@
     },
     {
       "id": "1943-07-15_a68",
-      "unit_type": "article",
       "headline": "Borse e Cambi",
       "paragraphs": [
         {
@@ -1040,7 +971,6 @@
     },
     {
       "id": "1943-07-15_a69",
-      "unit_type": "advertisement",
       "headline": "al Cine",
       "paragraphs": [
         {
@@ -1055,7 +985,6 @@
     },
     {
       "id": "1943-07-15_a70",
-      "unit_type": "advertisement",
       "headline": "CINE",
       "paragraphs": [
         {
@@ -1070,7 +999,6 @@
     },
     {
       "id": "1943-07-15_a71",
-      "unit_type": "advertisement",
       "headline": "3ª SETTIMANA\nVOGLIO\ncon M\nAL C",
       "paragraphs": [
         {
@@ -1085,7 +1013,6 @@
     },
     {
       "id": "1943-07-15_a72",
-      "unit_type": "advertisement",
       "headline": "TAPPETI PER",
       "paragraphs": [
         {
@@ -1100,7 +1027,6 @@
     },
     {
       "id": "1943-07-15_a73",
-      "unit_type": "advertisement",
       "headline": "INSET",
       "paragraphs": [
         {
@@ -1115,7 +1041,6 @@
     },
     {
       "id": "1943-07-15_a74",
-      "unit_type": "advertisement",
       "headline": "all'ELISEO",
       "paragraphs": [
         {
@@ -1130,7 +1055,6 @@
     },
     {
       "id": "1943-07-15_a75",
-      "unit_type": "advertisement",
       "headline": "OGGI \"PRIMA,\" AL BARBERINI",
       "paragraphs": [
         {
@@ -1145,7 +1069,6 @@
     },
     {
       "id": "1943-07-15_a76",
-      "unit_type": "advertisement",
       "headline": "Acquista anche un blocchetto per 10 biglietti per",
       "paragraphs": [
         {
@@ -1160,7 +1083,6 @@
     },
     {
       "id": "1943-07-15_a77",
-      "unit_type": "advertisement",
       "headline": "LOT",
       "paragraphs": [
         {
@@ -1175,7 +1097,6 @@
     },
     {
       "id": "1943-07-15_a78",
-      "unit_type": "advertisement",
       "headline": "Giovanni Andosilla\nSTELLANA",
       "paragraphs": [
         {
@@ -1190,7 +1111,6 @@
     },
     {
       "id": "1943-07-15_a79",
-      "unit_type": "advertisement",
       "headline": "PERSIANI",
       "paragraphs": [
         {
@@ -1205,7 +1125,6 @@
     },
     {
       "id": "1943-07-15_a80",
-      "unit_type": "advertisement",
       "headline": "RE GERMANICA",
       "paragraphs": [
         {
@@ -1220,7 +1139,6 @@
     },
     {
       "id": "1943-07-15_a81",
-      "unit_type": "advertisement",
       "headline": "TTI",
       "paragraphs": [
         {
@@ -1235,7 +1153,6 @@
     },
     {
       "id": "1943-07-15_a82",
-      "unit_type": "advertisement",
       "headline": "ANNUNZI SANITARI",
       "paragraphs": [
         {
@@ -1250,7 +1167,6 @@
     },
     {
       "id": "1943-07-15_a83",
-      "unit_type": "advertisement",
       "headline": "LOTTERIA di MERANO",
       "paragraphs": [
         {
@@ -1265,7 +1181,6 @@
     },
     {
       "id": "1943-07-15_a84",
-      "unit_type": "obituary",
       "headline": "PRESENTI ALLE BANDIERE\nBalilla Perazzini\nAllievo sergente pilota",
       "paragraphs": [
         {
@@ -1280,7 +1195,6 @@
     },
     {
       "id": "1943-07-15_a85",
-      "unit_type": "notice",
       "headline": "Spettacolo per i feriti del Centro Mutilati",
       "paragraphs": [
         {
@@ -1295,7 +1209,6 @@
     },
     {
       "id": "1943-07-15_a86",
-      "unit_type": "editorial",
       "headline": "Calma e certezza nel popolo dell'Urbe",
       "paragraphs": [
         {
@@ -1310,7 +1223,6 @@
     },
     {
       "id": "1943-07-15_a87",
-      "unit_type": "advertisement",
       "headline": "Censimento della lana da materassi",
       "paragraphs": [
         {
@@ -1325,7 +1237,6 @@
     },
     {
       "id": "1943-07-15_a88",
-      "unit_type": "article",
       "headline": "Cronaca di Roma",
       "paragraphs": [
         {
@@ -1340,7 +1251,6 @@
     },
     {
       "id": "1943-07-15_a89",
-      "unit_type": "article",
       "headline": "I Concorsi nazionali del lavoro",
       "paragraphs": [
         {
@@ -1355,7 +1265,6 @@
     },
     {
       "id": "1943-07-15_a90",
-      "unit_type": "article",
       "headline": "Visita del V. Segretario dei G.U.F. alla sede del Comando\nLe gare per camiciaie e lavoratori di berrettifici militari",
       "paragraphs": [
         {
@@ -1370,7 +1279,6 @@
     },
     {
       "id": "1943-07-15_a91",
-      "unit_type": "article",
       "headline": "Alta onorificenza romena a Raffaello Guzman",
       "paragraphs": [
         {
@@ -1385,7 +1293,6 @@
     },
     {
       "id": "1943-07-15_a92",
-      "unit_type": "editorial",
       "headline": "Perchè",
       "paragraphs": [
         {
@@ -1400,7 +1307,6 @@
     },
     {
       "id": "1943-07-15_a93",
-      "unit_type": "article",
       "headline": "Un ragazzo ucciso per l'urto contro un autocarro",
       "paragraphs": [
         {
@@ -1415,7 +1321,6 @@
     },
     {
       "id": "1943-07-15_a94",
-      "unit_type": "article",
       "headline": "Ladri di biciclette e un ricettatore arrestati",
       "paragraphs": [
         {
@@ -1430,7 +1335,6 @@
     },
     {
       "id": "1943-07-15_a95",
-      "unit_type": "article",
       "headline": "La festa nazionale spagnola",
       "paragraphs": [
         {
@@ -1445,7 +1349,6 @@
     },
     {
       "id": "1943-07-15_a96",
-      "unit_type": "article",
       "headline": "Radiodisturbatori",
       "paragraphs": [
         {
@@ -1460,7 +1363,6 @@
     },
     {
       "id": "1943-07-15_a97",
-      "unit_type": "article",
       "headline": "Commerciante di vino espulso dall'organizzazione sindacale",
       "paragraphs": [
         {
@@ -1475,7 +1377,6 @@
     },
     {
       "id": "1943-07-15_a98",
-      "unit_type": "article",
       "headline": "Distribuzione di salumi freschi e stagionati",
       "paragraphs": [
         {
@@ -1490,7 +1391,6 @@
     },
     {
       "id": "1943-07-15_a99",
-      "unit_type": "article",
       "headline": "Diario Sacro",
       "paragraphs": [
         {
@@ -1505,7 +1405,6 @@
     },
     {
       "id": "1943-07-15_a100",
-      "unit_type": "article",
       "headline": "I prezzi",
       "paragraphs": [
         {
@@ -1520,7 +1419,6 @@
     },
     {
       "id": "1943-07-15_a101",
-      "unit_type": "article",
       "headline": "Il Prefetto Presidente",
       "paragraphs": [
         {
@@ -1535,7 +1433,6 @@
     },
     {
       "id": "1943-07-15_a102",
-      "unit_type": "article",
       "headline": "Nozze d'oro",
       "paragraphs": [
         {
@@ -1550,7 +1447,6 @@
     },
     {
       "id": "1943-07-15_a103",
-      "unit_type": "article",
       "headline": "Nastro bianco",
       "paragraphs": [
         {
@@ -1565,7 +1461,6 @@
     },
     {
       "id": "1943-07-15_a104",
-      "unit_type": "article",
       "headline": "Una laurea",
       "paragraphs": [
         {
@@ -1580,7 +1475,6 @@
     },
     {
       "id": "1943-07-15_a105",
-      "unit_type": "advertisement",
       "headline": "I prezzi Prodotti ortofrutticoli",
       "paragraphs": [
         {
@@ -1595,7 +1489,6 @@
     },
     {
       "id": "1943-07-15_a106",
-      "unit_type": "advertisement",
       "headline": "ORTAGGI",
       "paragraphs": [
         {
@@ -1610,7 +1503,6 @@
     },
     {
       "id": "1943-07-15_a107",
-      "unit_type": "article",
       "headline": "FRUTTA",
       "paragraphs": [
         {
@@ -1625,7 +1517,6 @@
     },
     {
       "id": "1943-07-15_a108",
-      "unit_type": "article",
       "headline": "AGRUMI",
       "paragraphs": [
         {
@@ -1640,7 +1531,6 @@
     },
     {
       "id": "1943-07-15_a109",
-      "unit_type": "article",
       "headline": "FRUTTA SECCA",
       "paragraphs": [
         {
@@ -1655,7 +1545,6 @@
     },
     {
       "id": "1943-07-15_a110",
-      "unit_type": "notice",
       "headline": "Il Prefetto Presidente",
       "paragraphs": [
         {
@@ -1670,7 +1559,6 @@
     },
     {
       "id": "1943-07-15_a111",
-      "unit_type": "notice",
       "headline": "Nozze d'oro",
       "paragraphs": [
         {
@@ -1685,7 +1573,6 @@
     },
     {
       "id": "1943-07-15_a112",
-      "unit_type": "notice",
       "headline": "Nastro bianco",
       "paragraphs": [
         {
@@ -1700,7 +1587,6 @@
     },
     {
       "id": "1943-07-15_a113",
-      "unit_type": "notice",
       "headline": "Una laurea",
       "paragraphs": [
         {
@@ -1715,7 +1601,6 @@
     },
     {
       "id": "1943-07-15_a114",
-      "unit_type": "notice",
       "headline": "Una laurea",
       "paragraphs": [
         {
@@ -1730,7 +1615,6 @@
     },
     {
       "id": "1943-07-15_a115",
-      "unit_type": "article",
       "headline": "X",
       "paragraphs": [
         {
@@ -1745,7 +1629,6 @@
     },
     {
       "id": "1943-07-15_a116",
-      "unit_type": "article",
       "headline": "Previtali all'Adriano",
       "paragraphs": [
         {
@@ -1760,7 +1643,6 @@
     },
     {
       "id": "1943-07-15_a117",
-      "unit_type": "article",
       "headline": "All'Eliseo",
       "paragraphs": [
         {
@@ -1775,7 +1657,6 @@
     },
     {
       "id": "1943-07-15_a118",
-      "unit_type": "article",
       "headline": "Previtali all'Adriano",
       "paragraphs": [
         {
@@ -1790,7 +1671,6 @@
     },
     {
       "id": "1943-07-15_a119",
-      "unit_type": "article",
       "headline": "I PROGRAMMI D'OGGI",
       "paragraphs": [
         {
@@ -1805,7 +1685,6 @@
     },
     {
       "id": "1943-07-15_a120",
-      "unit_type": "advertisement",
       "headline": "OGGI \"PRIMA,\" AL BARBERINNI",
       "paragraphs": [
         {
@@ -1820,7 +1699,6 @@
     },
     {
       "id": "1943-07-15_a121",
-      "unit_type": "advertisement",
       "headline": "LA RADIO",
       "paragraphs": [
         {
@@ -1835,7 +1713,6 @@
     },
     {
       "id": "1943-07-15_a122",
-      "unit_type": "advertisement",
       "headline": "Borse e Cambi",
       "paragraphs": [
         {
@@ -1850,7 +1727,6 @@
     },
     {
       "id": "1943-07-15_a123",
-      "unit_type": "advertisement",
       "headline": "OGGI GRANDE PRIMA al Cinema SPLENDORE",
       "paragraphs": [
         {
@@ -1865,7 +1741,6 @@
     },
     {
       "id": "1943-07-15_a124",
-      "unit_type": "advertisement",
       "headline": "SOLTANTO TU...",
       "paragraphs": [
         {
@@ -1880,7 +1755,6 @@
     },
     {
       "id": "1943-07-15_a125",
-      "unit_type": "advertisement",
       "headline": "3ª SETTIMANA DI SUCCESSO del film UFA",
       "paragraphs": [
         {
@@ -1895,7 +1769,6 @@
     },
     {
       "id": "1943-07-15_a126",
-      "unit_type": "advertisement",
       "headline": "BANCA COMMERCIALE ITALIANA SOCIETÀ PER AZIONI",
       "paragraphs": [
         {
@@ -1910,7 +1783,6 @@
     },
     {
       "id": "1943-07-15_a127",
-      "unit_type": "advertisement",
       "headline": "ANNUNZI SANITARI",
       "paragraphs": [
         {
@@ -1925,7 +1797,6 @@
     },
     {
       "id": "1943-07-15_a128",
-      "unit_type": "advertisement",
       "headline": "TAPPETI PERSIANI",
       "paragraphs": [
         {
@@ -1940,7 +1811,6 @@
     },
     {
       "id": "1943-07-15_a129",
-      "unit_type": "advertisement",
       "headline": "INSETTI",
       "paragraphs": [
         {
@@ -1955,7 +1825,6 @@
     },
     {
       "id": "1943-07-15_a130",
-      "unit_type": "advertisement",
       "headline": "Con 10 biglietti concorvi 10 volte all'estrazione che può farti milionario....",
       "paragraphs": [
         {
@@ -1970,7 +1839,6 @@
     },
     {
       "id": "1943-07-15_a131",
-      "unit_type": "advertisement",
       "headline": "LOTTERIA di MERANO",
       "paragraphs": [
         {
@@ -1985,7 +1853,6 @@
     },
     {
       "id": "1943-07-15_a132",
-      "unit_type": "advertisement",
       "headline": "SCUOLA SUPERIORE GERMANICA\nCORSI ESTIVI di LINGUA TEDESCA\nINFERIORI - MEDI E DI CONVERSAZIONE",
       "paragraphs": [
         {
@@ -2000,7 +1867,6 @@
     },
     {
       "id": "1943-07-15_a133",
-      "unit_type": "article",
       "headline": "All'opera nelle offici",
       "paragraphs": [
         {
@@ -2015,7 +1881,6 @@
     },
     {
       "id": "1943-07-15_a134",
-      "unit_type": "article",
       "headline": "Notiziario",
       "paragraphs": [
         {
@@ -2030,7 +1895,6 @@
     },
     {
       "id": "1943-07-15_a135",
-      "unit_type": "article",
       "headline": "Orti di famiglia",
       "paragraphs": [
         {
@@ -2045,7 +1909,6 @@
     },
     {
       "id": "1943-07-15_a136",
-      "unit_type": "article",
       "headline": "Censimento della lana da materassi",
       "paragraphs": [
         {
@@ -2060,7 +1923,6 @@
     },
     {
       "id": "1943-07-15_a137",
-      "unit_type": "article",
       "headline": "I Concorsi nazionali del la",
       "paragraphs": [
         {
@@ -2075,7 +1937,6 @@
     },
     {
       "id": "1943-07-15_a138",
-      "unit_type": "article",
       "headline": "Alta onorificenza a Raffaello G",
       "paragraphs": [
         {
@@ -2090,7 +1951,6 @@
     },
     {
       "id": "1943-07-15_a139",
-      "unit_type": "article",
       "headline": "Per",
       "paragraphs": [
         {
@@ -2105,7 +1965,6 @@
     },
     {
       "id": "1943-07-15_a140",
-      "unit_type": "article",
       "headline": "Un ragazzo per l'urto contro un",
       "paragraphs": [
         {
@@ -2120,7 +1979,6 @@
     },
     {
       "id": "1943-07-15_a141",
-      "unit_type": "article",
       "headline": "Ladri di biciclette e un ricettatore",
       "paragraphs": [
         {
@@ -2135,7 +1993,6 @@
     },
     {
       "id": "1943-07-15_a142",
-      "unit_type": "article",
       "headline": "Radiodisturbat",
       "paragraphs": [
         {
@@ -2150,7 +2007,6 @@
     },
     {
       "id": "1943-07-15_a143",
-      "unit_type": "advertisement",
       "headline": "CINEMA QUIRINETTA",
       "paragraphs": [
         {
@@ -2165,7 +2021,6 @@
     },
     {
       "id": "1943-07-15_a144",
-      "unit_type": "advertisement",
       "headline": "SETTIMANA DI SUCCESSO",
       "paragraphs": [
         {
@@ -2180,7 +2035,6 @@
     },
     {
       "id": "1943-07-15_a145",
-      "unit_type": "advertisement",
       "headline": "BANCA COMMERCIALE ITALIANA",
       "paragraphs": [
         {
@@ -2195,7 +2049,6 @@
     },
     {
       "id": "1943-07-15_a146",
-      "unit_type": "advertisement",
       "headline": "ANNUNZI SANITARI",
       "paragraphs": [
         {
@@ -2210,7 +2063,6 @@
     },
     {
       "id": "1943-07-15_a147",
-      "unit_type": "advertisement",
       "headline": "LA SUPERIORE GERMANICA",
       "paragraphs": [
         {
@@ -2225,7 +2077,6 @@
     },
     {
       "id": "1943-07-15_a148",
-      "unit_type": "advertisement",
       "headline": "INSETTI",
       "paragraphs": [
         {
@@ -2240,7 +2091,6 @@
     },
     {
       "id": "1943-07-15_a149",
-      "unit_type": "article",
       "headline": "All'opera nelle",
       "paragraphs": [
         {
@@ -2255,7 +2105,6 @@
     },
     {
       "id": "1943-07-15_a150",
-      "unit_type": "notice",
       "headline": "Notizie",
       "paragraphs": [
         {
@@ -2270,7 +2119,6 @@
     },
     {
       "id": "1943-07-15_a151",
-      "unit_type": "article",
       "headline": "Orti di",
       "paragraphs": [
         {
@@ -2285,7 +2133,6 @@
     },
     {
       "id": "1943-07-15_a152",
-      "unit_type": "article",
       "headline": "Radiodiffusione",
       "paragraphs": [
         {
@@ -2300,7 +2147,6 @@
     },
     {
       "id": "1943-07-15_a153",
-      "unit_type": "advertisement",
       "headline": "BANCA",
       "paragraphs": [
         {
@@ -2315,7 +2161,6 @@
     },
     {
       "id": "1943-07-15_a154",
-      "unit_type": "advertisement",
       "headline": "SCUOLA SUPERIORE",
       "paragraphs": [
         {
@@ -2330,7 +2175,6 @@
     },
     {
       "id": "1943-07-15_a155",
-      "unit_type": "advertisement",
       "headline": "GI GRANDE PRIMA\nema SPLENDORE\nE presenta un film di produzione TOBIS\nTANTO TU..",
       "paragraphs": [
         {
@@ -2345,7 +2189,6 @@
     },
     {
       "id": "1943-07-15_a156",
-      "unit_type": "advertisement",
       "headline": "EMA QUIRINETTA\nme répliche del film in edizione originale\nODIE CELESTI",
       "paragraphs": [
         {
@@ -2360,7 +2203,6 @@
     },
     {
       "id": "1943-07-15_a157",
-      "unit_type": "advertisement",
       "headline": "A COMMERCIALE\nITALIANA\nCIETA' PER AZIONI",
       "paragraphs": [
         {
@@ -2375,7 +2217,6 @@
     },
     {
       "id": "1943-07-15_a158",
-      "unit_type": "advertisement",
       "headline": "Con 10 \nbiglietti concorsi \n10 volte \nestrarione che può farti \nmilionario...",
       "paragraphs": [
         {
@@ -2390,7 +2231,6 @@
     },
     {
       "id": "1943-07-15_a159",
-      "unit_type": "article",
       "headline": "La del binoco.",
       "paragraphs": [
         {
@@ -2405,7 +2245,6 @@
     },
     {
       "id": "1943-07-15_a160",
-      "unit_type": "article",
       "headline": "Il binocolo",
       "paragraphs": [
         {
@@ -2420,7 +2259,6 @@
     },
     {
       "id": "1943-07-15_a161",
-      "unit_type": "article",
       "headline": "Civiltà americana",
       "paragraphs": [
         {
@@ -2435,7 +2273,6 @@
     },
     {
       "id": "1943-07-15_a162",
-      "unit_type": "article",
       "headline": "Il 101° anno della prima radio",
       "paragraphs": [
         {
@@ -2450,7 +2287,6 @@
     },
     {
       "id": "1943-07-15_a163",
-      "unit_type": "article",
       "headline": "decisiva per gli arabi",
       "paragraphs": [
         {
@@ -2465,7 +2301,6 @@
     },
     {
       "id": "1943-07-15_a164",
-      "unit_type": "article",
       "headline": "LE PRIME DELLO SCHERMO\nLa valle del diavolo",
       "paragraphs": [
         {
@@ -2480,7 +2315,6 @@
     },
     {
       "id": "1943-07-15_a165",
-      "unit_type": "article",
       "headline": "Dente per dente",
       "paragraphs": [
         {
@@ -2495,7 +2329,6 @@
     },
     {
       "id": "1943-07-15_a166",
-      "unit_type": "article",
       "headline": "def\nI coristi della Scala\nin Corte di Cassazione",
       "paragraphs": [
         {
@@ -2510,7 +2343,6 @@
     },
     {
       "id": "1943-07-15_a167",
-      "unit_type": "article",
       "headline": "Il trattamento economico\nper il trasferimento e lo sfollamento\ndegli addetti al commercio",
       "paragraphs": [
         {
@@ -2525,7 +2357,6 @@
     },
     {
       "id": "1943-07-15_a168",
-      "unit_type": "article",
       "headline": "Le liquidazioni per risoluzione\ndel rapporto di lavoro",
       "paragraphs": [
         {
@@ -2540,7 +2371,6 @@
     },
     {
       "id": "1943-07-15_a169",
-      "unit_type": "article",
       "headline": "GLI SPORT\nNOTE DI ATLETICA",
       "paragraphs": [
         {
@@ -2555,7 +2385,6 @@
     },
     {
       "id": "1943-07-15_a170",
-      "unit_type": "article",
       "headline": "IL \"CASO AMADEI.\",\nOggi si riunisce\nla Commissione d'Appello",
       "paragraphs": [
         {
@@ -2570,7 +2399,6 @@
     },
     {
       "id": "1943-07-15_a171",
-      "unit_type": "article",
       "headline": "Il Giro del Lago di Bolsena\nper il \"Trofeo del Messaggero\"",
       "paragraphs": [
         {
@@ -2585,7 +2413,6 @@
     },
     {
       "id": "1943-07-15_a172",
-      "unit_type": "article",
       "headline": "La premiazione dei vincitori\ndella Coppa \"Guarnieri\"",
       "paragraphs": [
         {
@@ -2600,7 +2427,6 @@
     },
     {
       "id": "1943-07-15_a173",
-      "unit_type": "article",
       "headline": "La sospensione della riunione\npugilistica di domenica",
       "paragraphs": [
         {
@@ -2615,7 +2441,6 @@
     },
     {
       "id": "1943-07-15_a174",
-      "unit_type": "article",
       "headline": "Pugilato alla Sala Gigli",
       "paragraphs": [
         {
@@ -2630,7 +2455,6 @@
     },
     {
       "id": "1943-07-15_a175",
-      "unit_type": "article",
       "headline": "La vendita del cognac e del fernet\ndietro ricetta medica",
       "paragraphs": [
         {
@@ -2645,7 +2469,6 @@
     },
     {
       "id": "1943-07-15_a176",
-      "unit_type": "article",
       "headline": "Civiltà americana",
       "paragraphs": [
         {
@@ -2660,7 +2483,6 @@
     },
     {
       "id": "1943-07-15_a177",
-      "unit_type": "article",
       "headline": "Il 101° anno della prima radio",
       "paragraphs": [
         {
@@ -2675,7 +2497,6 @@
     },
     {
       "id": "1943-07-15_a178",
-      "unit_type": "editorial",
       "headline": "Ora decisiva anche per gli arabi",
       "paragraphs": [
         {
@@ -2690,7 +2511,6 @@
     },
     {
       "id": "1943-07-15_a179",
-      "unit_type": "article",
       "headline": "Vasco Ronchi",
       "paragraphs": [
         {
@@ -2705,7 +2525,6 @@
     },
     {
       "id": "1943-07-15_a180",
-      "unit_type": "article",
       "headline": "Cana",
       "paragraphs": [
         {
@@ -2720,7 +2539,6 @@
     },
     {
       "id": "1943-07-15_a181",
-      "unit_type": "article",
       "headline": "o del testimone radiotrasmissione",
       "paragraphs": [
         {
@@ -2735,7 +2553,6 @@
     },
     {
       "id": "1943-07-15_a182",
-      "unit_type": "article",
       "headline": "Impieghi militari",
       "paragraphs": [
         {
@@ -2750,7 +2567,6 @@
     },
     {
       "id": "1943-07-15_a183",
-      "unit_type": "article",
       "headline": "Il \"Premio Trento\", per la poesia di guerra",
       "paragraphs": [
         {
@@ -2765,7 +2581,6 @@
     },
     {
       "id": "1943-07-15_a184",
-      "unit_type": "article",
       "headline": "Storia",
       "paragraphs": [
         {
@@ -2780,7 +2595,6 @@
     },
     {
       "id": "1943-07-15_a185",
-      "unit_type": "article",
       "headline": "Il primo tentativo",
       "paragraphs": [
         {
@@ -2795,7 +2609,6 @@
     },
     {
       "id": "1943-07-15_a186",
-      "unit_type": "article",
       "headline": "AFA",
       "paragraphs": [
         {
@@ -2810,7 +2623,6 @@
     },
     {
       "id": "1943-07-15_a187",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -2825,7 +2637,6 @@
     },
     {
       "id": "1943-07-15_a188",
-      "unit_type": "article",
       "headline": "Il \"Premio Trento\", per la poesia di guerra",
       "paragraphs": [
         {
@@ -2840,7 +2651,6 @@
     },
     {
       "id": "1943-07-15_a189",
-      "unit_type": "article",
       "headline": "UTILE IN PACE, PREZIOSO IN GUERRA\nStoria del binocolo",
       "paragraphs": [
         {
@@ -2855,7 +2665,6 @@
     },
     {
       "id": "1943-07-15_a190",
-      "unit_type": "article",
       "headline": "Civiltà americana\nLibertinaggio e delinquenza Istituti perversi e stupida ferocia - Lo stacelo della famiglia",
       "paragraphs": [
         {
@@ -2870,7 +2679,6 @@
     },
     {
       "id": "1943-07-15_a191",
-      "unit_type": "article",
       "headline": "Il 101° anno del testimone della prima radiotrasmissione",
       "paragraphs": [
         {
@@ -2885,7 +2693,6 @@
     },
     {
       "id": "1943-07-15_a192",
-      "unit_type": "editorial",
       "headline": "Ora decisiva anche per gli arabi",
       "paragraphs": [
         {
@@ -2900,7 +2707,6 @@
     },
     {
       "id": "1943-07-15_a193",
-      "unit_type": "article",
       "headline": "La vendita del cognac e del fernet dietro ricetta medica",
       "paragraphs": [
         {
@@ -2915,7 +2721,6 @@
     },
     {
       "id": "1943-07-15_a194",
-      "unit_type": "article",
       "headline": "LE PRIME DELLO SCHERMO",
       "paragraphs": [
         {
@@ -2930,7 +2735,6 @@
     },
     {
       "id": "1943-07-15_a195",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -2945,7 +2749,6 @@
     },
     {
       "id": "1943-07-15_a196",
-      "unit_type": "article",
       "headline": "IL \"CASO AMADEI\"",
       "paragraphs": [
         {
@@ -2960,7 +2763,6 @@
     },
     {
       "id": "1943-07-15_a197",
-      "unit_type": "article",
       "headline": "La premiazione dei vincitori della Coppa \"Guarnieri\"",
       "paragraphs": [
         {
@@ -2975,7 +2777,6 @@
     },
     {
       "id": "1943-07-15_a198",
-      "unit_type": "article",
       "headline": "La sospensione della riunione pugilistica di domenica",
       "paragraphs": [
         {
@@ -2990,7 +2791,6 @@
     },
     {
       "id": "1943-07-15_a199",
-      "unit_type": "article",
       "headline": "Pugilato alla Sala Gigli",
       "paragraphs": [
         {
@@ -3005,7 +2805,6 @@
     },
     {
       "id": "1943-07-15_a200",
-      "unit_type": "article",
       "headline": "La storia del binocolo",
       "paragraphs": [
         {
@@ -3020,7 +2819,6 @@
     },
     {
       "id": "1943-07-15_a201",
-      "unit_type": "article",
       "headline": "Il 101° anno della prima radio",
       "paragraphs": [
         {
@@ -3035,7 +2833,6 @@
     },
     {
       "id": "1943-07-15_a202",
-      "unit_type": "article",
       "headline": "La vendita del cognac e del fer- dietro ricetta medica",
       "paragraphs": [
         {
@@ -3050,7 +2847,6 @@
     },
     {
       "id": "1943-07-15_a203",
-      "unit_type": "article",
       "headline": "Ora de anche per",
       "paragraphs": [
         {
@@ -3065,7 +2861,6 @@
     },
     {
       "id": "1943-07-15_a204",
-      "unit_type": "article",
       "headline": "GLI SPORT",
       "paragraphs": [
         {
@@ -3080,7 +2875,6 @@
     },
     {
       "id": "1943-07-15_a205",
-      "unit_type": "article",
       "headline": "Il Giro del Lago di Bolsena\nper il \"Trofeo del Messaggero.,\"",
       "paragraphs": [
         {
@@ -3095,7 +2889,6 @@
     },
     {
       "id": "1943-07-15_a206",
-      "unit_type": "article",
       "headline": "La premiazione dei vincitori\ndella Coppa \"Guarnieri.,\"",
       "paragraphs": [
         {
@@ -3110,7 +2903,6 @@
     },
     {
       "id": "1943-07-15_a207",
-      "unit_type": "article",
       "headline": "Pugilato alla Sala Gigli",
       "paragraphs": [
         {
@@ -3125,7 +2917,6 @@
     },
     {
       "id": "1943-07-15_a208",
-      "unit_type": "article",
       "headline": "Il popolo italiano per la resistenza e per la vittoria",
       "paragraphs": [
         {
@@ -3140,7 +2931,6 @@
     },
     {
       "id": "1943-07-15_a209",
-      "unit_type": "obituary",
       "headline": "Umberto Jannelli",
       "paragraphs": [
         {
@@ -3155,7 +2945,6 @@
     },
     {
       "id": "1943-07-15_a210",
-      "unit_type": "obituary",
       "headline": "Ernesto Marzetti",
       "paragraphs": [
         {
@@ -3170,7 +2959,6 @@
     },
     {
       "id": "1943-07-15_a211",
-      "unit_type": "obituary",
       "headline": "Avvocato Ortensio Spigarelli",
       "paragraphs": [
         {
@@ -3185,7 +2973,6 @@
     },
     {
       "id": "1943-07-15_a212",
-      "unit_type": "obituary",
       "headline": "Contessa Rosina Cozza Caterini",
       "paragraphs": [
         {
@@ -3200,7 +2987,6 @@
     },
     {
       "id": "1943-07-15_a213",
-      "unit_type": "obituary",
       "headline": "Adriana Bartoli nata Fornaini",
       "paragraphs": [
         {
@@ -3215,7 +3001,6 @@
     },
     {
       "id": "1943-07-15_a214",
-      "unit_type": "obituary",
       "headline": "Giulio Galiani",
       "paragraphs": [
         {
@@ -3230,7 +3015,6 @@
     },
     {
       "id": "1943-07-15_a215",
-      "unit_type": "obituary",
       "headline": "Dott. Ing. Arnaldo Rava",
       "paragraphs": [
         {
@@ -3245,7 +3029,6 @@
     },
     {
       "id": "1943-07-15_a216",
-      "unit_type": "advertisement",
       "headline": "Piccola Pubblicità",
       "paragraphs": [
         {
@@ -3260,7 +3043,6 @@
     },
     {
       "id": "1943-07-15_a217",
-      "unit_type": "advertisement",
       "headline": "Cessioni Negozi Aziende",
       "paragraphs": [
         {
@@ -3275,7 +3057,6 @@
     },
     {
       "id": "1943-07-15_a218",
-      "unit_type": "advertisement",
       "headline": "Annunzi VARI",
       "paragraphs": [
         {
@@ -3290,7 +3071,6 @@
     },
     {
       "id": "1943-07-15_a219",
-      "unit_type": "advertisement",
       "headline": "CAPITALI SOCIETA'",
       "paragraphs": [
         {
@@ -3305,7 +3085,6 @@
     },
     {
       "id": "1943-07-15_a220",
-      "unit_type": "article",
       "headline": "Dal Mediterraneo al Pacifico",
       "paragraphs": [
         {
@@ -3320,7 +3099,6 @@
     },
     {
       "id": "1943-07-15_a221",
-      "unit_type": "article",
       "headline": "Una missione fallita",
       "paragraphs": [
         {
@@ -3335,7 +3113,6 @@
     },
     {
       "id": "1943-07-15_a222",
-      "unit_type": "article",
       "headline": "Il Congresso fa vacanza",
       "paragraphs": [
         {
@@ -3350,7 +3127,6 @@
     },
     {
       "id": "1943-07-15_a223",
-      "unit_type": "article",
       "headline": "Sinclair mette una pietra sopra l'affare Sikorsky",
       "paragraphs": [
         {
@@ -3365,7 +3141,6 @@
     },
     {
       "id": "1943-07-15_a224",
-      "unit_type": "article",
       "headline": "Il tetto di una chiesa in Portogallo crolla durante la Messa",
       "paragraphs": [
         {
@@ -3380,7 +3155,6 @@
     },
     {
       "id": "1943-07-15_a225",
-      "unit_type": "article",
       "headline": "Un ospedale sotterraneo costruito a Berlino",
       "paragraphs": [
         {
@@ -3395,7 +3169,6 @@
     },
     {
       "id": "1943-07-15_a226",
-      "unit_type": "article",
       "headline": "Il Ministro d'Italia a Zagabria presenta le credenziali al Poglavnik",
       "paragraphs": [
         {
@@ -3410,7 +3183,6 @@
     },
     {
       "id": "1943-07-15_a227",
-      "unit_type": "article",
       "headline": "La gratitudine del popolo croato al Duce dell'Italia fascista",
       "paragraphs": [
         {
@@ -3425,7 +3197,6 @@
     },
     {
       "id": "1943-07-15_a228",
-      "unit_type": "article",
       "headline": "Gli aerei nipponici martellano le posizioni americane delle isole del Sud Pacifico",
       "paragraphs": [
         {
@@ -3440,7 +3211,6 @@
     },
     {
       "id": "1943-07-15_a229",
-      "unit_type": "article",
       "headline": "Parigi bombardata da 150 aerei anglo-americani",
       "paragraphs": [
         {
@@ -3455,7 +3225,6 @@
     },
     {
       "id": "1943-07-15_a230",
-      "unit_type": "article",
       "headline": "L'organizzazione civile estesa dal Giappone a Giava",
       "paragraphs": [
         {
@@ -3470,7 +3239,6 @@
     },
     {
       "id": "1943-07-15_a231",
-      "unit_type": "article",
       "headline": "La sala dell'Incoronazione del Municipio di Aquisgrana distrutta da bombe nemiche",
       "paragraphs": [
         {
@@ -3485,7 +3253,6 @@
     },
     {
       "id": "1943-07-15_a232",
-      "unit_type": "article",
       "headline": "Il nuovo Governatore della Martinica",
       "paragraphs": [
         {
@@ -3500,7 +3267,6 @@
     },
     {
       "id": "1943-07-15_a233",
-      "unit_type": "article",
       "headline": "Leggera scossa sismica",
       "paragraphs": [
         {
@@ -3515,7 +3281,6 @@
     },
     {
       "id": "1943-07-15_a234",
-      "unit_type": "advertisement",
       "headline": "ABBONAMENTI ESTIVI",
       "paragraphs": [
         {
@@ -3530,7 +3295,6 @@
     },
     {
       "id": "1943-07-15_a235",
-      "unit_type": "article",
       "headline": "Il popolo italiano per la resistenza e per la vittoria",
       "paragraphs": [
         {
@@ -3545,7 +3309,6 @@
     },
     {
       "id": "1943-07-15_a236",
-      "unit_type": "article",
       "headline": "A Milano",
       "paragraphs": [
         {
@@ -3560,7 +3323,6 @@
     },
     {
       "id": "1943-07-15_a237",
-      "unit_type": "article",
       "headline": "A Trieste",
       "paragraphs": [
         {
@@ -3575,7 +3337,6 @@
     },
     {
       "id": "1943-07-15_a238",
-      "unit_type": "article",
       "headline": "Ad Alessandria",
       "paragraphs": [
         {
@@ -3590,7 +3351,6 @@
     },
     {
       "id": "1943-07-15_a239",
-      "unit_type": "article",
       "headline": "A Foggia",
       "paragraphs": [
         {
@@ -3605,7 +3365,6 @@
     },
     {
       "id": "1943-07-15_a240",
-      "unit_type": "article",
       "headline": "A Napoli",
       "paragraphs": [
         {
@@ -3620,7 +3379,6 @@
     },
     {
       "id": "1943-07-15_a241",
-      "unit_type": "article",
       "headline": "Lo slancio dei trentini nella offerta di indumenti di lana",
       "paragraphs": [
         {
@@ -3635,7 +3393,6 @@
     },
     {
       "id": "1943-07-15_a242",
-      "unit_type": "article",
       "headline": "Arresto per mancata denunzia di tessuti",
       "paragraphs": [
         {
@@ -3650,7 +3407,6 @@
     },
     {
       "id": "1943-07-15_a243",
-      "unit_type": "article",
       "headline": "L'arresto d'un commissario dei mercati ortofrutticoli di Napoli",
       "paragraphs": [
         {
@@ -3665,7 +3421,6 @@
     },
     {
       "id": "1943-07-15_a244",
-      "unit_type": "article",
       "headline": "Severi provvedimenti del Prefetto di Milano contro impiegati del Coproma",
       "paragraphs": [
         {
@@ -3680,7 +3435,6 @@
     },
     {
       "id": "1943-07-15_a245",
-      "unit_type": "article",
       "headline": "Labadessa presiede ad Ancona un'ordinanza per la pesca",
       "paragraphs": [
         {
@@ -3695,7 +3449,6 @@
     },
     {
       "id": "1943-07-15_a246",
-      "unit_type": "article",
       "headline": "Il piano regolatore di Firenze",
       "paragraphs": [
         {
@@ -3710,7 +3463,6 @@
     },
     {
       "id": "1943-07-15_a247",
-      "unit_type": "article",
       "headline": "La morte del prof. G. I. Casola generale della riserva navale",
       "paragraphs": [
         {
@@ -3725,7 +3477,6 @@
     },
     {
       "id": "1943-07-15_a248",
-      "unit_type": "article",
       "headline": "Alessandro Pavolini Direttore",
       "paragraphs": [
         {
@@ -3740,7 +3491,6 @@
     },
     {
       "id": "1943-07-15_a249",
-      "unit_type": "article",
       "headline": "Vincenzo Buggiardinì",
       "paragraphs": [
         {
@@ -3755,7 +3505,6 @@
     },
     {
       "id": "1943-07-15_a250",
-      "unit_type": "article",
       "headline": "Massimo di Donato",
       "paragraphs": [
         {
@@ -3770,7 +3519,6 @@
     },
     {
       "id": "1943-07-15_a251",
-      "unit_type": "article",
       "headline": "Adolfo Florenzani",
       "paragraphs": [
         {
@@ -3785,7 +3533,6 @@
     },
     {
       "id": "1943-07-15_a252",
-      "unit_type": "obituary",
       "headline": "Maria Giuseppina Iacometti in Savarese",
       "paragraphs": [
         {
@@ -3800,7 +3547,6 @@
     },
     {
       "id": "1943-07-15_a253",
-      "unit_type": "obituary",
       "headline": "Giuseppina Passeri Lignori",
       "paragraphs": [
         {
@@ -3815,7 +3561,6 @@
     },
     {
       "id": "1943-07-15_a254",
-      "unit_type": "advertisement",
       "headline": "Piccola Pubblicità",
       "paragraphs": [
         {
@@ -3830,7 +3575,6 @@
     },
     {
       "id": "1943-07-15_a255",
-      "unit_type": "article",
       "headline": "Il Ministro presenta",
       "paragraphs": [
         {
@@ -3845,7 +3589,6 @@
     },
     {
       "id": "1943-07-15_a256",
-      "unit_type": "article",
       "headline": "L'organizzazione estesa dal Giappone",
       "paragraphs": [
         {
@@ -3860,7 +3603,6 @@
     },
     {
       "id": "1943-07-15_a257",
-      "unit_type": "article",
       "headline": "Leggera sc- in tre ca-",
       "paragraphs": [
         {
@@ -3875,7 +3617,6 @@
     },
     {
       "id": "1943-07-15_a258",
-      "unit_type": "advertisement",
       "headline": "AUTOMOBILI BICICLETTE SPORT",
       "paragraphs": [
         {
@@ -3890,7 +3631,6 @@
     },
     {
       "id": "1943-07-15_a259",
-      "unit_type": "advertisement",
       "headline": "OCASIONI",
       "paragraphs": [
         {
@@ -3905,7 +3645,6 @@
     },
     {
       "id": "1943-07-15_a260",
-      "unit_type": "advertisement",
       "headline": "CAPITALI SOCIETÀ",
       "paragraphs": [
         {
@@ -3920,7 +3659,6 @@
     },
     {
       "id": "1943-07-15_a261",
-      "unit_type": "advertisement",
       "headline": "SMARRIRI",
       "paragraphs": [
         {
@@ -3935,7 +3673,6 @@
     },
     {
       "id": "1943-07-15_a262",
-      "unit_type": "advertisement",
       "headline": "MEDICINA IGIENE",
       "paragraphs": [
         {
@@ -3950,7 +3687,6 @@
     },
     {
       "id": "1943-07-15_a263",
-      "unit_type": "advertisement",
       "headline": "VILLINI CASE TERRA",
       "paragraphs": [
         {
@@ -3965,7 +3701,6 @@
     },
     {
       "id": "1943-07-15_a264",
-      "unit_type": "advertisement",
       "headline": "OFFERTE AFFITTI",
       "paragraphs": [
         {
@@ -3980,7 +3715,6 @@
     },
     {
       "id": "1943-07-15_a265",
-      "unit_type": "advertisement",
       "headline": "DOMANDE AFFITTI",
       "paragraphs": [
         {
@@ -3995,7 +3729,6 @@
     },
     {
       "id": "1943-07-15_a266",
-      "unit_type": "obituary",
       "headline": "Umberto Jannelli",
       "paragraphs": [
         {
@@ -4010,7 +3743,6 @@
     },
     {
       "id": "1943-07-15_a267",
-      "unit_type": "article",
       "headline": "ULTIME NOTIZIE DELLA NOTTE",
       "paragraphs": [
         {
@@ -4025,7 +3757,6 @@
     },
     {
       "id": "1943-07-15_a268",
-      "unit_type": "article",
       "headline": "Il Ministro d'Italia a Zagabria presenta le credenziali al Poglavnik",
       "paragraphs": [
         {
@@ -4040,7 +3771,6 @@
     },
     {
       "id": "1943-07-15_a269",
-      "unit_type": "article",
       "headline": "Il popolo italiano per la resistenza e per la vittoria",
       "paragraphs": [
         {
@@ -4055,7 +3785,6 @@
     },
     {
       "id": "1943-07-15_a270",
-      "unit_type": "obituary",
       "headline": "Umberto Jann",
       "paragraphs": [
         {
@@ -4070,7 +3799,6 @@
     },
     {
       "id": "1943-07-15_a271",
-      "unit_type": "obituary",
       "headline": "Ernesto Man",
       "paragraphs": [
         {
@@ -4085,7 +3813,6 @@
     },
     {
       "id": "1943-07-15_a272",
-      "unit_type": "article",
       "headline": "La \"Carta,\" non serve più",
       "paragraphs": [
         {
@@ -4100,7 +3827,6 @@
     },
     {
       "id": "1943-07-15_a273",
-      "unit_type": "article",
       "headline": "Una missione fallita",
       "paragraphs": [
         {
@@ -4115,7 +3841,6 @@
     },
     {
       "id": "1943-07-15_a274",
-      "unit_type": "article",
       "headline": "Il Congresso fa vacanza",
       "paragraphs": [
         {
@@ -4130,7 +3855,6 @@
     },
     {
       "id": "1943-07-15_a275",
-      "unit_type": "article",
       "headline": "Sinclair mette una pietra sopra l'affare Sikorsky",
       "paragraphs": [
         {
@@ -4145,7 +3869,6 @@
     },
     {
       "id": "1943-07-15_a276",
-      "unit_type": "article",
       "headline": "La gratitudine del popolo croato",
       "paragraphs": [
         {
@@ -4160,7 +3883,6 @@
     },
     {
       "id": "1943-07-15_a277",
-      "unit_type": "article",
       "headline": "Gli aerei nipponici martellano le posizioni americane delle isole del Sud Pacifico",
       "paragraphs": [
         {
@@ -4175,7 +3897,6 @@
     },
     {
       "id": "1943-07-15_a278",
-      "unit_type": "article",
       "headline": "L'organizzazione civile estesa dal Giappone a Giava",
       "paragraphs": [
         {
@@ -4190,7 +3911,6 @@
     },
     {
       "id": "1943-07-15_a279",
-      "unit_type": "article",
       "headline": "Lisbona, 14 notte.",
       "paragraphs": [
         {
@@ -4205,7 +3925,6 @@
     },
     {
       "id": "1943-07-15_a280",
-      "unit_type": "article",
       "headline": "Il tetto di una chiesa in Portogallo crolla durante la Messa",
       "paragraphs": [
         {
@@ -4220,7 +3939,6 @@
     },
     {
       "id": "1943-07-15_a281",
-      "unit_type": "article",
       "headline": "costruito a Berlino",
       "paragraphs": [
         {
@@ -4235,7 +3953,6 @@
     },
     {
       "id": "1943-07-15_a282",
-      "unit_type": "article",
       "headline": "Leggera scossa sismica",
       "paragraphs": [
         {
@@ -4250,7 +3967,6 @@
     },
     {
       "id": "1943-07-15_a283",
-      "unit_type": "article",
       "headline": "Per questo, il popolo croato conserverà eterna gratitudine al Duce dell'Italia fascista...",
       "paragraphs": [
         {
@@ -4265,7 +3981,6 @@
     },
     {
       "id": "1943-07-15_a284",
-      "unit_type": "advertisement",
       "headline": "ABBONAMENTI ESTIVI",
       "paragraphs": [
         {
@@ -4280,7 +3995,6 @@
     },
     {
       "id": "1943-07-15_a285",
-      "unit_type": "advertisement",
       "headline": "ABBONAMENTI ESTIVI",
       "paragraphs": [
         {
@@ -4295,7 +4009,6 @@
     },
     {
       "id": "1943-07-15_a286",
-      "unit_type": "article",
       "headline": "A Napoli",
       "paragraphs": [
         {
@@ -4310,7 +4023,6 @@
     },
     {
       "id": "1943-07-15_a287",
-      "unit_type": "article",
       "headline": "L'arresto d'un commissario dei mercati ortofrutticoli di Napoli",
       "paragraphs": [
         {
@@ -4325,7 +4037,6 @@
     },
     {
       "id": "1943-07-15_a288",
-      "unit_type": "article",
       "headline": "Severi provvedimenti del Prefetto di Milano contro impiegati del Coproma",
       "paragraphs": [
         {
@@ -4340,7 +4051,6 @@
     },
     {
       "id": "1943-07-15_a289",
-      "unit_type": "article",
       "headline": "Milano 14.",
       "paragraphs": [
         {
@@ -4355,7 +4065,6 @@
     },
     {
       "id": "1943-07-15_a290",
-      "unit_type": "article",
       "headline": "Lino Montagni è stato fermato e denunciato alla commissione per l'ammonizione e il commissario Gerardo Cobianchi è stato destituito dalla carica.",
       "paragraphs": [
         {
@@ -4370,7 +4079,6 @@
     },
     {
       "id": "1943-07-15_a291",
-      "unit_type": "obituary",
       "headline": "E' deceduto a Livorno all'età di 80 anni, il generale della riserva navale prof. Giovanni Italo Casola.",
       "paragraphs": [
         {
@@ -4385,7 +4093,6 @@
     },
     {
       "id": "1943-07-15_a292",
-      "unit_type": "obituary",
       "headline": "Vincenzo Bugiardini",
       "paragraphs": [
         {
@@ -4400,7 +4107,6 @@
     },
     {
       "id": "1943-07-15_a293",
-      "unit_type": "obituary",
       "headline": "Massimo di Donato",
       "paragraphs": [
         {
@@ -4415,7 +4121,6 @@
     },
     {
       "id": "1943-07-15_a294",
-      "unit_type": "obituary",
       "headline": "Adolfo Florenzani",
       "paragraphs": [
         {
@@ -4430,7 +4135,6 @@
     },
     {
       "id": "1943-07-15_a295",
-      "unit_type": "obituary",
       "headline": "Pietro Tattini",
       "paragraphs": [
         {
@@ -4445,7 +4149,6 @@
     },
     {
       "id": "1943-07-15_a296",
-      "unit_type": "obituary",
       "headline": "Vincenzo Bugiardini",
       "paragraphs": [
         {
@@ -4460,7 +4163,6 @@
     },
     {
       "id": "1943-07-15_a297",
-      "unit_type": "obituary",
       "headline": "Massimo di Donato",
       "paragraphs": [
         {
@@ -4475,7 +4177,6 @@
     },
     {
       "id": "1943-07-15_a298",
-      "unit_type": "obituary",
       "headline": "Adolfo Florenzani",
       "paragraphs": [
         {
@@ -4490,7 +4191,6 @@
     },
     {
       "id": "1943-07-15_a299",
-      "unit_type": "obituary",
       "headline": "Medico-chirurgo",
       "paragraphs": [
         {
@@ -4505,7 +4205,6 @@
     },
     {
       "id": "1943-07-15_a300",
-      "unit_type": "obituary",
       "headline": "Umberto Jannelli",
       "paragraphs": [
         {
@@ -4520,7 +4219,6 @@
     },
     {
       "id": "1943-07-15_a301",
-      "unit_type": "obituary",
       "headline": "Ernesto Marzetti",
       "paragraphs": [
         {
@@ -4535,7 +4233,6 @@
     },
     {
       "id": "1943-07-15_a302",
-      "unit_type": "obituary",
       "headline": "Avvocato Ortensio Spigarelli",
       "paragraphs": [
         {
@@ -4550,7 +4247,6 @@
     },
     {
       "id": "1943-07-15_a303",
-      "unit_type": "obituary",
       "headline": "Maria Giuseppina Iacometti in Savarese",
       "paragraphs": [
         {
@@ -4565,7 +4261,6 @@
     },
     {
       "id": "1943-07-15_a304",
-      "unit_type": "obituary",
       "headline": "Giulio Galiani",
       "paragraphs": [
         {
@@ -4580,7 +4275,6 @@
     },
     {
       "id": "1943-07-15_a305",
-      "unit_type": "obituary",
       "headline": "Giuseppina Passeri Lignori",
       "paragraphs": [
         {
@@ -4595,7 +4289,6 @@
     },
     {
       "id": "1943-07-15_a306",
-      "unit_type": "advertisement",
       "headline": "Piccola Pubblicità",
       "paragraphs": [
         {
@@ -4610,7 +4303,6 @@
     },
     {
       "id": "1943-07-15_a307",
-      "unit_type": "advertisement",
       "headline": "donna sport, vende Baldoni, Caprara & CAMION 522 gassogeno Roma otttime condizioni, pronta marcia, Ballilla tre marce. Piazza Coronari 1.",
       "paragraphs": [
         {
@@ -4625,7 +4317,6 @@
     },
     {
       "id": "1943-07-15_a308",
-      "unit_type": "advertisement",
       "headline": "GASSOGENO Sarasini, perfetto per autocarri vetture, trattori agricoli, impianti fissi. Roma, piazza Adriana numero 10-A",
       "paragraphs": [
         {
@@ -4640,7 +4331,6 @@
     },
     {
       "id": "1943-07-15_a309",
-      "unit_type": "advertisement",
       "headline": "IMBARCAZIONE Stella da regata complete vendesi. Richiedere caratteristiche: Ferrara, Littorio 131 Sorrento",
       "paragraphs": [
         {
@@ -4655,7 +4345,6 @@
     },
     {
       "id": "1943-07-15_a310",
-      "unit_type": "advertisement",
       "headline": "MOTOFURGONCINO ben gommato et Ballilla trimarce a gassogeno sgomma- tato. Visibili via della Luce 18.",
       "paragraphs": [
         {
@@ -4670,7 +4359,6 @@
     },
     {
       "id": "1943-07-15_a311",
-      "unit_type": "advertisement",
       "headline": "PRIVATO causa partenza vende due Ballilla quadrimarce. Viale Università numero 23",
       "paragraphs": [
         {
@@ -4685,7 +4373,6 @@
     },
     {
       "id": "1943-07-15_a312",
-      "unit_type": "advertisement",
       "headline": "PRIVATO vendo Topolino ultima serie gommata. Telef. 65-582.",
       "paragraphs": [
         {
@@ -4700,7 +4387,6 @@
     },
     {
       "id": "1943-07-15_a313",
-      "unit_type": "advertisement",
       "headline": "PROFESSIONISTA acquista downvane automobili, anche sgommati. Becca, Conegliano 16, Roma, telef. 770-139.",
       "paragraphs": [
         {
@@ -4715,7 +4401,6 @@
     },
     {
       "id": "1943-07-15_a314",
-      "unit_type": "advertisement",
       "headline": "VENDESI tre motofurgoni F.B. porta- ta qll 19. Uno PRV, F.R., viale Prin- cipe Piemonte 212.",
       "paragraphs": [
         {
@@ -4730,7 +4415,6 @@
     },
     {
       "id": "1943-07-15_a315",
-      "unit_type": "advertisement",
       "headline": "VENDESI 2 motofurgoni 350 ottimo stato. V. Gracchi 73 telef. 375-392.",
       "paragraphs": [
         {
@@ -4745,7 +4429,6 @@
     },
     {
       "id": "1943-07-15_a316",
-      "unit_type": "advertisement",
       "headline": "VENDESI 1500 gommata, Ballilla. Ar- tena decapottabile. Salita San Nicola da Tolentino 23.",
       "paragraphs": [
         {
@@ -4760,7 +4443,6 @@
     },
     {
       "id": "1943-07-15_a317",
-      "unit_type": "advertisement",
       "headline": "VENDO Davidson L. 5000 ultra Benel- li come nuova. Ettore Rolli 42, Sciam- plicotti.",
       "paragraphs": [
         {
@@ -4775,7 +4457,6 @@
     },
     {
       "id": "1943-07-15_a318",
-      "unit_type": "advertisement",
       "headline": "OCCASIONI L. 5 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -4790,7 +4471,6 @@
     },
     {
       "id": "1943-07-15_a319",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO bisogno acquistare porcellane, cristallerie, posate, orologi, vasi- lami, tappetzerie, indumenti, bianche- ria, macchine, anticaglie. Telefonare 65-740 - 52-583",
       "paragraphs": [
         {
@@ -4805,7 +4485,6 @@
     },
     {
       "id": "1943-07-15_a320",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO bisogno acquistare posaterie portasigarette candelabri servizi tè rottami ecc. Fabbrica Quattrocolo. Scrofa 34, telefono 51-367",
       "paragraphs": [
         {
@@ -4820,7 +4499,6 @@
     },
     {
       "id": "1943-07-15_a321",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO bisogno acquistare orologi, posaterie, vasellame, candelabri, servi- zi tè portasigarette, anche rottami oggetti vari. Pasquali piazza Sant’I- gazzio 171 telefono 64-072.",
       "paragraphs": [
         {
@@ -4835,7 +4513,6 @@
     },
     {
       "id": "1943-07-15_a322",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO bisogno acquistare macchini tendaggi posaterie pianoforti al- tro telefonare 63-688.",
       "paragraphs": [
         {
@@ -4850,7 +4527,6 @@
     },
     {
       "id": "1943-07-15_a323",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO oggi autorizzato rappresentante vendere direttamente al pubblico a prezzi irrisori, cento lusso! lumi Murano modelli ultima creazione; servizio bicchieri, vari piccoli oggetti uti- li regalo tutto Murano Gracchi 58.",
       "paragraphs": [
         {
@@ -4865,7 +4541,6 @@
     },
     {
       "id": "1943-07-15_a324",
-      "unit_type": "advertisement",
       "headline": "ABBISOGNA bascina occasione 5 - 10 quintali. Telefono 65 033.",
       "paragraphs": [
         {
@@ -4880,7 +4555,6 @@
     },
     {
       "id": "1943-07-15_a325",
-      "unit_type": "advertisement",
       "headline": "ABBISOGNAMI acquistare porcellane, posaterie, vasellame, tendaggi, indu- menti, anticaglie. Telef. 595-003",
       "paragraphs": [
         {
@@ -4895,7 +4569,6 @@
     },
     {
       "id": "1943-07-15_a326",
-      "unit_type": "advertisement",
       "headline": "ABBISOGNANCI arredando casa letti reti vestiario porcellane macchine altro Telefono 561438, 52713.",
       "paragraphs": [
         {
@@ -4910,7 +4583,6 @@
     },
     {
       "id": "1943-07-15_a327",
-      "unit_type": "advertisement",
       "headline": "ABITI acquistiamo usati uomo, bian- cheria, scarpe, recomi domicilio. Tele- fonare 564-433.",
       "paragraphs": [
         {
@@ -4925,7 +4597,6 @@
     },
     {
       "id": "1943-07-15_a328",
-      "unit_type": "advertisement",
       "headline": "ABITI pura lana, altri estivi costumi vende signora. Telefono 771-395.",
       "paragraphs": [
         {
@@ -4940,7 +4611,6 @@
     },
     {
       "id": "1943-07-15_a329",
-      "unit_type": "advertisement",
       "headline": "ACQUISTA posaterie, oggetti, rottami, perle coltivate Tritone 66 interno 4 - telefono 65-275",
       "paragraphs": [
         {
@@ -4955,7 +4625,6 @@
     },
     {
       "id": "1943-07-15_a330",
-      "unit_type": "advertisement",
       "headline": "ACQUISTASI per matrimonio mantel- lo importante nero biancheria oggetti casa. Telefono 870087.",
       "paragraphs": [
         {
@@ -4970,7 +4639,6 @@
     },
     {
       "id": "1943-07-15_a331",
-      "unit_type": "advertisement",
       "headline": "ACQUISTIAMO vestiti scarpe rottami biancheria macchine ed altro. Telefo- nare 51-717.",
       "paragraphs": [
         {
@@ -4985,7 +4653,6 @@
     },
     {
       "id": "1943-07-15_a332",
-      "unit_type": "advertisement",
       "headline": "ACQUISTO subito giacche mantelle guarnizioni ed altri capi importanti. Tel 35778",
       "paragraphs": [
         {
@@ -5000,7 +4667,6 @@
     },
     {
       "id": "1943-07-15_a333",
-      "unit_type": "advertisement",
       "headline": "ARREDAMENTO nuovissimo moderno inusuito urgenti cedere. Regina Mar- gherita 176, telef. 864-262",
       "paragraphs": [
         {
@@ -5015,7 +4681,6 @@
     },
     {
       "id": "1943-07-15_a334",
-      "unit_type": "advertisement",
       "headline": "AVVOCATO acquistarebbe da privato macchina scrivere e calcolatrice. Tele- fonare 857-563.",
       "paragraphs": [
         {
@@ -5030,7 +4695,6 @@
     },
     {
       "id": "1943-07-15_a335",
-      "unit_type": "advertisement",
       "headline": "BASGULA e bilico automatici o no. ac- quisitiamo purché buono stato. Scrivere con richiesta prezzo Messaggero 582 D",
       "paragraphs": [
         {
@@ -5045,7 +4709,6 @@
     },
     {
       "id": "1943-07-15_a336",
-      "unit_type": "advertisement",
       "headline": "BINARIO Decaupville scartamento 600 pronto su piazza cercasi Messaggero Cassella 648 D",
       "paragraphs": [
         {
@@ -5060,7 +4723,6 @@
     },
     {
       "id": "1943-07-15_a337",
-      "unit_type": "advertisement",
       "headline": "BINOCOLO prismatico Zeiss Delactem 8x40 con astuccio cuoio nuovo vendo occasione Libassi, viale Provincie 114 - ore 13 18",
       "paragraphs": [
         {
@@ -5075,7 +4737,6 @@
     },
     {
       "id": "1943-07-15_a338",
-      "unit_type": "advertisement",
       "headline": "BLOCCO 1000 borse di paglia modelli bellissimi prezzi irrisori. Alessi Pre- fetto 42.",
       "paragraphs": [
         {
@@ -5090,7 +4751,6 @@
     },
     {
       "id": "1943-07-15_a339",
-      "unit_type": "advertisement",
       "headline": "BRANDE. reti con piedini, divani, poltrone letto. Fabbricazione per- fetta, Garassino. Prefetti 16.",
       "paragraphs": [
         {
@@ -5105,7 +4765,6 @@
     },
     {
       "id": "1943-07-15_a340",
-      "unit_type": "advertisement",
       "headline": "CAN’ lupo purissimi, barboncini nani maltesi raffettieri volpini bracchi. Tele- fonare 63-420.",
       "paragraphs": [
         {
@@ -5120,7 +4779,6 @@
     },
     {
       "id": "1943-07-15_a341",
-      "unit_type": "advertisement",
       "headline": "CANOCCHIALE. binocolo, microscopio rototica qualsiasi tipo acquisto pagan- do bene Appia Nuova 15 tel 74-329.",
       "paragraphs": [
         {
@@ -5135,7 +4793,6 @@
     },
     {
       "id": "1943-07-15_a342",
-      "unit_type": "advertisement",
       "headline": "CAPI vestiario signora -bellissimi. Te- lefonare ore 13-15 393077.",
       "paragraphs": [
         {
@@ -5150,7 +4807,6 @@
     },
     {
       "id": "1943-07-15_a343",
-      "unit_type": "advertisement",
       "headline": "CARROZZINE seggiolini bambini anche ratealmente senza anticipo « Rap- presentanze Italiane ». Consulta 60 - ammezzante telef. 485-858.",
       "paragraphs": [
         {
@@ -5165,7 +4821,6 @@
     },
     {
       "id": "1943-07-15_a344",
-      "unit_type": "advertisement",
       "headline": "GARTAMAGERO, libri, giornali, riviste. acquistiamo ritirando domicilio. Tele- fonare 487-057 « La Raccogli carta ».",
       "paragraphs": [
         {
@@ -5180,7 +4835,6 @@
     },
     {
       "id": "1943-07-15_a345",
-      "unit_type": "advertisement",
       "headline": "CAVALLO baio 3enne tiro sella vende- si volendo anche finimenti lusso presso Bianchi, viale Tordiquinto 35.",
       "paragraphs": [
         {
@@ -5195,7 +4849,6 @@
     },
     {
       "id": "1943-07-15_a346",
-      "unit_type": "advertisement",
       "headline": "CUCINA tedesca originale Homann 4 fornelli gas due carbone pesciera forno scaldavivande seminuova occasionissi- ma. Via Stelletta 25-A.",
       "paragraphs": [
         {
@@ -5210,7 +4863,6 @@
     },
     {
       "id": "1943-07-15_a347",
-      "unit_type": "advertisement",
       "headline": "FRANCOBOLLI: collezioni varie: Italia, Colonie. Sammarino. Importanti lotti ottimo investimento vendo Messag- gero 463 D.",
       "paragraphs": [
         {
@@ -5225,7 +4877,6 @@
     },
     {
       "id": "1943-07-15_a348",
-      "unit_type": "advertisement",
       "headline": "FRIGORIFERO elettrico Siemens litri 120 seminuovo scaldabagnogas vend- oni. Telefono 863 627",
       "paragraphs": [
         {
@@ -5240,7 +4891,6 @@
     },
     {
       "id": "1943-07-15_a349",
-      "unit_type": "advertisement",
       "headline": "FUCILE Liegi Hamerles cal. 12 buo- nissimo stato vendo. Telef. 882-436.",
       "paragraphs": [
         {
@@ -5255,7 +4905,6 @@
     },
     {
       "id": "1943-07-15_a350",
-      "unit_type": "advertisement",
       "headline": "INCISIONE dischi speciale -impianto Martini Safar via Frattina 82, telefo- ne 64-233.",
       "paragraphs": [
         {
@@ -5270,7 +4919,6 @@
     },
     {
       "id": "1943-07-15_a351",
-      "unit_type": "advertisement",
       "headline": "LA Domus Aurea costruisce matrimoniali, pranzo, salotti, poltrone, arma- di guardaroba tipo. Prossima apertura nuova grande azienda. Visitateci. Facil- itazioni di pagamento. Via Flavia 108.",
       "paragraphs": [
         {
@@ -5285,7 +4933,6 @@
     },
     {
       "id": "1943-07-15_a352",
-      "unit_type": "advertisement",
       "headline": "LENZUOLA nuove finissime tutto lino 285x500 unico telo tovagliati 12 pura Fiandra nuovi vendonsi mancato ma- trimonio. Dettagliare offerte Messag- gero 646 D.",
       "paragraphs": [
         {
@@ -5300,7 +4947,6 @@
     },
     {
       "id": "1943-07-15_a353",
-      "unit_type": "advertisement",
       "headline": "MACCHINA scrivere calcolatrice usa- ta acquisto alto prezzo. Tel. 51-821.",
       "paragraphs": [
         {
@@ -5315,7 +4961,6 @@
     },
     {
       "id": "1943-07-15_a354",
-      "unit_type": "advertisement",
       "headline": "MOBILI tipo, modelli pronti, bellissi- mi, pratici, economici, fabbricati nei ns/ stabilimenti Alessi Corso Um- berto 494 - Roma.",
       "paragraphs": [
         {
@@ -5330,7 +4975,6 @@
     },
     {
       "id": "1943-07-15_a355",
-      "unit_type": "advertisement",
       "headline": "OCCASIONE: lenzuoli matrimoniali li- no. Oreste Salomone 14 int. 8 piano 2. OCCASIONE vendo radio Phonola se- minuova. P. Unità 13, rivolg. portiere.",
       "paragraphs": [
         {
@@ -5345,7 +4989,6 @@
     },
     {
       "id": "1943-07-15_a356",
-      "unit_type": "advertisement",
       "headline": "OMBRELLONI spiaggia e giardino ca- napa lumi per salotto, guida lana uni- colore marrone. divano letto, poltrone letto. Via Flavia 108, tel. 45-885.",
       "paragraphs": [
         {
@@ -5360,7 +5003,6 @@
     },
     {
       "id": "1943-07-15_a357",
-      "unit_type": "advertisement",
       "headline": "PELICCERIA M.A.P.I.L. Facilitazioni pagamento, rimodellature, confezioni perfette. Prezzi imbattibili. Pellicceria M.A.P.I.L., via Campo Marzio 69 pia- no primo",
       "paragraphs": [
         {
@@ -5375,7 +5017,6 @@
     },
     {
       "id": "1943-07-15_a358",
-      "unit_type": "advertisement",
       "headline": "PIANOFORTI italiani, tedeschi, piani studio Cassapanoforte Crescenzio. te- lefono 564 261.",
       "paragraphs": [
         {
@@ -5390,7 +5031,6 @@
     },
     {
       "id": "1943-07-15_a359",
-      "unit_type": "advertisement",
       "headline": "RADIO Phonola sei valvole come nuo- va vendesi. Telefono 490-705.",
       "paragraphs": [
         {
@@ -5405,7 +5045,6 @@
     },
     {
       "id": "1943-07-15_a360",
-      "unit_type": "advertisement",
       "headline": "RADIOBOAR oggetti arredamento vend- oni privatamente esclusi rivendito- ri. Telefono 776-333.",
       "paragraphs": [
         {
@@ -5420,7 +5059,6 @@
     },
     {
       "id": "1943-07-15_a361",
-      "unit_type": "advertisement",
       "headline": "RADIOGRAMMOFONO trionda efficien- tissimo vendesi vera occasione. Vicolo del Buco 7. Rosi.",
       "paragraphs": [
         {
@@ -5435,7 +5073,6 @@
     },
     {
       "id": "1943-07-15_a362",
-      "unit_type": "advertisement",
       "headline": "RADIOMARELLI Fido cristallo altro gioiello privatamente. Stazione Ostien- se 25 - tre.",
       "paragraphs": [
         {
@@ -5450,7 +5087,6 @@
     },
     {
       "id": "1943-07-15_a363",
-      "unit_type": "advertisement",
       "headline": "SCALA a chiocciola ghisa diametro 1.30 altezza 7.50 cercasi acquistare. Offer- te Albergo Eden, via Ludovisi.",
       "paragraphs": [
         {
@@ -5465,7 +5101,6 @@
     },
     {
       "id": "1943-07-15_a364",
-      "unit_type": "advertisement",
       "headline": "SCALDABAGNO elettrico Cosmos gran- de ventilatore Marlini ativaloni gomma 41 alti, vendo. Telefono 859 602.",
       "paragraphs": [
         {
@@ -5480,7 +5115,6 @@
     },
     {
       "id": "1943-07-15_a365",
-      "unit_type": "advertisement",
       "headline": "SIGNORA vende ricco mantello nuovo. Telefono 865-355.",
       "paragraphs": [
         {
@@ -5495,7 +5129,6 @@
     },
     {
       "id": "1943-07-15_a366",
-      "unit_type": "advertisement",
       "headline": "SINGER Continentale nuove vendo oc- carbonissima. Via Satrico 33 scala B. 2 piazza Tuscelo.",
       "paragraphs": [
         {
@@ -5510,7 +5143,6 @@
     },
     {
       "id": "1943-07-15_a367",
-      "unit_type": "advertisement",
       "headline": "VENDESI mantello nero ottime condi- zioni. Visibile pomeriggio Antonazzo Romano 9.",
       "paragraphs": [
         {
@@ -5525,7 +5157,6 @@
     },
     {
       "id": "1943-07-15_a368",
-      "unit_type": "advertisement",
       "headline": "VENDESI speciale bartabacchi, gelate- ria pasticceria, serietà, intermedia- tori. Telefono mattina 82-336.",
       "paragraphs": [
         {
@@ -5540,7 +5171,6 @@
     },
     {
       "id": "1943-07-15_a369",
-      "unit_type": "advertisement",
       "headline": "VENDITA straordinaria alla Casa del- le Occasioni. Mantelle giacche guarni- zioni altri capi importanti. Nel vostro interesse visitateci per tutto periodo estivo Carlo Mirabello 12-A telefo- no 35-778",
       "paragraphs": [
         {
@@ -5555,7 +5185,6 @@
     },
     {
       "id": "1943-07-15_a370",
-      "unit_type": "advertisement",
       "headline": "VENDITA estiva eccezionale - Signore eleganti: giacche mantelli, guarnizio- ni, altro Prezzi fine stagione. Faciliz- tazioni pagamento, M.A.P.I.L. via Cam- po Marzio 69 piano primo",
       "paragraphs": [
         {
@@ -5570,7 +5199,6 @@
     },
     {
       "id": "1943-07-15_a371",
-      "unit_type": "advertisement",
       "headline": "VENDO a privato maialicke anticke da tavola. Messaggero 650 D.",
       "paragraphs": [
         {
@@ -5585,7 +5213,6 @@
     },
     {
       "id": "1943-07-15_a372",
-      "unit_type": "advertisement",
       "headline": "VIOLONCELLO antico ottima voce - Artistico mandolino antico vendonsi! Messaggero 636 D.",
       "paragraphs": [
         {
@@ -5600,7 +5227,6 @@
     },
     {
       "id": "1943-07-15_a373",
-      "unit_type": "advertisement",
       "headline": "CAPITALI SOLIETÀ L. 5 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -5615,7 +5241,6 @@
     },
     {
       "id": "1943-07-15_a374",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO capitali per finanziamenti coscipienti, imprese - costruzioni, indus- trie importanti interessanti affari commerciali. Intermediari. Serietà ri- servatezza. Scrivere: «Sancar» Pom- peo 18.",
       "paragraphs": [
         {
@@ -5630,7 +5255,6 @@
     },
     {
       "id": "1943-07-15_a375",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO disponibili lotti terreno San- tasevera. Mare - assegnamenti finanzia- tori. Telefono 361-588.",
       "paragraphs": [
         {
@@ -5645,7 +5269,6 @@
     },
     {
       "id": "1943-07-15_a376",
-      "unit_type": "advertisement",
       "headline": "ABBISOGNANDO capitali cediamo ga- ranzia patrimonio grandi proprietà - centro Roma. Messaggero 29 D.",
       "paragraphs": [
         {
@@ -5660,7 +5283,6 @@
     },
     {
       "id": "1943-07-15_a377",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -5675,7 +5297,6 @@
     },
     {
       "id": "1943-07-15_a378",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -5690,7 +5311,6 @@
     },
     {
       "id": "1943-07-15_a379",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -5705,7 +5325,6 @@
     },
     {
       "id": "1943-07-15_a380",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -5720,7 +5339,6 @@
     },
     {
       "id": "1943-07-15_a381",
-      "unit_type": "advertisement",
       "headline": "CAMION 522 gassogeno Roma otttime condizioni, pronta marcia, Ballilla tre marce. Piazza Corasini 1.",
       "paragraphs": [
         {
@@ -5735,7 +5353,6 @@
     },
     {
       "id": "1943-07-15_a382",
-      "unit_type": "advertisement",
       "headline": "GASSOGENO Sarasini, perfetto per autocarri vetture, trattori agricoli, impianti fissi. Roma, piazza Adriana numero 10-A.",
       "paragraphs": [
         {
@@ -5750,7 +5367,6 @@
     },
     {
       "id": "1943-07-15_a383",
-      "unit_type": "advertisement",
       "headline": "IMBARCAZIONE Stella da regata completa vendesi. Richiedere caratteristiche: Ferrara, Littorio 131 Sorrento.",
       "paragraphs": [
         {
@@ -5765,7 +5381,6 @@
     },
     {
       "id": "1943-07-15_a384",
-      "unit_type": "advertisement",
       "headline": "MOTOFURGONCINO ben gommato et Ballilla trimarca a gassogeno sgomma- tio vendo miglior offerente. Visibili via della Luce 18.",
       "paragraphs": [
         {
@@ -5780,7 +5395,6 @@
     },
     {
       "id": "1943-07-15_a385",
-      "unit_type": "advertisement",
       "headline": "PRIVATO causa partenza vende due Ballilla quirmarque. Viale Università numero 23.",
       "paragraphs": [
         {
@@ -5795,7 +5409,6 @@
     },
     {
       "id": "1943-07-15_a386",
-      "unit_type": "advertisement",
       "headline": "PRIVATO vendo Topolino ultima serie gommata. Telef. 65-582.",
       "paragraphs": [
         {
@@ -5810,7 +5423,6 @@
     },
     {
       "id": "1943-07-15_a387",
-      "unit_type": "advertisement",
       "headline": "PROFESSIONISTA acquista dovunque automobile, anche sgommata. Brescia, Conegliano 16, Roma, telef. 770-139.",
       "paragraphs": [
         {
@@ -5825,7 +5437,6 @@
     },
     {
       "id": "1943-07-15_a388",
-      "unit_type": "advertisement",
       "headline": "VENDESI tre motofurgoni F.B. porta- tili q.1. Uno PRV, F.R., viale Prin- cipe Piemonte 212.",
       "paragraphs": [
         {
@@ -5840,7 +5451,6 @@
     },
     {
       "id": "1943-07-15_a389",
-      "unit_type": "advertisement",
       "headline": "VENDESI 2 motofurgoni 350 ottimo stato. V. Gracchi 73 telef. 375-392.",
       "paragraphs": [
         {
@@ -5855,7 +5465,6 @@
     },
     {
       "id": "1943-07-15_a390",
-      "unit_type": "advertisement",
       "headline": "VENDESI 1500 gommata, Ballilla Ar- tens decapottabile. Salita San Nicola da Tolentino 23.",
       "paragraphs": [
         {
@@ -5870,7 +5479,6 @@
     },
     {
       "id": "1943-07-15_a391",
-      "unit_type": "advertisement",
       "headline": "VENDO Dawidson L, 5000 altra Benel- lli come nuova. Ettore Rollì 42, Sciam- plicotti.",
       "paragraphs": [
         {
@@ -5885,7 +5493,6 @@
     },
     {
       "id": "1943-07-15_a392",
-      "unit_type": "advertisement",
       "headline": "OCCASIONI L. 5 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -5900,7 +5507,6 @@
     },
     {
       "id": "1943-07-15_a393",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO bisogno acquistare porcella- ne, cristallerie, posate, orologi, vasel- lami, tappezzerie, indumenti, bianche- ria, macchine, anticaglie. Telefono- ne 65-740 - 52-583.",
       "paragraphs": [
         {
@@ -5915,7 +5521,6 @@
     },
     {
       "id": "1943-07-15_a394",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO bisogno acquistare posaterie portasigarette candelebri servizi tè rottami ecc. Fabbrica Quattrocchi, Scrofa 34, telefono 51-367.",
       "paragraphs": [
         {
@@ -5930,7 +5535,6 @@
     },
     {
       "id": "1943-07-15_a395",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO bisogno acquistare orologi, posaterie, vasellame, candelebri, servi- zi tè, portasigarette, anche rottami oggetti vari. Pasquali piazza Sant’I- gazzio 171 telefono 64-072.",
       "paragraphs": [
         {
@@ -5945,7 +5549,6 @@
     },
     {
       "id": "1943-07-15_a396",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO bisogno acquistare macchi- ne tendaggi posaterie pianoforti al- tro telefono 63-688.",
       "paragraphs": [
         {
@@ -5960,7 +5563,6 @@
     },
     {
       "id": "1943-07-15_a397",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO oggi autorizzato rappresen- tante vendere direttamente al pubblico a prezzi irrisori, cento lussuosi limi Murano modelli ultima creazione; ser- vizio bicchieri, vari piccoli oggetti uti- li regalo tutto Murano-Gracchi 58.",
       "paragraphs": [
         {
@@ -5975,7 +5577,6 @@
     },
     {
       "id": "1943-07-15_a398",
-      "unit_type": "advertisement",
       "headline": "ABBISOGNA bascula occasione 5 - 10 quintali. Telefono 65 033.",
       "paragraphs": [
         {
@@ -5990,7 +5591,6 @@
     },
     {
       "id": "1943-07-15_a399",
-      "unit_type": "advertisement",
       "headline": "ABBISOGNAMO acquistare porcellane, posaterie, vasellame, tendaggi, indu- menti, anticaglie. Telef. 535-003.",
       "paragraphs": [
         {
@@ -6005,7 +5605,6 @@
     },
     {
       "id": "1943-07-15_a400",
-      "unit_type": "advertisement",
       "headline": "ABBISOGNAMO arredare casa letti reti vestiario porcellane macchine altro Telefono 561438, 52718.",
       "paragraphs": [
         {
@@ -6020,7 +5619,6 @@
     },
     {
       "id": "1943-07-15_a401",
-      "unit_type": "advertisement",
       "headline": "ABITI acquistiamo usati: uomo, bian- cheria, scarpe, recimi domicilio. Tele- fono 564-433.",
       "paragraphs": [
         {
@@ -6035,7 +5633,6 @@
     },
     {
       "id": "1943-07-15_a402",
-      "unit_type": "advertisement",
       "headline": "ABITI pura lana, altri estivi costumi vende signora. Telefono 771-395.",
       "paragraphs": [
         {
@@ -6050,7 +5647,6 @@
     },
     {
       "id": "1943-07-15_a403",
-      "unit_type": "advertisement",
       "headline": "ACQUISTA posaterie, oggetti, rottami, perle coltivate Tritone 66 interno 4 - telefono 65-275.",
       "paragraphs": [
         {
@@ -6065,7 +5661,6 @@
     },
     {
       "id": "1943-07-15_a404",
-      "unit_type": "advertisement",
       "headline": "ACQUISTASI per matrimonio mantel- lo importanti nero biancheria oggetti casa. Telefono 870087.",
       "paragraphs": [
         {
@@ -6080,7 +5675,6 @@
     },
     {
       "id": "1943-07-15_a405",
-      "unit_type": "advertisement",
       "headline": "ACQUISTIAMO vestiti scarpe rottami biancheria macchine ed altro. Telefo- nare 51-717.",
       "paragraphs": [
         {
@@ -6095,7 +5689,6 @@
     },
     {
       "id": "1943-07-15_a406",
-      "unit_type": "advertisement",
       "headline": "ACQUISTO subito giacche mantelle guarnizioni ed altri capi importanti. Tel 35728.",
       "paragraphs": [
         {
@@ -6110,7 +5703,6 @@
     },
     {
       "id": "1943-07-15_a407",
-      "unit_type": "advertisement",
       "headline": "ARREDAMENTO nuovissimo moderno insusso urgenti cedera. Regina Mar- gherita 176, telef. 864-262.",
       "paragraphs": [
         {
@@ -6125,7 +5717,6 @@
     },
     {
       "id": "1943-07-15_a408",
-      "unit_type": "advertisement",
       "headline": "AVVOCATO acquisterebbe da privato macchina serivere e calcolatrice. Tele- fone 857-563.",
       "paragraphs": [
         {
@@ -6140,7 +5731,6 @@
     },
     {
       "id": "1943-07-15_a409",
-      "unit_type": "advertisement",
       "headline": "BASCULA e bilioc automatici o no. ac- quisiti purché buono stato. Scrivere con richiesta prezzo Messaggero 582 D.",
       "paragraphs": [
         {
@@ -6155,7 +5745,6 @@
     },
     {
       "id": "1943-07-15_a410",
-      "unit_type": "advertisement",
       "headline": "BINARIO Decauville scartamento 600 pronto su piazza cercasi Messaggero Casella 648 D.",
       "paragraphs": [
         {
@@ -6170,7 +5759,6 @@
     },
     {
       "id": "1943-07-15_a411",
-      "unit_type": "advertisement",
       "headline": "BINOCOLO prismatico Zeiss Delactem 8x40 con asticolo cuolo nuovo vendo occasione Libassi, viale Provincie 114 - ore 13 18.",
       "paragraphs": [
         {
@@ -6185,7 +5773,6 @@
     },
     {
       "id": "1943-07-15_a412",
-      "unit_type": "advertisement",
       "headline": "BLOGGO 1000 borse di paglia modelli bellissimi prezzi irrisori. Alessi Pre- fetti; 42.",
       "paragraphs": [
         {
@@ -6200,7 +5787,6 @@
     },
     {
       "id": "1943-07-15_a413",
-      "unit_type": "advertisement",
       "headline": "BRANDE. reti con piedini, divani, poltrone letto. Fabbricazione per- fetta, Garassino. Prefetti 16.",
       "paragraphs": [
         {
@@ -6215,7 +5801,6 @@
     },
     {
       "id": "1943-07-15_a414",
-      "unit_type": "advertisement",
       "headline": "CANI lupo purissimi, barboncini, nani maltesi raffetter volpini bracchi. Tele- fono 63-420.",
       "paragraphs": [
         {
@@ -6230,7 +5815,6 @@
     },
     {
       "id": "1943-07-15_a415",
-      "unit_type": "advertisement",
       "headline": "CANOCCHIALE, binocolo, microscopio, rototica qualsiasi tipo acquisto pagan- do bene Apta Nuova 15 tel 74-329.",
       "paragraphs": [
         {
@@ -6245,7 +5829,6 @@
     },
     {
       "id": "1943-07-15_a416",
-      "unit_type": "advertisement",
       "headline": "CAPI vestiario origine bellissimi. Tele- fono ore 13-15 393077.",
       "paragraphs": [
         {
@@ -6260,7 +5843,6 @@
     },
     {
       "id": "1943-07-15_a417",
-      "unit_type": "advertisement",
       "headline": "CARROZZINE seggiolini bambini an- che ratealmente senza anticipo « Rap- presentanze Italiane » Consulta 60 - ammazzante telef. 485-858.",
       "paragraphs": [
         {
@@ -6275,7 +5857,6 @@
     },
     {
       "id": "1943-07-15_a418",
-      "unit_type": "advertisement",
       "headline": "GARTAMAGERO, libri giornali, riviste. acquistiamo ritirando domicilio. Tele- fone 487-057 - « La Raccolgicarta ».",
       "paragraphs": [
         {
@@ -6290,7 +5871,6 @@
     },
     {
       "id": "1943-07-15_a419",
-      "unit_type": "advertisement",
       "headline": "CAYALLO baio 3enne tiro sella vende- si volendo anche finimenti lusso presso Bianchi, viale Tordiquinto 33.",
       "paragraphs": [
         {
@@ -6305,7 +5885,6 @@
     },
     {
       "id": "1943-07-15_a420",
-      "unit_type": "advertisement",
       "headline": "CUCINA tedesca originale Homann 4 fornelli gas due carbone pesciera forno scaldavivande seminuova occasionissi- ma. Via Stelletta 25-A.",
       "paragraphs": [
         {
@@ -6320,7 +5899,6 @@
     },
     {
       "id": "1943-07-15_a421",
-      "unit_type": "advertisement",
       "headline": "FRANCOBOLLI: collezioni varie: Italia, Colonie, Sammarino, importanti lotti ottimo investimento vendo Messag- gero 463 D.",
       "paragraphs": [
         {
@@ -6335,7 +5913,6 @@
     },
     {
       "id": "1943-07-15_a422",
-      "unit_type": "advertisement",
       "headline": "FRIGORIFERO elettrico Siemens litri 120 seminuovo scaldabagnato gas vend- oni. Telefono 863 627.",
       "paragraphs": [
         {
@@ -6350,7 +5927,6 @@
     },
     {
       "id": "1943-07-15_a423",
-      "unit_type": "advertisement",
       "headline": "FUCILE Liegi Hammerle cal. 12 buo- nissimo stato vendo. Telef. 882-436.",
       "paragraphs": [
         {
@@ -6365,7 +5941,6 @@
     },
     {
       "id": "1943-07-15_a424",
-      "unit_type": "advertisement",
       "headline": "INCISIONE dischi speciale -impianto Martini Sàfar via Frattina 82, tele- fono 64-233.",
       "paragraphs": [
         {
@@ -6380,7 +5955,6 @@
     },
     {
       "id": "1943-07-15_a425",
-      "unit_type": "advertisement",
       "headline": "LA Domus Aurea costruisce matrimon- iali, pranzo, salotti, poltrone, arma- di guardaroba tipo. Prossima apertura nuova grande azienda. Visitate. Facil- itazioni di pagamento. Via Flavia 108.",
       "paragraphs": [
         {
@@ -6395,7 +5969,6 @@
     },
     {
       "id": "1943-07-15_a426",
-      "unit_type": "advertisement",
       "headline": "LENZUOLA nuove finissime tutto lino 280x300 unico teli tovagliati 12 pura Fiandra nuovi vendonsi mancato matrimo- nio. Dettagliare offerte Messag- gero 646 D.",
       "paragraphs": [
         {
@@ -6410,7 +5983,6 @@
     },
     {
       "id": "1943-07-15_a427",
-      "unit_type": "advertisement",
       "headline": "MACCHINA scrivere calcolatrice usa- ta acquisto alto prezzo Tel. 51-821.",
       "paragraphs": [
         {
@@ -6425,7 +5997,6 @@
     },
     {
       "id": "1943-07-15_a428",
-      "unit_type": "advertisement",
       "headline": "MOBILI tipo modelli pronti, bellissi- mi, pratici, economici, fabbricati nei ns/ stabilimenti Alessi Corso Um- berto 494 - Roma.",
       "paragraphs": [
         {
@@ -6440,7 +6011,6 @@
     },
     {
       "id": "1943-07-15_a429",
-      "unit_type": "advertisement",
       "headline": "OCCASIONE: lenzuoli matrimoniali li- no. Oreste Salomone 14 int. 8 piano 2. OCCASIONE vendo radio Phonola se- minuova. P. Unità 13, rivolg. portiere.",
       "paragraphs": [
         {
@@ -6455,7 +6025,6 @@
     },
     {
       "id": "1943-07-15_a430",
-      "unit_type": "advertisement",
       "headline": "OMBRELLONI spiaggia e giardino ca- napa lumi per salotto, guida lana uni- colore marrone, divano letto, poltrone letto. Via Flavia 108, tel. 45-885.",
       "paragraphs": [
         {
@@ -6470,7 +6039,6 @@
     },
     {
       "id": "1943-07-15_a431",
-      "unit_type": "advertisement",
       "headline": "PELLECERIA M.A.P.I.L. Facilitazioni pagamento, rimodellature, confezioni perfette Prezzi imbattibili. Pellicceria M.A.P.I.L., via Campo Marzio 69, pia- no primo.",
       "paragraphs": [
         {
@@ -6485,7 +6053,6 @@
     },
     {
       "id": "1943-07-15_a432",
-      "unit_type": "advertisement",
       "headline": "PIANOFORTI italiani, tedeschi, pian- isto Casapianoforte Crescentio. te- lefono 564 261.",
       "paragraphs": [
         {
@@ -6500,7 +6067,6 @@
     },
     {
       "id": "1943-07-15_a433",
-      "unit_type": "advertisement",
       "headline": "RADIO Phonola sei valvole come nuo- va vendesi Telefono 490-705.",
       "paragraphs": [
         {
@@ -6515,7 +6081,6 @@
     },
     {
       "id": "1943-07-15_a434",
-      "unit_type": "advertisement",
       "headline": "RADIOBAR oggetti arredamento vend- oni privatamente esclusi riyendito- ri. Telefono 776-333.",
       "paragraphs": [
         {
@@ -6530,7 +6095,6 @@
     },
     {
       "id": "1943-07-15_a435",
-      "unit_type": "advertisement",
       "headline": "RADIOGRAMMOFONO trionda efficien- tissimo vendesi vera occasione. Vicolo del Bucò 7. Rosi.",
       "paragraphs": [
         {
@@ -6545,7 +6109,6 @@
     },
     {
       "id": "1943-07-15_a436",
-      "unit_type": "advertisement",
       "headline": "RADIOMARELLI Fido cristallo altro gioiello privatamente. Stazione Ostien- te 35-tre.",
       "paragraphs": [
         {
@@ -6560,7 +6123,6 @@
     },
     {
       "id": "1943-07-15_a437",
-      "unit_type": "advertisement",
       "headline": "SCALA a chiocciola ghisa diametro 1.30 altezza 7.50 cercasi acquistatore. Offer- te Albergo Eden, via Ludovisi.",
       "paragraphs": [
         {
@@ -6575,7 +6137,6 @@
     },
     {
       "id": "1943-07-15_a438",
-      "unit_type": "advertisement",
       "headline": "SCALDABAGNO elettrico Cosmos gran- de ventilatore Marelli stivaloni gomma 41 alti. vendo. Telefono 859 602.",
       "paragraphs": [
         {
@@ -6590,7 +6151,6 @@
     },
     {
       "id": "1943-07-15_a439",
-      "unit_type": "advertisement",
       "headline": "SIGNORA vende ricco mantello nuovo. Telefono mattina 865-355.",
       "paragraphs": [
         {
@@ -6605,7 +6165,6 @@
     },
     {
       "id": "1943-07-15_a440",
-      "unit_type": "advertisement",
       "headline": "SINGER Continentale nuove vendo oc- carionissima. Via Satrio 33 scala B. 2 piazza Tuscolo.",
       "paragraphs": [
         {
@@ -6620,7 +6179,6 @@
     },
     {
       "id": "1943-07-15_a441",
-      "unit_type": "advertisement",
       "headline": "VENDESI mantello nero ottime condi- zioni. Visibile pomeriggio Antonazzo Romano 9.",
       "paragraphs": [
         {
@@ -6635,7 +6193,6 @@
     },
     {
       "id": "1943-07-15_a442",
-      "unit_type": "advertisement",
       "headline": "VENDESI pasticceria, serietà, intermedia- ri. Telefono mattina 82-336.",
       "paragraphs": [
         {
@@ -6650,7 +6207,6 @@
     },
     {
       "id": "1943-07-15_a443",
-      "unit_type": "advertisement",
       "headline": "VENDITA straordinaria alla Casa del- le Occasioni. Mantelle giacche guarni- zioni altri capi importanti. Nel vostro interesse visitate per tutto periodo Carlo Mirabelllo 12-A telefo- no 35-778.",
       "paragraphs": [
         {
@@ -6665,7 +6221,6 @@
     },
     {
       "id": "1943-07-15_a444",
-      "unit_type": "advertisement",
       "headline": "VENDITA estiva eccezionale - Signore eleganti: giacche mantelli, guarnizio- ni, altro Prezzi fine stagione. Facili- tazioni pagamento. M.A.P.I.L. via Cam- po Marzio 69 piano primo.",
       "paragraphs": [
         {
@@ -6680,7 +6235,6 @@
     },
     {
       "id": "1943-07-15_a445",
-      "unit_type": "advertisement",
       "headline": "VENDO a privato malolici antiche da tavola. Messaggero 650 D.",
       "paragraphs": [
         {
@@ -6695,7 +6249,6 @@
     },
     {
       "id": "1943-07-15_a446",
-      "unit_type": "advertisement",
       "headline": "VIOLINCELLO antico ottima voce - Artistico mandolino antico vendonsi - Messaggero 636 D.",
       "paragraphs": [
         {
@@ -6710,7 +6263,6 @@
     },
     {
       "id": "1943-07-15_a447",
-      "unit_type": "advertisement",
       "headline": "CAPITALI SOLIETA' L. 5 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -6725,7 +6277,6 @@
     },
     {
       "id": "1943-07-15_a448",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO capitali per finanziamenti coscipienti, imprese - costruzioni, indus- trie importanti interessanti affari commerciali. Intermediari Serietà ri- servatezza. Scrivere: « Sancar » Pom- peoangio 18.",
       "paragraphs": [
         {
@@ -6740,7 +6291,6 @@
     },
     {
       "id": "1943-07-15_a449",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO disponibili lotti terreno San- taevera. Mare - assegnabili finanzia- tori. Telefono 361-398.",
       "paragraphs": [
         {
@@ -6755,7 +6305,6 @@
     },
     {
       "id": "1943-07-15_a450",
-      "unit_type": "advertisement",
       "headline": "ABBISOGNANDO capitali cediamo ga- ranzia patrimonio grandi proprietà - centro Roma. Messaggero 29 D.",
       "paragraphs": [
         {
@@ -6770,7 +6319,6 @@
     },
     {
       "id": "1943-07-15_a451",
-      "unit_type": "advertisement",
       "headline": "ABBISOGNANDO capitali cedo garanzia",
       "paragraphs": [
         {
@@ -6785,7 +6333,6 @@
     },
     {
       "id": "1943-07-15_a452",
-      "unit_type": "advertisement",
       "headline": "ACCORDANTI mutui",
       "paragraphs": [
         {
@@ -6800,7 +6347,6 @@
     },
     {
       "id": "1943-07-15_a453",
-      "unit_type": "advertisement",
       "headline": "ACCORDO discontomia per tenutella",
       "paragraphs": [
         {
@@ -6815,7 +6361,6 @@
     },
     {
       "id": "1943-07-15_a454",
-      "unit_type": "advertisement",
       "headline": "APPARTAMENTI extrainsuo",
       "paragraphs": [
         {
@@ -6830,7 +6375,6 @@
     },
     {
       "id": "1943-07-15_a455",
-      "unit_type": "advertisement",
       "headline": "APPARTAMENTINO camera, servizi, term. ascensore",
       "paragraphs": [
         {
@@ -6845,7 +6389,6 @@
     },
     {
       "id": "1943-07-15_a456",
-      "unit_type": "advertisement",
       "headline": "APPARTAMENTO cedo garanzia occorrendo capitali",
       "paragraphs": [
         {
@@ -6860,7 +6403,6 @@
     },
     {
       "id": "1943-07-15_a457",
-      "unit_type": "advertisement",
       "headline": "CAPITALI collocchero",
       "paragraphs": [
         {
@@ -6875,7 +6417,6 @@
     },
     {
       "id": "1943-07-15_a458",
-      "unit_type": "advertisement",
       "headline": "CAPRI: villa lussuosissima, ammobiliata, vani 15, libera",
       "paragraphs": [
         {
@@ -6890,7 +6431,6 @@
     },
     {
       "id": "1943-07-15_a459",
-      "unit_type": "advertisement",
       "headline": "CONCEDO capitali su piccolo podere",
       "paragraphs": [
         {
@@ -6905,7 +6445,6 @@
     },
     {
       "id": "1943-07-15_a460",
-      "unit_type": "advertisement",
       "headline": "DENTIFRICIO importante, cercasi",
       "paragraphs": [
         {
@@ -6920,7 +6459,6 @@
     },
     {
       "id": "1943-07-15_a461",
-      "unit_type": "advertisement",
       "headline": "DISPONENDO capitale cerco garanzia",
       "paragraphs": [
         {
@@ -6935,7 +6473,6 @@
     },
     {
       "id": "1943-07-15_a462",
-      "unit_type": "advertisement",
       "headline": "NODICI ettari terreno agricolo disponibili periferia Roma",
       "paragraphs": [
         {
@@ -6950,7 +6487,6 @@
     },
     {
       "id": "1943-07-15_a463",
-      "unit_type": "advertisement",
       "headline": "OCORRENDOMI capitali cedersi garanzia terreni ortivi edilizi",
       "paragraphs": [
         {
@@ -6965,7 +6501,6 @@
     },
     {
       "id": "1943-07-15_a464",
-      "unit_type": "advertisement",
       "headline": "PRIVATO darebbe forte somma a mutuo anche frazionato",
       "paragraphs": [
         {
@@ -6980,7 +6515,6 @@
     },
     {
       "id": "1943-07-15_a465",
-      "unit_type": "advertisement",
       "headline": "TRE ettari, fermata autobus Portuense, zona avvenire, cedonsi garanzia",
       "paragraphs": [
         {
@@ -6995,7 +6529,6 @@
     },
     {
       "id": "1943-07-15_a466",
-      "unit_type": "notice",
       "headline": "SMARRIMENTI",
       "paragraphs": [
         {
@@ -7010,7 +6543,6 @@
     },
     {
       "id": "1943-07-15_a467",
-      "unit_type": "notice",
       "headline": "MEDICINA IGIENE",
       "paragraphs": [
         {
@@ -7025,7 +6557,6 @@
     },
     {
       "id": "1943-07-15_a468",
-      "unit_type": "notice",
       "headline": "VILLINI CASE TERRENI",
       "paragraphs": [
         {
@@ -7040,7 +6571,6 @@
     },
     {
       "id": "1943-07-15_a469",
-      "unit_type": "advertisement",
       "headline": "OFFERTE AFFITTO",
       "paragraphs": [
         {
@@ -7055,7 +6585,6 @@
     },
     {
       "id": "1943-07-15_a470",
-      "unit_type": "advertisement",
       "headline": "DOMANDE AFFITTO",
       "paragraphs": [
         {
@@ -7070,7 +6599,6 @@
     },
     {
       "id": "1943-07-15_a471",
-      "unit_type": "advertisement",
       "headline": "OFFERTE CAMERE E PENSIONI",
       "paragraphs": [
         {
@@ -7085,7 +6613,6 @@
     },
     {
       "id": "1943-07-15_a472",
-      "unit_type": "advertisement",
       "headline": "DOMANDE CAMERE E PENSIONI",
       "paragraphs": [
         {
@@ -7100,7 +6627,6 @@
     },
     {
       "id": "1943-07-15_a473",
-      "unit_type": "advertisement",
       "headline": "COLLEGI ISTITUTI EDUCAZIONE",
       "paragraphs": [
         {
@@ -7115,7 +6641,6 @@
     },
     {
       "id": "1943-07-15_a474",
-      "unit_type": "advertisement",
       "headline": "LEZIONI CONVERSAZIONI",
       "paragraphs": [
         {
@@ -7130,7 +6655,6 @@
     },
     {
       "id": "1943-07-15_a475",
-      "unit_type": "advertisement",
       "headline": "COLLEGI ISTITUTI EDUCAZIONE",
       "paragraphs": [
         {
@@ -7145,7 +6669,6 @@
     },
     {
       "id": "1943-07-15_a476",
-      "unit_type": "advertisement",
       "headline": "LEZIONI CONVERSACIONI",
       "paragraphs": [
         {
@@ -7160,7 +6683,6 @@
     },
     {
       "id": "1943-07-15_a477",
-      "unit_type": "advertisement",
       "headline": "LAUREANDI",
       "paragraphs": [
         {
@@ -7175,7 +6697,6 @@
     },
     {
       "id": "1943-07-15_a478",
-      "unit_type": "advertisement",
       "headline": "LINGUE moderne professore insegna, prepara esami. Traduzioni. Tel. 561-725",
       "paragraphs": [
         {
@@ -7190,7 +6711,6 @@
     },
     {
       "id": "1943-07-15_a479",
-      "unit_type": "advertisement",
       "headline": "RAGIONERIA matematica diritto biennio abilitazione rapida accurata preparazione esami settembre. Prof Borghi, telef. 369-382",
       "paragraphs": [
         {
@@ -7205,7 +6725,6 @@
     },
     {
       "id": "1943-07-15_a480",
-      "unit_type": "advertisement",
       "headline": "SCUOLA Femminile Taglio Confezione «Rossi». Corsi accelerati, diurni, serali, hanno subito inizio. Nazionale 230 telef. 480-852.",
       "paragraphs": [
         {
@@ -7220,7 +6739,6 @@
     },
     {
       "id": "1943-07-15_a481",
-      "unit_type": "advertisement",
       "headline": "STENODATTILOGRAFE commerciali in due mcs! Assoluta serietà garanzia. Telefonare a «Moscari» 7-9416",
       "paragraphs": [
         {
@@ -7235,7 +6753,6 @@
     },
     {
       "id": "1943-07-15_a482",
-      "unit_type": "advertisement",
       "headline": "STENOGRAPHA Cima insegnamento accurato venti lezioni, inizio lunedì diploma riconosciuto. Telef. 853-228.",
       "paragraphs": [
         {
@@ -7250,7 +6767,6 @@
     },
     {
       "id": "1943-07-15_a483",
-      "unit_type": "advertisement",
       "headline": "RAPPRESENTANZE PIAZZISTI Offerte L. 4 - Domande L. 3 per par.",
       "paragraphs": [
         {
@@ -7265,7 +6781,6 @@
     },
     {
       "id": "1943-07-15_a484",
-      "unit_type": "advertisement",
       "headline": "OFFERTE D'IMPIEGO L. 4 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -7280,7 +6795,6 @@
     },
     {
       "id": "1943-07-15_a485",
-      "unit_type": "advertisement",
       "headline": "ARTIGIANATO L. 3 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -7295,7 +6809,6 @@
     },
     {
       "id": "1943-07-15_a486",
-      "unit_type": "advertisement",
       "headline": "DOMANDE LAVORO L. 1.50 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -7310,7 +6823,6 @@
     },
     {
       "id": "1943-07-15_a487",
-      "unit_type": "article",
       "headline": "a Zagabria\nali al Poglavnic\nIl Duce dell'Italia fascista",
       "paragraphs": [
         {
@@ -7325,7 +6837,6 @@
     },
     {
       "id": "1943-07-15_a488",
-      "unit_type": "article",
       "headline": "La morte del prof.\ngenerale della ris",
       "paragraphs": [
         {
@@ -7340,7 +6851,6 @@
     },
     {
       "id": "1943-07-15_a489",
-      "unit_type": "advertisement",
       "headline": "ABONNAMENTI\nESTIVI\nIl Messaggero",
       "paragraphs": [
         {
@@ -7355,7 +6865,6 @@
     },
     {
       "id": "1943-07-15_a490",
-      "unit_type": "article",
       "headline": "Vittoria",
       "paragraphs": [
         {
@@ -7370,7 +6879,6 @@
     },
     {
       "id": "1943-07-15_a491",
-      "unit_type": "article",
       "headline": "Siede ad Ancona",
       "paragraphs": [
         {
@@ -7385,7 +6893,6 @@
     },
     {
       "id": "1943-07-15_a492",
-      "unit_type": "article",
       "headline": "regolatore Firenze",
       "paragraphs": [
         {
@@ -7400,7 +6907,6 @@
     },
     {
       "id": "1943-07-15_a493",
-      "unit_type": "article",
       "headline": "prof. G. I. Casola",
       "paragraphs": [
         {
@@ -7415,7 +6921,6 @@
     },
     {
       "id": "1943-07-15_a494",
-      "unit_type": "article",
       "headline": "RO PAVOLINI",
       "paragraphs": [
         {
@@ -7430,7 +6935,6 @@
     },
     {
       "id": "1943-07-15_a495",
-      "unit_type": "article",
       "headline": "Buggiardi",
       "paragraphs": [
         {
@@ -7445,7 +6949,6 @@
     },
     {
       "id": "1943-07-15_a496",
-      "unit_type": "article",
       "headline": "Florezzani",
       "paragraphs": [
         {
@@ -7460,7 +6963,6 @@
     },
     {
       "id": "1943-07-15_a497",
-      "unit_type": "obituary",
       "headline": "Contessa Rosina Cozza Caterini",
       "paragraphs": [
         {
@@ -7475,7 +6977,6 @@
     },
     {
       "id": "1943-07-15_a498",
-      "unit_type": "obituary",
       "headline": "Giulio Galiani",
       "paragraphs": [
         {
@@ -7490,7 +6991,6 @@
     },
     {
       "id": "1943-07-15_a499",
-      "unit_type": "obituary",
       "headline": "Dott. Ing. Arnaldo Rava",
       "paragraphs": [
         {
@@ -7505,7 +7005,6 @@
     },
     {
       "id": "1943-07-15_a500",
-      "unit_type": "advertisement",
       "headline": "AUTOMOBILI BICICLETTE SPORT",
       "paragraphs": [
         {
@@ -7520,7 +7019,6 @@
     },
     {
       "id": "1943-07-15_a501",
-      "unit_type": "advertisement",
       "headline": "OCCASIONI",
       "paragraphs": [
         {
@@ -7535,7 +7033,6 @@
     },
     {
       "id": "1943-07-15_a502",
-      "unit_type": "advertisement",
       "headline": "CESSIONI NEGOZI AZIENDE",
       "paragraphs": [
         {
@@ -7550,7 +7047,6 @@
     },
     {
       "id": "1943-07-15_a503",
-      "unit_type": "advertisement",
       "headline": "ANNUNZI VARI",
       "paragraphs": [
         {
@@ -7565,7 +7061,6 @@
     },
     {
       "id": "1943-07-15_a504",
-      "unit_type": "advertisement",
       "headline": "INFORMAZIONI. INVESTIGAZIONI",
       "paragraphs": [
         {
@@ -7580,7 +7075,6 @@
     },
     {
       "id": "1943-07-15_a505",
-      "unit_type": "advertisement",
       "headline": "CAPITALI SOLIETA'",
       "paragraphs": [
         {
@@ -7595,7 +7089,6 @@
     },
     {
       "id": "1943-07-15_a506",
-      "unit_type": "article",
       "headline": "Dal Mediterraneo al Pacifico",
       "paragraphs": [
         {
@@ -7610,7 +7103,6 @@
     },
     {
       "id": "1943-07-15_a507",
-      "unit_type": "article",
       "headline": "Il Ministro d",
       "paragraphs": [
         {
@@ -7625,7 +7117,6 @@
     },
     {
       "id": "1943-07-15_a508",
-      "unit_type": "article",
       "headline": "Sinclair mette una pietra sopra l'affare Sikorsky",
       "paragraphs": [
         {
@@ -7640,7 +7131,6 @@
     },
     {
       "id": "1943-07-15_a509",
-      "unit_type": "article",
       "headline": "Un ospedale sotterraneo costruito a Berlino",
       "paragraphs": [
         {
@@ -7655,7 +7145,6 @@
     },
     {
       "id": "1943-07-15_a510",
-      "unit_type": "article",
       "headline": "Gli aerei nipponici le posizioni delle isole del",
       "paragraphs": [
         {
@@ -7670,7 +7159,6 @@
     },
     {
       "id": "1943-07-15_a511",
-      "unit_type": "article",
       "headline": "Il nuovo G- della N-",
       "paragraphs": [
         {

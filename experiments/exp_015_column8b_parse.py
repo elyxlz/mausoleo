@@ -80,9 +80,9 @@ def _parse(text: str) -> list[dict[str, tp.Any]]:
     try:
         obj = _extract_json(text)
     except Exception:
-        return [{"unit_type": "article", "headline": None, "text": text}]
+        return [{"headline": None, "text": text}]
     arts = obj.get("articles", obj) if isinstance(obj, dict) else obj
-    return arts if isinstance(arts, list) else [{"unit_type": "article", "headline": None, "text": text}]
+    return arts if isinstance(arts, list) else [{"headline": None, "text": text}]
 
 
 def run_date(date: str) -> dict[str, tp.Any]:
@@ -97,8 +97,7 @@ def run_date(date: str) -> dict[str, tp.Any]:
             paras = [{"text": p.get("text", str(p)) if isinstance(p, dict) else str(p)} for p in paras]
             if not any(p["text"].strip() for p in paras):
                 continue
-            articles.append({"unit_type": art.get("unit_type", "article"),
-                             "headline": art.get("headline"), "paragraphs": paras, "page_span": [page]})
+            articles.append({"headline": art.get("headline"), "paragraphs": paras, "page_span": [page]})
     return {"date": date, "source": "exp_015_column8b_parse", "articles": articles}
 
 

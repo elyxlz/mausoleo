@@ -203,7 +203,7 @@ def run_date(date: str) -> dict:
         if not text.strip():
             continue
         pages_sorted = sorted(group_pages.get(gi, {flat[grp[0]]["page"]}))
-        articles.append({"unit_type": "article", "headline": title,
+        articles.append({"headline": title,
                          "paragraphs": [{"text": text}],
                          "page_span": [pages_sorted[0], pages_sorted[-1]] if len(pages_sorted) > 1 else [pages_sorted[0]]})
     return {"date": date, "source": "exp_009_article_fillguard", "articles": articles}

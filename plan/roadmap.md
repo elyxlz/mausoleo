@@ -51,15 +51,15 @@ Known concerns (solve when building, not before): persistent engine (models load
 
 ## Phase 3 — Hierarchical index, ClickHouse (LATER)
 
-Standing decisions: 7-level tree Paragraph → Article → Day → Month → Year → Decade → Archive (~several M / ~1–1.5M / ~29K / ~960 / 80 / 8 / 1 nodes); one ClickHouse `nodes` table with summary + embedding on every node, raw text at leaves only, vector search as escape hatch; deterministic IDs derived from Issue-schema IDs (`1923-03-15_a01_p02` → … → `archive`); article nodes carry `unit_type` / `headline` / `page_span` straight from the Issue schema; summaries roughly the same size at every level (~200–400 words), entity-rich, written to support a drill-down decision; built bottom-up as a repeatable batch job pinned to a corpus version — re-OCR implies rebuild.
+Standing decisions: 7-level tree Paragraph → Article → Day → Month → Year → Decade → Archive (~several M / ~1–1.5M / ~29K / ~960 / 80 / 8 / 1 nodes); one ClickHouse `nodes` table with summary + embedding on every node, raw text at leaves only, vector search as escape hatch; deterministic IDs derived from Issue-schema IDs (`1923-03-15_a01_p02` → … → `archive`); article nodes carry `headline` / `page_span` straight from the Issue schema; summaries roughly the same size at every level (~200–400 words), entity-rich, written to support a drill-down decision; built bottom-up as a repeatable batch job pinned to a corpus version — re-OCR implies rebuild.
 
 **Exit:** valid full tree (parents, children, ordering consistent), every node has summary + embedding, spot-checks pass across eras, rebuild from a corpus version is one command.
 
-**Open questions:** `unit_type` handling in summarization (ads/notices aggregated per day?); summarization + embedding GPU budget (~1.5M article summaries) and model choice, measured with the same discipline as the OCR budget; ClickHouse vector/FTS indexing specifics.
+**Open questions:** summarization + embedding GPU budget (~1.5M article summaries) and model choice, measured with the same discipline as the OCR budget; ClickHouse vector/FTS indexing specifics.
 
 ## Phase 4 — Agent navigation, API + CLI/MCP (LATER)
 
-Standing decisions: agent-first (the only user is an LLM agent; every interface returns structured JSON, no human formatting); MCP first-class alongside a typer CLI, both thin layers over one FastAPI + ClickHouse service; core operations node / children / parent / text / root / semantic search / keyword search / stats, with level, date-range and unit_type filters; tool descriptions ship with the server and get iterated against real agent transcripts; deployment is a single `docker compose up` (server + ClickHouse, DB never exposed).
+Standing decisions: agent-first (the only user is an LLM agent; every interface returns structured JSON, no human formatting); MCP first-class alongside a typer CLI, both thin layers over one FastAPI + ClickHouse service; core operations node / children / parent / text / root / semantic search / keyword search / stats, with level and date-range filters; tool descriptions ship with the server and get iterated against real agent transcripts; deployment is a single `docker compose up` (server + ClickHouse, DB never exposed).
 
 **Exit:** an LLM agent answers the benchmark queries — "tell me everything about the Pichinon family", "how did the collective consciousness of ordinary Romans change during fascism?", "interesting restaurant stories from Trastevere" — reaching primary-source paragraphs in a reasonable number of tool calls.
 

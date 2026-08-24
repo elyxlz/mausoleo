@@ -5,7 +5,6 @@
   "articles": [
     {
       "id": "1910-06-15_a00",
-      "unit_type": "article",
       "headline": "Cose telefoniche",
       "paragraphs": [
         {
@@ -20,7 +19,6 @@
     },
     {
       "id": "1910-06-15_a01",
-      "unit_type": "article",
       "headline": "L'ultima enciclica",
       "paragraphs": [
         {
@@ -35,7 +33,6 @@
     },
     {
       "id": "1910-06-15_a02",
-      "unit_type": "article",
       "headline": "CHIESA E STATO IN SPAGNA",
       "paragraphs": [
         {
@@ -50,7 +47,6 @@
     },
     {
       "id": "1910-06-15_a03",
-      "unit_type": "article",
       "headline": "Il lavoro diplomatico per la questione di Creta",
       "paragraphs": [
         {
@@ -65,7 +61,6 @@
     },
     {
       "id": "1910-06-15_a04",
-      "unit_type": "article",
       "headline": "Gravi inondazioni nella vallata dell'Ahr",
       "paragraphs": [
         {
@@ -80,7 +75,6 @@
     },
     {
       "id": "1910-06-15_a05",
-      "unit_type": "article",
       "headline": "Cronaca Parlamentare",
       "paragraphs": [
         {
@@ -95,7 +89,6 @@
     },
     {
       "id": "1910-06-15_a06",
-      "unit_type": "article",
       "headline": "La Camera francese discute la politica del Governo",
       "paragraphs": [
         {
@@ -110,7 +103,6 @@
     },
     {
       "id": "1910-06-15_a07",
-      "unit_type": "article",
       "headline": "Alla Duma dell'impero Contro la Finlandia - Per gli abrei",
       "paragraphs": [
         {
@@ -125,7 +117,6 @@
     },
     {
       "id": "1910-06-15_a08",
-      "unit_type": "article",
       "headline": "Un \" raid \", in aereo piano Da New-York a Filadelfia",
       "paragraphs": [
         {
@@ -140,7 +131,6 @@
     },
     {
       "id": "1910-06-15_a09",
-      "unit_type": "article",
       "headline": "In Italia e fuori",
       "paragraphs": [
         {
@@ -155,7 +145,6 @@
     },
     {
       "id": "1910-06-15_a10",
-      "unit_type": "article",
       "headline": "SUICIDIO ALLA DINAMITE",
       "paragraphs": [
         {
@@ -170,7 +159,6 @@
     },
     {
       "id": "1910-06-15_a11",
-      "unit_type": "article",
       "headline": "Aggredito e ferito per odii elettorali",
       "paragraphs": [
         {
@@ -185,7 +173,6 @@
     },
     {
       "id": "1910-06-15_a12",
-      "unit_type": "article",
       "headline": "Note in margine",
       "paragraphs": [
         {
@@ -200,7 +187,6 @@
     },
     {
       "id": "1910-06-15_a13",
-      "unit_type": "article",
       "headline": "Le questioni della difesa navale alla Camera",
       "paragraphs": [
         {
@@ -215,7 +201,6 @@
     },
     {
       "id": "1910-06-15_a14",
-      "unit_type": "article",
       "headline": "CALISSANO — La Camera può rendermi ragione che io non ho discusso la sentenza del tribunale...",
       "paragraphs": [
         {
@@ -230,7 +215,6 @@
     },
     {
       "id": "1910-06-15_a15",
-      "unit_type": "article",
       "headline": "Per un superstite della spedizione di Rosolino Pile",
       "paragraphs": [
         {
@@ -245,7 +229,6 @@
     },
     {
       "id": "1910-06-15_a16",
-      "unit_type": "article",
       "headline": "La ricomposizione del com. di Fiesole",
       "paragraphs": [
         {
@@ -260,7 +243,6 @@
     },
     {
       "id": "1910-06-15_a17",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -275,7 +257,6 @@
     },
     {
       "id": "1910-06-15_a18",
-      "unit_type": "article",
       "headline": "Dichiarazioni del Governo alla S. S.",
       "paragraphs": [
         {
@@ -290,7 +271,6 @@
     },
     {
       "id": "1910-06-15_a19",
-      "unit_type": "article",
       "headline": "Cose telefoniche",
       "paragraphs": [
         {
@@ -305,7 +285,6 @@
     },
     {
       "id": "1910-06-15_a20",
-      "unit_type": "article",
       "headline": "Alla Duma dell'impero",
       "paragraphs": [
         {
@@ -320,7 +299,6 @@
     },
     {
       "id": "1910-06-15_a21",
-      "unit_type": "article",
       "headline": "La Camera francese discute la politica del Governo",
       "paragraphs": [
         {
@@ -335,7 +313,6 @@
     },
     {
       "id": "1910-06-15_a22",
-      "unit_type": "article",
       "headline": "Un \" raid \", in aereoplano Da New-York a Filadelfia",
       "paragraphs": [
         {
@@ -350,7 +327,6 @@
     },
     {
       "id": "1910-06-15_a23",
-      "unit_type": "article",
       "headline": "Alla Duma dell'impero Contro la Finlandia - Per gli abresi",
       "paragraphs": [
         {
@@ -365,7 +341,6 @@
     },
     {
       "id": "1910-06-15_a24",
-      "unit_type": "article",
       "headline": "L'ultima enciclica\nLa risposta della Santa Sede",
       "paragraphs": [
         {
@@ -380,7 +355,6 @@
     },
     {
       "id": "1910-06-15_a25",
-      "unit_type": "article",
       "headline": "CHIESA E STATO IN SPAGNA\nLa protesta del Vaticano",
       "paragraphs": [
         {
@@ -395,7 +369,6 @@
     },
     {
       "id": "1910-06-15_a26",
-      "unit_type": "article",
       "headline": "Il generale turco Salih, ex-ministro della guerra, ha accettato il portafoglio della marina.",
       "paragraphs": [
         {
@@ -410,7 +383,6 @@
     },
     {
       "id": "1910-06-15_a27",
-      "unit_type": "article",
       "headline": "SUICIDIO ALLA DINAMITE",
       "paragraphs": [
         {
@@ -425,7 +397,6 @@
     },
     {
       "id": "1910-06-15_a28",
-      "unit_type": "editorial",
       "headline": "Note in margine\nDivagazioni di stagione",
       "paragraphs": [
         {
@@ -440,7 +411,6 @@
     },
     {
       "id": "1910-06-15_a29",
-      "unit_type": "article",
       "headline": "Le questioni della difesa navale alla Camera",
       "paragraphs": [
         {
@@ -455,7 +425,6 @@
     },
     {
       "id": "1910-06-15_a30",
-      "unit_type": "article",
       "headline": "La Camera discute la politica",
       "paragraphs": [
         {
@@ -470,7 +439,6 @@
     },
     {
       "id": "1910-06-15_a31",
-      "unit_type": "article",
       "headline": "Alla Duma Contro la Finlandia",
       "paragraphs": [
         {
@@ -485,7 +453,6 @@
     },
     {
       "id": "1910-06-15_a32",
-      "unit_type": "article",
       "headline": "Un \" raid \", Da New-York",
       "paragraphs": [
         {
@@ -500,7 +467,6 @@
     },
     {
       "id": "1910-06-15_a33",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -515,7 +481,6 @@
     },
     {
       "id": "1910-06-15_a34",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -530,7 +495,6 @@
     },
     {
       "id": "1910-06-15_a35",
-      "unit_type": "article",
       "headline": "Cronaca Parlamentare\nDifese navale alla Camera",
       "paragraphs": [
         {
@@ -545,7 +509,6 @@
     },
     {
       "id": "1910-06-15_a36",
-      "unit_type": "article",
       "headline": "Cose telefoniche",
       "paragraphs": [
         {
@@ -560,7 +523,6 @@
     },
     {
       "id": "1910-06-15_a37",
-      "unit_type": "article",
       "headline": "L'ultima",
       "paragraphs": [
         {
@@ -575,7 +537,6 @@
     },
     {
       "id": "1910-06-15_a38",
-      "unit_type": "article",
       "headline": "La Camera francese",
       "paragraphs": [
         {
@@ -590,7 +551,6 @@
     },
     {
       "id": "1910-06-15_a39",
-      "unit_type": "article",
       "headline": "CHIESA E",
       "paragraphs": [
         {
@@ -605,7 +565,6 @@
     },
     {
       "id": "1910-06-15_a40",
-      "unit_type": "article",
       "headline": "Dichiarazioni",
       "paragraphs": [
         {
@@ -620,7 +579,6 @@
     },
     {
       "id": "1910-06-15_a41",
-      "unit_type": "article",
       "headline": "Il lavoro diplomatico",
       "paragraphs": [
         {
@@ -635,7 +593,6 @@
     },
     {
       "id": "1910-06-15_a42",
-      "unit_type": "article",
       "headline": "Gravi inondazioni",
       "paragraphs": [
         {
@@ -650,7 +607,6 @@
     },
     {
       "id": "1910-06-15_a43",
-      "unit_type": "article",
       "headline": "In \" raid\", in aereoplano",
       "paragraphs": [
         {
@@ -665,7 +621,6 @@
     },
     {
       "id": "1910-06-15_a44",
-      "unit_type": "article",
       "headline": "Le questioni della",
       "paragraphs": [
         {
@@ -680,7 +635,6 @@
     },
     {
       "id": "1910-06-15_a45",
-      "unit_type": "article",
       "headline": "Cose telefoniche",
       "paragraphs": [
         {
@@ -695,7 +649,6 @@
     },
     {
       "id": "1910-06-15_a46",
-      "unit_type": "article",
       "headline": "Un \" raid \", in aereoplano Da New-York a Filadelfia",
       "paragraphs": [
         {
@@ -710,7 +663,6 @@
     },
     {
       "id": "1910-06-15_a47",
-      "unit_type": "article",
       "headline": "L'ultima enciclica\nLa risposta della Santa Sede",
       "paragraphs": [
         {
@@ -725,7 +677,6 @@
     },
     {
       "id": "1910-06-15_a48",
-      "unit_type": "article",
       "headline": "CHIESA E STATO IN SPAGNA\nLa protesta del Vaticano",
       "paragraphs": [
         {
@@ -740,7 +691,6 @@
     },
     {
       "id": "1910-06-15_a49",
-      "unit_type": "article",
       "headline": "Il lavoro diplomatico per la questione di Creta",
       "paragraphs": [
         {
@@ -755,7 +705,6 @@
     },
     {
       "id": "1910-06-15_a50",
-      "unit_type": "article",
       "headline": "Difesa navale alla Camera",
       "paragraphs": [
         {
@@ -770,7 +719,6 @@
     },
     {
       "id": "1910-06-15_a51",
-      "unit_type": "article",
       "headline": "E qui l'on. Bettolo, a sostegno della sua affermazione ricorda che sino dal 1876 il ministro Saint-Bon iniziò col Dutillo e col Dandoto la vera e grande rivoluzione nella costruzione e nell'armamento delle navi da guerra, e la attuazione di un programma di cui dimostra il logico e ininterrotto svolgimento.",
       "paragraphs": [
         {
@@ -785,7 +733,6 @@
     },
     {
       "id": "1910-06-15_a52",
-      "unit_type": "article",
       "headline": "AL SENATO",
       "paragraphs": [
         {
@@ -800,7 +747,6 @@
     },
     {
       "id": "1910-06-15_a53",
-      "unit_type": "article",
       "headline": "Sassate contro un freno",
       "paragraphs": [
         {
@@ -815,7 +761,6 @@
     },
     {
       "id": "1910-06-15_a54",
-      "unit_type": "article",
       "headline": "Furibonda rissa a Ruvo di Puglia",
       "paragraphs": [
         {
@@ -830,7 +775,6 @@
     },
     {
       "id": "1910-06-15_a55",
-      "unit_type": "article",
       "headline": "La calma del russo Ispolatoff",
       "paragraphs": [
         {
@@ -845,7 +789,6 @@
     },
     {
       "id": "1910-06-15_a56",
-      "unit_type": "article",
       "headline": "Le informazioni del giornalista americano",
       "paragraphs": [
         {
@@ -860,7 +803,6 @@
     },
     {
       "id": "1910-06-15_a57",
-      "unit_type": "article",
       "headline": "Taft promette luce completa al padre di Porter",
       "paragraphs": [
         {
@@ -875,7 +817,6 @@
     },
     {
       "id": "1910-06-15_a58",
-      "unit_type": "article",
       "headline": "Morta per una frattura al cranio",
       "paragraphs": [
         {
@@ -890,7 +831,6 @@
     },
     {
       "id": "1910-06-15_a59",
-      "unit_type": "article",
       "headline": "Le stranezze della Scott quale attrice",
       "paragraphs": [
         {
@@ -905,7 +845,6 @@
     },
     {
       "id": "1910-06-15_a60",
-      "unit_type": "article",
       "headline": "Modello! Perché aveva divorziato",
       "paragraphs": [
         {
@@ -920,7 +859,6 @@
     },
     {
       "id": "1910-06-15_a61",
-      "unit_type": "article",
       "headline": "Porter visto alla stazione di Como",
       "paragraphs": [
         {
@@ -935,7 +873,6 @@
     },
     {
       "id": "1910-06-15_a62",
-      "unit_type": "article",
       "headline": "Le manovre di campagna in Sardegna",
       "paragraphs": [
         {
@@ -950,7 +887,6 @@
     },
     {
       "id": "1910-06-15_a63",
-      "unit_type": "article",
       "headline": "Per i minatori sardi",
       "paragraphs": [
         {
@@ -965,7 +901,6 @@
     },
     {
       "id": "1910-06-15_a64",
-      "unit_type": "article",
       "headline": "Grave disgrazia in uno stabilimento Quattro operai feriti",
       "paragraphs": [
         {
@@ -980,7 +915,6 @@
     },
     {
       "id": "1910-06-15_a65",
-      "unit_type": "article",
       "headline": "Fossa (Aquila). 14.",
       "paragraphs": [
         {
@@ -995,7 +929,6 @@
     },
     {
       "id": "1910-06-15_a66",
-      "unit_type": "article",
       "headline": "Uccisore della madre!",
       "paragraphs": [
         {
@@ -1010,7 +943,6 @@
     },
     {
       "id": "1910-06-15_a67",
-      "unit_type": "article",
       "headline": "Stosse di terremoto in Calabria e Sicilia",
       "paragraphs": [
         {
@@ -1025,7 +957,6 @@
     },
     {
       "id": "1910-06-15_a68",
-      "unit_type": "article",
       "headline": "I clericali di Firenze giocano sull'equivoco",
       "paragraphs": [
         {
@@ -1040,7 +971,6 @@
     },
     {
       "id": "1910-06-15_a69",
-      "unit_type": "article",
       "headline": "Un lugubre fardello",
       "paragraphs": [
         {
@@ -1055,7 +985,6 @@
     },
     {
       "id": "1910-06-15_a70",
-      "unit_type": "article",
       "headline": "Crisi municipale ad Alessandria",
       "paragraphs": [
         {
@@ -1070,7 +999,6 @@
     },
     {
       "id": "1910-06-15_a71",
-      "unit_type": "article",
       "headline": "MOVIMENTO PROFESSIONALE",
       "paragraphs": [
         {
@@ -1085,7 +1013,6 @@
     },
     {
       "id": "1910-06-15_a72",
-      "unit_type": "article",
       "headline": "SPORT",
       "paragraphs": [
         {
@@ -1100,7 +1027,6 @@
     },
     {
       "id": "1910-06-15_a73",
-      "unit_type": "article",
       "headline": "Fossa (Aquila). 14.",
       "paragraphs": [
         {
@@ -1115,7 +1041,6 @@
     },
     {
       "id": "1910-06-15_a74",
-      "unit_type": "article",
       "headline": "Uccisore della madre!",
       "paragraphs": [
         {
@@ -1130,7 +1055,6 @@
     },
     {
       "id": "1910-06-15_a75",
-      "unit_type": "article",
       "headline": "Guardia campestre ferita a morte da due pregiudicati rissanti",
       "paragraphs": [
         {
@@ -1145,7 +1069,6 @@
     },
     {
       "id": "1910-06-15_a76",
-      "unit_type": "article",
       "headline": "Srosse di terremoto in Calabria e Sicilia Segnalazioni a Mileto",
       "paragraphs": [
         {
@@ -1160,7 +1083,6 @@
     },
     {
       "id": "1910-06-15_a77",
-      "unit_type": "article",
       "headline": "Ricorrenza storica 15 giugno",
       "paragraphs": [
         {
@@ -1175,7 +1097,6 @@
     },
     {
       "id": "1910-06-15_a78",
-      "unit_type": "article",
       "headline": "IL PADRE DI ROSOLINO PILO E I BORBONI",
       "paragraphs": [
         {
@@ -1190,7 +1111,6 @@
     },
     {
       "id": "1910-06-15_a79",
-      "unit_type": "article",
       "headline": "LE STATUETTE CONSACRATE AI MORTI",
       "paragraphs": [
         {
@@ -1205,7 +1125,6 @@
     },
     {
       "id": "1910-06-15_a80",
-      "unit_type": "article",
       "headline": "IL MATRIMONIO IN AMERICA",
       "paragraphs": [
         {
@@ -1220,7 +1139,6 @@
     },
     {
       "id": "1910-06-15_a81",
-      "unit_type": "article",
       "headline": "STATISTICA POSTALE",
       "paragraphs": [
         {
@@ -1235,7 +1153,6 @@
     },
     {
       "id": "1910-06-15_a82",
-      "unit_type": "article",
       "headline": "L'UNIONE FA LA FORZA!",
       "paragraphs": [
         {
@@ -1250,7 +1167,6 @@
     },
     {
       "id": "1910-06-15_a83",
-      "unit_type": "article",
       "headline": "FALSI PUDORI AMERICANI",
       "paragraphs": [
         {
@@ -1265,7 +1181,6 @@
     },
     {
       "id": "1910-06-15_a84",
-      "unit_type": "article",
       "headline": "AFORISMI E DETTI SULLE DONNE",
       "paragraphs": [
         {
@@ -1280,7 +1195,6 @@
     },
     {
       "id": "1910-06-15_a85",
-      "unit_type": "article",
       "headline": "LA DELINQUENZA NEI COLOMBI",
       "paragraphs": [
         {
@@ -1295,7 +1209,6 @@
     },
     {
       "id": "1910-06-15_a86",
-      "unit_type": "article",
       "headline": "I versi",
       "paragraphs": [
         {
@@ -1310,7 +1223,6 @@
     },
     {
       "id": "1910-06-15_a87",
-      "unit_type": "article",
       "headline": "Fossa (Aquila), 14.",
       "paragraphs": [
         {
@@ -1325,7 +1237,6 @@
     },
     {
       "id": "1910-06-15_a88",
-      "unit_type": "article",
       "headline": "Risultato della madre!",
       "paragraphs": [
         {
@@ -1340,7 +1251,6 @@
     },
     {
       "id": "1910-06-15_a89",
-      "unit_type": "article",
       "headline": "Grave ferita a morte a raggiudicati rissanti",
       "paragraphs": [
         {
@@ -1355,7 +1265,6 @@
     },
     {
       "id": "1910-06-15_a90",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1370,7 +1279,6 @@
     },
     {
       "id": "1910-06-15_a91",
-      "unit_type": "article",
       "headline": "E qui l'on. Bettolo, a sostegno della sua affermazione ricorda che sino dal 1876 il ministro Saint-Bon iniziò col Dutillo e col Dandoto la vera e grande rivoluzione nella costruzione e nell'armamento delle navi da guerra, e la attuazione di un programma di cui dimostra il logico e ininterrotto svolgimento.",
       "paragraphs": [
         {
@@ -1385,7 +1293,6 @@
     },
     {
       "id": "1910-06-15_a92",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1400,7 +1307,6 @@
     },
     {
       "id": "1910-06-15_a93",
-      "unit_type": "article",
       "headline": "AL SENATO",
       "paragraphs": [
         {
@@ -1415,7 +1321,6 @@
     },
     {
       "id": "1910-06-15_a94",
-      "unit_type": "article",
       "headline": "Sassale contro un treno",
       "paragraphs": [
         {
@@ -1430,7 +1335,6 @@
     },
     {
       "id": "1910-06-15_a95",
-      "unit_type": "article",
       "headline": "Furibonda rissa a Ruvo di Puglia",
       "paragraphs": [
         {
@@ -1445,7 +1349,6 @@
     },
     {
       "id": "1910-06-15_a96",
-      "unit_type": "article",
       "headline": "Un S. Antonio non ammesso in chiesa",
       "paragraphs": [
         {
@@ -1460,7 +1363,6 @@
     },
     {
       "id": "1910-06-15_a97",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1475,7 +1377,6 @@
     },
     {
       "id": "1910-06-15_a98",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -1490,7 +1391,6 @@
     },
     {
       "id": "1910-06-15_a99",
-      "unit_type": "article",
       "headline": "Guardia campestre ferita a morte da due pregludicati rissanti",
       "paragraphs": [
         {
@@ -1505,7 +1405,6 @@
     },
     {
       "id": "1910-06-15_a100",
-      "unit_type": "article",
       "headline": "Srosse di terremoto in Calabria e Sicilia Segnalazioni a Mileto",
       "paragraphs": [
         {
@@ -1520,7 +1419,6 @@
     },
     {
       "id": "1910-06-15_a101",
-      "unit_type": "article",
       "headline": "A Gallina",
       "paragraphs": [
         {
@@ -1535,7 +1433,6 @@
     },
     {
       "id": "1910-06-15_a102",
-      "unit_type": "article",
       "headline": "A Reggio",
       "paragraphs": [
         {
@@ -1550,7 +1447,6 @@
     },
     {
       "id": "1910-06-15_a103",
-      "unit_type": "article",
       "headline": "Una replica a Gallina",
       "paragraphs": [
         {
@@ -1565,7 +1461,6 @@
     },
     {
       "id": "1910-06-15_a104",
-      "unit_type": "article",
       "headline": "A Messina",
       "paragraphs": [
         {
@@ -1580,7 +1475,6 @@
     },
     {
       "id": "1910-06-15_a105",
-      "unit_type": "article",
       "headline": "Il tragico mistero di Moltrasio",
       "paragraphs": [
         {
@@ -1595,7 +1489,6 @@
     },
     {
       "id": "1910-06-15_a106",
-      "unit_type": "article",
       "headline": "LE ELEZIONI AMMINISTRATIVE",
       "paragraphs": [
         {
@@ -1610,7 +1503,6 @@
     },
     {
       "id": "1910-06-15_a107",
-      "unit_type": "article",
       "headline": "LA DELINQUENZA NEI COLOMBI",
       "paragraphs": [
         {
@@ -1625,7 +1517,6 @@
     },
     {
       "id": "1910-06-15_a108",
-      "unit_type": "article",
       "headline": "I versi",
       "paragraphs": [
         {
@@ -1640,7 +1531,6 @@
     },
     {
       "id": "1910-06-15_a109",
-      "unit_type": "article",
       "headline": "Massime e pensieri",
       "paragraphs": [
         {
@@ -1655,7 +1545,6 @@
     },
     {
       "id": "1910-06-15_a110",
-      "unit_type": "article",
       "headline": "Corbellerie",
       "paragraphs": [
         {
@@ -1670,7 +1559,6 @@
     },
     {
       "id": "1910-06-15_a111",
-      "unit_type": "article",
       "headline": "Sciarada",
       "paragraphs": [
         {
@@ -1685,7 +1573,6 @@
     },
     {
       "id": "1910-06-15_a112",
-      "unit_type": "article",
       "headline": "Spiegazione del giuoco precedente",
       "paragraphs": [
         {
@@ -1700,7 +1587,6 @@
     },
     {
       "id": "1910-06-15_a113",
-      "unit_type": "article",
       "headline": "I lettori del Messaggero",
       "paragraphs": [
         {
@@ -1715,7 +1601,6 @@
     },
     {
       "id": "1910-06-15_a114",
-      "unit_type": "article",
       "headline": "Uccisore di un uomo",
       "paragraphs": [
         {
@@ -1730,7 +1615,6 @@
     },
     {
       "id": "1910-06-15_a115",
-      "unit_type": "article",
       "headline": "Guardia campestre da due pregiudicati",
       "paragraphs": [
         {
@@ -1745,7 +1629,6 @@
     },
     {
       "id": "1910-06-15_a116",
-      "unit_type": "article",
       "headline": "Srosse di terremoto",
       "paragraphs": [
         {
@@ -1760,7 +1643,6 @@
     },
     {
       "id": "1910-06-15_a117",
-      "unit_type": "article",
       "headline": "Fossa (Aquilia) 14.",
       "paragraphs": [
         {
@@ -1775,7 +1657,6 @@
     },
     {
       "id": "1910-06-15_a118",
-      "unit_type": "article",
       "headline": "pestre ferita a morte egludicati rissanti",
       "paragraphs": [
         {
@@ -1790,7 +1671,6 @@
     },
     {
       "id": "1910-06-15_a119",
-      "unit_type": "article",
       "headline": "moto in Calabria e Sicilia azioni a Mileto",
       "paragraphs": [
         {
@@ -1805,7 +1685,6 @@
     },
     {
       "id": "1910-06-15_a120",
-      "unit_type": "article",
       "headline": "Ricorrenza 15 giugno",
       "paragraphs": [
         {
@@ -1820,7 +1699,6 @@
     },
     {
       "id": "1910-06-15_a121",
-      "unit_type": "article",
       "headline": "IL PADRE DI ROSOLINO",
       "paragraphs": [
         {
@@ -1835,7 +1713,6 @@
     },
     {
       "id": "1910-06-15_a122",
-      "unit_type": "article",
       "headline": "Uccisore della madre!",
       "paragraphs": [
         {
@@ -1850,7 +1727,6 @@
     },
     {
       "id": "1910-06-15_a123",
-      "unit_type": "article",
       "headline": "Guardia campestre ferita a morte da due pregiudicati rissanti",
       "paragraphs": [
         {
@@ -1865,7 +1741,6 @@
     },
     {
       "id": "1910-06-15_a124",
-      "unit_type": "article",
       "headline": "Scosse di terremoto in Calabria e Sicilia",
       "paragraphs": [
         {
@@ -1880,7 +1755,6 @@
     },
     {
       "id": "1910-06-15_a125",
-      "unit_type": "article",
       "headline": "Grave disgrazia a Torino",
       "paragraphs": [
         {
@@ -1895,7 +1769,6 @@
     },
     {
       "id": "1910-06-15_a126",
-      "unit_type": "article",
       "headline": "Ricorrenza storica",
       "paragraphs": [
         {
@@ -1910,7 +1783,6 @@
     },
     {
       "id": "1910-06-15_a127",
-      "unit_type": "article",
       "headline": "IL PADRE DI ROSOLINO PILO E I BOR",
       "paragraphs": [
         {
@@ -1925,7 +1797,6 @@
     },
     {
       "id": "1910-06-15_a128",
-      "unit_type": "article",
       "headline": "LE STATUETTE CONSACRATE AI MORTI",
       "paragraphs": [
         {
@@ -1940,7 +1811,6 @@
     },
     {
       "id": "1910-06-15_a129",
-      "unit_type": "article",
       "headline": "IL MATRIMONIO IN AMERICA",
       "paragraphs": [
         {
@@ -1955,7 +1825,6 @@
     },
     {
       "id": "1910-06-15_a130",
-      "unit_type": "article",
       "headline": "STATISTICA POSTALE",
       "paragraphs": [
         {
@@ -1970,7 +1839,6 @@
     },
     {
       "id": "1910-06-15_a131",
-      "unit_type": "article",
       "headline": "Corbellerie",
       "paragraphs": [
         {
@@ -1985,7 +1853,6 @@
     },
     {
       "id": "1910-06-15_a132",
-      "unit_type": "article",
       "headline": "Sciarada",
       "paragraphs": [
         {
@@ -2000,7 +1867,6 @@
     },
     {
       "id": "1910-06-15_a133",
-      "unit_type": "article",
       "headline": "Furibonda rissa a Ruvo di Puglia",
       "paragraphs": [
         {
@@ -2015,7 +1881,6 @@
     },
     {
       "id": "1910-06-15_a134",
-      "unit_type": "article",
       "headline": "Morta per una frattura al cranio",
       "paragraphs": [
         {
@@ -2030,7 +1895,6 @@
     },
     {
       "id": "1910-06-15_a135",
-      "unit_type": "article",
       "headline": "Porter visto alla stazione di Como",
       "paragraphs": [
         {
@@ -2045,7 +1909,6 @@
     },
     {
       "id": "1910-06-15_a136",
-      "unit_type": "article",
       "headline": "Per i minatori sardi",
       "paragraphs": [
         {
@@ -2060,7 +1923,6 @@
     },
     {
       "id": "1910-06-15_a137",
-      "unit_type": "article",
       "headline": "Grave disgrazia in uno stabilimento Quattro operai feriti",
       "paragraphs": [
         {
@@ -2075,7 +1937,6 @@
     },
     {
       "id": "1910-06-15_a138",
-      "unit_type": "article",
       "headline": "MOVIMENTO PROFESSIONALE",
       "paragraphs": [
         {
@@ -2090,7 +1951,6 @@
     },
     {
       "id": "1910-06-15_a139",
-      "unit_type": "article",
       "headline": "SPORT",
       "paragraphs": [
         {
@@ -2105,7 +1965,6 @@
     },
     {
       "id": "1910-06-15_a140",
-      "unit_type": "article",
       "headline": "I versi",
       "paragraphs": [
         {
@@ -2120,7 +1979,6 @@
     },
     {
       "id": "1910-06-15_a141",
-      "unit_type": "article",
       "headline": "Il comm. De Francesco commemorato",
       "paragraphs": [
         {
@@ -2135,7 +1993,6 @@
     },
     {
       "id": "1910-06-15_a142",
-      "unit_type": "article",
       "headline": "Condannato a dieci anni e poi assolto",
       "paragraphs": [
         {
@@ -2150,7 +2007,6 @@
     },
     {
       "id": "1910-06-15_a143",
-      "unit_type": "article",
       "headline": "L'elezione di Albanò in tribunale",
       "paragraphs": [
         {
@@ -2165,7 +2021,6 @@
     },
     {
       "id": "1910-06-15_a144",
-      "unit_type": "article",
       "headline": "La guerela dell'onorevole Maury contro la \"Lombardia\"",
       "paragraphs": [
         {
@@ -2180,7 +2035,6 @@
     },
     {
       "id": "1910-06-15_a145",
-      "unit_type": "article",
       "headline": "ELETTORALE",
       "paragraphs": [
         {
@@ -2195,7 +2049,6 @@
     },
     {
       "id": "1910-06-15_a146",
-      "unit_type": "article",
       "headline": "IL TEMPO",
       "paragraphs": [
         {
@@ -2210,7 +2063,6 @@
     },
     {
       "id": "1910-06-15_a147",
-      "unit_type": "article",
       "headline": "La Roma-Ostia-Mare",
       "paragraphs": [
         {
@@ -2225,7 +2077,6 @@
     },
     {
       "id": "1910-06-15_a148",
-      "unit_type": "article",
       "headline": "Pel nuovo presidente dell'Argentina\nLa colazione in Campidoglio",
       "paragraphs": [
         {
@@ -2240,7 +2091,6 @@
     },
     {
       "id": "1910-06-15_a149",
-      "unit_type": "article",
       "headline": "I brindisi",
       "paragraphs": [
         {
@@ -2255,7 +2105,6 @@
     },
     {
       "id": "1910-06-15_a150",
-      "unit_type": "article",
       "headline": "L'importante riunione diieri",
       "paragraphs": [
         {
@@ -2270,7 +2119,6 @@
     },
     {
       "id": "1910-06-15_a151",
-      "unit_type": "article",
       "headline": "I nostri Ospizi marini",
       "paragraphs": [
         {
@@ -2285,7 +2133,6 @@
     },
     {
       "id": "1910-06-15_a152",
-      "unit_type": "article",
       "headline": "NOTE VATICANE",
       "paragraphs": [
         {
@@ -2300,7 +2147,6 @@
     },
     {
       "id": "1910-06-15_a153",
-      "unit_type": "article",
       "headline": "DIARIO SACRO",
       "paragraphs": [
         {
@@ -2315,7 +2161,6 @@
     },
     {
       "id": "1910-06-15_a154",
-      "unit_type": "article",
       "headline": "Pei ritardatari all'obbligo di leva",
       "paragraphs": [
         {
@@ -2330,7 +2175,6 @@
     },
     {
       "id": "1910-06-15_a155",
-      "unit_type": "article",
       "headline": "Il presidente Saenz Pena",
       "paragraphs": [
         {
@@ -2345,7 +2189,6 @@
     },
     {
       "id": "1910-06-15_a156",
-      "unit_type": "article",
       "headline": "Il ministro degli esteri",
       "paragraphs": [
         {
@@ -2360,7 +2203,6 @@
     },
     {
       "id": "1910-06-15_a157",
-      "unit_type": "article",
       "headline": "Un telegramma del sindaco",
       "paragraphs": [
         {
@@ -2375,7 +2217,6 @@
     },
     {
       "id": "1910-06-15_a158",
-      "unit_type": "article",
       "headline": "La risposta di Saenz Pena",
       "paragraphs": [
         {
@@ -2390,7 +2231,6 @@
     },
     {
       "id": "1910-06-15_a159",
-      "unit_type": "article",
       "headline": "LA STATUA D'AUGUSTO al Museo delle Terme",
       "paragraphs": [
         {
@@ -2405,7 +2245,6 @@
     },
     {
       "id": "1910-06-15_a160",
-      "unit_type": "article",
       "headline": "MOVIMENTO ELETTORALE",
       "paragraphs": [
         {
@@ -2420,7 +2259,6 @@
     },
     {
       "id": "1910-06-15_a161",
-      "unit_type": "article",
       "headline": "Il nuovo ispettore generale ai telefoni",
       "paragraphs": [
         {
@@ -2435,7 +2273,6 @@
     },
     {
       "id": "1910-06-15_a162",
-      "unit_type": "article",
       "headline": "L’unione del proletariato",
       "paragraphs": [
         {
@@ -2450,7 +2287,6 @@
     },
     {
       "id": "1910-06-15_a163",
-      "unit_type": "article",
       "headline": "Il comitato Pro Trastevere dal sindaco",
       "paragraphs": [
         {
@@ -2465,7 +2301,6 @@
     },
     {
       "id": "1910-06-15_a164",
-      "unit_type": "article",
       "headline": "Sull’incidente della “reale” a ponte Cavour",
       "paragraphs": [
         {
@@ -2480,7 +2315,6 @@
     },
     {
       "id": "1910-06-15_a165",
-      "unit_type": "article",
       "headline": "SCUOLA NAZIONALE DI MUSICA",
       "paragraphs": [
         {
@@ -2495,7 +2329,6 @@
     },
     {
       "id": "1910-06-15_a166",
-      "unit_type": "article",
       "headline": "Il dramma di via Principe Amedeo",
       "paragraphs": [
         {
@@ -2510,7 +2343,6 @@
     },
     {
       "id": "1910-06-15_a167",
-      "unit_type": "notice",
       "headline": "Il Prefetto della Provincia di Roma",
       "paragraphs": [
         {
@@ -2525,7 +2357,6 @@
     },
     {
       "id": "1910-06-15_a168",
-      "unit_type": "article",
       "headline": "ATTUALITÀ IMPRESSIONANTI",
       "paragraphs": [
         {
@@ -2540,7 +2371,6 @@
     },
     {
       "id": "1910-06-15_a169",
-      "unit_type": "notice",
       "headline": "CORRIERA POSTALE",
       "paragraphs": [
         {
@@ -2555,7 +2385,6 @@
     },
     {
       "id": "1910-06-15_a170",
-      "unit_type": "article",
       "headline": "IL DISASTRO DEL SOTTOMARINO «Pluviose»",
       "paragraphs": [
         {
@@ -2570,7 +2399,6 @@
     },
     {
       "id": "1910-06-15_a171",
-      "unit_type": "advertisement",
       "headline": "LA BIBITA MIGLIORE IN ESTATE",
       "paragraphs": [
         {
@@ -2585,7 +2413,6 @@
     },
     {
       "id": "1910-06-15_a172",
-      "unit_type": "advertisement",
       "headline": "VENTI QUALITÀ DI PESCE",
       "paragraphs": [
         {
@@ -2600,7 +2427,6 @@
     },
     {
       "id": "1910-06-15_a173",
-      "unit_type": "advertisement",
       "headline": "BIANCHERIA - MAGLIERIA INDUSTRIE RIUNITE",
       "paragraphs": [
         {
@@ -2615,7 +2441,6 @@
     },
     {
       "id": "1910-06-15_a174",
-      "unit_type": "article",
       "headline": "Unione liberale popolare",
       "paragraphs": [
         {
@@ -2630,7 +2455,6 @@
     },
     {
       "id": "1910-06-15_a175",
-      "unit_type": "article",
       "headline": "Il fatto del piazzista schiaffeggiato da un tenente sul ponte Cavour",
       "paragraphs": [
         {
@@ -2645,7 +2469,6 @@
     },
     {
       "id": "1910-06-15_a176",
-      "unit_type": "article",
       "headline": "Il comm. De Francesco commemorato",
       "paragraphs": [
         {
@@ -2660,7 +2483,6 @@
     },
     {
       "id": "1910-06-15_a177",
-      "unit_type": "article",
       "headline": "Condannato a dieci anni e poi assolto",
       "paragraphs": [
         {
@@ -2675,7 +2497,6 @@
     },
     {
       "id": "1910-06-15_a178",
-      "unit_type": "article",
       "headline": "CONTRO LA LOMBARDIA",
       "paragraphs": [
         {
@@ -2690,7 +2511,6 @@
     },
     {
       "id": "1910-06-15_a179",
-      "unit_type": "article",
       "headline": "La guerla dell'onorevole Maury contro la \"Lombardia\"",
       "paragraphs": [
         {
@@ -2705,7 +2525,6 @@
     },
     {
       "id": "1910-06-15_a180",
-      "unit_type": "article",
       "headline": "IL TEMPO",
       "paragraphs": [
         {
@@ -2720,7 +2539,6 @@
     },
     {
       "id": "1910-06-15_a181",
-      "unit_type": "advertisement",
       "headline": "CRONACA",
       "paragraphs": [
         {
@@ -2735,7 +2553,6 @@
     },
     {
       "id": "1910-06-15_a182",
-      "unit_type": "article",
       "headline": "Pel nuovo presidente dell'Argentina\nLa colazione in Campidoglio",
       "paragraphs": [
         {
@@ -2750,7 +2567,6 @@
     },
     {
       "id": "1910-06-15_a183",
-      "unit_type": "article",
       "headline": "Il ministro degli esteri",
       "paragraphs": [
         {
@@ -2765,7 +2581,6 @@
     },
     {
       "id": "1910-06-15_a184",
-      "unit_type": "article",
       "headline": "La colazione in Campidoglio",
       "paragraphs": [
         {
@@ -2780,7 +2595,6 @@
     },
     {
       "id": "1910-06-15_a185",
-      "unit_type": "article",
       "headline": "Ecco la disposizione della tavola:",
       "paragraphs": [
         {
@@ -2795,7 +2609,6 @@
     },
     {
       "id": "1910-06-15_a186",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -2810,7 +2623,6 @@
     },
     {
       "id": "1910-06-15_a187",
-      "unit_type": "article",
       "headline": "Un telegramma del sindaco",
       "paragraphs": [
         {
@@ -2825,7 +2637,6 @@
     },
     {
       "id": "1910-06-15_a188",
-      "unit_type": "article",
       "headline": "Un telegramma del sindaco",
       "paragraphs": [
         {
@@ -2840,7 +2651,6 @@
     },
     {
       "id": "1910-06-15_a189",
-      "unit_type": "article",
       "headline": "LA STATUA D'AUGUSTO al Museo delle Terme",
       "paragraphs": [
         {
@@ -2855,7 +2665,6 @@
     },
     {
       "id": "1910-06-15_a190",
-      "unit_type": "article",
       "headline": "Per la fognatura dei quartieri settentrionali\nL'importante riunione di ieri",
       "paragraphs": [
         {
@@ -2870,7 +2679,6 @@
     },
     {
       "id": "1910-06-15_a191",
-      "unit_type": "article",
       "headline": "I nostri Ospizi marini",
       "paragraphs": [
         {
@@ -2885,7 +2693,6 @@
     },
     {
       "id": "1910-06-15_a192",
-      "unit_type": "article",
       "headline": "NOTE VATICANE",
       "paragraphs": [
         {
@@ -2900,7 +2707,6 @@
     },
     {
       "id": "1910-06-15_a193",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -2915,7 +2721,6 @@
     },
     {
       "id": "1910-06-15_a194",
-      "unit_type": "article",
       "headline": "ligiosa dell'Agro Bamanò",
       "paragraphs": [
         {
@@ -2930,7 +2735,6 @@
     },
     {
       "id": "1910-06-15_a195",
-      "unit_type": "article",
       "headline": "La cappella di recente costruita alla tenuta della Magliana è stata eretta in parrocchia e feri il papa nominò parroco il rev. don Luigi Della Paolera.",
       "paragraphs": [
         {
@@ -2945,7 +2749,6 @@
     },
     {
       "id": "1910-06-15_a196",
-      "unit_type": "editorial",
       "headline": "DIARIO SACRO",
       "paragraphs": [
         {
@@ -2960,7 +2763,6 @@
     },
     {
       "id": "1910-06-15_a197",
-      "unit_type": "article",
       "headline": "LA PIANTA DI ROMA",
       "paragraphs": [
         {
@@ -2975,7 +2777,6 @@
     },
     {
       "id": "1910-06-15_a198",
-      "unit_type": "article",
       "headline": "MOVIMENTO ELETTORALE",
       "paragraphs": [
         {
@@ -2990,7 +2791,6 @@
     },
     {
       "id": "1910-06-15_a199",
-      "unit_type": "article",
       "headline": "MOVIMENTO ELETTORALE\nIl consigliere provinciale Marucchi non si rappresenta",
       "paragraphs": [
         {
@@ -3005,7 +2805,6 @@
     },
     {
       "id": "1910-06-15_a200",
-      "unit_type": "article",
       "headline": "L’unione del proletariato\nLa riunione di iersera dei “Venti”",
       "paragraphs": [
         {
@@ -3020,7 +2819,6 @@
     },
     {
       "id": "1910-06-15_a201",
-      "unit_type": "article",
       "headline": "Il comitato Pro Trastevere dal sindaco",
       "paragraphs": [
         {
@@ -3035,7 +2833,6 @@
     },
     {
       "id": "1910-06-15_a202",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -3050,7 +2847,6 @@
     },
     {
       "id": "1910-06-15_a203",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -3065,7 +2861,6 @@
     },
     {
       "id": "1910-06-15_a204",
-      "unit_type": "article",
       "headline": "Il dramma di via Principe Amedeo",
       "paragraphs": [
         {
@@ -3080,7 +2875,6 @@
     },
     {
       "id": "1910-06-15_a205",
-      "unit_type": "notice",
       "headline": "SCUOLA NAZIONALE DI MUSICA",
       "paragraphs": [
         {
@@ -3095,7 +2889,6 @@
     },
     {
       "id": "1910-06-15_a206",
-      "unit_type": "obituary",
       "headline": "Il funerale di via Filippo Fumagalli",
       "paragraphs": [
         {
@@ -3110,7 +2903,6 @@
     },
     {
       "id": "1910-06-15_a207",
-      "unit_type": "notice",
       "headline": "Ci comunicano:",
       "paragraphs": [
         {
@@ -3125,7 +2917,6 @@
     },
     {
       "id": "1910-06-15_a208",
-      "unit_type": "advertisement",
       "headline": "CORRIERA POSTALE",
       "paragraphs": [
         {
@@ -3140,7 +2931,6 @@
     },
     {
       "id": "1910-06-15_a209",
-      "unit_type": "article",
       "headline": "LA BIBITA MIGLIORE IN ESTATE",
       "paragraphs": [
         {
@@ -3155,7 +2945,6 @@
     },
     {
       "id": "1910-06-15_a210",
-      "unit_type": "advertisement",
       "headline": "VENTI QUALITÀ DI PESCE",
       "paragraphs": [
         {
@@ -3170,7 +2959,6 @@
     },
     {
       "id": "1910-06-15_a211",
-      "unit_type": "advertisement",
       "headline": "VENDITA QUOTIDIANA DI PESCE",
       "paragraphs": [
         {
@@ -3185,7 +2973,6 @@
     },
     {
       "id": "1910-06-15_a212",
-      "unit_type": "advertisement",
       "headline": "INDUSTRIE RUMI",
       "paragraphs": [
         {
@@ -3200,7 +2987,6 @@
     },
     {
       "id": "1910-06-15_a213",
-      "unit_type": "article",
       "headline": "TEMPO",
       "paragraphs": [
         {
@@ -3215,7 +3001,6 @@
     },
     {
       "id": "1910-06-15_a214",
-      "unit_type": "article",
       "headline": "a-Ostia-Mare",
       "paragraphs": [
         {
@@ -3230,7 +3015,6 @@
     },
     {
       "id": "1910-06-15_a215",
-      "unit_type": "article",
       "headline": "residente dell'Argentina\none in Campidoglio",
       "paragraphs": [
         {
@@ -3245,7 +3029,6 @@
     },
     {
       "id": "1910-06-15_a216",
-      "unit_type": "article",
       "headline": "I brindisi",
       "paragraphs": [
         {
@@ -3260,7 +3043,6 @@
     },
     {
       "id": "1910-06-15_a217",
-      "unit_type": "article",
       "headline": "L'unione del proletariato",
       "paragraphs": [
         {
@@ -3275,7 +3057,6 @@
     },
     {
       "id": "1910-06-15_a218",
-      "unit_type": "article",
       "headline": "Il comitato Pro Trastevere dal sindaco",
       "paragraphs": [
         {
@@ -3290,7 +3071,6 @@
     },
     {
       "id": "1910-06-15_a219",
-      "unit_type": "article",
       "headline": "Sull'incidente della \"reale\", a ponte Cavour",
       "paragraphs": [
         {
@@ -3305,7 +3085,6 @@
     },
     {
       "id": "1910-06-15_a220",
-      "unit_type": "article",
       "headline": "Il Prefetto della Provincia di Roma",
       "paragraphs": [
         {
@@ -3320,7 +3099,6 @@
     },
     {
       "id": "1910-06-15_a221",
-      "unit_type": "article",
       "headline": "ATTUALITÀ IMPRESSIONANTI",
       "paragraphs": [
         {
@@ -3335,7 +3113,6 @@
     },
     {
       "id": "1910-06-15_a222",
-      "unit_type": "article",
       "headline": "CORRIERA POSTALE",
       "paragraphs": [
         {
@@ -3350,7 +3127,6 @@
     },
     {
       "id": "1910-06-15_a223",
-      "unit_type": "article",
       "headline": "IL DISASTRO DEL SOTTOMARINO « Pluviose »",
       "paragraphs": [
         {
@@ -3365,7 +3141,6 @@
     },
     {
       "id": "1910-06-15_a224",
-      "unit_type": "article",
       "headline": "LA BIBITA MIGLIORE IN ESTATE",
       "paragraphs": [
         {
@@ -3380,7 +3155,6 @@
     },
     {
       "id": "1910-06-15_a225",
-      "unit_type": "article",
       "headline": "VENTI QUALITÀ DI PESCE",
       "paragraphs": [
         {
@@ -3395,7 +3169,6 @@
     },
     {
       "id": "1910-06-15_a226",
-      "unit_type": "advertisement",
       "headline": "BIANCHERIA - MAGLIERIA INDUSTRIE RIUNITE",
       "paragraphs": [
         {
@@ -3410,7 +3183,6 @@
     },
     {
       "id": "1910-06-15_a227",
-      "unit_type": "obituary",
       "headline": "Il comm. De Francesco commemorato",
       "paragraphs": [
         {
@@ -3425,7 +3197,6 @@
     },
     {
       "id": "1910-06-15_a228",
-      "unit_type": "article",
       "headline": "Condannato a dieci anni e poi assolto",
       "paragraphs": [
         {
@@ -3440,7 +3211,6 @@
     },
     {
       "id": "1910-06-15_a229",
-      "unit_type": "article",
       "headline": "La guerla dell'onorevole Maury contro la \"Lombardia\"",
       "paragraphs": [
         {
@@ -3455,7 +3225,6 @@
     },
     {
       "id": "1910-06-15_a230",
-      "unit_type": "article",
       "headline": "Un telegramma del sindaco",
       "paragraphs": [
         {
@@ -3470,7 +3239,6 @@
     },
     {
       "id": "1910-06-15_a231",
-      "unit_type": "article",
       "headline": "LA STATUA D'AUGUSTO al Museo delle Terme",
       "paragraphs": [
         {
@@ -3485,7 +3253,6 @@
     },
     {
       "id": "1910-06-15_a232",
-      "unit_type": "article",
       "headline": "DIARIO SACRO",
       "paragraphs": [
         {
@@ -3500,7 +3267,6 @@
     },
     {
       "id": "1910-06-15_a233",
-      "unit_type": "article",
       "headline": "MOVIMENTO ELETTORALE",
       "paragraphs": [
         {
@@ -3515,7 +3281,6 @@
     },
     {
       "id": "1910-06-15_a234",
-      "unit_type": "article",
       "headline": "Sull’incidente della “reale” a ponte Cavour",
       "paragraphs": [
         {
@@ -3530,7 +3295,6 @@
     },
     {
       "id": "1910-06-15_a235",
-      "unit_type": "article",
       "headline": "Sull’incidente della “reale” a ponte Cavour",
       "paragraphs": [
         {
@@ -3545,7 +3309,6 @@
     },
     {
       "id": "1910-06-15_a236",
-      "unit_type": "article",
       "headline": "SCUOLA NAZIONALE DI MUSICA",
       "paragraphs": [
         {
@@ -3560,7 +3323,6 @@
     },
     {
       "id": "1910-06-15_a237",
-      "unit_type": "article",
       "headline": "Il dramma di via Principe Amedeo",
       "paragraphs": [
         {
@@ -3575,7 +3337,6 @@
     },
     {
       "id": "1910-06-15_a238",
-      "unit_type": "notice",
       "headline": "Il Prefetto della Provincia di Roma",
       "paragraphs": [
         {
@@ -3590,7 +3351,6 @@
     },
     {
       "id": "1910-06-15_a239",
-      "unit_type": "article",
       "headline": "CORRIERA POSTALE",
       "paragraphs": [
         {
@@ -3605,7 +3365,6 @@
     },
     {
       "id": "1910-06-15_a240",
-      "unit_type": "advertisement",
       "headline": "BIANCHERIA - MAGLIERIA INDUSTRIE RIUNITE",
       "paragraphs": [
         {
@@ -3620,7 +3379,6 @@
     },
     {
       "id": "1910-06-15_a241",
-      "unit_type": "article",
       "headline": "Tra impiegati al Debito pubblico",
       "paragraphs": [
         {
@@ -3635,7 +3393,6 @@
     },
     {
       "id": "1910-06-15_a242",
-      "unit_type": "article",
       "headline": "Circolo repubb. Pensiero e Azione",
       "paragraphs": [
         {
@@ -3650,7 +3407,6 @@
     },
     {
       "id": "1910-06-15_a243",
-      "unit_type": "article",
       "headline": "Pel fatto di via Madonna dei Monti",
       "paragraphs": [
         {
@@ -3665,7 +3421,6 @@
     },
     {
       "id": "1910-06-15_a244",
-      "unit_type": "article",
       "headline": "COMUNITA POPOLARI",
       "paragraphs": [
         {
@@ -3680,7 +3435,6 @@
     },
     {
       "id": "1910-06-15_a245",
-      "unit_type": "article",
       "headline": "ASSOCIAZIONI POLITICHE",
       "paragraphs": [
         {
@@ -3695,7 +3449,6 @@
     },
     {
       "id": "1910-06-15_a246",
-      "unit_type": "article",
       "headline": "Conferenze",
       "paragraphs": [
         {
@@ -3710,7 +3463,6 @@
     },
     {
       "id": "1910-06-15_a247",
-      "unit_type": "article",
       "headline": "Lutti",
       "paragraphs": [
         {
@@ -3725,7 +3477,6 @@
     },
     {
       "id": "1910-06-15_a248",
-      "unit_type": "article",
       "headline": "Cronaca del lavoro",
       "paragraphs": [
         {
@@ -3740,7 +3491,6 @@
     },
     {
       "id": "1910-06-15_a249",
-      "unit_type": "article",
       "headline": "ASSOCIAZIONI DIVERSE",
       "paragraphs": [
         {
@@ -3755,7 +3505,6 @@
     },
     {
       "id": "1910-06-15_a250",
-      "unit_type": "article",
       "headline": "Voce del pubblico",
       "paragraphs": [
         {
@@ -3770,7 +3519,6 @@
     },
     {
       "id": "1910-06-15_a251",
-      "unit_type": "article",
       "headline": "Musica in piazza",
       "paragraphs": [
         {
@@ -3785,7 +3533,6 @@
     },
     {
       "id": "1910-06-15_a252",
-      "unit_type": "article",
       "headline": "Monte di Pietà",
       "paragraphs": [
         {
@@ -3800,7 +3547,6 @@
     },
     {
       "id": "1910-06-15_a253",
-      "unit_type": "article",
       "headline": "PROVINCIA ROMANA",
       "paragraphs": [
         {
@@ -3815,7 +3561,6 @@
     },
     {
       "id": "1910-06-15_a254",
-      "unit_type": "article",
       "headline": "FERIMENTO A PIPERNO",
       "paragraphs": [
         {
@@ -3830,7 +3575,6 @@
     },
     {
       "id": "1910-06-15_a255",
-      "unit_type": "article",
       "headline": "e negli Ospedali",
       "paragraphs": [
         {
@@ -3845,7 +3589,6 @@
     },
     {
       "id": "1910-06-15_a256",
-      "unit_type": "article",
       "headline": "OSPEDALE CIVILE",
       "paragraphs": [
         {
@@ -3860,7 +3603,6 @@
     },
     {
       "id": "1910-06-15_a257",
-      "unit_type": "advertisement",
       "headline": "CONTINUA LA GRANDIOSA VENDITA",
       "paragraphs": [
         {
@@ -3875,7 +3617,6 @@
     },
     {
       "id": "1910-06-15_a258",
-      "unit_type": "advertisement",
       "headline": "BRITANNIA STORES",
       "paragraphs": [
         {
@@ -3890,7 +3631,6 @@
     },
     {
       "id": "1910-06-15_a259",
-      "unit_type": "advertisement",
       "headline": "TERME COMUNALI VITERBO",
       "paragraphs": [
         {
@@ -3905,7 +3645,6 @@
     },
     {
       "id": "1910-06-15_a260",
-      "unit_type": "advertisement",
       "headline": "\"CELERE\"",
       "paragraphs": [
         {
@@ -3920,7 +3659,6 @@
     },
     {
       "id": "1910-06-15_a261",
-      "unit_type": "advertisement",
       "headline": "\"S.T.A.\" SOCIETÀ TRAZIONE AUTOMOBILI",
       "paragraphs": [
         {
@@ -3935,7 +3673,6 @@
     },
     {
       "id": "1910-06-15_a262",
-      "unit_type": "article",
       "headline": "Una ragazza che spara contro il suo seduttore al Lungotevere Tordinona",
       "paragraphs": [
         {
@@ -3950,7 +3687,6 @@
     },
     {
       "id": "1910-06-15_a263",
-      "unit_type": "article",
       "headline": "in via Ovidio",
       "paragraphs": [
         {
@@ -3965,7 +3701,6 @@
     },
     {
       "id": "1910-06-15_a264",
-      "unit_type": "article",
       "headline": "Le gesta dei ladri in via Principe Eugenio",
       "paragraphs": [
         {
@@ -3980,7 +3715,6 @@
     },
     {
       "id": "1910-06-15_a265",
-      "unit_type": "article",
       "headline": "In via Torino",
       "paragraphs": [
         {
@@ -3995,7 +3729,6 @@
     },
     {
       "id": "1910-06-15_a266",
-      "unit_type": "article",
       "headline": "Al viale Manzoni",
       "paragraphs": [
         {
@@ -4010,7 +3743,6 @@
     },
     {
       "id": "1910-06-15_a267",
-      "unit_type": "article",
       "headline": "Cameriere investito da un biroccino in via S. Martino al Macao",
       "paragraphs": [
         {
@@ -4025,7 +3757,6 @@
     },
     {
       "id": "1910-06-15_a268",
-      "unit_type": "article",
       "headline": "La donna percossa dal marito in piazza Madama",
       "paragraphs": [
         {
@@ -4040,7 +3771,6 @@
     },
     {
       "id": "1910-06-15_a269",
-      "unit_type": "article",
       "headline": "La caduta d'una domestica in via della Purificazione",
       "paragraphs": [
         {
@@ -4055,7 +3785,6 @@
     },
     {
       "id": "1910-06-15_a270",
-      "unit_type": "article",
       "headline": "Aggressione in piazza Mastai",
       "paragraphs": [
         {
@@ -4070,7 +3799,6 @@
     },
     {
       "id": "1910-06-15_a271",
-      "unit_type": "article",
       "headline": "MOVIMENTO ANTICLERICALE",
       "paragraphs": [
         {
@@ -4085,7 +3813,6 @@
     },
     {
       "id": "1910-06-15_a272",
-      "unit_type": "article",
       "headline": "AL CIRCOLO POPOLARE",
       "paragraphs": [
         {
@@ -4100,7 +3827,6 @@
     },
     {
       "id": "1910-06-15_a273",
-      "unit_type": "article",
       "headline": "ASSOCIAZIONE RADICALE ROMANA",
       "paragraphs": [
         {
@@ -4115,7 +3841,6 @@
     },
     {
       "id": "1910-06-15_a274",
-      "unit_type": "article",
       "headline": "SUL GENERALE MASÌ",
       "paragraphs": [
         {
@@ -4130,7 +3855,6 @@
     },
     {
       "id": "1910-06-15_a275",
-      "unit_type": "article",
       "headline": "Magistrati a banchetto",
       "paragraphs": [
         {
@@ -4145,7 +3869,6 @@
     },
     {
       "id": "1910-06-15_a276",
-      "unit_type": "article",
       "headline": "PROVINCIA ROMANA",
       "paragraphs": [
         {
@@ -4160,7 +3883,6 @@
     },
     {
       "id": "1910-06-15_a277",
-      "unit_type": "article",
       "headline": "Le elezioni amministrative",
       "paragraphs": [
         {
@@ -4175,7 +3897,6 @@
     },
     {
       "id": "1910-06-15_a278",
-      "unit_type": "article",
       "headline": "La contesa di un seduttore e la sua vittima Giselda Tordinona",
       "paragraphs": [
         {
@@ -4190,7 +3911,6 @@
     },
     {
       "id": "1910-06-15_a279",
-      "unit_type": "article",
       "headline": "Scoppio di gas in via Flavia Un falegname ustionato",
       "paragraphs": [
         {
@@ -4205,7 +3925,6 @@
     },
     {
       "id": "1910-06-15_a280",
-      "unit_type": "article",
       "headline": "L'arresto d'un pazzo innamorato In via del Vascellari",
       "paragraphs": [
         {
@@ -4220,7 +3939,6 @@
     },
     {
       "id": "1910-06-15_a281",
-      "unit_type": "article",
       "headline": "Fra i commensali vi fu massimo bricio e gioialità ed altri spumante brindarono i signori avv. De Mitri ed avv. Macaluso, giudici aggiunti, l'avv. Francesco Simoncini per il Foro e l'ufficiale giudiziario avv. Sarti, ai quali risposero con sentitissime parole il partente avv. Alessi ed il giudice cav. Gismondi. Ha aderito per telegramma l'egregio vice-pretore onorario avv. D'Alessandro, neo-consigliere provinciale pel mandamento di Valmontone.",
       "paragraphs": [
         {
@@ -4235,7 +3953,6 @@
     },
     {
       "id": "1910-06-15_a282",
-      "unit_type": "article",
       "headline": "L'ON. TESO A CERVETERI\nvisita la necropoli etrusca",
       "paragraphs": [
         {
@@ -4250,7 +3967,6 @@
     },
     {
       "id": "1910-06-15_a283",
-      "unit_type": "article",
       "headline": "VIABILITA' PROVINCIALE\nStrada Acuto-Anagni-Cerere-Navicella",
       "paragraphs": [
         {
@@ -4265,7 +3981,6 @@
     },
     {
       "id": "1910-06-15_a284",
-      "unit_type": "article",
       "headline": "La via Civitella-Fiano-Nazzano",
       "paragraphs": [
         {
@@ -4280,7 +3995,6 @@
     },
     {
       "id": "1910-06-15_a285",
-      "unit_type": "article",
       "headline": "L'on. Giolitti ha lasciato Anticoli",
       "paragraphs": [
         {
@@ -4295,7 +4009,6 @@
     },
     {
       "id": "1910-06-15_a286",
-      "unit_type": "article",
       "headline": "La tragedia di Civitavecchia\nAltri particolari",
       "paragraphs": [
         {
@@ -4310,7 +4023,6 @@
     },
     {
       "id": "1910-06-15_a287",
-      "unit_type": "advertisement",
       "headline": "Non avvi Seta Migliore\ndi quella Svizzera!",
       "paragraphs": [
         {
@@ -4325,7 +4037,6 @@
     },
     {
       "id": "1910-06-15_a288",
-      "unit_type": "advertisement",
       "headline": "MOSTRE",
       "paragraphs": [
         {
@@ -4340,7 +4051,6 @@
     },
     {
       "id": "1910-06-15_a289",
-      "unit_type": "advertisement",
       "headline": "Borsa Verde da Signora",
       "paragraphs": [
         {
@@ -4355,7 +4065,6 @@
     },
     {
       "id": "1910-06-15_a290",
-      "unit_type": "advertisement",
       "headline": "ISTITUTO MEDICO DI CURE FISICHE\n(CINESITERAPICO)",
       "paragraphs": [
         {
@@ -4370,7 +4079,6 @@
     },
     {
       "id": "1910-06-15_a291",
-      "unit_type": "article",
       "headline": "Musica in piazza",
       "paragraphs": [
         {
@@ -4385,7 +4093,6 @@
     },
     {
       "id": "1910-06-15_a292",
-      "unit_type": "article",
       "headline": "OSPEDALE DELL'ADDOLORATA",
       "paragraphs": [
         {
@@ -4400,7 +4107,6 @@
     },
     {
       "id": "1910-06-15_a293",
-      "unit_type": "article",
       "headline": "L'Innamorato M. 1",
       "paragraphs": [
         {
@@ -4415,7 +4121,6 @@
     },
     {
       "id": "1910-06-15_a294",
-      "unit_type": "article",
       "headline": "L'Innamorato N. 2\nLa dichiarazione d'amore",
       "paragraphs": [
         {
@@ -4430,7 +4135,6 @@
     },
     {
       "id": "1910-06-15_a295",
-      "unit_type": "article",
       "headline": "Sedotta!",
       "paragraphs": [
         {
@@ -4445,7 +4149,6 @@
     },
     {
       "id": "1910-06-15_a296",
-      "unit_type": "article",
       "headline": "Sedotta",
       "paragraphs": [
         {
@@ -4460,7 +4163,6 @@
     },
     {
       "id": "1910-06-15_a297",
-      "unit_type": "article",
       "headline": "Scacciata di casa",
       "paragraphs": [
         {
@@ -4475,7 +4177,6 @@
     },
     {
       "id": "1910-06-15_a298",
-      "unit_type": "article",
       "headline": "Le gesta dei ladri In via Principe Eugenio",
       "paragraphs": [
         {
@@ -4490,7 +4191,6 @@
     },
     {
       "id": "1910-06-15_a299",
-      "unit_type": "article",
       "headline": "In via Principe Eugenio",
       "paragraphs": [
         {
@@ -4505,7 +4205,6 @@
     },
     {
       "id": "1910-06-15_a300",
-      "unit_type": "article",
       "headline": "La donna percossa dal marito in piazza Madama",
       "paragraphs": [
         {
@@ -4520,7 +4219,6 @@
     },
     {
       "id": "1910-06-15_a301",
-      "unit_type": "article",
       "headline": "MOVIMENTO ANTICLERICALE",
       "paragraphs": [
         {
@@ -4535,7 +4233,6 @@
     },
     {
       "id": "1910-06-15_a302",
-      "unit_type": "article",
       "headline": "Magistrati a banchetto",
       "paragraphs": [
         {
@@ -4550,7 +4247,6 @@
     },
     {
       "id": "1910-06-15_a303",
-      "unit_type": "article",
       "headline": "tario particolare del guardasigilli, già titola- re della 2ª Pretura Urbana, che tenne l'avvocato Alessi uno di suoi efficaci cooperatori, e vari dei distinti avvocati penalisti di que- sto elettissimo foro.",
       "paragraphs": [
         {
@@ -4565,7 +4261,6 @@
     },
     {
       "id": "1910-06-15_a304",
-      "unit_type": "article",
       "headline": "Tra impiegati al Debito pubblico",
       "paragraphs": [
         {
@@ -4580,7 +4275,6 @@
     },
     {
       "id": "1910-06-15_a305",
-      "unit_type": "article",
       "headline": "Circolo repubbl. Pensiero e Azione",
       "paragraphs": [
         {
@@ -4595,7 +4289,6 @@
     },
     {
       "id": "1910-06-15_a306",
-      "unit_type": "article",
       "headline": "COMUNITÀ POPOLARI",
       "paragraphs": [
         {
@@ -4610,7 +4303,6 @@
     },
     {
       "id": "1910-06-15_a307",
-      "unit_type": "article",
       "headline": "ASSOCIAZIONI POLITICHE",
       "paragraphs": [
         {
@@ -4625,7 +4317,6 @@
     },
     {
       "id": "1910-06-15_a308",
-      "unit_type": "article",
       "headline": "ASSOCIAZIONI DIVERSE",
       "paragraphs": [
         {
@@ -4640,7 +4331,6 @@
     },
     {
       "id": "1910-06-15_a309",
-      "unit_type": "notice",
       "headline": "FEDERAZIONE EDILE LAZIALE",
       "paragraphs": [
         {
@@ -4655,7 +4345,6 @@
     },
     {
       "id": "1910-06-15_a310",
-      "unit_type": "notice",
       "headline": "ASSOCIAZIONI DIVERSE",
       "paragraphs": [
         {
@@ -4670,7 +4359,6 @@
     },
     {
       "id": "1910-06-15_a311",
-      "unit_type": "editorial",
       "headline": "Voce del pubblico",
       "paragraphs": [
         {
@@ -4685,7 +4373,6 @@
     },
     {
       "id": "1910-06-15_a312",
-      "unit_type": "advertisement",
       "headline": "Musica in piazza",
       "paragraphs": [
         {
@@ -4700,7 +4387,6 @@
     },
     {
       "id": "1910-06-15_a313",
-      "unit_type": "article",
       "headline": "Monte di Pietà",
       "paragraphs": [
         {
@@ -4715,7 +4401,6 @@
     },
     {
       "id": "1910-06-15_a314",
-      "unit_type": "article",
       "headline": "PROVINCIA ROMANA",
       "paragraphs": [
         {
@@ -4730,7 +4415,6 @@
     },
     {
       "id": "1910-06-15_a315",
-      "unit_type": "article",
       "headline": "L'ON. TESO A CERVETERI",
       "paragraphs": [
         {
@@ -4745,7 +4429,6 @@
     },
     {
       "id": "1910-06-15_a316",
-      "unit_type": "advertisement",
       "headline": "VIABILITA' PROVINCIALE",
       "paragraphs": [
         {
@@ -4760,7 +4443,6 @@
     },
     {
       "id": "1910-06-15_a317",
-      "unit_type": "article",
       "headline": "La via Civitella-Piano-Nazzano",
       "paragraphs": [
         {
@@ -4775,7 +4457,6 @@
     },
     {
       "id": "1910-06-15_a318",
-      "unit_type": "article",
       "headline": "L'on. Giolitti ha lasciato Anticoli",
       "paragraphs": [
         {
@@ -4790,7 +4471,6 @@
     },
     {
       "id": "1910-06-15_a319",
-      "unit_type": "article",
       "headline": "Altri particolari",
       "paragraphs": [
         {
@@ -4805,7 +4485,6 @@
     },
     {
       "id": "1910-06-15_a320",
-      "unit_type": "article",
       "headline": "L'autopsia",
       "paragraphs": [
         {
@@ -4820,7 +4499,6 @@
     },
     {
       "id": "1910-06-15_a321",
-      "unit_type": "advertisement",
       "headline": "Non avvi Seta Migliore di quella Svizzera!",
       "paragraphs": [
         {
@@ -4835,7 +4513,6 @@
     },
     {
       "id": "1910-06-15_a322",
-      "unit_type": "advertisement",
       "headline": "MOSTRE",
       "paragraphs": [
         {
@@ -4850,7 +4527,6 @@
     },
     {
       "id": "1910-06-15_a323",
-      "unit_type": "notice",
       "headline": "BORSA VERDE DA SIGNORA",
       "paragraphs": [
         {
@@ -4865,7 +4541,6 @@
     },
     {
       "id": "1910-06-15_a324",
-      "unit_type": "advertisement",
       "headline": "Il \"tot\" nelle Cliniche e negli Ospedali",
       "paragraphs": [
         {
@@ -4880,7 +4555,6 @@
     },
     {
       "id": "1910-06-15_a325",
-      "unit_type": "advertisement",
       "headline": "OSPEDALE CIVILE TORTONA (Alessandria)",
       "paragraphs": [
         {
@@ -4895,7 +4569,6 @@
     },
     {
       "id": "1910-06-15_a326",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -4910,7 +4583,6 @@
     },
     {
       "id": "1910-06-15_a327",
-      "unit_type": "advertisement",
       "headline": "la GRANDIOSA VENDITA SCAMPOLI",
       "paragraphs": [
         {
@@ -4925,7 +4597,6 @@
     },
     {
       "id": "1910-06-15_a328",
-      "unit_type": "advertisement",
       "headline": "Britannia Stores",
       "paragraphs": [
         {
@@ -4940,7 +4611,6 @@
     },
     {
       "id": "1910-06-15_a329",
-      "unit_type": "advertisement",
       "headline": "TERME COMUNALI VITERBO",
       "paragraphs": [
         {
@@ -4955,7 +4625,6 @@
     },
     {
       "id": "1910-06-15_a330",
-      "unit_type": "advertisement",
       "headline": "\"CELERE\"",
       "paragraphs": [
         {
@@ -4970,7 +4639,6 @@
     },
     {
       "id": "1910-06-15_a331",
-      "unit_type": "advertisement",
       "headline": "\"S.T.A.\" SOCIETÀ TRAZIONE AUTOMOBILI",
       "paragraphs": [
         {
@@ -4985,7 +4653,6 @@
     },
     {
       "id": "1910-06-15_a332",
-      "unit_type": "article",
       "headline": "Una ragazza che spara contro il suo amante al Lungotevere Tordi",
       "paragraphs": [
         {
@@ -5000,7 +4667,6 @@
     },
     {
       "id": "1910-06-15_a333",
-      "unit_type": "article",
       "headline": "Volle andarla a trovare",
       "paragraphs": [
         {
@@ -5015,7 +4681,6 @@
     },
     {
       "id": "1910-06-15_a334",
-      "unit_type": "article",
       "headline": "Il muratore Francesco Zagaro",
       "paragraphs": [
         {
@@ -5030,7 +4695,6 @@
     },
     {
       "id": "1910-06-15_a335",
-      "unit_type": "article",
       "headline": "Suo seduttore dinona",
       "paragraphs": [
         {
@@ -5045,7 +4709,6 @@
     },
     {
       "id": "1910-06-15_a336",
-      "unit_type": "article",
       "headline": "Il gas in via Flavia",
       "paragraphs": [
         {
@@ -5060,7 +4723,6 @@
     },
     {
       "id": "1910-06-15_a337",
-      "unit_type": "article",
       "headline": "un pazzo innamorato del Vascellari",
       "paragraphs": [
         {
@@ -5075,7 +4737,6 @@
     },
     {
       "id": "1910-06-15_a338",
-      "unit_type": "article",
       "headline": "Cronaca del lavoro",
       "paragraphs": [
         {
@@ -5090,7 +4751,6 @@
     },
     {
       "id": "1910-06-15_a339",
-      "unit_type": "article",
       "headline": "L'ON. TESO A CERVETERI",
       "paragraphs": [
         {
@@ -5105,7 +4765,6 @@
     },
     {
       "id": "1910-06-15_a340",
-      "unit_type": "article",
       "headline": "VIABILITÀ PROVINCIALE",
       "paragraphs": [
         {
@@ -5120,7 +4779,6 @@
     },
     {
       "id": "1910-06-15_a341",
-      "unit_type": "article",
       "headline": "La via Civitella-Fiano",
       "paragraphs": [
         {
@@ -5135,7 +4793,6 @@
     },
     {
       "id": "1910-06-15_a342",
-      "unit_type": "article",
       "headline": "L'on. Giolitti ha lasciato l'automobile",
       "paragraphs": [
         {
@@ -5150,7 +4807,6 @@
     },
     {
       "id": "1910-06-15_a343",
-      "unit_type": "article",
       "headline": "La tragedia di Civitavecchia",
       "paragraphs": [
         {
@@ -5165,7 +4821,6 @@
     },
     {
       "id": "1910-06-15_a344",
-      "unit_type": "advertisement",
       "headline": "Non avete Seta Migliore di quella Svizzera?",
       "paragraphs": [
         {
@@ -5180,7 +4835,6 @@
     },
     {
       "id": "1910-06-15_a345",
-      "unit_type": "advertisement",
       "headline": "MOSTRE",
       "paragraphs": [
         {
@@ -5195,7 +4849,6 @@
     },
     {
       "id": "1910-06-15_a346",
-      "unit_type": "advertisement",
       "headline": "BORSA VERDE DI CINISETER",
       "paragraphs": [
         {
@@ -5210,7 +4863,6 @@
     },
     {
       "id": "1910-06-15_a347",
-      "unit_type": "advertisement",
       "headline": "ISTITUTO MEDICO DI CINISETER",
       "paragraphs": [
         {
@@ -5225,7 +4877,6 @@
     },
     {
       "id": "1910-06-15_a348",
-      "unit_type": "article",
       "headline": "I CERVETERI",
       "paragraphs": [
         {
@@ -5240,7 +4891,6 @@
     },
     {
       "id": "1910-06-15_a349",
-      "unit_type": "article",
       "headline": "DI CURE FISICHE\nTERAPICO)",
       "paragraphs": [
         {
@@ -5255,7 +4905,6 @@
     },
     {
       "id": "1910-06-15_a350",
-      "unit_type": "article",
       "headline": "e negli Ospedali",
       "paragraphs": [
         {
@@ -5270,7 +4919,6 @@
     },
     {
       "id": "1910-06-15_a351",
-      "unit_type": "article",
       "headline": "L'ultima offesa",
       "paragraphs": [
         {
@@ -5285,7 +4933,6 @@
     },
     {
       "id": "1910-06-15_a352",
-      "unit_type": "article",
       "headline": "Scoppio di gas in via Flavia",
       "paragraphs": [
         {
@@ -5300,7 +4947,6 @@
     },
     {
       "id": "1910-06-15_a353",
-      "unit_type": "article",
       "headline": "L'arresto d'un pazzo innamorato",
       "paragraphs": [
         {
@@ -5315,7 +4961,6 @@
     },
     {
       "id": "1910-06-15_a354",
-      "unit_type": "article",
       "headline": "Le gesta",
       "paragraphs": [
         {
@@ -5330,7 +4975,6 @@
     },
     {
       "id": "1910-06-15_a355",
-      "unit_type": "article",
       "headline": "via Ovidio",
       "paragraphs": [
         {
@@ -5345,7 +4989,6 @@
     },
     {
       "id": "1910-06-15_a356",
-      "unit_type": "article",
       "headline": "Tra impiegati al Debito",
       "paragraphs": [
         {
@@ -5360,7 +5003,6 @@
     },
     {
       "id": "1910-06-15_a357",
-      "unit_type": "article",
       "headline": "Circolo repubb. Pensionati",
       "paragraphs": [
         {
@@ -5375,7 +5017,6 @@
     },
     {
       "id": "1910-06-15_a358",
-      "unit_type": "article",
       "headline": "Pel fatto di via Madonna",
       "paragraphs": [
         {
@@ -5390,7 +5031,6 @@
     },
     {
       "id": "1910-06-15_a359",
-      "unit_type": "article",
       "headline": "COMUNITA POPOLARE",
       "paragraphs": [
         {
@@ -5405,7 +5045,6 @@
     },
     {
       "id": "1910-06-15_a360",
-      "unit_type": "article",
       "headline": "Lutto",
       "paragraphs": [
         {
@@ -5420,7 +5059,6 @@
     },
     {
       "id": "1910-06-15_a361",
-      "unit_type": "article",
       "headline": "Cronaca del Comune",
       "paragraphs": [
         {
@@ -5435,7 +5073,6 @@
     },
     {
       "id": "1910-06-15_a362",
-      "unit_type": "article",
       "headline": "ASSOCIAZIONI DI COOP. ROMANA FRA I FABBRICANTI ED ARTI AFFINI - Stasera alle 9 ant. adunanza generale nella sede dei Lucani ti per il resoconto delle richieste sociali e proposte per il 1910.",
       "paragraphs": [
         {
@@ -5450,7 +5087,6 @@
     },
     {
       "id": "1910-06-15_a363",
-      "unit_type": "article",
       "headline": "Musica in piazza Colonna",
       "paragraphs": [
         {
@@ -5465,7 +5101,6 @@
     },
     {
       "id": "1910-06-15_a364",
-      "unit_type": "article",
       "headline": "Monte di Pietà",
       "paragraphs": [
         {
@@ -5480,7 +5115,6 @@
     },
     {
       "id": "1910-06-15_a365",
-      "unit_type": "article",
       "headline": "PROVINCIA ROMANA",
       "paragraphs": [
         {
@@ -5495,7 +5129,6 @@
     },
     {
       "id": "1910-06-15_a366",
-      "unit_type": "article",
       "headline": "A Civitavecchia",
       "paragraphs": [
         {
@@ -5510,7 +5143,6 @@
     },
     {
       "id": "1910-06-15_a367",
-      "unit_type": "article",
       "headline": "FERIMENTO A PIPERNO",
       "paragraphs": [
         {
@@ -5525,7 +5157,6 @@
     },
     {
       "id": "1910-06-15_a368",
-      "unit_type": "article",
       "headline": "L'ON. TESO A CERVETERI",
       "paragraphs": [
         {
@@ -5540,7 +5171,6 @@
     },
     {
       "id": "1910-06-15_a369",
-      "unit_type": "article",
       "headline": "VIABILITA' PROVINCIALE",
       "paragraphs": [
         {
@@ -5555,7 +5185,6 @@
     },
     {
       "id": "1910-06-15_a370",
-      "unit_type": "article",
       "headline": "La tragedia di Civitavecchia",
       "paragraphs": [
         {
@@ -5570,7 +5199,6 @@
     },
     {
       "id": "1910-06-15_a371",
-      "unit_type": "advertisement",
       "headline": "MOVIMENTO ANTICLERICALE",
       "paragraphs": [
         {
@@ -5585,7 +5213,6 @@
     },
     {
       "id": "1910-06-15_a372",
-      "unit_type": "advertisement",
       "headline": "SUL GENERALE MASÌ",
       "paragraphs": [
         {
@@ -5600,7 +5227,6 @@
     },
     {
       "id": "1910-06-15_a373",
-      "unit_type": "advertisement",
       "headline": "Magistrati a banchetto",
       "paragraphs": [
         {
@@ -5615,7 +5241,6 @@
     },
     {
       "id": "1910-06-15_a374",
-      "unit_type": "article",
       "headline": "Tra impiegati al Debito pubblico",
       "paragraphs": [
         {
@@ -5630,7 +5255,6 @@
     },
     {
       "id": "1910-06-15_a375",
-      "unit_type": "article",
       "headline": "ASSOCIAZIONI POLITICHE",
       "paragraphs": [
         {
@@ -5645,7 +5269,6 @@
     },
     {
       "id": "1910-06-15_a376",
-      "unit_type": "article",
       "headline": "Lutti",
       "paragraphs": [
         {
@@ -5660,7 +5283,6 @@
     },
     {
       "id": "1910-06-15_a377",
-      "unit_type": "article",
       "headline": "Cronaca del lavoro",
       "paragraphs": [
         {
@@ -5675,7 +5297,6 @@
     },
     {
       "id": "1910-06-15_a378",
-      "unit_type": "article",
       "headline": "ASSOCIAZIONI DIVERSE",
       "paragraphs": [
         {
@@ -5690,7 +5311,6 @@
     },
     {
       "id": "1910-06-15_a379",
-      "unit_type": "advertisement",
       "headline": "Britannia Stores",
       "paragraphs": [
         {
@@ -5705,7 +5325,6 @@
     },
     {
       "id": "1910-06-15_a380",
-      "unit_type": "advertisement",
       "headline": "TERME COMUNALI VITERBO",
       "paragraphs": [
         {
@@ -5720,7 +5339,6 @@
     },
     {
       "id": "1910-06-15_a381",
-      "unit_type": "advertisement",
       "headline": "\"CELERE\", PRESSA FORAGGI a mano orizzontale BREVETTO DEL PELO PARDI",
       "paragraphs": [
         {
@@ -5735,7 +5353,6 @@
     },
     {
       "id": "1910-06-15_a382",
-      "unit_type": "advertisement",
       "headline": "\"S.T.A.\" SOCIETÀ TRAZIONE AUTOMOBILI\nSERVIZIO AUTOMOBILISTICO GOVERNATIVO",
       "paragraphs": [
         {
@@ -5750,7 +5367,6 @@
     },
     {
       "id": "1910-06-15_a383",
-      "unit_type": "article",
       "headline": "Un equivoco dell'on. Arlotta",
       "paragraphs": [
         {
@@ -5765,7 +5381,6 @@
     },
     {
       "id": "1910-06-15_a384",
-      "unit_type": "article",
       "headline": "Ottimismo benefico",
       "paragraphs": [
         {
@@ -5780,7 +5395,6 @@
     },
     {
       "id": "1910-06-15_a385",
-      "unit_type": "article",
       "headline": "Il papa sequestra l'ultima enciclica",
       "paragraphs": [
         {
@@ -5795,7 +5409,6 @@
     },
     {
       "id": "1910-06-15_a386",
-      "unit_type": "article",
       "headline": "Telegrammi",
       "paragraphs": [
         {
@@ -5810,7 +5423,6 @@
     },
     {
       "id": "1910-06-15_a387",
-      "unit_type": "advertisement",
       "headline": "TEATRI",
       "paragraphs": [
         {
@@ -5825,7 +5437,6 @@
     },
     {
       "id": "1910-06-15_a388",
-      "unit_type": "advertisement",
       "headline": "TEATRO COSTANZI",
       "paragraphs": [
         {
@@ -5840,7 +5451,6 @@
     },
     {
       "id": "1910-06-15_a389",
-      "unit_type": "advertisement",
       "headline": "TEATRO COSTANZI",
       "paragraphs": [
         {
@@ -5855,7 +5465,6 @@
     },
     {
       "id": "1910-06-15_a390",
-      "unit_type": "obituary",
       "headline": "Le famiglie ONESTI e DE ANGELIS comunicano con dolore l'irreparabile perdita del loro amatissimo:",
       "paragraphs": [
         {
@@ -5870,7 +5479,6 @@
     },
     {
       "id": "1910-06-15_a391",
-      "unit_type": "notice",
       "headline": "Ieri alle ore 16, spegnevasi improvvisamente",
       "paragraphs": [
         {
@@ -5885,7 +5493,6 @@
     },
     {
       "id": "1910-06-15_a392",
-      "unit_type": "article",
       "headline": "NOTIZIE DI BORSA",
       "paragraphs": [
         {
@@ -5900,7 +5507,6 @@
     },
     {
       "id": "1910-06-15_a393",
-      "unit_type": "article",
       "headline": "Le sedute d'oggi alla Camera",
       "paragraphs": [
         {
@@ -5915,7 +5521,6 @@
     },
     {
       "id": "1910-06-15_a394",
-      "unit_type": "article",
       "headline": "Il problema delle pigioni",
       "paragraphs": [
         {
@@ -5930,7 +5535,6 @@
     },
     {
       "id": "1910-06-15_a395",
-      "unit_type": "article",
       "headline": "Il sottosegretario di Stato alla guerra",
       "paragraphs": [
         {
@@ -5945,7 +5549,6 @@
     },
     {
       "id": "1910-06-15_a396",
-      "unit_type": "article",
       "headline": "Tribunale supremo di guerra e marina",
       "paragraphs": [
         {
@@ -5960,7 +5563,6 @@
     },
     {
       "id": "1910-06-15_a397",
-      "unit_type": "article",
       "headline": "Le truppe nel Benadir",
       "paragraphs": [
         {
@@ -5975,7 +5577,6 @@
     },
     {
       "id": "1910-06-15_a398",
-      "unit_type": "article",
       "headline": "Per le comunicazioni ferroviarie tra la Francia o l'Italia",
       "paragraphs": [
         {
@@ -5990,7 +5591,6 @@
     },
     {
       "id": "1910-06-15_a399",
-      "unit_type": "article",
       "headline": "Per il terremoto di Messina e Reggio",
       "paragraphs": [
         {
@@ -6005,7 +5605,6 @@
     },
     {
       "id": "1910-06-15_a400",
-      "unit_type": "article",
       "headline": "Le dimissioni del comm. Borgnini",
       "paragraphs": [
         {
@@ -6020,7 +5619,6 @@
     },
     {
       "id": "1910-06-15_a401",
-      "unit_type": "article",
       "headline": "Per l'Agro Romano",
       "paragraphs": [
         {
@@ -6035,7 +5633,6 @@
     },
     {
       "id": "1910-06-15_a402",
-      "unit_type": "article",
       "headline": "Il re a Ferrara",
       "paragraphs": [
         {
@@ -6050,7 +5647,6 @@
     },
     {
       "id": "1910-06-15_a403",
-      "unit_type": "article",
       "headline": "Le elezioni amministrative a Milano",
       "paragraphs": [
         {
@@ -6065,7 +5661,6 @@
     },
     {
       "id": "1910-06-15_a404",
-      "unit_type": "article",
       "headline": "L'Università italiana in Austria",
       "paragraphs": [
         {
@@ -6080,7 +5675,6 @@
     },
     {
       "id": "1910-06-15_a405",
-      "unit_type": "obituary",
       "headline": "Le famiglie ONESTI e DE ANGELIS comunicano con dolore l'irreparabile perdita del loro amatissimo:",
       "paragraphs": [
         {
@@ -6095,7 +5689,6 @@
     },
     {
       "id": "1910-06-15_a406",
-      "unit_type": "advertisement",
       "headline": "ORARIO DELLE FERROVIE",
       "paragraphs": [
         {
@@ -6110,7 +5703,6 @@
     },
     {
       "id": "1910-06-15_a407",
-      "unit_type": "advertisement",
       "headline": "Avvisi Economici",
       "paragraphs": [
         {
@@ -6125,7 +5717,6 @@
     },
     {
       "id": "1910-06-15_a408",
-      "unit_type": "article",
       "headline": "Il re a Ferrara",
       "paragraphs": [
         {
@@ -6140,7 +5731,6 @@
     },
     {
       "id": "1910-06-15_a409",
-      "unit_type": "advertisement",
       "headline": "IACQUARIO ROMANO",
       "paragraphs": [
         {
@@ -6155,7 +5745,6 @@
     },
     {
       "id": "1910-06-15_a410",
-      "unit_type": "article",
       "headline": "CAMBI",
       "paragraphs": [
         {
@@ -6170,7 +5759,6 @@
     },
     {
       "id": "1910-06-15_a411",
-      "unit_type": "article",
       "headline": "BORSE ESTERE",
       "paragraphs": [
         {
@@ -6185,7 +5773,6 @@
     },
     {
       "id": "1910-06-15_a412",
-      "unit_type": "advertisement",
       "headline": "Avvisi Economici",
       "paragraphs": [
         {
@@ -6200,7 +5787,6 @@
     },
     {
       "id": "1910-06-15_a413",
-      "unit_type": "classified",
       "headline": "Avvisi vari",
       "paragraphs": [
         {
@@ -6215,7 +5801,6 @@
     },
     {
       "id": "1910-06-15_a414",
-      "unit_type": "classified",
       "headline": "Locali, Case, Terreni",
       "paragraphs": [
         {
@@ -6230,7 +5815,6 @@
     },
     {
       "id": "1910-06-15_a415",
-      "unit_type": "advertisement",
       "headline": "ALLEGGIATURE",
       "paragraphs": [
         {
@@ -6245,7 +5829,6 @@
     },
     {
       "id": "1910-06-15_a416",
-      "unit_type": "advertisement",
       "headline": "ANZIO",
       "paragraphs": [
         {
@@ -6260,7 +5843,6 @@
     },
     {
       "id": "1910-06-15_a417",
-      "unit_type": "advertisement",
       "headline": "ZAGAROLO",
       "paragraphs": [
         {
@@ -6275,7 +5857,6 @@
     },
     {
       "id": "1910-06-15_a418",
-      "unit_type": "advertisement",
       "headline": "FRASGATI",
       "paragraphs": [
         {
@@ -6290,7 +5871,6 @@
     },
     {
       "id": "1910-06-15_a419",
-      "unit_type": "advertisement",
       "headline": "IN Frascati",
       "paragraphs": [
         {
@@ -6305,7 +5885,6 @@
     },
     {
       "id": "1910-06-15_a420",
-      "unit_type": "advertisement",
       "headline": "MONTEPORZIO",
       "paragraphs": [
         {
@@ -6320,7 +5899,6 @@
     },
     {
       "id": "1910-06-15_a421",
-      "unit_type": "advertisement",
       "headline": "PALOMBARA",
       "paragraphs": [
         {
@@ -6335,7 +5913,6 @@
     },
     {
       "id": "1910-06-15_a422",
-      "unit_type": "advertisement",
       "headline": "FRANCAVILLA al Mare. Appartamenti convenientemente mobilitati per bagni, presso mare e ferrovia. Scrivere Hôtel Sirena.",
       "paragraphs": [
         {
@@ -6350,7 +5927,6 @@
     },
     {
       "id": "1910-06-15_a423",
-      "unit_type": "advertisement",
       "headline": "VILLEGGIATURA",
       "paragraphs": [
         {
@@ -6365,7 +5941,6 @@
     },
     {
       "id": "1910-06-15_a424",
-      "unit_type": "advertisement",
       "headline": "VILLEGGIATURA",
       "paragraphs": [
         {
@@ -6380,7 +5955,6 @@
     },
     {
       "id": "1910-06-15_a425",
-      "unit_type": "advertisement",
       "headline": "Aste ed Appalti",
       "paragraphs": [
         {
@@ -6395,7 +5969,6 @@
     },
     {
       "id": "1910-06-15_a426",
-      "unit_type": "advertisement",
       "headline": "Capitali, Società, Cessioni d'azienda",
       "paragraphs": [
         {
@@ -6410,7 +5983,6 @@
     },
     {
       "id": "1910-06-15_a427",
-      "unit_type": "advertisement",
       "headline": "QUATTROCENTO",
       "paragraphs": [
         {
@@ -6425,7 +5997,6 @@
     },
     {
       "id": "1910-06-15_a428",
-      "unit_type": "advertisement",
       "headline": "DERO L 13.500",
       "paragraphs": [
         {
@@ -6440,7 +6011,6 @@
     },
     {
       "id": "1910-06-15_a429",
-      "unit_type": "advertisement",
       "headline": "BAR",
       "paragraphs": [
         {
@@ -6455,7 +6025,6 @@
     },
     {
       "id": "1910-06-15_a430",
-      "unit_type": "advertisement",
       "headline": "SOCIO",
       "paragraphs": [
         {
@@ -6470,7 +6039,6 @@
     },
     {
       "id": "1910-06-15_a431",
-      "unit_type": "advertisement",
       "headline": "NEGOZIO generi commestibili e Liquori cedesi lire 1500, centrale Schiarimenti via Mascheritio, 84, piano terra.",
       "paragraphs": [
         {
@@ -6485,7 +6053,6 @@
     },
     {
       "id": "1910-06-15_a432",
-      "unit_type": "advertisement",
       "headline": "UFFICIO",
       "paragraphs": [
         {
@@ -6500,7 +6067,6 @@
     },
     {
       "id": "1910-06-15_a433",
-      "unit_type": "advertisement",
       "headline": "BOTTI, caratelli, attrezzi da tinello, torchi, vendonsi dalle 11 in poi, via Prenestina, 50 (Porta Maggiore).",
       "paragraphs": [
         {
@@ -6515,7 +6081,6 @@
     },
     {
       "id": "1910-06-15_a434",
-      "unit_type": "advertisement",
       "headline": "CAUSA demolizione si vende tutto il mobilio dell’appartamento p. 3°. Tritone 180. 2537",
       "paragraphs": [
         {
@@ -6530,7 +6095,6 @@
     },
     {
       "id": "1910-06-15_a435",
-      "unit_type": "advertisement",
       "headline": "BANDO stagno liquorista 2,30x70, vendesi occasione, via Depretis, 71. 2235",
       "paragraphs": [
         {
@@ -6545,7 +6109,6 @@
     },
     {
       "id": "1910-06-15_a436",
-      "unit_type": "advertisement",
       "headline": "OCCASIONE",
       "paragraphs": [
         {
@@ -6560,7 +6123,6 @@
     },
     {
       "id": "1910-06-15_a437",
-      "unit_type": "advertisement",
       "headline": "TRECCIA domatrice robustissima, vari carrezini usati vendonsi occasione. Colosseo, 23. 2076",
       "paragraphs": [
         {
@@ -6575,7 +6137,6 @@
     },
     {
       "id": "1910-06-15_a438",
-      "unit_type": "advertisement",
       "headline": "FORNAI, il Registratore di Cassa «National», adatto per il vostro negozio, costa 450 a 900 lire. 2687",
       "paragraphs": [
         {
@@ -6590,7 +6151,6 @@
     },
     {
       "id": "1910-06-15_a439",
-      "unit_type": "advertisement",
       "headline": "PIANOFORTI",
       "paragraphs": [
         {
@@ -6605,7 +6165,6 @@
     },
     {
       "id": "1910-06-15_a440",
-      "unit_type": "advertisement",
       "headline": "CAUSA partenza da studio in noce a cera. Via S. Agata dei Goti, 5. 2293",
       "paragraphs": [
         {
@@ -6620,7 +6179,6 @@
     },
     {
       "id": "1910-06-15_a441",
-      "unit_type": "advertisement",
       "headline": "PIANOFORTE",
       "paragraphs": [
         {
@@ -6635,7 +6193,6 @@
     },
     {
       "id": "1910-06-15_a442",
-      "unit_type": "advertisement",
       "headline": "MOTORE",
       "paragraphs": [
         {
@@ -6650,7 +6207,6 @@
     },
     {
       "id": "1910-06-15_a443",
-      "unit_type": "advertisement",
       "headline": "VENDONSI",
       "paragraphs": [
         {
@@ -6665,7 +6221,6 @@
     },
     {
       "id": "1910-06-15_a444",
-      "unit_type": "advertisement",
       "headline": "CARROZZERIA",
       "paragraphs": [
         {
@@ -6680,7 +6235,6 @@
     },
     {
       "id": "1910-06-15_a445",
-      "unit_type": "advertisement",
       "headline": "BICICLETTA nuova marca tre fucili ed altra usata vendonsi d’occasione via Ludovisi 36, portiere. 2734",
       "paragraphs": [
         {
@@ -6695,7 +6249,6 @@
     },
     {
       "id": "1910-06-15_a446",
-      "unit_type": "advertisement",
       "headline": "OCCASIONE",
       "paragraphs": [
         {
@@ -6710,7 +6263,6 @@
     },
     {
       "id": "1910-06-15_a447",
-      "unit_type": "advertisement",
       "headline": "Offerte d'appartamenti",
       "paragraphs": [
         {
@@ -6725,7 +6277,6 @@
     },
     {
       "id": "1910-06-15_a448",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI appartamento quattro camere, cucina. Corso Italia, n. 29, scala seconda, interno ura. Visibile ore 14-16. 2293",
       "paragraphs": [
         {
@@ -6740,7 +6291,6 @@
     },
     {
       "id": "1910-06-15_a449",
-      "unit_type": "advertisement",
       "headline": "PORTA",
       "paragraphs": [
         {
@@ -6755,7 +6305,6 @@
     },
     {
       "id": "1910-06-15_a450",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI",
       "paragraphs": [
         {
@@ -6770,7 +6319,6 @@
     },
     {
       "id": "1910-06-15_a451",
-      "unit_type": "advertisement",
       "headline": "APPARTAMENTINI",
       "paragraphs": [
         {
@@ -6785,7 +6333,6 @@
     },
     {
       "id": "1910-06-15_a452",
-      "unit_type": "advertisement",
       "headline": "ROMA Alta cedonsi 2 bellissimi appartamenti 5-4 camere cucina primi piani. Rivolgersi Quirinale 48. Ufficio. 2716",
       "paragraphs": [
         {
@@ -6800,7 +6347,6 @@
     },
     {
       "id": "1910-06-15_a453",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI",
       "paragraphs": [
         {
@@ -6815,7 +6361,6 @@
     },
     {
       "id": "1910-06-15_a454",
-      "unit_type": "advertisement",
       "headline": "APPARTAMENTI",
       "paragraphs": [
         {
@@ -6830,7 +6375,6 @@
     },
     {
       "id": "1910-06-15_a455",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI",
       "paragraphs": [
         {
@@ -6845,7 +6389,6 @@
     },
     {
       "id": "1910-06-15_a456",
-      "unit_type": "advertisement",
       "headline": "A distinto signore affittasi camera, salotto mobiliato. Gambero 37, p. p. (Ottoni). 2685",
       "paragraphs": [
         {
@@ -6860,7 +6403,6 @@
     },
     {
       "id": "1910-06-15_a457",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI",
       "paragraphs": [
         {
@@ -6875,7 +6417,6 @@
     },
     {
       "id": "1910-06-15_a458",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI subito grande camera mobilitata con salotto e bagno. Dirigersi Leoncino 38. Parrucchiere. 2699",
       "paragraphs": [
         {
@@ -6890,7 +6431,6 @@
     },
     {
       "id": "1910-06-15_a459",
-      "unit_type": "advertisement",
       "headline": "CAMERA mobilitata, ingresso libero. Santa Dorotea 7, piano primo. 2690",
       "paragraphs": [
         {
@@ -6905,7 +6445,6 @@
     },
     {
       "id": "1910-06-15_a460",
-      "unit_type": "advertisement",
       "headline": "AMERA",
       "paragraphs": [
         {
@@ -6920,7 +6459,6 @@
     },
     {
       "id": "1910-06-15_a461",
-      "unit_type": "advertisement",
       "headline": "DUE stanze vuote comodo cucina affitto primo luglio a coniugi. Ingresso libero; posizione splendida Prati Castello. Mensile 55. Rivolgersi Natali. Via Sacrestia, 2. 2714",
       "paragraphs": [
         {
@@ -6935,7 +6473,6 @@
     },
     {
       "id": "1910-06-15_a462",
-      "unit_type": "advertisement",
       "headline": "FFRESI",
       "paragraphs": [
         {
@@ -6950,7 +6487,6 @@
     },
     {
       "id": "1910-06-15_a463",
-      "unit_type": "advertisement",
       "headline": "IGNORA",
       "paragraphs": [
         {
@@ -6965,7 +6501,6 @@
     },
     {
       "id": "1910-06-15_a464",
-      "unit_type": "advertisement",
       "headline": "CAMERE vuote mobilitate, cucina, ingresso libero. Arco Ginnasi 80-A. Bureau. 2299",
       "paragraphs": [
         {
@@ -6980,7 +6515,6 @@
     },
     {
       "id": "1910-06-15_a465",
-      "unit_type": "advertisement",
       "headline": "Domande di camere, Pensioni",
       "paragraphs": [
         {
@@ -6995,7 +6529,6 @@
     },
     {
       "id": "1910-06-15_a466",
-      "unit_type": "advertisement",
       "headline": "MPIEGATO",
       "paragraphs": [
         {
@@ -7010,7 +6543,6 @@
     },
     {
       "id": "1910-06-15_a467",
-      "unit_type": "advertisement",
       "headline": "MPIEGATO",
       "paragraphs": [
         {
@@ -7025,7 +6557,6 @@
     },
     {
       "id": "1910-06-15_a468",
-      "unit_type": "article",
       "headline": "Teatri di varietà",
       "paragraphs": [
         {
@@ -7040,7 +6571,6 @@
     },
     {
       "id": "1910-06-15_a469",
-      "unit_type": "article",
       "headline": "Un equitato distratto",
       "paragraphs": [
         {
@@ -7055,7 +6585,6 @@
     },
     {
       "id": "1910-06-15_a470",
-      "unit_type": "article",
       "headline": "buon mercato.",
       "paragraphs": [
         {
@@ -7070,7 +6599,6 @@
     },
     {
       "id": "1910-06-15_a471",
-      "unit_type": "editorial",
       "headline": "Ottimismo benefico",
       "paragraphs": [
         {
@@ -7085,7 +6613,6 @@
     },
     {
       "id": "1910-06-15_a472",
-      "unit_type": "article",
       "headline": "Il papa acquista l'antica chiesetta",
       "paragraphs": [
         {
@@ -7100,7 +6627,6 @@
     },
     {
       "id": "1910-06-15_a473",
-      "unit_type": "article",
       "headline": "Per l'Agro Romano",
       "paragraphs": [
         {
@@ -7115,7 +6641,6 @@
     },
     {
       "id": "1910-06-15_a474",
-      "unit_type": "advertisement",
       "headline": "TEATRI",
       "paragraphs": [
         {
@@ -7130,7 +6655,6 @@
     },
     {
       "id": "1910-06-15_a475",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -7145,7 +6669,6 @@
     },
     {
       "id": "1910-06-15_a476",
-      "unit_type": "advertisement",
       "headline": "TEATRO COSTANZI",
       "paragraphs": [
         {
@@ -7160,7 +6683,6 @@
     },
     {
       "id": "1910-06-15_a477",
-      "unit_type": "advertisement",
       "headline": "Teatri di varietà",
       "paragraphs": [
         {
@@ -7175,7 +6697,6 @@
     },
     {
       "id": "1910-06-15_a478",
-      "unit_type": "obituary",
       "headline": "Le famiglie ONESTI e DE ANGELIS comunicano con dolore l’irreparabile perdita del loro amatissimo:",
       "paragraphs": [
         {
@@ -7190,7 +6711,6 @@
     },
     {
       "id": "1910-06-15_a479",
-      "unit_type": "article",
       "headline": "NOTIZIE DI BORSA",
       "paragraphs": [
         {
@@ -7205,7 +6725,6 @@
     },
     {
       "id": "1910-06-15_a480",
-      "unit_type": "article",
       "headline": "CAMBI",
       "paragraphs": [
         {
@@ -7220,7 +6739,6 @@
     },
     {
       "id": "1910-06-15_a481",
-      "unit_type": "article",
       "headline": "PARTENZE",
       "paragraphs": [
         {
@@ -7235,7 +6753,6 @@
     },
     {
       "id": "1910-06-15_a482",
-      "unit_type": "article",
       "headline": "ARRIVI",
       "paragraphs": [
         {
@@ -7250,7 +6767,6 @@
     },
     {
       "id": "1910-06-15_a483",
-      "unit_type": "advertisement",
       "headline": "TRANWAY ROMA-TIVOLI",
       "paragraphs": [
         {
@@ -7265,7 +6781,6 @@
     },
     {
       "id": "1910-06-15_a484",
-      "unit_type": "advertisement",
       "headline": "TRAMVIA DEI CASTELLI\nROMA-FRASCATI",
       "paragraphs": [
         {
@@ -7280,7 +6795,6 @@
     },
     {
       "id": "1910-06-15_a485",
-      "unit_type": "advertisement",
       "headline": "TRAMVIA ROMA-CIVITACASTELLANA",
       "paragraphs": [
         {
@@ -7295,7 +6809,6 @@
     },
     {
       "id": "1910-06-15_a486",
-      "unit_type": "advertisement",
       "headline": "LUIGI CESANA. editore-proprietario.\nI. C. FALBO. reggente la Direzione.\nDonati Roberto. gerente responsabile\nStab. tip. dei Messaggero, via dei Bufalo, 193.",
       "paragraphs": [
         {
@@ -7310,7 +6823,6 @@
     },
     {
       "id": "1910-06-15_a487",
-      "unit_type": "advertisement",
       "headline": "Avvisi vari",
       "paragraphs": [
         {
@@ -7325,7 +6837,6 @@
     },
     {
       "id": "1910-06-15_a488",
-      "unit_type": "article",
       "headline": "ORARIO DELLE FERROVIE",
       "paragraphs": [
         {
@@ -7340,7 +6851,6 @@
     },
     {
       "id": "1910-06-15_a489",
-      "unit_type": "advertisement",
       "headline": "Avvisi Economici",
       "paragraphs": [
         {
@@ -7355,7 +6865,6 @@
     },
     {
       "id": "1910-06-15_a490",
-      "unit_type": "advertisement",
       "headline": "Ville e Villeggiature",
       "paragraphs": [
         {
@@ -7370,7 +6879,6 @@
     },
     {
       "id": "1910-06-15_a491",
-      "unit_type": "advertisement",
       "headline": "Capitali, Società, Cessioni d'azienda",
       "paragraphs": [
         {
@@ -7385,7 +6893,6 @@
     },
     {
       "id": "1910-06-15_a492",
-      "unit_type": "advertisement",
       "headline": "Oggetti vari, offerti o domandati",
       "paragraphs": [
         {
@@ -7400,7 +6907,6 @@
     },
     {
       "id": "1910-06-15_a493",
-      "unit_type": "advertisement",
       "headline": "Offerte d'appartamenti",
       "paragraphs": [
         {
@@ -7415,7 +6921,6 @@
     },
     {
       "id": "1910-06-15_a494",
-      "unit_type": "advertisement",
       "headline": "Offerte di camere, pensioni",
       "paragraphs": [
         {
@@ -7430,7 +6935,6 @@
     },
     {
       "id": "1910-06-15_a495",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -7445,7 +6949,6 @@
     },
     {
       "id": "1910-06-15_a496",
-      "unit_type": "advertisement",
       "headline": "MPIEGATO",
       "paragraphs": [
         {
@@ -7460,7 +6963,6 @@
     },
     {
       "id": "1910-06-15_a497",
-      "unit_type": "advertisement",
       "headline": "MPIEGATO",
       "paragraphs": [
         {
@@ -7475,7 +6977,6 @@
     },
     {
       "id": "1910-06-15_a498",
-      "unit_type": "article",
       "headline": "d'oggi alla Camera",
       "paragraphs": [
         {
@@ -7490,7 +6991,6 @@
     },
     {
       "id": "1910-06-15_a499",
-      "unit_type": "article",
       "headline": "ma delle pigioni",
       "paragraphs": [
         {
@@ -7505,7 +7005,6 @@
     },
     {
       "id": "1910-06-15_a500",
-      "unit_type": "article",
       "headline": "ario di Stato alla guerra",
       "paragraphs": [
         {
@@ -7520,7 +7019,6 @@
     },
     {
       "id": "1910-06-15_a501",
-      "unit_type": "article",
       "headline": "remo di guerra e marina",
       "paragraphs": [
         {
@@ -7535,7 +7033,6 @@
     },
     {
       "id": "1910-06-15_a502",
-      "unit_type": "article",
       "headline": "pe nel Benadir",
       "paragraphs": [
         {
@@ -7550,7 +7047,6 @@
     },
     {
       "id": "1910-06-15_a503",
-      "unit_type": "article",
       "headline": "unicazioni ferroviarie",
       "paragraphs": [
         {
@@ -7565,7 +7061,6 @@
     },
     {
       "id": "1910-06-15_a504",
-      "unit_type": "article",
       "headline": "oto di Messina e Reggio",
       "paragraphs": [
         {
@@ -7580,7 +7075,6 @@
     },
     {
       "id": "1910-06-15_a505",
-      "unit_type": "article",
       "headline": "ni del comm. Borgnini",
       "paragraphs": [
         {
@@ -7595,7 +7089,6 @@
     },
     {
       "id": "1910-06-15_a506",
-      "unit_type": "article",
       "headline": "Agro Romano",
       "paragraphs": [
         {
@@ -7610,7 +7103,6 @@
     },
     {
       "id": "1910-06-15_a507",
-      "unit_type": "article",
       "headline": "e a Ferrara",
       "paragraphs": [
         {
@@ -7625,7 +7117,6 @@
     },
     {
       "id": "1910-06-15_a508",
-      "unit_type": "advertisement",
       "headline": "ORARIO DELLE PARTI",
       "paragraphs": [
         {
@@ -7640,7 +7131,6 @@
     },
     {
       "id": "1910-06-15_a509",
-      "unit_type": "advertisement",
       "headline": "Avvisi Economici",
       "paragraphs": [
         {
@@ -7655,7 +7145,6 @@
     },
     {
       "id": "1910-06-15_a510",
-      "unit_type": "advertisement",
       "headline": "QUATTROCENTO",
       "paragraphs": [
         {
@@ -7670,7 +7159,6 @@
     },
     {
       "id": "1910-06-15_a511",
-      "unit_type": "advertisement",
       "headline": "CERDO L 13.500 prima ipoteca. Interesse 6 0/0 netto, proprietà Montecampiti-Montetondo, valore L 55.000. A B. 500, termoposta.",
       "paragraphs": [
         {
@@ -7685,7 +7173,6 @@
     },
     {
       "id": "1910-06-15_a512",
-      "unit_type": "advertisement",
       "headline": "OCCASIONE. Vendesi prezzo derisorio busto marmo raffigurante «Orfanella», dono Regina Madre, vinfo lotteria. Pantheon 49. 2627",
       "paragraphs": [
         {
@@ -7700,7 +7187,6 @@
     },
     {
       "id": "1910-06-15_a513",
-      "unit_type": "advertisement",
       "headline": "PIANOFORTE, verticale, triplincrociato, massoso, vendo occasione favorevolissima. Lavoro Impresa, 2, piano quarto. Prosdomini. v 2293",
       "paragraphs": [
         {
@@ -7715,7 +7201,6 @@
     },
     {
       "id": "1910-06-15_a514",
-      "unit_type": "advertisement",
       "headline": "APPARTAMENTI tre camere cucina, terrazzo 70. Studio Marzano. Palermo 67. 2730",
       "paragraphs": [
         {
@@ -7730,7 +7215,6 @@
     },
     {
       "id": "1910-06-15_a515",
-      "unit_type": "advertisement",
       "headline": "CAMERA libera presso coniugi non affittacamera. Rivolgersi Babuino 68, portiere. 2309",
       "paragraphs": [
         {
@@ -7745,7 +7229,6 @@
     },
     {
       "id": "1910-06-15_a516",
-      "unit_type": "advertisement",
       "headline": "CERCANSI due o tre camere vuote, cucina. Moscardini Napoleone III, 89. 2698",
       "paragraphs": [
         {
@@ -7760,7 +7243,6 @@
     },
     {
       "id": "1910-06-15_a517",
-      "unit_type": "article",
       "headline": "Le sedute d'oggi alla Camera",
       "paragraphs": [
         {
@@ -7775,7 +7257,6 @@
     },
     {
       "id": "1910-06-15_a518",
-      "unit_type": "article",
       "headline": "Il problema delle pigioni",
       "paragraphs": [
         {
@@ -7790,7 +7271,6 @@
     },
     {
       "id": "1910-06-15_a519",
-      "unit_type": "article",
       "headline": "Per l'Agro Romano",
       "paragraphs": [
         {
@@ -7805,7 +7285,6 @@
     },
     {
       "id": "1910-06-15_a520",
-      "unit_type": "article",
       "headline": "grammi",
       "paragraphs": [
         {
@@ -7820,7 +7299,6 @@
     },
     {
       "id": "1910-06-15_a521",
-      "unit_type": "advertisement",
       "headline": "TEATRO COST",
       "paragraphs": [
         {
@@ -7835,7 +7313,6 @@
     },
     {
       "id": "1910-06-15_a522",
-      "unit_type": "obituary",
       "headline": "MARIA HA",
       "paragraphs": [
         {
@@ -7850,7 +7327,6 @@
     },
     {
       "id": "1910-06-15_a523",
-      "unit_type": "notice",
       "headline": "Dottor Cav. TORQUATI",
       "paragraphs": [
         {
@@ -7865,7 +7341,6 @@
     },
     {
       "id": "1910-06-15_a524",
-      "unit_type": "advertisement",
       "headline": "VILLAGGIATURE",
       "paragraphs": [
         {
@@ -7880,7 +7355,6 @@
     },
     {
       "id": "1910-06-15_a525",
-      "unit_type": "advertisement",
       "headline": "IN Frascati",
       "paragraphs": [
         {
@@ -7895,7 +7369,6 @@
     },
     {
       "id": "1910-06-15_a526",
-      "unit_type": "advertisement",
       "headline": "PALOMBARA",
       "paragraphs": [
         {
@@ -7910,7 +7383,6 @@
     },
     {
       "id": "1910-06-15_a527",
-      "unit_type": "advertisement",
       "headline": "VILLEGGIATURA",
       "paragraphs": [
         {
@@ -7925,7 +7397,6 @@
     },
     {
       "id": "1910-06-15_a528",
-      "unit_type": "advertisement",
       "headline": "Aste ed Appalti",
       "paragraphs": [
         {
@@ -7940,7 +7411,6 @@
     },
     {
       "id": "1910-06-15_a529",
-      "unit_type": "advertisement",
       "headline": "4 Capitali, Società, Cessioni d'azienda",
       "paragraphs": [
         {
@@ -7955,7 +7425,6 @@
     },
     {
       "id": "1910-06-15_a530",
-      "unit_type": "advertisement",
       "headline": "CERCO L 13.500 prima ipoteca, interesse 6 0/0 netto, proprietà Montecompatri-Monterotondo, valore L 55.000. A. B. 500, fermoposta. 2287",
       "paragraphs": [
         {
@@ -7970,7 +7439,6 @@
     },
     {
       "id": "1910-06-15_a531",
-      "unit_type": "advertisement",
       "headline": "NEGOZIO",
       "paragraphs": [
         {
@@ -7985,7 +7453,6 @@
     },
     {
       "id": "1910-06-15_a532",
-      "unit_type": "advertisement",
       "headline": "UFFICIO ocedesi ben corredato posizione centralissima, gas, telefono. Dirigersi Portiere Corso Umberto 481. Esclusi mediatori. 2308",
       "paragraphs": [
         {
@@ -8000,7 +7467,6 @@
     },
     {
       "id": "1910-06-15_a533",
-      "unit_type": "advertisement",
       "headline": "BOTTI, caratelli, attrezzi da tinello, torchi, vendonsi dalle 11 in poi, via Prenestina, 90 (Porta Maggiore). 2435",
       "paragraphs": [
         {
@@ -8015,7 +7481,6 @@
     },
     {
       "id": "1910-06-15_a534",
-      "unit_type": "advertisement",
       "headline": "BANDO stagno liquorista 2,30 x 70, vendesi occasione, via Depretis, 71. 2225",
       "paragraphs": [
         {
@@ -8030,7 +7495,6 @@
     },
     {
       "id": "1910-06-15_a535",
-      "unit_type": "advertisement",
       "headline": "TREOGIA domatrice robustissima, vari carrozzini usati vendonsi occasione, Colosseo 23. 2076",
       "paragraphs": [
         {
@@ -8045,7 +7509,6 @@
     },
     {
       "id": "1910-06-15_a536",
-      "unit_type": "advertisement",
       "headline": "CAUSA",
       "paragraphs": [
         {
@@ -8060,7 +7523,6 @@
     },
     {
       "id": "1910-06-15_a537",
-      "unit_type": "advertisement",
       "headline": "MOTORE",
       "paragraphs": [
         {
@@ -8075,7 +7537,6 @@
     },
     {
       "id": "1910-06-15_a538",
-      "unit_type": "advertisement",
       "headline": "BICICLETTA nuova marca tre fucili ed altra usata vendonsi d'occasione via Ludovisi 26. portiere. 2724",
       "paragraphs": [
         {
@@ -8090,7 +7551,6 @@
     },
     {
       "id": "1910-06-15_a539",
-      "unit_type": "advertisement",
       "headline": "6 Offerte d'appartamenti",
       "paragraphs": [
         {
@@ -8105,7 +7565,6 @@
     },
     {
       "id": "1910-06-15_a540",
-      "unit_type": "advertisement",
       "headline": "APPARTAMENTI",
       "paragraphs": [
         {
@@ -8120,7 +7579,6 @@
     },
     {
       "id": "1910-06-15_a541",
-      "unit_type": "advertisement",
       "headline": "A distinto signore affittasi camera, salotto mobilitato. Gambero 37, p. p. (Ottoni). 2685",
       "paragraphs": [
         {
@@ -8135,7 +7593,6 @@
     },
     {
       "id": "1910-06-15_a542",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI subito grande camera mobilitata con salotto e bagno. Dirigersi Leoncino 38. Parrucchiere. 2699",
       "paragraphs": [
         {
@@ -8150,7 +7607,6 @@
     },
     {
       "id": "1910-06-15_a543",
-      "unit_type": "advertisement",
       "headline": "SIGNORA non affittacamere affitta una, due stanze vuote mobiliate. Umberto Biancamano n. 26 int. 10 Piazza S Giovanni. 2766",
       "paragraphs": [
         {
@@ -8165,7 +7621,6 @@
     },
     {
       "id": "1910-06-15_a544",
-      "unit_type": "advertisement",
       "headline": "9 Domande di camere, Pensioni",
       "paragraphs": [
         {
@@ -8180,7 +7635,6 @@
     },
     {
       "id": "1910-06-15_a545",
-      "unit_type": "advertisement",
       "headline": "MPIEGATO",
       "paragraphs": [
         {
@@ -8195,7 +7649,6 @@
     },
     {
       "id": "1910-06-15_a546",
-      "unit_type": "article",
       "headline": "Un equivoco dell'on. Arlotta",
       "paragraphs": [
         {
@@ -8210,7 +7663,6 @@
     },
     {
       "id": "1910-06-15_a547",
-      "unit_type": "article",
       "headline": "Optimismo benefico",
       "paragraphs": [
         {
@@ -8225,7 +7677,6 @@
     },
     {
       "id": "1910-06-15_a548",
-      "unit_type": "article",
       "headline": "Il papa sequestra l'ultima enciclica",
       "paragraphs": [
         {
@@ -8240,7 +7691,6 @@
     },
     {
       "id": "1910-06-15_a549",
-      "unit_type": "article",
       "headline": "Le sedute d'oggi alla Camera",
       "paragraphs": [
         {
@@ -8255,7 +7705,6 @@
     },
     {
       "id": "1910-06-15_a550",
-      "unit_type": "article",
       "headline": "Per le comunicazioni ferroviarie tra la Francia o l'Italia",
       "paragraphs": [
         {
@@ -8270,7 +7719,6 @@
     },
     {
       "id": "1910-06-15_a551",
-      "unit_type": "notice",
       "headline": "L'attesa",
       "paragraphs": [
         {
@@ -8285,7 +7733,6 @@
     },
     {
       "id": "1910-06-15_a552",
-      "unit_type": "article",
       "headline": "TEATRI\n\"L'amante del cuore\", di M. Sergine\nal Valle",
       "paragraphs": [
         {
@@ -8300,7 +7747,6 @@
     },
     {
       "id": "1910-06-15_a553",
-      "unit_type": "advertisement",
       "headline": "TEATRO COSTANZI",
       "paragraphs": [
         {
@@ -8315,7 +7761,6 @@
     },
     {
       "id": "1910-06-15_a554",
-      "unit_type": "obituary",
       "headline": "MARIA HAAS",
       "paragraphs": [
         {
@@ -8330,7 +7775,6 @@
     },
     {
       "id": "1910-06-15_a555",
-      "unit_type": "obituary",
       "headline": "ANGELO TORRONI",
       "paragraphs": [
         {
@@ -8345,7 +7789,6 @@
     },
     {
       "id": "1910-06-15_a556",
-      "unit_type": "article",
       "headline": "ORARIO DELLE FERROVIE PARTENZE",
       "paragraphs": [
         {
@@ -8360,7 +7803,6 @@
     },
     {
       "id": "1910-06-15_a557",
-      "unit_type": "advertisement",
       "headline": "ALLEGGIATURE",
       "paragraphs": [
         {
@@ -8375,7 +7817,6 @@
     },
     {
       "id": "1910-06-15_a558",
-      "unit_type": "advertisement",
       "headline": "ANZIO",
       "paragraphs": [
         {
@@ -8390,7 +7831,6 @@
     },
     {
       "id": "1910-06-15_a559",
-      "unit_type": "advertisement",
       "headline": "ZAGAROLO",
       "paragraphs": [
         {
@@ -8405,7 +7845,6 @@
     },
     {
       "id": "1910-06-15_a560",
-      "unit_type": "advertisement",
       "headline": "FRASGATI",
       "paragraphs": [
         {
@@ -8420,7 +7859,6 @@
     },
     {
       "id": "1910-06-15_a561",
-      "unit_type": "advertisement",
       "headline": "IN Frascati",
       "paragraphs": [
         {
@@ -8435,7 +7873,6 @@
     },
     {
       "id": "1910-06-15_a562",
-      "unit_type": "advertisement",
       "headline": "MONTEPORZIO",
       "paragraphs": [
         {
@@ -8450,7 +7887,6 @@
     },
     {
       "id": "1910-06-15_a563",
-      "unit_type": "advertisement",
       "headline": "PALOMBARA",
       "paragraphs": [
         {
@@ -8465,7 +7901,6 @@
     },
     {
       "id": "1910-06-15_a564",
-      "unit_type": "advertisement",
       "headline": "FRANCavilla al Mare",
       "paragraphs": [
         {
@@ -8480,7 +7915,6 @@
     },
     {
       "id": "1910-06-15_a565",
-      "unit_type": "advertisement",
       "headline": "VILLEGGIATURA",
       "paragraphs": [
         {
@@ -8495,7 +7929,6 @@
     },
     {
       "id": "1910-06-15_a566",
-      "unit_type": "advertisement",
       "headline": "VILLEGGIATURA",
       "paragraphs": [
         {
@@ -8510,7 +7943,6 @@
     },
     {
       "id": "1910-06-15_a567",
-      "unit_type": "advertisement",
       "headline": "SOCIO",
       "paragraphs": [
         {
@@ -8525,7 +7957,6 @@
     },
     {
       "id": "1910-06-15_a568",
-      "unit_type": "advertisement",
       "headline": "NEGOZIO",
       "paragraphs": [
         {
@@ -8540,7 +7971,6 @@
     },
     {
       "id": "1910-06-15_a569",
-      "unit_type": "advertisement",
       "headline": "UFFICIO",
       "paragraphs": [
         {
@@ -8555,7 +7985,6 @@
     },
     {
       "id": "1910-06-15_a570",
-      "unit_type": "advertisement",
       "headline": "Oggetti vari, offerti o domandati",
       "paragraphs": [
         {
@@ -8570,7 +7999,6 @@
     },
     {
       "id": "1910-06-15_a571",
-      "unit_type": "advertisement",
       "headline": "CAUSA",
       "paragraphs": [
         {
@@ -8585,7 +8013,6 @@
     },
     {
       "id": "1910-06-15_a572",
-      "unit_type": "advertisement",
       "headline": "SANDO",
       "paragraphs": [
         {
@@ -8600,7 +8027,6 @@
     },
     {
       "id": "1910-06-15_a573",
-      "unit_type": "advertisement",
       "headline": "TREOGIA",
       "paragraphs": [
         {
@@ -8615,7 +8041,6 @@
     },
     {
       "id": "1910-06-15_a574",
-      "unit_type": "advertisement",
       "headline": "FORNAI",
       "paragraphs": [
         {
@@ -8630,7 +8055,6 @@
     },
     {
       "id": "1910-06-15_a575",
-      "unit_type": "advertisement",
       "headline": "PIANOFORTI",
       "paragraphs": [
         {
@@ -8645,7 +8069,6 @@
     },
     {
       "id": "1910-06-15_a576",
-      "unit_type": "advertisement",
       "headline": "CAUSA",
       "paragraphs": [
         {
@@ -8660,7 +8083,6 @@
     },
     {
       "id": "1910-06-15_a577",
-      "unit_type": "advertisement",
       "headline": "MOTORE",
       "paragraphs": [
         {
@@ -8675,7 +8097,6 @@
     },
     {
       "id": "1910-06-15_a578",
-      "unit_type": "advertisement",
       "headline": "VENDONSI",
       "paragraphs": [
         {
@@ -8690,7 +8111,6 @@
     },
     {
       "id": "1910-06-15_a579",
-      "unit_type": "advertisement",
       "headline": "CARROZZERIA",
       "paragraphs": [
         {
@@ -8705,7 +8125,6 @@
     },
     {
       "id": "1910-06-15_a580",
-      "unit_type": "advertisement",
       "headline": "BICICLETTA",
       "paragraphs": [
         {
@@ -8720,7 +8139,6 @@
     },
     {
       "id": "1910-06-15_a581",
-      "unit_type": "advertisement",
       "headline": "OCCASIONE",
       "paragraphs": [
         {
@@ -8735,7 +8153,6 @@
     },
     {
       "id": "1910-06-15_a582",
-      "unit_type": "advertisement",
       "headline": "PORTA",
       "paragraphs": [
         {
@@ -8750,7 +8167,6 @@
     },
     {
       "id": "1910-06-15_a583",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI",
       "paragraphs": [
         {
@@ -8765,7 +8181,6 @@
     },
     {
       "id": "1910-06-15_a584",
-      "unit_type": "advertisement",
       "headline": "APPARTAMENTINI",
       "paragraphs": [
         {
@@ -8780,7 +8195,6 @@
     },
     {
       "id": "1910-06-15_a585",
-      "unit_type": "advertisement",
       "headline": "ROMA",
       "paragraphs": [
         {
@@ -8795,7 +8209,6 @@
     },
     {
       "id": "1910-06-15_a586",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI",
       "paragraphs": [
         {
@@ -8810,7 +8223,6 @@
     },
     {
       "id": "1910-06-15_a587",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI",
       "paragraphs": [
         {
@@ -8825,7 +8237,6 @@
     },
     {
       "id": "1910-06-15_a588",
-      "unit_type": "advertisement",
       "headline": "Offerte di camere, pensioni",
       "paragraphs": [
         {
@@ -8840,7 +8251,6 @@
     },
     {
       "id": "1910-06-15_a589",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI",
       "paragraphs": [
         {
@@ -8855,7 +8265,6 @@
     },
     {
       "id": "1910-06-15_a590",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI",
       "paragraphs": [
         {
@@ -8870,7 +8279,6 @@
     },
     {
       "id": "1910-06-15_a591",
-      "unit_type": "advertisement",
       "headline": "AMERA",
       "paragraphs": [
         {
@@ -8885,7 +8293,6 @@
     },
     {
       "id": "1910-06-15_a592",
-      "unit_type": "advertisement",
       "headline": "UE",
       "paragraphs": [
         {
@@ -8900,7 +8307,6 @@
     },
     {
       "id": "1910-06-15_a593",
-      "unit_type": "advertisement",
       "headline": "FFRESI",
       "paragraphs": [
         {
@@ -8915,7 +8321,6 @@
     },
     {
       "id": "1910-06-15_a594",
-      "unit_type": "advertisement",
       "headline": "IGNORA",
       "paragraphs": [
         {
@@ -8930,7 +8335,6 @@
     },
     {
       "id": "1910-06-15_a595",
-      "unit_type": "advertisement",
       "headline": "AMERA",
       "paragraphs": [
         {
@@ -8945,7 +8349,6 @@
     },
     {
       "id": "1910-06-15_a596",
-      "unit_type": "advertisement",
       "headline": "MPIEGATO",
       "paragraphs": [
         {
@@ -8960,7 +8363,6 @@
     },
     {
       "id": "1910-06-15_a597",
-      "unit_type": "advertisement",
       "headline": "REPUBLICA DI S. MARINO PRESTITO A PREMI",
       "paragraphs": [
         {
@@ -8975,7 +8377,6 @@
     },
     {
       "id": "1910-06-15_a598",
-      "unit_type": "advertisement",
       "headline": "CICLISTI",
       "paragraphs": [
         {
@@ -8990,7 +8391,6 @@
     },
     {
       "id": "1910-06-15_a599",
-      "unit_type": "advertisement",
       "headline": "SPECIALITA' - MOBILI IN CUOIO",
       "paragraphs": [
         {
@@ -9005,7 +8405,6 @@
     },
     {
       "id": "1910-06-15_a600",
-      "unit_type": "advertisement",
       "headline": "IL MIGLIOR COGNAC?",
       "paragraphs": [
         {
@@ -9020,7 +8419,6 @@
     },
     {
       "id": "1910-06-15_a601",
-      "unit_type": "article",
       "headline": "LO SCARABEO",
       "paragraphs": [
         {
@@ -9035,7 +8433,6 @@
     },
     {
       "id": "1910-06-15_a602",
-      "unit_type": "article",
       "headline": "PARTE TERZA",
       "paragraphs": [
         {
@@ -9050,7 +8447,6 @@
     },
     {
       "id": "1910-06-15_a603",
-      "unit_type": "advertisement",
       "headline": "BBLICA PRESTITO",
       "paragraphs": [
         {
@@ -9065,7 +8461,6 @@
     },
     {
       "id": "1910-06-15_a604",
-      "unit_type": "advertisement",
       "headline": "BANCO COMMERCIALE",
       "paragraphs": [
         {
@@ -9080,7 +8475,6 @@
     },
     {
       "id": "1910-06-15_a605",
-      "unit_type": "advertisement",
       "headline": "A RATE",
       "paragraphs": [
         {
@@ -9095,7 +8489,6 @@
     },
     {
       "id": "1910-06-15_a606",
-      "unit_type": "article",
       "headline": "BEO",
       "paragraphs": [
         {
@@ -9110,7 +8503,6 @@
     },
     {
       "id": "1910-06-15_a607",
-      "unit_type": "advertisement",
       "headline": "DI S. MA A PREMI",
       "paragraphs": [
         {
@@ -9125,7 +8517,6 @@
     },
     {
       "id": "1910-06-15_a608",
-      "unit_type": "advertisement",
       "headline": "Cessioni Stipendio",
       "paragraphs": [
         {
@@ -9140,7 +8531,6 @@
     },
     {
       "id": "1910-06-15_a609",
-      "unit_type": "advertisement",
       "headline": "AFFITTASI",
       "paragraphs": [
         {
@@ -9155,7 +8545,6 @@
     },
     {
       "id": "1910-06-15_a610",
-      "unit_type": "advertisement",
       "headline": "CEDESI NEGOZIO",
       "paragraphs": [
         {
@@ -9170,7 +8559,6 @@
     },
     {
       "id": "1910-06-15_a611",
-      "unit_type": "advertisement",
       "headline": "LANA",
       "paragraphs": [
         {
@@ -9185,7 +8573,6 @@
     },
     {
       "id": "1910-06-15_a612",
-      "unit_type": "advertisement",
       "headline": "VENDESI",
       "paragraphs": [
         {
@@ -9200,7 +8587,6 @@
     },
     {
       "id": "1910-06-15_a613",
-      "unit_type": "advertisement",
       "headline": "FOCIA DI GELSI",
       "paragraphs": [
         {
@@ -9215,7 +8601,6 @@
     },
     {
       "id": "1910-06-15_a614",
-      "unit_type": "advertisement",
       "headline": "FABBRICA DI SCATOLE",
       "paragraphs": [
         {
@@ -9230,7 +8615,6 @@
     },
     {
       "id": "1910-06-15_a615",
-      "unit_type": "advertisement",
       "headline": "CERCASI",
       "paragraphs": [
         {
@@ -9245,7 +8629,6 @@
     },
     {
       "id": "1910-06-15_a616",
-      "unit_type": "article",
       "headline": "MAC?",
       "paragraphs": [
         {
@@ -9260,7 +8643,6 @@
     },
     {
       "id": "1910-06-15_a617",
-      "unit_type": "article",
       "headline": "MARINO EMI",
       "paragraphs": [
         {
@@ -9275,7 +8657,6 @@
     },
     {
       "id": "1910-06-15_a618",
-      "unit_type": "advertisement",
       "headline": "MAIALETTI",
       "paragraphs": [
         {
@@ -9290,7 +8671,6 @@
     },
     {
       "id": "1910-06-15_a619",
-      "unit_type": "advertisement",
       "headline": "IN HERBIS SALUS",
       "paragraphs": [
         {
@@ -9305,7 +8685,6 @@
     },
     {
       "id": "1910-06-15_a620",
-      "unit_type": "advertisement",
       "headline": "CALZATURIFICIO di VARESE",
       "paragraphs": [
         {
@@ -9320,7 +8699,6 @@
     },
     {
       "id": "1910-06-15_a621",
-      "unit_type": "advertisement",
       "headline": "LANGEN & WOLF",
       "paragraphs": [
         {
@@ -9335,7 +8713,6 @@
     },
     {
       "id": "1910-06-15_a622",
-      "unit_type": "article",
       "headline": "null",
       "paragraphs": [
         {
@@ -9350,7 +8727,6 @@
     },
     {
       "id": "1910-06-15_a623",
-      "unit_type": "advertisement",
       "headline": "Cent. 5 la parola - Min. cent. 75",
       "paragraphs": [
         {
@@ -9365,7 +8741,6 @@
     },
     {
       "id": "1910-06-15_a624",
-      "unit_type": "classified",
       "headline": "Offerte d'impiego",
       "paragraphs": [
         {
@@ -9380,7 +8755,6 @@
     },
     {
       "id": "1910-06-15_a625",
-      "unit_type": "advertisement",
       "headline": "RE",
       "paragraphs": [
         {
@@ -9395,7 +8769,6 @@
     },
     {
       "id": "1910-06-15_a626",
-      "unit_type": "advertisement",
       "headline": "CESSIONI QUINTO Il Banco",
       "paragraphs": [
         {
@@ -9410,7 +8783,6 @@
     },
     {
       "id": "1910-06-15_a627",
-      "unit_type": "advertisement",
       "headline": "CICLISTI",
       "paragraphs": [
         {
@@ -9425,7 +8797,6 @@
     },
     {
       "id": "1910-06-15_a628",
-      "unit_type": "advertisement",
       "headline": "CICLIS",
       "paragraphs": [
         {
@@ -9440,7 +8811,6 @@
     },
     {
       "id": "1910-06-15_a629",
-      "unit_type": "advertisement",
       "headline": "FILIALE di ROMA e deposito macchine",
       "paragraphs": [
         {
@@ -9455,7 +8825,6 @@
     },
     {
       "id": "1910-06-15_a630",
-      "unit_type": "advertisement",
       "headline": "SPECIALITA' - M",
       "paragraphs": [
         {
@@ -9470,7 +8839,6 @@
     },
     {
       "id": "1910-06-15_a631",
-      "unit_type": "advertisement",
       "headline": "COMMERCIALE",
       "paragraphs": [
         {
@@ -9485,7 +8853,6 @@
     },
     {
       "id": "1910-06-15_a632",
-      "unit_type": "advertisement",
       "headline": "minale 2",
       "paragraphs": [
         {
@@ -9500,7 +8867,6 @@
     },
     {
       "id": "1910-06-15_a633",
-      "unit_type": "advertisement",
       "headline": "STIPENDIO",
       "paragraphs": [
         {
@@ -9515,7 +8881,6 @@
     },
     {
       "id": "1910-06-15_a634",
-      "unit_type": "advertisement",
       "headline": "Cessioni",
       "paragraphs": [
         {
@@ -9530,7 +8895,6 @@
     },
     {
       "id": "1910-06-15_a635",
-      "unit_type": "advertisement",
       "headline": "SCIATICA",
       "paragraphs": [
         {
@@ -9545,7 +8909,6 @@
     },
     {
       "id": "1910-06-15_a636",
-      "unit_type": "advertisement",
       "headline": "LANA",
       "paragraphs": [
         {
@@ -9560,7 +8923,6 @@
     },
     {
       "id": "1910-06-15_a637",
-      "unit_type": "advertisement",
       "headline": "VEN",
       "paragraphs": [
         {
@@ -9575,7 +8937,6 @@
     },
     {
       "id": "1910-06-15_a638",
-      "unit_type": "advertisement",
       "headline": "FOGLIA",
       "paragraphs": [
         {
@@ -9590,7 +8951,6 @@
     },
     {
       "id": "1910-06-15_a639",
-      "unit_type": "advertisement",
       "headline": "FABBRICA",
       "paragraphs": [
         {
@@ -9605,7 +8965,6 @@
     },
     {
       "id": "1910-06-15_a640",
-      "unit_type": "advertisement",
       "headline": "CERCASI",
       "paragraphs": [
         {
@@ -9620,7 +8979,6 @@
     },
     {
       "id": "1910-06-15_a641",
-      "unit_type": "classified",
       "headline": "Domande d'impiego",
       "paragraphs": [
         {
@@ -9635,7 +8993,6 @@
     },
     {
       "id": "1910-06-15_a642",
-      "unit_type": "advertisement",
       "headline": "CERCASI donna tutto servizio, senza bucato, antenne, recenti informazioni. Venti lire esili. Ferreri, via Firenze 38.",
       "paragraphs": [
         {
@@ -9650,7 +9007,6 @@
     },
     {
       "id": "1910-06-15_a643",
-      "unit_type": "advertisement",
       "headline": "CERCASI una cuoca finita quarantenne con ottime referenze. Stipendio 25. Via Veneto 116 interno 3.",
       "paragraphs": [
         {
@@ -9665,7 +9021,6 @@
     },
     {
       "id": "1910-06-15_a644",
-      "unit_type": "advertisement",
       "headline": "CERCASI donna anziana per due persone, tutta servizio, escluso bucato. Buone referenze. Salatafimi 14-A, interno 7, dalle 12 alle 15.",
       "paragraphs": [
         {
@@ -9680,7 +9035,6 @@
     },
     {
       "id": "1910-06-15_a645",
-      "unit_type": "advertisement",
       "headline": "DONNA di servizio, 25-35enne, capace cucina cercasi. Salario 25-30. Presentarsi Via Milano 4-B. Mainardi.",
       "paragraphs": [
         {
@@ -9695,7 +9049,6 @@
     },
     {
       "id": "1910-06-15_a646",
-      "unit_type": "advertisement",
       "headline": "Lezioni e Conversazioni",
       "paragraphs": [
         {
@@ -9710,7 +9063,6 @@
     },
     {
       "id": "1910-06-15_a647",
-      "unit_type": "advertisement",
       "headline": "Caffè",
       "paragraphs": [
         {
@@ -9725,7 +9077,6 @@
     },
     {
       "id": "1910-06-15_a648",
-      "unit_type": "advertisement",
       "headline": "ABILI RAGAZZE",
       "paragraphs": [
         {
@@ -9740,7 +9091,6 @@
     },
     {
       "id": "1910-06-15_a649",
-      "unit_type": "advertisement",
       "headline": "di VARESE",
       "paragraphs": [
         {
@@ -9755,7 +9105,6 @@
     },
     {
       "id": "1910-06-15_a650",
-      "unit_type": "advertisement",
       "headline": "ARINO",
       "paragraphs": [
         {
@@ -9770,7 +9119,6 @@
     },
     {
       "id": "1910-06-15_a651",
-      "unit_type": "article",
       "headline": "null",
       "paragraphs": [
         {
@@ -9785,7 +9133,6 @@
     },
     {
       "id": "1910-06-15_a652",
-      "unit_type": "article",
       "headline": "LO SCARABEEO",
       "paragraphs": [
         {
@@ -9800,7 +9147,6 @@
     },
     {
       "id": "1910-06-15_a653",
-      "unit_type": "advertisement",
       "headline": "PRESERVATIVI OVALINE ed OGGETTI di USO INTIMO",
       "paragraphs": [
         {
@@ -9815,7 +9161,6 @@
     },
     {
       "id": "1910-06-15_a654",
-      "unit_type": "advertisement",
       "headline": "CINTI",
       "paragraphs": [
         {
@@ -9830,7 +9175,6 @@
     },
     {
       "id": "1910-06-15_a655",
-      "unit_type": "advertisement",
       "headline": "IMPOTENZA",
       "paragraphs": [
         {
@@ -9845,7 +9189,6 @@
     },
     {
       "id": "1910-06-15_a656",
-      "unit_type": "advertisement",
       "headline": "CURE SPECIALI pe' mali delle donne, sagrai, pelle, retta-\nli. Esami di urine, sputi, ecc. Via Belsa-\nna 60, int. 6. Ore 10-18. D.r MAURIELLO.",
       "paragraphs": [
         {
@@ -9860,7 +9203,6 @@
     },
     {
       "id": "1910-06-15_a657",
-      "unit_type": "advertisement",
       "headline": "SENZA CAPITALI",
       "paragraphs": [
         {
@@ -9875,7 +9217,6 @@
     },
     {
       "id": "1910-06-15_a658",
-      "unit_type": "advertisement",
       "headline": "CEDES VASTO NEGOZIO",
       "paragraphs": [
         {
@@ -9890,7 +9231,6 @@
     },
     {
       "id": "1910-06-15_a659",
-      "unit_type": "advertisement",
       "headline": "FALEGNAMI",
       "paragraphs": [
         {
@@ -9905,7 +9245,6 @@
     },
     {
       "id": "1910-06-15_a660",
-      "unit_type": "advertisement",
       "headline": "A RATE",
       "paragraphs": [
         {
@@ -9920,7 +9259,6 @@
     },
     {
       "id": "1910-06-15_a661",
-      "unit_type": "advertisement",
       "headline": "I IN CUOIO",
       "paragraphs": [
         {
@@ -9935,7 +9273,6 @@
     },
     {
       "id": "1910-06-15_a662",
-      "unit_type": "advertisement",
       "headline": "ERNIE",
       "paragraphs": [
         {
@@ -9950,7 +9287,6 @@
     },
     {
       "id": "1910-06-15_a663",
-      "unit_type": "advertisement",
       "headline": "PASTINI GLUTINICI",
       "paragraphs": [
         {
@@ -9965,7 +9301,6 @@
     },
     {
       "id": "1910-06-15_a664",
-      "unit_type": "advertisement",
       "headline": "Via Viminale\nA. DE MAR\nMOBILI - LETTI -",
       "paragraphs": [
         {
@@ -9980,7 +9315,6 @@
     },
     {
       "id": "1910-06-15_a665",
-      "unit_type": "advertisement",
       "headline": "CESSIONI ST",
       "paragraphs": [
         {
@@ -9995,7 +9329,6 @@
     },
     {
       "id": "1910-06-15_a666",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -10010,7 +9343,6 @@
     },
     {
       "id": "1910-06-15_a667",
-      "unit_type": "article",
       "headline": "null",
       "paragraphs": [
         {
@@ -10025,7 +9357,6 @@
     },
     {
       "id": "1910-06-15_a668",
-      "unit_type": "advertisement",
       "headline": "REP",
       "paragraphs": [
         {
@@ -10040,7 +9371,6 @@
     },
     {
       "id": "1910-06-15_a669",
-      "unit_type": "advertisement",
       "headline": "CESSIONI QUINTO",
       "paragraphs": [
         {
@@ -10055,7 +9385,6 @@
     },
     {
       "id": "1910-06-15_a670",
-      "unit_type": "advertisement",
       "headline": "CICLISTI",
       "paragraphs": [
         {
@@ -10070,7 +9399,6 @@
     },
     {
       "id": "1910-06-15_a671",
-      "unit_type": "advertisement",
       "headline": "SPENDETE BENE LIRE",
       "paragraphs": [
         {
@@ -10085,7 +9413,6 @@
     },
     {
       "id": "1910-06-15_a672",
-      "unit_type": "advertisement",
       "headline": "FILPALE di ROMA e deposito macchine",
       "paragraphs": [
         {
@@ -10100,7 +9427,6 @@
     },
     {
       "id": "1910-06-15_a673",
-      "unit_type": "advertisement",
       "headline": "SPECIALITA' - MOBILI",
       "paragraphs": [
         {
@@ -10115,7 +9441,6 @@
     },
     {
       "id": "1910-06-15_a674",
-      "unit_type": "article",
       "headline": "IL MIGLIORE",
       "paragraphs": [
         {
@@ -10130,7 +9455,6 @@
     },
     {
       "id": "1910-06-15_a675",
-      "unit_type": "advertisement",
       "headline": "CERCASI",
       "paragraphs": [
         {
@@ -10145,7 +9469,6 @@
     },
     {
       "id": "1910-06-15_a676",
-      "unit_type": "advertisement",
       "headline": "PUBBLICAZIONI PRESTITI",
       "paragraphs": [
         {
@@ -10160,7 +9483,6 @@
     },
     {
       "id": "1910-06-15_a677",
-      "unit_type": "advertisement",
       "headline": "PRESERVATIVI",
       "paragraphs": [
         {
@@ -10175,7 +9497,6 @@
     },
     {
       "id": "1910-06-15_a678",
-      "unit_type": "advertisement",
       "headline": "CINTI",
       "paragraphs": [
         {
@@ -10190,7 +9511,6 @@
     },
     {
       "id": "1910-06-15_a679",
-      "unit_type": "advertisement",
       "headline": "IMPOTENZA",
       "paragraphs": [
         {
@@ -10205,7 +9525,6 @@
     },
     {
       "id": "1910-06-15_a680",
-      "unit_type": "advertisement",
       "headline": "CURE",
       "paragraphs": [
         {
@@ -10220,7 +9539,6 @@
     },
     {
       "id": "1910-06-15_a681",
-      "unit_type": "advertisement",
       "headline": "MALI",
       "paragraphs": [
         {
@@ -10235,7 +9553,6 @@
     },
     {
       "id": "1910-06-15_a682",
-      "unit_type": "advertisement",
       "headline": "MALI",
       "paragraphs": [
         {
@@ -10250,7 +9567,6 @@
     },
     {
       "id": "1910-06-15_a683",
-      "unit_type": "advertisement",
       "headline": "PRIMARIO GABINETTO CLINICO per la MALATTIE",
       "paragraphs": [
         {
@@ -10265,7 +9581,6 @@
     },
     {
       "id": "1910-06-15_a684",
-      "unit_type": "advertisement",
       "headline": "SENZA CAPITALI",
       "paragraphs": [
         {
@@ -10280,7 +9595,6 @@
     },
     {
       "id": "1910-06-15_a685",
-      "unit_type": "advertisement",
       "headline": "CEDESI VASTO NEGOZIO",
       "paragraphs": [
         {
@@ -10295,7 +9609,6 @@
     },
     {
       "id": "1910-06-15_a686",
-      "unit_type": "advertisement",
       "headline": "FALEGNAMI",
       "paragraphs": [
         {
@@ -10310,7 +9623,6 @@
     },
     {
       "id": "1910-06-15_a687",
-      "unit_type": "advertisement",
       "headline": "ARATE",
       "paragraphs": [
         {
@@ -10325,7 +9637,6 @@
     },
     {
       "id": "1910-06-15_a688",
-      "unit_type": "advertisement",
       "headline": "MOBILI in CUIOIO",
       "paragraphs": [
         {
@@ -10340,7 +9651,6 @@
     },
     {
       "id": "1910-06-15_a689",
-      "unit_type": "article",
       "headline": "MARSH",
       "paragraphs": [
         {
@@ -10355,7 +9665,6 @@
     },
     {
       "id": "1910-06-15_a690",
-      "unit_type": "advertisement",
       "headline": "Cessioni Stipendio",
       "paragraphs": [
         {
@@ -10370,7 +9679,6 @@
     },
     {
       "id": "1910-06-15_a691",
-      "unit_type": "advertisement",
       "headline": "CEDESI NEGOZIO",
       "paragraphs": [
         {
@@ -10385,7 +9693,6 @@
     },
     {
       "id": "1910-06-15_a692",
-      "unit_type": "advertisement",
       "headline": "LANA",
       "paragraphs": [
         {
@@ -10400,7 +9707,6 @@
     },
     {
       "id": "1910-06-15_a693",
-      "unit_type": "advertisement",
       "headline": "FABBRICA DI SCATOLE",
       "paragraphs": [
         {
@@ -10415,7 +9721,6 @@
     },
     {
       "id": "1910-06-15_a694",
-      "unit_type": "advertisement",
       "headline": "CERCASI",
       "paragraphs": [
         {
@@ -10430,7 +9735,6 @@
     },
     {
       "id": "1910-06-15_a695",
-      "unit_type": "advertisement",
       "headline": "CALZATI",
       "paragraphs": [
         {
@@ -10445,7 +9749,6 @@
     },
     {
       "id": "1910-06-15_a696",
-      "unit_type": "advertisement",
       "headline": "BUT",
       "paragraphs": [
         {
@@ -10460,7 +9763,6 @@
     },
     {
       "id": "1910-06-15_a697",
-      "unit_type": "advertisement",
       "headline": "ordinaria",
       "paragraphs": [
         {
@@ -10475,7 +9777,6 @@
     },
     {
       "id": "1910-06-15_a698",
-      "unit_type": "advertisement",
       "headline": "corte non è",
       "paragraphs": [
         {
@@ -10490,7 +9791,6 @@
     },
     {
       "id": "1910-06-15_a699",
-      "unit_type": "article",
       "headline": "null",
       "paragraphs": [
         {
@@ -10505,7 +9805,6 @@
     },
     {
       "id": "1910-06-15_a700",
-      "unit_type": "advertisement",
       "headline": "SPENDETE BENE",
       "paragraphs": [
         {
@@ -10520,7 +9819,6 @@
     },
     {
       "id": "1910-06-15_a701",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {
@@ -10535,7 +9833,6 @@
     },
     {
       "id": "1910-06-15_a702",
-      "unit_type": "article",
       "headline": "PARTE TERZA In ricognizione XXIV Una storia straordinaria",
       "paragraphs": [
         {
@@ -10550,7 +9847,6 @@
     },
     {
       "id": "1910-06-15_a703",
-      "unit_type": "advertisement",
       "headline": "DI S. A PRE",
       "paragraphs": [
         {
@@ -10565,7 +9861,6 @@
     },
     {
       "id": "1910-06-15_a704",
-      "unit_type": "advertisement",
       "headline": "AFFI",
       "paragraphs": [
         {
@@ -10580,7 +9875,6 @@
     },
     {
       "id": "1910-06-15_a705",
-      "unit_type": "advertisement",
       "headline": "P CEDES",
       "paragraphs": [
         {
@@ -10595,7 +9889,6 @@
     },
     {
       "id": "1910-06-15_a706",
-      "unit_type": "advertisement",
       "headline": "IN HERBIS SALUS",
       "paragraphs": [
         {
@@ -10610,7 +9903,6 @@
     },
     {
       "id": "1910-06-15_a707",
-      "unit_type": "advertisement",
       "headline": "INGEN & WOLF",
       "paragraphs": [
         {
@@ -10625,7 +9917,6 @@
     },
     {
       "id": "1910-06-15_a708",
-      "unit_type": "article",
       "headline": null,
       "paragraphs": [
         {

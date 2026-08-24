@@ -316,7 +316,7 @@ function renderUnits() {
   addRow.append(btn("+ add unit on this page", () => {
     const idxs2 = visibleIndices();
     const at = idxs2.length ? idxs2[idxs2.length - 1] + 1 : doc.articles.length;
-    doc.articles.splice(at, 0, { id: "new", unit_type: "article", headline: null, paragraphs: [], page_span: [page] });
+    doc.articles.splice(at, 0, { id: "new", headline: null, paragraphs: [], page_span: [page] });
     markDirty(); renderUnits();
   }));
   box.append(addRow);
@@ -344,7 +344,6 @@ def renumber(issue: dict[str, tp.Any]) -> dict[str, tp.Any]:
     for idx, art in enumerate(issue["articles"]):
         art["id"] = f"{date}_a{idx:02d}"
         art["position_in_issue"] = idx
-        art["unit_type"] = "article"
         art["page_span"] = sorted(set(art.get("page_span") or [1]))
         for p_idx, para in enumerate(art.get("paragraphs", [])):
             para["id"] = f"{date}_a{idx:02d}_p{p_idx:02d}"

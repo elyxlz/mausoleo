@@ -9,7 +9,6 @@ VLM_OCR_STRUCTURED_V2 = (
     "3. Preserve the original Italian exactly as printed, including archaic spelling\n"
     "4. Separate distinct content units (articles, ads, obituaries, notices)\n\n"
     "For each content unit provide:\n"
-    '- "unit_type": "article" | "advertisement" | "obituary" | "notice" | "editorial"\n'
     '- "headline": the headline text or null\n'
     '- "text": the COMPLETE transcribed text (do not truncate)\n'
     '- "page_span": [page_number]\n\n'
@@ -29,7 +28,6 @@ VLM_OCR_ADS_FOCUSED = (
     "are SEPARATE notices\n"
     "5. Preserve the original Italian exactly as printed, including archaic spelling\n\n"
     "For each content unit provide:\n"
-    '- "unit_type": "article" | "advertisement" | "obituary" | "notice" | "editorial" | "classified"\n'
     '- "headline": the COMPLETE headline or null\n'
     '- "text": the COMPLETE transcribed text\n'
     '- "page_span": [page_number]\n\n'

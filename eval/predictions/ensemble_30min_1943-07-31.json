@@ -5,7 +5,6 @@
   "articles": [
     {
       "id": "1943-07-31_a00",
-      "unit_type": "article",
       "headline": "O BADOGLIO PER UNA RIGID",
       "paragraphs": [
         {
@@ -20,7 +19,6 @@
     },
     {
       "id": "1943-07-31_a01",
-      "unit_type": "article",
       "headline": "LA BATTAGLIA IN SICILIA",
       "paragraphs": [
         {
@@ -35,7 +33,6 @@
     },
     {
       "id": "1943-07-31_a02",
-      "unit_type": "article",
       "headline": "Eden rifiuta di discutere la situazione bellica",
       "paragraphs": [
         {
@@ -50,7 +47,6 @@
     },
     {
       "id": "1943-07-31_a03",
-      "unit_type": "article",
       "headline": "Il \"Times\", denuncia la mancanza di un'autentica collaborazione anglo - sovietica",
       "paragraphs": [
         {
@@ -65,7 +61,6 @@
     },
     {
       "id": "1943-07-31_a04",
-      "unit_type": "article",
       "headline": "Violento terremoto registrato dai sismografi di Malaga e Toledo",
       "paragraphs": [
         {
@@ -80,7 +75,6 @@
     },
     {
       "id": "1943-07-31_a05",
-      "unit_type": "article",
       "headline": "Ritorni",
       "paragraphs": [
         {
@@ -95,7 +89,6 @@
     },
     {
       "id": "1943-07-31_a06",
-      "unit_type": "article",
       "headline": "IL GOVERNO BADOGLI",
       "paragraphs": [
         {
@@ -110,7 +103,6 @@
     },
     {
       "id": "1943-07-31_a07",
-      "unit_type": "article",
       "headline": "IL GOVERNO",
       "paragraphs": [
         {
@@ -125,7 +117,6 @@
     },
     {
       "id": "1943-07-31_a08",
-      "unit_type": "article",
       "headline": "Amedeo Tosti nuovo Direttore Generale della Stampa italiana",
       "paragraphs": [
         {
@@ -140,7 +131,6 @@
     },
     {
       "id": "1943-07-31_a09",
-      "unit_type": "article",
       "headline": "Gabinetti e segreterie dei nuovi Ministri",
       "paragraphs": [
         {
@@ -155,7 +145,6 @@
     },
     {
       "id": "1943-07-31_a10",
-      "unit_type": "article",
       "headline": "Per gli arresti politici avvenuti all'Estero",
       "paragraphs": [
         {
@@ -170,7 +159,6 @@
     },
     {
       "id": "1943-07-31_a11",
-      "unit_type": "editorial",
       "headline": "La Sicilia e la libertà",
       "paragraphs": [
         {
@@ -185,7 +173,6 @@
     },
     {
       "id": "1943-07-31_a12",
-      "unit_type": "article",
       "headline": "Il trasferimento alla Cina Nazionale dei beni anglo-americani e delle concessioni di Sciangai",
       "paragraphs": [
         {
@@ -200,7 +187,6 @@
     },
     {
       "id": "1943-07-31_a13",
-      "unit_type": "article",
       "headline": "Una catastrofe aerea presso il porto irlandese di Dingle",
       "paragraphs": [
         {
@@ -215,7 +201,6 @@
     },
     {
       "id": "1943-07-31_a14",
-      "unit_type": "article",
       "headline": "Laval annunzia mutamenti nella compagnie del suo Governo",
       "paragraphs": [
         {
@@ -230,7 +215,6 @@
     },
     {
       "id": "1943-07-31_a15",
-      "unit_type": "obituary",
       "headline": "La morte di Pio Gardenghi",
       "paragraphs": [
         {
@@ -245,7 +229,6 @@
     },
     {
       "id": "1943-07-31_a16",
-      "unit_type": "article",
       "headline": "Disordini e sommosse nei centri del Portogallo",
       "paragraphs": [
         {
@@ -260,7 +243,6 @@
     },
     {
       "id": "1943-07-31_a17",
-      "unit_type": "article",
       "headline": "Nella sfera della cultura",
       "paragraphs": [
         {
@@ -275,7 +257,6 @@
     },
     {
       "id": "1943-07-31_a18",
-      "unit_type": "article",
       "headline": "Spirito tra gli",
       "paragraphs": [
         {
@@ -290,7 +271,6 @@
     },
     {
       "id": "1943-07-31_a19",
-      "unit_type": "article",
       "headline": "Gli avvenimenti nelle valutazioni",
       "paragraphs": [
         {
@@ -305,7 +285,6 @@
     },
     {
       "id": "1943-07-31_a20",
-      "unit_type": "article",
       "headline": "Dalle tenebre alla \"Luce\"",
       "paragraphs": [
         {
@@ -320,7 +299,6 @@
     },
     {
       "id": "1943-07-31_a21",
-      "unit_type": "article",
       "headline": "L'estensione del trattamento economico di guerra",
       "paragraphs": [
         {
@@ -335,7 +313,6 @@
     },
     {
       "id": "1943-07-31_a22",
-      "unit_type": "article",
       "headline": "Il raddoppiamento degli assegni familiari ai lavoratori alle armi",
       "paragraphs": [
         {
@@ -350,7 +327,6 @@
     },
     {
       "id": "1943-07-31_a23",
-      "unit_type": "article",
       "headline": "Asse",
       "paragraphs": [
         {
@@ -365,7 +341,6 @@
     },
     {
       "id": "1943-07-31_a24",
-      "unit_type": "article",
       "headline": "Le posizioni sulle Tre navi affondate",
       "paragraphs": [
         {
@@ -380,7 +355,6 @@
     },
     {
       "id": "1943-07-31_a25",
-      "unit_type": "article",
       "headline": "Ripresa di commerci su largo tratto",
       "paragraphs": [
         {
@@ -395,7 +369,6 @@
     },
     {
       "id": "1943-07-31_a26",
-      "unit_type": "article",
       "headline": "Amedeo",
       "paragraphs": [
         {
@@ -410,7 +383,6 @@
     },
     {
       "id": "1943-07-31_a27",
-      "unit_type": "article",
       "headline": "BADOLGLIO PER UNA RIGIDIZZAZIONE dei ferrovieri, dei postali e della Compania di comunicazione - Ex gerarchi e sottoposti",
       "paragraphs": [
         {
@@ -425,7 +397,6 @@
     },
     {
       "id": "1943-07-31_a28",
-      "unit_type": "article",
       "headline": "Calma in tutta Italia",
       "paragraphs": [
         {
@@ -440,7 +411,6 @@
     },
     {
       "id": "1943-07-31_a29",
-      "unit_type": "article",
       "headline": "Vani attacchi con fanti",
       "paragraphs": [
         {
@@ -455,7 +425,6 @@
     },
     {
       "id": "1943-07-31_a30",
-      "unit_type": "article",
       "headline": "Asserzioni",
       "paragraphs": [
         {
@@ -470,7 +439,6 @@
     },
     {
       "id": "1943-07-31_a31",
-      "unit_type": "article",
       "headline": "SINDACATI E ADDETTI ALLE ARMI",
       "paragraphs": [
         {
@@ -485,7 +453,6 @@
     },
     {
       "id": "1943-07-31_a32",
-      "unit_type": "article",
       "headline": "RISORGA UNA LEGGE CHE SIA QUELLA DEL NOSTRO PANE QUOTIDIANO LIBERAMENTE CONTRATTATO E LIBERAMENTE DIFESO",
       "paragraphs": [
         {
@@ -500,7 +467,6 @@
     },
     {
       "id": "1943-07-31_a33",
-      "unit_type": "article",
       "headline": "BATTAGLIA DI OREL\nattacchi sovietici interie e forze corazzate",
       "paragraphs": [
         {
@@ -515,7 +481,6 @@
     },
     {
       "id": "1943-07-31_a34",
-      "unit_type": "article",
       "headline": "6 navi nemiche affondate da aerei tedeschi in Atlantico",
       "paragraphs": [
         {
@@ -530,7 +495,6 @@
     },
     {
       "id": "1943-07-31_a35",
-      "unit_type": "article",
       "headline": "Un dirigibile americano distrutto da un sommergibile",
       "paragraphs": [
         {
@@ -545,7 +509,6 @@
     },
     {
       "id": "1943-07-31_a36",
-      "unit_type": "article",
       "headline": "Laval annunzia mutamenti nella compagnia del suo Governo",
       "paragraphs": [
         {
@@ -560,7 +523,6 @@
     },
     {
       "id": "1943-07-31_a37",
-      "unit_type": "advertisement",
       "headline": null,
       "paragraphs": [
         {
@@ -575,7 +537,6 @@
     },
     {
       "id": "1943-07-31_a38",
-      "unit_type": "article",
       "headline": "Ritorni",
       "paragraphs": [
         {
@@ -590,7 +551,6 @@
     },
     {
       "id": "1943-07-31_a39",
-      "unit_type": "article",
       "headline": "IL GOVE",
       "paragraphs": [
         {
@@ -605,7 +565,6 @@
     },
     {
       "id": "1943-07-31_a40",
-      "unit_type": "article",
       "headline": "IL GIORNO",
       "paragraphs": [
         {
@@ -620,7 +579,6 @@
     },
     {
       "id": "1943-07-31_a41",
-      "unit_type": "article",
       "headline": "RIGIDA DISCIPLINA",
       "paragraphs": [
         {
@@ -635,7 +593,6 @@
     },
     {
       "id": "1943-07-31_a42",
-      "unit_type": "article",
       "headline": "Assetto del lavoro",
       "paragraphs": [
         {
@@ -650,7 +607,6 @@
     },
     {
       "id": "1943-07-31_a43",
-      "unit_type": "article",
       "headline": "LA BATTAGLIA DI ORE",
       "paragraphs": [
         {
@@ -665,7 +621,6 @@
     },
     {
       "id": "1943-07-31_a44",
-      "unit_type": "article",
       "headline": "Un dirigibile tedesco distrutto da un incendio",
       "paragraphs": [
         {
@@ -680,7 +635,6 @@
     },
     {
       "id": "1943-07-31_a45",
-      "unit_type": "article",
       "headline": "Laval annunzia mutamenti nella compagine del suo Governo",
       "paragraphs": [
         {
@@ -695,7 +649,6 @@
     },
     {
       "id": "1943-07-31_a46",
-      "unit_type": "article",
       "headline": "LA BATTAGLIA IN SICILIA",
       "paragraphs": [
         {
@@ -710,7 +663,6 @@
     },
     {
       "id": "1943-07-31_a47",
-      "unit_type": "article",
       "headline": "BATTAGLIA IN SICILIA",
       "paragraphs": [
         {
@@ -725,7 +677,6 @@
     },
     {
       "id": "1943-07-31_a48",
-      "unit_type": "article",
       "headline": "Una cavatina originale cantata dal baritono Galeffi",
       "paragraphs": [
         {
@@ -740,7 +691,6 @@
     },
     {
       "id": "1943-07-31_a49",
-      "unit_type": "article",
       "headline": "MALGRADO LE PROMESSE L'acqua non è tornata",
       "paragraphs": [
         {
@@ -755,7 +705,6 @@
     },
     {
       "id": "1943-07-31_a50",
-      "unit_type": "article",
       "headline": "3 anni di arresti per infrazioni alle ordinanze sull'ordine pubblico",
       "paragraphs": [
         {
@@ -770,7 +719,6 @@
     },
     {
       "id": "1943-07-31_a51",
-      "unit_type": "article",
       "headline": "Propalatore di false notizie condannato dal Tribunale Militare",
       "paragraphs": [
         {
@@ -785,7 +733,6 @@
     },
     {
       "id": "1943-07-31_a52",
-      "unit_type": "article",
       "headline": "I premi ai Buoni del Tesoro",
       "paragraphs": [
         {
@@ -800,7 +747,6 @@
     },
     {
       "id": "1943-07-31_a53",
-      "unit_type": "article",
       "headline": "VATICANO",
       "paragraphs": [
         {
@@ -815,7 +761,6 @@
     },
     {
       "id": "1943-07-31_a54",
-      "unit_type": "editorial",
       "headline": "AI NOSTRI CORRISPONDENTI E RIVENDITORI",
       "paragraphs": [
         {
@@ -830,7 +775,6 @@
     },
     {
       "id": "1943-07-31_a55",
-      "unit_type": "advertisement",
       "headline": "GLI SPETTACOLI",
       "paragraphs": [
         {
@@ -845,7 +789,6 @@
     },
     {
       "id": "1943-07-31_a56",
-      "unit_type": "advertisement",
       "headline": "OGGI È L'ULTIMO GIORNO",
       "paragraphs": [
         {
@@ -860,7 +803,6 @@
     },
     {
       "id": "1943-07-31_a57",
-      "unit_type": "advertisement",
       "headline": "OGGI \"PRIMA\" AL CORSO e 4 FONTANE",
       "paragraphs": [
         {
@@ -875,7 +817,6 @@
     },
     {
       "id": "1943-07-31_a58",
-      "unit_type": "advertisement",
       "headline": "OGGI \"GRANDE PRIMA\", al SUPERCINEMA",
       "paragraphs": [
         {
@@ -890,7 +831,6 @@
     },
     {
       "id": "1943-07-31_a59",
-      "unit_type": "advertisement",
       "headline": "all'ELISEO",
       "paragraphs": [
         {
@@ -905,7 +845,6 @@
     },
     {
       "id": "1943-07-31_a60",
-      "unit_type": "advertisement",
       "headline": "ANNUNZI SANITARI",
       "paragraphs": [
         {
@@ -920,7 +859,6 @@
     },
     {
       "id": "1943-07-31_a61",
-      "unit_type": "article",
       "headline": "La distribuzione del carburante e del carbone vegetale per autovetture",
       "paragraphs": [
         {
@@ -935,7 +873,6 @@
     },
     {
       "id": "1943-07-31_a62",
-      "unit_type": "article",
       "headline": "IN FAVORE DEI SINISTRATI",
       "paragraphs": [
         {
@@ -950,7 +887,6 @@
     },
     {
       "id": "1943-07-31_a63",
-      "unit_type": "article",
       "headline": "GLI SPETTACOLI",
       "paragraphs": [
         {
@@ -965,7 +901,6 @@
     },
     {
       "id": "1943-07-31_a64",
-      "unit_type": "advertisement",
       "headline": "all'ELISEO",
       "paragraphs": [
         {
@@ -980,7 +915,6 @@
     },
     {
       "id": "1943-07-31_a65",
-      "unit_type": "notice",
       "headline": null,
       "paragraphs": [
         {
@@ -995,7 +929,6 @@
     },
     {
       "id": "1943-07-31_a66",
-      "unit_type": "article",
       "headline": "Donazioni dal bombardamento",
       "paragraphs": [
         {
@@ -1010,7 +943,6 @@
     },
     {
       "id": "1943-07-31_a67",
-      "unit_type": "article",
       "headline": "Segnalazione di dispersi",
       "paragraphs": [
         {
@@ -1025,7 +957,6 @@
     },
     {
       "id": "1943-07-31_a68",
-      "unit_type": "article",
       "headline": "Nastrobianco",
       "paragraphs": [
         {
@@ -1040,7 +971,6 @@
     },
     {
       "id": "1943-07-31_a69",
-      "unit_type": "article",
       "headline": "GLI SPORT",
       "paragraphs": [
         {
@@ -1055,7 +985,6 @@
     },
     {
       "id": "1943-07-31_a70",
-      "unit_type": "article",
       "headline": "Ricostituzione di Società",
       "paragraphs": [
         {
@@ -1070,7 +999,6 @@
     },
     {
       "id": "1943-07-31_a71",
-      "unit_type": "article",
       "headline": "Borse e Cambi",
       "paragraphs": [
         {
@@ -1085,7 +1013,6 @@
     },
     {
       "id": "1943-07-31_a72",
-      "unit_type": "article",
       "headline": "Continuano le riduzioni per i dopolavoristi nei teatri",
       "paragraphs": [
         {
@@ -1100,7 +1027,6 @@
     },
     {
       "id": "1943-07-31_a73",
-      "unit_type": "article",
       "headline": "L'accesso al Cimitero si riapre al pubblico",
       "paragraphs": [
         {
@@ -1115,7 +1041,6 @@
     },
     {
       "id": "1943-07-31_a74",
-      "unit_type": "article",
       "headline": "La morte di Enrico Boimond",
       "paragraphs": [
         {
@@ -1130,7 +1055,6 @@
     },
     {
       "id": "1943-07-31_a75",
-      "unit_type": "article",
       "headline": "PIO PERRI Direttore responsabile",
       "paragraphs": [
         {
@@ -1145,7 +1069,6 @@
     },
     {
       "id": "1943-07-31_a76",
-      "unit_type": "article",
       "headline": "Ilo Salvatore",
       "paragraphs": [
         {
@@ -1160,7 +1083,6 @@
     },
     {
       "id": "1943-07-31_a77",
-      "unit_type": "article",
       "headline": "Capitano di Corvetta Curzio Castagnetti",
       "paragraphs": [
         {
@@ -1175,7 +1097,6 @@
     },
     {
       "id": "1943-07-31_a78",
-      "unit_type": "article",
       "headline": "Sergente Ezio Micangeli",
       "paragraphs": [
         {
@@ -1190,7 +1111,6 @@
     },
     {
       "id": "1943-07-31_a79",
-      "unit_type": "article",
       "headline": "Le famiglie BECCA, ALFREDO NIGLIAZZI e altri, partecipano la",
       "paragraphs": [
         {
@@ -1205,7 +1125,6 @@
     },
     {
       "id": "1943-07-31_a80",
-      "unit_type": "article",
       "headline": "Ieri alle ore 9.30, molti forti religiosi, spiega",
       "paragraphs": [
         {
@@ -1220,7 +1139,6 @@
     },
     {
       "id": "1943-07-31_a81",
-      "unit_type": "article",
       "headline": "Domenica 1 agosto",
       "paragraphs": [
         {
@@ -1235,7 +1153,6 @@
     },
     {
       "id": "1943-07-31_a82",
-      "unit_type": "article",
       "headline": "le riduzioni nei cinematografi",
       "paragraphs": [
         {
@@ -1250,7 +1167,6 @@
     },
     {
       "id": "1943-07-31_a83",
-      "unit_type": "article",
       "headline": "al Verano",
       "paragraphs": [
         {
@@ -1265,7 +1181,6 @@
     },
     {
       "id": "1943-07-31_a84",
-      "unit_type": "article",
       "headline": "Marco Boimond",
       "paragraphs": [
         {
@@ -1280,7 +1195,6 @@
     },
     {
       "id": "1943-07-31_a85",
-      "unit_type": "article",
       "headline": "ERRONE responsabile",
       "paragraphs": [
         {
@@ -1295,7 +1209,6 @@
     },
     {
       "id": "1943-07-31_a86",
-      "unit_type": "article",
       "headline": "Salvati",
       "paragraphs": [
         {
@@ -1310,7 +1223,6 @@
     },
     {
       "id": "1943-07-31_a87",
-      "unit_type": "article",
       "headline": "astagnacci",
       "paragraphs": [
         {
@@ -1325,7 +1237,6 @@
     },
     {
       "id": "1943-07-31_a88",
-      "unit_type": "article",
       "headline": "geli fu Elia",
       "paragraphs": [
         {
@@ -1340,7 +1251,6 @@
     },
     {
       "id": "1943-07-31_a89",
-      "unit_type": "article",
       "headline": "dececarini",
       "paragraphs": [
         {
@@ -1355,7 +1265,6 @@
     },
     {
       "id": "1943-07-31_a90",
-      "unit_type": "article",
       "headline": "ni ved. Failli",
       "paragraphs": [
         {
@@ -1370,7 +1279,6 @@
     },
     {
       "id": "1943-07-31_a91",
-      "unit_type": "article",
       "headline": "erson-Sardi",
       "paragraphs": [
         {
@@ -1385,7 +1293,6 @@
     },
     {
       "id": "1943-07-31_a92",
-      "unit_type": "article",
       "headline": "ardo",
       "paragraphs": [
         {
@@ -1400,7 +1307,6 @@
     },
     {
       "id": "1943-07-31_a93",
-      "unit_type": "article",
       "headline": "entilini",
       "paragraphs": [
         {
@@ -1415,7 +1321,6 @@
     },
     {
       "id": "1943-07-31_a94",
-      "unit_type": "advertisement",
       "headline": "L'ULTIMO SECONDO per...",
       "paragraphs": [
         {
@@ -1430,7 +1335,6 @@
     },
     {
       "id": "1943-07-31_a95",
-      "unit_type": "classified",
       "headline": "DOMANDE CAMERE E PENSIONI 3 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -1445,7 +1349,6 @@
     },
     {
       "id": "1943-07-31_a96",
-      "unit_type": "classified",
       "headline": "LEZIONI CONVERSAZIONI 3 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -1460,7 +1363,6 @@
     },
     {
       "id": "1943-07-31_a97",
-      "unit_type": "classified",
       "headline": "OFFERTE D'IMPIEGO 4 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -1475,7 +1377,6 @@
     },
     {
       "id": "1943-07-31_a98",
-      "unit_type": "classified",
       "headline": "ARTIGIANATO 3 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -1490,7 +1391,6 @@
     },
     {
       "id": "1943-07-31_a99",
-      "unit_type": "classified",
       "headline": "DOMANDE IMPIEGO 2 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -1505,7 +1405,6 @@
     },
     {
       "id": "1943-07-31_a100",
-      "unit_type": "classified",
       "headline": "DOMANDE LAVORO 1 bi per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -1520,7 +1419,6 @@
     },
     {
       "id": "1943-07-31_a101",
-      "unit_type": "advertisement",
       "headline": "ULTIMO GIORNO per versare la SECONDA RATA dell'abbonamento alle radioaudizioni senza incorrere nella PRATASSA ARIARIALE",
       "paragraphs": [
         {
@@ -1535,7 +1433,6 @@
     },
     {
       "id": "1943-07-31_a102",
-      "unit_type": "advertisement",
       "headline": "Società Romana di Elettricità",
       "paragraphs": [
         {
@@ -1550,7 +1447,6 @@
     },
     {
       "id": "1943-07-31_a103",
-      "unit_type": "article",
       "headline": "VATICANO L'interessamento di Pio XII per i sinistrati di Bologna",
       "paragraphs": [
         {
@@ -1565,7 +1461,6 @@
     },
     {
       "id": "1943-07-31_a104",
-      "unit_type": "article",
       "headline": "3 anni di arresti\nper infrazioni\nalle ordinanze sull'ordine pubblico",
       "paragraphs": [
         {
@@ -1580,7 +1475,6 @@
     },
     {
       "id": "1943-07-31_a105",
-      "unit_type": "advertisement",
       "headline": "I premi ai Buoni del Tesoro",
       "paragraphs": [
         {
@@ -1595,7 +1489,6 @@
     },
     {
       "id": "1943-07-31_a106",
-      "unit_type": "article",
       "headline": "I PROGRAMMI D'OGGI",
       "paragraphs": [
         {
@@ -1610,7 +1503,6 @@
     },
     {
       "id": "1943-07-31_a107",
-      "unit_type": "article",
       "headline": "MALGRADO LE PROMESSE L'acqua non è tornata",
       "paragraphs": [
         {
@@ -1625,7 +1517,6 @@
     },
     {
       "id": "1943-07-31_a108",
-      "unit_type": "article",
       "headline": "Ricostituzione di Società",
       "paragraphs": [
         {
@@ -1640,7 +1531,6 @@
     },
     {
       "id": "1943-07-31_a109",
-      "unit_type": "article",
       "headline": "La F.I.S. ha diramato le disposizioni relative all'attività da svolgersi nel periodo di sosta estiva delle manifestazioni schermistiche. Ha altresì disposto che per agevolare i giovani fiorettisti e sciabolatori non inclusi nelle categorie per la stagione 1942-43, che si trovano fuori sede il termine per la chiusura delle iscrizioni al 2. Gran Premio della Scherma venga prorogato al 31 dicembre 1943.",
       "paragraphs": [
         {
@@ -1655,7 +1545,6 @@
     },
     {
       "id": "1943-07-31_a110",
-      "unit_type": "article",
       "headline": "Continuano le riduzioni per i dopolavoristi nei cinematografi",
       "paragraphs": [
         {
@@ -1670,7 +1559,6 @@
     },
     {
       "id": "1943-07-31_a111",
-      "unit_type": "article",
       "headline": "L'accesso al Verano si riapre al pubblico",
       "paragraphs": [
         {
@@ -1685,7 +1573,6 @@
     },
     {
       "id": "1943-07-31_a112",
-      "unit_type": "obituary",
       "headline": "La morte di Enrico Boimond",
       "paragraphs": [
         {
@@ -1700,7 +1587,6 @@
     },
     {
       "id": "1943-07-31_a113",
-      "unit_type": "obituary",
       "headline": "Ilo Salvati",
       "paragraphs": [
         {
@@ -1715,7 +1601,6 @@
     },
     {
       "id": "1943-07-31_a114",
-      "unit_type": "obituary",
       "headline": "Curzio Castagnacci",
       "paragraphs": [
         {
@@ -1730,7 +1615,6 @@
     },
     {
       "id": "1943-07-31_a115",
-      "unit_type": "obituary",
       "headline": "Sergente Ezio Micangeli fu Elia di anni 27",
       "paragraphs": [
         {
@@ -1745,7 +1629,6 @@
     },
     {
       "id": "1943-07-31_a116",
-      "unit_type": "obituary",
       "headline": "Le famiglie BECCARINI e il Sig. ALFREDO NIGLIAZZI, addoloratissimi, partecipano la morte di Oreste Beccarini",
       "paragraphs": [
         {
@@ -1760,7 +1643,6 @@
     },
     {
       "id": "1943-07-31_a117",
-      "unit_type": "obituary",
       "headline": "Enrico Boimond",
       "paragraphs": [
         {
@@ -1775,7 +1657,6 @@
     },
     {
       "id": "1943-07-31_a118",
-      "unit_type": "obituary",
       "headline": "Dirigenti, impiegati e maestranze della S. A. CARTIERA DEL RAPIDO partecipano il decesso di ENRICO BOIMOND avvenuto in Sora il 29 luglio corrente.",
       "paragraphs": [
         {
@@ -1790,7 +1671,6 @@
     },
     {
       "id": "1943-07-31_a119",
-      "unit_type": "obituary",
       "headline": "Emma Berettini ved. Failli",
       "paragraphs": [
         {
@@ -1805,7 +1685,6 @@
     },
     {
       "id": "1943-07-31_a120",
-      "unit_type": "obituary",
       "headline": "Clotilde Anderson-Sardi",
       "paragraphs": [
         {
@@ -1820,7 +1699,6 @@
     },
     {
       "id": "1943-07-31_a121",
-      "unit_type": "obituary",
       "headline": "Eduardo",
       "paragraphs": [
         {
@@ -1835,7 +1713,6 @@
     },
     {
       "id": "1943-07-31_a122",
-      "unit_type": "article",
       "headline": "La distribuzione del carburante e del carbone vegetale per autovetture",
       "paragraphs": [
         {
@@ -1850,7 +1727,6 @@
     },
     {
       "id": "1943-07-31_a123",
-      "unit_type": "article",
       "headline": "GLI SPETTACOLI I PROGRAMMI D'OGGI Teatri",
       "paragraphs": [
         {
@@ -1865,7 +1741,6 @@
     },
     {
       "id": "1943-07-31_a124",
-      "unit_type": "article",
       "headline": "Borse e Cambi",
       "paragraphs": [
         {
@@ -1880,7 +1755,6 @@
     },
     {
       "id": "1943-07-31_a125",
-      "unit_type": "advertisement",
       "headline": "Spindore - Signora Luna",
       "paragraphs": [
         {
@@ -1895,7 +1769,6 @@
     },
     {
       "id": "1943-07-31_a126",
-      "unit_type": "advertisement",
       "headline": "Supercinema - Buongiorno Madrid",
       "paragraphs": [
         {
@@ -1910,7 +1783,6 @@
     },
     {
       "id": "1943-07-31_a127",
-      "unit_type": "advertisement",
       "headline": "Acquario - Sant'Elena, piccola isola",
       "paragraphs": [
         {
@@ -1925,7 +1797,6 @@
     },
     {
       "id": "1943-07-31_a128",
-      "unit_type": "advertisement",
       "headline": "Aitieri - La donna misteriosa",
       "paragraphs": [
         {
@@ -1940,7 +1811,6 @@
     },
     {
       "id": "1943-07-31_a129",
-      "unit_type": "advertisement",
       "headline": "Ambasciatori - Quarta pagina con Valentina Cortese, O Gora",
       "paragraphs": [
         {
@@ -1955,7 +1825,6 @@
     },
     {
       "id": "1943-07-31_a130",
-      "unit_type": "advertisement",
       "headline": "Arena Appio - La Gorgona con Rosano Brazzi Mariella Lotti, e Giorni",
       "paragraphs": [
         {
@@ -1970,7 +1839,6 @@
     },
     {
       "id": "1943-07-31_a131",
-      "unit_type": "advertisement",
       "headline": "Arena Castello - Oltre l'amore",
       "paragraphs": [
         {
@@ -1985,7 +1853,6 @@
     },
     {
       "id": "1943-07-31_a132",
-      "unit_type": "advertisement",
       "headline": "Arena Paradiso (Monteverde) - (Ritirato)",
       "paragraphs": [
         {
@@ -2000,7 +1867,6 @@
     },
     {
       "id": "1943-07-31_a133",
-      "unit_type": "advertisement",
       "headline": "Argento - Vivi con il tuo amore con",
       "paragraphs": [
         {
@@ -2015,7 +1881,6 @@
     },
     {
       "id": "1943-07-31_a134",
-      "unit_type": "advertisement",
       "headline": "Piccola Pubblicità",
       "paragraphs": [
         {
@@ -2030,7 +1895,6 @@
     },
     {
       "id": "1943-07-31_a135",
-      "unit_type": "advertisement",
       "headline": "ABITI quellistami usati uomo biancheria scarpe recomi domicilio. Elis. GovernoVecchio 70 telef. 52-563.",
       "paragraphs": [
         {
@@ -2045,7 +1909,6 @@
     },
     {
       "id": "1943-07-31_a136",
-      "unit_type": "advertisement",
       "headline": "CESSIONI NEGOZI AZIENDE",
       "paragraphs": [
         {
@@ -2060,7 +1923,6 @@
     },
     {
       "id": "1943-07-31_a137",
-      "unit_type": "advertisement",
       "headline": "ANNUNZI VARI",
       "paragraphs": [
         {
@@ -2075,7 +1937,6 @@
     },
     {
       "id": "1943-07-31_a138",
-      "unit_type": "advertisement",
       "headline": "INFORMAZIONI INVESTIGAZIONI",
       "paragraphs": [
         {
@@ -2090,7 +1951,6 @@
     },
     {
       "id": "1943-07-31_a139",
-      "unit_type": "advertisement",
       "headline": "AUTOMOBILI BICICLETTE SPORT",
       "paragraphs": [
         {
@@ -2105,7 +1965,6 @@
     },
     {
       "id": "1943-07-31_a140",
-      "unit_type": "advertisement",
       "headline": "OCASIONI",
       "paragraphs": [
         {
@@ -2120,7 +1979,6 @@
     },
     {
       "id": "1943-07-31_a141",
-      "unit_type": "advertisement",
       "headline": "CAPITALI SOLIETA'",
       "paragraphs": [
         {
@@ -2135,7 +1993,6 @@
     },
     {
       "id": "1943-07-31_a142",
-      "unit_type": "advertisement",
       "headline": "SMARRIMENTI",
       "paragraphs": [
         {
@@ -2150,7 +2007,6 @@
     },
     {
       "id": "1943-07-31_a143",
-      "unit_type": "advertisement",
       "headline": "VILLINI CASE TERRENI",
       "paragraphs": [
         {
@@ -2165,7 +2021,6 @@
     },
     {
       "id": "1943-07-31_a144",
-      "unit_type": "advertisement",
       "headline": "OFFERTE AFFITTO APPARTAMENTI NEGOZI LOCALI",
       "paragraphs": [
         {
@@ -2180,7 +2035,6 @@
     },
     {
       "id": "1943-07-31_a145",
-      "unit_type": "advertisement",
       "headline": "ABBIAMO bisogno acquistare abiti usati uomo pagamento contanti recemi domicilio. Coletta, Montebello 85 telefono 481-446",
       "paragraphs": [
         {
@@ -2195,7 +2049,6 @@
     },
     {
       "id": "1943-07-31_a146",
-      "unit_type": "advertisement",
       "headline": "ABITI acquistiamo usati uomo biancheria scarpe recemi domicilio. Elisei, Governo Vecchio 70 telef. 52-563",
       "paragraphs": [
         {
@@ -2210,7 +2063,6 @@
     },
     {
       "id": "1943-07-31_a147",
-      "unit_type": "advertisement",
       "headline": "CESSIONI NEGOZI AZIENDE",
       "paragraphs": [
         {
@@ -2225,7 +2077,6 @@
     },
     {
       "id": "1943-07-31_a148",
-      "unit_type": "advertisement",
       "headline": "ANNUNZI VARI",
       "paragraphs": [
         {
@@ -2240,7 +2091,6 @@
     },
     {
       "id": "1943-07-31_a149",
-      "unit_type": "advertisement",
       "headline": "OCCASIONI",
       "paragraphs": [
         {
@@ -2255,7 +2105,6 @@
     },
     {
       "id": "1943-07-31_a150",
-      "unit_type": "advertisement",
       "headline": "CAPITALI SOCIETÀ",
       "paragraphs": [
         {
@@ -2270,7 +2119,6 @@
     },
     {
       "id": "1943-07-31_a151",
-      "unit_type": "advertisement",
       "headline": "SMARRIMENTI",
       "paragraphs": [
         {
@@ -2285,7 +2133,6 @@
     },
     {
       "id": "1943-07-31_a152",
-      "unit_type": "advertisement",
       "headline": "VILLINI CASE TERRENI",
       "paragraphs": [
         {
@@ -2300,7 +2147,6 @@
     },
     {
       "id": "1943-07-31_a153",
-      "unit_type": "advertisement",
       "headline": "OFFERTE AFFITTO",
       "paragraphs": [
         {
@@ -2315,7 +2161,6 @@
     },
     {
       "id": "1943-07-31_a154",
-      "unit_type": "advertisement",
       "headline": "DOMANDE AFFITTO",
       "paragraphs": [
         {
@@ -2330,7 +2175,6 @@
     },
     {
       "id": "1943-07-31_a155",
-      "unit_type": "advertisement",
       "headline": "ARTIGIANATO",
       "paragraphs": [
         {
@@ -2345,7 +2189,6 @@
     },
     {
       "id": "1943-07-31_a156",
-      "unit_type": "advertisement",
       "headline": "OFFERTE CAMERE E PENSIONI! L 3 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -2360,7 +2203,6 @@
     },
     {
       "id": "1943-07-31_a157",
-      "unit_type": "advertisement",
       "headline": "DOMANDE CAMERE E PENSIONI L 3 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -2375,7 +2217,6 @@
     },
     {
       "id": "1943-07-31_a158",
-      "unit_type": "advertisement",
       "headline": "LEZIONI CONVERSAZIONI L 3 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -2390,7 +2231,6 @@
     },
     {
       "id": "1943-07-31_a159",
-      "unit_type": "advertisement",
       "headline": "RAPPRESENTANZE PIAZZISTI Offerte L 4 - Domande L. 3 per par",
       "paragraphs": [
         {
@@ -2405,7 +2245,6 @@
     },
     {
       "id": "1943-07-31_a160",
-      "unit_type": "advertisement",
       "headline": "OFFERTE D'IMPIEGO L 4 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -2420,7 +2259,6 @@
     },
     {
       "id": "1943-07-31_a161",
-      "unit_type": "advertisement",
       "headline": "ARTIGIANATO L 3 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -2435,7 +2273,6 @@
     },
     {
       "id": "1943-07-31_a162",
-      "unit_type": "advertisement",
       "headline": "DOMANDE IMPIEGO L 2 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -2450,7 +2287,6 @@
     },
     {
       "id": "1943-07-31_a163",
-      "unit_type": "advertisement",
       "headline": "DOMANDE LAVORO L 1 5/10 per parola: minimo 10 parole",
       "paragraphs": [
         {
@@ -2465,7 +2301,6 @@
     },
     {
       "id": "1943-07-31_a164",
-      "unit_type": "advertisement",
       "headline": "VENTICINQUENNE ottimo corrispondente, veloce stenodattilografo praticissimo contabilità varia e paghe operative occuperebbei. Telefonare qualiasi ora 860849",
       "paragraphs": [
         {
@@ -2480,7 +2315,6 @@
     },
     {
       "id": "1943-07-31_a165",
-      "unit_type": "advertisement",
       "headline": "DOMANDE LAVORO",
       "paragraphs": [
         {
@@ -2495,7 +2329,6 @@
     },
     {
       "id": "1943-07-31_a166",
-      "unit_type": "obituary",
       "headline": "Morte presunta",
       "paragraphs": [
         {
@@ -2510,7 +2343,6 @@
     },
     {
       "id": "1943-07-31_a167",
-      "unit_type": "advertisement",
       "headline": "INSETTI",
       "paragraphs": [
         {
@@ -2525,7 +2357,6 @@
     },
     {
       "id": "1943-07-31_a168",
-      "unit_type": "advertisement",
       "headline": "ANNUNZI SANITARI",
       "paragraphs": [
         {
@@ -2540,7 +2371,6 @@
     },
     {
       "id": "1943-07-31_a169",
-      "unit_type": "article",
       "headline": "Borse e Cambi",
       "paragraphs": [
         {
@@ -2555,7 +2385,6 @@
     },
     {
       "id": "1943-07-31_a170",
-      "unit_type": "article",
       "headline": "L'accesso al cimitero si riapre al pubblico",
       "paragraphs": [
         {
@@ -2570,7 +2399,6 @@
     },
     {
       "id": "1943-07-31_a171",
-      "unit_type": "obituary",
       "headline": "La morte di Enrico Boimond",
       "paragraphs": [
         {
@@ -2585,7 +2413,6 @@
     },
     {
       "id": "1943-07-31_a172",
-      "unit_type": "advertisement",
       "headline": "OGGI È L'ULTIMO GIORNO",
       "paragraphs": [
         {
@@ -2600,7 +2427,6 @@
     },
     {
       "id": "1943-07-31_a173",
-      "unit_type": "article",
       "headline": "L'acqua non è tornata",
       "paragraphs": [
         {
@@ -2615,7 +2441,6 @@
     },
     {
       "id": "1943-07-31_a174",
-      "unit_type": "article",
       "headline": "Pio Perrone Direttore responsabile",
       "paragraphs": [
         {
@@ -2630,7 +2455,6 @@
     },
     {
       "id": "1943-07-31_a175",
-      "unit_type": "article",
       "headline": "Illo Salvati Capitano di Aviazione",
       "paragraphs": [
         {
@@ -2645,7 +2469,6 @@
     },
     {
       "id": "1943-07-31_a176",
-      "unit_type": "article",
       "headline": "Curzio Castagnacci più volte decorato al Valor Militare",
       "paragraphs": [
         {
@@ -2660,7 +2483,6 @@
     },
     {
       "id": "1943-07-31_a177",
-      "unit_type": "article",
       "headline": "Sergente Ezio Micangeli fu Elia di anni 27",
       "paragraphs": [
         {
@@ -2675,7 +2497,6 @@
     },
     {
       "id": "1943-07-31_a178",
-      "unit_type": "article",
       "headline": "Il 29 luglio corrente decedeva in Sora Enrico Boimond Industriale",
       "paragraphs": [
         {
@@ -2690,7 +2511,6 @@
     },
     {
       "id": "1943-07-31_a179",
-      "unit_type": "article",
       "headline": "Ieri alle ore 9.30, munita dei Conforti religiosi, spegnevasi Emma Berettini ved. Failli",
       "paragraphs": [
         {
@@ -2705,7 +2525,6 @@
     },
     {
       "id": "1943-07-31_a180",
-      "unit_type": "article",
       "headline": "Domenica 1 agosto anniversario dell'indimenticabile Clotilde Anderson-Sardi",
       "paragraphs": [
         {
@@ -2720,7 +2539,6 @@
     },
     {
       "id": "1943-07-31_a181",
-      "unit_type": "article",
       "headline": "Eduardo",
       "paragraphs": [
         {
@@ -2735,7 +2553,6 @@
     },
     {
       "id": "1943-07-31_a182",
-      "unit_type": "article",
       "headline": "Cav. Pietro Gentilini",
       "paragraphs": [
         {
@@ -2750,7 +2567,6 @@
     },
     {
       "id": "1943-07-31_a183",
-      "unit_type": "article",
       "headline": "Il 29 luglio munito dei conforti religiosi e della Benedizione del Santo Padre, cessava di vivere il N. H. Comm. Ing. Dott. Carlo Gerunda",
       "paragraphs": [
         {
@@ -2765,7 +2581,6 @@
     },
     {
       "id": "1943-07-31_a184",
-      "unit_type": "advertisement",
       "headline": "Pubblicità",
       "paragraphs": [
         {
@@ -2780,7 +2595,6 @@
     },
     {
       "id": "1943-07-31_a185",
-      "unit_type": "advertisement",
       "headline": "OGGI È L'ULTIMO GIORNO",
       "paragraphs": [
         {
@@ -2795,7 +2609,6 @@
     },
     {
       "id": "1943-07-31_a186",
-      "unit_type": "advertisement",
       "headline": "OGGI \"GRANDE PRIMA\", SUPERCINEMA",
       "paragraphs": [
         {
@@ -2810,7 +2623,6 @@
     },
     {
       "id": "1943-07-31_a187",
-      "unit_type": "advertisement",
       "headline": "L'ELISEO",
       "paragraphs": [
         {
@@ -2825,7 +2637,6 @@
     },
     {
       "id": "1943-07-31_a188",
-      "unit_type": "notice",
       "headline": "ANNUNZI SANITARI",
       "paragraphs": [
         {
@@ -2840,7 +2651,6 @@
     },
     {
       "id": "1943-07-31_a189",
-      "unit_type": "article",
       "headline": "Continuano le riduzioni per i dopolavoristi nei teatri",
       "paragraphs": [
         {
@@ -2855,7 +2665,6 @@
     },
     {
       "id": "1943-07-31_a190",
-      "unit_type": "advertisement",
       "headline": "Acconto dividendo",
       "paragraphs": [
         {
@@ -2870,7 +2679,6 @@
     },
     {
       "id": "1943-07-31_a191",
-      "unit_type": "advertisement",
       "headline": "«PRIMA» AL CORSO E 4 FONTANE",
       "paragraphs": [
         {
@@ -2885,7 +2693,6 @@
     },
     {
       "id": "1943-07-31_a192",
-      "unit_type": "advertisement",
       "headline": "«GRANDE PRIMA» AL SUPERCINEMA",
       "paragraphs": [
         {
@@ -2900,7 +2707,6 @@
     },
     {
       "id": "1943-07-31_a193",
-      "unit_type": "advertisement",
       "headline": "ANNUNZI SANITARI",
       "paragraphs": [
         {

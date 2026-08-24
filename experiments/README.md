@@ -19,7 +19,6 @@ Every experiment is one self-contained Python script. No framework, no config re
   "articles": [
     {
       "id": "1885-06-15_a00",
-      "unit_type": "article | advertisement | obituary | notice | editorial | other",
       "headline": "text or null",
       "paragraphs": [{"id": "1885-06-15_a00_p00", "text": "..."}],
       "page_span": [1],

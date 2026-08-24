@@ -6,7 +6,7 @@ from mausoleo.eval.evaluate import compute_cer, compute_ordering_score, compute_
 
 
 def _article(headline: str, text: str, pages: list[int]) -> dict[str, tp.Any]:
-    return {"unit_type": "article", "headline": headline, "paragraphs": [{"text": text}], "page_span": pages}
+    return {"headline": headline, "paragraphs": [{"text": text}], "page_span": pages}
 
 
 LONG_A = "Il consiglio comunale ha approvato ieri sera il nuovo bilancio della città di Roma dopo lunga discussione."

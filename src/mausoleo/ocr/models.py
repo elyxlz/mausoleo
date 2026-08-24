@@ -13,7 +13,6 @@ class Paragraph:
 @dc.dataclass(frozen=True)
 class Article:
     id: str
-    unit_type: str
     headline: str | None
     paragraphs: list[Paragraph]
     page_span: list[int]
@@ -36,7 +35,6 @@ def issue_from_dict(data: dict[str, tp.Any]) -> Issue:
         articles=[
             Article(
                 id=a["id"],
-                unit_type=a["unit_type"],
                 headline=a.get("headline"),
                 paragraphs=[Paragraph(id=p["id"], text=p.get("text") or "") for p in a["paragraphs"]],
                 page_span=a["page_span"],
