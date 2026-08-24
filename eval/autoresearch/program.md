@@ -15,7 +15,7 @@ The corpus is **172,600 pages** (1880–1959) on endeavour. Full-corpus OCR runs
 - **GT segmentation convention (per Elio, 2026-08-24): AN ARTICLE IS THE MOST SENSIBLE SEMANTIC GROUPING.** For classifieds that is the RUBRIC, not the individual advert: `AUTOMOBILI BICICL.` (177 car ads) is one article; `VILLINI CASE TERRENI`, `MATRIMONIALI`, `DOMANDE LAVORO` likewise. One article per individual advert is too granular; a single article covering all adverts would be too broad. GT already encodes this correctly — the rubric is the article and each advert is a PARAGRAPH within it (1952: 197 articles, 2,849 paragraphs). Do not "fix" rubric blocks by splitting them. A model that emits individual adverts as separate articles is over-segmenting relative to this convention, which is a real part of why 1952 scores lowest.
 
 - **Budget is measured by the caller, not the experiment.** `scripts/time_experiment.sh experiments/<name>.py` times the whole run over the 6 eval issues end-to-end (model load + layout + OCR + grouping + IO) and reports `sec_per_page = wall_seconds / 42`. That number is `sec_per_page` in the log.
-- `BUDGET_CAP` in `scripts/progress_server.py` is the single source of truth; the dashboard recomputes `budget_ok` from `sec_per_page` vs the cap.
+- `BUDGET_CAP` in `src/mausoleo/paths.py` is the single source of truth; the dashboard recomputes `budget_ok` from `sec_per_page` vs the cap.
 - The measure is a conservative upper bound (it includes one-time load that amortizes at corpus scale), so passing here means passing on the corpus.
 
 ## Eval Metric — MausoleoBench

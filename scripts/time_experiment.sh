@@ -7,7 +7,7 @@ set -e
 cd "$(dirname "$0")/.."
 DATES="1885-06-15 1895-06-15 1910-06-15 1925-06-15 1935-06-15 1952-06-15"
 PAGES=$(for d in $DATES; do ls eval/ground_truth/"$d"/[0-9]*.jpeg; done | wc -l)
-CAP=$(sed -n 's/^BUDGET_CAP = \(.*\)$/\1/p' scripts/progress_server.py)
+CAP=$(sed -n 's/^BUDGET_CAP = \(.*\)$/\1/p' src/mausoleo/paths.py)
 TORCH_LIBS=$(.venv/bin/python -c "import os,torch;d=os.path.dirname(torch.__file__);print(os.path.join(d,'lib')+':'+os.path.join(d,'..','nvidia','cudnn','lib'))")
 start=$(date +%s.%N)
 CUDA_VISIBLE_DEVICES=1 LD_LIBRARY_PATH="$TORCH_LIBS:$LD_LIBRARY_PATH" PYTHONPATH=experiments:src .venv/bin/python "$1" $DATES

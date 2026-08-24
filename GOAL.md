@@ -8,7 +8,7 @@ Beat the current budget-compliant record — **exp_018 = 0.6115 @ 8.55 sec/page*
 Two open levers: (a) exp_018 is a HOSTED route, so its `sec_per_page` is API latency, not GPU time, and the real corpus constraint is ~$5.7k in API spend — a local route that approaches 0.61 is worth more than the score gap suggests; (b) exp_018 has high run-to-run variance (0.6258 vs 0.6045 on identical runs) — a more stable route at the same score is a genuine improvement.
 
 ## The one hard constraint
-**Budget cap = 200 sec/page**, caller-measured (`scripts/time_experiment.sh`). Over the cap → not a candidate. The live value is `BUDGET_CAP` in `scripts/progress_server.py` (single source of truth).
+**Budget cap = 200 sec/page**, caller-measured (`scripts/time_experiment.sh`). Over the cap → not a candidate. The live value is `BUDGET_CAP` in `src/mausoleo/paths.py` (single source of truth).
 
 ## Everything else lives elsewhere — don't restate it here
 - **How to operate** (metric definition, experiment contract, adversarial-review checklist, generalization protocol, budget mechanics): `eval/autoresearch/program.md`.

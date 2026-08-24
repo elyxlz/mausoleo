@@ -3,7 +3,7 @@
 Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is ONLY the current state + queue. Do not accumulate history here — results go to `mausoleobench_log.jsonl`, mechanisms to `registry.md`.
 
 ## Standing context
-- Metric = **MausoleoBench** (`src/mausoleo/eval/evaluate.py`). Budget cap = **200.0 sec/page**, caller-measured (`scripts/time_experiment.sh`); `BUDGET_CAP` in `scripts/progress_server.py` is the single source of truth.
+- Metric = **MausoleoBench** (`src/mausoleo/eval/evaluate.py`). Budget cap = **200.0 sec/page**, caller-measured (`scripts/time_experiment.sh`); `BUDGET_CAP` in `src/mausoleo/paths.py` is the single source of truth.
 - Run on ripperred (`.venv/bin/python`), GPU1 (`CUDA_VISIBLE_DEVICES=1`). Experiments are self-contained, never import the eval, are measured cold by the caller, and get an adversarial review.
 - Log each full-6-issue run to `mausoleobench_log.jsonl` (`{n, exp, score, description, sec_per_page, budget_ok}`, n = last+1) → live graph `scripts/progress_server.py` (:8078 + cloudflare, per-experiment prediction viewer). Commit + push; update `registry.md`.
 

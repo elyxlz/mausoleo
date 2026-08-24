@@ -5,6 +5,9 @@ import re
 import typing as tp
 
 
+RECALL_BETA = 2.0
+
+
 def compute_cer(reference: str, hypothesis: str) -> float:
     import jiwer
 
@@ -209,7 +212,11 @@ def evaluate_issue(
     gated = sum(quality(m) for m in matched)
     gated_recall = gated / len(gt_articles) if gt_articles else 0.0
     gated_precision = gated / len(pred_articles) if pred_articles else 0.0
-    gated_f1 = 2 * gated_precision * gated_recall / (gated_precision + gated_recall) if (gated_precision + gated_recall) > 0 else 0.0
+    gated_f1 = (
+        (1 + RECALL_BETA**2) * gated_precision * gated_recall / (RECALL_BETA**2 * gated_precision + gated_recall)
+        if (gated_precision + gated_recall) > 0
+        else 0.0
+    )
 
     # headline CER over ALL GT articles that HAVE a headline (unmatched -> 1.0, already stored)
     gt_with_headline = [m for m in matches if m.gt_headline]
