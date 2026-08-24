@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import html
 import json
 import pathlib as pl
 import sys
@@ -47,6 +48,13 @@ PAGE_HTML = """<!doctype html>
   textarea { width: 100%; box-sizing: border-box; border: 1px solid #e2ddd2; border-radius: 4px;
              font-family: Georgia, serif; font-size: .95em; line-height: 1.35; padding: .35em .5em; resize: none; overflow: hidden; }
   textarea.hl { font-weight: bold; background: #fffbe8; margin-bottom: .35em; }
+  #units.titles .unit { margin-bottom: .25em; padding: .2em .5em; display: flex; gap: .5em; align-items: baseline; }
+  #units.titles .unit > textarea:not(.hl) { display: none; }
+  #units.titles .unit .bar { margin: 0; flex: 0 0 auto; }
+  #units.titles .unit .bar button, #units.titles .unit .pages { display: none; }
+  #units.titles textarea.hl { margin: 0; flex: 1; background: transparent; font-size: .95em; }
+  #units.titles .unit .chars { color: #888; font: 11px monospace; flex: 0 0 auto; }
+  #units.titles .unit.offpage { opacity: .5; }
   .addrow { text-align: center; margin: 1em 0; }
 </style>
 <header>
@@ -55,6 +63,8 @@ PAGE_HTML = """<!doctype html>
   <span>page <select id="pagesel"></select> / <span id="pagecount"></span></span>
   <button onclick="shiftPage(-1)">&#8592; prev</button>
   <button onclick="shiftPage(1)">next &#8594;</button>
+  <label><input type="checkbox" id="titlesonly" onchange="toggleTitles()"> titles only</label>
+  <label><input type="checkbox" id="allpages" onchange="renderUnits()"> whole issue</label>
   <span id="unitcount"></span>
   <span class="status" id="status">loading&#8230;</span>
 </header>
@@ -240,6 +250,7 @@ function showPage() {
   img.onload = () => { resetView(); };
   img.src = `/img/${date}/${page}`;
   renderUnits();
+  toggleTitles();
   window.scrollTo(0, 0);
 }
 
@@ -277,6 +288,9 @@ function unitEl(art, gi) {
   const bar = document.createElement("div");
   bar.className = "bar";
   bar.innerHTML = `<span class="id">${art.id.split("_").pop()}</span>`;
+  const chars = document.createElement("span");
+  chars.className = "chars";
+  chars.textContent = `p${art.page_span.join(",")} \u00b7 ${art.paragraphs.reduce((n,p)=>n+p.text.length,0)}c`;
   const pages = document.createElement("input");
   pages.className = "pages";
   pages.value = art.page_span.join(",");
@@ -300,17 +314,27 @@ function unitEl(art, gi) {
     art.paragraphs = body.value.split(/\\n\\s*\\n/).map(t => ({ text: t.trim() })).filter(p => p.text);
     autosize(body); markDirty();
   };
-  d.append(body);
+  d.append(body, chars);
   requestAnimationFrame(() => { autosize(hl); autosize(body); });
   return d;
+}
+
+function toggleTitles() {
+  document.getElementById("units").classList.toggle("titles", document.getElementById("titlesonly").checked);
 }
 
 function renderUnits() {
   const box = document.getElementById("units");
   box.innerHTML = "";
-  const idxs = visibleIndices();
+  const whole = document.getElementById("allpages").checked;
+  const onPage = new Set(visibleIndices());
+  const idxs = whole ? doc.articles.map((_, i) => i) : [...onPage];
   document.getElementById("unitcount").textContent = `${idxs.length} on page \\u00b7 ${doc.articles.length} total`;
-  for (const gi of idxs) box.append(unitEl(doc.articles[gi], gi));
+  for (const gi of idxs) {
+    const el = unitEl(doc.articles[gi], gi);
+    if (!onPage.has(gi)) el.classList.add("offpage");
+    box.append(el);
+  }
   const addRow = document.createElement("div");
   addRow.className = "addrow";
   addRow.append(btn("+ add unit on this page", () => {
@@ -334,6 +358,36 @@ a:hover{background:#f2efe8}</style>
 {links}
 """
 
+TITLES_HTML = """<!doctype html><meta charset="utf-8"><title>Titles — {date}</title>
+<style>
+ body{font-family:-apple-system,Segoe UI,sans-serif;margin:0;background:#f5f2ec;color:#1f2430}
+ header{position:sticky;top:0;background:#1f2430;color:#fff;padding:.6em 1em;display:flex;gap:1em;align-items:center;flex-wrap:wrap}
+ header a{color:#9ec7ff}
+ header .meta{margin-left:auto;font-family:monospace;font-size:.9em}
+ main{max-width:62em;margin:1.2em auto;padding:0 1em}
+ table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #ddd;border-radius:6px}
+ td,th{padding:.35em .6em;border-bottom:1px solid #eee;vertical-align:top}
+ th{background:#efece5;text-align:left;position:sticky;top:2.9em}
+ tr:last-child td{border-bottom:0}
+ .idx{font-family:monospace;color:#888;width:3.5em}
+ .pg{font-family:monospace;width:4em;color:#555}
+ .len{font-family:monospace;width:5em;color:#888;text-align:right}
+ .none{color:#b00;font-style:italic}
+ .newpage{border-top:3px solid #7a5cff}
+ .snip{color:#666;font-size:.9em}
+</style>
+<header>
+  <a href="/">&#8592; issues</a>
+  <a href="/issue/{date}">image view &#8594;</a>
+  <strong>{date}</strong>
+  <span class="meta">{count} articles &#183; {pages} pages</span>
+</header>
+<main><table>
+<tr><th class="idx">#</th><th class="pg">page</th><th>headline</th><th class="len">chars</th></tr>
+{rows}
+</table></main>
+"""
+
 
 def issue_dates() -> list[str]:
     return sorted(p.name for p in TENTATIVE_DIR.iterdir() if (p / "ground_truth.json").exists())
@@ -350,6 +404,35 @@ def renumber(issue: dict[str, tp.Any]) -> dict[str, tp.Any]:
     return issue
 
 
+def render_titles(date: str) -> bytes:
+    issue = json.loads((TENTATIVE_DIR / date / "ground_truth.json").read_text())
+    rows: list[str] = []
+    previous_page = None
+    for art in issue["articles"]:
+        pages = art.get("page_span") or []
+        page = pages[0] if pages else 0
+        span = f"{page}-{pages[-1]}" if len(pages) > 1 else str(page)
+        text = " ".join(p.get("text", "") for p in art.get("paragraphs", []))
+        headline = art.get("headline")
+        cell = html.escape(headline) if headline else '<span class="none">(no headline)</span>'
+        if not headline:
+            cell += f' <span class="snip">{html.escape(text[:70])}</span>'
+        css = ' class="newpage"' if previous_page is not None and page != previous_page else ""
+        previous_page = page
+        rows.append(
+            f'<tr{css}><td class="idx">{art.get("position_in_issue")}</td>'
+            f'<td class="pg">{span}</td><td>{cell}</td><td class="len">{len(text)}</td></tr>'
+        )
+    page_count = issue.get("page_count", 0)
+    body = (
+        TITLES_HTML.replace("{rows}", "\n".join(rows))
+        .replace("{count}", str(len(issue["articles"])))
+        .replace("{pages}", str(page_count))
+        .replace("{date}", date)
+    )
+    return body.encode()
+
+
 class Handler(BaseHTTPRequestHandler):
     def _send(self, code: int, body: bytes, ctype: str) -> None:
         self.send_response(code)
@@ -361,10 +444,15 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:
         parts = [p for p in self.path.split("?")[0].split("/") if p]
         if not parts:
-            links = "\n".join(f'<a href="/issue/{d}">{d}</a>' for d in issue_dates())
+            links = "\n".join(
+                f'<a href="/issue/{d}">{d}</a><a href="/titles/{d}" style="font-size:.85em;padding:.3em .6em">titles &amp; order &#8594;</a>'
+                for d in issue_dates()
+            )
             self._send(200, INDEX_HTML.replace("{links}", links).encode(), "text/html; charset=utf-8")
         elif parts[0] == "issue" and len(parts) == 2:
             self._send(200, PAGE_HTML.encode(), "text/html; charset=utf-8")
+        elif parts[0] == "titles" and len(parts) == 2:
+            self._send(200, render_titles(parts[1]), "text/html; charset=utf-8")
         elif parts[0] == "api" and len(parts) == 2:
             path = TENTATIVE_DIR / parts[1] / "ground_truth.json"
             self._send(200, path.read_bytes(), "application/json")

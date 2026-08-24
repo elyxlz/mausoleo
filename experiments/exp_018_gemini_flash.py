@@ -31,7 +31,7 @@ PROMPT = (
     "You are an expert OCR system for historical Italian newspapers. Read each column "
     "top-to-bottom, then left-to-right. Transcribe ALL text; do not skip or summarize. "
     "Preserve archaic spelling. Separate distinct content units.\n"
-    'Return JSON: {"articles": [{"headline": string or null, "text": string}]}'
+    'Return a JSON array: [{"headline": string or null, "text": string}]'
 )
 
 _MERGE = MergePages()
@@ -45,16 +45,24 @@ def unwrap_lines(text: str) -> str:
     return _LINE_BREAK.sub(" ", _HYPHEN_BREAK.sub(r"\1\2", text)).strip()
 
 
-def unwrap_page_json(raw: str) -> str:
+def page_articles(raw: str) -> list[tp.Any]:
     try:
         data = json.loads(raw)
     except json.JSONDecodeError:
+        return []
+    if isinstance(data, dict):
+        return data.get("articles", [])
+    return data if isinstance(data, list) else []
+
+
+def unwrap_page_json(raw: str) -> str:
+    articles = page_articles(raw)
+    if not articles:
         return unwrap_lines(raw)
-    articles = data.get("articles", []) if isinstance(data, dict) else []
     for article in articles:
         if isinstance(article, dict) and isinstance(article.get("text"), str):
             article["text"] = unwrap_lines(article["text"])
-    return json.dumps(data, ensure_ascii=False)
+    return json.dumps(articles, ensure_ascii=False)
 
 
 def _client() -> tp.Any:
@@ -95,11 +103,7 @@ def _transcribe_page(client: tp.Any, image: bytes) -> str:
 
 
 def _article_count(raw: str) -> int:
-    try:
-        data = json.loads(raw)
-    except json.JSONDecodeError:
-        return 0
-    return len(data.get("articles", [])) if isinstance(data, dict) else 0
+    return len(page_articles(raw))
 
 
 def _load_pages(date: str) -> list[bytes]:
