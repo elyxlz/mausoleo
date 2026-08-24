@@ -78,13 +78,39 @@ FEATURE_NAMES = [
     "has_dateline",
     "is_page_top",
     "col_index",
+    "col_frac",
+    "n_cols",
     "prev_short",
 ]
 
 
+def page_column_edges(regions: list[dict[str, tp.Any]], page: int, width: int) -> list[float]:
+    spans = sorted((r["bbox"][0], r["bbox"][2]) for r in regions if r["page"] == page)
+    if not spans:
+        return [0.0, float(width)]
+    widths = sorted(x2 - x1 for x1, x2 in spans)
+    median = widths[len(widths) // 2] or width
+    narrow = [(x1, x2) for x1, x2 in spans if (x2 - x1) <= median * 1.7] or spans
+    merged: list[list[float]] = []
+    for x1, x2 in narrow:
+        if merged and x1 < merged[-1][1] - median * 0.25:
+            merged[-1][1] = max(merged[-1][1], x2)
+        else:
+            merged.append([float(x1), float(x2)])
+    bands = [b for b in merged if b[1] - b[0] >= width * 0.03] or [[0.0, float(width)]]
+    return [b[0] for b in bands] + [bands[-1][1]]
+
+
+def column_of(edges: list[float], x1: float) -> float:
+    for index in range(len(edges) - 1):
+        if x1 < edges[index + 1]:
+            return float(index)
+    return float(max(0, len(edges) - 2))
+
+
 def features(regions: list[dict[str, tp.Any]]) -> list[list[float]]:
     dims = _page_dims(regions)
-    # column index per page: cluster x-centers
+    edges = {page: page_column_edges(regions, page, max(dims[page][0], 1)) for page in {r["page"] for r in regions}}
     feats: list[list[float]] = []
     prev = None
     for r in regions:
@@ -96,7 +122,8 @@ def features(regions: list[dict[str, tp.Any]]) -> list[list[float]]:
         letters = [c for c in txt if c.isalpha()]
         upper_ratio = sum(1 for c in letters if c.isupper()) / max(1, len(letters))
         has_dateline = 1.0 if _DATELINE.search(txt) else 0.0
-        col_index = float(int((x1 / pw) * 7))
+        col_index = column_of(edges[r["page"]], x1)
+        n_cols = float(len(edges[r["page"]]) - 1)
         if prev is None or prev["page"] != r["page"]:
             page_changed = 1.0 if prev is not None else 0.0
             y_gap, x_ov, same_col, prev_title, prev_short = 1.0, 0.0, 0.0, 0.0, 0.0
@@ -124,6 +151,8 @@ def features(regions: list[dict[str, tp.Any]]) -> list[list[float]]:
                 has_dateline,
                 1.0 if (prev is None or prev["page"] != r["page"]) else 0.0,
                 col_index,
+                col_index / max(n_cols, 1.0),
+                n_cols,
                 prev_short,
             ]
         )
