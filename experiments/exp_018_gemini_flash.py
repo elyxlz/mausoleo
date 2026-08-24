@@ -50,6 +50,14 @@ def unwrap_lines(text: str) -> str:
     return "\n\n".join(_LINE_BREAK.sub(" ", part).strip() for part in _PARA_BREAK.split(joined) if part.strip()).strip()
 
 
+def article_headline(article: dict[str, tp.Any]) -> str | None:
+    raw = article.get("headline")
+    if isinstance(raw, list):
+        raw = " ".join(str(x) for x in raw if x)
+    text = unwrap_lines(str(raw)) if raw else ""
+    return text or None
+
+
 def article_paragraphs(article: dict[str, tp.Any]) -> list[str]:
     raw = article.get("paragraphs")
     if isinstance(raw, list) and raw:
@@ -80,7 +88,7 @@ def unwrap_page_json(raw: str) -> str:
         paragraphs = article_paragraphs(article)
         if not paragraphs:
             continue
-        normalised.append({"headline": article.get("headline"), "paragraphs": [{"text": p} for p in paragraphs]})
+        normalised.append({"headline": article_headline(article), "paragraphs": [{"text": p} for p in paragraphs]})
     return json.dumps(normalised, ensure_ascii=False)
 
 
