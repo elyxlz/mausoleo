@@ -155,7 +155,8 @@ def _transcribe_page(client: tp.Any, image: bytes) -> str:
         try:
             response = client.models.generate_content(model=MODEL, contents=[part, PROMPT], config=config)
             text = response.text or ""
-            finished = str(getattr(response.candidates[0], "finish_reason", "")).endswith("STOP")
+            candidates = response.candidates or []
+            finished = bool(candidates) and str(getattr(candidates[0], "finish_reason", "")).endswith("STOP")
             if _article_count(text) > 0 and finished:
                 return text
             if _article_count(text) > 0 and attempt == MAX_TRIES - 1:
