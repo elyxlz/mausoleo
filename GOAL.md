@@ -10,6 +10,13 @@ Two open levers: (a) exp_018 is a HOSTED route, so its `sec_per_page` is API lat
 ## The one hard constraint
 **Budget cap = 200 sec/page**, caller-measured (`scripts/time_experiment.sh`). Over the cap → not a candidate. The live value is `BUDGET_CAP` in `src/mausoleo/paths.py` (single source of truth).
 
+## Strategy (per Elio, 2026-08-24)
+Two stages, and they have DIFFERENT objectives:
+1. **Find the best possible Gemini-based configuration.** It is the TEACHER, not the production route, so its budget and latency barely matter — it runs once over a training set, not 172,600 pages. Optimise purely for quality: multi-sample consensus, expensive prompting, ensembling are all fair game.
+2. **Distil that teacher into a local model** (PaddleOCR-VL or similar). The distilled student is what meets the sec/page budget and runs the corpus.
+
+This supersedes the earlier framing where the hosted route's API cost was the blocker. The corpus economics question now applies to the STUDENT; the teacher only needs to be good.
+
 ## Everything else lives elsewhere — don't restate it here
 - **How to operate** (metric definition, experiment contract, adversarial-review checklist, generalization protocol, budget mechanics): `eval/autoresearch/program.md`.
 - **Approach families + what's ruled out**: `eval/autoresearch/registry.md`.
