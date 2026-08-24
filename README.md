@@ -11,7 +11,7 @@ High-quality OCR of the Il Messaggero historical newspaper corpus (1880–1959, 
 - `eval/autoresearch/` — the research program: `program.md` (protocol, budget mechanics, review checklist), `registry.md` (approach families and what is ruled out), `LOOP.md` (live state + queue), `mausoleobench_log.jsonl` (every scored run).
 - `eval/ground_truth/<date>/` — page images per issue, plus `ground_truth.json` for the 6 human-verified eval issues (1885-06-15, 1895-06-15, 1910-06-15, 1925-06-15, 1935-06-15, 1952-06-15). The 5 1943-07-* issues (01, 08, 15, 22, 31) are images only, used for GT-free probes.
 - `eval/predictions/` — one JSON per (experiment, date); `archive/` holds the outputs still cited by `registry.md`.
-- `scripts/` — thin entrypoints only: `research.py` (eval / board / holdout / probe CLI), `eval_probes.py`, `time_experiment.sh` (caller-side budget measurement), `progress_server.py`, `review_server.py`, `scrape_messaggero.py`.
+- `scripts/` — thin entrypoints only: `research.py` (eval / board / holdout / probe CLI), `eval_probes.py`, `diagnose.py` (per-issue prediction health), `time_experiment.sh` (caller-side budget measurement), `progress_server.py`, `review_server.py`, `scrape_messaggero.py`.
 - `src/mausoleo/` — all logic. `paths.py` (shared constants, owns `BUDGET_CAP`), `eval/` (`evaluate.py` metric, `scoring.py`, `probes.py`, `invariants.py`), `ocr/` (models, prompts, operators), `review/` (GT review UI), `progress/` (live board + prediction viewer), `scrape/` (corpus acquisition).
 - `plan/roadmap.md` — the whole roadmap: product, all five phases, standing decisions.
 

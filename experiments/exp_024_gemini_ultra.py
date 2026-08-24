@@ -26,6 +26,8 @@ THINKING_BUDGET = 128
 MAX_OUTPUT_TOKENS = 60000
 CONCURRENCY = 12
 MAX_TRIES = 6
+WEAK_PAGE_RATIO = 0.35
+WEAK_PAGE_RETRIES = 2
 
 PROMPT = (
     "You are an expert OCR system for historical Italian newspapers. Read each column "
@@ -237,6 +239,33 @@ def _stitch(client: tp.Any, tail: list[dict[str, tp.Any]], head: list[dict[str, 
     return out[:2]
 
 
+def _page_chars(raw: str) -> int:
+    return sum(len(str(a.get("text") or "")) for a in page_articles(raw) if isinstance(a, dict))
+
+
+def _retry_weak_pages(client: tp.Any, pages: list[bytes], texts: list[str]) -> list[str]:
+    for _ in range(WEAK_PAGE_RETRIES):
+        counts = [_page_chars(t) for t in texts]
+        healthy = sorted(c for c in counts if c > 0)
+        if not healthy:
+            return texts
+        median = healthy[len(healthy) // 2]
+        weak = [i for i, c in enumerate(counts) if c < median * WEAK_PAGE_RATIO]
+        if not weak:
+            return texts
+        print(f"  retrying {len(weak)} weak page(s): " + ", ".join(f"p{i + 1}={counts[i]}c vs median {median}c" for i in weak), flush=True)
+        with cf.ThreadPoolExecutor(max_workers=min(len(weak), CONCURRENCY)) as pool:
+            fresh = list(pool.map(lambda i: _transcribe_page(client, pages[i]), weak))
+        improved = False
+        for i, text in zip(weak, fresh):
+            if _page_chars(text) > counts[i]:
+                texts[i] = text
+                improved = True
+        if not improved:
+            return texts
+    return texts
+
+
 def _load_pages(date: str) -> list[bytes]:
     files = sorted(GT_DIR.joinpath(date).glob("*.jpeg"), key=lambda p: int(p.stem))
     return [f.read_bytes() for f in files]
@@ -245,7 +274,9 @@ def _load_pages(date: str) -> list[bytes]:
 def _run_issue(client: tp.Any, date: str) -> Issue:
     pages = _load_pages(date)
     with cf.ThreadPoolExecutor(max_workers=CONCURRENCY) as pool:
-        page_texts = [unwrap_page_json(text) for text in pool.map(lambda page: _transcribe_page(client, page), pages)]
+        raw_texts = list(pool.map(lambda page: _transcribe_page(client, page), pages))
+    raw_texts = _retry_weak_pages(client, pages, raw_texts)
+    page_texts = [unwrap_page_json(text) for text in raw_texts]
     row: dict[str, tp.Any] = {
         "issue_id": date,
         "date": date,

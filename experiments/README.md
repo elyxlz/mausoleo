@@ -35,6 +35,7 @@ Every experiment is one self-contained Python script. No framework, no config re
 
 - One variable per experiment relative to a named baseline.
 - Never read `eval/ground_truth/*/ground_truth.json` at inference; never re-emit another experiment's prediction file; never import `mausoleo.eval`.
+- Check prediction health with `scripts/diagnose.py <exp_name>` BEFORE trusting a score: it flags empty pages, pages returning far less text than the issue median, tiny articles, single-paragraph blobs and missing headlines. A page that silently returns almost nothing costs a large score drop and is invisible in the average.
 - Evaluate with `scripts/research.py eval <exp_name>` (audit + holdout; also `holdout`/`probe`/`board` subcommands).
 - Budget is measured by the caller: `scripts/time_experiment.sh experiments/<name>.py` reports sec/page over the 6 eval issues. Cap = `BUDGET_CAP` in `src/mausoleo/paths.py` (200.0).
 - Log every result to `eval/autoresearch/mausoleobench_log.jsonl` with a mechanism line; update `registry.md` and `LOOP.md`.
