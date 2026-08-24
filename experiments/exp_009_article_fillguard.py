@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 import pathlib as pl
 import sys
 import typing as tp
@@ -17,6 +18,22 @@ from grouper_features import DATES, features, load_regions, load_gt, align_regio
 GT_DIR = pl.Path("eval/ground_truth")
 PRED_DIR = pl.Path("eval/predictions")
 MODEL = "PaddlePaddle/PaddleOCR-VL-1.6"
+
+LAYOUT_SCRIPT = r"""
+import json, sys
+from paddleocr import LayoutDetection
+model = LayoutDetection(model_name="PP-DocLayoutV3")
+pages = json.loads(sys.stdin.read())
+results = []
+for path in pages:
+    output = model.predict(path, batch_size=1)
+    boxes = []
+    for res in output:
+        for box in res.json["res"]["boxes"]:
+            boxes.append({"label": box["label"], "score": float(box["score"]), "coordinate": [float(c) for c in box["coordinate"]]})
+    results.append(boxes)
+print(json.dumps(results))
+"""
 
 
 TITLE_LABELS = {"doc_title", "paragraph_title", "title"}
@@ -39,24 +56,11 @@ def _pages(date: str) -> list[pl.Path]:
     return sorted(GT_DIR.joinpath(date).glob("*.jpeg"), key=lambda p: int(p.stem))
 
 
-def _layout_model() -> tp.Any:
-    if "layout" not in _ENGINE:
-        from paddleocr import LayoutDetection
-
-        _ENGINE["layout"] = LayoutDetection(model_name="PP-DocLayoutV3")
-    return _ENGINE["layout"]
-
-
 def detect_layout(page_paths: list[str]) -> list[list[dict[str, tp.Any]]]:
-    model = _layout_model()
-    results = []
-    for path in page_paths:
-        boxes = []
-        for res in model.predict(path, batch_size=1):
-            for box in res.json["res"]["boxes"]:
-                boxes.append({"label": box["label"], "score": float(box["score"]), "coordinate": [float(c) for c in box["coordinate"]]})
-        results.append(boxes)
-    return results
+    proc = subprocess.run([sys.executable, "-c", LAYOUT_SCRIPT], input=json.dumps(page_paths), capture_output=True, text=True, timeout=1800)
+    if proc.returncode != 0:
+        raise RuntimeError(f"layout failed:\n{proc.stderr[-3000:]}")
+    return json.loads(proc.stdout.strip().splitlines()[-1])
 
 
 def build_regions(page_boxes: list[dict[str, tp.Any]], page_num: int) -> list[dict[str, tp.Any]]:
