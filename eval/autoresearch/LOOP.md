@@ -8,16 +8,20 @@ Rewritten every iteration. Rules in `program.md` (+ `registry.md`); this file is
 - Log each full-6-issue run to `mausoleobench_log.jsonl` (`{n, exp, score, description, sec_per_page, budget_ok}`, n = last+1) → live graph `scripts/progress_server.py` (:8078 + cloudflare, per-experiment prediction viewer). Commit + push; update `registry.md`.
 
 ## Board
-- **RECORD: exp_017 = 0.4275 @ 181.98 sec/page** — Qwen3-VL-8B column route via direct operator calls (Ray-free), 3 columns, max_tokens 8192.
-- Prior frontier: exp_009 = 0.4071 @ 8.66 (article-level PaddleOCR-VL + fill-ratio guard) — still by far the cheapest good route.
-- Reference ceiling: oracle ensembles 0.5941 / 0.5622, both far over cap.
+- **RECORD: exp_018 = 0.6115 @ 8.55 sec/page** — hosted Gemini 3.7-flash, full page in, JSON array out, thinking_budget=128, de-hyphenation. HIGH VARIANCE: two identical runs gave 0.6258 and 0.6045; treat ~0.615 as the mean, not a point estimate. `sec_per_page` here is API latency, NOT GPU time — not comparable to local routes. Corpus cost ~$5.7k (intro pricing, doubles 2027).
+- Local frontier: exp_017 = 0.4263 @ 181.98 (Qwen3-VL-8B, 3-column split — note the split was WRONG: 1895 is 5 columns, 1952 varies 4-9).
+- Cheapest good local route: exp_009 = 0.4071 @ 8.66 — but it hardcodes `~/paddle_env/bin/python`, which no longer exists on ripperred; it cannot run as-is.
+- Reference ceiling: oracle ensembles 0.5941 / 0.5622, both far over cap. exp_018 exceeds the 0.5941 reference.
 - Ruled out (see `registry.md`): CHURRO and general VLMs below specialized PaddleOCR-VL at low cost; CLAHE preprocessing; length-ratio blob guard; naive LoRA on real GT; synthetic-augmented LoRA.
 
 ## Current
-- exp_017 is the record but fragile and expensive (182 sec/page, 73% of cap). exp_015 (parse variant of the same route) scored only 0.252 @ 191.97 — the route is sensitive to how column output is parsed.
+- GT corrected (fdd6d8a): 37 image-confirmed fixes to 1885/1895/1910 from a Gemini consensus + deterministic anchoring pipeline. 1885 had a systematic off-by-one page shift; 1910 gt138's railway timetable was fabricated. 1925/1935/1952 returned mostly NO_DEFECT and are NOT genuinely audited — 1952 still shows 51 derived order moves and 63 uncovered gaps. Anchoring artifacts live in `/home/elyx/gt_build`.
+- Gemini credits are DEPLETED (429 RESOURCE_EXHAUSTED) — all hosted work is blocked until topped up.
+- Paragraph structure: predictions carried ~1 paragraph/article (GT has 7,191 across 924). Fixed in 0e4d383 but NOT yet re-run. 8 corrected GT articles remain single-paragraph.
 
 ## Queue
-1. **Cheaper or more uniform route holding ≥0.4275** — the stated open lever in `GOAL.md`. Attack the cost side of the exp_017 column route (fewer columns, smaller max_model_len, batching) before adding anything new.
-2. **exp_168 revival** (8B per-region + grouper, archived 0.4342 @ ~150) rebuilt self-contained and caller-measured.
-3. **Complementary merge** of the column route ⊕ the grouper route (archived oracle-selected 0.525; the naive two-8B merge was ~286 sec/page, over cap) — needs a cheaper second source to fit ≤250.
-4. **Oracle-ensemble distillation** on non-eval corpus pages — the only untried high-ceiling lever.
+1. **Validate the paragraph prompt, then re-run exp_018** (~$1.50). Gives paragraph-structured predictions and a third variance sample. Needs credits.
+2. **True-column local route** — PP-DocLayoutV3 column bands (already computed for all 42 pages) feeding a local VLM. The 3-column split every previous column experiment used was simply wrong, so that family was never fairly tested. No API cost.
+3. **Finish the GT audit on 1925/1935/1952** — anchoring evidence already computed; only the adjudication pass is missing.
+4. **Fix exp_009's dead `~/paddle_env` path** so the cheap local baseline is runnable again.
+5. **Oracle-ensemble distillation** on non-eval corpus pages — still the untried high-ceiling lever for a local route.
